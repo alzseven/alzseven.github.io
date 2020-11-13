@@ -1,0 +1,69 @@
+.messagebox {
+    width: 380px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: 1px solid #d7d7d7;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.messagebox h1 {
+    font-size: 13px;
+    color: #151515;
+    float: left;
+    margin: 14px 0 0 19px;
+    font-weight: normal;
+}
+.messagebox button {
+    font-size: 13px;
+    color: #5a86dd;
+    float: right;
+    margin: 15px 16px 0 0;
+}
+
+.messagebox .header {
+    height: 45px;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.msg_list {
+}
+.msg_list img {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+}
+.msg_list .name_message {
+    float: left;
+}
+.msg_list li {
+    overflow: hidden;
+    font-size: 12px;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 84px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ebebeb;
+}
+.msg_list li:last-child {
+    border: none;
+}
+.msg_list .name {
+    color: #313131;
+    font-weight: bold;
+    margin-bottom: 5px;
+    line-height: 18px;
+}
+.msg_list .message {
+    color: #2e2e31;
+    width: 230px;
+    height: 36px;
+    overflow: auto;
+    line-height: 18px;
+}
+.msg_list time {
+    color: #9a9a9a;
+    float: right;
+}

@@ -1,0 +1,102 @@
+
+        .wrapper {
+            font-family: "Apple SD Gothic Neo", AppleGothic, "Malgun Gothic", "맑은 고딕", Helvetica, Dotum, 돋움, Arial, sans-serif;
+            width: 260px;
+            height: 340px;
+            padding: 30px 24px 0;
+            box-sizing: border-box;
+            border: 1px solid #e6e6e6;
+            border-radius: 5px;
+
+            /* 가운데 위치 */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-top: -170px;
+            margin-left: -130px
+        }
+        .user_info {
+            text-align: center;
+            border-bottom: 1px solid #e6e6e6;
+        }
+        .photo {
+            height: 100px;
+        }
+        .photo img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+        .eng_name {
+            margin-top: 16px;
+            /* font : 18px, #1e1e1e line-height : 18px */
+            font-size: 18px;
+            color: #1e1e1e;
+            line-height: 18px;
+        }
+        .kor_name {
+            margin-top: 10px;
+            font-size: 12px;
+            line-height: 12px;
+            color: #767676;
+        }
+        .worktime {
+            margin-top: 14px;
+            font-size: 12px;
+            line-height : 1.5;
+            color: #6f8ab7
+        }
+        .job_info {
+            font-size: 12px;
+            padding-top: 20px;
+        }
+        .job_info dt {
+            float: left;
+            width: 50px;
+            color: #767676;
+            line-height: 1.5;
+        }
+        .job_info dd {
+            color: #333333;
+            line-height: 1.5;
+        }
+        .job_info dt,
+        .job_info dd {
+            height: 20px;
+        }
+
+        .job_info li {
+            float: left;
+        }
+        .job_info li a {
+            color: #909fd2;
+            line-height: 12px;
+            text-decoration: underline;
+        }
+        .job_info li:first-child {
+            border-right: 1px solid #e6e6e6;
+            padding-right: 10px;
+        }
+        .job_info li:nth-child(2) {
+            padding-left: 10px;
+        }
+        .job_info ul {
+            padding-top: 10px;
+        }
+        .job_info li:last-child {
+            float: right;
+            width: 58px;
+            height: 18px;
+            background-color: #909fd2;
+            border: 1px solid #6e88ba;
+            border-radius: 58px;
+            text-align: center;
+            margin-top: -2px;
+        }
+
+        .job_info li:last-child a {
+            line-height: 20px;
+            font-size: 11px;
+            color: #fff;
+            text-decoration: none;
+        }
