@@ -1,8 +1,279 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: row wrap;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .profile{
+            position: relative;
+            left:50%;
+        }
+        .profile .portrait{
+            position: relative;
+            
+            
+        }
+        
+        .portrait{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            margin-left: -50px;
+        }
+        
+        .photo{
+            width: 100%;
+            height: 100%;
+        }
+        
+        #name{
+            width: 100px;
+            font-size:30px;
+            line-height: 30px;
+            text-align: center;
+            margin-left: -50px;
+            margin-top: 10px;
+        }
+        .address{
+            margin-top: 10px;
+        }
+
+        .addresstext{
+            font-size: 12px;
+            color: #909fd2;
+            line-height: 12px;
+            text-decoration: underline;
+        }
+
+        .container table:nth-child(2){
+            margin-left: 50px;
+        }
+
+        .scene {
+            width: 200px;
+            height: 200px;
+            perspective: 800px;
+        }
+
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: relative;                
+            transform-style: preserve-3d;
+            transform: translateZ(-100px);   
+        }
+        
+        .cube.infinite{
+            animation: spinXY 2s infinite;
+        }
+
+        .cube.hover:hover{
+            animation: spinY 2s infinite 0s;
+        }
+
+        @keyframes spinXY{
+            0%{
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            100%{
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+
+        @keyframes spinY{
+            0%{
+                transform: rotateY(0deg);
+            }
+            100%{
+                transform: rotateY(360deg);
+            }
+        }
+
+        .face {
+            position: absolute;
+            border: 2px solid;
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            line-height: 200px;
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            text-align: center;  
+            /* opacity: 0.7; */
+        }
+
+        .cube.hover .face{
+            height: 300px;
+        }
+
+        .front {
+            background: red;
+            transform: rotateY(0) translateZ(100px);
+        }
+        
+        .right {
+            background: green;
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .back {
+            background: blue;
+            transform: rotateY(180deg) translateZ(100px);
+        }
+
+        .left {
+            background: brown;
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .top {
+            background: skyblue;
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .bottom {
+            background: black;
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+
+        .cube.hover .face.top{
+            height: 200px;
+        }
+
+        .cube.hover .face.bottom{
+            height: 200px;
+        }
+    </style>
+</head>
 <body>
-  	<h1>Hello World</h1>
-  	<p>I'm hosted with GitHub Pages.</p>
-	<a href="https://alzseven.github.io/Millennial/">Millennial</a>
+    <img class="portrait" src="photo.jpg">
+    <div class="profile">           
+        <img class="portrait" src="photo.jpg">
+        <p id="name" class="profiletext">박준형</p>
+    </div>
+
+    <div class="page-header">
+        <h1>Contact info</h1>
+        <a href="tel:+82)10-4087-7140" id="phone" class="addresstext">Tel</a>
+        <a href="mailto:jhp7140@gmail.com" id="email" class="addresstext">Mail</a>
+    </div>
+    <div class="page-header">
+        <h1>Education</h1>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">이름</th>
+                <th scope="col">기간</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>제주대학교</td>
+                <td>2018~</td>
+            </tr>
+        </tbody>            
+    </table>
+    <div class="page-header">
+        <h1>Experience</h1>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">이름</th>
+                <th scope="col">기간</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Subdream Studios.Inc</td>
+                <td>2020.7~</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="container">
+        <div class="page-header">
+            <h1>Skills</h1>
+            <ol class="list-group">
+                <li class="list-group-item">C#</li>
+                <li class="list-group-item">Unity 3D</li>
+            </ol>
+        </div>
+    </div>
+    <div class="container">
+        <div class="page-header">
+            <h1>Projects</h1>
+        </div>
+        <div>
+            <dl class="list-group">
+                <dt class="list-group-item">Costom</dt>
+                <dd class="list-group-item">코로나 관련 공공 API들을 사용해서 정보를 제공하는 플랫폼</dd>
+
+                <dt class="list-group-item">Tippecanoe County Sheriff Office App</dt>
+                <dd class="list-group-item">Tippecanoe County의 여러 서비스들을 주민들이 좀더 쉽게 접근할수 있게 한 어플리케이션</dd>
+            </dl>
+        </div>
+        
+    </div>
+
+    <div class="container">
+        <div class="scene">
+            <div class="cube infinite">
+                <div class="face front">#게임개발</div>
+                <div class="face back">#워커홀릭</div>
+                <div class="face right">#INTJ</div>
+                <div class="face left">#카페인</div>
+                <div class="face top">#알코올</div>
+                <div class="face bottom">#탄산음료</div>
+            </div>
+        </div>
+        <div class="scene">
+            <div class="cube hover">
+                <div class="face front">
+                    <img class="photo" src="Alphonse_Mucha_-_Zodiacs.jpg">
+                </div>
+                <div class="face back">
+                    <img class="photo" src="Alphonse_Mucha_-_Four_Seasons.jpg">
+                </div>
+                <div class="face right">
+                    <img class="photo" src="Alphonse_Mucha_-_Dance.jpg">
+                </div>
+                <div class="face left">
+                    <img class="photo" src="Alphonse_Mucha_-_.jpg">
+                </div>
+                <div class="face top">
+                </div>
+                <div class="face bottom">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
 </body>
 </html>
