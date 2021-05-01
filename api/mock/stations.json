@@ -4,7 +4,7 @@
   "data": [
     {
       "id": 1,
-      "thumbnail": "./photos/1.png",
+      "thumbnail": "https://alzseven.github.io/api/mock/photos/1.png",
       "name": "공대4호관 주차장_mock",
       "locationDesc": "공대4호관 2층_mock",
       "latitude": 1.0,
