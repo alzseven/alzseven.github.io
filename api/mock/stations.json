@@ -1,0 +1,5 @@
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": [{ "id": 1, "name": "test", "latitude": 1.0, "longitude": 1.0 }]
+}
