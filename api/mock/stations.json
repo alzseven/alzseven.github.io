@@ -1,5 +1,15 @@
 {
   "statusCode": 200,
   "message": "success",
-  "data": [{ "id": 1, "name": "test", "latitude": 1.0, "longitude": 1.0 }]
+  "data":
+  [{
+      "id" : 1,
+      "thumbnail" : ,
+      "name" : "공대4호관 주차장_mock",
+      "locationDesc" : "공대4호관 2층_mock",
+      "latitude" : 1.0,
+      "longitude" : 1.0,
+      "overallSpaces" : 100,
+      "vacancy" : 17,
+    }]
 }
