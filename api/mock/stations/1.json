@@ -1,0 +1,92 @@
+{
+  "statusCode": 200,
+  "message": "success",
+  "data": {
+    "parkinglotname": "공대 4호관 주차장",
+    "vacancynumber": 4,
+    "stationColumnNumber": 6,
+    "stationRowNumber": 4,
+    "slots": [
+      {
+        "slotID": 1,
+        "camID": 1,
+        "posX": 0,
+        "posY": 0,
+        "isEmpty": true,
+        "slotType": "vertical"
+      },
+      {
+        "slotID": 2,
+        "camID": 1,
+        "posX": 1,
+        "posY": 0,
+        "isEmpty": false,
+        "slotType": "vertical"
+      },
+      {
+        "slotID": 3,
+        "camID": 1,
+        "posX": 5,
+        "posY": 3,
+        "isEmpty": false,
+        "slotType": "vertical"
+      },
+      {
+        "slotID": 4,
+        "camID": 1,
+        "posX": 3,
+        "posY": 0,
+        "isEmpty": false,
+        "slotType": "vertical"
+      },
+      {
+        "slotID": 5,
+        "camID": 2,
+        "posX": 5,
+        "posY": 0,
+        "isEmpty": true,
+        "slotType": "vertical"
+      },
+      {
+        "slotID": 6,
+        "camID": 3,
+        "posX": 0,
+        "posY": 3,
+        "isEmpty": true,
+        "slotType": "vertical"
+      },
+      {
+        "slotID": 7,
+        "camID": 3,
+        "posX": 1,
+        "posY": 3,
+        "isEmpty": false,
+        "slotType": "vertical"
+      },
+      {
+        "slotID": 8,
+        "camID": 3,
+        "posX": 2,
+        "posY": 3,
+        "isEmpty": false,
+        "slotType": "vertical"
+      },
+      {
+        "slotID": 9,
+        "camID": 3,
+        "posX": 3,
+        "posY": 3,
+        "isEmpty": true,
+        "slotType": "vertical"
+      },
+      {
+        "slotID": 10,
+        "camID": 4,
+        "posX": 4,
+        "posY": 3,
+        "isEmpty": false,
+        "slotType": "vertical"
+      }
+    ]
+  }
+}
