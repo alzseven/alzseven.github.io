@@ -3,10 +3,11 @@
   "message": "success",
   "data": [
     {
-      "parkinglotname": "아라뮤즈홀 주차장",
+      "parkinglotname": "아라뮤즈홀 주차장_mock",
       "vacancynumber": 4,
       "stationColumnNumber": 10,
       "stationRowNumber": 8,
+      "stationBG": "https://alzseven.github.io/api/mock/stations/2_BG.png",
       "slots": [
         {
           "slotID": 1,
