@@ -7,7 +7,7 @@
       "vacancynumber": 4,
       "stationColumnNumber": 10,
       "stationRowNumber": 8,
-      "stationBG": "https://alzseven.github.io/api/mock/stations/2_BG.png",
+      "stationBG": "https://alzseven.github.io/api/mock/stations/2_BG.jpeg",
       "slots": [
         {
           "slotID": 1,
