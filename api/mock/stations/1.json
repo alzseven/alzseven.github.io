@@ -2,8 +2,8 @@
   "statusCode": 200,
   "message": "success",
   "data": {
-    "parkinglotname": "공대 4호관 주차장_mock",
-    "vacancynumber": 4,
+    "parkingLotName": "공대 4호관 주차장_mock",
+    "vacancyNumber": 4,
     "stationColumnNumber": 6,
     "stationRowNumber": 4,
     "stationBG": "https://alzseven.github.io/api/mock/stations/1_BG.jpeg",
