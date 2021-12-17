@@ -3,13 +3,12 @@
   <script type="text/javascript">
     (function () {
       var dsq = document.createElement("script");
-      dsq["type"] = "text/javascript";
-      dsq["src"] = "https://utteranc.es/client.js";
-      dsq["repo"] = "alzseven/alzseven.github.io";
-      dsq["issue-term"] = "pathname";
-      dsq["theme"] = "github-dark";
-      dsq["crossorigin"] = "anonymous";
-      dsq["async"] = true;
+      dsq.src = "https://utteranc.es/client.js";
+      dsq.setAttribute("repo", "alzseven/alzseven.github.io");
+      dsq.setAttribute("issue-term", "pathname");
+      dsq.setAttribute("theme", "github-dark");
+      dsq.setAttribute("crossorigin", "anonymous");
+      dsq.setAttribute("async", true);
       (
         document.getElementsByTagName("head")[0] ||
         document.getElementsByTagName("body")[0]
