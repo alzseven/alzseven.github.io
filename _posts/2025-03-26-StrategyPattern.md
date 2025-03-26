@@ -4,7 +4,7 @@ categories:
   - Study
 tags:
   - GOF Design Pattern
-  - Creational Pattern
+  - Behavioural Pattern
   - WantedGameDeveloperCourseSeason2
 ---
 
