@@ -1,0 +1,1560 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Pixel Dungeon 클론 프로젝트 종합 계획서</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.2.3/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        .mermaid {
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        table, th, td {
+            border: 1px solid #e2e8f0;
+        }
+        th, td {
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f8fafc;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        h1 { font-size: 2em; }
+        h2 { font-size: 1.5em; }
+        h3 { font-size: 1.25em; }
+        h4 { font-size: 1em; }
+        code {
+            background-color: #f1f5f9;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .diagram-container {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 p-6 max-w-6xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6 text-center">C++ Pixel Dungeon 클론 프로젝트 종합 계획서</h1>
+
+    <h2 class="text-2xl font-semibold mt-8">계획 간 엇갈리는 부분 및 주요 참고사항</h2>
+    <p>제공된 여러 계획 문서를 통합하며 다음과 같은 주요 사항 및 잠재적 불일치 지점을 확인했습니다:</p>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>예상 소요 시간 vs. 계획 기간:</strong> 상세 태스크별 예상 시간을 합산하면 총 310인시(5인 팀 기준 약 7.75일)가 소요될 것으로 예측됩니다 ([source: 493]). 이는 목표 프로젝트 기간인 6일([source: 428])을 초과합니다. 계획서 상에서는 이 차이를 인지하고 있으며([source: 445, 494]), 6일 내 완료를 위해 병렬 작업 최적화, 역할 재분배, 핵심 기능 우선 개발(MVP) 등의 전략을 적용할 예정입니다([source: 455, 467]).</li>
+        <li><strong>마일스톤 정의의 진화:</strong> 초기 마일스톤 제안([source: 107] 참고) 이후, 실제 SPD(Shattered Pixel Dungeon) 코드 구조를 참고한 재정의 버전([source: 1])과 제공된 기존 코드 베이스(`PixelDungeonClone`)를 확장하는 방식의 재정의 버전([source: 111])이 제시되었습니다. 본 통합 계획서는 <strong>기존 코드 베이스 확장 방식의 마일스톤([source: 111-337])을 주요 기준으로 삼아</strong> 작성되었습니다. 이는 팀이 실제 코드를 바탕으로 점진적으로 개발하는 데 더 적합하기 때문입니다.</li>
+        <li><strong>역할 간 작업량 불균형 및 최적화:</strong> 초기 계획 검토 결과, 시스템 개발자에게 작업이 집중될 가능성이 지적되었습니다([source: 378, 385]). 이에 대한 최적화 방안으로 일부 AI 로직을 콘텐츠 개발자에게 이전하고([source: 387]), UI 렌더링 관련 작업을 그래픽 개발자가 지원하는 등 역할 간 작업량 재분배가 제안되었습니다([source: 386-390]). 또한, 페어 프로그래밍 세션 도입([source: 391-395])을 통해 협업과 지식 공유를 강화할 계획입니다.</li>
+        <li><strong>C++ 초심자 고려:</strong> 팀원들의 C++ 경험 수준을 고려하여, 코드 템플릿 제공, Q&A 세션, 코드 리뷰 체크리스트 등 추가 지원 방안이 계획에 포함되었습니다([source: 397-401]). 마일스톤 정의 시에도 스마트 포인터 활용, 헤더 관리, const 정확성 등 초심자를 위한 가이드가 포함되어 있습니다([source: 101-105, 346-350]).</li>
+        <li><strong>날짜 기준:</strong> 간트 차트의 시작일은 2025년 5월 1일로 설정되어 있습니다([source: 361]). 현재 시간(2025년 4월 18일) 기준으로 이는 미래의 날짜입니다.</li>
+    </ul>
+    <p class="mt-3">팀원들은 이러한 사항들을 인지하고, 특히 일정 관리와 역할 협업에 주의를 기울여 프로젝트를 진행해야 합니다.</p>
+
+    <h2 class="text-2xl font-semibold mt-8">1. 프로젝트 개요</h2>
+
+    <h3 class="text-xl font-semibold mt-6">1.1 프로젝트 목표</h3>
+    <p>본 프로젝트는 인기 로그라이크 게임인 Pixel Dungeon을 C++로 클론하는 것을 목표로 합니다. 6일 동안 5명의 개발자가 협업하여 게임의 핵심 기능을 구현하고, 플레이 가능한 MVP(Minimum Viable Product)를 완성하는 것이 최종 목표입니다 ([source: 426, 427]).</p>
+
+    <h3 class="text-xl font-semibold mt-6">1.2 프로젝트 범위</h3>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li>기존 `PixelDungeonClone` 코드 베이스([source: 107])를 확장하는 8개의 마일스톤으로 구성된 개발 계획 ([source: 119])</li>
+        <li>3개의 주요 도메인(시스템 개발, 게임플레이 구현, UI/콘텐츠 개발) ([source: 353, 428])</li>
+        <li>5개의 역할로 구분된 팀 구성 (리더/아키텍트, 시스템, 콘텐츠, UI/UX, 그래픽/렌더링) ([source: 448-451, 471])</li>
+        <li>6일 간의 개발 일정 (2025-05-01 ~ 2025-05-06) ([source: 361, 451])</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-6">1.3 주요 산출물</h3>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li>플레이 가능한 C++ Pixel Dungeon 클론 게임 (MVP 버전)</li>
+        <li>소스 코드 및 필요한 문서화</li>
+        <li>(선택적) 테스트 결과 보고서, 사용자 매뉴얼 ([source: 428])</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-8">2. 마일스톤 계획 (기존 코드 확장 기반)</h2>
+    <p>다음은 제공된 `PixelDungeonClone` 코드 베이스를 확장하여 진행하는 8단계 마일스톤 계획입니다 ([source: 111-337]).</p>
+
+    <h3 class="text-xl font-semibold mt-6">마일스톤 1: 기존 코드 베이스 이해 및 확장 준비 (목표: ~1일)</h3>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>집중 목표:</strong> 제공된 `PixelDungeonClone` 저장소의 코드 구조(Game, Renderer, Map, Entity)와 WinAPI 연동 방식을 깊이 이해하고, 향후 기능 확장을 위한 준비 ([source: 121]).</li>
+        <li><strong>주요 활동:</strong> 코드 분석, 게임 루프/렌더링/입력 처리 방식 파악, 플레이어 이동 로직 이해 ([source: 122, 123]).</li>
+        <li><strong>달성 기준:</strong> 팀원 모두 코드 구조 설명 가능, 간단한 코드 수정으로 동작 변경 확인 가능 ([source: 126, 127]).</li>
+        <li><strong>핵심:</strong> 기능 구현보다는 <strong>코드 이해</strong>에 초점 ([source: 128]).</li>
+    </ul>
+
+    <div class="diagram-container">
+        <h4 class="text-lg font-semibold mb-2">M1 클래스 다이어그램 (기존 코드 베이스 구조 파악)</h4>
+        <div class="mermaid">
+classDiagram
+    class Game {
+        +Run()
+        +Update()
+        +Render()
+        +HandleInput()
+        -map : Map
+        -player : Player
+        -renderer : Renderer
+        -hWnd : HWND
+        -hdc : HDC
+    }
+
+    class Map {
+        +Load(filePath) bool
+        +GetTileType(x, y) int
+        +GetWidth() int
+        +GetHeight() int
+        -tiles : int[][]
+    }
+    
+    class Renderer {
+        +Init(hWnd) bool
+        +Render(map, entities, camera)
+        +DrawTile(graphicId, x, y, screenX, screenY)
+        +DrawImage(graphicId, x, y, w, h)
+    }
+    
+    class Entity {
+        +x : int
+        +y : int
+        +graphicID : int
+        +SetPosition(x, y)
+        +GetPosition() : Vector2
+    }
+    
+    class Player {
+        +Move(dx, dy, map)
+    }
+
+    Game --> Map
+    Game --> Player
+    Game --> Renderer
+    Game --> Entity : manages
+    Entity <|-- Player
+
+    Renderer --> Map
+    Renderer --> Entity
+
+    %% 외부 라이브러리 사용은 Mermaid에서 직접적으로 표현 불가. 주석으로 대체.
+    %% Game uses WinAPI functions (windows.h)
+    %% Renderer uses GDI+ functions (gdiplus.h)
+
+        </div>
+    </div>
+
+    <div class="diagram-container">
+        <h4 class="text-lg font-semibold mb-2">M1 시나리오 시퀀스 다이어그램: 게임 루프 및 기본 렌더링 (기존 코드 동작)</h4>
+        <div class="mermaid">
+sequenceDiagram
+    participant WinAPI
+    participant AppEntry as AppEntry
+    participant Game
+    participant Renderer
+    participant Map
+    participant Player as Player
+
+    WinAPI->>AppEntry: 윈도우 생성 메시지 (WM_CREATE 등)
+    AppEntry->>Game: Game 객체 생성 및 초기화
+    AppEntry->>Game: Run() 호출
+
+    loop Game Loop (Game::Run)
+        WinAPI->>WinAPI: 메시지 큐 처리 (DispatchMessage 등)
+        alt 입력 메시지 (WM_KEYDOWN 등)
+            WinAPI->>Game: 메시지 전달 (Game의 윈도우 프로시저)
+            Game->>Game: HandleInput() 호출 및 처리 (Player 이동 등)
+        end
+        alt 화면 업데이트 메시지 (WM_PAINT 등)
+            WinAPI->>Game: 메시지 전달
+            Game->>Game: Render() 호출
+        end
+        Game->>Game: Update() 호출 (간단한 상태 업데이트 - 아직 턴, AI 없음)
+        Game->>Renderer: Render(map, entities, ...)
+        Renderer->>Map: 맵 데이터 요청 (GetTileType 등)
+        Map-->>Renderer: 맵 데이터
+        Renderer->>Player: 플레이어 위치/그래픽 정보 요청
+        Player-->>Renderer: 위치/그래픽
+        Renderer->>Renderer: GDI+ 호출 (DrawTile, DrawImage 등)
+        Renderer-->>WinAPI: 화면 업데이트 완료 (EndPaint 등)
+    end
+        </div>
+    </div>
+
+    <h3 class="text-xl font-semibold mt-6">마일스톤 2: 턴 시스템 도입 및 Entity 확장 (목표: ~1.5일)</h3>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>집중 목표:</strong> 기존 `Entity`를 턴 시스템 참여자인 `Actor` 개념으로 확장하고, 기본적인 턴 관리 시스템 구현 ([source: 145]).</li>
+        <li><strong>주요 활동:</strong> `TurnManager` 클래스 생성, `Entity`에 `Act()`, `NeedsInput()`, `isActive` 등 가상 메소드 추가, `Monster` 클래스 생성, `Game`에서 `TurnManager` 관리 및 `Update` 로직 변경 ([source: 146-149]).</li>
+        <li><strong>달성 기준:</strong> 플레이어 행동 시 턴 진행, 맵에 몬스터 표시, 턴 진행 텍스트 표시 ([source: 152]).</li>
+        <li><strong>핵심 변화:</strong> `Entity`가 `Actor` 역할 수행, `TurnManager` 도입, 턴 기반 게임 루프 전환.</li>
+    </ul>
+
+    <div class="diagram-container">
+        <h4 class="text-lg font-semibold mb-2">M2 클래스 다이어그램</h4>
+        <div class="mermaid">
+classDiagram
+    class Game {
+        +Update()
+        +AddActor(actor)
+        -TurnManager turnManager
+        -vector~Entity*~ actors
+    }
+    
+    class Map {
+        
+    }
+    
+    class Renderer {
+        +DrawText(text, x, y)
+    }
+    
+    class Entity {
+        +x int
+        +y int
+        +graphicID int
+        +SetPosition(x, y)
+        +GetPosition() Vector2
+        +Act(game) virtual
+        +NeedsInput() virtual bool
+        +isActive bool
+    }
+    
+    class Player {
+        +Move(dx, dy, map)
+        +Act(game) override
+        +NeedsInput() override bool
+    }
+    
+    class Monster {
+        +Act(game) override
+        +NeedsInput() override bool
+    }
+    
+    class TurnManager {
+        +AddActor(actor)
+        +ProcessTurns(game)
+        +EndTurn()
+        +GetCurrentActor() Entity*
+        -vector~Entity*~ turnQueue
+        -int currentActorIndex
+    }
+
+    Game "1" -- "1" TurnManager : has a
+    Game "1" -- "*" Entity : manages (as actors)
+    TurnManager "1" -- "*" Entity : manages turn queue
+    Entity <|-- Player : inherits, overrides Act/NeedsInput
+    Entity <|-- Monster : inherits, overrides Act/NeedsInput
+    Renderer "1" -- "*" Entity : draws entity graphics & status(future)
+    Renderer "1" -- "1" Game : draws UI text via Game
+        </div>
+    </div>
+
+    <div class="diagram-container">
+        <h4 class="text-lg font-semibold mb-2">M2 시나리오 시퀀스 다이어그램: 플레이어 턴 종료 및 몬스터 턴 (대기)</h4>
+        <div class="mermaid">
+sequenceDiagram
+    participant Game
+    participant TurnManager
+    participant Player
+    participant Monster
+    participant Renderer
+    participant WinAPI
+
+    loop Game Loop (Game::Run/Update)
+        Game->>TurnManager: GetCurrentActor()
+        TurnManager-->>Game: CurrentActor (Player)
+        Game->>Player: NeedsInput()?
+        Player-->>Game: true
+        Game->>TurnManager: EndTurn()
+        TurnManager->>TurnManager: 다음 Actor 인덱스 계산
+        TurnManager-->>Game: 다음 턴 준비 완료
+        Game->>TurnManager: GetCurrentActor()
+        TurnManager-->>Game: CurrentActor (Monster)
+        Game->>Monster: NeedsInput()?
+        Monster-->>Game: false
+        Game->>Monster: Act(game)
+        Monster-->>Game: Act() 완료
+        Game->>TurnManager: EndTurn()
+        TurnManager->>TurnManager: 다음 Actor 인덱스 계산 (다시 Player)
+        TurnManager-->>Game: 다음 턴 준비 완료 (Player 턴)
+        Game->>Renderer: Render(...)
+        Renderer-->>WinAPI: 화면 표시
+    end
+        </div>
+    </div>
+
+    <h3 class="text-xl font-semibold mt-6">마일스톤 3: 절차적 던전 생성 (목표: ~1.25일)</h3>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>집중 목표:</strong> 게임 시작 시 새로운 던전을 절차적으로 생성하고, `Map`과 `Renderer`가 이를 올바르게 처리하도록 수정 ([source: 170]).</li>
+        <li><strong>주요 활동:</strong> `DungeonGenerator` 클래스 생성 및 알고리즘 구현, `Map` 클래스 수정 (동적 생성), `Game` 초기화 로직 수정, `Entity` 무작위 배치 ([source: 171, 172]).</li>
+        <li><strong>달성 기준:</strong> 매번 다른 모양의 던전 생성 및 플레이어/몬스터 배치 확인 ([source: 174]).</li>
+        <li><strong>핵심 변화:</strong> 정적 맵 로드에서 동적 던전 생성으로 전환.</li>
+    </ul>
+
+    <div class="diagram-container">
+        <h4 class="text-lg font-semibold mb-2">M3 클래스 다이어그램</h4>
+        <div class="mermaid">
+classDiagram
+    class Game {
+        +InitializeGame()
+        -Map map
+        -DungeonGenerator dungeonGenerator
+    }
+    
+    class Map {
+        +Generate(generator, width, height)
+        +GetRandomFloorTile() Vector2
+        +GetTileType(x, y) int
+        +GetWidth() int
+        +GetHeight() int
+        -vector~vector~int~~ tiles
+    }
+    
+    class Renderer {
+        
+    }
+    
+    class Entity {
+        
+    }
+    
+    class Player {
+        
+    }
+    
+    class Monster {
+        
+    }
+    
+    class TurnManager {
+        
+    }
+    
+    class DungeonGenerator {
+        +Generate(width, height) vector~vector~int~~
+        -GenerateRooms()
+        -ConnectRooms()
+    }
+
+    Game "1" -- "1" Map : has a
+    Game "1" -- "1" DungeonGenerator : has a
+    Map "1" -- "1" DungeonGenerator : is created by / receives data from
+    Game "1" -- "*" Entity : places entities on map
+        </div>
+    </div>
+
+    <div class="diagram-container">
+        <h4 class="text-lg font-semibold mb-2">M3 시나리오 시퀀스 다이어그램: 게임 시작 시 던전 생성 및 배치</h4>
+        <div class="mermaid">
+sequenceDiagram
+    participant AppEntry
+    participant Game
+    participant DungeonGenerator
+    participant Map
+    participant Player
+    participant Monster
+    participant TurnManager
+    participant WinAPI
+
+    AppEntry->>Game: InitializeGame()
+    Game->>DungeonGenerator: Generate(width, height)
+    DungeonGenerator->>DungeonGenerator: 방/복도 생성 알고리즘 실행
+    DungeonGenerator-->>Game: 생성된 맵 데이터 (vector>)
+    Game->>Map: Generate(generatedData)
+    Map-->>Game: Map 생성 완료
+    Game->>Map: GetRandomFloorTile()
+    Map-->>Game: playerStartPos
+    Game->>Player: SetPosition(playerStartPos)
+    Game->>TurnManager: AddActor(player)
+    Game->>Map: GetRandomFloorTile()
+    Map-->>Game: monsterStartPos
+    Game->>Monster: SetPosition(monsterStartPos)
+    Game->>TurnManager: AddActor(monster)
+    Game->>Game: Run()
+    Game->>Game: Update()
+    Game->>Game: Render()
+    Game->>WinAPI: 화면 표시 요청
+        </div>
+    </div>
+
+    <h3 class="text-xl font-semibold mt-6">마일스톤 4: 시야 시스템 (FoV) 및 카메라 이동 (목표: ~1일)</h3>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>집중 목표:</strong> 플레이어 시야 내 영역만 보여주고, 플레이어 따라 화면 스크롤(카메라) 구현 ([source: 188]).</li>
+        <li><strong>주요 활동:</strong> `FieldOfView` 클래스 생성 및 알고리즘 구현, `Map`에 시야/탐험 상태 추가, `Renderer` 수정 (시야 반영), `Camera` 클래스 생성 및 `Game`에서 관리/업데이트 ([source: 189-192]).</li>
+        <li><strong>달성 기준:</strong> 시야 시스템 작동 및 탐험 영역 표시 확인, 플레이어 이동 시 화면 스크롤 확인 ([source: 195]).</li>
+        <li><strong>핵심 변화:</strong> 시야 개념 도입, `Camera` 클래스 도입, 렌더링 시 상태 정보 활용.</li>
+    </ul>
+
+    <div class="diagram-container">
+        <h4 class="text-lg font-semibold mb-2">M4 클래스 다이어그램</h4>
+        <div class="mermaid">
+classDiagram
+    class Game {
+        +Update()
+        -FieldOfView fov
+        -Camera camera
+    }
+    
+    class Map {
+        +GetTileType(x, y) int
+        +IsSolid(x, y) bool
+        +SetTileVisibility(x, y, seen, explored)
+        +IsTileSeen(x, y) bool
+        +IsTileExplored(x, y) bool
+        +GetWidth() int
+        +GetHeight() int
+        -vector~vector~int~~ tiles
+        -vector~vector~bool~~ isSeen
+        -vector~vector~bool~~ isExplored
+    }
+    
+    class Renderer {
+        +Render(map, entities, camera)
+        +DrawTile(graphicId, x, y, screenX, screenY, isSeen, isExplored)
+        +DrawImage(graphicId, x, y, w, h, isVisible)
+    }
+    
+    class Entity {
+        +x int
+        +y int
+        +graphicID int
+        +IsVisible(map) bool
+    }
+    
+    class Player {
+        
+    }
+    
+    class Monster {
+        +Act(game) override
+    }
+    
+    class TurnManager {
+        
+    }
+    
+    class DungeonGenerator {
+        
+    }
+    
+    class FieldOfView {
+        +Calculate(map, startX, startY, radius)
+    }
+    
+    class Camera {
+        +Update(targetX, targetY, mapWidth, mapHeight, screenWidth, screenHeight)
+        +GetRenderOffsetX() int
+        +GetRenderOffsetY() int
+        -x float
+        -y float
+    }
+
+    Game "1" -- "1" FieldOfView : has a
+    Game "1" -- "1" Camera : has a
+    Game "1" -- "1" Renderer : passes camera
+    FieldOfView "1" -- "1" Map : updates visibility state
+    FieldOfView "1" -- "1" Player : uses player position
+    Camera "1" -- "1" Player : follows player
+    Renderer "1" -- "1" Camera : uses offset for drawing
+    Renderer "1" -- "1" Map : reads map data and visibility
+    Renderer "1" -- "*" Entity : reads entity data and visibility
+    Entity "1" -- "1" Map : checks own visibility
+        </div>
+    </div>
+
+    <div class="diagram-container">
+        <h4 class="text-lg font-semibold mb-2">M4 시나리오 시퀀스 다이어그램: 플레이어 이동 후 시야/카메라 업데이트 및 렌더링</h4>
+        <div class="mermaid">
+sequenceDiagram
+    participant Game
+    participant Player
+    participant Map
+    participant FieldOfView
+    participant Camera
+    participant Renderer
+    participant WinAPI
+
+    Player->>Player: 위치 업데이트 완료
+    Game->>Game: 플레이어 이동 감지
+    Game->>FieldOfView: Calculate(map, player.x, player.y, radius)
+    FieldOfView->>Map: 맵 타일 시야/탐험 상태 업데이트 요청
+    Map->>Map: isSeen, isExplored 배열 업데이트
+    Map-->>FieldOfView: 업데이트 완료
+    FieldOfView-->>Game: 시야 업데이트 완료
+    Game->>Camera: Update(player.x, player.y, ...)
+    Camera->>Camera: 카메라 위치/오프셋 계산
+    Camera-->>Game: 업데이트 완료
+    Game->>Renderer: Render(map, entities, camera)
+    Renderer->>Renderer: SetCameraOffset(camera.GetRenderOffsetX(), camera.GetRenderOffsetY())
+    Renderer->>Map: 맵 데이터 요청 (타일 타입, 시야/탐험 상태 포함)
+    Map-->>Renderer: 맵 데이터
+    Renderer->>Renderer: 시야/탐험 상태와 오프셋 적용하여 맵 타일 그리기
+    Renderer->>Game: 엔티티 목록 요청 (actors)
+    Game-->>Renderer: 엔티티 목록 (Player, Monsters)
+    loop 각 Entity
+        Renderer->>Entity: IsVisible(map)?
+        Entity->>Map: IsTileSeen(entity.x, entity.y)?
+        Map-->>Entity: 결과
+        Entity-->>Renderer: 가시성 결과
+        alt 가시성 결과 true
+            Renderer->>Renderer: GDI+ 호출 (DrawImage - Entity 그리기)
+        end
+    end
+    Renderer-->>WinAPI: 화면 업데이트 완료
+        </div>
+    </div>
+
+    <h3 class="text-xl font-semibold mt-6">마일스톤 5: 기초 전투 & 시각적 상태 표시 (목표: ~0.75일)</h3>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>집중 목표:</strong> 플레이어와 몬스터 간 기본 공격/피해 시스템 구현, HP 상태 시각적 표시 ([source: 218]).</li>
+        <li><strong>주요 활동:</strong> `Entity`에 전투 속성(HP, 공격력 등) 및 메소드(`TakeDamage`, `IsAlive`) 추가, 전투 로직 구현 (이동 시 공격), `Renderer`에 HP 바/텍스트 및 전투 메시지 그리기 추가 ([source: 219-224]).</li>
+        <li><strong>달성 기준:</strong> 몬스터 공격 및 제거 가능, HP 상태 및 전투 로그 화면 표시, 몬스터 사망 시각적 반영 ([source: 225, 226]).</li>
+        <li><strong>핵심 변화:</strong> 전투 메커니즘 추가, `Renderer`를 통한 상태 시각화 강화.</li>
+    </ul>
+
+    <div class="diagram-container">
+        <h4 class="text-lg font-semibold mb-2">M5 클래스 다이어그램</h4>
+        <div class="mermaid">
+classDiagram
+    class Game {
+        +HandleInput()
+        +ProcessCombat(attacker, defender)
+    }
+    
+    class Map {
+        
+    }
+    
+    class Renderer {
+        +DrawHPBar(screenX, screenY, currentHP, maxHP, width)
+        +DrawCombatMessage(text)
+    }
+    
+    class Entity {
+        +x int
+        +y int
+        +graphicID int
+        +HP int
+        +MaxHP int
+        +AttackPower int
+        +Defense int
+        +Act(game) virtual
+        +NeedsInput() virtual bool
+        +isActive bool
+        +TakeDamage(amount)
+        +IsAlive() bool
+        +Attack(target) virtual
+    }
+    
+    class Player {
+        +Move(dx, dy, map)
+        +Act(game) override
+        +NeedsInput() override bool
+        +Attack(target) override
+    }
+    
+    class Monster {
+        +Act(game) override
+        +NeedsInput() override bool
+        +Attack(target) override
+    }
+    
+    class CombatSystem {
+        +ProcessAttack(attacker, defender)
+    }
+
+    Game "1" -- "*" Entity : manages (combat involves Entities)
+    Game "1" -- "1" CombatSystem : has a (if separated)
+    Entity <|-- Player
+    Entity <|-- Monster
+    Renderer "1" -- "*" Entity : draws HP status
+    Renderer "1" -- "1" Game : draws combat messages via Game
+        </div>
+    </div>
+
+    <div class="diagram-container">
+        <h4 class="text-lg font-semibold mb-2">M5 시나리오 시퀀스 다이어그램: 플레이어 공격 및 몬스터 사망 시각화</h4>
+        <div class="mermaid">
+sequenceDiagram
+    participant Game
+    participant Player
+    participant Monster
+    participant Map
+    participant CombatSystem
+    participant Renderer
+    participant WinAPI
+
+    Game->>Game: 플레이어 이동 감지
+    Game->>Map: 이동 목표 위치에 몬스터 있는지 확인
+    Map-->>Game: Monster* 또는 nullptr
+    alt Monster가 있는 경우 (공격 시도)
+        Game->>CombatSystem: ProcessAttack(player, monster)
+        CombatSystem->>Monster: TakeDamage(calculatedDamage)
+        Monster->>Monster: HP 감소
+        Monster-->>CombatSystem: 업데이트 완료
+        CombatSystem-->>Game: 전투 결과 (사망 여부 등)
+        Game->>Game: 전투 결과 처리
+        alt 몬스터 IsAlive() == false
+            Game->>Game: 몬스터 isActive = false 또는 목록에서 제거
+            Game->>Renderer: DrawCombatMessage("Monster defeated!")
+        end
+        Game->>Renderer: DrawCombatMessage("Player attacks Monster!")
+        Game->>Renderer: UpdateEntityStatusDisplay(player, monster)
+        Game->>Renderer: Render(...)
+        Renderer-->>WinAPI: 화면 표시
+    else Monster가 없는 경우 (일반 이동)
+        Game->>Player: Move(dx, dy, map)
+    end
+        </div>
+    </div>
+
+    <h3 class="text-xl font-semibold mt-6">마일스톤 6: 위협의 시작 - 몬스터 AI, 플레이어 사망 & 게임 오버 (목표: ~0.75일)</h3>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>집중 목표:</strong> 몬스터가 간단한 행동(이동/공격) 수행, 플레이어 사망 및 게임 오버 처리 구현 ([source: 243]).</li>
+        <li><strong>주요 활동:</strong> `Monster::Act()`에 기본 AI 로직 구현 (시야 기반 이동/공격), 플레이어 `IsAlive()` 확인 및 `Game` 상태("GameOver") 변경, `Renderer`에 게임 오버 화면 표시 추가 ([source: 244-248]).</li>
+        <li><strong>달성 기준:</strong> 몬스터가 플레이어 추적/공격, 플레이어 HP 0 도달 시 게임 오버 처리 및 화면 표시 (MVP 달성) ([source: 249]).</li>
+        <li><strong>핵심 변화:</strong> 몬스터 AI 도입, 게임 종료 조건 및 상태 관리 구현.</li>
+    </ul>
+
+    <div class="diagram-container">
+        <h4 class="text-lg font-semibold mb-2">M6 클래스 다이어그램</h4>
+        <div class="mermaid">
+classDiagram
+    class Game {
+        +Update()
+        +HandleInput()
+        +SetGameState(state)
+        +RestartGame()
+        -GameState currentGameState
+    }
+    
+    class Map {
+        
+    }
+    
+    class Renderer {
+        +DrawGameOverScreen()
+    }
+    
+    class Entity {
+        +x int
+        +y int
+        +graphicID int
+        +HP int
+        +MaxHP int
+        +AttackPower int
+        +Defense int
+        +Act(game) virtual
+        +NeedsInput() virtual bool
+        +isActive bool
+        +TakeDamage(amount)
+        +IsAlive() bool
+        +Attack(target) virtual
+        +GetPosition() Vector2
+    }
+    
+    class Player {
+        +Act(game) override
+        +NeedsInput() override bool
+        +TakeDamage(amount)
+        +IsAlive()
+    }
+    
+    class Monster {
+        +Act(game) override
+        +NeedsInput() override bool
+        +Attack(target) override
+    }
+    
+    class TurnManager {
+        
+    }
+    
+    class FieldOfView {
+        +IsInSight(map, watcherX, watcherY, targetX, targetY, radius) bool
+    }
+    
+    class CombatSystem {
+        
+    }
+
+    Game "1" -- "*" Entity : manages (Act() called by Game/TurnManager)
+    Entity <|-- Player
+    Entity <|-- Monster : implements Act() AI
+    Game "1" -- "1" FieldOfView : AI uses FoV via Game
+    Monster "1" -- "1" Map : checks movement validity
+    Monster "1" -- "1" Player : targets player
+    Game "1" -- "1" Renderer : draws state-dependent screens
+        </div>
+    </div>
+
+    <div class="diagram-container">
+        <h4 class="text-lg font-semibold mb-2">M6 시나리오 시퀀스 다이어그램: 몬스터 턴 행동 (AI) 및 플레이어 사망</h4>
+        <div class="mermaid">
+sequenceDiagram
+    participant Game
+    participant TurnManager
+    participant Monster
+    participant Player
+    participant Map
+    participant FieldOfView
+    participant CombatSystem
+    participant Renderer
+    participant WinAPI
+
+    TurnManager->>Game: GetCurrentActor()
+    TurnManager-->>Game: CurrentActor (Monster)
+    Game->>Monster: Act(game)
+    Monster->>FieldOfView: IsInSight(map, monster.pos, player.pos, radius)
+    FieldOfView-->>Monster: 시야 확인 결과
+    alt 플레이어가 시야에 있는 경우
+        Monster->>Player: GetPosition()
+        Player-->>Monster: 플레이어 위치
+        Monster->>Monster: 이동 또는 공격 결정 로직
+        alt 플레이어와 인접한 경우 (공격)
+            Monster->>CombatSystem: ProcessAttack(monster, player)
+            CombatSystem->>Player: TakeDamage(calculatedDamage)
+            Player->>Player: HP 감소
+            Player-->>CombatSystem: 업데이트 완료
+            CombatSystem-->>Monster: 전투 결과
+            Game->>Renderer: DrawCombatMessage("Monster attacks!")
+            Game->>Renderer: UpdateEntityStatusDisplay(player)
+            Game->>Renderer: Render()
+            alt Player IsAlive() == false (사망)
+                Game->>Game: SetGameState(GameOver)
+                Game->>Renderer: DrawGameOverScreen()
+                Renderer-->>WinAPI: 화면 표시
+                Note over Game,WinAPI: 게임 루프 종료 또는 재시작 대기
+            end
+        else 플레이어와 인접하지 않은 경우 (이동)
+            Monster->>Monster: 플레이어 방향으로 이동 위치 계산
+            Monster->>Map: IsSolid(targetPos)
+            Map-->>Monster: 결과
+            alt 이동 가능한 경우
+                Monster->>Monster: SetPosition(targetPos)
+                Game->>Renderer: Render()
+            end
+        end
+    else 플레이어가 시야에 없는 경우
+        Monster->>Monster: 무작위 이동 또는 대기 (간단 로직)
+    end
+    Monster-->>Game: Act() 완료
+    Game->>TurnManager: EndTurn()
+        </div>
+    </div>
+
+    <h3 class="text-xl font-semibold mt-6">마일스톤 7: 뜻밖의 발견 - 아이템 줍기 및 기본 인벤토리 UI (목표: ~0.75일)</h3>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>집중 목표:</strong> 맵에 아이템 배치, 플레이어 줍기 기능, 기본 인벤토리 UI 구현 ([source: 272]).</li>
+        <li><strong>주요 활동:</strong> `Item` 베이스 클래스 및 구체 클래스 생성, `Map`에 아이템 목록 관리 추가, `Player`에 `Inventory` 컴포넌트 추가, 아이템 줍기 로직 구현, `UIManager` 및 `Renderer`에 인벤토리 UI 토글 및 목록 표시 기능 추가 ([source: 273-280]).</li>
+        <li><strong>달성 기준:</strong> 맵 아이템 줍기 가능, 인벤토리 UI 열기/닫기 및 내용 확인 가능 ([source: 281, 282]).</li>
+        <li><strong>핵심 변화:</strong> `Item` 및 `Inventory` 개념 도입, `UIManager` 도입으로 UI 관리 시작 (기존 제안의 M3와 유사하나, SPD 구조 참고 버전에서는 M7에서 본격화).</li>
+    </ul>
+
+    <div class="diagram-container">
+        <h4 class="text-lg font-semibold mb-2">M7 클래스 다이어그램</h4>
+        <div class="mermaid">
+classDiagram
+    class Game {
+        +HandleInput()
+        +ProcessItemPickup(player, item)
+    }
+    
+    class Map {
+        +GetItemAt(x, y) Item*
+        +RemoveItemAt(x, y)
+        +SpawnItem(item, x, y)
+        -vector~Item*~ itemsOnMap
+    }
+    
+    class Renderer {
+        +Render(map, entities, camera, uiManager)
+        +DrawItem(graphicId, x, y, screenX, screenY)
+    }
+    
+    class Entity {
+        
+    }
+    
+    class Player {
+        +Move(dx, dy, map)
+        +AddItem(item)
+        +GetInventory() Inventory*
+        -Inventory inventory
+    }
+    
+    class Monster {
+        
+    }
+    
+    class TurnManager {
+        
+    }
+    
+    class FieldOfView {
+        
+    }
+    
+    class Camera {
+        
+    }
+    
+    class Item {
+        +name string
+        +graphicID int
+        +position Vector2
+        +IsConsumable() bool
+        +Use(user) virtual
+    }
+    
+    class HealthPotion {
+        +IsConsumable() override bool
+        +Use(user) override
+    }
+    
+    class Inventory {
+        +AddItem(item)
+        +RemoveItem(item)
+        +GetItems() const vector~Item*~&
+        -vector~Item*~ items
+    }
+    
+    class UIManager {
+        +Update(game)
+        +Render(renderer, camera)
+        +HandleInput(keyCode)
+        +IsInventoryOpen() const bool
+        +GetInventory() const Inventory*
+        -bool isInventoryOpen
+    }
+
+    Game "1" -- "1" Map : manages items on map
+    Game "1" -- "1" Player : has inventory, picks up items
+    Game "1" -- "1" UIManager : has a, manages UI state and input
+    Map "1" -- "*" Item : contains items on map
+    Player "1" -- "1" Inventory : has an inventory
+    Inventory "1" -- "*" Item : contains items
+    Item <|-- HealthPotion
+    Game "1" -- "1" Renderer : passes UIManager
+    UIManager "1" -- "1" Renderer : requests UI drawing
+    UIManager "1" -- "1" Player : accesses player/inventory data
+    UIManager "1" -- "1" Game : receives UI input (via Game.HandleInput)
+        </div>
+    </div>
+
+    <div class="diagram-container">
+        <h4 class="text-lg font-semibold mb-2">M7 시나리오 시퀀스 다이어그램: 아이템 줍기 및 인벤토리 열기</h4>
+        <div class="mermaid">
+sequenceDiagram
+    participant InputHandler as InputHandler
+    participant Game
+    participant Player
+    participant Map
+    participant Item
+    participant Inventory
+    participant UIManager
+    participant Renderer
+    participant WinAPI
+
+    InputHandler->>Game: 이동 요청 (예: 아이템 타일 방향)
+    Game->>Player: Move(dx, dy, map)
+    Player->>Map: 이동 가능 여부 확인
+    Map-->>Player: 결과
+    alt 이동 가능하고 타일에 Item이 있는 경우
+        Player->>Player: 위치 업데이트
+        Game->>Map: GetItemAt(player.x, player.y)
+        Map-->>Game: Item* itemToPickup
+        Game->>UIManager: ShowMessage("Picked up " + itemToPickup->name + "!")
+        Game->>Player: AddItem(itemToPickup)
+        Player->>Inventory: AddItem(itemToPickup)
+        Inventory-->>Player: 추가 완료
+        Player-->>Game: 아이템 획득 완료
+        Game->>Map: RemoveItemAt(player.x, player.y)
+        Map->>Map: 맵에서 아이템 제거
+        Game->>Game: 획득 처리 완료
+    end
+
+    InputHandler->>Game: 인벤토리 열기/닫기 키 입력
+    Game->>UIManager: HandleInput(keyCode)
+    UIManager->>UIManager: ToggleInventoryUI()
+    UIManager-->>Game: 상태 변경 완료
+    Game->>Renderer: Render(map, entities, camera, uiManager)
+    Renderer->>UIManager: Render(renderer, camera)
+    alt UIManager IsInventoryOpen() == true
+        UIManager->>Player: GetInventory()
+        Player-->>UIManager: Inventory*
+        UIManager->>Inventory: GetItems()
+        Inventory-->>UIManager: 아이템 목록
+        UIManager->>Renderer: DrawUIWindow(...), DrawText(...)
+        Renderer->>Renderer: UI 그리기
+    end
+    Renderer-->>WinAPI: 화면 표시
+        </div>
+    </div>
+
+    <h3 class="text-xl font-semibold mt-6">마일스톤 8: 전리품 활용 - 아이템 사용 및 인벤토리 UI 상호작용 (목표: ~0.75일)</h3>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>집중 목표:</strong> 인벤토리 소모성 아이템(물약) 사용 기능 구현, 인벤토리 UI 상호작용 개선 ([source: 304]).</li>
+        <li><strong>주요 활동:</strong> `Inventory`에 인덱스 기반 접근/제거 추가, `Item::Use()` 메소드 구현 (`HealthPotion`에서 `Player::Heal` 호출 등), `UIManager`에 아이템 선택 상태 관리 및 사용 요청 처리 로직 추가, `Game`에서 사용 요청 처리 ([source: 305-307]).</li>
+        <li><strong>달성 기준:</strong> 인벤토리 아이템 사용 및 효과 적용, 인벤토리 UI 통한 아이템 관리 가능 ([source: 311, 312]).</li>
+        <li><strong>핵심 변화:</strong> 아이템 사용 로직 구현, UI-게임 로직 간 상호작용 강화.</li>
+    </ul>
+
+    <div class="diagram-container">
+        <h4 class="text-lg font-semibold mb-2">M8 클래스 다이어그램</h4>
+        <div class="mermaid">
+classDiagram
+    class Game {
+        +HandleInput()
+        +ProcessItemUse(user, item)
+    }
+    
+    class Map {
+        
+    }
+    
+    class Renderer {
+        +DrawInventoryItem(graphicId, screenX, screenY, isSelected)
+    }
+    
+    class Entity {
+        +x int
+        +y int
+        +graphicID int
+        +HP int
+        +MaxHP int
+        +AttackPower int
+        +Defense int
+        +Act(game) virtual
+        +NeedsInput() virtual bool
+        +isActive bool
+        +TakeDamage(amount)
+        +IsAlive() bool
+        +Attack(target) virtual
+        +GetPosition() Vector2
+        +Heal(amount)
+    }
+    
+    class Player {
+        +Heal(amount)
+        +UseItem(item)
+    }
+    
+    class Monster {
+        
+    }
+    
+    class TurnManager {
+        
+    }
+    
+    class FieldOfView {
+        
+    }
+    
+    class Camera {
+        
+    }
+    
+    class Item {
+        +name string
+        +graphicID int
+        +position Vector2
+        +IsConsumable() bool
+        +Use(user) virtual
+    }
+    
+    class HealthPotion {
+        +IsConsumable() override bool
+        +Use(user) override
+    }
+    
+    class Inventory {
+        +AddItem(item)
+        +RemoveItem(item)
+        +GetItems() const vector~Item*~&
+        +GetItemByIndex(index) Item*
+        +RemoveItemByIndex(index)
+    }
+    
+    class UIManager {
+        +Update(game)
+        +Render(renderer, camera)
+        +HandleInput(keyCode)
+        +IsInventoryOpen() const bool
+        +GetInventory() const Inventory*
+        +GetSelectedItemIndex() const int
+        -bool isInventoryOpen
+        -int selectedItemIndex
+    }
+
+    Game "1" -- "1" UIManager : receives item use request
+    Game "1" -- "1" Player : facilitates item use
+    Game "1" -- "1" Player : handles item selection/use input
+    Player "1" -- "1" Inventory : uses items from inventory
+    Inventory "1" -- "*" Item : contains items
+    Item <|-- HealthPotion : implements Use()
+    UIManager "1" -- "1" Inventory : reads/interacts with inventory
+    UIManager "1" -- "1" Renderer : requests UI drawing
+    UIManager "1" -- "1" Player : accesses player/inventory data
+    Entity <|-- Player : Player implements Heal from Entity
+        </div>
+    </div>
+
+    <div class="diagram-container">
+        <h4 class="text-lg font-semibold mb-2">M8 시나리오 시퀀스 다이어그램: 인벤토리에서 물약 사용</h4>
+        <div class="mermaid">
+sequenceDiagram
+    participant InputHandler as InputHandler
+    participant Game
+    participant UIManager
+    participant Inventory
+    participant Player
+    participant HealthPotion
+    participant Renderer
+    participant WinAPI
+    participant UIOverlay as UIOverlay
+
+    loop Game Loop (Game::Run)
+        alt GameState == Playing && UIManager.IsInventoryOpen()
+            InputHandler->>Game: 아이템 선택/사용 키 입력
+            Game->>UIManager: HandleInput(keyCode)
+            UIManager->>UIManager: 선택된 아이템 인덱스 업데이트 OR 사용 요청 판단
+            alt 사용 요청인 경우 (예: Enter 키)
+                UIManager->>UIManager: GetSelectedItemIndex()
+                UIManager-->>Game: selectedItemIndex
+                Game->>Player: GetInventory()
+                Player-->>Game: Inventory*
+                Game->>Inventory: GetItemByIndex(selectedItemIndex)
+                Inventory-->>Game: HealthPotion* selectedItem
+                Game->>Game: ProcessItemUse(player, selectedItem)
+                Game->>HealthPotion: Use(player)
+                HealthPotion->>Player: Heal(healAmount)
+                Player->>Player: HP 업데이트
+                Player-->>HealthPotion: 회복 완료
+                HealthPotion-->>Game: Use() 완료
+                Game->>Player: GetInventory()
+                Player-->>Game: Inventory*
+                Game->>Inventory: RemoveItemByIndex(selectedItemIndex)
+                Inventory-->>Game: 아이템 제거 완료
+                Game->>UIManager: ShowMessage("Used Health Potion!")
+                Game->>UIManager: 인벤토리 UI 업데이트 요청
+                UIManager->>Renderer: 인벤토리 UI 다시 그리기 요청
+                Game->>Renderer: Render(...)
+                Renderer-->>WinAPI: 화면 표시
+            end
+        end
+    end
+        </div>
+    </div>
+
+    <h3 class="text-xl font-semibold mt-6">마일스톤 8 이후 단계</h3>
+    <p>위 8단계의 핵심 기능 구현 후, 기본적인 Pixel Dungeon의 '탐험-전투-아이템 사용-사망' 루프가 완성됩니다. 이후 단계는 다음과 같은 기능들을 추가할 수 있습니다 ([source: 338]):</p>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li>다층 던전 완성 (위/아래 계단, 층별 특징)</li>
+        <li>캐릭터 성장 시스템 (경험치, 레벨, 스탯)</li>
+        <li>장비 시스템 (무기, 방어구 착용 및 효과)</li>
+        <li>다양한 아이템 및 효과 (스크롤, 마법봉, 특수 능력 물약 등)</li>
+        <li>다양한 몬스터 종류 및 고급 AI (특수 공격, 패턴)</li>
+        <li>상태 이상 시스템 (독, 화상, 저주 등)</li>
+        <li>아이템 식별 시스템</li>
+        <li>함정, 상점, 제단 등 상호작용 오브젝트 추가</li>
+        <li>보스 몬스터 구현</li>
+        <li>UI/UX 개선 (미니맵, 상세 정보 창, 설정, 애니메이션, 사운드)</li>
+        <li>저장/불러오기 기능</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-6">C++ 초심자 고려 사항 (코드 확장 시)</h3>
+    <ol class="list-decimal pl-6 mt-4 space-y-2">
+        <li><strong>기존 코드 분석:</strong> 제공된 코드의 클래스 역할, 함수 호출 관계, 실행 흐름을 디버거를 사용하며 충분히 파악합니다 ([source: 339-341]).</li>
+        <li><strong>점진적 변경:</strong> 새로운 기능을 추가할 때는 최소한의 변경으로 시작하고, 한 번에 너무 많은 기능을 넣지 않습니다 ([source: 342, 343]).</li>
+        <li><strong>클래스 책임:</strong> 기능 추가 시 어떤 클래스의 책임에 속하는지 고민하고, 필요시 클래스 분리를 고려합니다 ([source: 344, 345]).</li>
+        <li><strong>스마트 포인터:</strong> 동적 할당된 객체(아이템, 액터 등) 관리에 `std::unique_ptr`나 `std::shared_ptr` 사용을 적극 검토하여 메모리 누수를 방지합니다 ([source: 101, 346, 347]).</li>
+        <li><strong>WinAPI와 게임 로직 분리:</strong> 게임 로직 구현 시 WinAPI 관련 코드는 특정 클래스/부분에만 국한되도록 노력합니다 ([source: 348, 349]).</li>
+        <li><strong>함수 오버라이드 (`virtual`, `override`):</strong> 가상 함수와 `override` 키워드를 적절히 사용하여 다형성을 활용하고 실수를 방지합니다 ([source: 102, 350]).</li>
+        <li><strong>Const 정확성:</strong> 상태를 변경하지 않는 멤버 함수에 `const` 키워드를 붙여 안정성과 가독성을 높입니다 ([source: 103]).</li>
+        <li><strong>SOLID 원칙:</strong> 가능하면 단일 책임 원칙(SRP), 개방-폐쇄 원칙(OCP) 등 객체 지향 설계 원칙을 염두에 둡니다 ([source: 104, 105]).</li>
+    </ol>
+
+    <h2 class="text-2xl font-semibold mt-8">3. 도메인별 상세 태스크</h2>
+    <p>프로젝트는 다음 3개의 주요 도메인으로 구분되며, 각 도메인별 상세 태스크는 다음과 같습니다 ([source: 353]). (상세 목록은 `6day_plan_domain_tasks.txt` 참조)</p>
+
+    <h3 class="text-xl font-semibold mt-6">3.1 시스템 개발 도메인</h3>
+    <p>게임의 핵심 로직과 구조 담당. (Level 클래스, 턴 시스템, 던전 생성, 시야, 전투, AI, 아이템 시스템 등)</p>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li>1.1 기본 구조 설계 및 분석</li>
+        <li>1.2 Level 클래스 및 턴 시스템 구현</li>
+        <li>1.3 절차적 던전 생성</li>
+        <li>1.4 시야 시스템 및 카메라</li>
+        <li>1.5 전투 시스템</li>
+        <li>1.6 몬스터 AI 및 게임 상태 관리</li>
+        <li>1.7 아이템 시스템 기초</li>
+        <li>1.8 아이템 사용 및 효과</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-6">3.2 게임플레이 구현 도메인</h3>
+    <p>사용자 경험과 게임 메커니즘 담당. (이동, 상호작용, 몬스터 배치, 던전 탐험, 전투/AI/아이템 테스트 및 밸런싱 등)</p>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li>2.1 기본 이동 및 상호작용</li>
+        <li>2.2 몬스터 배치 및 표시</li>
+        <li>2.3 절차적 던전 탐험</li>
+        <li>2.4 시야 및 탐험</li>
+        <li>2.5 전투 및 피해</li>
+        <li>2.6 몬스터 AI 및 게임 오버</li>
+        <li>2.7 아이템 상호작용</li>
+        <li>2.8 아이템 사용 및 효과</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-6">3.3 UI/콘텐츠 개발 도메인</h3>
+    <p>시각적 요소와 사용자 인터페이스 담당. (UI 요소, 그래픽 리소스, 전투/상태/인벤토리 UI 및 피드백 등)</p>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li>3.1 기본 UI 요소</li>
+        <li>3.2 그래픽 리소스 관리</li>
+        <li>3.3 전투 UI 및 피드백</li>
+        <li>3.4 게임 상태 UI</li>
+        <li>3.5 아이템 및 인벤토리 UI</li>
+        <li>3.6 아이템 상호작용 UI</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-8">4. 역할 정의 및 담당자 프로필</h2>
+    <p>효율적인 진행을 위해 5개의 핵심 역할을 정의했습니다 ([source: 471]). 각 역할은 특정 도메인에 집중하며 협업합니다.</p>
+
+    <h3 class="text-xl font-semibold mt-6">4.1 프로젝트 리더 / 아키텍트</h3>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>주요 책임:</strong> 프로젝트 총괄, 아키텍처 설계, 품질 관리, 기술 의사결정 ([source: 473]).</li>
+        <li><strong>담당 태스크 영역:</strong> 기본 구조 설계/분석, Level 클래스 설계, 클래스 다이어그램 관리, 코드 통합/리팩토링 ([source: 473]).</li>
+        <li><strong>필요 역량:</strong> C++ 중급 이상, OOP 설계, 게임 아키텍처 이해, 리더십, 소통 능력 ([source: 473]).</li>
+        <li><strong>프로필:</strong> 설계/리딩 경험자, 게임 개발 경험자 우대 ([source: 473]).</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-6">4.2 시스템 개발자</h3>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>주요 책임:</strong> 핵심 시스템(턴, 전투, AI, 상태 관리) 구현 ([source: 474]).</li>
+        <li><strong>담당 태스크 영역:</strong> 턴 시스템, Actor 확장, 전투 시스템, 몬스터 AI, 게임 상태 관리 ([source: 474]).</li>
+        <li><strong>필요 역량:</strong> C++ 기본, 알고리즘 이해, 게임 로직 구현/디버깅 능력 ([source: 474]).</li>
+        <li><strong>프로필:</strong> 프로그래밍 기초 탄탄, 게임 메카닉 관심, 문제 해결 능력 우수 ([source: 474]).</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-6">4.3 콘텐츠 생성 개발자</h3>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>주요 책임:</strong> 던전 생성, 아이템 시스템 개발, 콘텐츠 밸런싱 ([source: 475]).</li>
+        <li><strong>담당 태스크 영역:</strong> 절차적 던전 생성, 아이템 시스템/효과, 콘텐츠 밸런싱 ([source: 475]).</li>
+        <li><strong>필요 역량:</strong> C++ 기본, 절차 생성 이해/학습 의지, 게임 디자인 감각, 창의적 문제 해결 ([source: 475]).</li>
+        <li><strong>프로필:</strong> 알고리즘/게임 디자인 관심, 창의적/실험적 접근 선호, 데이터 구조 이해 ([source: 475]).</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-6">4.4 UI/UX 개발자</h3>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>주요 책임:</strong> UI 시스템 설계/구현, 인터페이스 개발, 시각적 피드백, 사용자 경험 최적화 ([source: 476]).</li>
+        <li><strong>담당 태스크 영역:</strong> 기본 UI, 전투/상태/인벤토리 UI 및 피드백 ([source: 476]).</li>
+        <li><strong>필요 역량:</strong> C++ 기본, UI 디자인 감각, UX 이해, 렌더링 기초 ([source: 476]).</li>
+        <li><strong>프로필:</strong> UI/UX 관심, 시각 디자인 감각, 사용자 중심 사고, 프론트엔드 경험 우대 ([source: 476]).</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-6">4.5 그래픽/렌더링 개발자</h3>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>주요 책임:</strong> 렌더링 개발/최적화, 시야 시스템, 카메라 관리, 그래픽 리소스 관리 ([source: 477]).</li>
+        <li><strong>담당 태스크 영역:</strong> 시야/카메라 시스템, 그래픽 리소스 관리, 게임플레이 시각화, 렌더링 버그 수정 ([source: 477]).</li>
+        <li><strong>필요 역량:</strong> C++ 기본, 그래픽스/렌더링 기초, 공간 알고리즘 이해, 최적화 능력 ([source: 477]).</li>
+        <li><strong>프로필:</strong> 그래픽스 프로그래밍 관심, 수학/물리 강점, 시각 효과 관심, 알고리즘 구현 능력 ([source: 477]).</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-6">4.6 역할 간 협업 구조</h3>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>핵심 협업 포인트:</strong> 역할별 담당 태스크 간의 통합 및 연동 지점 (예: 아키텍트↔시스템, 시스템↔콘텐츠, 콘텐츠↔UI, UI↔그래픽, 그래픽↔아키텍트) ([source: 478]).</li>
+        <li><strong>일일 스크럼 미팅:</strong> 매일 15분 내외 진행, 진행 상황/장애물 공유, 당일 계획/협업 확인 ([source: 478]). 최적화 계획에 따라 Q&A 및 리스크 평가 시간 포함 ([source: 400, 411]).</li>
+        <li><strong>페어 프로그래밍:</strong> 핵심/복잡 기능 개발 시 명시적 세션 계획 (아래 표 참조) ([source: 391]).</li>
+    </ul>
+
+    <h4 class="text-lg font-semibold mt-4">페어 프로그래밍 세션 계획 예시</h4>
+    <table class="w-full mt-4">
+        <thead>
+            <tr>
+                <th>페어 프로그래밍 세션</th>
+                <th>참여 역할</th>
+                <th>일정 (예상)</th>
+                <th>기대 효과</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Level 클래스 설계/구현</td>
+                <td>아키텍트 + 시스템 개발자</td>
+                <td>1일차 오후</td>
+                <td>핵심 클래스 설계/구현 품질 향상 ([source: 392])</td>
+            </tr>
+            <tr>
+                <td>던전 생성 알고리즘</td>
+                <td>콘텐츠 개발자 + 시스템 개발자</td>
+                <td>2일차 오전</td>
+                <td>알고리즘 최적화 및 통합성 확보 ([source: 393])</td>
+            </tr>
+            <tr>
+                <td>시야 시스템 구현</td>
+                <td>그래픽 개발자 + 시스템 개발자</td>
+                <td>2일차 오후</td>
+                <td>성능 및 정확성 향상 ([source: 394])</td>
+            </tr>
+            <tr>
+                <td>인벤토리 UI 연동</td>
+                <td>UI 개발자 + 콘텐츠 개발자</td>
+                <td>5일차 오전</td>
+                <td>사용성 및 기능 연동 개선 ([source: 395])</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="text-2xl font-semibold mt-8">5. 프로젝트 일정 (6일 계획)</h2>
+    <p><strong>참고:</strong> 총 예상 작업 시간은 310인시(5인 팀 기준 약 7.75일)로 추정되나([source: 493]), 6일(2025-05-01 ~ 2025-05-06) 내 완료를 목표로 병렬 작업 및 최적화 방안을 적용합니다 ([source: 445]). 아래 간트 차트는 최적화 방안(사전 준비, 강화된 스크럼, 페어 프로그래밍, 기술 스파이크 등)을 반영하여 재구성한 예시입니다.</p>
+
+    <div class="diagram-container">
+        <h3 class="text-xl font-semibold mb-3">5.1 간트 차트 (Mermaid) - 최적화 반영 예시</h3>
+        <div class="mermaid">
+gantt
+    title C++ Pixel Dungeon 클론 프로젝트 - 6일 일정 (최적화 반영)
+    dateFormat  YYYY-MM-DD
+    axisFormat %m-%d
+    todayMarker off
+
+    section 프로젝트 관리
+    프로젝트 킥오프 미팅                  :milestone, m1, 2025-05-01, 0d
+    사전 준비 (코드 분석, 설계 초안)       :crit, 2025-04-30, 1d
+    일일 스크럼 (Q&A, 리스크 평가 포함)  :daily, 2025-05-01, 6d
+    페어 프로그래밍 세션                  :active, 2025-05-01, 5d
+    기술 스파이크 세션                    :active, 2025-05-01, 2d
+    중간 검토 회의                       :milestone, m2, 2025-05-03, 0d
+    최종 검토 회의                       :milestone, m3, 2025-05-06, 0d
+    프로젝트 완료                       :milestone, m4, 2025-05-06, 0d
+
+    section 기본 구조 & 시스템 (아키텍트, 시스템 개발자)
+    코드베이스 분석 & Level 설계 완성    :crit, task_sys1, 2025-05-01, 1d
+    Level 클래스 & Actor 확장           :crit, task_sys2, after task_sys1, 1d
+    턴 시스템 구현                      :crit, task_sys3, after task_sys2, 1d
+    전투 시스템 구현                    :crit, task_sys4, 2025-05-03, 1d
+    몬스터 AI 구현                      :crit, task_sys5, after task_sys4, 1d
+    게임 상태 관리                      :crit, task_sys6, after task_sys5, 0.5d
+
+    section 콘텐츠 생성 (콘텐츠 개발자, 시스템 개발자 지원)
+    DungeonGenerator 설계 & 구현        :task_con1, 2025-05-01, 1.5d
+    액터 배치 로직                      :task_con2, after task_con1, 0.5d
+    Item 클래스 & 시스템 구현           :crit, task_con3, 2025-05-04, 2d
+
+    section 그래픽/렌더링 (그래픽 개발자, 시스템 개발자 지원)
+    시야 계산 로직 & 상태 관리          :task_gfx1, 2025-05-02, 1.5d
+    카메라 시스템 구현                  :task_gfx2, after task_gfx1, 0.5d
+    그래픽 리소스 관리                  :task_gfx3, 2025-05-04, 1d
+
+    section UI 개발 (UI 개발자, 그래픽 개발자 지원)
+    UIManager 설계 & 구현             :task_ui1, 2025-05-01, 1d
+    기본 UI 요소 구현 (HP, 로그)        :task_ui2, after task_ui1, 0.5d
+    전투 UI & 피드백 구현             :task_ui3, 2025-05-03, 1d
+    게임 상태 UI 구현                 :task_ui4, after task_ui3, 0.5d
+    인벤토리 UI 구현                  :task_ui5, 2025-05-05, 1d
+
+    section 게임플레이 & 테스트 (전체 팀)
+    기본 상호작용 테스트                :test_p1, 2025-05-02, 0.5d
+    던전/몬스터 배치 테스트             :test_p2, after task_con2, 0.5d
+    시야/카메라 테스트                  :test_p3, after task_gfx2, 0.5d
+    전투 시스템 테스트                  :test_p4, after task_sys4, 0.5d
+    몬스터 AI 테스트                    :test_p5, after task_sys5, 0.5d
+    아이템 시스템 테스트                :test_p6, after task_con3, 0.5d
+    시스템 통합 테스트                  :crit, test_t1, 2025-05-05, 0.5d
+    버그 수정 & 최적화                :crit, test_t2, after test_t1, 0.5d
+    최종 테스트 & 검증                :crit, test_t3, 2025-05-06, 0.5d
+        </div>
+    </div>
+
+    <h3 class="text-xl font-semibold mt-6">5.2 주요 마일스톤 일정</h3>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>프로젝트 킥오프 (Day 1):</strong> 2025-05-01 ([source: 373, 453])</li>
+        <li><strong>중간 검토 회의 (Day 3):</strong> 2025-05-03 (기본 시스템 구현 완료 검토) ([source: 373, 453])</li>
+        <li><strong>최종 검토 회의 (Day 6):</strong> 2025-05-06 (전체 기능 통합 및 테스트 완료 검토) ([source: 373, 453])</li>
+        <li><strong>프로젝트 완료 (Day 6):</strong> 2025-05-06 ([source: 373, 453])</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-6">5.3 일별 주요 작업 계획 (간트 차트 참고)</h3>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>1일차 (05-01):</strong> 킥오프, 사전 준비 완료, 코드 분석, Level 설계, UIManager/DungeonGenerator 설계 시작, 기술 스파이크.</li>
+        <li><strong>2일차 (05-02):</strong> Level/Actor 구현, 턴 시스템 시작, 시야/카메라 로직 구현, UIManager/DungeonGenerator 구현, 기본 UI 요소 구현, 기본 상호작용 테스트.</li>
+        <li><strong>3일차 (05-03):</strong> 중간 검토, 턴 시스템 완료, 전투 시스템/UI 구현 시작, 시야/카메라 테스트, 던전/몬스터 배치 테스트.</li>
+        <li><strong>4일차 (05-04):</strong> 몬스터 AI 구현, 아이템 시스템 구현 시작, 그래픽 리소스 관리, 게임 상태 UI 구현, 전투 시스템 테스트.</li>
+        <li><strong>5일차 (05-05):</strong> 아이템 시스템 구현 완료, 인벤토리 UI 구현, 게임 상태 관리 구현, 몬스터 AI 테스트, 통합 테스트 시작.</li>
+        <li><strong>6일차 (05-06):</strong> 아이템 시스템 테스트, 버그 수정/최적화, 최종 테스트/검증, 최종 검토, 프로젝트 완료.</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold mt-8">6. 계획 최적화 방안 요약</h2>
+    <p>제한된 6일 내 성공적인 완료를 위해 다음과 같은 계획 최적화 방안을 적용합니다 ([source: 377-425]):</p>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>초기 설계 단계 분산:</strong> 프로젝트 시작 전 코드 분석 자료, 설계 초안 등 사전 준비 작업을 도입하여 1일차 부하를 줄이고 설계를 세분화하여 병렬 진행을 유도합니다 ([source: 379-381]).</li>
+        <li><strong>역할 간 작업량 재분배:</strong> 시스템 개발자의 부담을 줄이기 위해 일부 AI 로직을 콘텐츠 개발자가 담당하고, UI 렌더링 관련 작업을 그래픽 개발자가 지원하는 등 역할별 작업량을 균형화합니다 ([source: 385-390]).</li>
+        <li><strong>페어 프로그래밍 및 지원 체계 강화:</strong> 핵심/복잡 기능 개발 시 페어 프로그래밍을 도입하고(위 4.6절 표 참조), C++ 초심자를 위한 코드 템플릿, Q&A 세션, 가이드 등을 제공합니다 ([source: 391-401]).</li>
+        <li><strong>의존성 관리 강화:</strong> 주요 태스크 간 의존성을 명확히 하고(아래 매트릭스 예시 참조), 프로젝트 완료에 필수적인 중요 경로(Critical Path)를 식별하여 집중 관리합니다 ([source: 402-409]).</li>
+        <li><strong>리스크 관리 강화:</strong> 일일 스크럼 미팅에 리스크 평가 항목을 추가하고, 주요 리스크별 구체적인 백업 계획을 수립하며, 핵심/복잡 기능 구현 전 기술적 스파이크 세션을 통해 사전 검증을 수행합니다 ([source: 411-421]).</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-6">6.1 의존성 매트릭스 (예시)</h3>
+    <p>주요 태스크 간의 선후행 관계를 명확히 하여 의존성을 관리합니다 ([source: 403]).</p>
+    <table class="w-full mt-4">
+        <thead>
+            <tr>
+                <th>태스크 ID</th>
+                <th>설명</th>
+                <th>선행 태스크</th>
+                <th>후행 태스크</th>
+                <th>담당 역할</th>
+                <th>우선순위</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1.1.3</td>
+                <td>Level 클래스 개념 설계</td>
+                <td>1.1.1, 1.1.2</td>
+                <td>1.2.1, 1.2.4, 1.3.3</td>
+                <td>아키텍트</td>
+                <td>최상</td>
+            </tr>
+            <tr>
+                <td>1.2.2</td>
+                <td>Actor 클래스 확장</td>
+                <td>1.2.1</td>
+                <td>1.2.3, 1.5.1, 1.6.1, 1.7.3</td>
+                <td>시스템 개발자</td>
+                <td>최상</td>
+            </tr>
+            <tr>
+                <td>1.3.2</td>
+                <td>던전 생성 알고리즘 구현</td>
+                <td>1.3.1</td>
+                <td>1.3.3, 2.3.2</td>
+                <td>콘텐츠 개발자</td>
+                <td>상</td>
+            </tr>
+            <tr>
+                <td>1.4.1</td>
+                <td>시야 계산 로직 추가</td>
+                <td>1.2.1</td>
+                <td>1.4.2, 1.4.5, 2.4.1</td>
+                <td>그래픽 개발자</td>
+                <td>상</td>
+            </tr>
+            <tr>
+                <td>3.1.1</td>
+                <td>UIManager 클래스 생성</td>
+                <td>-</td>
+                <td>3.1.2, 3.1.3, 3.3.1, 3.5.3</td>
+                <td>UI 개발자</td>
+                <td>상</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3 class="text-xl font-semibold mt-6">6.2 중요 경로 (Critical Path)</h3>
+    <p>프로젝트 완료 일정에 직접적인 영향을 미치는 핵심 태스크 경로입니다. 이 태스크들의 지연은 전체 프로젝트 지연으로 이어질 수 있으므로 집중 관리가 필요합니다 ([source: 409]).</p>
+    <ol class="list-decimal pl-6 mt-4 space-y-2">
+        <li>기존 코드베이스 분석 (task_sys1 일부)</li>
+        <li>Level 클래스 개념 설계 및 생성 (task_sys1 일부, task_sys2 일부)</li>
+        <li>Actor 클래스 확장 (task_sys2 일부)</li>
+        <li>턴 시스템 구현 (task_sys3)</li>
+        <li>전투 시스템 구현 (task_sys4)</li>
+        <li>몬스터 AI 구현 (task_sys5)</li>
+        <li>아이템 시스템 구현 (task_con3)</li>
+        <li>통합 테스트 (test_t1, test_t2, test_t3)</li>
+    </ol>
+    <p><strong>관리 방안:</strong> 중요 경로 태스크 우선 처리, 추가 리소스 할당 고려, 일일 진행 상황 중점 모니터링, 지연 발생 시 즉시 대응 계획 가동.</p>
+
+    <h3 class="text-xl font-semibold mt-6">6.3 C++ 초심자 지원 방안</h3>
+    <p>팀원들의 C++ 학습 곡선을 완화하고 생산성을 높이기 위한 지원 방안입니다 ([source: 397]).</p>
+    <table class="w-full mt-4">
+        <thead>
+            <tr>
+                <th>지원 항목</th>
+                <th>내용</th>
+                <th>담당</th>
+                <th>시기</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>C++ 핵심 개념 가이드</td>
+                <td>포인터, 메모리 관리, 클래스 상속 등</td>
+                <td>아키텍트</td>
+                <td>프로젝트 시작 전</td>
+            </tr>
+            <tr>
+                <td>코드 템플릿 모음</td>
+                <td>자주 사용되는 패턴 템플릿</td>
+                <td>아키텍트</td>
+                <td>프로젝트 시작 전</td>
+            </tr>
+            <tr>
+                <td>일일 Q&A 세션</td>
+                <td>15분 기술 질문 해결 시간</td>
+                <td>전체 팀</td>
+                <td>매일 스크럼 후</td>
+            </tr>
+            <tr>
+                <td>코드 리뷰 체크리스트</td>
+                <td>주요 오류 패턴 및 검토 포인트</td>
+                <td>아키텍트</td>
+                <td>프로젝트 시작 전</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3 class="text-xl font-semibold mt-6">6.4 기술적 스파이크 세션</h3>
+    <p>핵심/복잡 기능 구현 전에 기술적 리스크를 사전 검증하고 해결 방안을 확보하기 위한 짧은 탐색 세션입니다 ([source: 416]).</p>
+    <table class="w-full mt-4">
+        <thead>
+            <tr>
+                <th>기술적 스파이크</th>
+                <th>목적</th>
+                <th>시기 (예상)</th>
+                <th>담당자</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>절차적 던전 생성</td>
+                <td>알고리즘 검증 및 성능 테스트</td>
+                <td>1일차 오후</td>
+                <td>콘텐츠 개발자 ([source: 418])</td>
+            </tr>
+            <tr>
+                <td>시야 계산 알고리즘</td>
+                <td>정확성 및 성능 검증</td>
+                <td>2일차 오전</td>
+                <td>그래픽 개발자 ([source: 419])</td>
+            </tr>
+            <tr>
+                <td>턴 기반 시스템</td>
+                <td>에너지 기반 턴 시스템 검증</td>
+                <td>2일차 오전</td>
+                <td>시스템 개발자 ([source: 420])</td>
+            </tr>
+            <tr>
+                <td>메모리 관리</td>
+                <td>동적 객체 관리 패턴 검증 (스마트 포인터 등)</td>
+                <td>1일차 오후</td>
+                <td>아키텍트 ([source: 421])</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="text-2xl font-semibold mt-8">7. 프로젝트 관리 방안</h2>
+
+    <h3 class="text-xl font-semibold mt-6">7.1 가속화 방안 ([source: 455, 602])</h3>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>병렬 작업 최적화:</strong> 의존성 낮은 태스크 병렬 진행 (시스템↔UI, 그래픽↔콘텐츠).</li>
+        <li><strong>초기 프로토타입 빠른 구현:</strong> MVP 기능 우선 구현으로 조기 테스트 버전 확보.</li>
+        <li><strong>공통 컴포넌트 우선 개발:</strong> Level 클래스, 기본 UI 프레임워크 등 조기 구축.</li>
+        <li><strong>코드 템플릿 및 유틸리티 준비:</strong> 반복 작업 감소.</li>
+        <li><strong>일일 스크럼 미팅:</strong> 빠른 진행 상황 공유 및 장애물 해결.</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-6">7.2 안정화 방안 ([source: 456, 603])</h3>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>단위 테스트 도입:</strong> 핵심 기능 테스트 코드 작성 및 회귀 테스트.</li>
+        <li><strong>코드 리뷰 프로세스:</strong> 주요 기능 구현 후 팀원 간 리뷰로 품질/일관성 유지.</li>
+        <li><strong>중간 통합 테스트:</strong> 마일스톤 완료 시점마다 통합 테스트로 이슈 조기 발견.</li>
+        <li><strong>이슈 트래킹 시스템 활용:</strong> 버그/개선사항 체계적 관리 및 우선순위 기반 해결.</li>
+        <li><strong>문서화 강화:</strong> 주요 클래스/함수 문서화로 이해도 향상, 설계 결정 기록.</li>
+        <li><strong>백업 및 버전 관리:</strong> 마일스톤별 안정 버전 태그 지정, 롤백 체계 구축.</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-6">7.3 리스크 관리</h3>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>주요 리스크 식별:</strong> 일정 지연, 기술적 장애물, 팀원 역량 차이, 통합 문제, 성능 이슈 등 ([source: 458-464]).</li>
+        <li><strong>일일 리스크 평가:</strong> 스크럼 미팅 시 리스크 검토 및 체크리스트 활용 ([source: 411]).
+            <ul class="list-none pl-6 mt-2 space-y-1">
+                <li>[ ] 중요 경로 태스크 진행 상황 (예상대로/지연/앞섬)</li>
+                <li>[ ] 새롭게 발견된 기술적 장애물</li>
+                <li>[ ] 팀원 간 의사소통 이슈</li>
+                <li>[ ] 리소스 부족 문제</li>
+                <li>[ ] 품질 관련 우려사항</li>
+            </ul>
+        </li>
+        <li><strong>구체적 백업 계획 수립:</strong> 주요 리스크별 대응 방안 사전 정의 ([source: 411]).</li>
+    </ul>
+
+    <table class="w-full mt-4">
+        <thead>
+            <tr>
+                <th>리스크</th>
+                <th>백업 계획</th>
+                <th>발동 조건</th>
+                <th>담당자</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Level 클래스 설계 지연</td>
+                <td>임시 인터페이스로 병렬 개발 진행</td>
+                <td>1일차 종료 시 미완료</td>
+                <td>아키텍트 ([source: 412])</td>
+            </tr>
+            <tr>
+                <td>던전 생성 알고리즘 복잡성</td>
+                <td>단순화된 알고리즘으로 대체</td>
+                <td>2일차 오후까지 미해결</td>
+                <td>콘텐츠 개발자 ([source: 413])</td>
+            </tr>
+            <tr>
+                <td>시야 시스템 성능 이슈</td>
+                <td>최적화된 간소화 버전 적용</td>
+                <td>테스트 시 FPS 저하 발생</td>
+                <td>그래픽 개발자 ([source: 414])</td>
+            </tr>
+            <tr>
+                <td>통합 문제 발생</td>
+                <td>모듈별 독립 테스트 버전 유지</td>
+                <td>통합 테스트 실패</td>
+                <td>시스템 개발자 ([source: 415])</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>주기적 리스크 재평가:</strong> 마일스톤 검토 회의 시 리스크 목록/우선순위/전략 조정 ([source: 464]).</li>
+        <li><strong>비상 계획:</strong> 핵심 기능(MVP) 우선 구현으로 최소 결과물 보장 ([source: 465]).</li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-6">7.4 품질 관리</h3>
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+        <li><strong>품질 목표 설정:</strong> 기능 완성도, 성능(60FPS, 메모리 누수 없음), 코드 품질(일관성, 문서화, 모듈화), 사용자 경험(직관성, 피드백, 안정성) ([source: 465]).</li>
+        <li><strong>품질 보증 활동:</strong> 코드 리뷰, 테스트 전략(단위/통합/사용자), 성능 모니터링, 버그 트래킹 ([source: 466]).</li>
+    </ul>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            mermaid.initialize({ 
+                startOnLoad: true,
+                theme: 'default',
+                flowchart: { 
+                    useMaxWidth: false,
+                    htmlLabels: true
+                },
+                securityLevel: 'loose'
+            });
+        });
+    </script>
+</body>
+</html>

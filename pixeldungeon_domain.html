@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Dungeon 도메인 기획 및 개발 가이드</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4 {
+            font-weight: 600;
+            margin-top: 1.5em;
+            margin-bottom: 0.75em;
+        }
+        h1 { font-size: 2.25rem; }
+        h2 { font-size: 1.75rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+        p, ul, ol { margin-bottom: 1rem; }
+        code {
+            font-family: 'Courier New', monospace;
+            background-color: #f1f5f9;
+            padding: 0.1rem 0.3rem;
+            border-radius: 0.25rem;
+        }
+        pre {
+            background-color: #f1f5f9;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+        }
+        .code-block {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        .uml-diagram {
+            margin: 2rem 0;
+            padding: 1rem;
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 1.5rem;
+        }
+        table, th, td {
+            border: 1px solid #e2e8f0;
+        }
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f5f9;
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .card {
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            background-color: white;
+        }
+        .toc a {
+            text-decoration: none;
+            color: #3182ce;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-8">
+        <div class="card">
+            <h1 class="text-center text-blue-800">Pixel Dungeon 도메인 기획 및 개발 가이드</h1>
+            <p class="text-center text-gray-600 mb-8">Pixel Dungeon의 핵심 게임 시스템과 구조에 대한 상세 가이드 문서</p>
+            
+            <div class="card bg-blue-50 toc">
+                <h3 class="text-blue-800 border-b border-blue-200 pb-2 mb-4">목차</h3>
+                <ol class="list-decimal pl-8">
+                    <li><a href="#intro">개요</a></li>
+                    <li><a href="#core-systems">핵심 게임 시스템</a>
+                        <ul class="list-disc pl-8 mt-2">
+                            <li><a href="#turn-based">턴 기반 시스템</a></li>
+                            <li><a href="#dungeon-gen">던전 생성 시스템</a></li>
+                            <li><a href="#combat">전투 시스템</a></li>
+                            <li><a href="#item-system">아이템 시스템 및 인벤토리</a></li>
+                            <li><a href="#character">캐릭터 성장</a></li>
+                            <li><a href="#ai">AI 및 적 행동</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#code-structure">코드 구조</a>
+                        <ul class="list-disc pl-8 mt-2">
+                            <li><a href="#main-classes">주요 클래스 개요</a></li>
+                            <li><a href="#class-relations">클래스 관계</a></li>
+                            <li><a href="#design-patterns">디자인 패턴</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#uml">UML 다이어그램</a>
+                        <ul class="list-disc pl-8 mt-2">
+                            <li><a href="#class-diagram">클래스 다이어그램</a></li>
+                            <li><a href="#usecase-diagram">유스케이스 다이어그램</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#dev-guide">개발 가이드</a>
+                        <ul class="list-disc pl-8 mt-2">
+                            <li><a href="#code-organization">코드 구성</a></li>
+                            <li><a href="#extending">게임 확장하기</a></li>
+                            <li><a href="#patterns-pitfalls">일반적인 패턴 및 함정</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#milestone">마일스톤 계획</a></li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="card" id="intro">
+            <h2 class="text-blue-800">1. 개요</h2>
+            <p>Pixel Dungeon은 전통적인 로그라이크(Roguelike) 게임으로, 픽셀 아트 그래픽과 간단한 인터페이스를 특징으로 합니다. 이 게임은 무작위로 생성된 던전에서 플레이어가 다양한 적과 싸우며 아이템을 수집하고, 던전의 깊은 곳까지 탐험하는 것을 목표로 합니다.</p>
+            
+            <h3>게임 특징</h3>
+            <ul class="list-disc pl-8">
+                <li>턴 기반 게임플레이</li>
+                <li>무작위로 생성되는 던전 구조</li>
+                <li>영구적 죽음(Permadeath) 시스템</li>
+                <li>다양한 캐릭터 클래스와 서브클래스</li>
+                <li>아이템 식별 및 관리 시스템</li>
+                <li>독특한 몬스터 AI</li>
+                <li>고유한 던전 테마와 보스 전투</li>
+            </ul>
+            
+            <h3>게임 배경</h3>
+            <p>게임은 다양한 테마의 층으로 구성된 던전을 탐험하는 영웅의 이야기를 다룹니다. 던전은 다음과 같은 다섯 가지 주요 지역으로 구성됩니다:</p>
+            <ol class="list-decimal pl-8">
+                <li><strong>하수도(Sewers)</strong>: 던전의 첫 번째 층으로, 비교적 약한 적들이 등장합니다.</li>
+                <li><strong>감옥(Prison)</strong>: 두 번째 지역으로, 과거 범죄자들이 갇혀있던 곳입니다.</li>
+                <li><strong>동굴(Caves)</strong>: 세 번째 지역으로, 더 위험한 생물들이 서식합니다.</li>
+                <li><strong>드워프 도시(Dwarven Metropolis)</strong>: 네 번째 지역으로, 고대 드워프 문명의 흔적이 남아있습니다.</li>
+                <li><strong>악마의 전당(Demon Halls)</strong>: 마지막 지역으로, 가장 강력한 적들이 등장합니다.</li>
+            </ol>
+            
+            <p>각 지역의 마지막 층에는 보스가 있으며, 마지막 보스인 Yog-Dzewa를 물리치는 것이 최종 목표입니다.</p>
+        </div>
+
+        <div class="card" id="core-systems">
+            <h2 class="text-blue-800">2. 핵심 게임 시스템</h2>
+            
+            <div id="turn-based">
+                <h3>2.1 턴 기반 시스템</h3>
+                <p>Pixel Dungeon은 전통적인 로그라이크 게임처럼 턴 기반으로 작동합니다. 모든 행동(이동, 공격, 아이템 사용 등)은 턴을 소비합니다.</p>
+                
+                <h4>주요 특징</h4>
+                <ul class="list-disc pl-8">
+                    <li>모든 액터(캐릭터, 몬스터)는 <code>act()</code> 메서드를 갖고 있으며, 이 메서드가 턴마다 호출됩니다.</li>
+                    <li>액터의 속도에 따라 턴이 다르게 처리됩니다.</li>
+                    <li>액터는 행동 후 <code>spend(time)</code> 함수를 호출하여 행동에 소비된 시간을 게임에 알립니다.</li>
+                </ul>
+                
+                <div class="bg-gray-100 p-4 rounded-lg my-4">
+                    <h4 class="text-blue-700">코드 구현:</h4>
+                    <pre class="code-block">
+// Actor 추상 클래스(모든 게임 엔티티의 기본 클래스)
+public abstract class Actor {
+    // 다음 턴까지 남은 시간
+    protected float time;
+    
+    // 각 액터가 구현해야 하는 추상 메서드
+    public abstract boolean act();
+    
+    // 액션에 시간 소비
+    public void spend(float time) {
+        this.time += time;
+    }
+}
+
+// Actor 컨트롤러
+public class Dungeon {
+    // 모든 액터 관리
+    public static ArrayList<Actor> actors = new ArrayList<>();
+    
+    // 게임 루프
+    public static void tick() {
+        // 시간이 가장 적게 남은 액터를 찾음
+        Actor current = null;
+        for (Actor actor : actors) {
+            if (current == null || actor.time < current.time) {
+                current = actor;
+            }
+        }
+        
+        // 선택된 액터의 턴 실행
+        if (current != null) {
+            current.act();
+        }
+    }
+}</pre>
+                </div>
+            </div>
+            
+            <div id="dungeon-gen">
+                <h3>2.2 던전 생성 시스템</h3>
+                <p>던전은 절차적 생성(Procedural Generation) 알고리즘을 통해 매 게임마다 새롭게 생성됩니다. 이는 게임의 재미와 재생 가능성을 높입니다.</p>
+                
+                <h4>방 생성 알고리즘</h4>
+                <ol class="list-decimal pl-8">
+                    <li>레벨 사이즈에 맞는 직사각형 영역을 초기화합니다.</li>
+                    <li>이 영역을 재귀적으로 분할하여 작은 직사각형들을 만듭니다.</li>
+                    <li>분할된 직사각형들 중 일부가 실제 방으로 변환됩니다.</li>
+                    <li>방과 방 사이에 통로(tunnel)를 생성하여 연결합니다.</li>
+                    <li>입구와 출구 방을 지정합니다.</li>
+                    <li>특수 방(상점, 정원 등)을 랜덤하게 배치합니다.</li>
+                </ol>
+                
+                <h4>레벨 유형</h4>
+                <p>던전의 각 층마다 다양한 레벨 타입이 있습니다:</p>
+                <ul class="list-disc pl-8">
+                    <li><strong>SewerLevel</strong>: 첫 번째 지역의 일반 레벨</li>
+                    <li><strong>SewerBossLevel</strong>: 하수도 보스(Goo) 레벨</li>
+                    <li><strong>PrisonLevel</strong>: 감옥 지역 레벨</li>
+                    <li><strong>CavesLevel</strong>: 동굴 지역 레벨</li>
+                    <li><strong>CityLevel</strong>: 드워프 도시 레벨</li>
+                    <li><strong>HallsLevel</strong>: 악마의 전당 레벨</li>
+                    <li><strong>LastLevel</strong>: 최종 보스 레벨</li>
+                </ul>
+                
+                <div class="bg-gray-100 p-4 rounded-lg my-4">
+                    <h4 class="text-blue-700">룸 타입 및 특성:</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>룸 타입</th>
+                                <th>설명</th>
+                                <th>특수 기능</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>StandardRoom</td>
+                                <td>기본 방</td>
+                                <td>일반 몬스터와 아이템 스폰</td>
+                            </tr>
+                            <tr>
+                                <td>EntranceRoom</td>
+                                <td>입구 방</td>
+                                <td>층의 진입점</td>
+                            </tr>
+                            <tr>
+                                <td>ExitRoom</td>
+                                <td>출구 방</td>
+                                <td>다음 층으로 가는 계단 포함</td>
+                            </tr>
+                            <tr>
+                                <td>TunnelRoom</td>
+                                <td>통로 방</td>
+                                <td>방들을 연결하는 좁은 통로</td>
+                            </tr>
+                            <tr>
+                                <td>ShopRoom</td>
+                                <td>상점 방</td>
+                                <td>아이템 구매 가능, NPC 상인 포함</td>
+                            </tr>
+                            <tr>
+                                <td>GardenRoom</td>
+                                <td>정원 방</td>
+                                <td>특별한 식물과 씨앗을 얻을 수 있음</td>
+                            </tr>
+                            <tr>
+                                <td>StorageRoom</td>
+                                <td>창고 방</td>
+                                <td>다양한 상자와 아이템 포함</td>
+                            </tr>
+                            <tr>
+                                <td>TrapRoom</td>
+                                <td>함정 방</td>
+                                <td>다양한 함정으로 가득 찬 방</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h4>아이템 생성</h4>
+                <p>각 레벨마다 특정 수의 아이템이 무작위로 생성됩니다. 기본적으로 3~7개의 아이템이 생성되며, 아이템 유형(무기, 방어구, 물약, 주문서 등)과 품질이 랜덤으로 결정됩니다.</p>
+                
+                <div class="bg-gray-100 p-4 rounded-lg my-4">
+                    <h4 class="text-blue-700">아이템 생성 확률:</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>아이템 유형</th>
+                                <th>확률</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>무기</td>
+                                <td>8.52%</td>
+                            </tr>
+                            <tr>
+                                <td>방어구</td>
+                                <td>5.68%</td>
+                            </tr>
+                            <tr>
+                                <td>물약</td>
+                                <td>28.41%</td>
+                            </tr>
+                            <tr>
+                                <td>주문서</td>
+                                <td>22.73%</td>
+                            </tr>
+                            <tr>
+                                <td>지팡이</td>
+                                <td>2.27%</td>
+                            </tr>
+                            <tr>
+                                <td>반지</td>
+                                <td>1.14%</td>
+                            </tr>
+                            <tr>
+                                <td>씨앗</td>
+                                <td>2.84%</td>
+                            </tr>
+                            <tr>
+                                <td>골드</td>
+                                <td>28.41%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div id="combat">
+                <h3>2.3 전투 시스템</h3>
+                <p>Pixel Dungeon의 전투 시스템은 턴 기반으로, 공격자와 방어자 간의 능력치 비교를 통해 결과를 결정합니다.</p>
+                
+                <h4>주요 요소</h4>
+                <ul class="list-disc pl-8">
+                    <li><strong>공격 기술(Attack Skill)</strong>: 공격의 정확도를 결정</li>
+                    <li><strong>방어 기술(Defense Skill)</strong>: 공격을 회피할 확률 결정</li>
+                    <li><strong>데미지 굴림(Damage Roll)</strong>: 실제 데미지 계산</li>
+                    <li><strong>특수 효과</strong>: 무기 인챈트, 버프/디버프 등</li>
+                </ul>
+                
+                <h4>기습 공격(Surprise Attack)</h4>
+                <p>플레이어나 몬스터가 문 뒤에서 공격하거나, 보이지 않는 상태에서 공격하면 기습 공격이 발생합니다. 기습 공격은 명중률이 매우 높아지며, 몇몇 직업(예: 도적)은 기습 공격에 추가 보너스를 받습니다.</p>
+                
+                <div class="bg-gray-100 p-4 rounded-lg my-4">
+                    <h4 class="text-blue-700">공격 처리 코드:</h4>
+                    <pre class="code-block">
+// Char 클래스의 공격 메서드
+public boolean attack(Char enemy) {
+    // 공격 명중 여부 계산
+    boolean hit = hit(this, enemy, false);
+    
+    if (hit) {
+        // 데미지 계산
+        int damage = damageRoll();
+        
+        // 공격자의 특수 효과 적용
+        damage = attackProc(enemy, damage);
+        
+        // 방어자의 방어 효과 적용
+        damage = enemy.defenseProc(this, damage);
+        
+        // 최종 데미지 적용
+        enemy.damage(damage, this);
+        
+        // 시각적 효과 및 사운드 재생
+        enemy.sprite.flash();
+        enemy.sprite.bloodBurstA(sprite.center(), damage);
+        
+        return true;
+    } else {
+        // 공격 실패(회피됨)
+        enemy.sprite.showStatus(CharSprite.NEUTRAL, "회피됨");
+        return false;
+    }
+}
+
+// 명중 여부 계산
+public static boolean hit(Char attacker, Char defender, boolean magic) {
+    float acuRoll = Random.Float(attacker.attackSkill(defender));
+    float defRoll = Random.Float(defender.defenseSkill(attacker));
+    
+    return (magic ? acuRoll * 2 : acuRoll) >= defRoll;
+}</pre>
+                </div>
+            </div>
+            
+            <div id="item-system">
+                <h3>2.4 아이템 시스템 및 인벤토리</h3>
+                <p>Pixel Dungeon에는 다양한 아이템 시스템이 있으며, 이는 게임의 핵심 요소 중 하나입니다.</p>
+                
+                <h4>아이템 유형</h4>
+                <ul class="list-disc pl-8">
+                    <li><strong>무기</strong>: 근접 무기와 원거리 무기</li>
+                    <li><strong>방어구</strong>: 다양한 등급의 갑옷</li>
+                    <li><strong>물약</strong>: 다양한 효과의 소비 아이템</li>
+                    <li><strong>주문서</strong>: 읽으면 효과를 발휘하는 소비 아이템</li>
+                    <li><strong>반지</strong>: 지속적인 패시브 효과를 제공</li>
+                    <li><strong>지팡이</strong>: 제한된 충전으로 사용 가능한 마법 아이템</li>
+                    <li><strong>씨앗</strong>: 심으면 식물이 자라나는 아이템</li>
+                    <li><strong>음식</strong>: 허기를 해결하는 아이템</li>
+                    <li><strong>열쇠</strong>: 특정 문이나 상자를 열 수 있는 아이템</li>
+                </ul>
+                
+                <h4>아이템 식별 시스템</h4>
+                <p>게임 시작 시, 대부분의 물약과 주문서는 식별되지 않은 상태입니다. 플레이어는 이를 사용하여 그 효과를 알아내야 합니다. 한 번 식별된 아이템은 그 이후 게임에서도 식별된 상태로 등장합니다.</p>
+                
+                <h4>강화 및 마법부여</h4>
+                <p>무기와 방어구는 강화(upgrade)를 통해 성능을 향상시킬 수 있으며, 마법부여(enchantment)를 통해 특수 효과를 얻을 수 있습니다.</p>
+                
+                <div class="bg-gray-100 p-4 rounded-lg my-4">
+                    <h4 class="text-blue-700">인벤토리 시스템:</h4>
+                    <pre class="code-block">
+// 인벤토리 관리 클래스
+public class Belongings {
+    // 착용 아이템 슬롯
+    public KindOfWeapon weapon = null;
+    public Armor armor = null;
+    public Ring ring1 = null;
+    public Ring ring2 = null;
+    
+    // 인벤토리 백팩
+    public Bag backpack;
+    
+    // 아이템 추가
+    public void collectItem(Item item) {
+        if (item.isEquipped(owner)) {
+            // 이미 장착된 아이템
+            if (item instanceof KindOfWeapon) weapon = (KindOfWeapon)item;
+            else if (item instanceof Armor) armor = (Armor)item;
+            else if (item instanceof Ring) {
+                if (ring1 == item) ring1 = (Ring)item;
+                else ring2 = (Ring)item;
+            }
+        } else {
+            // 백팩에 아이템 추가
+            if (!backpack.collect(item)) {
+                // 인벤토리가 가득 찬 경우
+                Dungeon.level.drop(item, owner.pos);
+            }
+        }
+    }
+}</pre>
+                </div>
+            </div>
+            
+            <div id="character">
+                <h3>2.5 캐릭터 성장</h3>
+                <p>플레이어 캐릭터는 게임을 진행하며 레벨업을 통해 강해집니다.</p>
+                
+                <h4>클래스 시스템</h4>
+                <p>게임에는 네 가지 기본 클래스가 있으며, 각 클래스는 고유한 능력과 시작 아이템을 가집니다:</p>
+                <ul class="list-disc pl-8">
+                    <li><strong>전사(Warrior)</strong>: 높은 체력과 근접 전투에 특화</li>
+                    <li><strong>마법사(Mage)</strong>: 지팡이 사용에 능숙하며 마법 사용에 특화</li>
+                    <li><strong>도적(Rogue)</strong>: 높은 회피율과 기습 공격에 특화</li>
+                    <li><strong>사냥꾼(Huntress)</strong>: 원거리 공격과 식물 활용에 특화</li>
+                </ul>
+                
+                <h4>서브클래스 시스템</h4>
+                <p>게임 중반부에 플레이어는 서브클래스를 선택할 수 있습니다:</p>
+                <ul class="list-disc pl-8">
+                    <li><strong>전사</strong>: 검투사(Gladiator) 또는 광전사(Berserker)</li>
+                    <li><strong>마법사</strong>: 전투마법사(Battlemage) 또는 소환사(Warlock)</li>
+                    <li><strong>도적</strong>: 암살자(Assassin) 또는 프리러너(Freerunner)</li>
+                    <li><strong>사냥꾼</strong>: 저격수(Sniper) 또는 감시자(Warden)</li>
+                </ul>
+                
+                <h4>레벨업 시스템</h4>
+                <p>플레이어는 경험치를 모아 레벨업할 수 있으며, 레벨업 시 최대 HP가 증가하고 공격력과 방어력이 향상됩니다.</p>
+                
+                <div class="bg-gray-100 p-4 rounded-lg my-4">
+                    <h4 class="text-blue-700">레벨업 공식:</h4>
+                    <pre class="code-block">
+// 다음 레벨까지 필요한 경험치 계산
+public static int exp(int level) {
+    return 5 + level * 5;
+}
+
+// 레벨업 처리
+public void levelUp() {
+    level++;
+    
+    // 능력치 증가
+    HT += 5; // 최대 체력 증가
+    HP = HT; // 현재 체력을 최대치로 회복
+    attackSkill++; // 공격 스킬 증가
+    defenseSkill++; // 방어 스킬 증가
+    
+    // 클래스별 추가 보너스
+    if (this.heroClass == HeroClass.WARRIOR) {
+        HT += 1; // 전사는 추가 체력 보너스
+    } else if (this.heroClass == HeroClass.MAGE) {
+        // 마법사 특화 보너스
+    }
+    
+    // 레벨업 효과 표시
+    sprite.showStatus(CharSprite.POSITIVE, "Level Up!");
+    sprite.emitter().burst(Speck.factory(Speck.UP), 5);
+}</pre>
+                </div>
+            </div>
+            
+            <div id="ai">
+                <h3>2.6 AI 및 적 행동</h3>
+                <p>Pixel Dungeon의 몬스터는 다양한 AI 상태를 기반으로 행동합니다.</p>
+                
+                <h4>AI 상태(State)</h4>
+                <ul class="list-disc pl-8">
+                    <li><strong>Sleeping</strong>: 몬스터가 잠자는 상태. 플레이어가 일정 거리 내에 들어오거나 소음을 발생시키면 깨어납니다.</li>
+                    <li><strong>Wandering</strong>: 몬스터가 무작위로 돌아다니는 상태. 플레이어를 발견하면 Hunting 상태로 전환됩니다.</li>
+                    <li><strong>Hunting</strong>: 몬스터가 플레이어를 추적하는 상태. 플레이어에게 접근하여 공격합니다.</li>
+                    <li><strong>Fleeing</strong>: 몬스터가 도망치는 상태. 일부 몬스터는 HP가 낮아지면 도망칩니다.</li>
+                    <li><strong>Passive</strong>: 몬스터가 공격적이지 않은 상태. 일부 특수 몬스터에게만 적용됩니다.</li>
+                </ul>
+                
+                <h4>AI 행동 패턴</h4>
+                <p>각 몬스터 유형은 고유한 행동 패턴과 능력을 가지고 있습니다:</p>
+                <ul class="list-disc pl-8">
+                    <li><strong>근접 공격형</strong>: 플레이어에게 접근하여 근접 공격을 합니다.</li>
+                    <li><strong>원거리 공격형</strong>: 거리를 유지하며 원거리 공격을 합니다(예: 놀 샤먼).</li>
+                    <li><strong>특수 능력형</strong>: 특수 능력을 사용하는 몬스터(예: 뱀파이어 박쥐는 공격 시 체력 회복).</li>
+                    <li><strong>소환형</strong>: 다른 몬스터를 소환하는 능력을 가진 몬스터(예: 드워프 왕).</li>
+                </ul>
+                
+                <div class="bg-gray-100 p-4 rounded-lg my-4">
+                    <h4 class="text-blue-700">몬스터 AI 구현:</h4>
+                    <pre class="code-block">
+// 몬스터의 기본 AI 구현
+public class Mob extends Char {
+    // AI 상태
+    protected enum State {
+        SLEEPING, WANDERING, HUNTING, FLEEING, PASSIVE
+    }
+    protected State state = State.SLEEPING;
+    
+    // 적(보통 Hero)
+    protected Char enemy;
+    
+    @Override
+    public boolean act() {
+        super.act();
+        
+        // 행동 불가 상태 체크
+        if (paralysed) {
+            spend(TICK);
+            return true;
+        }
+        
+        // 상태별 행동 처리
+        switch (state) {
+            case SLEEPING:
+                if (enemyInFOV) {
+                    // 시야 내에 적이 있으면 깨어남
+                    wake();
+                }
+                break;
+                
+            case WANDERING:
+                if (enemyInFOV && canAttack(enemy)) {
+                    // 시야 내 적이 있고 공격 가능하면 hunting 상태로
+                    state = State.HUNTING;
+                    target = enemy.pos;
+                } else {
+                    // 무작위 이동
+                    int oldPos = pos;
+                    int newPos = randomDestination();
+                    move(newPos);
+                }
+                break;
+                
+            case HUNTING:
+                if (enemyInFOV && canAttack(enemy)) {
+                    // 공격 가능하면 공격
+                    doAttack(enemy);
+                } else {
+                    // 적에게 접근
+                    int oldPos = pos;
+                    int newPos = getCloser(target);
+                    move(newPos);
+                }
+                break;
+                
+            case FLEEING:
+                // 적에게서 도망
+                int oldPos = pos;
+                int newPos = getFurther(target);
+                move(newPos);
+                break;
+                
+            case PASSIVE:
+                // 수동적 상태 - 아무것도 하지 않음
+                spend(TICK);
+                break;
+        }
+        
+        return true;
+    }
+}</pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="code-structure">
+            <h2 class="text-blue-800">3. 코드 구조</h2>
+            
+            <div id="main-classes">
+                <h3>3.1 주요 클래스 개요</h3>
+                <p>Pixel Dungeon의 코드 구조는 다음과 같은 주요 클래스들로 구성됩니다:</p>
+                
+                <h4>핵심 시스템 클래스</h4>
+                <ul class="list-disc pl-8">
+                    <li><strong>Game</strong>: 게임의 기본 클래스로, 게임 루프와 입력 처리를 담당합니다.</li>
+                    <li><strong>PixelDungeon</strong>: <code>Game</code>의 하위 클래스로, 메인 액티비티 역할을 합니다.</li>
+                    <li><strong>Dungeon</strong>: 게임의 전역 상태와 메서드를 관리하는 클래스입니다.</li>
+                    <li><strong>Actor</strong>: 턴 기반 시스템의 기본 클래스로, 모든 게임 엔티티의 조상 클래스입니다.</li>
+                    <li><strong>Scene</strong>: 게임의 각 화면(메인 메뉴, 게임 플레이, 랭킹 등)을 관리합니다.</li>
+                    <li><strong>GameScene</strong>: 실제 게임 플레이 화면을 관리하는 클래스입니다.</li>
+                </ul>
+                
+                <h4>캐릭터 관련 클래스</h4>
+                <ul class="list-disc pl-8">
+                    <li><strong>Char</strong>: 모든 캐릭터(플레이어, 몬스터)의 기본 클래스입니다.</li>
+                    <li><strong>Hero</strong>: 플레이어 캐릭터를 나타내는 클래스입니다.</li>
+                    <li><strong>HeroClass</strong>: 플레이어 클래스(전사, 마법사 등)를 정의합니다.</li>
+                    <li><strong>Mob</strong>: 모든 몬스터의 기본 클래스입니다.</li>
+                    <li><strong>Buff</strong>: 캐릭터에 적용되는 상태 효과의 기본 클래스입니다.</li>
+                </ul>
+                
+                <h4>아이템 관련 클래스</h4>
+                <ul class="list-disc pl-8">
+                    <li><strong>Item</strong>: 모든 아이템의 기본 클래스입니다.</li>
+                    <li><strong>Weapon</strong>: 모든 무기의 기본 클래스입니다.</li>
+                    <li><strong>Armor</strong>: 모든 방어구의 기본 클래스입니다.</li>
+                    <li><strong>Potion</strong>: 모든 물약의 기본 클래스입니다.</li>
+                    <li><strong>Scroll</strong>: 모든 주문서의 기본 클래스입니다.</li>
+                    <li><strong>Ring</strong>: 모든 반지의 기본 클래스입니다.</li>
+                    <li><strong>Wand</strong>: 모든 지팡이의 기본 클래스입니다.</li>
+                    <li><strong>Seed</strong>: 모든 씨앗의 기본 클래스입니다.</li>
+                    <li><strong>Belongings</strong>: 플레이어의 소지품을 관리하는 클래스입니다.</li>
+                </ul>
+                
+                <h4>던전 관련 클래스</h4>
+                <ul class="list-disc pl-8">
+                    <li><strong>Level</strong>: 던전의 각 층을 나타내는 기본 클래스입니다.</li>
+                    <li><strong>RegularLevel</strong>: 일반적인 던전 층의 생성 로직을 포함합니다.</li>
+                    <li><strong>Room</strong>: 던전 내의 방을 나타내는 클래스입니다.</li>
+                    <li><strong>Painter</strong>: 방과 통로를 던전 맵에 그리는 클래스입니다.</li>
+                    <li><strong>Terrain</strong>: 던전 타일의 유형을 정의하는 상수들을 포함합니다.</li>
+                </ul>
+                
+                <h4>시각적 표현 클래스</h4>
+                <ul class="list-disc pl-8">
+                    <li><strong>Visual</strong>: 모든 시각적 요소의 기본 클래스입니다.</li>
+                    <li><strong>Sprite</strong>: 게임 개체의 시각적 표현을 담당합니다.</li>
+                    <li><strong>CharSprite</strong>: 캐릭터의 스프라이트를 관리합니다.</li>
+                    <li><strong>ItemSprite</strong>: 아이템의 스프라이트를 관리합니다.</li>
+                    <li><strong>DungeonTilemap</strong>: 던전 타일을 렌더링합니다.</li>
+                    <li><strong>Window</strong>: 게임 내 창을 표시하는 기본 클래스입니다.</li>
+                </ul>
+            </div>
+            
+            <div id="class-relations">
+                <h3>3.2 클래스 관계</h3>
+                <p>Pixel Dungeon의 주요 클래스 간의 관계는 다음과 같습니다:</p>
+                
+                <h4>핵심 시스템 관계</h4>
+                <ul class="list-disc pl-8">
+                    <li><strong>Game → PixelDungeon</strong>: PixelDungeon은 Game의 하위 클래스로, 게임의 메인 진입점입니다.</li>
+                    <li><strong>PixelDungeon → Scene</strong>: 게임은 여러 Scene을 관리하며, 이를 전환합니다.</li>
+                    <li><strong>Scene → GameScene</strong>: 실제 게임 플레이는 GameScene에서 관리됩니다.</li>
+                    <li><strong>Dungeon ↔ Level</strong>: Dungeon 클래스는 현재 활성화된 Level을 참조합니다.</li>
+                    <li><strong>Dungeon ↔ Hero</strong>: Dungeon 클래스는 플레이어 Hero 객체를 참조합니다.</li>
+                </ul>
+                
+                <h4>캐릭터 계층 관계</h4>
+                <ul class="list-disc pl-8">
+                    <li><strong>Actor → Char</strong>: 모든 캐릭터는 Actor의 하위 클래스입니다.</li>
+                    <li><strong>Char → Hero</strong>: 플레이어는 Char의 하위 클래스입니다.</li>
+                    <li><strong>Char → Mob</strong>: 모든 몬스터는 Char의 하위 클래스입니다.</li>
+                    <li><strong>Mob → {구체적인 몬스터 클래스}</strong>: 각 몬스터 유형은 Mob의 하위 클래스입니다.</li>
+                </ul>
+                
+                <h4>아이템 계층 관계</h4>
+                <ul class="list-disc pl-8">
+                    <li><strong>Item → Weapon, Armor, Potion, Scroll, Ring, Wand, Seed, Food...</strong>: 모든 아이템 유형은 Item의 하위 클래스입니다.</li>
+                    <li><strong>Weapon → MeleeWeapon, RangedWeapon</strong>: 무기는 근접 무기와 원거리 무기로 나뉩니다.</li>
+                    <li><strong>Hero ↔ Belongings</strong>: 플레이어는 Belongings 객체를 통해 아이템을 관리합니다.</li>
+                </ul>
+                
+                <h4>던전 구조 관계</h4>
+                <ul class="list-disc pl-8">
+                    <li><strong>Level → RegularLevel</strong>: 일반 던전 층은 Level의 하위 클래스입니다.</li>
+                    <li><strong>RegularLevel → {특정 레벨 클래스}</strong>: 각 지역별 레벨은 RegularLevel의 하위 클래스입니다.</li>
+                    <li><strong>Level ↔ Room</strong>: 각 Level은 여러 Room 객체를 포함합니다.</li>
+                    <li><strong>Room ↔ Room.Door</strong>: 방은 문을 통해 서로 연결됩니다.</li>
+                </ul>
+                
+                <h4>시각적 표현 관계</h4>
+                <ul class="list-disc pl-8">
+                    <li><strong>Visual → Sprite</strong>: 모든 스프라이트는 Visual의 하위 클래스입니다.</li>
+                    <li><strong>Sprite → CharSprite, ItemSprite</strong>: 캐릭터와 아이템의 시각적 표현입니다.</li>
+                    <li><strong>Char ↔ CharSprite</strong>: 각 캐릭터는 해당 스프라이트를 참조합니다.</li>
+                    <li><strong>Item ↔ ItemSprite</strong>: 각 아이템은 해당 스프라이트를 참조합니다.</li>
+                </ul>
+            </div>
+            
+            <div id="design-patterns">
+                <h3>3.3 디자인 패턴</h3>
+                <p>Pixel Dungeon은 다양한 디자인 패턴을 활용하여 구조화되어 있습니다:</p>
+                
+                <h4>싱글톤 패턴(Singleton Pattern)</h4>
+                <p>게임의 전역 상태와 리소스를 관리하는 여러 클래스에 적용됩니다.</p>
+                <ul class="list-disc pl-8">
+                    <li><strong>Dungeon</strong>: 게임의 전역 상태를 관리하는 싱글톤</li>
+                    <li><strong>GameScene</strong>: 현재 활성화된 게임 화면을 관리하는 싱글톤</li>
+                    <li><strong>Assets</strong>: 게임 리소스를 관리하는 싱글톤</li>
+                </ul>
+                
+                <h4>팩토리 패턴(Factory Pattern)</h4>
+                <p>게임 객체의 생성을 담당하는 패턴입니다.</p>
+                <ul class="list-disc pl-8">
+                    <li><strong>Generator</strong>: 무작위 아이템 생성을 담당하는 팩토리</li>
+                    <li><strong>Bestiary</strong>: 던전 층에 적합한 몬스터를 생성하는 팩토리</li>
+                </ul>
+                
+                <h4>상태 패턴(State Pattern)</h4>
+                <p>객체의 내부 상태에 따라 행동이 변하는 패턴입니다.</p>
+                <ul class="list-disc pl-8">
+                    <li><strong>Mob.AiState</strong>: 몬스터의 AI 상태를 관리(Sleeping, Wandering, Hunting, Fleeing)</li>
+                </ul>
+                
+                <h4>전략 패턴(Strategy Pattern)</h4>
+                <p>알고리즘 군을 정의하고 각각을 캡슐화하여 교체 가능하게 만드는 패턴입니다.</p>
+                <ul class="list-disc pl-8">
+                    <li><strong>Enchantment</strong>: 무기의 특수 효과를 다양하게 적용할 수 있는 전략</li>
+                    <li><strong>Glyph</strong>: 방어구의 특수 효과를 다양하게 적용할 수 있는 전략</li>
+                </ul>
+                
+                <h4>옵저버 패턴(Observer Pattern)</h4>
+                <p>객체의 상태 변화를 다른 객체들에게 알리는 패턴입니다.</p>
+                <ul class="list-disc pl-8">
+                    <li><strong>Buff</strong>: 캐릭터의 상태 변화를 감지하고 처리하는 관찰자</li>
+                </ul>
+                
+                <h4>컴포지트 패턴(Composite Pattern)</h4>
+                <p>객체들을 트리 구조로 구성하는 패턴입니다.</p>
+                <ul class="list-disc pl-8">
+                    <li><strong>Group</strong>: 게임 시각적 요소들을 계층적으로 관리</li>
+                    <li><strong>Scene → Group → Visual</strong>: 시각적 요소들의 계층 구조</li>
+                </ul>
+                
+                <h4>프로토타입 패턴(Prototype Pattern)</h4>
+                <p>기존 객체를 복제하여 새 객체를 생성하는 패턴입니다.</p>
+                <ul class="list-disc pl-8">
+                    <li><strong>Item.clone()</strong>: 아이템 복제 메서드</li>
+                </ul>
+                
+                <div class="bg-gray-100 p-4 rounded-lg my-4">
+                    <h4 class="text-blue-700">상태 패턴 구현 예:</h4>
+                    <pre class="code-block">
+// 몬스터 AI 상태 패턴 구현
+public interface AiState {
+    boolean act(boolean enemyInFOV, boolean canAttack);
+}
+
+// 잠자는 상태
+class Sleeping implements AiState {
+    @Override
+    public boolean act(boolean enemyInFOV, boolean canAttack) {
+        if (enemyInFOV) {
+            // 적이 시야에 들어오면 깨어남
+            return false; // 다음 상태로 전환
+        }
+        // 계속 잠
+        return true;
+    }
+}
+
+// 돌아다니는 상태
+class Wandering implements AiState {
+    @Override
+    public boolean act(boolean enemyInFOV, boolean canAttack) {
+        if (enemyInFOV && canAttack) {
+            // 적이 보이고 공격 가능하면 사냥 상태로
+            return false; // 다음 상태로 전환
+        }
+        // 무작위 이동
+        // ...
+        return true;
+    }
+}
+
+// 사냥 상태
+class Hunting implements AiState {
+    @Override
+    public boolean act(boolean enemyInFOV, boolean canAttack) {
+        if (enemyInFOV && canAttack) {
+            // 공격
+            // ...
+        } else {
+            // 적에게 접근
+            // ...
+        }
+        return true;
+    }
+}</pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="uml">
+            <h2 class="text-blue-800">4. UML 다이어그램</h2>
+            
+            <div id="class-diagram">
+                <h3>4.1 클래스 다이어그램</h3>
+                <p>Pixel Dungeon의 주요 클래스와 그들 간의 관계를 보여주는 클래스 다이어그램입니다.</p>
+                
+                <div class="uml-diagram">
+                    <h4 class="text-blue-700 mb-4">핵심 클래스 다이어그램</h4>
+                    <pre class="code-block">
++------------------+       +---------------+       +----------------+
+|      Game        |<------|  PixelDungeon |------>|     Scene      |
++------------------+       +---------------+       +----------------+
+                                   |                      |
+                                   |                      |
+                                   v                      v
++------------------+       +---------------+       +----------------+
+|     Dungeon      |<----->|     Level     |       |   GameScene    |
++------------------+       +---------------+       +----------------+
+       |                         |                      |
+       |                         |                      |
+       v                         v                      v
++------------------+       +---------------+       +----------------+
+|      Hero        |<----->|     Room      |<----->| DungeonTilemap |
++------------------+       +---------------+       +----------------+
+       |                         |                      
+       |                         |                      
+       v                         v                      
++------------------+       +---------------+       
+|    Belongings    |       |   Painter     |       
++------------------+       +---------------+       
+       |
+       |
+       v
++------------------+
+|      Item        |
++------------------+
+       |
+       |
+    +-----+------+------+------+------+------+
+    |     |      |      |      |      |      |
+    v     v      v      v      v      v      v
++------+ +-----+ +-----+ +------+ +----+ +----+
+|Weapon| |Armor| |Potion| |Scroll| |Ring| |Wand|
++------+ +-----+ +-----+ +------+ +----+ +----+</pre>
+                </div>
+                
+                <div class="uml-diagram">
+                    <h4 class="text-blue-700 mb-4">Actor 클래스 계층 다이어그램</h4>
+                    <pre class="code-block">
+                +------------------+
+                |      Actor       |
+                +------------------+
+                        |
+         +---------------+---------------+
+         |                               |
++------------------+            +------------------+
+|       Char       |            |       Buff       |
++------------------+            +------------------+
+         |                               |
+  +------+------+             +----------+---------+
+  |             |             |                    |
++------+    +-------+    +---------+         +---------+
+| Hero |    |  Mob  |    | FlavBuff |         | HardBuff |
++------+    +-------+    +---------+         +---------+
+                |
+       +--------+---------+
+       |        |         |
+ +----------+ +-----+ +-------+
+ | BossType | | NPC | | Enemy |
+ +----------+ +-----+ +-------+
+       |                 |
+       v                 v
+ +-------------+    +-----------+
+ | [Boss Types] |    | [Enemies] |
+ +-------------+    +-----------+</pre>
+                </div>
+                
+                <div class="uml-diagram">
+                    <h4 class="text-blue-700 mb-4">던전 생성 관련 클래스 다이어그램</h4>
+                    <pre class="code-block">
+                    +----------------+
+                    |      Rect      |
+                    +----------------+
+                            |
+                            v
+                    +----------------+
+                    |      Room      |
+                    +----------------+
+                            |
+        +----------+--------+--------+----------+
+        |          |        |        |          |
++-------------+ +------+ +------+ +-------+ +--------+
+| StandardRoom| |EntrRoom| |ExitRoom| |ShopRoom| |TrapRoom|
++-------------+ +------+ +------+ +-------+ +--------+
+
++----------------+        +----------------+
+|     Level      |<------>|     Painter    |
++----------------+        +----------------+
+        |                        |
+        v                        v
++----------------+        +----------------+
+| RegularLevel   |------->| RoomPainter    |
++----------------+        +----------------+
+        |
++-------+--------+
+|       |        |
++-------+ +------+
+|SewerLevel| |CavesLevel|
++-------+ +------+</pre>
+                </div>
+            </div>
+            
+            <div id="usecase-diagram">
+                <h3>4.2 유스케이스 다이어그램</h3>
+                <p>Pixel Dungeon의 주요 게임 시스템과 플레이어 상호작용을 나타내는 유스케이스 다이어그램입니다.</p>
+                
+                <div class="uml-diagram">
+                    <h4 class="text-blue-700 mb-4">게임 플레이 유스케이스 다이어그램</h4>
+                    <pre class="code-block">
++-------------+
+|   Player    |
++-------------+
+      |
+      |
++-----+-------------------------------+
+|                                     |
+|            Pixel Dungeon            |
+|                                     |
+| +------------+    +---------------+ |
+| | Move       |    | Attack Enemy  | |
+| +------------+    +---------------+ |
+|                                     |
+| +------------+    +---------------+ |
+| | Use Item   |    | Level Up      | |
+| +------------+    +---------------+ |
+|                                     |
+| +------------+    +---------------+ |
+| | Equip Gear |    | Manage Invent.| |
+| +------------+    +---------------+ |
+|                                     |
+| +------------+    +---------------+ |
+| | Cast Spell |    | Descend Level | |
+| +------------+    +---------------+ |
+|                                     |
+| +------------+    +---------------+ |
+| | Shop       |    | Fight Boss    | |
+| +------------+    +---------------+ |
+|                                     |
++-------------------------------------+</pre>
+                </div>
+                
+                <div class="uml-diagram">
+                    <h4 class="text-blue-700 mb-4">아이템 관련 유스케이스 다이어그램</h4>
+                    <pre class="code-block">
++-------------+
+|   Player    |
++-------------+
+      |
+      |
++-----+-------------------------------+
+|                                     |
+|         Item Interaction            |
+|                                     |
+| +------------+    +---------------+ |
+| | Pick Up    |<---| Drop Item     | |
+| +------------+    +---------------+ |
+|       |                             |
+|       v                             |
+| +------------+    +---------------+ |
+| | Identify   |<---| Use Item      | |
+| +------------+    +---------------+ |
+|                         |           |
+|                         v           |
+| +------------+    +---------------+ |
+| | Upgrade    |<---| Equip Item    | |
+| +------------+    +---------------+ |
+|       |                 |           |
+|       v                 v           |
+| +------------+    +---------------+ |
+| | Enchant    |    | Remove Curse  | |
+| +------------+    +---------------+ |
+|                                     |
++-------------------------------------+</pre>
+                </div>
+                
+                <div class="uml-diagram">
+                    <h4 class="text-blue-700 mb-4">던전 탐험 유스케이스 다이어그램</h4>
+                    <pre class="code-block">
++-------------+
+|   Player    |
++-------------+
+      |
+      |
++-----+-------------------------------+
+|                                     |
+|         Dungeon Exploration         |
+|                                     |
+| +------------+    +---------------+ |
+| | Explore Map|<---| Discover Room | |
+| +------------+    +---------------+ |
+|       |                 |           |
+|       v                 v           |
+| +------------+    +---------------+ |
+| | Find Secret|<---| Trigger Trap  | |
+| +------------+    +---------------+ |
+|       |                 |           |
+|       v                 v           |
+| +------------+    +---------------+ |
+| | Search     |    | Disarm Trap   | |
+| +------------+    +---------------+ |
+|       |                 |           |
+|       v                 v           |
+| +------------+    +---------------+ |
+| | Use Key    |<---| Descend Stairs| |
+| +------------+    +---------------+ |
+|                                     |
++-------------------------------------+</pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="dev-guide">
+            <h2 class="text-blue-800">5. 개발 가이드</h2>
+            
+            <div id="code-organization">
+                <h3>5.1 코드 구성</h3>
+                <p>Pixel Dungeon 코드베이스를 효과적으로 구성하고 확장하기 위한 가이드입니다.</p>
+                
+                <h4>패키지 구조</h4>
+                <p>Pixel Dungeon의 코드는 논리적 기능에 따라 패키지로 구성됩니다:</p>
+                <ul class="list-disc pl-8">
+                    <li><strong>com.watabou.pixeldungeon</strong>: 메인 게임 패키지</li>
+                    <li><strong>com.watabou.pixeldungeon.actors</strong>: 모든 게임 액터 관련 클래스
+                        <ul class="list-disc pl-4">
+                            <li><strong>.hero</strong>: 플레이어 캐릭터 관련 클래스</li>
+                            <li><strong>.mobs</strong>: 몬스터 관련 클래스</li>
+                            <li><strong>.buffs</strong>: 상태 효과 관련 클래스</li>
+                        </ul>
+                    </li>
+                    <li><strong>com.watabou.pixeldungeon.items</strong>: 아이템 관련 클래스
+                        <ul class="list-disc pl-4">
+                            <li><strong>.weapon</strong>: 무기 관련 클래스</li>
+                            <li><strong>.armor</strong>: 방어구 관련 클래스</li>
+                            <li><strong>.potions</strong>: 물약 관련 클래스</li>
+                            <li><strong>.scrolls</strong>: 주문서 관련 클래스</li>
+                            <li><strong>.rings</strong>: 반지 관련 클래스</li>
+                            <li><strong>.wands</strong>: 지팡이 관련 클래스</li>
+                        </ul>
+                    </li>
+                    <li><strong>com.watabou.pixeldungeon.levels</strong>: 던전 생성 관련 클래스
+                        <ul class="list-disc pl-4">
+                            <li><strong>.features</strong>: 던전 특징(문, 함정 등) 관련 클래스</li>
+                            <li><strong>.painters</strong>: 방 생성 관련 클래스</li>
+                            <li><strong>.rooms</strong>: 방 유형 관련 클래스</li>
+                        </ul>
+                    </li>
+                    <li><strong>com.watabou.pixeldungeon.scenes</strong>: 게임 화면 관련 클래스</li>
+                    <li><strong>com.watabou.pixeldungeon.sprites</strong>: 시각적 표현 관련 클래스</li>
+                    <li><strong>com.watabou.pixeldungeon.ui</strong>: 사용자 인터페이스 관련 클래스</li>
+                    <li><strong>com.watabou.pixeldungeon.windows</strong>: 게임 내 창 관련 클래스</li>
+                    <li><strong>com.watabou.pixeldungeon.mechanics</strong>: 게임 메커니즘 관련 클래스</li>
+                    <li><strong>com.watabou.pixeldungeon.effects</strong>: 시각적 효과 관련 클래스</li>
+                </ul>
+                
+                <h4>자원 구조</h4>
+                <p>게임 리소스는 다음과 같이 구성됩니다:</p>
+                <ul class="list-disc pl-8">
+                    <li><strong>assets/</strong>: 모든 게임 자산 파일</li>
+                    <li><strong>assets/badges.png</strong>: 뱃지 이미지</li>
+                    <li><strong>assets/buffs.png</strong>: 버프 아이콘</li>
+                    <li><strong>assets/items.png</strong>: 아이템 스프라이트</li>
+                    <li><strong>assets/terrain_features.png</strong>: 지형 특징</li>
+                    <li><strong>assets/tiles0.png</strong>: 던전 타일셋(하수도)</li>
+                    <li><strong>assets/tiles1.png</strong>: 던전 타일셋(감옥)</li>
+                    <li><strong>assets/tiles2.png</strong>: 던전 타일셋(동굴)</li>
+                    <li><strong>assets/tiles3.png</strong>: 던전 타일셋(도시)</li>
+                    <li><strong>assets/tiles4.png</strong>: 던전 타일셋(전당)</li>
+                </ul>
+            </div>
+            
+            <div id="extending">
+                <h3>5.2 게임 확장하기</h3>
+                <p>Pixel Dungeon을 확장하기 위한 일반적인 방법을 설명합니다.</p>
+                
+                <h4>새로운 아이템 추가</h4>
+                <ol class="list-decimal pl-8">
+                    <li>적절한 부모 클래스를 선택합니다(Weapon, Armor, Potion 등).</li>
+                    <li>자식 클래스를 생성하고 필요한 메서드를 오버라이드합니다.</li>
+                    <li>아이템의 스프라이트를 생성하고 연결합니다.</li>
+                    <li>Generator 클래스에 아이템을 등록하여 게임에서 등장하도록 합니다.</li>
+                </ol>
+                
+                <div class="bg-gray-100 p-4 rounded-lg my-4">
+                    <h4 class="text-blue-700">새로운 무기 추가 예:</h4>
+                    <pre class="code-block">
+public class FlameSword extends MeleeWeapon {
+    {
+        // 기본 속성 설정
+        name = "화염검";
+        image = ItemSpriteSheet.FLAME_SWORD; // 스프라이트 이미지 인덱스
+        
+        // 무기 능력치
+        tier = 4; // 무기 등급
+        DLY = 1.2f; // 공격 딜레이
+        
+        // 추가 속성
+        enchantment = Enchantment.FIRE; // 기본 마법부여
+    }
+    
+    @Override
+    public String desc() {
+        return "불꽃이 감싸고 있는 강력한 검으로, 적에게 화상 효과를 줄 확률이 있다.";
+    }
+    
+    @Override
+    public int min() {
+        return tier + level; // 최소 데미지
+    }
+    
+    @Override
+    public int max() {
+        return 5*(tier+1) + level*2; // 최대 데미지
+    }
+    
+    @Override
+    public int proc(Char attacker, Char defender, int damage) {
+        // 공격 시 추가 효과
+        if (Random.Int(10) == 0) { // 10% 확률
+            Buff.affect(defender, Burning.class).reignite(defender);
+        }
+        return super.proc(attacker, defender, damage);
+    }
+}
+
+// Generator 클래스에 등록
+static {
+    Category.WEAPON.classes.add(FlameSword.class);
+    Category.WEAPON.probs.add(2); // 등장 확률
+}</pre>
+                </div>
+                
+                <h4>새로운 몬스터 추가</h4>
+                <ol class="list-decimal pl-8">
+                    <li>Mob 클래스를 상속받는 새 클래스를 생성합니다.</li>
+                    <li>몬스터의 기본 속성과 행동을 정의합니다.</li>
+                    <li>몬스터의 스프라이트를 생성하고 연결합니다.</li>
+                    <li>Bestiary 클래스에 몬스터를 등록하여 게임에서 등장하도록 합니다.</li>
+                </ol>
+                
+                <div class="bg-gray-100 p-4 rounded-lg my-4">
+                    <h4 class="text-blue-700">새로운 몬스터 추가 예:</h4>
+                    <pre class="code-block">
+public class ShadowWraith extends Mob {
+    {
+        // 기본 속성 설정
+        name = "그림자 망령";
+        spriteClass = ShadowWraithSprite.class;
+        
+        // 몬스터 능력치
+        HT = 80; // 최대 체력
+        HP = HT;
+        defenseSkill = 25; // 방어 스킬
+        
+        EXP = 12; // 획득 경험치
+        maxLvl = 25; // 최대 레벨
+        
+        // 특수 속성
+        flying = true; // 날아다님
+        state = HUNTING; // 초기 상태
+    }
+    
+    @Override
+    public int attackSkill(Char target) {
+        return 30; // 공격 스킬
+    }
+    
+    @Override
+    public int damageRoll() {
+        return Random.NormalIntRange(15, 25); // 데미지 범위
+    }
+    
+    @Override
+    public int dr() {
+        return 10; // 방어력
+    }
+    
+    @Override
+    public boolean attack(Char enemy) {
+        // 공격 시 특수 효과
+        if (super.attack(enemy)) {
+            // 50% 확률로 약화 효과 부여
+            if (Random.Int(2) == 0) {
+                Buff.prolong(enemy, Weakness.class, 3f);
+            }
+            return true;
+        }
+        return false;
+    }
+    
+    @Override
+    public String description() {
+        return "어둠에서 태어난 망령으로, 공격당하면 반투명한 형태로 변하며 더 위험해진다.";
+    }
+}
+
+// Bestiary 클래스에 등록
+public static Mob mob(int depth) {
+    // ... 기존 코드 ...
+    if (depth > 20) {
+        // 악마의 전당에서 등장
+        if (Random.Int(10) == 0) {
+            return new ShadowWraith();
+        }
+    }
+    // ... 기존 코드 ...
+}</pre>
+                </div>
+                
+                <h4>새로운 레벨 유형 추가</h4>
+                <ol class="list-decimal pl-8">
+                    <li>RegularLevel 또는 다른 Level 하위 클래스를 상속받습니다.</li>
+                    <li>레벨의 생성 로직을 맞춤화합니다.</li>
+                    <li>방과 통로 생성, 몬스터 및 아이템 배치 로직을 구현합니다.</li>
+                    <li>Dungeon 클래스에 레벨을 등록하여 게임에서 등장하도록 합니다.</li>
+                </ol>
+                
+                <div class="bg-gray-100 p-4 rounded-lg my-4">
+                    <h4 class="text-blue-700">새로운 레벨 추가 예:</h4>
+                    <pre class="code-block">
+public class CryptLevel extends RegularLevel {
+    {
+        color1 = 0x534f3e;
+        color2 = 0xb9d661;
+    }
+    
+    @Override
+    public String tilesTex() {
+        return Assets.TILES_CRYPT; // 전용 타일셋
+    }
+    
+    @Override
+    public String waterTex() {
+        return Assets.WATER_HALLS; // 물 텍스처
+    }
+    
+    @Override
+    protected ArrayList<Room> initRooms() {
+        // 방 생성 로직 맞춤화
+        ArrayList<Room> rooms = super.initRooms();
+        
+        // 비밀 방 추가 확률 높임
+        if (Random.Int(3) == 0) {
+            rooms.add(new SecretRoom());
+        }
+        
+        return rooms;
+    }
+    
+    @Override
+    protected void createItems() {
+        // 아이템 생성 로직 맞춤화
+        super.createItems();
+        
+        // 특수 아이템 추가 (해골 열쇠)
+        addItemToSpawn(new SkullKey());
+    }
+    
+    @Override
+    protected void createMobs() {
+        // 몬스터 생성 로직 맞춤화
+        // 일반 몬스터 생성
+        super.createMobs();
+        
+        // 고유 몬스터 추가
+        Mob necromancer = new Necromancer();
+        necromancer.pos = randomRespawnCell();
+        mobs.add(necromancer);
+    }
+}</pre>
+                </div>
+            </div>
+            
+            <div id="patterns-pitfalls">
+                <h3>5.3 일반적인 패턴 및 함정</h3>
+                <p>Pixel Dungeon 개발 시 알아두면 유용한 패턴과 피해야 할 함정들입니다.</p>
+                
+                <h4>권장 패턴</h4>
+                <ul class="list-disc pl-8">
+                    <li><strong>상속 활용</strong>: 기존 클래스를 확장하여 비슷한 기능의 새로운 클래스를 만듭니다.</li>
+                    <li><strong>공통 로직 추출</strong>: 반복되는 코드는 유틸리티 메서드로 추출합니다.</li>
+                    <li><strong>Random 클래스 활용</strong>: 게임의 무작위성을 위해 Random 클래스를 적극 활용합니다.</li>
+                    <li><strong>Bundle을 통한 저장/로드</strong>: 게임 상태 저장과 로드는 Bundle 인터페이스를 통해 일관되게 처리합니다.</li>
+                    <li><strong>액터의 턴 관리</strong>: 액터의
+                     act() 메서드에서 턴 소비를 명확하게 관리합니다.</li>
+                </ul>
+                
+                <h4>피해야 할 함정</h4>
+                <ul class="list-disc pl-8">
+                    <li><strong>과도한 상속 깊이</strong>: 너무 깊은 상속 계층은 코드 이해와 유지보수를 어렵게 만듭니다.</li>
+                    <li><strong>전역 상태 남용</strong>: Dungeon 클래스의 전역 상태를 과도하게 사용하면 코드 복잡성이 증가합니다.</li>
+                    <li><strong>하드코딩된 값</strong>: 자주 변경될 수 있는 값은 상수로 추출하여 관리합니다.</li>
+                    <li><strong>성능 병목</strong>: 매 프레임마다 실행되는 코드나 act() 메서드에서 무거운 연산을 피합니다.</li>
+                    <li><strong>불필요한 객체 생성</strong>: 특히 반복문 내에서 불필요한 객체 생성을 최소화합니다.</li>
+                </ul>
+                
+                <h4>코드 최적화 팁</h4>
+                <ul class="list-disc pl-8">
+                    <li><strong>객체 풀링</strong>: 자주 생성되고 삭제되는 객체는 객체 풀을 사용하여 관리합니다.</li>
+                    <li><strong>미리 계산된 값</strong>: 자주 사용되는 계산 결과는 캐싱하여 재사용합니다.</li>
+                    <li><strong>시각적 최적화</strong>: 화면 밖의 객체는 렌더링 처리를 생략합니다.</li>
+                    <li><strong>알고리즘 효율성</strong>: 특히 던전 생성 및 경로 찾기 알고리즘은 효율적으로 구현합니다.</li>
+                </ul>
+                
+                <div class="bg-gray-100 p-4 rounded-lg my-4">
+                    <h4 class="text-blue-700">좋은 코드 예시:</h4>
+                    <pre class="code-block">
+// 상수 사용
+public static final int MAX_LEVEL = 30;
+public static final float HUNGER_RATE = 0.5f;
+
+// 유틸리티 메서드
+public static int getScaledDamage(int baseDamage, int level) {
+    return baseDamage + level * 2;
+}
+
+// 객체 풀링 예시
+private static ArrayList<Item> itemPool = new ArrayList<>();
+
+public static Item obtain() {
+    if (itemPool.isEmpty()) {
+        return new Item();
+    } else {
+        return itemPool.remove(itemPool.size() - 1);
+    }
+}
+
+public void recycle() {
+    reset();
+    itemPool.add(this);
+}</pre>
+                </div>
+                
+                <div class="bg-gray-100 p-4 rounded-lg my-4">
+                    <h4 class="text-blue-700">피해야 할 코드 예시:</h4>
+                    <pre class="code-block">
+// 안 좋은 예: 하드코딩된 값
+public int getDamage() {
+    return Random.IntRange(5, 10) + level * 2;
+}
+
+// 개선된 예: 상수와 명확한 계산식 사용
+private static final int MIN_DAMAGE = 5;
+private static final int MAX_DAMAGE = 10;
+private static final int DAMAGE_PER_LEVEL = 2;
+
+public int getDamage() {
+    return Random.IntRange(MIN_DAMAGE, MAX_DAMAGE) + level * DAMAGE_PER_LEVEL;
+}
+
+// 안 좋은 예: 불필요한 객체 생성
+public void updateEffects() {
+    for (int i = 0; i < effects.size(); i++) {
+        // 매번 새 객체 생성
+        ArrayList<Char> targets = new ArrayList<>();
+        // ... 코드 ...
+    }
+}
+
+// 개선된 예: 객체 재사용
+private ArrayList<Char> targetCache = new ArrayList<>();
+
+public void updateEffects() {
+    for (int i = 0; i < effects.size(); i++) {
+        targetCache.clear(); // 기존 객체 재사용
+        // ... 코드 ...
+    }
+}</pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="milestone">
+            <h2 class="text-blue-800">6. 마일스톤 계획</h2>
+            <p>Pixel Dungeon 모작 개발을 위한 단계별 마일스톤 계획입니다.</p>
+            
+            <h3>마일스톤 1: 기본 프레임워크 (2주)</h3>
+            <ul class="list-disc pl-8">
+                <li><strong>시스템</strong>: 타일맵 구현, 턴 기반 시스템 구현, 카메라 시스템, 마우스 입력 시스템</li>
+                <li><strong>게임플레이</strong>: 플레이어 기본 이동</li>
+                <li><strong>콘텐츠/UI</strong>: 기본 UI 레이아웃, 플레이어 상태 표시 UI</li>
+                <li><strong>목표</strong>: 기본 타일맵 위에서 플레이어가 턴 기반으로 이동 가능, 카메라 작동</li>
+            </ul>
+            
+            <h3>마일스톤 2: 전투 시스템 (2주)</h3>
+            <ul class="list-disc pl-8">
+                <li><strong>시스템</strong>: 절차적 맵 생성(단일층), 시야 및 탐색 시스템</li>
+                <li><strong>게임플레이</strong>: 전투 시스템 구현(HP, 데미지), 적 AI 기본 구현, 사망 및 리셋 처리</li>
+                <li><strong>콘텐츠/UI</strong>: 전투 피드백 UI, 기본 몬스터 구현(3-5종)</li>
+                <li><strong>목표</strong>: 단일층 던전에서 적과 전투 가능, 사망 처리</li>
+            </ul>
+            
+            <h3>마일스톤 3: 아이템 및 인벤토리 (2주)</h3>
+            <ul class="list-disc pl-8">
+                <li><strong>시스템</strong>: 함정 시스템</li>
+                <li><strong>게임플레이</strong>: 아이템 시스템(장비, 소모품), 인벤토리 시스템, 아이템 장착/소모 시스템</li>
+                <li><strong>콘텐츠/UI</strong>: 인벤토리 UI, 아이템 정보 UI, 기본 아이템 구현(10-15종), 기본 장비 구현(5-10종)</li>
+                <li><strong>목표</strong>: 아이템 획득 및 사용, 인벤토리 관리</li>
+            </ul>
+            
+            <h3>마일스톤 4: 다층 던전 및 진행 (2주)</h3>
+            <ul class="list-disc pl-8">
+                <li><strong>시스템</strong>: 절차적 맵 생성(다층 구조), 층간 이동 시스템, 특수 룸 생성 규칙, 시체/사망 기록 시스템</li>
+                <li><strong>게임플레이</strong>: 몬스터 스폰 로직, 캐릭터 성장 시스템, 보스 AI 및 패턴</li>
+                <li><strong>콘텐츠/UI</strong>: 맵/미니맵 UI, 보스 구현(1-2종)</li>
+                <li><strong>목표</strong>: 다층 던전 구현, 층간 이동, 보스 전투</li>
+            </ul>
+            
+            <h3>마일스톤 5: 자원 및 상호작용 (2주)</h3>
+            <ul class="list-disc pl-8">
+                <li><strong>게임플레이</strong>: 자원 관리 시스템(허기 등), 아이템 식별 시스템, 상태이상 시스템, 상호작용 시스템</li>
+                <li><strong>콘텐츠/UI</strong>: 메뉴 및 설정 UI, 상점 UI 및 시스템, 게임 튜토리얼</li>
+                <li><strong>목표</strong>: 자원 관리, 아이템 식별, 상태이상, 상호작용 시스템 구현</li>
+            </ul>
+            
+            <div class="bg-gray-100 p-4 rounded-lg my-4">
+                <h4 class="text-blue-700">파트별 작업 분류</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>파트</th>
+                            <th>코드</th>
+                            <th>작업 내용</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="11">시스템 파트</td>
+                            <td>S1</td>
+                            <td>타일맵 구현</td>
+                        </tr>
+                        <tr>
+                            <td>S2</td>
+                            <td>턴 기반 시스템 구현</td>
+                        </tr>
+                        <tr>
+                            <td>S3</td>
+                            <td>카메라 시스템(줌인/줌아웃)</td>
+                        </tr>
+                        <tr>
+                            <td>S4</td>
+                            <td>마우스 입력 시스템</td>
+                        </tr>
+                        <tr>
+                            <td>S5</td>
+                            <td>절차적 맵 생성(단일층)</td>
+                        </tr>
+                        <tr>
+                            <td>S6</td>
+                            <td>절차적 맵 생성(다층 구조)</td>
+                        </tr>
+                        <tr>
+                            <td>S7</td>
+                            <td>층간 이동 시스템</td>
+                        </tr>
+                        <tr>
+                            <td>S8</td>
+                            <td>특수 룸 생성 규칙(상점 등)</td>
+                        </tr>
+                        <tr>
+                            <td>S9</td>
+                            <td>시체/사망 기록 시스템</td>
+                        </tr>
+                        <tr>
+                            <td>S10</td>
+                            <td>시야 및 탐색 시스템</td>
+                        </tr>
+                        <tr>
+                            <td>S11</td>
+                            <td>함정 시스템</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="14">게임플레이 파트</td>
+                            <td>G1</td>
+                            <td>플레이어 기본 이동</td>
+                        </tr>
+                        <tr>
+                            <td>G2</td>
+                            <td>전투 시스템 구현(HP, 데미지)</td>
+                        </tr>
+                        <tr>
+                            <td>G3</td>
+                            <td>적 AI 기본 구현</td>
+                        </tr>
+                        <tr>
+                            <td>G4</td>
+                            <td>사망 및 리셋 처리</td>
+                        </tr>
+                        <tr>
+                            <td>G5</td>
+                            <td>몬스터 스폰 로직</td>
+                        </tr>
+                        <tr>
+                            <td>G6</td>
+                            <td>자원 관리 시스템(허기 등)</td>
+                        </tr>
+                        <tr>
+                            <td>G7</td>
+                            <td>캐릭터 성장 시스템</td>
+                        </tr>
+                        <tr>
+                            <td>G8</td>
+                            <td>아이템 시스템(장비, 소모품)</td>
+                        </tr>
+                        <tr>
+                            <td>G9</td>
+                            <td>인벤토리 시스템</td>
+                        </tr>
+                        <tr>
+                            <td>G10</td>
+                            <td>아이템 식별 시스템</td>
+                        </tr>
+                        <tr>
+                            <td>G11</td>
+                            <td>아이템 장착/소모 시스템</td>
+                        </tr>
+                        <tr>
+                            <td>G12</td>
+                            <td>상태이상 시스템</td>
+                        </tr>
+                        <tr>
+                            <td>G13</td>
+                            <td>상호작용 시스템</td>
+                        </tr>
+                        <tr>
+                            <td>G14</td>
+                            <td>보스 AI 및 패턴</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="13">게임콘텐츠 + UI 파트</td>
+                            <td>C1</td>
+                            <td>기본 UI 레이아웃 구현</td>
+                        </tr>
+                        <tr>
+                            <td>C2</td>
+                            <td>플레이어 상태 표시 UI</td>
+                        </tr>
+                        <tr>
+                            <td>C3</td>
+                            <td>인벤토리 UI</td>
+                        </tr>
+                        <tr>
+                            <td>C4</td>
+                            <td>전투 피드백 UI(데미지 표시 등)</td>
+                        </tr>
+                        <tr>
+                            <td>C5</td>
+                            <td>아이템 정보 UI</td>
+                        </tr>
+                        <tr>
+                            <td>C6</td>
+                            <td>맵/미니맵 UI</td>
+                        </tr>
+                        <tr>
+                            <td>C7</td>
+                            <td>메뉴 및 설정 UI</td>
+                        </tr>
+                        <tr>
+                            <td>C8</td>
+                            <td>기본 몬스터 구현(3-5종)</td>
+                        </tr>
+                        <tr>
+                            <td>C9</td>
+                            <td>기본 아이템 구현(10-15종)</td>
+                        </tr>
+                        <tr>
+                            <td>C10</td>
+                            <td>기본 장비 구현(5-10종)</td>
+                        </tr>
+                        <tr>
+                            <td>C11</td>
+                            <td>보스 구현(1-2종)</td>
+                        </tr>
+                        <tr>
+                            <td>C12</td>
+                            <td>상점 UI 및 시스템</td>
+                        </tr>
+                        <tr>
+                            <td>C13</td>
+                            <td>게임 튜토리얼</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <p class="mt-4">각 마일스톤은 2주 기간으로 계획되어 있으며, 팀원들은 각자 담당 영역에 집중하되 코드 통합과 충돌 해결을 위한 주기적인 소통이 필요합니다. 마일스톤 1에서 기본 프레임워크를 튼튼하게 구축하는 것이 이후 개발의 성공을 위한 핵심입니다.</p>
+        </div>
+        
+        <div class="card">
+            <h2 class="text-blue-800">결론</h2>
+            <p>이 문서는 Pixel Dungeon의 핵심 시스템, 코드 구조, 그리고 개발 가이드를 제공합니다. 로그라이크 게임의 기본 요소인 턴 기반 시스템, 절차적 던전 생성, 전투 시스템, 아이템 시스템 등을 상세히 설명하였으며, 코드 구조와 클래스 간의 관계를 UML 다이어그램을 통해 시각화하였습니다.</p>
+            
+            <p>제시된 마일스톤 계획을 따라 단계적으로 개발을 진행하면, C++ WinAPI 기반 Pixel Dungeon 모작 게임을 성공적으로 완성할 수 있을 것입니다. 가장 중요한 것은 각 단계에서 코드의 품질과 구조를 유지하는 것이며, 이를 위해 본 문서에서 제시한 패턴과 가이드를 참고하시기 바랍니다.</p>
+            
+            <p>추가 질문이나 구체적인 구현 세부사항에 대한 문의가 있으시면 언제든지 문의해 주시기 바랍니다. 성공적인 개발을 기원합니다!</p>
+        </div>
+    </div>
+</body>
+</html>
