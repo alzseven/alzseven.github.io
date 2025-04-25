@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Dungeon Architecture Diagrams</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.7.0/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .mermaid {
+            margin: 30px 0;
+            overflow: visible !important;
+        }
+        .diagram-container {
+            margin-bottom: 60px;
+            overflow: visible;
+        }
+        h1, h2, h3 {
+            color: #2D3748;
+        }
+        .note {
+            font-size: 0.9rem;
+            color: #4A5568;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="container bg-white shadow-lg rounded-lg">
+        <header class="py-6 border-b border-gray-200">
+            <h1 class="text-3xl font-bold text-center">Pixel Dungeon Architecture Diagrams</h1>
+            <p class="text-center text-gray-600 mt-2">Class Hierarchy and Game Flow Analysis</p>
+        </header>
+
+        <main class="py-8 px-4">
+            <section>
+                <h2 class="text-2xl font-semibold mb-6">Class Diagram</h2>
+                <p class="mb-4">The following diagram illustrates the core class hierarchy of Pixel Dungeon, including game structure, actors, items, and level generation systems.</p>
+                
+                <div class="diagram-container">
+                    <div class="mermaid">
+classDiagram
+    %% 타일맵 시스템 (S1)
+    class DungeonTilemap {
+        +int SIZE
+        +create()
+        +map(int cell)
+        +screenToTile(int x, int y)
+        +tileCenterToWorld(int pos)
+    }
+    
+    class TerrainFeaturesTilemap {
+        -Plant plants
+        -Trap traps
+        +discover(int pos)
+        +plant(Plant plant, int pos)
+        +trap(Trap trap, int pos)
+    }
+    
+    DungeonTilemap <|-- DungeonTerrainTilemap
+    DungeonTilemap <|-- TerrainFeaturesTilemap
+    
+    %% 턴 기반 시스템 (S2)
+    class Actor {
+        -float time
+        #int actPriority
+        +act() boolean
+        #void spend(float time)
+        +static void process()
+        +static void add(Actor actor)
+        +static void remove(Actor actor)
+        +static Char findChar(int pos)
+    }
+    
+    class Char {
+        +int pos
+        +int HP
+        +int HT
+        +string sprite
+        +boolean act()
+        +void spend(float time)
+        +void move(int step)
+        +void onMotionComplete()
+        +int defenseSkill(Char enemy)
+        +int attackSkill(Char target)
+        +void damage(int dmg, Object src)
+        +void die(Object cause)
+    }
+    
+    class Blob {
+    }
+
+    Actor <|-- Char
+    Actor <|-- Blob
+    
+    %% 카메라 시스템 (S3)
+    class Camera {
+        +float zoom
+        +string scroll
+        +void update()
+        +void center(float x, float y)
+        +void resize(int width, int height)
+        +static void reset()
+    }
+    
+    %% 마우스 입력 시스템 (S4)
+    class CellSelector {
+        +Listener listener
+        +boolean enabled
+        +boolean select(int cell)
+        +void cancel()
+        +interface Listener
+    }
+    
+    class PointerEvent {
+        +int button
+        +int x
+        +int y
+        +boolean handled
+    }
+    
+    CellSelector --> PointerEvent : processes
+    
+    %% 절차적 맵 생성 (S5, S6)
+    class Level {
+        +int width()
+        +int height()
+        +int length()
+        +int[] map
+        +boolean[] visited
+        +boolean[] mapped
+        +boolean[] passable
+        +boolean[] losBlocking
+        +void create()
+        +void set(int cell, int terrain)
+        +int pointToCell(int x, int y)
+        +int cellToPoint(int cell)
+    }
+    
+    class RegularLevel {
+        -Room rooms
+        +void create()
+        -void createRooms()
+        -void createMobs()
+        -void createItems()
+    }
+    
+    class Builder {
+        +RegularLevel level
+        -Room rooms
+        +build() void
+        +void connectRooms()
+        +void assignRoomType()
+    }
+    
+    Level <|-- RegularLevel
+    RegularLevel --> Builder : uses
+    
+    %% 층간 이동 시스템 (S7)
+    class LevelTransition {
+        +int cell
+        +int destLevel
+        +int destCell
+        +Type type
+        +enum Type
+    }
+    
+    class Dungeon {
+        +static Hero hero
+        +static Level level
+        +static int depth
+        +static void switchLevel(Level level, int pos)
+        +static Level newLevel()
+    }
+    
+    Dungeon --> Level : manages
+    Dungeon --> LevelTransition : uses
+    
+    %% 특수 룸 생성 (S8)
+    class Room {
+        +string rect
+        +Room neighbors
+        +int distance
+        +int price
+        +paint(Level level) void
+        +void connect(Room room)
+    }
+    
+    class SpecialRoom {
+        +paint(Level level) void
+        +static runSpecials() void
+    }
+    
+    class ShopRoom {
+        +void paint(Level level)
+        -void placeShopkeeper(Level level)
+        -void placeItems(Level level)
+    }
+    
+    Room <|-- SpecialRoom
+    SpecialRoom <|-- ShopRoom
+    
+    %% 시야 및 탐색 시스템 (S10)
+    class FogOfWar {
+        +boolean[] visible
+        +boolean[] visited
+        +boolean[] mapped
+        +void updateVisibility(boolean[] visible, boolean[] visited, boolean[] mapped)
+    }
+    
+    class Awareness {
+        +int duration
+        +float distance
+        +void update()
+    }
+    
+    %% 함정 시스템 (S11)
+    class Trap {
+        +int pos
+        +boolean visible
+        +boolean active
+        +trigger() void
+        +void activate()
+        +void disarm()
+    }
+    
+    TerrainFeaturesTilemap --> Trap : displays
+
+
+                    </div>
+                </div>
+                
+                <div class="note mt-4 mb-8">
+                    <p>Note: The diagram shows the primary relationships between classes. Some simplifications were made for clarity. The PD-classes repository provides base classes while the pixel-dungeon repository contains the game implementation.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-semibold mb-6">Sequence Diagram</h2>
+                <p class="mb-4">The following sequence diagram illustrates the main game flow, including initialization, level generation, turn processing, and combat.</p>
+                
+                <div class="diagram-container">
+                    <div class="mermaid">
+sequenceDiagram
+    participant Game
+    participant Dungeon
+    participant Level
+    participant Builder
+    participant Room
+    participant GameActor
+    participant Char
+    participant Trap
+    participant FogOfWar
+    
+    %% 절차적 맵 생성 프로세스 (S5, S6)
+    Game->>Dungeon: newLevel()
+    Dungeon->>RegularLevel: new RegularLevel()
+    RegularLevel->>RegularLevel: create()
+    RegularLevel->>Builder: build()
+    Builder->>Builder: createRooms()
+    Builder->>Builder: connectRooms()
+    Builder->>Builder: assignRoomType()
+    loop 각 방에 대해
+        Builder->>Room: paint(level)
+        opt 특수 방인 경우
+            Room->>SpecialRoom: paint(level)
+            opt 상점인 경우
+                SpecialRoom->>ShopRoom: paint(level)
+                ShopRoom->>ShopRoom: placeShopkeeper(level)
+                ShopRoom->>ShopRoom: placeItems(level)
+            end
+        end
+    end
+    RegularLevel->>RegularLevel: createMobs()
+    RegularLevel->>RegularLevel: createItems()
+    RegularLevel->>RegularLevel: createTraps()
+    
+    %% 턴 처리 프로세스 (S2)
+    Game->>Game: step()
+    Game->>Game: update()
+    Game->>GameActor: process()
+    loop 각 액터에 대해
+        GameActor->>GameActor: act()
+        opt 액터가 Char인 경우
+            GameActor->>Char: act()
+            Char->>Char: spend(time)
+            Char-->>GameActor: 행동 완료
+        end
+    end
+    
+    %% 층간 이동 프로세스 (S7)
+    Char->>Dungeon: newLevel()
+    Dungeon->>Level: create()
+    Dungeon->>Dungeon: switchLevel(level, pos)
+    Dungeon->>GameActor: init()
+    
+    %% 시야 계산 프로세스 (S10)
+    Char->>Level: updateFieldOfView()
+    Level->>FogOfWar: updateVisibility(visible, visited, mapped)
+    FogOfWar->>FogOfWar: updateTexture()
+    
+    %% 함정 작동 프로세스 (S11)
+    Char->>Level: move(step)
+    Level->>Trap: discover(pos)
+    Level->>Trap: trigger()
+    Trap->>Trap: activate()
+    Trap->>Char: affect(Char)
+
+                    </div>
+                </div>
+                
+                <div class="note mt-4">
+                    <p>Note: This sequence diagram illustrates the main game flow, focusing on initialization, level generation, and turn-based gameplay. The actual implementation may have additional complexity. The turn system in Pixel Dungeon is based on time units spent by each Actor.</p>
+                </div>
+            </section>
+            
+            <section class="mt-10">
+                <h2 class="text-2xl font-semibold mb-4">Key Game Components</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 p-4 rounded">
+                        <h3 class="text-xl font-medium mb-2">Actor System</h3>
+                        <p>The Actor system is the foundation of all entities that can take actions in the game. Actors are scheduled to act based on time spent. The main classes in this hierarchy are:</p>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li><strong>Actor</strong>: Base class with timing system</li>
+                            <li><strong>Char</strong>: Living entities with health and position</li>
+                            <li><strong>Mob</strong>: Enemies with AI states</li>
+                            <li><strong>Hero</strong>: Player-controlled character</li>
+                            <li><strong>Buff</strong>: Temporary effects on characters</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-4 rounded">
+                        <h3 class="text-xl font-medium mb-2">Item System</h3>
+                        <p>The Item system handles all collectible objects in the game. Items can be used, equipped, or thrown. Major categories include:</p>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li><strong>Weapon</strong>: Melee weapons, missile weapons</li>
+                            <li><strong>Armor</strong>: Protective equipment with glyphs</li>
+                            <li><strong>Wand</strong>: Magical devices with charges</li>
+                            <li><strong>Potion</strong>: Consumable effects</li>
+                            <li><strong>Scroll</strong>: Single-use magical items</li>
+                            <li><strong>Ring</strong>: Passive effect items</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-4 rounded">
+                        <h3 class="text-xl font-medium mb-2">Level Generation</h3>
+                        <p>Levels are procedurally generated using a room-based approach:</p>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li><strong>Level</strong>: Base class with map data</li>
+                            <li><strong>RegularLevel</strong>: Standard level with rooms</li>
+                            <li><strong>Room</strong>: Rectangular areas with various types</li>
+                            <li><strong>Painter</strong>: Renders room contents to the map</li>
+                        </ul>
+                        <p class="mt-2">The generation process: initialize rooms → place doors → add items → add monsters → place traps.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-4 rounded">
+                        <h3 class="text-xl font-medium mb-2">Rendering System</h3>
+                        <p>The visual representation is handled by scene classes:</p>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li><strong>Scene</strong>: Base visual container</li>
+                            <li><strong>PixelScene</strong>: Pixel-art specific rendering</li>
+                            <li><strong>GameScene</strong>: Main gameplay screen</li>
+                            <li><strong>DungeonTilemap</strong>: Renders level tiles</li>
+                            <li><strong>CharSprite</strong>: Visual representation of characters</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="py-6 border-t border-gray-200 text-center text-gray-600">
+            <p>Based on Pixel Dungeon source code - <a href="https://github.com/watabou/pixel-dungeon" class="text-blue-600 hover:underline">github.com/watabou/pixel-dungeon</a> and <a href="https://github.com/watabou/PD-classes" class="text-blue-600 hover:underline">github.com/watabou/PD-classes</a></p>
+        </footer>
+    </div>
+
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'neutral',
+            securityLevel: 'loose',
+            flowchart: {
+                useMaxWidth: false,
+                htmlLabels: true
+            }
+        });
+    </script>
+</body>
+</html>

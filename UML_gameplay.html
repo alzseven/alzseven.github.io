@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Dungeon Architecture Diagrams</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.7.0/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .mermaid {
+            margin: 30px 0;
+            overflow: visible !important;
+        }
+        .diagram-container {
+            margin-bottom: 60px;
+            overflow: visible;
+        }
+        h1, h2, h3 {
+            color: #2D3748;
+        }
+        .note {
+            font-size: 0.9rem;
+            color: #4A5568;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="container bg-white shadow-lg rounded-lg">
+        <header class="py-6 border-b border-gray-200">
+            <h1 class="text-3xl font-bold text-center">Pixel Dungeon Architecture Diagrams</h1>
+            <p class="text-center text-gray-600 mt-2">Class Hierarchy and Game Flow Analysis</p>
+        </header>
+
+        <main class="py-8 px-4">
+            <section>
+                <h2 class="text-2xl font-semibold mb-6">Class Diagram</h2>
+                <p class="mb-4">The following diagram illustrates the core class hierarchy of Pixel Dungeon, including game structure, actors, items, and level generation systems.</p>
+                
+                <div class="diagram-container">
+                    <div class="mermaid">
+classDiagram
+    %% 플레이어 기본 이동 (G1)
+    class Char {
+        +int pos
+        +int HP
+        +int HT
+        +CharSprite sprite
+        +boolean act()
+        +void spend(float time)
+        +void move(int step)
+        +boolean canMove(int step)
+        +void onMotionComplete()
+    }
+    
+    class Hero {
+        +HeroClass heroClass
+        +HeroSubClass subClass
+        +int STR
+        +int lvl
+        +int exp
+        +boolean ready
+        +HeroAction curAction
+        +boolean act()
+        +void rest(boolean fullRest)
+        +void interrupt()
+        +void onMotionComplete()
+        +void earnExp(int exp)
+    }
+    
+    class Level {
+        +int width()
+        +int height()
+        +int length()
+        +int[] map
+        +boolean[] passable
+        +boolean[] losBlocking
+        +int entrance()
+        +int exit()
+        +boolean adjacent(int a, int b)
+        +int pointToCell(int x, int y)
+    }
+    
+    %% 전투 시스템 (G2)
+    class Damage {
+        +int value
+        +Object source
+        +Element element
+        +boolean isFeatured
+        +static Damage normalDamage(int value, Object source)
+        +static Damage elementalDamage(int value, Element element)
+        +int adjustForDefense(int defense)
+    }
+    
+    class Mob {
+        +int EXP
+        +int defenseSkill
+        +boolean hostile
+        +boolean ally
+        +AI aiState
+        +boolean act()
+        +int attackSkill(Char target)
+        +int damageRoll()
+        +int defenseProc(Char enemy, int damage)
+        +void aggro(Char ch)
+        +void die(Object cause)
+    }
+    
+    %% 적 AI 기본 (G3)
+    class AI {
+        +Mob mob
+        +boolean canAttack(Char enemy)
+        +boolean canSee(Char ch)
+        +boolean act(boolean enemyInFOV, boolean justAlerted)
+        +String status()
+    }
+    
+    class Hunting {
+        +boolean act(boolean enemyInFOV, boolean justAlerted)
+        +String status()
+    }
+    
+    class Wandering {
+        +boolean act(boolean enemyInFOV, boolean justAlerted)
+        +String status()
+    }
+    
+    %% 사망 및 리셋 (G4)
+    class GameOver {
+        +static void show(int cause)
+        +static void showBadge(Rankings.Record rec)
+    }
+    
+    class Rankings {
+        +ArrayList~Record~ records
+        +int lastRecord
+        +void submit(boolean win)
+        +class Record
+    }
+    
+    %% 몬스터 스폰 로직 (G5)
+    class MobSpawner {
+        +float spawnCooldown
+        +void respawnCooldown()
+        +boolean act()
+        +Mob createMob()
+        +void spawnAt(Mob mob, int pos)
+    }
+    
+    class RegularLevel {
+        #ArrayList~Room~ rooms
+        +void create()
+        #void createMobs()
+        #Mob createMob()
+        #void placeRandomMob()
+    }
+    
+    %% 자원 관리 시스템 (G6)
+    class Hunger {
+        +float level
+        +float STARVING
+        +float HUNGRY
+        +boolean act()
+        +void satisfy(float energy)
+        +void reduceHunger(float energy)
+    }
+    
+    class Energy {
+        +float value
+        +float max
+        +void use(float amount)
+        +void charge(float amount)
+        +boolean isFull()
+        +boolean isEmpty()
+    }
+    
+    %% 캐릭터 성장 시스템 (G7)
+    class HeroClass {
+        +String title()
+        +String desc()
+        +ArrayList~HeroSubClass~ subClasses()
+        +void initHero(Hero hero)
+        +int armor()
+        +int hp()
+    }
+    
+    class Talent {
+        +int maxPoints
+        +int points
+        +String title()
+        +String desc()
+        +void onUpgrade(Hero hero)
+        +void activate(Hero hero)
+    }
+    
+    %% 아이템 시스템 (G8)
+    class Item {
+        +String name
+        +String desc
+        +int image
+        +int quantity
+        +boolean unique
+        +void execute(Hero hero, String action)
+        +ArrayList~String~ actions(Hero hero)
+        +String info()
+    }
+    
+    class Weapon {
+        +int tier
+        +int min()
+        +int max()
+        +int damageRoll(Char owner)
+        +float accuracyFactor(Char owner)
+        +float speedFactor(Char owner)
+    }
+    
+    class Armor {
+        +int tier
+        +int DRMin()
+        +int DRMax()
+        +int DRRoll()
+        +int defenseProc(Char attacker, Char defender, int damage)
+    }
+    
+    %% 인벤토리 시스템 (G9)
+    class Belongings {
+        +Hero owner
+        +Backpack backpack
+        +Item weapon
+        +Item armor
+        +Item artifact
+        +Item misc
+        +Item ring
+        +Item getItem(Class~? extends Item~ itemClass)
+        +void identify()
+    }
+    
+    class Backpack {
+        +int capacity
+        +ArrayList~Item~ items
+        +boolean add(Item item)
+        +boolean remove(Item item)
+        +Item findItem(Class~? extends Item~ itemClass)
+    }
+    
+    %% 아이템 식별 시스템 (G10)
+    class Catalog {
+        +HashSet~Class~ seen
+        +static boolean isSeen(Class itemClass)
+        +static void setSeen(Class itemClass)
+    }
+    
+    %% 아이템 장착/소모 시스템 (G11)
+    class EquipableItem {
+        +boolean isEquipped(Hero hero)
+        +boolean doEquip(Hero hero)
+        +boolean doUnequip(Hero hero, boolean collect, boolean single)
+    }
+    
+    %% 상태이상 시스템 (G12)
+    class Buff {
+        +Char target
+        +int icon()
+        +String toString()
+        +String desc()
+        +boolean attachTo(Char target)
+        +void detach()
+        +boolean act()
+    }
+    
+    class FlavourBuff {
+        +int duration
+        +void spend(float time)
+        +boolean act()
+    }
+    
+    class Burning {
+        +float DURATION
+        +void start(Char ch)
+        +boolean act()
+        +void detach()
+    }
+    
+    class Poison {
+        +float durationFactor
+        +void set(float duration)
+        +boolean act()
+    }
+    
+    %% 상호작용 시스템 (G13)
+    class Heap {
+        +int pos
+        +Type type
+        +Item item
+        +void drop(Item item)
+        +void destroy()
+        +void burn()
+        +void freeze()
+        +enum Type
+    }
+    
+    class NPC {
+        +boolean act()
+        +void interact(Hero hero)
+        +String[] actions()
+    }
+    
+    %% 보스 AI 및 패턴 (G14)
+    class Boss {
+        +int defenseSkill
+        +int damageRoll()
+        +void damage(int dmg, Object src)
+        +void die(Object cause)
+        +void notice()
+    }
+    
+    class BossAI {
+        +Boss boss
+        +int phase
+        +boolean canAttack(Char enemy)
+        +boolean act(boolean enemyInFOV, boolean justAlerted)
+        +void nextPhase()
+    }
+    
+    class BossAttack {
+        +String name
+        +float cooldown
+        +void execute(Boss boss, Char target)
+        +boolean canUse(Boss boss)
+    }
+    
+    %% 클래스 간 관계
+    Char <|-- Hero
+    Char <|-- Mob
+    Mob <|-- Boss
+    
+    AI <|-- Hunting
+    AI <|-- Wandering
+    Mob --> AI : uses
+    
+    Item <|-- EquipableItem
+    EquipableItem <|-- Weapon
+    EquipableItem <|-- Armor
+    
+    Buff <|-- FlavourBuff
+    FlavourBuff <|-- Burning
+    FlavourBuff <|-- Poison
+    
+    Hero --> HeroClass : has
+    Hero --> Belongings : has
+    Hero --> Hunger : has
+    
+    Belongings --> Backpack : contains
+    
+    Boss --> BossAI : uses
+    BossAI --> BossAttack : uses
+    
+    Level --> Heap : contains
+    Level --> MobSpawner : uses
+    
+    RegularLevel --|> Level
+
+
+                    </div>
+                </div>
+                
+                <div class="note mt-4 mb-8">
+                    <p>Note: The diagram shows the primary relationships between classes. Some simplifications were made for clarity. The PD-classes repository provides base classes while the pixel-dungeon repository contains the game implementation.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-semibold mb-6">Sequence Diagram</h2>
+                <p class="mb-4">The following sequence diagram illustrates the main game flow, including initialization, level generation, turn processing, and combat.</p>
+                
+                <div class="diagram-container">
+                    <div class="mermaid">
+sequenceDiagram
+    participant Hero
+    participant Char
+    participant Level
+    participant Mob
+    participant AI
+    participant Damage
+    participant Buff
+    participant Item
+    participant Belongings
+    participant Boss
+    
+    %% 플레이어 이동 및 행동 프로세스 (G1)
+    Hero->>Hero: act()
+    Hero->>Hero: curAction.execute()
+    alt 이동 행동인 경우
+        Hero->>Level: canMove(step)
+        Level-->>Hero: true/false
+        opt 이동 가능한 경우
+            Hero->>Char: move(step)
+            Char->>Level: map[pos] = Terrain.EMPTY
+            Char->>Level: map[pos+step] = Terrain.HERO
+            Char->>Char: pos = pos + step
+            Char->>Char: spend(1f)
+            Char->>Char: onMotionComplete()
+        end
+    end
+    
+    %% 전투 및 데미지 계산 프로세스 (G2)
+    Hero->>Mob: attack(mob)
+    Hero->>Hero: attackSkill(mob)
+    Mob->>Mob: defenseSkill(hero)
+    alt 공격 성공
+        Hero->>Hero: damageRoll()
+        Hero->>Damage: normalDamage(value, hero)
+        Damage->>Damage: adjustForDefense(mob.defense)
+        Hero->>Hero: attackProc(mob, damage)
+        Hero->>Mob: damage(dmg, hero)
+        Mob->>Mob: defenseProc(hero, damage)
+        Mob->>Mob: HP -= damage
+        opt 몹 체력이 0 이하
+            Mob->>Mob: die(hero)
+            Mob->>Hero: earnExp(EXP)
+        end
+    end
+    
+    %% 몬스터 AI 및 의사결정 프로세스 (G3)
+    Mob->>Mob: act()
+    Mob->>AI: act(enemyInFOV, justAlerted)
+    alt 적이 시야에 있는 경우
+        AI->>Hunting: act(true, justAlerted)
+        Hunting->>Mob: canAttack(enemy)
+        alt 공격 가능한 경우
+            Hunting->>Mob: attack(enemy)
+        else 공격 불가능한 경우
+            Hunting->>Mob: followChar(enemy)
+        end
+    else
+        AI->>Wandering: act(false, justAlerted)
+        Wandering->>Mob: randomDestination()
+        Wandering->>Mob: move(step)
+    end
+    
+    %% 캐릭터 성장 및 레벨업 프로세스 (G7)
+    Mob->>Hero: earnExp(EXP)
+    Hero->>Hero: exp += EXP
+    opt 경험치가 레벨업에 필요한 양 이상
+        Hero->>Hero: lvl += 1
+        Hero->>Hero: updateHT(true)
+        Hero->>Hero: sprite.showStatus("+1")
+        Hero->>Hero: learnTalent()
+    end
+    
+    %% 아이템 사용 및 효과 적용 프로세스 (G8, G11)
+    Hero->>Item: execute(hero, action)
+    alt 장비 아이템인 경우
+        Item->>EquipableItem: doEquip(hero)
+        EquipableItem->>Belongings: weapon = this
+        EquipableItem->>Hero: updateArmor()
+    else 소모품인 경우
+        Item->>Item: detach(hero.belongings.backpack)
+        Item->>Item: apply(hero)
+        opt 버프 효과가 있는 경우
+            Item->>Buff: attach(hero)
+            Buff->>Hero: buffs().add(this)
+        end
+    end
+    
+    %% 상태이상 적용 및 처리 프로세스 (G12)
+    Buff->>Buff: attachTo(target)
+    Buff->>Char: buffs().add(this)
+    loop 버프가 활성화된 동안
+        Buff->>Buff: act()
+        alt 지속시간 버프인 경우
+            FlavourBuff->>FlavourBuff: spend(time)
+            FlavourBuff->>FlavourBuff: duration -= time
+            opt 지속시간이 끝난 경우
+                FlavourBuff->>FlavourBuff: detach()
+            end
+        end
+        alt 화상 버프인 경우
+            Burning->>Burning: act()
+            Burning->>Char: damage(TICK, this)
+        end
+    end
+    
+    %% 보스 전투 및 패턴 프로세스 (G14)
+    Boss->>Boss: act()
+    Boss->>BossAI: act(enemyInFOV, justAlerted)
+    BossAI->>BossAI: updatePhase()
+    loop 각 공격 패턴에 대해
+        BossAI->>BossAttack: canUse(boss)
+        opt 사용 가능한 경우
+            BossAI->>BossAttack: execute(boss, target)
+            BossAttack->>Boss: specialAttack(target)
+        end
+    end
+    opt 보스 체력이 특정 임계점 이하
+        BossAI->>BossAI: nextPhase()
+        BossAI->>Boss: onPhaseChange()
+    end
+
+
+                    </div>
+                </div>
+                
+                <div class="note mt-4">
+                    <p>Note: This sequence diagram illustrates the main game flow, focusing on initialization, level generation, and turn-based gameplay. The actual implementation may have additional complexity. The turn system in Pixel Dungeon is based on time units spent by each Actor.</p>
+                </div>
+            </section>
+            
+            <section class="mt-10">
+                <h2 class="text-2xl font-semibold mb-4">Key Game Components</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 p-4 rounded">
+                        <h3 class="text-xl font-medium mb-2">Actor System</h3>
+                        <p>The Actor system is the foundation of all entities that can take actions in the game. Actors are scheduled to act based on time spent. The main classes in this hierarchy are:</p>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li><strong>Actor</strong>: Base class with timing system</li>
+                            <li><strong>Char</strong>: Living entities with health and position</li>
+                            <li><strong>Mob</strong>: Enemies with AI states</li>
+                            <li><strong>Hero</strong>: Player-controlled character</li>
+                            <li><strong>Buff</strong>: Temporary effects on characters</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-4 rounded">
+                        <h3 class="text-xl font-medium mb-2">Item System</h3>
+                        <p>The Item system handles all collectible objects in the game. Items can be used, equipped, or thrown. Major categories include:</p>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li><strong>Weapon</strong>: Melee weapons, missile weapons</li>
+                            <li><strong>Armor</strong>: Protective equipment with glyphs</li>
+                            <li><strong>Wand</strong>: Magical devices with charges</li>
+                            <li><strong>Potion</strong>: Consumable effects</li>
+                            <li><strong>Scroll</strong>: Single-use magical items</li>
+                            <li><strong>Ring</strong>: Passive effect items</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-4 rounded">
+                        <h3 class="text-xl font-medium mb-2">Level Generation</h3>
+                        <p>Levels are procedurally generated using a room-based approach:</p>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li><strong>Level</strong>: Base class with map data</li>
+                            <li><strong>RegularLevel</strong>: Standard level with rooms</li>
+                            <li><strong>Room</strong>: Rectangular areas with various types</li>
+                            <li><strong>Painter</strong>: Renders room contents to the map</li>
+                        </ul>
+                        <p class="mt-2">The generation process: initialize rooms → place doors → add items → add monsters → place traps.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-4 rounded">
+                        <h3 class="text-xl font-medium mb-2">Rendering System</h3>
+                        <p>The visual representation is handled by scene classes:</p>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li><strong>Scene</strong>: Base visual container</li>
+                            <li><strong>PixelScene</strong>: Pixel-art specific rendering</li>
+                            <li><strong>GameScene</strong>: Main gameplay screen</li>
+                            <li><strong>DungeonTilemap</strong>: Renders level tiles</li>
+                            <li><strong>CharSprite</strong>: Visual representation of characters</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="py-6 border-t border-gray-200 text-center text-gray-600">
+            <p>Based on Pixel Dungeon source code - <a href="https://github.com/watabou/pixel-dungeon" class="text-blue-600 hover:underline">github.com/watabou/pixel-dungeon</a> and <a href="https://github.com/watabou/PD-classes" class="text-blue-600 hover:underline">github.com/watabou/PD-classes</a></p>
+        </footer>
+    </div>
+
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'neutral',
+            securityLevel: 'loose',
+            flowchart: {
+                useMaxWidth: false,
+                htmlLabels: true
+            }
+        });
+    </script>
+</body>
+</html>

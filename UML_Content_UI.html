@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Dungeon Architecture Diagrams</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.7.0/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .mermaid {
+            margin: 30px 0;
+            overflow: visible !important;
+        }
+        .diagram-container {
+            margin-bottom: 60px;
+            overflow: visible;
+        }
+        h1, h2, h3 {
+            color: #2D3748;
+        }
+        .note {
+            font-size: 0.9rem;
+            color: #4A5568;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="container bg-white shadow-lg rounded-lg">
+        <header class="py-6 border-b border-gray-200">
+            <h1 class="text-3xl font-bold text-center">Pixel Dungeon Architecture Diagrams</h1>
+            <p class="text-center text-gray-600 mt-2">Class Hierarchy and Game Flow Analysis</p>
+        </header>
+
+        <main class="py-8 px-4">
+            <section>
+                <h2 class="text-2xl font-semibold mb-6">Class Diagram</h2>
+                <p class="mb-4">The following diagram illustrates the core class hierarchy of Pixel Dungeon, including game structure, actors, items, and level generation systems.</p>
+                
+                <div class="diagram-container">
+                    <div class="mermaid">
+classDiagram
+    %% 기본 UI 레이아웃 (C1)
+    class PixelScene {
+        +Camera uiCamera
+        +float minZoom
+        +float maxZoom
+        +void create()
+        +void destroy()
+        +void onBackPressed()
+        +void update()
+    }
+    
+    class GameScene {
+        -SkinnedBlock water
+        -DungeonTilemap tiles
+        -FogOfWar fog
+        -HeroSprite hero
+        -Group terrain
+        -Group customTiles
+        -Group mobs
+        -Group heaps
+        -Group effects
+        +void create()
+        +void update()
+        +void onBackPressed()
+        +void cellClicked(int cell)
+    }
+    
+    class Group {
+        +ArrayList~Gizmo~ members
+        +void add(Gizmo g)
+        +void remove(Gizmo g)
+        +void update()
+        +void draw()
+    }
+    
+    class Camera {
+        +float zoom
+        +PointF scroll
+        +void update()
+        +void center(float x, float y)
+    }
+    
+    PixelScene <|-- GameScene
+    GameScene --> Group : contains
+    PixelScene --> Camera : uses
+    
+    %% 플레이어 상태 표시 UI (C2)
+    class StatusPane {
+        -Image avatar
+        -HealthIndicator health
+        -BuffIndicator buffs
+        -Resource gold
+        -Resource energy
+        -Button btnInventory
+        +void layout()
+        +void update()
+    }
+    
+    class HealthIndicator {
+        -float health
+        -float shield
+        +void update()
+        +void level(float value)
+        +void health(float value)
+    }
+    
+    class BuffIndicator {
+        -ArrayList~BuffIcon~ buffIcons
+        +void update()
+        +void addBuff(Buff buff)
+        +void removeBuff(Buff buff)
+    }
+    
+    StatusPane --> HealthIndicator : contains
+    StatusPane --> BuffIndicator : contains
+    
+    %% 인벤토리 UI (C3)
+    class WndBag {
+        +Mode mode
+        +Listener listener
+        +ArrayList~Item~ items
+        +void updateItems()
+        +void onItemClick(Item item)
+        +enum Mode
+    }
+    
+    class InventoryPane {
+        -ArrayList~ItemSlot~ slots
+        +void update()
+        +void layout()
+        +void onItemClick(Item item)
+    }
+    
+    class ItemSlot {
+        -Item item
+        -ItemSprite sprite
+        +void update()
+        +void item(Item item)
+        +void enable(boolean value)
+    }
+    
+    WndBag --> ItemSlot : contains
+    InventoryPane --> ItemSlot : contains
+    
+    %% 전투 피드백 UI (C4)
+    class FloatingText {
+        +void show(float x, float y, String text, int color)
+        +void update()
+    }
+    
+    class CharSprite {
+        +void showStatus(int color, String text)
+        +void showAlert(String text)
+        +void blood(int from)
+        +void die()
+    }
+    
+    class EmoIcon {
+        +Type type
+        +void update()
+        +enum Type
+    }
+    
+    CharSprite --> FloatingText : uses
+    CharSprite --> EmoIcon : contains
+    
+    %% 아이템 정보 UI (C5)
+    class WndInfoItem {
+        -ItemSprite image
+        -RenderedTextBlock titleText
+        -RenderedTextBlock descText
+        +void onBackPressed()
+    }
+    
+    class ItemSprite {
+        -Item item
+        -Glowing glowing
+        +void view(Item item)
+        +void update()
+    }
+    
+    class Tooltip {
+        +String text
+        +void update()
+        +void show(String text, int color)
+    }
+    
+    WndInfoItem --> ItemSprite : contains
+    ItemSprite --> Tooltip : uses
+    
+    %% 맵/미니맵 UI (C6)
+    class Compass {
+        +void update()
+        +void visible(boolean value)
+    }
+    
+    %% 메뉴 및 설정 UI (C7)
+    class WndGame {
+        +void createButtons()
+        +void onBackPressed()
+    }
+    
+    class WndSettings {
+        +void createControls()
+        +void onBackPressed()
+    }
+    
+    class MenuPane {
+        -Button btnMenu
+        -Button btnSettings
+        -Button btnInfo
+        +void layout()
+        +void update()
+    }
+    
+    MenuPane --> WndGame : opens
+    MenuPane --> WndSettings : opens
+    
+    %% 몬스터, 아이템, 장비, 보스 (C8-C11)
+    class Mob {
+        +int EXP
+        +int defenseSkill
+        +boolean hostile
+        +CharSprite sprite
+        +boolean act()
+        +int attackSkill(Char target)
+        +int damageRoll()
+        +void die(Object cause)
+    }
+    
+    class Item {
+        +String name
+        +String desc
+        +int image
+        +int quantity
+        +boolean unique
+        +void execute(Hero hero, String action)
+        +ArrayList~String~ actions(Hero hero)
+        +String info()
+    }
+    
+    class EquipableItem {
+        +boolean isEquipped(Hero hero)
+        +boolean doEquip(Hero hero)
+        +boolean doUnequip(Hero hero)
+    }
+    
+    class MeleeWeapon {
+        +int tier
+        +int min()
+        +int max()
+        +int damageRoll(Char owner)
+        +float accuracyFactor(Char owner)
+        +float speedFactor(Char owner)
+    }
+    
+    class Armor {
+        +int tier
+        +int DRMin()
+        +int DRMax()
+        +int DRRoll()
+        +int defenseProc(Char attacker, Char defender, int damage)
+    }
+    
+    class Boss {
+        +int defenseSkill
+        +int damageRoll()
+        +void damage(int dmg, Object src)
+        +void die(Object cause)
+        +void notice()
+    }
+    
+    Item <|-- EquipableItem
+    EquipableItem <|-- MeleeWeapon
+    EquipableItem <|-- Armor
+    Mob <|-- Boss
+    
+    %% 상점 UI 및 시스템 (C12)
+    class ShopRoom {
+        +void paint(Level level)
+        -void placeShopkeeper(Level level)
+        -void placeItems(Level level)
+    }
+    
+    class Shopkeeper {
+        +void interact(Hero hero)
+        +boolean act()
+    }
+    
+    class WndTradeItem {
+        -ItemSprite itemSprite
+        -int price
+        +void sell()
+        +void buy()
+    }
+    
+    ShopRoom --> Shopkeeper : places
+    Shopkeeper --> WndTradeItem : opens
+    
+    %% 게임 튜토리얼 (C13)
+    class WndStory {
+        +void tell(String text)
+        +void onBackPressed()
+    }
+    
+    class Banner {
+        +BannerSprites type
+        +void show(BannerSprites type)
+        +void update()
+    }
+    
+    class Guidebook {
+        +void execute(Hero hero, String action)
+        +String info()
+    }
+    
+    Item <|-- Guidebook
+
+
+                    </div>
+                </div>
+                
+                <div class="note mt-4 mb-8">
+                    <p>Note: The diagram shows the primary relationships between classes. Some simplifications were made for clarity. The PD-classes repository provides base classes while the pixel-dungeon repository contains the game implementation.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-semibold mb-6">Sequence Diagram</h2>
+                <p class="mb-4">The following sequence diagram illustrates the main game flow, including initialization, level generation, turn processing, and combat.</p>
+                
+                <div class="diagram-container">
+                    <div class="mermaid">
+sequenceDiagram
+    participant GameScene
+    participant StatusPane
+    participant InventoryPane
+    participant WndBag
+    participant ItemSlot
+    participant WndInfoItem
+    participant CharSprite
+    participant FloatingText
+    participant Shopkeeper
+    participant WndTradeItem
+    participant WndStory
+    
+    %% UI 초기화 및 레이아웃 프로세스 (C1, C2)
+    GameScene->>GameScene: create()
+    GameScene->>StatusPane: new StatusPane()
+    StatusPane->>StatusPane: layout()
+    StatusPane->>HealthIndicator: new HealthIndicator()
+    StatusPane->>BuffIndicator: new BuffIndicator()
+    GameScene->>InventoryPane: new InventoryPane()
+    InventoryPane->>InventoryPane: layout()
+    loop 각 아이템 슬롯에 대해
+        InventoryPane->>ItemSlot: new ItemSlot()
+        ItemSlot->>ItemSlot: item(item)
+    end
+    
+    %% 인벤토리 관리 프로세스 (C3)
+    GameScene->>InventoryPane: onClick()
+    InventoryPane->>WndBag: new WndBag(Mode.ALL)
+    WndBag->>WndBag: updateItems()
+    loop 각 아이템에 대해
+        WndBag->>ItemSlot: new ItemSlot(item)
+    end
+    WndBag->>WndBag: onItemClick(item)
+    WndBag->>WndInfoItem: new WndInfoItem(item)
+    WndInfoItem->>WndInfoItem: layout()
+    
+    %% 아이템 사용 및 장착 프로세스 (C5, C8-C11)
+    WndBag->>Item: execute(hero, action)
+    alt 장비 아이템인 경우
+        Item->>EquipableItem: doEquip(hero)
+        EquipableItem->>Hero: belongings.equip(this)
+        Hero->>StatusPane: update()
+    else 소모품인 경우
+        Item->>Item: detach(hero.belongings.backpack)
+        Item->>Item: onUse()
+    end
+    
+    %% 상점 상호작용 프로세스 (C12)
+    Hero->>Shopkeeper: interact()
+    Shopkeeper->>WndTradeItem: new WndTradeItem(item, price)
+    WndTradeItem->>WndTradeItem: layout()
+    alt 구매하는 경우
+        WndTradeItem->>WndTradeItem: buy()
+        WndTradeItem->>Hero: belongings.backpack.add(item)
+        WndTradeItem->>Gold: spend(price)
+    else 판매하는 경우
+        WndTradeItem->>WndTradeItem: sell()
+        WndTradeItem->>Hero: belongings.backpack.remove(item)
+        WndTradeItem->>Gold: collect(price)
+    end
+    
+    %% 전투 피드백 표시 프로세스 (C4)
+    Hero->>Mob: attack(mob)
+    Mob->>Mob: damage(dmg, hero)
+    Mob->>CharSprite: showStatus(color, damage)
+    CharSprite->>FloatingText: show(x, y, text, color)
+    alt 몹이 사망한 경우
+        Mob->>CharSprite: die()
+        CharSprite->>CharSprite: play(deathAnim)
+    end
+    
+    %% 튜토리얼 표시 프로세스 (C13)
+    GameScene->>WndStory: new WndStory(text)
+    WndStory->>WndStory: tell(text)
+    alt 튜토리얼 아이템 사용
+        Hero->>Guidebook: execute(hero, action)
+        Guidebook->>WndStory: new WndStory(chapter)
+    end
+
+
+                    </div>
+                </div>
+                
+                <div class="note mt-4">
+                    <p>Note: This sequence diagram illustrates the main game flow, focusing on initialization, level generation, and turn-based gameplay. The actual implementation may have additional complexity. The turn system in Pixel Dungeon is based on time units spent by each Actor.</p>
+                </div>
+            </section>
+            
+            <section class="mt-10">
+                <h2 class="text-2xl font-semibold mb-4">Key Game Components</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 p-4 rounded">
+                        <h3 class="text-xl font-medium mb-2">Actor System</h3>
+                        <p>The Actor system is the foundation of all entities that can take actions in the game. Actors are scheduled to act based on time spent. The main classes in this hierarchy are:</p>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li><strong>Actor</strong>: Base class with timing system</li>
+                            <li><strong>Char</strong>: Living entities with health and position</li>
+                            <li><strong>Mob</strong>: Enemies with AI states</li>
+                            <li><strong>Hero</strong>: Player-controlled character</li>
+                            <li><strong>Buff</strong>: Temporary effects on characters</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-4 rounded">
+                        <h3 class="text-xl font-medium mb-2">Item System</h3>
+                        <p>The Item system handles all collectible objects in the game. Items can be used, equipped, or thrown. Major categories include:</p>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li><strong>Weapon</strong>: Melee weapons, missile weapons</li>
+                            <li><strong>Armor</strong>: Protective equipment with glyphs</li>
+                            <li><strong>Wand</strong>: Magical devices with charges</li>
+                            <li><strong>Potion</strong>: Consumable effects</li>
+                            <li><strong>Scroll</strong>: Single-use magical items</li>
+                            <li><strong>Ring</strong>: Passive effect items</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-4 rounded">
+                        <h3 class="text-xl font-medium mb-2">Level Generation</h3>
+                        <p>Levels are procedurally generated using a room-based approach:</p>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li><strong>Level</strong>: Base class with map data</li>
+                            <li><strong>RegularLevel</strong>: Standard level with rooms</li>
+                            <li><strong>Room</strong>: Rectangular areas with various types</li>
+                            <li><strong>Painter</strong>: Renders room contents to the map</li>
+                        </ul>
+                        <p class="mt-2">The generation process: initialize rooms → place doors → add items → add monsters → place traps.</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-4 rounded">
+                        <h3 class="text-xl font-medium mb-2">Rendering System</h3>
+                        <p>The visual representation is handled by scene classes:</p>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li><strong>Scene</strong>: Base visual container</li>
+                            <li><strong>PixelScene</strong>: Pixel-art specific rendering</li>
+                            <li><strong>GameScene</strong>: Main gameplay screen</li>
+                            <li><strong>DungeonTilemap</strong>: Renders level tiles</li>
+                            <li><strong>CharSprite</strong>: Visual representation of characters</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="py-6 border-t border-gray-200 text-center text-gray-600">
+            <p>Based on Pixel Dungeon source code - <a href="https://github.com/watabou/pixel-dungeon" class="text-blue-600 hover:underline">github.com/watabou/pixel-dungeon</a> and <a href="https://github.com/watabou/PD-classes" class="text-blue-600 hover:underline">github.com/watabou/PD-classes</a></p>
+        </footer>
+    </div>
+
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'neutral',
+            securityLevel: 'loose',
+            flowchart: {
+                useMaxWidth: false,
+                htmlLabels: true
+            }
+        });
+    </script>
+</body>
+</html>
