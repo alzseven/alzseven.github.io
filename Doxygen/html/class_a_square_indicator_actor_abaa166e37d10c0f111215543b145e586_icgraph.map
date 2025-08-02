@@ -1,0 +1,8 @@
+<map id="ASquareIndicatorActor::Multicast_SpawnIndicator" name="ASquareIndicatorActor::Multicast_SpawnIndicator">
+<area shape="rect" id="Node000001" title=" " alt="" coords="421,29,600,72"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="545,16,532,10,511,8,491,10,478,15,473,21,475,28,470,29,468,19,475,10,489,5,511,3,534,5,547,11"/>
+<area shape="rect" id="Node000002" href="$class_a_square_indicator_actor.html#a2f5271475cd69b91c4b29e06fa7e5cd2" title=" " alt="" coords="221,29,373,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="405,53,374,53,374,48,405,48"/>
+<area shape="rect" id="Node000003" href="$class_u_base_laser_attack_ability.html#a674fe5df0cdc156691878ce8e00f15f2" title=" " alt="" coords="5,29,173,72"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="205,53,173,53,173,48,205,48"/>
+</map>

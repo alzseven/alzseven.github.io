@@ -1,0 +1,5 @@
+<map id="UPlayerRewardStateComponent" name="UPlayerRewardStateComponent">
+<area shape="rect" id="Node000001" title="플레이어에게 제시된 보상 선택지에 대한 데이터를 저장하고 복제하는 컴포넌트입니다." alt="" coords="5,123,254,805"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="70,5,189,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,89,132,123,127,123,127,89"/>
+</map>

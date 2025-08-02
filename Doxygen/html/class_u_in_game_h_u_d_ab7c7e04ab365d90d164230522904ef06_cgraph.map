@@ -1,0 +1,9 @@
+<map id="UInGameHUD::InGamePhaseManagerReadyHandle" name="UInGameHUD::InGamePhaseManagerReadyHandle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,254,81"/>
+<area shape="rect" id="Node000002" href="$class_u_state_manager_component.html#aa02160df8ceffa37f487dfbdfc8cb2fd" title=" " alt="" coords="325,5,504,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="254,43,309,36,310,42,254,48"/>
+<area shape="rect" id="Node000004" href="$class_u_in_game_h_u_d.html#a202062936a0a60c05aac96f89709a2cf" title=" " alt="" coords="302,72,528,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="254,72,287,76,286,81,254,77"/>
+<area shape="rect" id="Node000003" href="$class_u_state_manager_component.html#ac4e405056aaabb201b59d2885dcc22be" title=" " alt="" coords="576,5,755,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="505,24,560,24,560,29,505,29"/>
+</map>

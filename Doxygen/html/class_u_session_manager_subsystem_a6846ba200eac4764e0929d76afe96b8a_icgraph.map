@@ -1,0 +1,8 @@
+<map id="USessionManagerSubsystem::DestroySession" name="USessionManagerSubsystem::DestroySession">
+<area shape="rect" id="Node000001" title=" " alt="" coords="250,51,444,93"/>
+<area shape="rect" id="Node000002" href="$class_u_k_p_t_game_instance.html#a247b843612f63e0a1d617dfb6e93aa9a" title=" " alt="" coords="5,5,202,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="234,54,202,48,203,42,235,48"/>
+<area shape="rect" id="Node000003" href="$class_u_session_manager_subsystem.html#a1fd21ef6dd10342bfccc3db126ed5c4b" title=" " alt="" coords="6,96,201,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="235,96,202,102,201,97,234,90"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="143,83,128,77,103,75,80,77,66,81,61,87,63,95,57,96,56,86,63,77,79,71,104,69,129,72,145,78"/>
+</map>

@@ -1,0 +1,17 @@
+<map id="AItemGrave" name="AItemGrave">
+<area shape="rect" id="Node000001" title=" " alt="" coords="118,2188,334,2417"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="179,1315,230,1384"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,1399,226,2188,220,2188,203,1400"/>
+<area shape="rect" id="Node000003" href="$class_a_player_character.html" title=" " alt="" coords="253,584,483,2116"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="256,2116,248,2172,243,2171,251,2115"/>
+<area shape="rect" id="Node000004" href="$class_a_character_base.html" title=" " alt="" coords="5,124,259,535"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="233,548,244,583,256,625,251,626,239,585,228,550"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="26,5,103,75"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="78,88,87,124,81,125,73,90"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="127,5,274,75"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="192,90,183,125,178,124,186,88"/>
+<area shape="rect" id="Node000007" href="$class_i_combat_interface.html" title=" " alt="" coords="283,249,453,409"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="371,424,371,584,366,584,366,424"/>
+<area shape="rect" id="Node000008" href="$class_i_k_p_t_pausable_interface.html" title=" " alt="" coords="477,295,622,364"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="544,379,486,704,481,703,538,378"/>
+</map>

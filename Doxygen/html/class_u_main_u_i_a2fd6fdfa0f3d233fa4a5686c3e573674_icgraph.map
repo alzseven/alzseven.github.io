@@ -1,0 +1,7 @@
+<map id="UMainUI::OnClickedGameStart" name="UMainUI::OnClickedGameStart">
+<area shape="rect" id="Node000001" title=" " alt="" coords="230,31,435,57"/>
+<area shape="rect" id="Node000002" href="$class_u_main_u_i.html#a64fc3061e4828b4d481930c7205a2a48" title=" " alt="" coords="5,5,182,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,34,182,31,183,25,214,29"/>
+<area shape="rect" id="Node000003" href="$class_u_main_u_i.html#a2683c924b81eaceaaaa22fab1a07802f" title=" " alt="" coords="9,56,178,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="214,59,179,63,178,58,214,54"/>
+</map>

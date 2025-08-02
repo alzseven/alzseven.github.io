@@ -1,0 +1,5 @@
+<map id="FTeamLevelUpData" name="FTeamLevelUpData">
+<area shape="rect" id="Node000001" title="팀 레벨별 성장 데이터를 정의하는 구조체입니다." alt="" coords="5,123,212,213"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="56,5,162,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,89,112,123,106,123,106,89"/>
+</map>

@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Skill/Ability/AreaAttack/AreaHazard.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_area_hazard_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AreaHazard.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_area_hazard_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;GameplayTagContainer.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;GameFramework/Actor.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;AreaHazard.generated.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">class </span>UGameplayEffect;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">class </span>UAbilitySystemComponent;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">class </span>USphereComponent;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">class </span>UDecalComponent;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">class </span>UNiagaraComponent;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_a_area_hazard.html">   16</a></span>UCLASS()</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>class KPT_API <a class="code hl_function" href="class_a_area_hazard.html#a322ca794eb00ee4b758d37b8bbf0a9a8">AAreaHazard</a> : public AActor</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">public</span>: </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">// Sets default values for this actor&#39;s properties</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_function" href="class_a_area_hazard.html#a322ca794eb00ee4b758d37b8bbf0a9a8">AAreaHazard</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_area_hazard.html#a3fe2b43958bdf21fe8a49cd24eb26337">GetLifetimeReplicatedProps</a>(TArray&lt;class FLifetimeProperty&gt;&amp; OutLifetimeProps) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">// Called when the game starts or when spawned</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_area_hazard.html#a094d9ed4bcce32d6750c651ac8bacf15">BeginPlay</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">public</span>: </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Area Hazard&quot;</span>)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_area_hazard.html#affe525f8354dd2bb5192cc33a27c1347">SetHazardParams</a>(</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">float</span> InRadius,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">float</span> InActivationDelay,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <span class="keywordtype">float</span> InDuration,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        TSubclassOf&lt;UGameplayEffect&gt; InDamageEffect,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">float</span> InDamage,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        FGameplayTag InDamageTag,</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        UAbilitySystemComponent* InSourceASC,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        FGameplayTag InVFXTag</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    );</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">// Components</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Components&quot;</span>)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_a_area_hazard.html#a6575436e7c2410730f7865177a4fe1e9">   47</a></span>    TObjectPtr&lt;USphereComponent&gt; <a class="code hl_variable" href="class_a_area_hazard.html#a6575436e7c2410730f7865177a4fe1e9">CollisionSphere</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">// Settings</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    UPROPERTY(ReplicatedUsing=<a class="code hl_function" href="class_a_area_hazard.html#aa01440fd7ab6a81e146db9d8ce8d76a4">OnRep_Radius</a>, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Area Hazard&quot;</span>)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_a_area_hazard.html#abf1ca3ac01306216681154fbdfb1553c">   51</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_a_area_hazard.html#abf1ca3ac01306216681154fbdfb1553c">Radius</a> = 200.0f;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    UPROPERTY(BlueprintReadOnly, Category = <span class="stringliteral">&quot;Area Hazard&quot;</span>)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_a_area_hazard.html#a5b9a98a54428c9072289971bc46edb70">   54</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_a_area_hazard.html#a5b9a98a54428c9072289971bc46edb70">ActivationDelay</a> = 2.0f;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    UPROPERTY(BlueprintReadOnly, Category = <span class="stringliteral">&quot;Area Hazard&quot;</span>)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_a_area_hazard.html#a2781349d5d5ffb265f7ef94d40a88fe9">   57</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_a_area_hazard.html#a2781349d5d5ffb265f7ef94d40a88fe9">Duration</a> = 1.0f;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    UPROPERTY(BlueprintReadOnly, Category = <span class="stringliteral">&quot;Area Hazard&quot;</span>)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_a_area_hazard.html#a3a3506449748ca25a99c991cf25380aa">   60</a></span>    TSubclassOf&lt;UGameplayEffect&gt; <a class="code hl_variable" href="class_a_area_hazard.html#a3a3506449748ca25a99c991cf25380aa">DamageEffectClass</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    UPROPERTY(BlueprintReadOnly, Category = <span class="stringliteral">&quot;Area Hazard&quot;</span>)</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_a_area_hazard.html#ad1dca32f8c150bf303e462b57fa29fc2">   63</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_a_area_hazard.html#ad1dca32f8c150bf303e462b57fa29fc2">Damage</a> = 50.0f;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    UPROPERTY(BlueprintReadOnly, Category = <span class="stringliteral">&quot;Area Hazard&quot;</span>)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_a_area_hazard.html#abdbebc1005656d60859d383650de91bb">   66</a></span>    FGameplayTag <a class="code hl_variable" href="class_a_area_hazard.html#abdbebc1005656d60859d383650de91bb">DamageTag</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    UPROPERTY()</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_a_area_hazard.html#a63d4af55872d41e776bd9df576d451c3">   69</a></span>    TObjectPtr&lt;UAbilitySystemComponent&gt; <a class="code hl_variable" href="class_a_area_hazard.html#a63d4af55872d41e776bd9df576d451c3">SourceASC</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    UPROPERTY()</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_a_area_hazard.html#ae815de528b30fee5106e3be2cd18fa33">   72</a></span>    FGameplayTag <a class="code hl_variable" href="class_a_area_hazard.html#ae815de528b30fee5106e3be2cd18fa33">VFXTag</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">// State</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    UPROPERTY(Replicated, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Area Hazard&quot;</span>)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_a_area_hazard.html#a6e520c93717bfb562aadb8a8300544e9">   76</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_a_area_hazard.html#a6e520c93717bfb562aadb8a8300544e9">bIsActive</a> = false;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_a_area_hazard.html#a146fdbe2d4c3e1c85130bd6fef022fb7">   78</a></span>    FTimerHandle <a class="code hl_variable" href="class_a_area_hazard.html#a146fdbe2d4c3e1c85130bd6fef022fb7">ActivationTimerHandle</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_a_area_hazard.html#ad8fdcbb3aa2c44c34e8b2e56e6807775">   79</a></span>    FTimerHandle <a class="code hl_variable" href="class_a_area_hazard.html#ad8fdcbb3aa2c44c34e8b2e56e6807775">DeactivationTimerHandle</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>protected:</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Area Hazard&quot;</span>)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_area_hazard.html#af9d0f183dfa48a1becd97c99172e33d6">ActivateHazard</a>();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Area Hazard&quot;</span>)</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_area_hazard.html#ac7a14789fa51e1fceafe0370956dd6c3">DeactivateHazard</a>();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">// Collision</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    UFUNCTION()</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_area_hazard.html#af8d0dba4ea83c0c16335dbad95946bf1">OnBeginOverlap</a>(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, <span class="keywordtype">bool</span> bFromSweep,</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        const FHitResult&amp; SweepResult);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_area_hazard.html#a08671a76a20608d282e8f4158ebea873">ApplyEffectToTarget</a>(AActor* TargetActor);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="comment">// Visual</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    UFUNCTION(BlueprintImplementableEvent, Category = <span class="stringliteral">&quot;Area Hazard&quot;</span>, meta = (DisplayName = <span class="stringliteral">&quot;On Spawn Indicator&quot;</span>))</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="class_a_area_hazard.html#a67b7fe83f37d82e42f3c6db827fe5e62">   98</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_area_hazard.html#a67b7fe83f37d82e42f3c6db827fe5e62">BP_OnSpawnIndicator</a>(FVector Location, <span class="keywordtype">float</span> IndicatorRadius, <span class="keywordtype">float</span> IndicatorDuration);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    UFUNCTION(NetMulticast, Unreliable, BlueprintCallable, Category = <span class="stringliteral">&quot;Area Hazard&quot;</span>)</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="class_a_area_hazard.html#aaf560204f7d11996f3e6b0c67dec2d5f">  101</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_area_hazard.html#aaf560204f7d11996f3e6b0c67dec2d5f">Multicast_SpawnIndicator</a>(FVector Location, <span class="keywordtype">float</span> IndicatorRadius, <span class="keywordtype">float</span> IndicatorDuration);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    UFUNCTION()</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_area_hazard.html#aa01440fd7ab6a81e146db9d8ce8d76a4">OnRep_Radius</a>();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>};</div>
+</div>
+<div class="ttc" id="aclass_a_area_hazard_html_a08671a76a20608d282e8f4158ebea873"><div class="ttname"><a href="class_a_area_hazard.html#a08671a76a20608d282e8f4158ebea873">AAreaHazard::ApplyEffectToTarget</a></div><div class="ttdeci">void ApplyEffectToTarget(AActor *TargetActor)</div><div class="ttdef"><b>Definition</b> <a href="_area_hazard_8cpp_source.html#l00130">AreaHazard.cpp:130</a></div></div>
+<div class="ttc" id="aclass_a_area_hazard_html_a094d9ed4bcce32d6750c651ac8bacf15"><div class="ttname"><a href="class_a_area_hazard.html#a094d9ed4bcce32d6750c651ac8bacf15">AAreaHazard::BeginPlay</a></div><div class="ttdeci">virtual void BeginPlay() override</div><div class="ttdef"><b>Definition</b> <a href="_area_hazard_8cpp_source.html#l00039">AreaHazard.cpp:39</a></div></div>
+<div class="ttc" id="aclass_a_area_hazard_html_a146fdbe2d4c3e1c85130bd6fef022fb7"><div class="ttname"><a href="class_a_area_hazard.html#a146fdbe2d4c3e1c85130bd6fef022fb7">AAreaHazard::ActivationTimerHandle</a></div><div class="ttdeci">FTimerHandle ActivationTimerHandle</div><div class="ttdef"><b>Definition</b> <a href="#l00078">AreaHazard.h:78</a></div></div>
+<div class="ttc" id="aclass_a_area_hazard_html_a2781349d5d5ffb265f7ef94d40a88fe9"><div class="ttname"><a href="class_a_area_hazard.html#a2781349d5d5ffb265f7ef94d40a88fe9">AAreaHazard::Duration</a></div><div class="ttdeci">float Duration</div><div class="ttdef"><b>Definition</b> <a href="#l00057">AreaHazard.h:57</a></div></div>
+<div class="ttc" id="aclass_a_area_hazard_html_a322ca794eb00ee4b758d37b8bbf0a9a8"><div class="ttname"><a href="class_a_area_hazard.html#a322ca794eb00ee4b758d37b8bbf0a9a8">AAreaHazard::AAreaHazard</a></div><div class="ttdeci">AAreaHazard()</div><div class="ttdef"><b>Definition</b> <a href="_area_hazard_8cpp_source.html#l00016">AreaHazard.cpp:16</a></div></div>
+<div class="ttc" id="aclass_a_area_hazard_html_a3a3506449748ca25a99c991cf25380aa"><div class="ttname"><a href="class_a_area_hazard.html#a3a3506449748ca25a99c991cf25380aa">AAreaHazard::DamageEffectClass</a></div><div class="ttdeci">TSubclassOf&lt; UGameplayEffect &gt; DamageEffectClass</div><div class="ttdef"><b>Definition</b> <a href="#l00060">AreaHazard.h:60</a></div></div>
+<div class="ttc" id="aclass_a_area_hazard_html_a3fe2b43958bdf21fe8a49cd24eb26337"><div class="ttname"><a href="class_a_area_hazard.html#a3fe2b43958bdf21fe8a49cd24eb26337">AAreaHazard::GetLifetimeReplicatedProps</a></div><div class="ttdeci">virtual void GetLifetimeReplicatedProps(TArray&lt; class FLifetimeProperty &gt; &amp;OutLifetimeProps) const override</div><div class="ttdef"><b>Definition</b> <a href="_area_hazard_8cpp_source.html#l00031">AreaHazard.cpp:31</a></div></div>
+<div class="ttc" id="aclass_a_area_hazard_html_a5b9a98a54428c9072289971bc46edb70"><div class="ttname"><a href="class_a_area_hazard.html#a5b9a98a54428c9072289971bc46edb70">AAreaHazard::ActivationDelay</a></div><div class="ttdeci">float ActivationDelay</div><div class="ttdef"><b>Definition</b> <a href="#l00054">AreaHazard.h:54</a></div></div>
+<div class="ttc" id="aclass_a_area_hazard_html_a63d4af55872d41e776bd9df576d451c3"><div class="ttname"><a href="class_a_area_hazard.html#a63d4af55872d41e776bd9df576d451c3">AAreaHazard::SourceASC</a></div><div class="ttdeci">TObjectPtr&lt; UAbilitySystemComponent &gt; SourceASC</div><div class="ttdef"><b>Definition</b> <a href="#l00069">AreaHazard.h:69</a></div></div>
+<div class="ttc" id="aclass_a_area_hazard_html_a6575436e7c2410730f7865177a4fe1e9"><div class="ttname"><a href="class_a_area_hazard.html#a6575436e7c2410730f7865177a4fe1e9">AAreaHazard::CollisionSphere</a></div><div class="ttdeci">TObjectPtr&lt; USphereComponent &gt; CollisionSphere</div><div class="ttdef"><b>Definition</b> <a href="#l00047">AreaHazard.h:47</a></div></div>
+<div class="ttc" id="aclass_a_area_hazard_html_a67b7fe83f37d82e42f3c6db827fe5e62"><div class="ttname"><a href="class_a_area_hazard.html#a67b7fe83f37d82e42f3c6db827fe5e62">AAreaHazard::BP_OnSpawnIndicator</a></div><div class="ttdeci">void BP_OnSpawnIndicator(FVector Location, float IndicatorRadius, float IndicatorDuration)</div></div>
+<div class="ttc" id="aclass_a_area_hazard_html_a6e520c93717bfb562aadb8a8300544e9"><div class="ttname"><a href="class_a_area_hazard.html#a6e520c93717bfb562aadb8a8300544e9">AAreaHazard::bIsActive</a></div><div class="ttdeci">bool bIsActive</div><div class="ttdef"><b>Definition</b> <a href="#l00076">AreaHazard.h:76</a></div></div>
+<div class="ttc" id="aclass_a_area_hazard_html_aa01440fd7ab6a81e146db9d8ce8d76a4"><div class="ttname"><a href="class_a_area_hazard.html#aa01440fd7ab6a81e146db9d8ce8d76a4">AAreaHazard::OnRep_Radius</a></div><div class="ttdeci">void OnRep_Radius()</div><div class="ttdef"><b>Definition</b> <a href="_area_hazard_8cpp_source.html#l00148">AreaHazard.cpp:148</a></div></div>
+<div class="ttc" id="aclass_a_area_hazard_html_aaf560204f7d11996f3e6b0c67dec2d5f"><div class="ttname"><a href="class_a_area_hazard.html#aaf560204f7d11996f3e6b0c67dec2d5f">AAreaHazard::Multicast_SpawnIndicator</a></div><div class="ttdeci">void Multicast_SpawnIndicator(FVector Location, float IndicatorRadius, float IndicatorDuration)</div></div>
+<div class="ttc" id="aclass_a_area_hazard_html_abdbebc1005656d60859d383650de91bb"><div class="ttname"><a href="class_a_area_hazard.html#abdbebc1005656d60859d383650de91bb">AAreaHazard::DamageTag</a></div><div class="ttdeci">FGameplayTag DamageTag</div><div class="ttdef"><b>Definition</b> <a href="#l00066">AreaHazard.h:66</a></div></div>
+<div class="ttc" id="aclass_a_area_hazard_html_abf1ca3ac01306216681154fbdfb1553c"><div class="ttname"><a href="class_a_area_hazard.html#abf1ca3ac01306216681154fbdfb1553c">AAreaHazard::Radius</a></div><div class="ttdeci">float Radius</div><div class="ttdef"><b>Definition</b> <a href="#l00051">AreaHazard.h:51</a></div></div>
+<div class="ttc" id="aclass_a_area_hazard_html_ac7a14789fa51e1fceafe0370956dd6c3"><div class="ttname"><a href="class_a_area_hazard.html#ac7a14789fa51e1fceafe0370956dd6c3">AAreaHazard::DeactivateHazard</a></div><div class="ttdeci">void DeactivateHazard()</div><div class="ttdef"><b>Definition</b> <a href="_area_hazard_8cpp_source.html#l00111">AreaHazard.cpp:111</a></div></div>
+<div class="ttc" id="aclass_a_area_hazard_html_ad1dca32f8c150bf303e462b57fa29fc2"><div class="ttname"><a href="class_a_area_hazard.html#ad1dca32f8c150bf303e462b57fa29fc2">AAreaHazard::Damage</a></div><div class="ttdeci">float Damage</div><div class="ttdef"><b>Definition</b> <a href="#l00063">AreaHazard.h:63</a></div></div>
+<div class="ttc" id="aclass_a_area_hazard_html_ad8fdcbb3aa2c44c34e8b2e56e6807775"><div class="ttname"><a href="class_a_area_hazard.html#ad8fdcbb3aa2c44c34e8b2e56e6807775">AAreaHazard::DeactivationTimerHandle</a></div><div class="ttdeci">FTimerHandle DeactivationTimerHandle</div><div class="ttdef"><b>Definition</b> <a href="#l00079">AreaHazard.h:79</a></div></div>
+<div class="ttc" id="aclass_a_area_hazard_html_ae815de528b30fee5106e3be2cd18fa33"><div class="ttname"><a href="class_a_area_hazard.html#ae815de528b30fee5106e3be2cd18fa33">AAreaHazard::VFXTag</a></div><div class="ttdeci">FGameplayTag VFXTag</div><div class="ttdef"><b>Definition</b> <a href="#l00072">AreaHazard.h:72</a></div></div>
+<div class="ttc" id="aclass_a_area_hazard_html_af8d0dba4ea83c0c16335dbad95946bf1"><div class="ttname"><a href="class_a_area_hazard.html#af8d0dba4ea83c0c16335dbad95946bf1">AAreaHazard::OnBeginOverlap</a></div><div class="ttdeci">void OnBeginOverlap(UPrimitiveComponent *OverlappedComponent, AActor *OtherActor, UPrimitiveComponent *OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult &amp;SweepResult)</div><div class="ttdef"><b>Definition</b> <a href="_area_hazard_8cpp_source.html#l00121">AreaHazard.cpp:121</a></div></div>
+<div class="ttc" id="aclass_a_area_hazard_html_af9d0f183dfa48a1becd97c99172e33d6"><div class="ttname"><a href="class_a_area_hazard.html#af9d0f183dfa48a1becd97c99172e33d6">AAreaHazard::ActivateHazard</a></div><div class="ttdeci">void ActivateHazard()</div><div class="ttdef"><b>Definition</b> <a href="_area_hazard_8cpp_source.html#l00078">AreaHazard.cpp:78</a></div></div>
+<div class="ttc" id="aclass_a_area_hazard_html_affe525f8354dd2bb5192cc33a27c1347"><div class="ttname"><a href="class_a_area_hazard.html#affe525f8354dd2bb5192cc33a27c1347">AAreaHazard::SetHazardParams</a></div><div class="ttdeci">void SetHazardParams(float InRadius, float InActivationDelay, float InDuration, TSubclassOf&lt; UGameplayEffect &gt; InDamageEffect, float InDamage, FGameplayTag InDamageTag, UAbilitySystemComponent *InSourceASC, FGameplayTag InVFXTag)</div><div class="ttdef"><b>Definition</b> <a href="_area_hazard_8cpp_source.html#l00048">AreaHazard.cpp:48</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_835db7cc60e52a26a89059f64164cf8e.html">Skill</a></li><li class="navelem"><a href="dir_450d4bb011d81f3d6e7dc615ecdadbdc.html">Ability</a></li><li class="navelem"><a href="dir_328d3478062242c53559dbf6d8db2aed.html">AreaAttack</a></li><li class="navelem"><a href="_area_hazard_8h.html">AreaHazard.h</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<map id="UPlayerShopInteractorComponent::Server_RequestPurchaseItem" name="UPlayerShopInteractorComponent::Server_RequestPurchaseItem">
+<area shape="rect" id="Node000001" title=" " alt="" coords="274,29,494,72"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="428,17,412,10,384,8,358,10,343,15,336,21,339,28,333,29,331,19,340,10,357,5,384,3,413,5,430,12"/>
+<area shape="rect" id="Node000002" href="$class_u_player_shop_interactor_component.html#a51d898b3e247579590c7bedb6c02b7d2" title=" " alt="" coords="5,29,226,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="258,53,226,53,226,48,258,48"/>
+</map>

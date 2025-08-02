@@ -1,0 +1,6 @@
+<map id="APlayerCharacter::Multicast_OnDeath" name="APlayerCharacter::Multicast_OnDeath">
+<area shape="rect" id="Node000001" title=" " alt="" coords="206,29,391,72"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="333,16,320,10,298,8,278,10,265,15,261,21,262,28,257,29,255,19,262,10,277,5,298,3,322,5,336,11"/>
+<area shape="rect" id="Node000002" href="$class_a_player_character.html#aa38c751d8495a3e3d999eafad23d7a88" title=" " alt="" coords="5,37,158,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,53,158,53,158,48,191,48"/>
+</map>

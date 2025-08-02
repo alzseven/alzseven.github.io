@@ -1,0 +1,5 @@
+<map id="AKPTCharacter::Move" name="AKPTCharacter::Move">
+<area shape="rect" id="Node000001" title="Called for movement input" alt="" coords="246,13,399,40"/>
+<area shape="rect" id="Node000002" href="$class_a_k_p_t_character.html#a35a5acc0ea4788531a25a02014807bc6" title=" " alt="" coords="5,5,198,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,29,198,29,198,24,230,24"/>
+</map>

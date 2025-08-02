@@ -1,0 +1,16 @@
+<map id="C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Core/KPTInGameState.h" name="C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Core/KPTInGameState.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="145,5,324,80"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="40,219,146,245"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,56,109,66,73,81,41,102,15,129,8,149,15,169,32,191,53,208,50,212,28,195,10,172,3,149,11,127,37,98,71,76,107,61,144,51"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="25,136,227,163"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="198,82,152,127,148,123,195,78"/>
+<area shape="rect" id="Node000004" href="$_component_owner_interface_8h.html" title=" " alt="" coords="252,128,433,171"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="274,78,312,115,309,119,270,82"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="457,136,654,163"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="325,71,503,128,501,133,323,76"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="279,174,148,216,146,211,277,169"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="221,219,357,245"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="331,173,308,207,303,204,326,170"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="380,219,630,245"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="385,169,467,209,465,214,383,174"/>
+</map>

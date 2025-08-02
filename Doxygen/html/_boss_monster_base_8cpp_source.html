@@ -1,0 +1,468 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/AI/Boss/BossMonsterBase.cpp 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_boss_monster_base_8cpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">BossMonsterBase.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_boss_monster_base_8cpp.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_boss_monster_base_8h.html">BossMonsterBase.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_k_p_t_ability_system_component_8h.html">GAS/KPTAbilitySystemComponent.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_u_i_manager_subsystem_8h.html">Manager/UIManagerSubsystem.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;GameFramework/CharacterMovementComponent.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;Components/CapsuleComponent.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;AIController.h&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;BrainComponent.h&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_k_p_t_in_game_mode_8h.html">Core/KPTInGameMode.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_pool_sub_system_8h.html">Core/SubSystem/PoolSubSystem.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_k_p_t_base_attribute_set_8h.html">GAS/KPTBaseAttributeSet.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="_gold_8h.html">Item/Gold.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// Sets default values</span></div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_a_boss_monster_base.html#a849362cc21ec3a9b5ed39dac0bcc0515">   18</a></span><a class="code hl_function" href="class_a_boss_monster_base.html#a849362cc21ec3a9b5ed39dac0bcc0515">ABossMonsterBase::ABossMonsterBase</a>()</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="comment">// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don&#39;t need it.</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    PrimaryActorTick.bCanEverTick = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    bReplicates = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    SetReplicateMovement(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    GetCharacterMovement()-&gt;MaxWalkSpeed = 180.f;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    GetCharacterMovement()-&gt;bOrientRotationToMovement = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    GetCharacterMovement()-&gt;RotationRate = FRotator(0.0f, 360.0f, 0.0f);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    GetCapsuleComponent()-&gt;InitCapsuleSize(88.f, 200.f);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_variable" href="class_a_boss_monster_base.html#a30d946f182a7461fd90fe06814690106">AbilitySystemComponent</a> = CreateDefaultSubobject&lt;UKPTAbilitySystemComponent&gt;(TEXT(<span class="stringliteral">&quot;AbilitySystemComponent&quot;</span>));</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_variable" href="class_a_boss_monster_base.html#a462b7abc436a592b83d4a344c8a4302d">BossAttributeSet</a> = CreateDefaultSubobject&lt;UKPTBaseAttributeSet&gt;(TEXT(<span class="stringliteral">&quot;AttributeSet&quot;</span>));</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
+</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_a_boss_monster_base.html#ae6cc0f32efad1b404f02d91b68728c1e">   38</a></span>UAbilitySystemComponent* <a class="code hl_function" href="class_a_boss_monster_base.html#ae6cc0f32efad1b404f02d91b68728c1e">ABossMonsterBase::GetAbilitySystemComponent</a>()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_boss_monster_base.html#a30d946f182a7461fd90fe06814690106">AbilitySystemComponent</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_a_boss_monster_base.html#a3a77a8ea16e8085f13e426f1eab5c5c7">   43</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_boss_monster_base.html#a3a77a8ea16e8085f13e426f1eab5c5c7">ABossMonsterBase::Die</a>(<span class="keywordtype">bool</span> bStageEnded)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">if</span> (!HasAuthority() || <a class="code hl_variable" href="class_a_boss_monster_base.html#ae323c1c6a47d8e0daae8e40da8dae1da">bIsDead</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">float</span> CurrentHealth = <a class="code hl_variable" href="class_a_boss_monster_base.html#a462b7abc436a592b83d4a344c8a4302d">BossAttributeSet</a>-&gt;GetHealth();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">if</span> (CurrentHealth &lt;= 0.f)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_variable" href="class_a_boss_monster_base.html#ae323c1c6a47d8e0daae8e40da8dae1da">bIsDead</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        FGameplayTag DeadAbilityTag = FGameplayTag::RequestGameplayTag(FName(<span class="stringliteral">&quot;Ability.BossDeath&quot;</span>));</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_variable" href="class_a_boss_monster_base.html#a30d946f182a7461fd90fe06814690106">AbilitySystemComponent</a>-&gt;TryActivateAbilitiesByTag(FGameplayTagContainer(DeadAbilityTag), <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">if</span> (AAIController* AIController = Cast&lt;AAIController&gt;(GetController()))</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        AIController-&gt;GetBrainComponent()-&gt;StopLogic(<span class="stringliteral">&quot;Dead&quot;</span>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    GetCapsuleComponent()-&gt;SetCollisionEnabled(ECollisionEnabled::NoCollision);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_function" href="class_a_boss_monster_base.html#a148ab71c8d5d40090cc9f63fe81065b3">Multicast_StartDissolveEffect</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_a_boss_monster_base.html#a221f8aac3ad89bd2790658179030cc94">   63</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_boss_monster_base.html#a221f8aac3ad89bd2790658179030cc94">ABossMonsterBase::Damaged</a>()</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>{</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_a_boss_monster_base.html#aebebabc296fffff53b11c82e663de4fc">   67</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_boss_monster_base.html#a221f8aac3ad89bd2790658179030cc94">ABossMonsterBase::Damaged</a>(<span class="keywordtype">float</span> DamageAmount, <span class="keywordtype">bool</span> IsCritical)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>{</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_function" href="class_a_boss_monster_base.html#a29de0d32d8486a318502d328c3096a68">Multicast_AddDamageFloater</a>(DamageAmount, IsCritical, <span class="keyword">this</span>);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>}</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keywordtype">void</span> ABossMonsterBase::Multicast_StartDissolveEffect_Implementation()</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>{</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">if</span> (GetMesh())</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">for</span> (int32 i = 0; i &lt; <a class="code hl_variable" href="class_a_boss_monster_base.html#ad2fccec61e82af270c1800f461550884">DissolveMaterials</a>.Num() &amp;&amp; i &lt; GetMesh()-&gt;GetNumMaterials(); ++i)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_boss_monster_base.html#ad2fccec61e82af270c1800f461550884">DissolveMaterials</a>[i])</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            {</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                GetMesh()-&gt;SetMaterial(i, <a class="code hl_variable" href="class_a_boss_monster_base.html#ad2fccec61e82af270c1800f461550884">DissolveMaterials</a>[i]);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_function" href="class_a_boss_monster_base.html#afae75c91bcb32e406d8239386654a58b">StartDissolveEffect</a>();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>}</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_a_boss_monster_base.html#afae75c91bcb32e406d8239386654a58b">   87</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_boss_monster_base.html#afae75c91bcb32e406d8239386654a58b">ABossMonsterBase::StartDissolveEffect</a>()</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>{</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_boss_monster_base.html#a9945435b9cd9ecbd31bf1a034b7d54c5">DissolveCurve</a>)</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        FOnTimelineFloat UpdateFunction;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        FOnTimelineEvent FinishFunction;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        UpdateFunction.BindUFunction(<span class="keyword">this</span>, FName(<span class="stringliteral">&quot;UpdateDissolve&quot;</span>));</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        FinishFunction.BindUFunction(<span class="keyword">this</span>, FName(<span class="stringliteral">&quot;OnDissolveFinished&quot;</span>));</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        DissolveTimeline.AddInterpFloat(<a class="code hl_variable" href="class_a_boss_monster_base.html#a9945435b9cd9ecbd31bf1a034b7d54c5">DissolveCurve</a>, UpdateFunction);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        DissolveTimeline.SetTimelineFinishedFunc(FinishFunction);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        DissolveTimeline.SetLooping(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        DissolveTimeline.PlayFromStart();</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}</div>
+</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="foldopen" id="foldopen00104" data-start="{" data-end="}">
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_a_boss_monster_base.html#a076ed5a106ae8e6ff87cafd69ce10793">  104</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_boss_monster_base.html#a076ed5a106ae8e6ff87cafd69ce10793">ABossMonsterBase::SendSpawnEventToGameMode</a>()</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>{</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">if</span> (!HasAuthority()) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="class_a_k_p_t_in_game_mode.html">AKPTInGameMode</a>* GM = GetWorld()-&gt;GetAuthGameMode&lt;AKPTInGameMode&gt;())</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        GM-&gt;OnBossSpawned.Broadcast(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>}</div>
+</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="foldopen" id="foldopen00113" data-start="{" data-end="}">
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="class_a_boss_monster_base.html#ad00d7b706c434e7c530716da0af6e165">  113</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_boss_monster_base.html#ad00d7b706c434e7c530716da0af6e165">ABossMonsterBase::SendUpdateEventToGameMode</a>(<span class="keyword">const</span> FOnAttributeChangeData&amp; Data)</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>{</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordflow">if</span> (!HasAuthority()) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="class_a_k_p_t_in_game_mode.html">AKPTInGameMode</a>* GM = GetWorld()-&gt;GetAuthGameMode&lt;AKPTInGameMode&gt;())</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        GM-&gt;OnBossHPChanged.Broadcast(Data.NewValue, <a class="code hl_variable" href="class_a_boss_monster_base.html#a462b7abc436a592b83d4a344c8a4302d">BossAttributeSet</a>-&gt;GetMaxHealth());</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>}</div>
+</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="foldopen" id="foldopen00122" data-start="{" data-end="}">
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="class_a_boss_monster_base.html#aef9ea8fef296e1bb0638775ce217b934">  122</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_boss_monster_base.html#aef9ea8fef296e1bb0638775ce217b934">ABossMonsterBase::SendDefeatEventToGameMode</a>()</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>{</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordflow">if</span> (!HasAuthority()) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="class_a_k_p_t_in_game_mode.html">AKPTInGameMode</a>* GM = GetWorld()-&gt;GetAuthGameMode&lt;AKPTInGameMode&gt;())</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    {</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        GM-&gt;OnBossDefeated.Broadcast();</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>}</div>
+</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="keywordtype">void</span> ABossMonsterBase::UpdateDissolve(<span class="keywordtype">float</span> Value)</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>{</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordflow">if</span> (USkeletalMeshComponent* MeshComp = GetMesh())</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        UMaterialInstanceDynamic* DynamicBodyMat = MeshComp-&gt;CreateAndSetMaterialInstanceDynamic(0);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">if</span> (DynamicBodyMat)</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            DynamicBodyMat-&gt;SetScalarParameterValue(FName(<span class="stringliteral">&quot;DissolveAmount&quot;</span>), Value);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        UMaterialInstanceDynamic* DynamicWingMat = MeshComp-&gt;CreateAndSetMaterialInstanceDynamic(1);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        <span class="keywordflow">if</span> (DynamicWingMat)</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            DynamicWingMat-&gt;SetScalarParameterValue(FName(<span class="stringliteral">&quot;DissolveAmount&quot;</span>), Value);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        }</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    }</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>}</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="keywordtype">void</span> ABossMonsterBase::OnDissolveFinished()</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>{</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordflow">if</span> (!HasAuthority()) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    CreateItem();</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <a class="code hl_function" href="class_a_boss_monster_base.html#aef9ea8fef296e1bb0638775ce217b934">SendDefeatEventToGameMode</a>();</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    Destroy();</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>}</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="keywordtype">void</span> ABossMonsterBase::EnterGroggy()</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>{</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="comment">// AbilitySystemComponent-&gt;TryActivateAbilitiesByTag(</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="comment">//  FGameplayTagContainer(FGameplayTag::RequestGameplayTag(FName(&quot;Ability.Boss.Groggy&quot;))), true);</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>}</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="keywordtype">void</span> ABossMonsterBase::ResetGroggyDamageTimer()</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>{</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <a class="code hl_variable" href="class_a_boss_monster_base.html#a0099e72095e60958550077f5e95b9728">StackedDamage</a> = 0.f;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>}</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="foldopen" id="foldopen00167" data-start="{" data-end="}">
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="class_a_boss_monster_base.html#aad59c8c0ed3f6b9090cd0e29d35ae192">  167</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_boss_monster_base.html#aad59c8c0ed3f6b9090cd0e29d35ae192">ABossMonsterBase::AddStackedDamage</a>(<span class="keywordtype">float</span> InDamage)</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>{</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <a class="code hl_variable" href="class_a_boss_monster_base.html#a0099e72095e60958550077f5e95b9728">StackedDamage</a> += InDamage;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_boss_monster_base.html#a0099e72095e60958550077f5e95b9728">StackedDamage</a> &gt;= <a class="code hl_variable" href="class_a_boss_monster_base.html#acdc1e222e9bac11dc8eefbeecaf029b7">RequiredDamage</a> &amp;&amp; !<a class="code hl_variable" href="class_a_boss_monster_base.html#a30d946f182a7461fd90fe06814690106">AbilitySystemComponent</a>-&gt;HasMatchingGameplayTag(</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        FGameplayTag::RequestGameplayTag(FName(<span class="stringliteral">&quot;Enemy.State.Groggy&quot;</span>))))</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    {</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        EnterGroggy();</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    }</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>}</div>
+</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="comment">// Called when the game starts or when spawned</span></div>
+<div class="foldopen" id="foldopen00178" data-start="{" data-end="}">
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="class_a_boss_monster_base.html#a4b2b95b0be9b302d6d58c10635dc1cd0">  178</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_boss_monster_base.html#a4b2b95b0be9b302d6d58c10635dc1cd0">ABossMonsterBase::BeginPlay</a>()</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>{</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    Super::BeginPlay();</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keywordflow">if</span> (GetMesh())</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    {</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        int32 MaterialCount = GetMesh()-&gt;GetNumMaterials();</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        <a class="code hl_variable" href="class_a_boss_monster_base.html#abad4eb2946e50365c57ef6a118c813a5">OriginalMaterials</a>.SetNum(MaterialCount);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        <span class="keywordflow">for</span> (int32 i = 0; i &lt; MaterialCount; ++i)</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        {</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            <a class="code hl_variable" href="class_a_boss_monster_base.html#abad4eb2946e50365c57ef6a118c813a5">OriginalMaterials</a>[i] = GetMesh()-&gt;GetMaterial(i);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        }</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <a class="code hl_variable" href="class_a_boss_monster_base.html#a7e2e6e3cbe0c47bb00488e13d0f687c0">CounterBodyMaterial</a> = GetMesh()-&gt;CreateDynamicMaterialInstance(0);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        <a class="code hl_variable" href="class_a_boss_monster_base.html#a1b230cb11f4558aa3d2b58b8741671e5">CounterWingMaterial</a> = GetMesh()-&gt;CreateDynamicMaterialInstance(1);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    }</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keywordflow">if</span> (HasAuthority())</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    {</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_boss_monster_base.html#a30d946f182a7461fd90fe06814690106">AbilitySystemComponent</a>)</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        {</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            <a class="code hl_function" href="class_a_boss_monster_base.html#a96aef28a337652697596cc5012797c78">InitializeAbilitySystem</a>();</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            <a class="code hl_variable" href="class_a_boss_monster_base.html#a30d946f182a7461fd90fe06814690106">AbilitySystemComponent</a>-&gt;GetGameplayAttributeValueChangeDelegate(<a class="code hl_variable" href="class_a_boss_monster_base.html#a462b7abc436a592b83d4a344c8a4302d">BossAttributeSet</a>-&gt;GetHealthAttribute()).</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                                    AddUObject(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_a_boss_monster_base.html#ad00d7b706c434e7c530716da0af6e165">ABossMonsterBase::SendUpdateEventToGameMode</a>);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            FGameplayTag SpawnAbilityTag = FGameplayTag::RequestGameplayTag(FName(<span class="stringliteral">&quot;Ability.Boss.SpawnFlying&quot;</span>));</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            <span class="keywordflow">if</span> (SpawnAbilityTag.IsValid())</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            {</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                <a class="code hl_variable" href="class_a_boss_monster_base.html#a30d946f182a7461fd90fe06814690106">AbilitySystemComponent</a>-&gt;TryActivateAbilitiesByTag(FGameplayTagContainer(SpawnAbilityTag), <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            }</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        }</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        <span class="comment">// GetWorld()-&gt;GetTimerManager().SetTimer(StackDamageTimer, this, &amp;ABossMonsterBase::ResetGroggyDamageTimer,</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        <span class="comment">//                                        StackDuration, true);</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    }</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>}</div>
+</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="foldopen" id="foldopen00215" data-start="{" data-end="}">
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="class_a_boss_monster_base.html#a3b52848f049e5ff80f0c8482db6b3b0f">  215</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_boss_monster_base.html#a3b52848f049e5ff80f0c8482db6b3b0f">ABossMonsterBase::PossessedBy</a>(AController* NewsController)</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>{</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    Super::PossessedBy(NewsController);</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>}</div>
+</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="foldopen" id="foldopen00220" data-start="{" data-end="}">
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno"><a class="line" href="class_a_boss_monster_base.html#ae9a85f58384f8e9789d540167cb9f59f">  220</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_boss_monster_base.html#ae9a85f58384f8e9789d540167cb9f59f">ABossMonsterBase::Tick</a>(<span class="keywordtype">float</span> DeltaSeconds)</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>{</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    Super::Tick(DeltaSeconds);</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    DissolveTimeline.TickTimeline(DeltaSeconds);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>}</div>
+</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
+<div class="foldopen" id="foldopen00226" data-start="{" data-end="}">
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno"><a class="line" href="class_a_boss_monster_base.html#a96aef28a337652697596cc5012797c78">  226</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_a_boss_monster_base.html#a96aef28a337652697596cc5012797c78">ABossMonsterBase::InitializeAbilitySystem</a>()</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>{</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <a class="code hl_variable" href="class_a_boss_monster_base.html#a30d946f182a7461fd90fe06814690106">AbilitySystemComponent</a>-&gt;InitAbilityActorInfo(<span class="keyword">this</span>, <span class="keyword">this</span>);</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    FGameplayEffectContextHandle ContextHandle = <a class="code hl_variable" href="class_a_boss_monster_base.html#a30d946f182a7461fd90fe06814690106">AbilitySystemComponent</a>-&gt;MakeEffectContext();</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    ContextHandle.AddSourceObject(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="keywordflow">for</span> (TSubclassOf&lt;UGameplayEffect&gt; AttributeEffect : <a class="code hl_variable" href="class_a_boss_monster_base.html#a01ea449e6335af9011e41b4b5a8f7321">DefaultAttributeEffect</a>)</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    {</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        <a class="code hl_variable" href="class_a_boss_monster_base.html#a30d946f182a7461fd90fe06814690106">AbilitySystemComponent</a>-&gt;ApplyGameplayEffectToSelf(AttributeEffect-&gt;GetDefaultObject&lt;UGameplayEffect&gt;(), 1.f,</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                                                          ContextHandle);</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    }</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> TSubclassOf&lt;UGameplayAbility&gt;&amp; Ability : <a class="code hl_variable" href="class_a_boss_monster_base.html#ad452a33ba2ca0094999e4b5a1b4310dc">StartUpAbilities</a>)</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    {</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        FGameplayAbilitySpec Spec(Ability, 1, INDEX_NONE);</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        <a class="code hl_variable" href="class_a_boss_monster_base.html#a30d946f182a7461fd90fe06814690106">AbilitySystemComponent</a>-&gt;GiveAbility(Spec);</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    }</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>}</div>
+</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="keywordtype">void</span> ABossMonsterBase::Multicast_SetMaterialEmissive_Implementation(<span class="keywordtype">float</span> InEmissive)</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>{</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_boss_monster_base.html#a7e2e6e3cbe0c47bb00488e13d0f687c0">CounterBodyMaterial</a>)</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    {</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        <a class="code hl_variable" href="class_a_boss_monster_base.html#a7e2e6e3cbe0c47bb00488e13d0f687c0">CounterBodyMaterial</a>-&gt;SetScalarParameterValue(FName(<span class="stringliteral">&quot;EmissivePower&quot;</span>), InEmissive);</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    }</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_a_boss_monster_base.html#a1b230cb11f4558aa3d2b58b8741671e5">CounterWingMaterial</a>)</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    {</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        <a class="code hl_variable" href="class_a_boss_monster_base.html#a1b230cb11f4558aa3d2b58b8741671e5">CounterWingMaterial</a>-&gt;SetScalarParameterValue(FName(<span class="stringliteral">&quot;EmissivePower&quot;</span>), InEmissive);</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    }</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>}</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="keywordtype">void</span> ABossMonsterBase::CreateItem()</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>{</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    <span class="keywordflow">if</span> (!HasAuthority()) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    UPoolSubSystem* PoolSubSystem = GetGameInstance()-&gt;GetSubsystem&lt;UPoolSubSystem&gt;();</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    check(PoolSubSystem);</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    AActor* SpawnedActor = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <span class="comment">// Exp</span></div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    FVector ExpSpawnLocation = GetActorLocation();</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    ExpSpawnLocation.Z += 300.f;</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <span class="keywordflow">for</span> (int32 i = 0; i &lt; <a class="code hl_variable" href="class_a_boss_monster_base.html#ac1e2a62e6ec7c6a3138a15afdbccd95d">NumberOfRewards</a>; ++i)</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    {</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        PoolSubSystem-&gt;<a class="code hl_function" href="class_u_pool_sub_system.html#a3ee510d13e32e150d336ee52a3494a42">SpawnFromPool</a>(<a class="code hl_variable" href="class_a_boss_monster_base.html#ab2d5cb369d9aa95b08a1330f4cbe6422">ExperienceClass</a>, ExpSpawnLocation, FRotator::ZeroRotator, SpawnedActor);</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        <span class="comment">// Gold</span></div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        PoolSubSystem-&gt;<a class="code hl_function" href="class_u_pool_sub_system.html#a3ee510d13e32e150d336ee52a3494a42">SpawnFromPool</a>(<a class="code hl_variable" href="class_a_boss_monster_base.html#a60068d1b050ed81d794837baea92e12d">GoldClass</a>, GetActorLocation(), FRotator::ZeroRotator, SpawnedActor);</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    }</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>}</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="keywordtype">void</span> ABossMonsterBase::Multicast_AddDamageFloater_Implementation(<span class="keywordtype">float</span> DamageAmount, <span class="keywordtype">bool</span> IsCritical,</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                                                                 AActor* TargetActor)</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>{</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    ENetMode mode = GetWorld()-&gt;GetNetMode();</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    UE_LOG(LogTemp, Warning, TEXT(<span class="stringliteral">&quot;NetMode : %d&quot;</span>), mode);</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    <span class="comment">//APlayerController* PC = UGameplayStatics::GetPlayerController(this, 0);</span></div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    <span class="comment">//if (!IsValid(PC)) return;</span></div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>    APlayerController* PC = GetWorld()-&gt;GetFirstPlayerController();</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>    ULocalPlayer* LocalPlayer = PC-&gt;GetLocalPlayer();</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    UUIManagerSubsystem* UIManager = LocalPlayer-&gt;GetSubsystem&lt;UUIManagerSubsystem&gt;();</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>    <span class="keywordflow">if</span> (UIManager)</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    {</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        UIManager-&gt;<a class="code hl_function" href="class_u_u_i_manager_subsystem.html#aa7253c78e1ca01e5b8fbaf6f8e9126ea">ActivateDamageFloater</a>(DamageAmount, IsCritical, TargetActor);</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    }</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>}</div>
+<div class="ttc" id="a_boss_monster_base_8h_html"><div class="ttname"><a href="_boss_monster_base_8h.html">BossMonsterBase.h</a></div></div>
+<div class="ttc" id="a_gold_8h_html"><div class="ttname"><a href="_gold_8h.html">Gold.h</a></div></div>
+<div class="ttc" id="a_k_p_t_ability_system_component_8h_html"><div class="ttname"><a href="_k_p_t_ability_system_component_8h.html">KPTAbilitySystemComponent.h</a></div></div>
+<div class="ttc" id="a_k_p_t_base_attribute_set_8h_html"><div class="ttname"><a href="_k_p_t_base_attribute_set_8h.html">KPTBaseAttributeSet.h</a></div></div>
+<div class="ttc" id="a_k_p_t_in_game_mode_8h_html"><div class="ttname"><a href="_k_p_t_in_game_mode_8h.html">KPTInGameMode.h</a></div></div>
+<div class="ttc" id="a_pool_sub_system_8h_html"><div class="ttname"><a href="_pool_sub_system_8h.html">PoolSubSystem.h</a></div></div>
+<div class="ttc" id="a_u_i_manager_subsystem_8h_html"><div class="ttname"><a href="_u_i_manager_subsystem_8h.html">UIManagerSubsystem.h</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_a0099e72095e60958550077f5e95b9728"><div class="ttname"><a href="class_a_boss_monster_base.html#a0099e72095e60958550077f5e95b9728">ABossMonsterBase::StackedDamage</a></div><div class="ttdeci">float StackedDamage</div><div class="ttdef"><b>Definition</b> <a href="_boss_monster_base_8h_source.html#l00128">BossMonsterBase.h:128</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_a01ea449e6335af9011e41b4b5a8f7321"><div class="ttname"><a href="class_a_boss_monster_base.html#a01ea449e6335af9011e41b4b5a8f7321">ABossMonsterBase::DefaultAttributeEffect</a></div><div class="ttdeci">TArray&lt; TSubclassOf&lt; UGameplayEffect &gt; &gt; DefaultAttributeEffect</div><div class="ttdef"><b>Definition</b> <a href="_boss_monster_base_8h_source.html#l00100">BossMonsterBase.h:100</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_a076ed5a106ae8e6ff87cafd69ce10793"><div class="ttname"><a href="class_a_boss_monster_base.html#a076ed5a106ae8e6ff87cafd69ce10793">ABossMonsterBase::SendSpawnEventToGameMode</a></div><div class="ttdeci">void SendSpawnEventToGameMode()</div><div class="ttdef"><b>Definition</b> <a href="#l00104">BossMonsterBase.cpp:104</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_a148ab71c8d5d40090cc9f63fe81065b3"><div class="ttname"><a href="class_a_boss_monster_base.html#a148ab71c8d5d40090cc9f63fe81065b3">ABossMonsterBase::Multicast_StartDissolveEffect</a></div><div class="ttdeci">void Multicast_StartDissolveEffect()</div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_a1b230cb11f4558aa3d2b58b8741671e5"><div class="ttname"><a href="class_a_boss_monster_base.html#a1b230cb11f4558aa3d2b58b8741671e5">ABossMonsterBase::CounterWingMaterial</a></div><div class="ttdeci">TObjectPtr&lt; UMaterialInstanceDynamic &gt; CounterWingMaterial</div><div class="ttdef"><b>Definition</b> <a href="_boss_monster_base_8h_source.html#l00141">BossMonsterBase.h:141</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_a221f8aac3ad89bd2790658179030cc94"><div class="ttname"><a href="class_a_boss_monster_base.html#a221f8aac3ad89bd2790658179030cc94">ABossMonsterBase::Damaged</a></div><div class="ttdeci">virtual void Damaged() override</div><div class="ttdef"><b>Definition</b> <a href="#l00063">BossMonsterBase.cpp:63</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_a29de0d32d8486a318502d328c3096a68"><div class="ttname"><a href="class_a_boss_monster_base.html#a29de0d32d8486a318502d328c3096a68">ABossMonsterBase::Multicast_AddDamageFloater</a></div><div class="ttdeci">void Multicast_AddDamageFloater(float DamageAmount, bool IsCritical, AActor *TargetActor)</div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_a30d946f182a7461fd90fe06814690106"><div class="ttname"><a href="class_a_boss_monster_base.html#a30d946f182a7461fd90fe06814690106">ABossMonsterBase::AbilitySystemComponent</a></div><div class="ttdeci">TObjectPtr&lt; UKPTAbilitySystemComponent &gt; AbilitySystemComponent</div><div class="ttdef"><b>Definition</b> <a href="_boss_monster_base_8h_source.html#l00091">BossMonsterBase.h:91</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_a3a77a8ea16e8085f13e426f1eab5c5c7"><div class="ttname"><a href="class_a_boss_monster_base.html#a3a77a8ea16e8085f13e426f1eab5c5c7">ABossMonsterBase::Die</a></div><div class="ttdeci">virtual void Die(bool bStageEnded=false) override</div><div class="ttdef"><b>Definition</b> <a href="#l00043">BossMonsterBase.cpp:43</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_a3b52848f049e5ff80f0c8482db6b3b0f"><div class="ttname"><a href="class_a_boss_monster_base.html#a3b52848f049e5ff80f0c8482db6b3b0f">ABossMonsterBase::PossessedBy</a></div><div class="ttdeci">virtual void PossessedBy(AController *NewsController) override</div><div class="ttdef"><b>Definition</b> <a href="#l00215">BossMonsterBase.cpp:215</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_a462b7abc436a592b83d4a344c8a4302d"><div class="ttname"><a href="class_a_boss_monster_base.html#a462b7abc436a592b83d4a344c8a4302d">ABossMonsterBase::BossAttributeSet</a></div><div class="ttdeci">TObjectPtr&lt; UKPTBaseAttributeSet &gt; BossAttributeSet</div><div class="ttdef"><b>Definition</b> <a href="_boss_monster_base_8h_source.html#l00094">BossMonsterBase.h:94</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_a4b2b95b0be9b302d6d58c10635dc1cd0"><div class="ttname"><a href="class_a_boss_monster_base.html#a4b2b95b0be9b302d6d58c10635dc1cd0">ABossMonsterBase::BeginPlay</a></div><div class="ttdeci">virtual void BeginPlay() override</div><div class="ttdef"><b>Definition</b> <a href="#l00178">BossMonsterBase.cpp:178</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_a60068d1b050ed81d794837baea92e12d"><div class="ttname"><a href="class_a_boss_monster_base.html#a60068d1b050ed81d794837baea92e12d">ABossMonsterBase::GoldClass</a></div><div class="ttdeci">TSubclassOf&lt; AGold &gt; GoldClass</div><div class="ttdef"><b>Definition</b> <a href="_boss_monster_base_8h_source.html#l00107">BossMonsterBase.h:107</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_a7e2e6e3cbe0c47bb00488e13d0f687c0"><div class="ttname"><a href="class_a_boss_monster_base.html#a7e2e6e3cbe0c47bb00488e13d0f687c0">ABossMonsterBase::CounterBodyMaterial</a></div><div class="ttdeci">TObjectPtr&lt; UMaterialInstanceDynamic &gt; CounterBodyMaterial</div><div class="ttdef"><b>Definition</b> <a href="_boss_monster_base_8h_source.html#l00138">BossMonsterBase.h:138</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_a849362cc21ec3a9b5ed39dac0bcc0515"><div class="ttname"><a href="class_a_boss_monster_base.html#a849362cc21ec3a9b5ed39dac0bcc0515">ABossMonsterBase::ABossMonsterBase</a></div><div class="ttdeci">ABossMonsterBase()</div><div class="ttdef"><b>Definition</b> <a href="#l00018">BossMonsterBase.cpp:18</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_a96aef28a337652697596cc5012797c78"><div class="ttname"><a href="class_a_boss_monster_base.html#a96aef28a337652697596cc5012797c78">ABossMonsterBase::InitializeAbilitySystem</a></div><div class="ttdeci">void InitializeAbilitySystem()</div><div class="ttdef"><b>Definition</b> <a href="#l00226">BossMonsterBase.cpp:226</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_a9945435b9cd9ecbd31bf1a034b7d54c5"><div class="ttname"><a href="class_a_boss_monster_base.html#a9945435b9cd9ecbd31bf1a034b7d54c5">ABossMonsterBase::DissolveCurve</a></div><div class="ttdeci">UCurveFloat * DissolveCurve</div><div class="ttdef"><b>Definition</b> <a href="_boss_monster_base_8h_source.html#l00124">BossMonsterBase.h:124</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_aad59c8c0ed3f6b9090cd0e29d35ae192"><div class="ttname"><a href="class_a_boss_monster_base.html#aad59c8c0ed3f6b9090cd0e29d35ae192">ABossMonsterBase::AddStackedDamage</a></div><div class="ttdeci">void AddStackedDamage(float InDamage)</div><div class="ttdef"><b>Definition</b> <a href="#l00167">BossMonsterBase.cpp:167</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_ab2d5cb369d9aa95b08a1330f4cbe6422"><div class="ttname"><a href="class_a_boss_monster_base.html#ab2d5cb369d9aa95b08a1330f4cbe6422">ABossMonsterBase::ExperienceClass</a></div><div class="ttdeci">TSubclassOf&lt; AActor &gt; ExperienceClass</div><div class="ttdef"><b>Definition</b> <a href="_boss_monster_base_8h_source.html#l00104">BossMonsterBase.h:104</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_abad4eb2946e50365c57ef6a118c813a5"><div class="ttname"><a href="class_a_boss_monster_base.html#abad4eb2946e50365c57ef6a118c813a5">ABossMonsterBase::OriginalMaterials</a></div><div class="ttdeci">TArray&lt; TObjectPtr&lt; UMaterialInterface &gt; &gt; OriginalMaterials</div><div class="ttdef"><b>Definition</b> <a href="_boss_monster_base_8h_source.html#l00121">BossMonsterBase.h:121</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_ac1e2a62e6ec7c6a3138a15afdbccd95d"><div class="ttname"><a href="class_a_boss_monster_base.html#ac1e2a62e6ec7c6a3138a15afdbccd95d">ABossMonsterBase::NumberOfRewards</a></div><div class="ttdeci">int32 NumberOfRewards</div><div class="ttdef"><b>Definition</b> <a href="_boss_monster_base_8h_source.html#l00110">BossMonsterBase.h:110</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_acdc1e222e9bac11dc8eefbeecaf029b7"><div class="ttname"><a href="class_a_boss_monster_base.html#acdc1e222e9bac11dc8eefbeecaf029b7">ABossMonsterBase::RequiredDamage</a></div><div class="ttdeci">float RequiredDamage</div><div class="ttdef"><b>Definition</b> <a href="_boss_monster_base_8h_source.html#l00131">BossMonsterBase.h:131</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_ad00d7b706c434e7c530716da0af6e165"><div class="ttname"><a href="class_a_boss_monster_base.html#ad00d7b706c434e7c530716da0af6e165">ABossMonsterBase::SendUpdateEventToGameMode</a></div><div class="ttdeci">void SendUpdateEventToGameMode(const FOnAttributeChangeData &amp;Data)</div><div class="ttdef"><b>Definition</b> <a href="#l00113">BossMonsterBase.cpp:113</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_ad2fccec61e82af270c1800f461550884"><div class="ttname"><a href="class_a_boss_monster_base.html#ad2fccec61e82af270c1800f461550884">ABossMonsterBase::DissolveMaterials</a></div><div class="ttdeci">TArray&lt; TObjectPtr&lt; UMaterialInterface &gt; &gt; DissolveMaterials</div><div class="ttdef"><b>Definition</b> <a href="_boss_monster_base_8h_source.html#l00118">BossMonsterBase.h:118</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_ad452a33ba2ca0094999e4b5a1b4310dc"><div class="ttname"><a href="class_a_boss_monster_base.html#ad452a33ba2ca0094999e4b5a1b4310dc">ABossMonsterBase::StartUpAbilities</a></div><div class="ttdeci">TArray&lt; TSubclassOf&lt; UGameplayAbility &gt; &gt; StartUpAbilities</div><div class="ttdef"><b>Definition</b> <a href="_boss_monster_base_8h_source.html#l00097">BossMonsterBase.h:97</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_ae323c1c6a47d8e0daae8e40da8dae1da"><div class="ttname"><a href="class_a_boss_monster_base.html#ae323c1c6a47d8e0daae8e40da8dae1da">ABossMonsterBase::bIsDead</a></div><div class="ttdeci">bool bIsDead</div><div class="ttdef"><b>Definition</b> <a href="_boss_monster_base_8h_source.html#l00114">BossMonsterBase.h:114</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_ae6cc0f32efad1b404f02d91b68728c1e"><div class="ttname"><a href="class_a_boss_monster_base.html#ae6cc0f32efad1b404f02d91b68728c1e">ABossMonsterBase::GetAbilitySystemComponent</a></div><div class="ttdeci">virtual UAbilitySystemComponent * GetAbilitySystemComponent() const override</div><div class="ttdef"><b>Definition</b> <a href="#l00038">BossMonsterBase.cpp:38</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_ae9a85f58384f8e9789d540167cb9f59f"><div class="ttname"><a href="class_a_boss_monster_base.html#ae9a85f58384f8e9789d540167cb9f59f">ABossMonsterBase::Tick</a></div><div class="ttdeci">virtual void Tick(float DeltaSeconds) override</div><div class="ttdef"><b>Definition</b> <a href="#l00220">BossMonsterBase.cpp:220</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_aef9ea8fef296e1bb0638775ce217b934"><div class="ttname"><a href="class_a_boss_monster_base.html#aef9ea8fef296e1bb0638775ce217b934">ABossMonsterBase::SendDefeatEventToGameMode</a></div><div class="ttdeci">void SendDefeatEventToGameMode()</div><div class="ttdef"><b>Definition</b> <a href="#l00122">BossMonsterBase.cpp:122</a></div></div>
+<div class="ttc" id="aclass_a_boss_monster_base_html_afae75c91bcb32e406d8239386654a58b"><div class="ttname"><a href="class_a_boss_monster_base.html#afae75c91bcb32e406d8239386654a58b">ABossMonsterBase::StartDissolveEffect</a></div><div class="ttdeci">void StartDissolveEffect()</div><div class="ttdef"><b>Definition</b> <a href="#l00087">BossMonsterBase.cpp:87</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html">AKPTInGameMode</a></div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8h_source.html#l00018">KPTInGameMode.h:20</a></div></div>
+<div class="ttc" id="aclass_u_pool_sub_system_html_a3ee510d13e32e150d336ee52a3494a42"><div class="ttname"><a href="class_u_pool_sub_system.html#a3ee510d13e32e150d336ee52a3494a42">UPoolSubSystem::SpawnFromPool</a></div><div class="ttdeci">void SpawnFromPool(TSubclassOf&lt; AActor &gt; PoolClass, FVector Location, FRotator Rotation, AActor *&amp;SpawnedActor)</div><div class="ttdef"><b>Definition</b> <a href="_pool_sub_system_8cpp_source.html#l00018">PoolSubSystem.cpp:18</a></div></div>
+<div class="ttc" id="aclass_u_u_i_manager_subsystem_html_aa7253c78e1ca01e5b8fbaf6f8e9126ea"><div class="ttname"><a href="class_u_u_i_manager_subsystem.html#aa7253c78e1ca01e5b8fbaf6f8e9126ea">UUIManagerSubsystem::ActivateDamageFloater</a></div><div class="ttdeci">void ActivateDamageFloater(float DamageAmount, bool IsCritical, AActor *Actor)</div><div class="ttdef"><b>Definition</b> <a href="_u_i_manager_subsystem_8cpp_source.html#l00834">UIManagerSubsystem.cpp:834</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_afd4929045c9ece13bdaf7ce47ec67c0.html">AI</a></li><li class="navelem"><a href="dir_1b246ab125890ce6af8a97e8bed77d9e.html">Boss</a></li><li class="navelem"><a href="_boss_monster_base_8cpp.html">BossMonsterBase.cpp</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

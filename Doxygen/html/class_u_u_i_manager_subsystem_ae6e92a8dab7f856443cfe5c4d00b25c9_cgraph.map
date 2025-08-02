@@ -1,0 +1,7 @@
+<map id="UUIManagerSubsystem::ActivateWidget" name="UUIManagerSubsystem::ActivateWidget">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,167,48"/>
+<area shape="rect" id="Node000002" href="$class_u_u_i_manager_subsystem.html#acaac8367f6b3ad4c0509900d7f01b65a" title=" " alt="" coords="215,5,406,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,24,199,24,199,29,167,29"/>
+<area shape="rect" id="Node000003" href="$class_u_u_i_manager_subsystem.html#a6c815ab68107e8e616ddb62dd3391d2c" title=" " alt="" coords="454,5,615,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="406,24,438,24,438,29,406,29"/>
+</map>

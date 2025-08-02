@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Core/Component/Flocking/FlockingManager.cpp 파일 참조</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_flocking_manager_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">FlockingManager.cpp 파일 참조</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_flocking_manager_8h_source.html">FlockingManager.h</a>&quot;</code><br />
+<code>#include &quot;NavigationPath.h&quot;</code><br />
+<code>#include &quot;NavigationSystem.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="_minion_monster_8h_source.html">AI/MinionMonster.h</a>&quot;</code><br />
+<code>#include &quot;Kismet/GameplayStatics.h&quot;</code><br />
+</div><div class="textblock"><div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>FlockingManager.cpp에 대한 include 의존 그래프</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><div class="zoom"><iframe scrolling="no" loading="lazy" frameborder="0" src="_flocking_manager_8cpp__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+</div>
+<p><a href="_flocking_manager_8cpp_source.html">이 파일의 소스 코드 페이지로 가기</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+함수</h2></td></tr>
+<tr class="memitem:ad92d5897684ae1f0a7a961ba65fa5b16" id="r_ad92d5897684ae1f0a7a961ba65fa5b16"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad92d5897684ae1f0a7a961ba65fa5b16">DECLARE_CYCLE_STAT</a> (&quot;ApplyForces&quot;, STAT_ApplyForces, STATGROUP_MonsterFlocking)</td></tr>
+<tr class="memitem:aeaa5618600be6bc7a66fc44d242c3ed8" id="r_aeaa5618600be6bc7a66fc44d242c3ed8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeaa5618600be6bc7a66fc44d242c3ed8">DECLARE_CYCLE_STAT</a> (&quot;ApplyForces_Detail&quot;, STAT_ApplyForcesDetail, STATGROUP_MonsterFlocking)</td></tr>
+<tr class="memitem:abf1211141bc68bb829ba653ab90b58c0" id="r_abf1211141bc68bb829ba653ab90b58c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf1211141bc68bb829ba653ab90b58c0">DECLARE_CYCLE_STAT</a> (&quot;ApplyForces_DetailRotationUpdate&quot;, STAT_ApplyForcesLocationUpdate, STATGROUP_MonsterFlocking)</td></tr>
+<tr class="memitem:ad835c68645bca4fd07df881eefc8282d" id="r_ad835c68645bca4fd07df881eefc8282d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad835c68645bca4fd07df881eefc8282d">DECLARE_CYCLE_STAT</a> (&quot;CalculateFlockingForces&quot;, STAT_CalculateFlockingForces, STATGROUP_MonsterFlocking)</td></tr>
+<tr class="memitem:a7cb57bd1535a300aa441563bd54b5ea8" id="r_a7cb57bd1535a300aa441563bd54b5ea8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cb57bd1535a300aa441563bd54b5ea8">DECLARE_CYCLE_STAT</a> (&quot;UpdateGrid&quot;, STAT_UpdateGrid, STATGROUP_MonsterFlocking)</td></tr>
+<tr class="memitem:a76417a25ced8c90f54d19f28b5c390e0" id="r_a76417a25ced8c90f54d19f28b5c390e0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76417a25ced8c90f54d19f28b5c390e0">DECLARE_STATS_GROUP</a> (&quot;CalculateFlockingForces&quot;, STATGROUP_CalculateFlockingForces, STATCAT_Advanced)</td></tr>
+<tr class="memitem:ae32da5d27a3b5993f40a85daf58dac61" id="r_ae32da5d27a3b5993f40a85daf58dac61"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae32da5d27a3b5993f40a85daf58dac61">DECLARE_STATS_GROUP</a> (&quot;MonsterFlocking&quot;, STATGROUP_MonsterFlocking, STATCAT_Advanced)</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">함수 문서화</h2>
+<a id="ad92d5897684ae1f0a7a961ba65fa5b16" name="ad92d5897684ae1f0a7a961ba65fa5b16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad92d5897684ae1f0a7a961ba65fa5b16">&#9670;&#160;</a></span>DECLARE_CYCLE_STAT() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLARE_CYCLE_STAT </td>
+          <td>(</td>
+          <td class="paramtype">&quot;ApplyForces&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">STAT_ApplyForces</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">STATGROUP_MonsterFlocking</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeaa5618600be6bc7a66fc44d242c3ed8" name="aeaa5618600be6bc7a66fc44d242c3ed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaa5618600be6bc7a66fc44d242c3ed8">&#9670;&#160;</a></span>DECLARE_CYCLE_STAT() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLARE_CYCLE_STAT </td>
+          <td>(</td>
+          <td class="paramtype">&quot;ApplyForces_Detail&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">STAT_ApplyForcesDetail</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">STATGROUP_MonsterFlocking</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf1211141bc68bb829ba653ab90b58c0" name="abf1211141bc68bb829ba653ab90b58c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf1211141bc68bb829ba653ab90b58c0">&#9670;&#160;</a></span>DECLARE_CYCLE_STAT() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLARE_CYCLE_STAT </td>
+          <td>(</td>
+          <td class="paramtype">&quot;ApplyForces_DetailRotationUpdate&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">STAT_ApplyForcesLocationUpdate</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">STATGROUP_MonsterFlocking</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad835c68645bca4fd07df881eefc8282d" name="ad835c68645bca4fd07df881eefc8282d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad835c68645bca4fd07df881eefc8282d">&#9670;&#160;</a></span>DECLARE_CYCLE_STAT() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLARE_CYCLE_STAT </td>
+          <td>(</td>
+          <td class="paramtype">&quot;CalculateFlockingForces&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">STAT_CalculateFlockingForces</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">STATGROUP_MonsterFlocking</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7cb57bd1535a300aa441563bd54b5ea8" name="a7cb57bd1535a300aa441563bd54b5ea8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cb57bd1535a300aa441563bd54b5ea8">&#9670;&#160;</a></span>DECLARE_CYCLE_STAT() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLARE_CYCLE_STAT </td>
+          <td>(</td>
+          <td class="paramtype">&quot;UpdateGrid&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">STAT_UpdateGrid</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">STATGROUP_MonsterFlocking</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76417a25ced8c90f54d19f28b5c390e0" name="a76417a25ced8c90f54d19f28b5c390e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76417a25ced8c90f54d19f28b5c390e0">&#9670;&#160;</a></span>DECLARE_STATS_GROUP() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLARE_STATS_GROUP </td>
+          <td>(</td>
+          <td class="paramtype">&quot;CalculateFlockingForces&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">STATGROUP_CalculateFlockingForces</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">STATCAT_Advanced</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae32da5d27a3b5993f40a85daf58dac61" name="ae32da5d27a3b5993f40a85daf58dac61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae32da5d27a3b5993f40a85daf58dac61">&#9670;&#160;</a></span>DECLARE_STATS_GROUP() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DECLARE_STATS_GROUP </td>
+          <td>(</td>
+          <td class="paramtype">&quot;MonsterFlocking&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">STATGROUP_MonsterFlocking</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">STATCAT_Advanced</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_9d0f275b41fa002800a89310ba1ebe25.html">Core</a></li><li class="navelem"><a href="dir_c4b505f52885608e828b3baedebd7535.html">Component</a></li><li class="navelem"><a href="dir_cb06985b1f769d20de23e9e1e765fba6.html">Flocking</a></li><li class="navelem"><a href="_flocking_manager_8cpp.html">FlockingManager.cpp</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

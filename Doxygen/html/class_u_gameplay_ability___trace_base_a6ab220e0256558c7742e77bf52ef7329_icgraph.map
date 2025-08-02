@@ -1,0 +1,21 @@
+<map id="UGameplayAbility_TraceBase::ApplyEffectToTarget" name="UGameplayAbility_TraceBase::ApplyEffectToTarget">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1471,96,1668,139"/>
+<area shape="rect" id="Node000002" href="$class_u_gameplay_ability___trace_base.html#a9228e5548e9603d5db0a4851528699b9" title=" " alt="" coords="1227,67,1423,109"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1456,106,1424,102,1424,97,1456,101"/>
+<area shape="rect" id="Node000008" href="$class_u_gameplay_ability___trace_base.html#aab02c5cd24012484672817a3959eae8b" title=" " alt="" coords="738,96,935,139"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="1456,123,1423,124,1203,126,983,124,935,123,935,118,983,119,1203,121,1423,119,1455,118"/>
+<area shape="rect" id="Node000003" href="$class_u_gameplay_ability___trace_base.html#af45bd75cfce61a7c8368270e14ba2da2" title=" " alt="" coords="983,67,1179,109"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1212,91,1180,91,1180,85,1212,85"/>
+<area shape="rect" id="Node000004" href="$class_u_gameplay_ability___trace_base.html#a5166fe938f5e822a37e7526d8b95d271" title=" " alt="" coords="738,5,935,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="977,65,924,51,925,46,979,60"/>
+<area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="968,113,936,117,935,112,967,108"/>
+<area shape="rect" id="Node000005" href="$class_u_gameplay_ability___boss_rock_drop.html#ae3ea23fe4ff008d87e87ee9fb09eb08f" title=" " alt="" coords="490,5,690,48"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="723,29,691,29,691,24,723,24"/>
+<area shape="rect" id="Node000006" href="$class_u_gameplay_ability___boss_rock_drop.html#af96f3d05b72995df2afa9a9a9963996f" title=" " alt="" coords="248,5,442,48"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="474,38,442,38,442,33,474,33"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="457,15,489,15,489,20,457,20"/>
+<area shape="rect" id="Node000007" href="$class_u_gameplay_ability___boss_rock_drop.html#ae20c146f70f4656b0bad279aee6ed5bd" title=" " alt="" coords="5,5,200,48"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="232,29,200,29,200,24,232,24"/>
+<area shape="poly" id="edge9_Node000008_Node000003" title=" " alt="" coords="950,92,982,88,983,94,951,97"/>
+<area shape="poly" id="edge10_Node000008_Node000008" title=" " alt="" coords="876,83,861,77,836,75,813,77,799,81,794,87,795,95,790,96,788,86,796,77,812,71,837,69,863,72,878,78"/>
+</map>

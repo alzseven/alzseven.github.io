@@ -1,0 +1,5 @@
+<map id="AMinionMonster::Die" name="AMinionMonster::Die">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,149,40"/>
+<area shape="rect" id="Node000002" href="$class_a_minion_monster.html#ae7e6c5d889b8de78285021ecfe796683" title=" " alt="" coords="197,5,400,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,24,181,24,181,29,149,29"/>
+</map>

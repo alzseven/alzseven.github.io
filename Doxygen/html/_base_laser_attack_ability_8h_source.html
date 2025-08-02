@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Skill/Ability/LazerAttack/BaseLaserAttackAbility.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_base_laser_attack_ability_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">BaseLaserAttackAbility.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_base_laser_attack_ability_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Abilities/GameplayAbility.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;BaseLaserAttackAbility.generated.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">class </span><a class="code hl_class" href="class_a_square_indicator_actor.html">ASquareIndicatorActor</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">class </span><a class="code hl_class" href="class_a_laser_beam.html">ALaserBeam</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_u_base_laser_attack_ability.html">   17</a></span>UCLASS()</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>class KPT_API <a class="code hl_function" href="class_u_base_laser_attack_ability.html#abd26ecf6cee23237e9249ce68b42fa62">UBaseLaserAttackAbility</a> : public UGameplayAbility</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_function" href="class_u_base_laser_attack_ability.html#abd26ecf6cee23237e9249ce68b42fa62">UBaseLaserAttackAbility</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    UFUNCTION(BlueprintImplementableEvent, Category = <span class="stringliteral">&quot;Ability&quot;</span>)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_u_base_laser_attack_ability.html#ad1a11b3bbe71ec74e20323116cad88fe">   26</a></span>    void <a class="code hl_function" href="class_u_base_laser_attack_ability.html#ad1a11b3bbe71ec74e20323116cad88fe">ActivateAbility_BP</a>(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo&amp; ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData&amp; TriggerEventData);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    virtual <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_base_laser_attack_ability.html#a26ff67b6441cf3c270bb40024bb261f0">ActivateAbility</a>(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData) override;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    virtual <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_base_laser_attack_ability.html#a872ab3f13348f056b6148f62cf3fffc7">EndAbility</a>(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, <span class="keywordtype">bool</span> bReplicateEndAbility, <span class="keywordtype">bool</span> bWasCancelled) override;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    virtual <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_base_laser_attack_ability.html#aa398b1c8400be1004cc48ab88c2372a9">GetLifetimeReplicatedProps</a>(TArray&lt;class FLifetimeProperty&gt;&amp; OutLifetimeProps) const override;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>protected:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">//~ Begin Laser Properties</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">// These properties can be configured in the Blueprint version of this ability.</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">// Laser Indicator Setup</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Laser Attack|Setup&quot;</span>)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_u_base_laser_attack_ability.html#aa532f1e8319047faa3a5e7f453e4b627">   38</a></span>    TSubclassOf&lt;<a class="code hl_class" href="class_a_square_indicator_actor.html">ASquareIndicatorActor</a>&gt; <a class="code hl_variable" href="class_u_base_laser_attack_ability.html#aa532f1e8319047faa3a5e7f453e4b627">LaserIndicatorClass</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Laser Attack|Setup&quot;</span>)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_u_base_laser_attack_ability.html#aed70cc1062f9a93c8ad517e5632386c0">   41</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_base_laser_attack_ability.html#aed70cc1062f9a93c8ad517e5632386c0">IndicatorTime</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="comment">// Laser Setup</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Laser Attack|Setup&quot;</span>)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_u_base_laser_attack_ability.html#aeba0f1d87bfd73bd5ffc85c456a9d069">   45</a></span>    TSubclassOf&lt;<a class="code hl_class" href="class_a_laser_beam.html">ALaserBeam</a>&gt; <a class="code hl_variable" href="class_u_base_laser_attack_ability.html#aeba0f1d87bfd73bd5ffc85c456a9d069">LaserBeamClass</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Laser Attack|Setup&quot;</span>)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_u_base_laser_attack_ability.html#a89d3e422478438952bdc03c0391b8e08">   48</a></span>    int32 <a class="code hl_variable" href="class_u_base_laser_attack_ability.html#a89d3e422478438952bdc03c0391b8e08">NumberOfLasers</a> = 4;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Laser Attack|Setup&quot;</span>)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_u_base_laser_attack_ability.html#a4d6fd6f66ecce3751871926729982427">   51</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_base_laser_attack_ability.html#a4d6fd6f66ecce3751871926729982427">LaserLength</a> = 1000.f;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Laser Attack|Setup&quot;</span>)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_u_base_laser_attack_ability.html#a052684343b2b10826cd3d60f21b819d7">   54</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_base_laser_attack_ability.html#a052684343b2b10826cd3d60f21b819d7">LaserWidth</a> = 50.f;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="comment">// Laser Rotation</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Laser Attack|Rotation&quot;</span>)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_u_base_laser_attack_ability.html#a21c04aa288316941f07a73bd46cb55bf">   58</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_base_laser_attack_ability.html#a21c04aa288316941f07a73bd46cb55bf">RotationSpeed</a> = 90.f;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Laser Attack|Rotation&quot;</span>)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_u_base_laser_attack_ability.html#a21606085ba0ccebb2f3066921459b0bb">   61</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_base_laser_attack_ability.html#a21606085ba0ccebb2f3066921459b0bb">InitialRotationOffset</a> = 0.f;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Laser Attack|Rotation&quot;</span>, meta = (ClampMin = <span class="stringliteral">&quot;0.0&quot;</span>))</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_u_base_laser_attack_ability.html#ad50f21c620a0524361b37fbfb8c21b41">   64</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_base_laser_attack_ability.html#ad50f21c620a0524361b37fbfb8c21b41">SpawnRadius</a> = 50.f;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">// Laser Damage</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Laser Attack|Damage&quot;</span>)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_u_base_laser_attack_ability.html#aeb50e2a57d521db100b75b7d84ec04df">   68</a></span>    TSubclassOf&lt;UGameplayEffect&gt; <a class="code hl_variable" href="class_u_base_laser_attack_ability.html#aeb50e2a57d521db100b75b7d84ec04df">PayloadEffectClass</a>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Laser Attack|Damage&quot;</span>)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_u_base_laser_attack_ability.html#a35b3f984a62e5bd03f9894eb57bfdf2c">   71</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_base_laser_attack_ability.html#a35b3f984a62e5bd03f9894eb57bfdf2c">DamagePerSecond</a> = 30.f;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Laser Attack|Damage&quot;</span>)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_u_base_laser_attack_ability.html#a36c4194dbb2a144b0faa7d2f3abdc639">   74</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_base_laser_attack_ability.html#a36c4194dbb2a144b0faa7d2f3abdc639">DamageTickInterval</a> = 0.33f;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Laser Attack|Damage&quot;</span>)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_u_base_laser_attack_ability.html#a0d0b62e41bad262d0a70dd8295ea6826">   77</a></span>    FGameplayTag <a class="code hl_variable" href="class_u_base_laser_attack_ability.html#a0d0b62e41bad262d0a70dd8295ea6826">DamageGameplayTag</a>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">// Laser Duration</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Laser Attack|Duration&quot;</span>)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="class_u_base_laser_attack_ability.html#a3cdd77ecb02c7b3ffa1161894f732ff2">   81</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_base_laser_attack_ability.html#a3cdd77ecb02c7b3ffa1161894f732ff2">LaserDuration</a> = 5.f;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Laser Attack|Duration&quot;</span>)</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_u_base_laser_attack_ability.html#ae15806bde680b99e1d95ae68e2fed7f1">   84</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_u_base_laser_attack_ability.html#ae15806bde680b99e1d95ae68e2fed7f1">bInfiniteDuration</a> = false;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Laser Attack|Visual&quot;</span>)</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_u_base_laser_attack_ability.html#a727c7965fcefc52a0f75b864922506a3">   87</a></span>    TObjectPtr&lt;UAnimMontage&gt; <a class="code hl_variable" href="class_u_base_laser_attack_ability.html#a727c7965fcefc52a0f75b864922506a3">CastingMontage</a>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">//~ End Laser Properties</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>protected:</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Laser Attack&quot;</span>)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_base_laser_attack_ability.html#a674fe5df0cdc156691878ce8e00f15f2">SpawnLaserIndicator</a>();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Laser Attack&quot;</span>)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_base_laser_attack_ability.html#ac49822a928fe96077caded42985e05d7">SpawnAndStartLasers</a>();</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Laser Attack&quot;</span>)</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_base_laser_attack_ability.html#a1f265f5b299f3057b632ab3d32970ea6">FinishLaserAttack</a>();</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>private:</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    TArray&lt;FTransform&gt; CalculateLaserSpawnTransforms();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordtype">void</span> UpdateLaserRotation();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordtype">void</span> ProcessDamageTick();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    UPROPERTY(Transient)</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    TArray&lt;TObjectPtr&lt;<a class="code hl_class" href="class_a_laser_beam.html">ALaserBeam</a>&gt;&gt; SpawnedLasers;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    FTimerHandle RotationTimerHandle;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    FTimerHandle DamageTimerHandle;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    FTimerHandle DurationTimerHandle;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="comment">// Stores the initial transforms to use as a base for rotation.</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    UPROPERTY(Replicated)</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    TArray&lt;FTransform&gt; InitialSpawnTransforms;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    FVector AvatarInitialLocation;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordtype">float</span> CurrentRotationAngle = 0.f;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordtype">bool</span> bIsFinished = false;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>};</div>
+</div>
+<div class="ttc" id="aclass_a_laser_beam_html"><div class="ttname"><a href="class_a_laser_beam.html">ALaserBeam</a></div><div class="ttdef"><b>Definition</b> <a href="_laser_beam_8h_source.html#l00017">LaserBeam.h:19</a></div></div>
+<div class="ttc" id="aclass_a_square_indicator_actor_html"><div class="ttname"><a href="class_a_square_indicator_actor.html">ASquareIndicatorActor</a></div><div class="ttdef"><b>Definition</b> <a href="_square_indicator_actor_8h_source.html#l00009">SquareIndicatorActor.h:11</a></div></div>
+<div class="ttc" id="aclass_u_base_laser_attack_ability_html_a052684343b2b10826cd3d60f21b819d7"><div class="ttname"><a href="class_u_base_laser_attack_ability.html#a052684343b2b10826cd3d60f21b819d7">UBaseLaserAttackAbility::LaserWidth</a></div><div class="ttdeci">float LaserWidth</div><div class="ttdef"><b>Definition</b> <a href="#l00054">BaseLaserAttackAbility.h:54</a></div></div>
+<div class="ttc" id="aclass_u_base_laser_attack_ability_html_a0d0b62e41bad262d0a70dd8295ea6826"><div class="ttname"><a href="class_u_base_laser_attack_ability.html#a0d0b62e41bad262d0a70dd8295ea6826">UBaseLaserAttackAbility::DamageGameplayTag</a></div><div class="ttdeci">FGameplayTag DamageGameplayTag</div><div class="ttdef"><b>Definition</b> <a href="#l00077">BaseLaserAttackAbility.h:77</a></div></div>
+<div class="ttc" id="aclass_u_base_laser_attack_ability_html_a1f265f5b299f3057b632ab3d32970ea6"><div class="ttname"><a href="class_u_base_laser_attack_ability.html#a1f265f5b299f3057b632ab3d32970ea6">UBaseLaserAttackAbility::FinishLaserAttack</a></div><div class="ttdeci">void FinishLaserAttack()</div><div class="ttdoc">Cleans up all spawned lasers and stops timers.</div><div class="ttdef"><b>Definition</b> <a href="_base_laser_attack_ability_8cpp_source.html#l00140">BaseLaserAttackAbility.cpp:140</a></div></div>
+<div class="ttc" id="aclass_u_base_laser_attack_ability_html_a21606085ba0ccebb2f3066921459b0bb"><div class="ttname"><a href="class_u_base_laser_attack_ability.html#a21606085ba0ccebb2f3066921459b0bb">UBaseLaserAttackAbility::InitialRotationOffset</a></div><div class="ttdeci">float InitialRotationOffset</div><div class="ttdef"><b>Definition</b> <a href="#l00061">BaseLaserAttackAbility.h:61</a></div></div>
+<div class="ttc" id="aclass_u_base_laser_attack_ability_html_a21c04aa288316941f07a73bd46cb55bf"><div class="ttname"><a href="class_u_base_laser_attack_ability.html#a21c04aa288316941f07a73bd46cb55bf">UBaseLaserAttackAbility::RotationSpeed</a></div><div class="ttdeci">float RotationSpeed</div><div class="ttdef"><b>Definition</b> <a href="#l00058">BaseLaserAttackAbility.h:58</a></div></div>
+<div class="ttc" id="aclass_u_base_laser_attack_ability_html_a26ff67b6441cf3c270bb40024bb261f0"><div class="ttname"><a href="class_u_base_laser_attack_ability.html#a26ff67b6441cf3c270bb40024bb261f0">UBaseLaserAttackAbility::ActivateAbility</a></div><div class="ttdeci">virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData *TriggerEventData) override</div><div class="ttdef"><b>Definition</b> <a href="_base_laser_attack_ability_8cpp_source.html#l00018">BaseLaserAttackAbility.cpp:18</a></div></div>
+<div class="ttc" id="aclass_u_base_laser_attack_ability_html_a35b3f984a62e5bd03f9894eb57bfdf2c"><div class="ttname"><a href="class_u_base_laser_attack_ability.html#a35b3f984a62e5bd03f9894eb57bfdf2c">UBaseLaserAttackAbility::DamagePerSecond</a></div><div class="ttdeci">float DamagePerSecond</div><div class="ttdef"><b>Definition</b> <a href="#l00071">BaseLaserAttackAbility.h:71</a></div></div>
+<div class="ttc" id="aclass_u_base_laser_attack_ability_html_a36c4194dbb2a144b0faa7d2f3abdc639"><div class="ttname"><a href="class_u_base_laser_attack_ability.html#a36c4194dbb2a144b0faa7d2f3abdc639">UBaseLaserAttackAbility::DamageTickInterval</a></div><div class="ttdeci">float DamageTickInterval</div><div class="ttdef"><b>Definition</b> <a href="#l00074">BaseLaserAttackAbility.h:74</a></div></div>
+<div class="ttc" id="aclass_u_base_laser_attack_ability_html_a3cdd77ecb02c7b3ffa1161894f732ff2"><div class="ttname"><a href="class_u_base_laser_attack_ability.html#a3cdd77ecb02c7b3ffa1161894f732ff2">UBaseLaserAttackAbility::LaserDuration</a></div><div class="ttdeci">float LaserDuration</div><div class="ttdef"><b>Definition</b> <a href="#l00081">BaseLaserAttackAbility.h:81</a></div></div>
+<div class="ttc" id="aclass_u_base_laser_attack_ability_html_a4d6fd6f66ecce3751871926729982427"><div class="ttname"><a href="class_u_base_laser_attack_ability.html#a4d6fd6f66ecce3751871926729982427">UBaseLaserAttackAbility::LaserLength</a></div><div class="ttdeci">float LaserLength</div><div class="ttdef"><b>Definition</b> <a href="#l00051">BaseLaserAttackAbility.h:51</a></div></div>
+<div class="ttc" id="aclass_u_base_laser_attack_ability_html_a674fe5df0cdc156691878ce8e00f15f2"><div class="ttname"><a href="class_u_base_laser_attack_ability.html#a674fe5df0cdc156691878ce8e00f15f2">UBaseLaserAttackAbility::SpawnLaserIndicator</a></div><div class="ttdeci">void SpawnLaserIndicator()</div><div class="ttdef"><b>Definition</b> <a href="_base_laser_attack_ability_8cpp_source.html#l00039">BaseLaserAttackAbility.cpp:39</a></div></div>
+<div class="ttc" id="aclass_u_base_laser_attack_ability_html_a727c7965fcefc52a0f75b864922506a3"><div class="ttname"><a href="class_u_base_laser_attack_ability.html#a727c7965fcefc52a0f75b864922506a3">UBaseLaserAttackAbility::CastingMontage</a></div><div class="ttdeci">TObjectPtr&lt; UAnimMontage &gt; CastingMontage</div><div class="ttdef"><b>Definition</b> <a href="#l00087">BaseLaserAttackAbility.h:87</a></div></div>
+<div class="ttc" id="aclass_u_base_laser_attack_ability_html_a872ab3f13348f056b6148f62cf3fffc7"><div class="ttname"><a href="class_u_base_laser_attack_ability.html#a872ab3f13348f056b6148f62cf3fffc7">UBaseLaserAttackAbility::EndAbility</a></div><div class="ttdeci">virtual void EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled) override</div><div class="ttdef"><b>Definition</b> <a href="_base_laser_attack_ability_8cpp_source.html#l00026">BaseLaserAttackAbility.cpp:26</a></div></div>
+<div class="ttc" id="aclass_u_base_laser_attack_ability_html_a89d3e422478438952bdc03c0391b8e08"><div class="ttname"><a href="class_u_base_laser_attack_ability.html#a89d3e422478438952bdc03c0391b8e08">UBaseLaserAttackAbility::NumberOfLasers</a></div><div class="ttdeci">int32 NumberOfLasers</div><div class="ttdef"><b>Definition</b> <a href="#l00048">BaseLaserAttackAbility.h:48</a></div></div>
+<div class="ttc" id="aclass_u_base_laser_attack_ability_html_aa398b1c8400be1004cc48ab88c2372a9"><div class="ttname"><a href="class_u_base_laser_attack_ability.html#aa398b1c8400be1004cc48ab88c2372a9">UBaseLaserAttackAbility::GetLifetimeReplicatedProps</a></div><div class="ttdeci">virtual void GetLifetimeReplicatedProps(TArray&lt; class FLifetimeProperty &gt; &amp;OutLifetimeProps) const override</div><div class="ttdef"><b>Definition</b> <a href="_base_laser_attack_ability_8cpp_source.html#l00033">BaseLaserAttackAbility.cpp:33</a></div></div>
+<div class="ttc" id="aclass_u_base_laser_attack_ability_html_aa532f1e8319047faa3a5e7f453e4b627"><div class="ttname"><a href="class_u_base_laser_attack_ability.html#aa532f1e8319047faa3a5e7f453e4b627">UBaseLaserAttackAbility::LaserIndicatorClass</a></div><div class="ttdeci">TSubclassOf&lt; ASquareIndicatorActor &gt; LaserIndicatorClass</div><div class="ttdef"><b>Definition</b> <a href="#l00038">BaseLaserAttackAbility.h:38</a></div></div>
+<div class="ttc" id="aclass_u_base_laser_attack_ability_html_abd26ecf6cee23237e9249ce68b42fa62"><div class="ttname"><a href="class_u_base_laser_attack_ability.html#abd26ecf6cee23237e9249ce68b42fa62">UBaseLaserAttackAbility::UBaseLaserAttackAbility</a></div><div class="ttdeci">UBaseLaserAttackAbility()</div><div class="ttdef"><b>Definition</b> <a href="_base_laser_attack_ability_8cpp_source.html#l00012">BaseLaserAttackAbility.cpp:12</a></div></div>
+<div class="ttc" id="aclass_u_base_laser_attack_ability_html_ac49822a928fe96077caded42985e05d7"><div class="ttname"><a href="class_u_base_laser_attack_ability.html#ac49822a928fe96077caded42985e05d7">UBaseLaserAttackAbility::SpawnAndStartLasers</a></div><div class="ttdeci">void SpawnAndStartLasers()</div><div class="ttdoc">Spawns the laser beams and starts their rotation and damage ticks.</div><div class="ttdef"><b>Definition</b> <a href="_base_laser_attack_ability_8cpp_source.html#l00065">BaseLaserAttackAbility.cpp:65</a></div></div>
+<div class="ttc" id="aclass_u_base_laser_attack_ability_html_ad1a11b3bbe71ec74e20323116cad88fe"><div class="ttname"><a href="class_u_base_laser_attack_ability.html#ad1a11b3bbe71ec74e20323116cad88fe">UBaseLaserAttackAbility::ActivateAbility_BP</a></div><div class="ttdeci">void ActivateAbility_BP(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo &amp;ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData &amp;TriggerEventData)</div><div class="ttdoc">This function is meant to be implemented in Blueprint to define the ability&#39;s activation flow.</div></div>
+<div class="ttc" id="aclass_u_base_laser_attack_ability_html_ad50f21c620a0524361b37fbfb8c21b41"><div class="ttname"><a href="class_u_base_laser_attack_ability.html#ad50f21c620a0524361b37fbfb8c21b41">UBaseLaserAttackAbility::SpawnRadius</a></div><div class="ttdeci">float SpawnRadius</div><div class="ttdef"><b>Definition</b> <a href="#l00064">BaseLaserAttackAbility.h:64</a></div></div>
+<div class="ttc" id="aclass_u_base_laser_attack_ability_html_ae15806bde680b99e1d95ae68e2fed7f1"><div class="ttname"><a href="class_u_base_laser_attack_ability.html#ae15806bde680b99e1d95ae68e2fed7f1">UBaseLaserAttackAbility::bInfiniteDuration</a></div><div class="ttdeci">bool bInfiniteDuration</div><div class="ttdef"><b>Definition</b> <a href="#l00084">BaseLaserAttackAbility.h:84</a></div></div>
+<div class="ttc" id="aclass_u_base_laser_attack_ability_html_aeb50e2a57d521db100b75b7d84ec04df"><div class="ttname"><a href="class_u_base_laser_attack_ability.html#aeb50e2a57d521db100b75b7d84ec04df">UBaseLaserAttackAbility::PayloadEffectClass</a></div><div class="ttdeci">TSubclassOf&lt; UGameplayEffect &gt; PayloadEffectClass</div><div class="ttdef"><b>Definition</b> <a href="#l00068">BaseLaserAttackAbility.h:68</a></div></div>
+<div class="ttc" id="aclass_u_base_laser_attack_ability_html_aeba0f1d87bfd73bd5ffc85c456a9d069"><div class="ttname"><a href="class_u_base_laser_attack_ability.html#aeba0f1d87bfd73bd5ffc85c456a9d069">UBaseLaserAttackAbility::LaserBeamClass</a></div><div class="ttdeci">TSubclassOf&lt; ALaserBeam &gt; LaserBeamClass</div><div class="ttdef"><b>Definition</b> <a href="#l00045">BaseLaserAttackAbility.h:45</a></div></div>
+<div class="ttc" id="aclass_u_base_laser_attack_ability_html_aed70cc1062f9a93c8ad517e5632386c0"><div class="ttname"><a href="class_u_base_laser_attack_ability.html#aed70cc1062f9a93c8ad517e5632386c0">UBaseLaserAttackAbility::IndicatorTime</a></div><div class="ttdeci">float IndicatorTime</div><div class="ttdef"><b>Definition</b> <a href="#l00041">BaseLaserAttackAbility.h:41</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_835db7cc60e52a26a89059f64164cf8e.html">Skill</a></li><li class="navelem"><a href="dir_450d4bb011d81f3d6e7dc615ecdadbdc.html">Ability</a></li><li class="navelem"><a href="dir_aab726bc2c96509aa44b04914dd5444e.html">LazerAttack</a></li><li class="navelem"><a href="_base_laser_attack_ability_8h.html">BaseLaserAttackAbility.h</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

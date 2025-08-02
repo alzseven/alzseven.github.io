@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/UI/ButtonBase.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_button_base_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ButtonBase.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_button_base_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_u_i_base_8h.html">UI/UIBase.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;ButtonBase.generated.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// InternalButton-&gt;OnHovered.AddDynamic(this, &amp;UButtonBase::OnButtonHovered);</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// InternalButton-&gt;OnUnhovered.AddDynamic(this, &amp;UButtonBase::OnButtonUnhovered);</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// InternalButton-&gt;OnPressed.AddDynamic(this, &amp;UButtonBase::OnButtonPressed);</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// InternalButton-&gt;OnReleased.AddDynamic(this, &amp;UButtonBase::OnButtonReleased);</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnButtonClickedDelegate);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnButtonHoveredDelegate);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnButtonUnhoveredDelegate);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnButtonPressedDelegate);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnButtonReleasedDelegate);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">class </span>UButton;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">class </span>UImage;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">class </span>UTextBlock;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_u_button_base.html">   27</a></span>UCLASS()</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>class KPT_API <a class="code hl_class" href="class_u_button_base.html">UButtonBase</a> : public <a class="code hl_class" href="class_u_u_i_base.html">UUIBase</a></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    UFUNCTION(BlueprintCallable)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_button_base.html#a7e217491ba7a6e6d028ea4ffae2cc9a1">SetMainText</a>(FText Text);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    UFUNCTION(BlueprintCallable)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    FText <a class="code hl_function" href="class_u_button_base.html#a2b3d54f227d7e9535069d11c83dadf85">GetMainText</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_button_base.html#ab62fa03cbce46dfba390b1f00204e946">NativeConstruct</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_button_base.html#acd3520d45a4447167f4367edccbd69dd">NativePreConstruct</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_button_base.html#afe1c93ac6bcfa382fcc4f8d43a632344">NativeDestruct</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="comment">// 스타일을 적용하는 공통 함수</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> ApplyStyle();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    UPROPERTY(BlueprintAssignable, Category = <span class="stringliteral">&quot;Button&quot;</span>)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_u_button_base.html#a7c4b5bc15fa65be9770d826215f91854">   50</a></span>    FOnButtonClickedDelegate <a class="code hl_variable" href="class_u_button_base.html#a7c4b5bc15fa65be9770d826215f91854">OnClicked</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    UPROPERTY(BlueprintAssignable, Category = <span class="stringliteral">&quot;Button&quot;</span>)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_u_button_base.html#aaaace0f862c3d137df745179fffcd1a8">   53</a></span>    FOnButtonHoveredDelegate <a class="code hl_variable" href="class_u_button_base.html#aaaace0f862c3d137df745179fffcd1a8">OnHovered</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    UPROPERTY(BlueprintAssignable, Category = <span class="stringliteral">&quot;Button&quot;</span>)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_u_button_base.html#aa67180846a63f8273f5426999b1e3f16">   56</a></span>    FOnButtonUnhoveredDelegate <a class="code hl_variable" href="class_u_button_base.html#aa67180846a63f8273f5426999b1e3f16">OnUnhovered</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    UPROPERTY(BlueprintAssignable, Category = <span class="stringliteral">&quot;Button&quot;</span>)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_u_button_base.html#a4b38c60f24fe76a6e7e7b711193f1676">   59</a></span>    FOnButtonPressedDelegate <a class="code hl_variable" href="class_u_button_base.html#a4b38c60f24fe76a6e7e7b711193f1676">OnPressed</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    UPROPERTY(BlueprintAssignable, Category = <span class="stringliteral">&quot;Button&quot;</span>)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_u_button_base.html#ae9d921fef3abc0daa8979ed11cceac2a">   62</a></span>    FOnButtonReleasedDelegate <a class="code hl_variable" href="class_u_button_base.html#ae9d921fef3abc0daa8979ed11cceac2a">OnReleased</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>private:</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    UFUNCTION()</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> HandleInternalButtonClick();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    UFUNCTION()</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">void</span> HandleInternalButtonHover();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    UFUNCTION()</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">void</span> HandleInternalButtonUnHover();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    UFUNCTION()</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">void</span> HandleInternalButtonPress();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    UFUNCTION()</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span> HandleInternalButtonRelease();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>protected:</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    UPROPERTY(BlueprintReadWrite, meta = (BindWidget))</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="class_u_button_base.html#a869f47fd6b2719adc7552e95f8a68cb5">   82</a></span>    UButton* <a class="code hl_variable" href="class_u_button_base.html#a869f47fd6b2719adc7552e95f8a68cb5">MainButton</a>; <span class="comment">// UMG 위젯 이름과 변수명을 동일하게 맞추는 것이 좋습니다.</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    UPROPERTY(BlueprintReadWrite, meta = (BindWidget))</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_u_button_base.html#a926aa7ac7ec2d93097de202433532efb">   85</a></span>    UImage* <a class="code hl_variable" href="class_u_button_base.html#a926aa7ac7ec2d93097de202433532efb">MainImage</a>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    UPROPERTY(BlueprintReadWrite, meta = (BindWidget))</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_u_button_base.html#a9e03572ed1d3783c1125829490e86870">   88</a></span>    UTextBlock* <a class="code hl_variable" href="class_u_button_base.html#a9e03572ed1d3783c1125829490e86870">MainText</a>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">// 버튼의 각 상태에 대한 스타일을 정의합니다.</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = <span class="stringliteral">&quot;Button Style&quot;</span>)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="class_u_button_base.html#a9df5a965ba4d0805f4a3b8d342425b0f">   92</a></span>    FSlateBrush <a class="code hl_variable" href="class_u_button_base.html#a9df5a965ba4d0805f4a3b8d342425b0f">NormalBrush</a>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = <span class="stringliteral">&quot;Button Style&quot;</span>)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="class_u_button_base.html#a871482fb0186bd35f04908015d3fde96">   95</a></span>    FSlateBrush <a class="code hl_variable" href="class_u_button_base.html#a871482fb0186bd35f04908015d3fde96">HoveredBrush</a>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = <span class="stringliteral">&quot;Button Style&quot;</span>)</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="class_u_button_base.html#a9ce6ad62b579776df7825e9e3b44b71e">   98</a></span>    FSlateBrush <a class="code hl_variable" href="class_u_button_base.html#a9ce6ad62b579776df7825e9e3b44b71e">PressedBrush</a>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="comment">// 눌렸을 때 버튼이 살짝 아래로 이동하는 듯한 효과를 위한 패딩 값</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = <span class="stringliteral">&quot;Button Style&quot;</span>)</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_u_button_base.html#a744cd8324ca75b0c5f7e9565a345dc46">  102</a></span>    FMargin <a class="code hl_variable" href="class_u_button_base.html#a744cd8324ca75b0c5f7e9565a345dc46">PressedPadding</a> = FMargin(0.f, 200.f, 0.f, 0.f);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>};</div>
+</div>
+<div class="ttc" id="a_u_i_base_8h_html"><div class="ttname"><a href="_u_i_base_8h.html">UIBase.h</a></div></div>
+<div class="ttc" id="aclass_u_button_base_html"><div class="ttname"><a href="class_u_button_base.html">UButtonBase</a></div><div class="ttdef"><b>Definition</b> <a href="#l00027">ButtonBase.h:29</a></div></div>
+<div class="ttc" id="aclass_u_button_base_html_a2b3d54f227d7e9535069d11c83dadf85"><div class="ttname"><a href="class_u_button_base.html#a2b3d54f227d7e9535069d11c83dadf85">UButtonBase::GetMainText</a></div><div class="ttdeci">FText GetMainText()</div><div class="ttdef"><b>Definition</b> <a href="_button_base_8cpp_source.html#l00105">ButtonBase.cpp:105</a></div></div>
+<div class="ttc" id="aclass_u_button_base_html_a4b38c60f24fe76a6e7e7b711193f1676"><div class="ttname"><a href="class_u_button_base.html#a4b38c60f24fe76a6e7e7b711193f1676">UButtonBase::OnPressed</a></div><div class="ttdeci">FOnButtonPressedDelegate OnPressed</div><div class="ttdef"><b>Definition</b> <a href="#l00059">ButtonBase.h:59</a></div></div>
+<div class="ttc" id="aclass_u_button_base_html_a744cd8324ca75b0c5f7e9565a345dc46"><div class="ttname"><a href="class_u_button_base.html#a744cd8324ca75b0c5f7e9565a345dc46">UButtonBase::PressedPadding</a></div><div class="ttdeci">FMargin PressedPadding</div><div class="ttdef"><b>Definition</b> <a href="#l00102">ButtonBase.h:102</a></div></div>
+<div class="ttc" id="aclass_u_button_base_html_a7c4b5bc15fa65be9770d826215f91854"><div class="ttname"><a href="class_u_button_base.html#a7c4b5bc15fa65be9770d826215f91854">UButtonBase::OnClicked</a></div><div class="ttdeci">FOnButtonClickedDelegate OnClicked</div><div class="ttdef"><b>Definition</b> <a href="#l00050">ButtonBase.h:50</a></div></div>
+<div class="ttc" id="aclass_u_button_base_html_a7e217491ba7a6e6d028ea4ffae2cc9a1"><div class="ttname"><a href="class_u_button_base.html#a7e217491ba7a6e6d028ea4ffae2cc9a1">UButtonBase::SetMainText</a></div><div class="ttdeci">void SetMainText(FText Text)</div><div class="ttdef"><b>Definition</b> <a href="_button_base_8cpp_source.html#l00100">ButtonBase.cpp:100</a></div></div>
+<div class="ttc" id="aclass_u_button_base_html_a869f47fd6b2719adc7552e95f8a68cb5"><div class="ttname"><a href="class_u_button_base.html#a869f47fd6b2719adc7552e95f8a68cb5">UButtonBase::MainButton</a></div><div class="ttdeci">UButton * MainButton</div><div class="ttdef"><b>Definition</b> <a href="#l00082">ButtonBase.h:82</a></div></div>
+<div class="ttc" id="aclass_u_button_base_html_a871482fb0186bd35f04908015d3fde96"><div class="ttname"><a href="class_u_button_base.html#a871482fb0186bd35f04908015d3fde96">UButtonBase::HoveredBrush</a></div><div class="ttdeci">FSlateBrush HoveredBrush</div><div class="ttdef"><b>Definition</b> <a href="#l00095">ButtonBase.h:95</a></div></div>
+<div class="ttc" id="aclass_u_button_base_html_a926aa7ac7ec2d93097de202433532efb"><div class="ttname"><a href="class_u_button_base.html#a926aa7ac7ec2d93097de202433532efb">UButtonBase::MainImage</a></div><div class="ttdeci">UImage * MainImage</div><div class="ttdef"><b>Definition</b> <a href="#l00085">ButtonBase.h:85</a></div></div>
+<div class="ttc" id="aclass_u_button_base_html_a9ce6ad62b579776df7825e9e3b44b71e"><div class="ttname"><a href="class_u_button_base.html#a9ce6ad62b579776df7825e9e3b44b71e">UButtonBase::PressedBrush</a></div><div class="ttdeci">FSlateBrush PressedBrush</div><div class="ttdef"><b>Definition</b> <a href="#l00098">ButtonBase.h:98</a></div></div>
+<div class="ttc" id="aclass_u_button_base_html_a9df5a965ba4d0805f4a3b8d342425b0f"><div class="ttname"><a href="class_u_button_base.html#a9df5a965ba4d0805f4a3b8d342425b0f">UButtonBase::NormalBrush</a></div><div class="ttdeci">FSlateBrush NormalBrush</div><div class="ttdef"><b>Definition</b> <a href="#l00092">ButtonBase.h:92</a></div></div>
+<div class="ttc" id="aclass_u_button_base_html_a9e03572ed1d3783c1125829490e86870"><div class="ttname"><a href="class_u_button_base.html#a9e03572ed1d3783c1125829490e86870">UButtonBase::MainText</a></div><div class="ttdeci">UTextBlock * MainText</div><div class="ttdef"><b>Definition</b> <a href="#l00088">ButtonBase.h:88</a></div></div>
+<div class="ttc" id="aclass_u_button_base_html_aa67180846a63f8273f5426999b1e3f16"><div class="ttname"><a href="class_u_button_base.html#aa67180846a63f8273f5426999b1e3f16">UButtonBase::OnUnhovered</a></div><div class="ttdeci">FOnButtonUnhoveredDelegate OnUnhovered</div><div class="ttdef"><b>Definition</b> <a href="#l00056">ButtonBase.h:56</a></div></div>
+<div class="ttc" id="aclass_u_button_base_html_aaaace0f862c3d137df745179fffcd1a8"><div class="ttname"><a href="class_u_button_base.html#aaaace0f862c3d137df745179fffcd1a8">UButtonBase::OnHovered</a></div><div class="ttdeci">FOnButtonHoveredDelegate OnHovered</div><div class="ttdef"><b>Definition</b> <a href="#l00053">ButtonBase.h:53</a></div></div>
+<div class="ttc" id="aclass_u_button_base_html_ab62fa03cbce46dfba390b1f00204e946"><div class="ttname"><a href="class_u_button_base.html#ab62fa03cbce46dfba390b1f00204e946">UButtonBase::NativeConstruct</a></div><div class="ttdeci">virtual void NativeConstruct() override</div><div class="ttdef"><b>Definition</b> <a href="_button_base_8cpp_source.html#l00010">ButtonBase.cpp:10</a></div></div>
+<div class="ttc" id="aclass_u_button_base_html_acd3520d45a4447167f4367edccbd69dd"><div class="ttname"><a href="class_u_button_base.html#acd3520d45a4447167f4367edccbd69dd">UButtonBase::NativePreConstruct</a></div><div class="ttdeci">virtual void NativePreConstruct() override</div><div class="ttdef"><b>Definition</b> <a href="_button_base_8cpp_source.html#l00024">ButtonBase.cpp:24</a></div></div>
+<div class="ttc" id="aclass_u_button_base_html_ae9d921fef3abc0daa8979ed11cceac2a"><div class="ttname"><a href="class_u_button_base.html#ae9d921fef3abc0daa8979ed11cceac2a">UButtonBase::OnReleased</a></div><div class="ttdeci">FOnButtonReleasedDelegate OnReleased</div><div class="ttdef"><b>Definition</b> <a href="#l00062">ButtonBase.h:62</a></div></div>
+<div class="ttc" id="aclass_u_button_base_html_afe1c93ac6bcfa382fcc4f8d43a632344"><div class="ttname"><a href="class_u_button_base.html#afe1c93ac6bcfa382fcc4f8d43a632344">UButtonBase::NativeDestruct</a></div><div class="ttdeci">virtual void NativeDestruct() override</div><div class="ttdef"><b>Definition</b> <a href="_button_base_8cpp_source.html#l00030">ButtonBase.cpp:30</a></div></div>
+<div class="ttc" id="aclass_u_u_i_base_html"><div class="ttname"><a href="class_u_u_i_base.html">UUIBase</a></div><div class="ttdef"><b>Definition</b> <a href="_u_i_base_8h_source.html#l00013">UIBase.h:15</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_03a35ccb76f34b0c5c973a49dad1c475.html">UI</a></li><li class="navelem"><a href="_button_base_8h.html">ButtonBase.h</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

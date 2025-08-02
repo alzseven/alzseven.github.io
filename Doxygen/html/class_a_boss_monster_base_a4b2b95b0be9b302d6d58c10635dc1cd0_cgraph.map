@@ -1,0 +1,7 @@
+<map id="ABossMonsterBase::BeginPlay" name="ABossMonsterBase::BeginPlay">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,47,210,73"/>
+<area shape="rect" id="Node000002" href="$class_a_boss_monster_base.html#a96aef28a337652697596cc5012797c78" title=" " alt="" coords="270,5,463,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,44,254,38,254,44,210,49"/>
+<area shape="rect" id="Node000003" href="$class_a_boss_monster_base.html#ad00d7b706c434e7c530716da0af6e165" title=" " alt="" coords="258,72,475,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="210,71,243,75,242,80,210,76"/>
+</map>

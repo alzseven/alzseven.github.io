@@ -1,0 +1,5 @@
+<map id="AMinionProjectileActor::OnRep_ServerPosition" name="AMinionProjectileActor::OnRep_ServerPosition">
+<area shape="rect" id="Node000001" title=" " alt="" coords="207,5,369,48"/>
+<area shape="rect" id="Node000002" href="$class_a_minion_projectile_actor.html#a3c7fe0c6a48beeb533a282ba69abe3c3" title=" " alt="" coords="5,5,159,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,29,159,29,159,24,191,24"/>
+</map>

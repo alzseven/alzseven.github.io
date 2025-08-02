@@ -1,0 +1,16 @@
+<map id="UShopManagerSubsystem::StartShopPhaseForPlayer" name="UShopManagerSubsystem::StartShopPhaseForPlayer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,141,186,184"/>
+<area shape="rect" id="Node000002" href="$class_u_shop_manager_subsystem.html#a93880afd9098aaf4d8dfb818852f2195" title=" " alt="" coords="234,141,411,184"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,160,218,160,218,165,186,165"/>
+<area shape="rect" id="Node000003" href="$class_u_shop_manager_subsystem.html#a753f472cc5049d1e88a2109695987513" title=" " alt="" coords="474,5,651,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="346,139,395,98,458,58,470,52,472,57,460,62,398,102,349,143"/>
+<area shape="rect" id="Node000004" href="$class_a_k_p_t_player_state.html#ad16de49a5aa9fc63b311aafb84b70e3f" title=" " alt="" coords="459,96,666,139"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="411,143,443,137,444,142,412,149"/>
+<area shape="rect" id="Node000005" href="$class_a_k_p_t_player_state.html#a7789be3e05ccea22c983d507f9931e8c" title=" " alt="" coords="471,187,654,229"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="412,177,456,185,455,191,411,182"/>
+<area shape="rect" id="Node000006" href="$class_u_team_stats_component.html#a89b05be1fedf439ee7f39e52cdf03def" title=" " alt="" coords="482,277,643,320"/>
+<area shape="poly" id="edge7_Node000002_Node000006" title=" " alt="" coords="362,182,460,239,510,267,508,272,458,244,360,187"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="517,96,515,86,523,77,539,71,563,69,588,72,604,78,602,83,587,77,563,75,540,77,526,81,521,87,522,95"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="517,187,515,177,523,168,539,162,563,160,588,162,604,169,602,174,587,168,563,165,540,167,526,172,521,178,522,186"/>
+<area shape="poly" id="edge8_Node000006_Node000006" title=" " alt="" coords="517,277,515,267,523,258,539,253,563,251,588,253,604,259,602,264,587,258,563,256,540,258,526,263,521,269,522,276"/>
+</map>

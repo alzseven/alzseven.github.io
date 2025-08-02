@@ -1,0 +1,6 @@
+<map id="AMotionTrailActor::SetTrailLifeSpan" name="AMotionTrailActor::SetTrailLifeSpan">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,139,72"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="37,29,36,19,41,10,54,5,72,3,92,5,103,11,101,16,90,10,72,8,55,10,45,14,41,21,42,28"/>
+<area shape="rect" id="Node000002" href="$class_a_motion_trail_actor.html#a613f3db2c8ef77cfdb7105937cd1a422" title=" " alt="" coords="187,29,320,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,48,171,48,171,53,139,53"/>
+</map>

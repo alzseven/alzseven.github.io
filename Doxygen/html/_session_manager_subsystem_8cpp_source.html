@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Core/SubSystem/SessionManagerSubsystem.cpp 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_session_manager_subsystem_8cpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SessionManagerSubsystem.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_session_manager_subsystem_8cpp.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_session_manager_subsystem_8h.html">SessionManagerSubsystem.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="_session_manager_subsystem_8h.html">SessionManagerSubsystem.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;OnlineSubsystem.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;OnlineSessionSettings.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;OnlineSubsystemUtils.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;Kismet/GameplayStatics.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_u_session_manager_subsystem.html#ab4a317fd4168726e680df083fcb13d4c">   11</a></span><a class="code hl_function" href="class_u_session_manager_subsystem.html#ab4a317fd4168726e680df083fcb13d4c">USessionManagerSubsystem::USessionManagerSubsystem</a>() {}</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>IOnlineSessionPtr USessionManagerSubsystem::GetSessionInterface()<span class="keyword"> const</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    IOnlineSubsystem* OnlineSub = Online::GetSubsystem(GetWorld());</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordflow">return</span> OnlineSub ? OnlineSub-&gt;GetSessionInterface() : <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_u_session_manager_subsystem.html#af7568db24a85dbeb9646fe3a48a741b3">   19</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_session_manager_subsystem.html#af7568db24a85dbeb9646fe3a48a741b3">USessionManagerSubsystem::Initialize</a>(FSubsystemCollectionBase&amp; Collection)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    Super::Initialize(Collection);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">// IOnlineSessionPtr SessionInt = GetSessionInterface();</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">// if (SessionInt.IsValid())</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">// {</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">//     SessionInt-&gt;OnCreateSessionCompleteDelegates.AddUObject(this, &amp;USessionManagerSubsystem::OnCreateSessionComplete);</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">//     SessionInt-&gt;OnFindSessionsCompleteDelegates.AddUObject(this, &amp;USessionManagerSubsystem::OnFindSessionsComplete);</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="comment">//     SessionInt-&gt;OnJoinSessionCompleteDelegates.AddUObject(this, &amp;USessionManagerSubsystem::OnJoinSessionComplete);</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">//     SessionInt-&gt;OnDestroySessionCompleteDelegates.AddUObject(this, &amp;USessionManagerSubsystem::OnDestroySessionComplete);</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">// }</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
+</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">void</span> USessionManagerSubsystem::KptCreateSession_Implementation(int32 NumPublicConnections, <span class="keyword">const</span> FString&amp; MatchType)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>{</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">// void USessionManagerSubsystem::CreateSession_Implementation(int32 NumPublicConnections, FString MatchType)</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">// {</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">// }</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_u_session_manager_subsystem.html#a84a6d0da96c64fbd3aa964f4f906df62">   42</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_session_manager_subsystem.html#a84a6d0da96c64fbd3aa964f4f906df62">USessionManagerSubsystem::HostSession</a>(int32 NumPublicConnections, <span class="keywordtype">bool</span> bIsLANMatch, <span class="keyword">const</span> FString&amp; MapPath)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>{</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    IOnlineSessionPtr SessionInt = GetSessionInterface();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">if</span> (!SessionInt.IsValid())</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_variable" href="class_u_session_manager_subsystem.html#aecaf6fade733762eef55d91c77ee7e3d">OnHostSessionComplete</a>.Broadcast(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">// 세션이 이미 존재하면, 새로 생성하지 않고 실패를 알립니다.</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">if</span>(SessionInt-&gt;GetNamedSession(NAME_GameSession) != <span class="keyword">nullptr</span>)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        UE_LOG(LogOnlineSession, Warning, TEXT(<span class="stringliteral">&quot;HostSession failed: A session already exists. Destroy it first.&quot;</span>));</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_variable" href="class_u_session_manager_subsystem.html#aecaf6fade733762eef55d91c77ee7e3d">OnHostSessionComplete</a>.Broadcast(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    PendingTravelURL = MapPath;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    FOnlineSessionSettings SessionSettings;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    SessionSettings.NumPublicConnections = NumPublicConnections;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    SessionSettings.bShouldAdvertise = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    SessionSettings.bAllowJoinInProgress = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    SessionSettings.bIsLANMatch = bIsLANMatch;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    SessionSettings.bUsesPresence = !bIsLANMatch; <span class="comment">// LAN 매치가 아닐 때만 Presence 사용</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    SessionSettings.Set(GetGameInstance()-&gt;GetOnlinePlatformName(), FString(<span class="stringliteral">&quot;KPT Session&quot;</span>), EOnlineDataAdvertisementType::ViaOnlineServiceAndPing);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    ULocalPlayer* LocalPlayer = GetGameInstance()-&gt;GetFirstGamePlayer();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordflow">if</span> (!LocalPlayer)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <a class="code hl_variable" href="class_u_session_manager_subsystem.html#aecaf6fade733762eef55d91c77ee7e3d">OnHostSessionComplete</a>.Broadcast(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    SessionInt-&gt;CreateSession(*LocalPlayer-&gt;GetPreferredUniqueNetId(), NAME_GameSession, SessionSettings);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>}</div>
+</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="class_u_session_manager_subsystem.html#aeded4a9982e5571fd0dcd77d3993a67a">   79</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_session_manager_subsystem.html#aeded4a9982e5571fd0dcd77d3993a67a">USessionManagerSubsystem::FindSessions</a>(int32 MaxSearchResults, <span class="keywordtype">bool</span> bIsLANQuery)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>{</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    IOnlineSessionPtr SessionInt = GetSessionInterface();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">if</span> (!SessionInt.IsValid())</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <a class="code hl_variable" href="class_u_session_manager_subsystem.html#abd2026bab271aa42a4008eae735df050">OnFindSessionsCompleteResult</a>.Broadcast(<span class="keyword">false</span>, TArray&lt;FOnlineSessionSearchResult&gt;());</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    SessionSearch = MakeShareable(<span class="keyword">new</span> FOnlineSessionSearch());</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    SessionSearch-&gt;MaxSearchResults = MaxSearchResults;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    SessionSearch-&gt;bIsLanQuery = bIsLANQuery;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="comment">// LAN 쿼리일 때는 불필요한 검색 조건을 모두 제거하여 신뢰도를 높입니다.</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">if</span> (!bIsLANQuery)</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        SessionSearch-&gt;QuerySettings.Set(FName(TEXT(<span class="stringliteral">&quot;Public&quot;</span>)), <span class="keyword">true</span>, EOnlineComparisonOp::Equals);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    ULocalPlayer* LocalPlayer = GetGameInstance()-&gt;GetFirstGamePlayer();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">if</span> (!LocalPlayer)</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <a class="code hl_variable" href="class_u_session_manager_subsystem.html#abd2026bab271aa42a4008eae735df050">OnFindSessionsCompleteResult</a>.Broadcast(<span class="keyword">false</span>, TArray&lt;FOnlineSessionSearchResult&gt;());</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    SessionInt-&gt;FindSessions(*LocalPlayer-&gt;GetPreferredUniqueNetId(), SessionSearch.ToSharedRef());</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
+</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="foldopen" id="foldopen00107" data-start="{" data-end="}">
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="class_u_session_manager_subsystem.html#a8c74d78e6b88d33dbab8597686e004ec">  107</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_session_manager_subsystem.html#a8c74d78e6b88d33dbab8597686e004ec">USessionManagerSubsystem::JoinSession</a>(<span class="keyword">const</span> FOnlineSessionSearchResult&amp; SessionResult)</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>{</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    IOnlineSessionPtr SessionInt = GetSessionInterface();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordflow">if</span> (!SessionInt.IsValid())</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <a class="code hl_variable" href="class_u_session_manager_subsystem.html#af490de3b766682d9adcfc471fdf2416d">OnJoinSessionCompleteResult</a>.Broadcast(EOnJoinSessionCompleteResult::UnknownError);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    }</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    ULocalPlayer* LocalPlayer = GetGameInstance()-&gt;GetFirstGamePlayer();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordflow">if</span> (!LocalPlayer)</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <a class="code hl_variable" href="class_u_session_manager_subsystem.html#af490de3b766682d9adcfc471fdf2416d">OnJoinSessionCompleteResult</a>.Broadcast(EOnJoinSessionCompleteResult::UnknownError);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    SessionInt-&gt;JoinSession(*LocalPlayer-&gt;GetPreferredUniqueNetId(), NAME_GameSession, SessionResult);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>}</div>
+</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="foldopen" id="foldopen00124" data-start="{" data-end="}">
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="class_u_session_manager_subsystem.html#a6846ba200eac4764e0929d76afe96b8a">  124</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_session_manager_subsystem.html#a6846ba200eac4764e0929d76afe96b8a">USessionManagerSubsystem::DestroySession</a>()</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>{</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    IOnlineSessionPtr SessionInt = GetSessionInterface();</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordflow">if</span> (SessionInt.IsValid())</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        SessionInt-&gt;DestroySession(NAME_GameSession);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>}</div>
+</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="keywordtype">void</span> USessionManagerSubsystem::OnCreateSessionComplete(FName SessionName, <span class="keywordtype">bool</span> bWasSuccessful)</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>{</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <a class="code hl_variable" href="class_u_session_manager_subsystem.html#aecaf6fade733762eef55d91c77ee7e3d">OnHostSessionComplete</a>.Broadcast(bWasSuccessful);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordflow">if</span> (bWasSuccessful)</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        GetWorld()-&gt;ServerTravel(PendingTravelURL + TEXT(<span class="stringliteral">&quot;?listen&quot;</span>));</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>}</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="keywordtype">void</span> USessionManagerSubsystem::OnFindSessionsComplete(<span class="keywordtype">bool</span> bWasSuccessful)</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>{</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keywordflow">if</span> (SessionSearch.IsValid())</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        UE_LOG(LogOnlineSession, Log, TEXT(<span class="stringliteral">&quot;OnFindSessionsComplete, bWasSuccessful: %s, Results Count: %d&quot;</span>), bWasSuccessful ? TEXT(<span class="stringliteral">&quot;true&quot;</span>) : TEXT(<span class="stringliteral">&quot;false&quot;</span>), SessionSearch-&gt;SearchResults.Num());</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <a class="code hl_variable" href="class_u_session_manager_subsystem.html#abd2026bab271aa42a4008eae735df050">OnFindSessionsCompleteResult</a>.Broadcast(bWasSuccessful, SessionSearch-&gt;SearchResults);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    }</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>}</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="keywordtype">void</span> USessionManagerSubsystem::OnJoinSessionComplete(FName SessionName, EOnJoinSessionCompleteResult::Type Result)</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>{</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <a class="code hl_variable" href="class_u_session_manager_subsystem.html#af490de3b766682d9adcfc471fdf2416d">OnJoinSessionCompleteResult</a>.Broadcast(Result);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    <span class="keywordflow">if</span> (Result == EOnJoinSessionCompleteResult::Success)</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    {</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        IOnlineSessionPtr SessionInt = GetSessionInterface();</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keywordflow">if</span> (SessionInt.IsValid())</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            FString ConnectString;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            <span class="keywordflow">if</span>(SessionInt-&gt;GetResolvedConnectString(SessionName, ConnectString))</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                APlayerController* PC = GetGameInstance()-&gt;GetFirstLocalPlayerController();</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                <span class="keywordflow">if</span> (PC)</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                {</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                    PC-&gt;ClientTravel(ConnectString, ETravelType::TRAVEL_Absolute);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                }</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            }</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        }</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    }</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>}</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="keywordtype">void</span> USessionManagerSubsystem::OnDestroySessionComplete(FName SessionName, <span class="keywordtype">bool</span> bWasSuccessful)</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>{</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    UE_LOG(LogOnlineSession, Log, TEXT(<span class="stringliteral">&quot;Session %s destroyed: %d&quot;</span>), *SessionName.ToString(), bWasSuccessful);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <a class="code hl_variable" href="class_u_session_manager_subsystem.html#a4ce416809f4e2acf279c09019f958041">OnDestroySessionCompleteResult</a>.Broadcast(bWasSuccessful);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>}</div>
+<div class="ttc" id="a_session_manager_subsystem_8h_html"><div class="ttname"><a href="_session_manager_subsystem_8h.html">SessionManagerSubsystem.h</a></div></div>
+<div class="ttc" id="aclass_u_session_manager_subsystem_html_a4ce416809f4e2acf279c09019f958041"><div class="ttname"><a href="class_u_session_manager_subsystem.html#a4ce416809f4e2acf279c09019f958041">USessionManagerSubsystem::OnDestroySessionCompleteResult</a></div><div class="ttdeci">FOnDestroySessionCompleteResult OnDestroySessionCompleteResult</div><div class="ttdef"><b>Definition</b> <a href="_session_manager_subsystem_8h_source.html#l00041">SessionManagerSubsystem.h:41</a></div></div>
+<div class="ttc" id="aclass_u_session_manager_subsystem_html_a6846ba200eac4764e0929d76afe96b8a"><div class="ttname"><a href="class_u_session_manager_subsystem.html#a6846ba200eac4764e0929d76afe96b8a">USessionManagerSubsystem::DestroySession</a></div><div class="ttdeci">void DestroySession()</div><div class="ttdef"><b>Definition</b> <a href="#l00124">SessionManagerSubsystem.cpp:124</a></div></div>
+<div class="ttc" id="aclass_u_session_manager_subsystem_html_a84a6d0da96c64fbd3aa964f4f906df62"><div class="ttname"><a href="class_u_session_manager_subsystem.html#a84a6d0da96c64fbd3aa964f4f906df62">USessionManagerSubsystem::HostSession</a></div><div class="ttdeci">void HostSession(int32 NumPublicConnections, bool bIsLANMatch, const FString &amp;MapPath)</div><div class="ttdef"><b>Definition</b> <a href="#l00042">SessionManagerSubsystem.cpp:42</a></div></div>
+<div class="ttc" id="aclass_u_session_manager_subsystem_html_a8c74d78e6b88d33dbab8597686e004ec"><div class="ttname"><a href="class_u_session_manager_subsystem.html#a8c74d78e6b88d33dbab8597686e004ec">USessionManagerSubsystem::JoinSession</a></div><div class="ttdeci">void JoinSession(const FOnlineSessionSearchResult &amp;SessionResult)</div><div class="ttdef"><b>Definition</b> <a href="#l00107">SessionManagerSubsystem.cpp:107</a></div></div>
+<div class="ttc" id="aclass_u_session_manager_subsystem_html_ab4a317fd4168726e680df083fcb13d4c"><div class="ttname"><a href="class_u_session_manager_subsystem.html#ab4a317fd4168726e680df083fcb13d4c">USessionManagerSubsystem::USessionManagerSubsystem</a></div><div class="ttdeci">USessionManagerSubsystem()</div><div class="ttdef"><b>Definition</b> <a href="#l00011">SessionManagerSubsystem.cpp:11</a></div></div>
+<div class="ttc" id="aclass_u_session_manager_subsystem_html_abd2026bab271aa42a4008eae735df050"><div class="ttname"><a href="class_u_session_manager_subsystem.html#abd2026bab271aa42a4008eae735df050">USessionManagerSubsystem::OnFindSessionsCompleteResult</a></div><div class="ttdeci">FOnFindSessionsCompleteResult OnFindSessionsCompleteResult</div><div class="ttdef"><b>Definition</b> <a href="_session_manager_subsystem_8h_source.html#l00039">SessionManagerSubsystem.h:39</a></div></div>
+<div class="ttc" id="aclass_u_session_manager_subsystem_html_aecaf6fade733762eef55d91c77ee7e3d"><div class="ttname"><a href="class_u_session_manager_subsystem.html#aecaf6fade733762eef55d91c77ee7e3d">USessionManagerSubsystem::OnHostSessionComplete</a></div><div class="ttdeci">FOnHostSessionComplete OnHostSessionComplete</div><div class="ttdef"><b>Definition</b> <a href="_session_manager_subsystem_8h_source.html#l00038">SessionManagerSubsystem.h:38</a></div></div>
+<div class="ttc" id="aclass_u_session_manager_subsystem_html_aeded4a9982e5571fd0dcd77d3993a67a"><div class="ttname"><a href="class_u_session_manager_subsystem.html#aeded4a9982e5571fd0dcd77d3993a67a">USessionManagerSubsystem::FindSessions</a></div><div class="ttdeci">void FindSessions(int32 MaxSearchResults, bool bIsLANQuery)</div><div class="ttdef"><b>Definition</b> <a href="#l00079">SessionManagerSubsystem.cpp:79</a></div></div>
+<div class="ttc" id="aclass_u_session_manager_subsystem_html_af490de3b766682d9adcfc471fdf2416d"><div class="ttname"><a href="class_u_session_manager_subsystem.html#af490de3b766682d9adcfc471fdf2416d">USessionManagerSubsystem::OnJoinSessionCompleteResult</a></div><div class="ttdeci">FOnJoinSessionCompleteResult OnJoinSessionCompleteResult</div><div class="ttdef"><b>Definition</b> <a href="_session_manager_subsystem_8h_source.html#l00040">SessionManagerSubsystem.h:40</a></div></div>
+<div class="ttc" id="aclass_u_session_manager_subsystem_html_af7568db24a85dbeb9646fe3a48a741b3"><div class="ttname"><a href="class_u_session_manager_subsystem.html#af7568db24a85dbeb9646fe3a48a741b3">USessionManagerSubsystem::Initialize</a></div><div class="ttdeci">virtual void Initialize(FSubsystemCollectionBase &amp;Collection) override</div><div class="ttdef"><b>Definition</b> <a href="#l00019">SessionManagerSubsystem.cpp:19</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_9d0f275b41fa002800a89310ba1ebe25.html">Core</a></li><li class="navelem"><a href="dir_c5adcac0dad4fd3c0e6e6b5ea3efe6f7.html">SubSystem</a></li><li class="navelem"><a href="_session_manager_subsystem_8cpp.html">SessionManagerSubsystem.cpp</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<map id="AGold::ServerSetRandomDropPos" name="AGold::ServerSetRandomDropPos">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,229,57"/>
+<area shape="rect" id="Node000002" href="$class_a_gold.html#a96cdd077120be9835b489cfca4779bba" title=" " alt="" coords="277,5,467,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="229,30,261,27,261,32,230,36"/>
+<area shape="rect" id="Node000003" href="$class_a_gold.html#ac63c4ffbb21cba0afd57ba41e1d2890b" title=" " alt="" coords="277,56,467,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="230,52,261,56,261,61,229,58"/>
+</map>

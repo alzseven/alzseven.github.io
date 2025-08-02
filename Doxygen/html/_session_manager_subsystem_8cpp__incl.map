@@ -1,0 +1,23 @@
+<map id="C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Core/SubSystem/SessionManagerSubsystem.cpp" name="C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Core/SubSystem/SessionManagerSubsystem.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="534,5,820,80"/>
+<area shape="rect" id="Node000002" href="$_session_manager_subsystem_8h.html" title=" " alt="" coords="445,128,640,155"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="627,83,574,121,571,117,624,78"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,211,141,237"/>
+<area shape="poly" id="edge8_Node000001_Node000005" title=" " alt="" coords="554,83,131,208,130,203,553,78"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="1050,211,1214,237"/>
+<area shape="poly" id="edge9_Node000001_Node000006" title=" " alt="" coords="678,80,684,119,692,137,704,153,731,168,768,179,863,190,961,194,1037,200,1060,204,1059,210,1037,205,961,199,862,195,767,184,728,173,701,157,687,140,679,121,673,81"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="714,128,877,155"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="724,78,770,116,767,120,721,83"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="900,128,1078,155"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="797,78,935,120,933,126,795,83"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="164,211,270,237"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="482,158,282,205,271,208,270,203,280,200,481,153"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="294,211,554,237"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="525,157,456,204,453,200,522,153"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="445,158,306,178,152,205,135,209,133,204,151,200,305,173,444,152"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="641,151,857,176,1037,200,1062,204,1061,210,1037,205,856,181,640,156"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="577,203,745,245"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="562,153,620,192,617,196,559,157"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="769,211,1025,237"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="599,153,827,204,826,209,598,158"/>
+</map>

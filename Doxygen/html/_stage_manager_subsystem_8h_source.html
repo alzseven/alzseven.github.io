@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Core/SubSystem/WorldSubSystem/StageManagerSubsystem.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_stage_manager_subsystem_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">StageManagerSubsystem.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_stage_manager_subsystem_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Subsystems/WorldSubsystem.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;StageManagerSubsystem.generated.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">struct </span><a class="code hl_struct" href="struct_f_stage_data_row.html">FStageDataRow</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">struct </span><a class="code hl_struct" href="struct_f_phase_action_data.html">FPhaseActionData</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">struct </span><a class="code hl_struct" href="struct_f_boss_phase_data.html">FBossPhaseData</a>;</div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_u_stage_manager_subsystem.html">   17</a></span>UCLASS(Blueprintable, Abstract)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">class </span>KPT_API <a class="code hl_class" href="class_u_stage_manager_subsystem.html">UStageManagerSubsystem</a> : <span class="keyword">public</span> UWorldSubsystem</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_stage_manager_subsystem.html#ad0af6446e32468e50889d617d579207f">StartStage</a>(int32 InStageIndex);  </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_stage_manager_subsystem.html#ad7db719c535a3bcac636cbce16837507">EndStage</a>(<span class="keywordtype">bool</span> bMatchEnd);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_u_stage_manager_subsystem.html#afc484834b3d364a92817a4e6475bc810">GetStageDuration</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    UFUNCTION(BlueprintImplementableEvent)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_u_stage_manager_subsystem.html#a10be946619661f166108878489139489">   26</a></span>    void <a class="code hl_function" href="class_u_stage_manager_subsystem.html#a10be946619661f166108878489139489">SetStageDataToSpawner</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    UFUNCTION(BlueprintCallable, Category=<span class="stringliteral">&quot;Stage&quot;</span>)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    int32 <a class="code hl_function" href="class_u_stage_manager_subsystem.html#a1b506743975f481d0cd15a1153f0820d">GetMaxRoundCount</a>() const;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    UFUNCTION(BlueprintCallable, Category=<span class="stringliteral">&quot;Stage&quot;</span>)</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_u_stage_manager_subsystem.html#acee67f86b9c712f48829d333b472a58a">IsMaxRound</a>(int32 InStageIndex);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>protected:</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">/* 한 스테이지 내부에있는 요소들</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">     * 미션이나 보스등 스테이지로 분류하기는 애매한 이벤트를</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">     * 페이즈 라는 단위로 분류하려고함 */</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    UFUNCTION()</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_stage_manager_subsystem.html#a8a5a0fc89c9effbbb84cb8ea7729d1bc">StartPhase</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    UFUNCTION(BlueprintCallable, Category=<span class="stringliteral">&quot;Stage&quot;</span>)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_struct" href="struct_f_stage_data_row.html">FStageDataRow</a> <a class="code hl_function" href="class_u_stage_manager_subsystem.html#a8386ea09d547e37b0110a5f62dd2fb9d">GetCurrentStageData</a>() const;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>private:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> HandleBossPhase(const <a class="code hl_struct" href="struct_f_boss_phase_data.html">FBossPhaseData</a>&amp; BossPhaseData);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">void</span> ExecutePhaseAction(const <a class="code hl_struct" href="struct_f_phase_action_data.html">FPhaseActionData</a>&amp; Action);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>protected:</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">// 현재 페이즈</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_u_stage_manager_subsystem.html#afefe1084b7fd813ef09ec92af904dcb2">   50</a></span>    int32 <a class="code hl_variable" href="class_u_stage_manager_subsystem.html#afefe1084b7fd813ef09ec92af904dcb2">CurrentPhaseIndex</a> = -1;                <span class="comment">// 현재 진행중인 페이즈 인덱스 (Phase 배열 중 몇 번째인지)</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">// 현재 스테이지 데이터</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_u_stage_manager_subsystem.html#a8887087de2991433331aad1baf8db45a">   53</a></span>    const <a class="code hl_struct" href="struct_f_stage_data_row.html">FStageDataRow</a>* <a class="code hl_variable" href="class_u_stage_manager_subsystem.html#a8887087de2991433331aad1baf8db45a">CurrentStageData</a> = <span class="keywordtype">nullptr</span>; <span class="comment">// 또는 FStageData 구조체, DataTable Row</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// 현재 페이즈 데이터</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_u_stage_manager_subsystem.html#a6de0c25441c21d310fb3c59cc0b38744">   56</a></span>    const <a class="code hl_struct" href="struct_f_phase_action_data.html">FPhaseActionData</a>* <a class="code hl_variable" href="class_u_stage_manager_subsystem.html#a6de0c25441c21d310fb3c59cc0b38744">CurrentPhaseData</a> = <span class="keywordtype">nullptr</span>;  <span class="comment">// 현재 페이즈 정보(PhaseActions 포함)</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="comment">// 현재 진행중인 PhaseAction (여러 개 동시 처리 필요하면 배열/인덱스 등으로 관리)</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    UPROPERTY(EditAnywhere, Category=<span class="stringliteral">&quot;StageData&quot;</span>)</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_u_stage_manager_subsystem.html#a75732bddb65f11adf4244d58451e7191">   61</a></span>    TObjectPtr&lt;UDataTable&gt; <a class="code hl_variable" href="class_u_stage_manager_subsystem.html#a75732bddb65f11adf4244d58451e7191">StageDataTable</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    UPROPERTY()</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_u_stage_manager_subsystem.html#a7c101cb0ad891f4174ca9b6a0b6b75ff">   64</a></span>    TArray&lt;FTimerHandle&gt; <a class="code hl_variable" href="class_u_stage_manager_subsystem.html#a7c101cb0ad891f4174ca9b6a0b6b75ff">PhaseTimerHandles</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
+</div>
+<div class="ttc" id="aclass_u_stage_manager_subsystem_html"><div class="ttname"><a href="class_u_stage_manager_subsystem.html">UStageManagerSubsystem</a></div><div class="ttdoc">밤 페이즈 스테이지 진행에 관련된 헬퍼함수의 모음 UStageManagerSubsystem는 Stage에서 무엇을 해야 하는가?</div><div class="ttdef"><b>Definition</b> <a href="#l00017">StageManagerSubsystem.h:19</a></div></div>
+<div class="ttc" id="aclass_u_stage_manager_subsystem_html_a10be946619661f166108878489139489"><div class="ttname"><a href="class_u_stage_manager_subsystem.html#a10be946619661f166108878489139489">UStageManagerSubsystem::SetStageDataToSpawner</a></div><div class="ttdeci">void SetStageDataToSpawner()</div></div>
+<div class="ttc" id="aclass_u_stage_manager_subsystem_html_a1b506743975f481d0cd15a1153f0820d"><div class="ttname"><a href="class_u_stage_manager_subsystem.html#a1b506743975f481d0cd15a1153f0820d">UStageManagerSubsystem::GetMaxRoundCount</a></div><div class="ttdeci">int32 GetMaxRoundCount() const</div><div class="ttdef"><b>Definition</b> <a href="_stage_manager_subsystem_8cpp_source.html#l00055">StageManagerSubsystem.cpp:55</a></div></div>
+<div class="ttc" id="aclass_u_stage_manager_subsystem_html_a6de0c25441c21d310fb3c59cc0b38744"><div class="ttname"><a href="class_u_stage_manager_subsystem.html#a6de0c25441c21d310fb3c59cc0b38744">UStageManagerSubsystem::CurrentPhaseData</a></div><div class="ttdeci">const FPhaseActionData * CurrentPhaseData</div><div class="ttdef"><b>Definition</b> <a href="#l00056">StageManagerSubsystem.h:56</a></div></div>
+<div class="ttc" id="aclass_u_stage_manager_subsystem_html_a75732bddb65f11adf4244d58451e7191"><div class="ttname"><a href="class_u_stage_manager_subsystem.html#a75732bddb65f11adf4244d58451e7191">UStageManagerSubsystem::StageDataTable</a></div><div class="ttdeci">TObjectPtr&lt; UDataTable &gt; StageDataTable</div><div class="ttdef"><b>Definition</b> <a href="#l00061">StageManagerSubsystem.h:61</a></div></div>
+<div class="ttc" id="aclass_u_stage_manager_subsystem_html_a7c101cb0ad891f4174ca9b6a0b6b75ff"><div class="ttname"><a href="class_u_stage_manager_subsystem.html#a7c101cb0ad891f4174ca9b6a0b6b75ff">UStageManagerSubsystem::PhaseTimerHandles</a></div><div class="ttdeci">TArray&lt; FTimerHandle &gt; PhaseTimerHandles</div><div class="ttdef"><b>Definition</b> <a href="#l00064">StageManagerSubsystem.h:64</a></div></div>
+<div class="ttc" id="aclass_u_stage_manager_subsystem_html_a8386ea09d547e37b0110a5f62dd2fb9d"><div class="ttname"><a href="class_u_stage_manager_subsystem.html#a8386ea09d547e37b0110a5f62dd2fb9d">UStageManagerSubsystem::GetCurrentStageData</a></div><div class="ttdeci">FStageDataRow GetCurrentStageData() const</div><div class="ttdef"><b>Definition</b> <a href="_stage_manager_subsystem_8cpp_source.html#l00081">StageManagerSubsystem.cpp:81</a></div></div>
+<div class="ttc" id="aclass_u_stage_manager_subsystem_html_a8887087de2991433331aad1baf8db45a"><div class="ttname"><a href="class_u_stage_manager_subsystem.html#a8887087de2991433331aad1baf8db45a">UStageManagerSubsystem::CurrentStageData</a></div><div class="ttdeci">const FStageDataRow * CurrentStageData</div><div class="ttdef"><b>Definition</b> <a href="#l00053">StageManagerSubsystem.h:53</a></div></div>
+<div class="ttc" id="aclass_u_stage_manager_subsystem_html_a8a5a0fc89c9effbbb84cb8ea7729d1bc"><div class="ttname"><a href="class_u_stage_manager_subsystem.html#a8a5a0fc89c9effbbb84cb8ea7729d1bc">UStageManagerSubsystem::StartPhase</a></div><div class="ttdeci">void StartPhase()</div><div class="ttdef"><b>Definition</b> <a href="_stage_manager_subsystem_8cpp_source.html#l00069">StageManagerSubsystem.cpp:69</a></div></div>
+<div class="ttc" id="aclass_u_stage_manager_subsystem_html_acee67f86b9c712f48829d333b472a58a"><div class="ttname"><a href="class_u_stage_manager_subsystem.html#acee67f86b9c712f48829d333b472a58a">UStageManagerSubsystem::IsMaxRound</a></div><div class="ttdeci">bool IsMaxRound(int32 InStageIndex)</div><div class="ttdef"><b>Definition</b> <a href="_stage_manager_subsystem_8cpp_source.html#l00064">StageManagerSubsystem.cpp:64</a></div></div>
+<div class="ttc" id="aclass_u_stage_manager_subsystem_html_ad0af6446e32468e50889d617d579207f"><div class="ttname"><a href="class_u_stage_manager_subsystem.html#ad0af6446e32468e50889d617d579207f">UStageManagerSubsystem::StartStage</a></div><div class="ttdeci">void StartStage(int32 InStageIndex)</div><div class="ttdef"><b>Definition</b> <a href="_stage_manager_subsystem_8cpp_source.html#l00009">StageManagerSubsystem.cpp:9</a></div></div>
+<div class="ttc" id="aclass_u_stage_manager_subsystem_html_ad7db719c535a3bcac636cbce16837507"><div class="ttname"><a href="class_u_stage_manager_subsystem.html#ad7db719c535a3bcac636cbce16837507">UStageManagerSubsystem::EndStage</a></div><div class="ttdeci">void EndStage(bool bMatchEnd)</div><div class="ttdef"><b>Definition</b> <a href="_stage_manager_subsystem_8cpp_source.html#l00118">StageManagerSubsystem.cpp:118</a></div></div>
+<div class="ttc" id="aclass_u_stage_manager_subsystem_html_afc484834b3d364a92817a4e6475bc810"><div class="ttname"><a href="class_u_stage_manager_subsystem.html#afc484834b3d364a92817a4e6475bc810">UStageManagerSubsystem::GetStageDuration</a></div><div class="ttdeci">float GetStageDuration()</div><div class="ttdef"><b>Definition</b> <a href="_stage_manager_subsystem_8cpp_source.html#l00127">StageManagerSubsystem.cpp:127</a></div></div>
+<div class="ttc" id="aclass_u_stage_manager_subsystem_html_afefe1084b7fd813ef09ec92af904dcb2"><div class="ttname"><a href="class_u_stage_manager_subsystem.html#afefe1084b7fd813ef09ec92af904dcb2">UStageManagerSubsystem::CurrentPhaseIndex</a></div><div class="ttdeci">int32 CurrentPhaseIndex</div><div class="ttdef"><b>Definition</b> <a href="#l00050">StageManagerSubsystem.h:50</a></div></div>
+<div class="ttc" id="astruct_f_boss_phase_data_html"><div class="ttname"><a href="struct_f_boss_phase_data.html">FBossPhaseData</a></div><div class="ttdef"><b>Definition</b> <a href="_stage_data_row_8h_source.html#l00017">StageDataRow.h:19</a></div></div>
+<div class="ttc" id="astruct_f_phase_action_data_html"><div class="ttname"><a href="struct_f_phase_action_data.html">FPhaseActionData</a></div><div class="ttdef"><b>Definition</b> <a href="_stage_data_row_8h_source.html#l00026">StageDataRow.h:28</a></div></div>
+<div class="ttc" id="astruct_f_stage_data_row_html"><div class="ttname"><a href="struct_f_stage_data_row.html">FStageDataRow</a></div><div class="ttdef"><b>Definition</b> <a href="_stage_data_row_8h_source.html#l00047">StageDataRow.h:49</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_9d0f275b41fa002800a89310ba1ebe25.html">Core</a></li><li class="navelem"><a href="dir_c5adcac0dad4fd3c0e6e6b5ea3efe6f7.html">SubSystem</a></li><li class="navelem"><a href="dir_4b05aa077c314c601ad645fc6abf864c.html">WorldSubSystem</a></li><li class="navelem"><a href="_stage_manager_subsystem_8h.html">StageManagerSubsystem.h</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

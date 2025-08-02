@@ -1,0 +1,9 @@
+<map id="UUIManagerSubsystem::ShowStayWidget" name="UUIManagerSubsystem::ShowStayWidget">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,167,48"/>
+<area shape="rect" id="Node000002" href="$class_u_u_i_manager_subsystem.html#ae6e92a8dab7f856443cfe5c4d00b25c9" title=" " alt="" coords="215,5,376,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,24,199,24,199,29,167,29"/>
+<area shape="rect" id="Node000003" href="$class_u_u_i_manager_subsystem.html#acaac8367f6b3ad4c0509900d7f01b65a" title=" " alt="" coords="424,5,615,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="376,24,408,24,408,29,376,29"/>
+<area shape="rect" id="Node000004" href="$class_u_u_i_manager_subsystem.html#a6c815ab68107e8e616ddb62dd3391d2c" title=" " alt="" coords="663,5,825,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="616,24,648,24,648,29,616,29"/>
+</map>

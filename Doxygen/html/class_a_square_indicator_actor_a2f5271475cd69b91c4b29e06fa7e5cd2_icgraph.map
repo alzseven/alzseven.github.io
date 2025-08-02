@@ -1,0 +1,5 @@
+<map id="ASquareIndicatorActor::InitializeIndicator" name="ASquareIndicatorActor::InitializeIndicator">
+<area shape="rect" id="Node000001" title=" " alt="" coords="221,5,373,48"/>
+<area shape="rect" id="Node000002" href="$class_u_base_laser_attack_ability.html#a674fe5df0cdc156691878ce8e00f15f2" title=" " alt="" coords="5,5,173,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="205,29,173,29,173,24,205,24"/>
+</map>

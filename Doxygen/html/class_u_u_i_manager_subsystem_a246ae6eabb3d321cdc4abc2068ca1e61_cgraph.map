@@ -1,0 +1,32 @@
+<map id="UUIManagerSubsystem::BindPlayerStateAndGameState" name="UUIManagerSubsystem::BindPlayerStateAndGameState">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,148,218,191"/>
+<area shape="rect" id="Node000002" href="$class_a_k_p_t_player_state.html#a57012cefe259a3b7e78bffd3e86197cd" title=" " alt="" coords="266,64,491,91"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,145,207,122,265,100,291,92,292,98,267,105,209,127,158,150"/>
+<area shape="rect" id="Node000003" href="$class_u_u_i_manager_subsystem.html#ac0719470d72fdf3bd3d14b976ad44e33" title=" " alt="" coords="289,181,468,224"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="218,180,274,187,273,192,218,185"/>
+<area shape="rect" id="Node000009" href="$class_u_u_i_manager_subsystem.html#aec1290f1100ff3c1b7fa144daec04166" title=" " alt="" coords="288,115,468,157"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="218,153,272,147,273,152,218,159"/>
+<area shape="rect" id="Node000013" href="$class_u_u_i_manager_subsystem.html#a066e62274dc1670d298997fa8f052b2d" title=" " alt="" coords="298,248,459,291"/>
+<area shape="poly" id="edge16_Node000001_Node000013" title=" " alt="" coords="160,189,267,234,286,240,284,245,265,238,158,194"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="334,65,326,55,332,45,349,39,378,37,410,40,426,47,424,52,409,45,378,43,350,45,335,50,332,55,338,62"/>
+<area shape="rect" id="Node000004" href="$class_u_u_i_manager_subsystem.html#a3d1d102db04c24f74872b749cc41e0cf" title=" " alt="" coords="562,189,723,232"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="468,203,546,205,546,210,468,208"/>
+<area shape="rect" id="Node000005" href="$class_u_u_i_manager_subsystem.html#ae6e92a8dab7f856443cfe5c4d00b25c9" title=" " alt="" coords="793,160,955,203"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="723,198,777,191,778,196,723,203"/>
+<area shape="rect" id="Node000008" href="$class_u_u_i_manager_subsystem.html#af61f694a539b5d427654903bc5944cf0" title=" " alt="" coords="793,79,955,121"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="716,186,744,175,768,161,792,146,822,128,825,132,795,150,771,166,746,180,718,191"/>
+<area shape="rect" id="Node000006" href="$class_u_u_i_manager_subsystem.html#acaac8367f6b3ad4c0509900d7f01b65a" title=" " alt="" coords="1003,93,1194,136"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="947,157,1009,138,1010,144,949,162"/>
+<area shape="rect" id="Node000007" href="$class_u_u_i_manager_subsystem.html#a6c815ab68107e8e616ddb62dd3391d2c" title=" " alt="" coords="1242,93,1403,136"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="1194,112,1226,112,1226,117,1194,117"/>
+<area shape="rect" id="Node000010" href="$class_u_u_i_manager_subsystem.html#aed4b9c08eec4848386a3a89108827ffd" title=" " alt="" coords="539,123,745,165"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="469,136,523,138,523,143,469,141"/>
+<area shape="rect" id="Node000011" href="$class_u_u_i_manager_subsystem.html#a1e0415f5fab1f4658e1aee52f1ee1a0b" title="지정된 인스턴스 ID의 위젯을 화면에서 숨깁니다." alt="" coords="793,5,955,48"/>
+<area shape="poly" id="edge11_Node000009_Node000011" title=" " alt="" coords="468,112,489,101,504,86,512,71,521,55,538,42,597,20,660,9,722,6,778,9,778,15,722,12,660,14,598,25,540,46,525,59,517,73,508,89,493,105,470,117"/>
+<area shape="rect" id="Node000012" href="$class_u_u_i_manager_subsystem.html#a291d9552775bf1843f433b3e363b0543" title=" " alt="" coords="562,56,723,99"/>
+<area shape="poly" id="edge13_Node000009_Node000012" title=" " alt="" coords="468,113,545,96,546,101,469,119"/>
+<area shape="poly" id="edge12_Node000011_Node000006" title=" " alt="" coords="932,46,1029,85,1027,90,930,51"/>
+<area shape="poly" id="edge14_Node000012_Node000005" title=" " alt="" coords="717,97,746,108,826,149,823,154,744,113,715,102"/>
+<area shape="poly" id="edge15_Node000012_Node000008" title=" " alt="" coords="723,83,778,88,778,93,723,88"/>
+<area shape="poly" id="edge17_Node000013_Node000005" title=" " alt="" coords="460,270,594,266,670,257,745,241,786,227,824,208,826,213,788,232,746,247,671,262,595,271,460,275"/>
+</map>

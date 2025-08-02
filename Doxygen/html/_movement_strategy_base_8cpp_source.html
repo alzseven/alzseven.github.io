@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Skill/Movement/MovementStrategyBase.cpp 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_movement_strategy_base_8cpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">MovementStrategyBase.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_movement_strategy_base_8cpp.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_movement_strategy_base_8h.html">Skill/Movement/MovementStrategyBase.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;GameFramework/Actor.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Net/UnrealNetwork.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// Sets default values for this component&#39;s properties</span></div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="}">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_u_movement_strategy_base.html#a4860c9bf57658585dd98377cae86f46d">    9</a></span><a class="code hl_function" href="class_u_movement_strategy_base.html#a4860c9bf57658585dd98377cae86f46d">UMovementStrategyBase::UMovementStrategyBase</a>()</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    PrimaryComponentTick.bCanEverTick = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    SetIsReplicatedByDefault(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    bAutoActivate = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>}</div>
+</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="}">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_u_movement_strategy_base.html#a844b563548ea9fde79cb6213cec561bf">   17</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_movement_strategy_base.html#a844b563548ea9fde79cb6213cec561bf">UMovementStrategyBase::ActivateStrategy</a>(<span class="keyword">const</span> <a class="code hl_struct" href="struct_f_detailed_skill_data.html">FDetailedSkillData</a>&amp; InCalculatedData,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    AActor* NewOwner, int32 InMyIndex, int32 InTotalCount)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordflow">if</span> (GetOwner()-&gt;HasAuthority())</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_function" href="class_u_movement_strategy_base.html#a88923c77a6e6525d701400f4f63f2824">Multicast_Activate</a>(InCalculatedData, NewOwner, InMyIndex, InTotalCount);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>}</div>
+</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">void</span> UMovementStrategyBase::Multicast_Activate_Implementation(<span class="keyword">const</span> <a class="code hl_struct" href="struct_f_detailed_skill_data.html">FDetailedSkillData</a>&amp; InCalculatedData,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    AActor* NewOwner, int32 InMyIndex, int32 InTotalCount)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>{</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_variable" href="class_u_movement_strategy_base.html#a94eebe30848669936f4c45d1a294138e">ProjectileOwner</a> = NewOwner;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_u_movement_strategy_base.html#a94eebe30848669936f4c45d1a294138e">ProjectileOwner</a>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">// 컴포넌트의 상태를 활성화합니다.</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    SetComponentTickEnabled(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_variable" href="class_u_movement_strategy_base.html#a2e2f014a097d0934ddf7faf8fdd61c5b">CalculatedData</a> = InCalculatedData;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_variable" href="class_u_movement_strategy_base.html#ae05ff09293ded2bfb6ff0348e6d1f890">MyIndex</a> = InMyIndex;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_variable" href="class_u_movement_strategy_base.html#a3bb42d8e5500362cf4bf1230f7bea257">TotalCount</a> = InTotalCount;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="}">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_u_movement_strategy_base.html#a96436384d7ef7fcbf7cb55628d2d7087">   42</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_movement_strategy_base.html#a96436384d7ef7fcbf7cb55628d2d7087">UMovementStrategyBase::DeactivateStrategy</a>()</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>{</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">if</span> (GetOwner()-&gt;HasAuthority())</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_function" href="class_u_movement_strategy_base.html#a5727613e54d88ba4548ca6aa45047cf7">Multicast_Deactivate</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
+</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keywordtype">void</span> UMovementStrategyBase::Multicast_Deactivate_Implementation()</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>{</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    SetComponentTickEnabled(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    SetActive(<span class="keyword">false</span>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_variable" href="class_u_movement_strategy_base.html#a94eebe30848669936f4c45d1a294138e">ProjectileOwner</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_variable" href="class_u_movement_strategy_base.html#a2e2f014a097d0934ddf7faf8fdd61c5b">CalculatedData</a> = <a class="code hl_struct" href="struct_f_detailed_skill_data.html">FDetailedSkillData</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_variable" href="class_u_movement_strategy_base.html#ae05ff09293ded2bfb6ff0348e6d1f890">MyIndex</a> = 0;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_variable" href="class_u_movement_strategy_base.html#a3bb42d8e5500362cf4bf1230f7bea257">TotalCount</a> = 0;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_u_movement_strategy_base.html#ad695122e4a3051a102423dc2de3a536f">   64</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_movement_strategy_base.html#ad695122e4a3051a102423dc2de3a536f">UMovementStrategyBase::TickComponent</a>(<span class="keywordtype">float</span> DeltaTime, <span class="keyword">enum</span> ELevelTick TickType,</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                                          FActorComponentTickFunction* ThisTickFunction)</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>{</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    Super::TickComponent(DeltaTime, TickType, ThisTickFunction);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="foldopen" id="foldopen00071" data-start="{" data-end="}">
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_u_movement_strategy_base.html#afb1e3a026dba401038425f8fd1a24a6e">   71</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_movement_strategy_base.html#afb1e3a026dba401038425f8fd1a24a6e">UMovementStrategyBase::TriggerFunction</a>()</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>{</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="ttc" id="a_movement_strategy_base_8h_html"><div class="ttname"><a href="_movement_strategy_base_8h.html">MovementStrategyBase.h</a></div></div>
+<div class="ttc" id="aclass_u_movement_strategy_base_html_a2e2f014a097d0934ddf7faf8fdd61c5b"><div class="ttname"><a href="class_u_movement_strategy_base.html#a2e2f014a097d0934ddf7faf8fdd61c5b">UMovementStrategyBase::CalculatedData</a></div><div class="ttdeci">FDetailedSkillData CalculatedData</div><div class="ttdef"><b>Definition</b> <a href="_movement_strategy_base_8h_source.html#l00044">MovementStrategyBase.h:44</a></div></div>
+<div class="ttc" id="aclass_u_movement_strategy_base_html_a3bb42d8e5500362cf4bf1230f7bea257"><div class="ttname"><a href="class_u_movement_strategy_base.html#a3bb42d8e5500362cf4bf1230f7bea257">UMovementStrategyBase::TotalCount</a></div><div class="ttdeci">int TotalCount</div><div class="ttdef"><b>Definition</b> <a href="_movement_strategy_base_8h_source.html#l00049">MovementStrategyBase.h:49</a></div></div>
+<div class="ttc" id="aclass_u_movement_strategy_base_html_a4860c9bf57658585dd98377cae86f46d"><div class="ttname"><a href="class_u_movement_strategy_base.html#a4860c9bf57658585dd98377cae86f46d">UMovementStrategyBase::UMovementStrategyBase</a></div><div class="ttdeci">UMovementStrategyBase()</div><div class="ttdef"><b>Definition</b> <a href="#l00009">MovementStrategyBase.cpp:9</a></div></div>
+<div class="ttc" id="aclass_u_movement_strategy_base_html_a5727613e54d88ba4548ca6aa45047cf7"><div class="ttname"><a href="class_u_movement_strategy_base.html#a5727613e54d88ba4548ca6aa45047cf7">UMovementStrategyBase::Multicast_Deactivate</a></div><div class="ttdeci">virtual void Multicast_Deactivate()</div></div>
+<div class="ttc" id="aclass_u_movement_strategy_base_html_a844b563548ea9fde79cb6213cec561bf"><div class="ttname"><a href="class_u_movement_strategy_base.html#a844b563548ea9fde79cb6213cec561bf">UMovementStrategyBase::ActivateStrategy</a></div><div class="ttdeci">virtual void ActivateStrategy(const FDetailedSkillData &amp;InCalculatedData, AActor *NewOwner, int32 InMyIndex, int32 InTotalCount)</div><div class="ttdef"><b>Definition</b> <a href="#l00017">MovementStrategyBase.cpp:17</a></div></div>
+<div class="ttc" id="aclass_u_movement_strategy_base_html_a88923c77a6e6525d701400f4f63f2824"><div class="ttname"><a href="class_u_movement_strategy_base.html#a88923c77a6e6525d701400f4f63f2824">UMovementStrategyBase::Multicast_Activate</a></div><div class="ttdeci">virtual void Multicast_Activate(const FDetailedSkillData &amp;InCalculatedData, AActor *NewOwner, int32 InMyIndex, int32 InTotalCount)</div></div>
+<div class="ttc" id="aclass_u_movement_strategy_base_html_a94eebe30848669936f4c45d1a294138e"><div class="ttname"><a href="class_u_movement_strategy_base.html#a94eebe30848669936f4c45d1a294138e">UMovementStrategyBase::ProjectileOwner</a></div><div class="ttdeci">TObjectPtr&lt; AActor &gt; ProjectileOwner</div><div class="ttdef"><b>Definition</b> <a href="_movement_strategy_base_8h_source.html#l00041">MovementStrategyBase.h:41</a></div></div>
+<div class="ttc" id="aclass_u_movement_strategy_base_html_a96436384d7ef7fcbf7cb55628d2d7087"><div class="ttname"><a href="class_u_movement_strategy_base.html#a96436384d7ef7fcbf7cb55628d2d7087">UMovementStrategyBase::DeactivateStrategy</a></div><div class="ttdeci">virtual void DeactivateStrategy()</div><div class="ttdef"><b>Definition</b> <a href="#l00042">MovementStrategyBase.cpp:42</a></div></div>
+<div class="ttc" id="aclass_u_movement_strategy_base_html_ad695122e4a3051a102423dc2de3a536f"><div class="ttname"><a href="class_u_movement_strategy_base.html#ad695122e4a3051a102423dc2de3a536f">UMovementStrategyBase::TickComponent</a></div><div class="ttdeci">virtual void TickComponent(float DeltaTime, enum ELevelTick TickType, FActorComponentTickFunction *ThisTickFunction) override</div><div class="ttdef"><b>Definition</b> <a href="#l00064">MovementStrategyBase.cpp:64</a></div></div>
+<div class="ttc" id="aclass_u_movement_strategy_base_html_ae05ff09293ded2bfb6ff0348e6d1f890"><div class="ttname"><a href="class_u_movement_strategy_base.html#ae05ff09293ded2bfb6ff0348e6d1f890">UMovementStrategyBase::MyIndex</a></div><div class="ttdeci">int MyIndex</div><div class="ttdef"><b>Definition</b> <a href="_movement_strategy_base_8h_source.html#l00047">MovementStrategyBase.h:47</a></div></div>
+<div class="ttc" id="aclass_u_movement_strategy_base_html_afb1e3a026dba401038425f8fd1a24a6e"><div class="ttname"><a href="class_u_movement_strategy_base.html#afb1e3a026dba401038425f8fd1a24a6e">UMovementStrategyBase::TriggerFunction</a></div><div class="ttdeci">virtual void TriggerFunction()</div><div class="ttdef"><b>Definition</b> <a href="#l00071">MovementStrategyBase.cpp:71</a></div></div>
+<div class="ttc" id="astruct_f_detailed_skill_data_html"><div class="ttname"><a href="struct_f_detailed_skill_data.html">FDetailedSkillData</a></div><div class="ttdef"><b>Definition</b> <a href="_skill_data_8h_source.html#l00015">SkillData.h:17</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_835db7cc60e52a26a89059f64164cf8e.html">Skill</a></li><li class="navelem"><a href="dir_dd07afd633c75c02ca61c3ff9b0f2cd1.html">Movement</a></li><li class="navelem"><a href="_movement_strategy_base_8cpp.html">MovementStrategyBase.cpp</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<map id="URewardManagerSubsystem::ProcessPlayerRewardChoice" name="URewardManagerSubsystem::ProcessPlayerRewardChoice">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,63,206,105"/>
+<area shape="rect" id="Node000002" href="$class_u_skill_buff_system_statics.html#a251cdb91c889fc43c1645ff6396ebd13" title=" " alt="" coords="266,29,431,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,68,250,61,251,67,207,73"/>
+<area shape="rect" id="Node000004" href="$class_a_k_p_t_player_state.html#a3f0fd46533843d108f4569bd68d9b233" title=" " alt="" coords="254,96,443,139"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="207,95,239,100,238,105,206,100"/>
+<area shape="rect" id="Node000003" href="$struct_f_magnitude_by_rarity.html#a0fc048b3197b409649ad98007b8189d6" title=" " alt="" coords="491,29,655,72"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="431,48,475,48,475,53,431,53"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="530,29,529,19,536,10,551,5,573,3,597,5,612,11,610,16,596,10,573,8,552,10,539,15,534,21,536,28"/>
+</map>

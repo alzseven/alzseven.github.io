@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/UI/Item/InventoryUI.cpp 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_inventory_u_i_8cpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">InventoryUI.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_inventory_u_i_8cpp.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_inventory_u_i_8h.html">UI/Item/InventoryUI.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Components/GridPanel.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_item_slot_u_i_8h.html">UI/Item/ItemSlotUI.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_item_slot_tooltip_8h.html">UI/Item/ItemSlotTooltip.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_u_inventory_u_i.html#aa18c84f42d71ae9741de39624c849099">   10</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_inventory_u_i.html#aa18c84f42d71ae9741de39624c849099">UInventoryUI::NativeConstruct</a>()</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    Super::NativeConstruct();</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    FString Path = TEXT(<span class="stringliteral">&quot;/Game/Blueprints/Item/DT_ItemData.DT_ItemData&quot;</span>);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_variable" href="class_u_inventory_u_i.html#a4ab5c4bf76f5d6b3c70764748319ef90">ItemDataTable</a> = LoadObject&lt;UDataTable&gt;(<span class="keyword">nullptr</span>, *Path);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_variable" href="class_u_inventory_u_i.html#a086db6e5c1598d1dfd542a2ec506eed3">Inventory</a>.Add(<a class="code hl_variable" href="class_u_inventory_u_i.html#a63f5721b8f1fcedec8afe8b9988dad99">ItemSlotUI0</a>);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_variable" href="class_u_inventory_u_i.html#a086db6e5c1598d1dfd542a2ec506eed3">Inventory</a>.Add(<a class="code hl_variable" href="class_u_inventory_u_i.html#a6b4903dab601c42e99a8b429458cb623">ItemSlotUI1</a>);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_variable" href="class_u_inventory_u_i.html#a086db6e5c1598d1dfd542a2ec506eed3">Inventory</a>.Add(<a class="code hl_variable" href="class_u_inventory_u_i.html#a1515363697c9bb7f89326e451cb1562d">ItemSlotUI2</a>);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_variable" href="class_u_inventory_u_i.html#a086db6e5c1598d1dfd542a2ec506eed3">Inventory</a>.Add(<a class="code hl_variable" href="class_u_inventory_u_i.html#a9972855ff1d36663b0e617af4f91e3a2">ItemSlotUI3</a>);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_inventory_u_i.html#a37103ef501f98d633112aecaffb923bd">ItemSlotUI4</a>)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_variable" href="class_u_inventory_u_i.html#a086db6e5c1598d1dfd542a2ec506eed3">Inventory</a>.Add(<a class="code hl_variable" href="class_u_inventory_u_i.html#a37103ef501f98d633112aecaffb923bd">ItemSlotUI4</a>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_inventory_u_i.html#a987670075a3380bce4f1a23bfcd4092f">ItemSlotUI5</a>)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_variable" href="class_u_inventory_u_i.html#a086db6e5c1598d1dfd542a2ec506eed3">Inventory</a>.Add(<a class="code hl_variable" href="class_u_inventory_u_i.html#a987670075a3380bce4f1a23bfcd4092f">ItemSlotUI5</a>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_u_inventory_u_i.html#a9837568541865812f987e42f6e246a11">MaxSlots</a>; ++i)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_u_inventory_u_i.html#a18ed56927163613ce39205cac01625dc">ItemTooltipClass</a>)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        }</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_variable" href="class_u_inventory_u_i.html#a086db6e5c1598d1dfd542a2ec506eed3">Inventory</a>[i]-&gt;SetTooltipClass(<a class="code hl_variable" href="class_u_inventory_u_i.html#a18ed56927163613ce39205cac01625dc">ItemTooltipClass</a>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
+</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_u_inventory_u_i.html#a978ec025c9557a56c5f176e56b3b7da0">   38</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_inventory_u_i.html#a978ec025c9557a56c5f176e56b3b7da0">UInventoryUI::NativePreConstruct</a>()</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    Super::NativePreConstruct();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_u_inventory_u_i.html#a14b4f298ed7509f358f535d19b4796aa">   43</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_inventory_u_i.html#a14b4f298ed7509f358f535d19b4796aa">UInventoryUI::NativeDestruct</a>()</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    Super::NativeDestruct();</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_u_inventory_u_i.html#acdd39c140fa026f46f9752565a706880">   48</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_inventory_u_i.html#acdd39c140fa026f46f9752565a706880">UInventoryUI::UpdateInventoryUI</a>(<span class="keyword">const</span> TArray&lt;FName&gt;&amp; NewItems)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>{</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">//InventoryGrid-&gt;ClearChildren();</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_u_inventory_u_i.html#a9837568541865812f987e42f6e246a11">MaxSlots</a>; ++i)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_variable" href="class_u_inventory_u_i.html#a086db6e5c1598d1dfd542a2ec506eed3">Inventory</a>[i]-&gt;ClearSlotVisual();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="comment">//Tooltips[i]-&gt;SetVisibility(ESlateVisibility::Hidden);</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; NewItems.Num(); ++i)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <a class="code hl_struct" href="struct_f_item_data_row.html">FItemDataRow</a>* RowData = <a class="code hl_variable" href="class_u_inventory_u_i.html#a4ab5c4bf76f5d6b3c70764748319ef90">ItemDataTable</a>-&gt;FindRow&lt;<a class="code hl_struct" href="struct_f_item_data_row.html">FItemDataRow</a>&gt;(NewItems[i], TEXT(<span class="stringliteral">&quot;&quot;</span>));</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="comment">//Inventory[i]-&gt;UpdateSlotVisual(RowData-&gt;UIData);</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_variable" href="class_u_inventory_u_i.html#a086db6e5c1598d1dfd542a2ec506eed3">Inventory</a>[i]-&gt;UpdateSlotVisual(*RowData);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <a class="code hl_variable" href="class_u_inventory_u_i.html#a086db6e5c1598d1dfd542a2ec506eed3">Inventory</a>[i]-&gt;PlayEquipAnimation();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="comment">//Tooltips[i]-&gt;UpdateTooltip(*RowData);</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="comment">//Tooltips[i]-&gt;SetVisibility(ESlateVisibility::Visible);</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
+</div>
+<div class="ttc" id="a_inventory_u_i_8h_html"><div class="ttname"><a href="_inventory_u_i_8h.html">InventoryUI.h</a></div></div>
+<div class="ttc" id="a_item_slot_tooltip_8h_html"><div class="ttname"><a href="_item_slot_tooltip_8h.html">ItemSlotTooltip.h</a></div></div>
+<div class="ttc" id="a_item_slot_u_i_8h_html"><div class="ttname"><a href="_item_slot_u_i_8h.html">ItemSlotUI.h</a></div></div>
+<div class="ttc" id="aclass_u_inventory_u_i_html_a086db6e5c1598d1dfd542a2ec506eed3"><div class="ttname"><a href="class_u_inventory_u_i.html#a086db6e5c1598d1dfd542a2ec506eed3">UInventoryUI::Inventory</a></div><div class="ttdeci">TArray&lt; TObjectPtr&lt; UItemSlotUI &gt; &gt; Inventory</div><div class="ttdef"><b>Definition</b> <a href="_inventory_u_i_8h_source.html#l00050">InventoryUI.h:50</a></div></div>
+<div class="ttc" id="aclass_u_inventory_u_i_html_a14b4f298ed7509f358f535d19b4796aa"><div class="ttname"><a href="class_u_inventory_u_i.html#a14b4f298ed7509f358f535d19b4796aa">UInventoryUI::NativeDestruct</a></div><div class="ttdeci">virtual void NativeDestruct() override</div><div class="ttdef"><b>Definition</b> <a href="#l00043">InventoryUI.cpp:43</a></div></div>
+<div class="ttc" id="aclass_u_inventory_u_i_html_a1515363697c9bb7f89326e451cb1562d"><div class="ttname"><a href="class_u_inventory_u_i.html#a1515363697c9bb7f89326e451cb1562d">UInventoryUI::ItemSlotUI2</a></div><div class="ttdeci">TObjectPtr&lt; UItemSlotUI &gt; ItemSlotUI2</div><div class="ttdef"><b>Definition</b> <a href="_inventory_u_i_8h_source.html#l00068">InventoryUI.h:68</a></div></div>
+<div class="ttc" id="aclass_u_inventory_u_i_html_a18ed56927163613ce39205cac01625dc"><div class="ttname"><a href="class_u_inventory_u_i.html#a18ed56927163613ce39205cac01625dc">UInventoryUI::ItemTooltipClass</a></div><div class="ttdeci">TSubclassOf&lt; UItemSlotTooltip &gt; ItemTooltipClass</div><div class="ttdef"><b>Definition</b> <a href="_inventory_u_i_8h_source.html#l00044">InventoryUI.h:44</a></div></div>
+<div class="ttc" id="aclass_u_inventory_u_i_html_a37103ef501f98d633112aecaffb923bd"><div class="ttname"><a href="class_u_inventory_u_i.html#a37103ef501f98d633112aecaffb923bd">UInventoryUI::ItemSlotUI4</a></div><div class="ttdeci">TObjectPtr&lt; UItemSlotUI &gt; ItemSlotUI4</div><div class="ttdef"><b>Definition</b> <a href="_inventory_u_i_8h_source.html#l00074">InventoryUI.h:74</a></div></div>
+<div class="ttc" id="aclass_u_inventory_u_i_html_a4ab5c4bf76f5d6b3c70764748319ef90"><div class="ttname"><a href="class_u_inventory_u_i.html#a4ab5c4bf76f5d6b3c70764748319ef90">UInventoryUI::ItemDataTable</a></div><div class="ttdeci">TObjectPtr&lt; UDataTable &gt; ItemDataTable</div><div class="ttdef"><b>Definition</b> <a href="_inventory_u_i_8h_source.html#l00059">InventoryUI.h:59</a></div></div>
+<div class="ttc" id="aclass_u_inventory_u_i_html_a63f5721b8f1fcedec8afe8b9988dad99"><div class="ttname"><a href="class_u_inventory_u_i.html#a63f5721b8f1fcedec8afe8b9988dad99">UInventoryUI::ItemSlotUI0</a></div><div class="ttdeci">TObjectPtr&lt; UItemSlotUI &gt; ItemSlotUI0</div><div class="ttdef"><b>Definition</b> <a href="_inventory_u_i_8h_source.html#l00062">InventoryUI.h:62</a></div></div>
+<div class="ttc" id="aclass_u_inventory_u_i_html_a6b4903dab601c42e99a8b429458cb623"><div class="ttname"><a href="class_u_inventory_u_i.html#a6b4903dab601c42e99a8b429458cb623">UInventoryUI::ItemSlotUI1</a></div><div class="ttdeci">TObjectPtr&lt; UItemSlotUI &gt; ItemSlotUI1</div><div class="ttdef"><b>Definition</b> <a href="_inventory_u_i_8h_source.html#l00065">InventoryUI.h:65</a></div></div>
+<div class="ttc" id="aclass_u_inventory_u_i_html_a978ec025c9557a56c5f176e56b3b7da0"><div class="ttname"><a href="class_u_inventory_u_i.html#a978ec025c9557a56c5f176e56b3b7da0">UInventoryUI::NativePreConstruct</a></div><div class="ttdeci">virtual void NativePreConstruct() override</div><div class="ttdef"><b>Definition</b> <a href="#l00038">InventoryUI.cpp:38</a></div></div>
+<div class="ttc" id="aclass_u_inventory_u_i_html_a9837568541865812f987e42f6e246a11"><div class="ttname"><a href="class_u_inventory_u_i.html#a9837568541865812f987e42f6e246a11">UInventoryUI::MaxSlots</a></div><div class="ttdeci">int32 MaxSlots</div><div class="ttdef"><b>Definition</b> <a href="_inventory_u_i_8h_source.html#l00082">InventoryUI.h:82</a></div></div>
+<div class="ttc" id="aclass_u_inventory_u_i_html_a987670075a3380bce4f1a23bfcd4092f"><div class="ttname"><a href="class_u_inventory_u_i.html#a987670075a3380bce4f1a23bfcd4092f">UInventoryUI::ItemSlotUI5</a></div><div class="ttdeci">TObjectPtr&lt; UItemSlotUI &gt; ItemSlotUI5</div><div class="ttdef"><b>Definition</b> <a href="_inventory_u_i_8h_source.html#l00077">InventoryUI.h:77</a></div></div>
+<div class="ttc" id="aclass_u_inventory_u_i_html_a9972855ff1d36663b0e617af4f91e3a2"><div class="ttname"><a href="class_u_inventory_u_i.html#a9972855ff1d36663b0e617af4f91e3a2">UInventoryUI::ItemSlotUI3</a></div><div class="ttdeci">TObjectPtr&lt; UItemSlotUI &gt; ItemSlotUI3</div><div class="ttdef"><b>Definition</b> <a href="_inventory_u_i_8h_source.html#l00071">InventoryUI.h:71</a></div></div>
+<div class="ttc" id="aclass_u_inventory_u_i_html_aa18c84f42d71ae9741de39624c849099"><div class="ttname"><a href="class_u_inventory_u_i.html#aa18c84f42d71ae9741de39624c849099">UInventoryUI::NativeConstruct</a></div><div class="ttdeci">virtual void NativeConstruct() override</div><div class="ttdef"><b>Definition</b> <a href="#l00010">InventoryUI.cpp:10</a></div></div>
+<div class="ttc" id="aclass_u_inventory_u_i_html_acdd39c140fa026f46f9752565a706880"><div class="ttname"><a href="class_u_inventory_u_i.html#acdd39c140fa026f46f9752565a706880">UInventoryUI::UpdateInventoryUI</a></div><div class="ttdeci">void UpdateInventoryUI(const TArray&lt; FName &gt; &amp;NewItems)</div><div class="ttdef"><b>Definition</b> <a href="#l00048">InventoryUI.cpp:48</a></div></div>
+<div class="ttc" id="astruct_f_item_data_row_html"><div class="ttname"><a href="struct_f_item_data_row.html">FItemDataRow</a></div><div class="ttdef"><b>Definition</b> <a href="_item_base_8h_source.html#l00040">ItemBase.h:42</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_03a35ccb76f34b0c5c973a49dad1c475.html">UI</a></li><li class="navelem"><a href="dir_31c033544f76abd38799b8398b31f1fe.html">Item</a></li><li class="navelem"><a href="_inventory_u_i_8cpp.html">InventoryUI.cpp</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

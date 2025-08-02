@@ -1,0 +1,9 @@
+<map id="APlayerCharacter::Damaged" name="APlayerCharacter::Damaged">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,194,105"/>
+<area shape="rect" id="Node000002" href="$class_a_player_character.html#ab7ccbfb071937c5339eac6f6940581e2" title=" " alt="" coords="260,29,426,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,75,244,65,245,70,183,81"/>
+<area shape="rect" id="Node000003" href="$class_a_player_character.html#ae3429aa543253b57ae10136e0eb5fd26" title=" " alt="" coords="242,120,444,147"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="183,103,246,114,245,119,182,109"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="297,29,295,19,303,10,319,5,343,3,369,5,384,11,382,16,368,10,343,8,320,10,306,15,300,21,302,28"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="302,121,295,111,300,101,316,95,343,93,372,96,387,103,385,108,371,101,343,99,317,101,303,105,300,111,306,118"/>
+</map>

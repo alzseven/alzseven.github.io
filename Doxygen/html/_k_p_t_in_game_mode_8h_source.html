@@ -1,0 +1,301 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Core/KPTInGameMode.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_k_p_t_in_game_mode_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">KPTInGameMode.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_k_p_t_in_game_mode_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;GameFramework/GameMode.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;KPTInGameMode.generated.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">class </span><a class="code hl_class" href="class_u_team_stats_component.html">UTeamStatsComponent</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">class </span><a class="code hl_class" href="class_u_in_game_phase_manager_component.html">UInGamePhaseManagerComponent</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnBossSpawned, AActor*, BossActor);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnBossHPChanged, <span class="keywordtype">float</span>, CurrentHP, <span class="keywordtype">float</span>, MaxHP);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnBossDefeated);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">class </span>UGameplayEffect;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">struct </span>FGameplayTag;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_a_k_p_t_in_game_mode.html">   18</a></span>UCLASS(Abstract)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">class </span>KPT_API <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#addf2d1d15bcb20d2c98f7e9f9f724f26">AKPTInGameMode</a> : <span class="keyword">public</span> AGameMode</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#addf2d1d15bcb20d2c98f7e9f9f724f26">AKPTInGameMode</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#ad299e138b605334f03841982928f4e6e">InitializePlayerForCurrentPhase</a>(APlayerController* PlayerController);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">// 새 플레이어가 접속했을 때 호출됩니다.</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#a1e36de33cf04e0c3a9f6ac97910e3d5f">OnPostLogin</a>(AController* NewPlayer) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#ac4cacdaa16686d29b0f27a2dd65da50a">HandleSeamlessTravelPlayer</a>(AController*&amp; C) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">// --- 외부 호출 함수 ---</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#a7759d3555460c0b82e18efc45f771445">OnPlayerFinishedRewardChoice</a>(APlayerController* PlayerController);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#a5139e6eb55204de25e844d6aa4f49420">PlayerIsReadyForNight</a>(AController* PlayerController);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#a3a63b6ea26b3ef6a916ca7b5fed4813f">OnPlayerDied</a>(AController* PlayerController);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#a488b84978e412c3d7e90bb3041380c92">AddTeamGold</a>(int32 GoldToAdd);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    UFUNCTION(BlueprintCallable)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#a66f4edb80dbfcc521c4d81c1a27679be">AddTeamExperience</a>(int32 ExpToAdd);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">// virtual void HandleMatchIsWaitingToStart() override;</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    UPROPERTY(BlueprintAssignable)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_a_k_p_t_in_game_mode.html#ad512d0001ed08acca93e718fad244290">   53</a></span>    FOnBossSpawned <a class="code hl_variable" href="class_a_k_p_t_in_game_mode.html#ad512d0001ed08acca93e718fad244290">OnBossSpawned</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    UPROPERTY(BlueprintAssignable)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_a_k_p_t_in_game_mode.html#ac4d5a3516261d8a8f1c85bc8a123f87c">   56</a></span>    FOnBossHPChanged <a class="code hl_variable" href="class_a_k_p_t_in_game_mode.html#ac4d5a3516261d8a8f1c85bc8a123f87c">OnBossHPChanged</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    UPROPERTY(BlueprintAssignable)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_a_k_p_t_in_game_mode.html#ae299756023ed050373847ba468bd7885">   59</a></span>    FOnBossDefeated <a class="code hl_variable" href="class_a_k_p_t_in_game_mode.html#ae299756023ed050373847ba468bd7885">OnBossDefeated</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>protected:</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    virtual <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#a88de57fba9da892b172c9106affe14f3">StartPlay</a>() override;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    virtual <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#a2a532fe05b539d72cc039305ee771c40">HandleMatchHasEnded</a>() override;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#aa81ccab3f271d21f9a65bb8f42eb6f70">ReturnToLobby</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#acde5763daa38af9c93badb25bf0f59d1">HandleMatchVictory</a>();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#aab8a44dfe87df1106a9eecc225638148">HandleMatchDefeat</a>();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#a9f93e98963e67a4aec973d492c0b437a">StartRound</a>();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">// --- Phase Logic ---</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#aa4f70056d702908efb82a3a085b2d832">HandleDayPhase</a>();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#a1a9ee04a849c50e213574d166ea3eda5">InitiateRewardPhaseForPlayer</a>(APlayerController* PlayerController);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#a84edc1df98161132b7b803669c9299a0">BeginNightPhaseLogic</a>();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#acd0b193dd9ce700d2a4cb3953565584c">StartNightPhase</a>();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#a6855178c3536314307a454f02abe0c82">ShareTeamGold</a>();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#a0e1dec85eeba3835d463238c88f8904b">EndNightPhase</a>();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#ad904efb516b64eddf8aef8f50e3c42a1">CheckAllPlayersReadyForNight</a>();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#a447cf5f334247ed8640cee6ae43bc376">CheckForTeamLevelUp</a>();</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    UFUNCTION(BlueprintNativeEvent, Category = <span class="stringliteral">&quot;Game Rules&quot;</span>)</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="class_a_k_p_t_in_game_mode.html#a1c856c37dce7343a381723b5d842ecf7">   95</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#a1c856c37dce7343a381723b5d842ecf7">AreAllPlayersDead</a>() const;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    virtual <span class="keywordtype">bool</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#aa1438e6b6ee34fd792e397dedd825ff0">AreAllPlayersDead_Implementation</a>() const;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="comment">// --- Phase Transition ---</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#a87cb6168b8662d3ba2ebc02f0695522c">InitiatePhaseTransition</a>(const FGameplayTag&amp; TargetPhaseTag, <span class="keywordtype">float</span> PhaseTransitionDuration);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    UFUNCTION()</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#a410acd626df9144d7ebb63b535dbc37b">CompletePhaseTransition</a>(FGameplayTag TargetPhaseTag);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Game Flow&quot;</span>)</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#aa8b93d6bdef1ef7d2ddd4d2018bc94cb">TeleportPlayerToStart</a>();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Game Flow&quot;</span>)</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#a23300b5648c661902a39ec934b2de357">SetAllPlayersSkillEnabled</a>(<span class="keywordtype">bool</span> shouldBeEnabled);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Game Flow&quot;</span>)</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#a4d83e6405b91bdefb43aeac062b7b099">SetPlayerSkillEnabled</a>(AController* PlayerController, <span class="keywordtype">bool</span> shouldBeEnabled);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    UFUNCTION()</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#a97f3e2361fae3fa048ea5c3c5f5c41b8">HandleBossSpawned</a>(AActor* BossActor);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    UFUNCTION()</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#a0368a48967da2d4e05b79760d325efd2">HandleBossHPChanged</a>(<span class="keywordtype">float</span> CurrentHP, <span class="keywordtype">float</span> MaxHP);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    UFUNCTION()</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#a334c0aa77939b7960e58785eff22e00e">HandleBossDefeated</a>();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="comment">// void StartNightPhaseTransition();</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    UPROPERTY(EditDefaultsOnly)</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="class_a_k_p_t_in_game_mode.html#a098fb80db4ab7940a8ee755cd0c355bf">  125</a></span>    TSubclassOf&lt;UGameplayEffect&gt; <a class="code hl_variable" href="class_a_k_p_t_in_game_mode.html#a098fb80db4ab7940a8ee755cd0c355bf">RoundStartPlayerReviveEffectClass</a>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Game Flow&quot;</span>)</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="class_a_k_p_t_in_game_mode.html#a01cdd253cc3e1634f21823f10fbb5f0f">  128</a></span>    TSubclassOf&lt;UGameplayEffect&gt; <a class="code hl_variable" href="class_a_k_p_t_in_game_mode.html#a01cdd253cc3e1634f21823f10fbb5f0f">SkillDisabledEffectClass</a>;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    UPROPERTY(EditDefaultsOnly, Category = <span class="stringliteral">&quot;Game Data&quot;</span>)</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="class_a_k_p_t_in_game_mode.html#a34672baafa051081c78a193a3e016d7a">  131</a></span>    TObjectPtr&lt;UDataTable&gt; <a class="code hl_variable" href="class_a_k_p_t_in_game_mode.html#a34672baafa051081c78a193a3e016d7a">TeamLevelUpTable</a>;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    UFUNCTION()</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#a53520ef95b9f8a4c66bfbb5277630e59">OnInGamePhaseManagerReady</a>(<a class="code hl_class" href="class_u_in_game_phase_manager_component.html">UInGamePhaseManagerComponent</a>* PhaseManager);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    UFUNCTION()</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_in_game_mode.html#accedad98ce10e39419a3dbe21eb0286d">OnTeamStatsComponentReady</a>(<a class="code hl_class" href="class_u_team_stats_component.html">UTeamStatsComponent</a>* TeamStats);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>private:</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    FTimerHandle NightPhaseTimerHandle;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    FTimerHandle TransitionTimerHandle;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    UPROPERTY()</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    TObjectPtr&lt;<a class="code hl_class" href="class_u_in_game_phase_manager_component.html">UInGamePhaseManagerComponent</a>&gt; CachedPhaseManager;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    UPROPERTY()</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    TObjectPtr&lt;<a class="code hl_class" href="class_u_team_stats_component.html">UTeamStatsComponent</a>&gt; CachedTeamStats;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    UPROPERTY()</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    TObjectPtr&lt;class <a class="code hl_class" href="class_u_reward_manager_subsystem.html">URewardManagerSubsystem</a>&gt; CachedRewardManager;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    UPROPERTY()</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    TObjectPtr&lt;class <a class="code hl_class" href="class_u_shop_manager_subsystem.html">UShopManagerSubsystem</a>&gt; CachedShopManager;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    UPROPERTY()</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    TObjectPtr&lt;class <a class="code hl_class" href="class_u_stage_manager_subsystem.html">UStageManagerSubsystem</a>&gt; CachedStageManager;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    UPROPERTY()</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    TArray&lt;TObjectPtr&lt;AController&gt;&gt; PlayersReadyForNight;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="comment">// 캐시된 서브시스템 포인터를 안전하게 가져오기 위한 Getter 함수</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <a class="code hl_class" href="class_u_reward_manager_subsystem.html">URewardManagerSubsystem</a>* GetRewardManager();</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <a class="code hl_class" href="class_u_shop_manager_subsystem.html">UShopManagerSubsystem</a>* GetShopManager();</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <a class="code hl_class" href="class_u_stage_manager_subsystem.html">UStageManagerSubsystem</a>* GetStageManager();</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>};</div>
+</div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a01cdd253cc3e1634f21823f10fbb5f0f"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a01cdd253cc3e1634f21823f10fbb5f0f">AKPTInGameMode::SkillDisabledEffectClass</a></div><div class="ttdeci">TSubclassOf&lt; UGameplayEffect &gt; SkillDisabledEffectClass</div><div class="ttdef"><b>Definition</b> <a href="#l00128">KPTInGameMode.h:128</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a0368a48967da2d4e05b79760d325efd2"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a0368a48967da2d4e05b79760d325efd2">AKPTInGameMode::HandleBossHPChanged</a></div><div class="ttdeci">void HandleBossHPChanged(float CurrentHP, float MaxHP)</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00570">KPTInGameMode.cpp:570</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a098fb80db4ab7940a8ee755cd0c355bf"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a098fb80db4ab7940a8ee755cd0c355bf">AKPTInGameMode::RoundStartPlayerReviveEffectClass</a></div><div class="ttdeci">TSubclassOf&lt; UGameplayEffect &gt; RoundStartPlayerReviveEffectClass</div><div class="ttdoc">ShopSubsystem이 모든 플레이어가 준비되었음을 보고하기 위해 호출합니다.</div><div class="ttdef"><b>Definition</b> <a href="#l00125">KPTInGameMode.h:125</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a0e1dec85eeba3835d463238c88f8904b"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a0e1dec85eeba3835d463238c88f8904b">AKPTInGameMode::EndNightPhase</a></div><div class="ttdeci">void EndNightPhase()</div><div class="ttdoc">야간 페이즈를 종료하고, 게임 종료 조건을 확인하거나 새 라운드를 시작합니다.</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00349">KPTInGameMode.cpp:349</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a1a9ee04a849c50e213574d166ea3eda5"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a1a9ee04a849c50e213574d166ea3eda5">AKPTInGameMode::InitiateRewardPhaseForPlayer</a></div><div class="ttdeci">void InitiateRewardPhaseForPlayer(APlayerController *PlayerController)</div><div class="ttdoc">특정 플레이어에게 카드 선택 기회를 제공합니다.</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00260">KPTInGameMode.cpp:260</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a1c856c37dce7343a381723b5d842ecf7"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a1c856c37dce7343a381723b5d842ecf7">AKPTInGameMode::AreAllPlayersDead</a></div><div class="ttdeci">bool AreAllPlayersDead() const</div><div class="ttdoc">모든 플레이어가 사망했는지 확인합니다.</div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a1e36de33cf04e0c3a9f6ac97910e3d5f"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a1e36de33cf04e0c3a9f6ac97910e3d5f">AKPTInGameMode::OnPostLogin</a></div><div class="ttdeci">virtual void OnPostLogin(AController *NewPlayer) override</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00045">KPTInGameMode.cpp:45</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a23300b5648c661902a39ec934b2de357"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a23300b5648c661902a39ec934b2de357">AKPTInGameMode::SetAllPlayersSkillEnabled</a></div><div class="ttdeci">void SetAllPlayersSkillEnabled(bool shouldBeEnabled)</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00513">KPTInGameMode.cpp:513</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a2a532fe05b539d72cc039305ee771c40"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a2a532fe05b539d72cc039305ee771c40">AKPTInGameMode::HandleMatchHasEnded</a></div><div class="ttdeci">virtual void HandleMatchHasEnded() override</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00696">KPTInGameMode.cpp:696</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a334c0aa77939b7960e58785eff22e00e"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a334c0aa77939b7960e58785eff22e00e">AKPTInGameMode::HandleBossDefeated</a></div><div class="ttdeci">void HandleBossDefeated()</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00581">KPTInGameMode.cpp:581</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a34672baafa051081c78a193a3e016d7a"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a34672baafa051081c78a193a3e016d7a">AKPTInGameMode::TeamLevelUpTable</a></div><div class="ttdeci">TObjectPtr&lt; UDataTable &gt; TeamLevelUpTable</div><div class="ttdef"><b>Definition</b> <a href="#l00131">KPTInGameMode.h:131</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a3a63b6ea26b3ef6a916ca7b5fed4813f"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a3a63b6ea26b3ef6a916ca7b5fed4813f">AKPTInGameMode::OnPlayerDied</a></div><div class="ttdeci">virtual void OnPlayerDied(AController *PlayerController)</div><div class="ttdoc">플레이어가 사망했을 때 호출됩니다.</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00751">KPTInGameMode.cpp:751</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a410acd626df9144d7ebb63b535dbc37b"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a410acd626df9144d7ebb63b535dbc37b">AKPTInGameMode::CompletePhaseTransition</a></div><div class="ttdeci">void CompletePhaseTransition(FGameplayTag TargetPhaseTag)</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00459">KPTInGameMode.cpp:459</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a447cf5f334247ed8640cee6ae43bc376"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a447cf5f334247ed8640cee6ae43bc376">AKPTInGameMode::CheckForTeamLevelUp</a></div><div class="ttdeci">void CheckForTeamLevelUp()</div><div class="ttdoc">팀의 경험치를 확인하고 레벨업을 처리합니다.</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00388">KPTInGameMode.cpp:388</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a488b84978e412c3d7e90bb3041380c92"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a488b84978e412c3d7e90bb3041380c92">AKPTInGameMode::AddTeamGold</a></div><div class="ttdeci">void AddTeamGold(int32 GoldToAdd)</div><div class="ttdoc">팀 자원</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00325">KPTInGameMode.cpp:325</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a4d83e6405b91bdefb43aeac062b7b099"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a4d83e6405b91bdefb43aeac062b7b099">AKPTInGameMode::SetPlayerSkillEnabled</a></div><div class="ttdeci">void SetPlayerSkillEnabled(AController *PlayerController, bool shouldBeEnabled)</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00529">KPTInGameMode.cpp:529</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a5139e6eb55204de25e844d6aa4f49420"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a5139e6eb55204de25e844d6aa4f49420">AKPTInGameMode::PlayerIsReadyForNight</a></div><div class="ttdeci">void PlayerIsReadyForNight(AController *PlayerController)</div><div class="ttdoc">플레이어가 상점에서 &#39;준비 완료&#39; 버튼을 눌렀을 때 호출됩니다.</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00309">KPTInGameMode.cpp:309</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a53520ef95b9f8a4c66bfbb5277630e59"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a53520ef95b9f8a4c66bfbb5277630e59">AKPTInGameMode::OnInGamePhaseManagerReady</a></div><div class="ttdeci">void OnInGamePhaseManagerReady(UInGamePhaseManagerComponent *PhaseManager)</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00592">KPTInGameMode.cpp:592</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a66f4edb80dbfcc521c4d81c1a27679be"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a66f4edb80dbfcc521c4d81c1a27679be">AKPTInGameMode::AddTeamExperience</a></div><div class="ttdeci">void AddTeamExperience(int32 ExpToAdd)</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00789">KPTInGameMode.cpp:789</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a6855178c3536314307a454f02abe0c82"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a6855178c3536314307a454f02abe0c82">AKPTInGameMode::ShareTeamGold</a></div><div class="ttdeci">void ShareTeamGold()</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00636">KPTInGameMode.cpp:636</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a7759d3555460c0b82e18efc45f771445"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a7759d3555460c0b82e18efc45f771445">AKPTInGameMode::OnPlayerFinishedRewardChoice</a></div><div class="ttdeci">void OnPlayerFinishedRewardChoice(APlayerController *PlayerController)</div><div class="ttdoc">플레이어가 카드 보상 선택을 마쳤을 때 RewardManagerSubsystem이 호출합니다.</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00272">KPTInGameMode.cpp:272</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a84edc1df98161132b7b803669c9299a0"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a84edc1df98161132b7b803669c9299a0">AKPTInGameMode::BeginNightPhaseLogic</a></div><div class="ttdeci">void BeginNightPhaseLogic()</div><div class="ttdoc">야간 페이즈를 시작하기 위한 준비 및 전환을 시작합니다.</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00597">KPTInGameMode.cpp:597</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a87cb6168b8662d3ba2ebc02f0695522c"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a87cb6168b8662d3ba2ebc02f0695522c">AKPTInGameMode::InitiatePhaseTransition</a></div><div class="ttdeci">void InitiatePhaseTransition(const FGameplayTag &amp;TargetPhaseTag, float PhaseTransitionDuration)</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00444">KPTInGameMode.cpp:444</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a88de57fba9da892b172c9106affe14f3"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a88de57fba9da892b172c9106affe14f3">AKPTInGameMode::StartPlay</a></div><div class="ttdeci">virtual void StartPlay() override</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00119">KPTInGameMode.cpp:119</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a97f3e2361fae3fa048ea5c3c5f5c41b8"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a97f3e2361fae3fa048ea5c3c5f5c41b8">AKPTInGameMode::HandleBossSpawned</a></div><div class="ttdeci">void HandleBossSpawned(AActor *BossActor)</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00559">KPTInGameMode.cpp:559</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_a9f93e98963e67a4aec973d492c0b437a"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#a9f93e98963e67a4aec973d492c0b437a">AKPTInGameMode::StartRound</a></div><div class="ttdeci">void StartRound()</div><div class="ttdoc">새 라운드를 시작합니다.</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00166">KPTInGameMode.cpp:166</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_aa1438e6b6ee34fd792e397dedd825ff0"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#aa1438e6b6ee34fd792e397dedd825ff0">AKPTInGameMode::AreAllPlayersDead_Implementation</a></div><div class="ttdeci">virtual bool AreAllPlayersDead_Implementation() const</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00761">KPTInGameMode.cpp:761</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_aa4f70056d702908efb82a3a085b2d832"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#aa4f70056d702908efb82a3a085b2d832">AKPTInGameMode::HandleDayPhase</a></div><div class="ttdeci">void HandleDayPhase()</div><div class="ttdoc">주간 페이즈의 시작을 처리합니다.</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00176">KPTInGameMode.cpp:176</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_aa81ccab3f271d21f9a65bb8f42eb6f70"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#aa81ccab3f271d21f9a65bb8f42eb6f70">AKPTInGameMode::ReturnToLobby</a></div><div class="ttdeci">void ReturnToLobby()</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00717">KPTInGameMode.cpp:717</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_aa8b93d6bdef1ef7d2ddd4d2018bc94cb"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#aa8b93d6bdef1ef7d2ddd4d2018bc94cb">AKPTInGameMode::TeleportPlayerToStart</a></div><div class="ttdeci">void TeleportPlayerToStart()</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00496">KPTInGameMode.cpp:496</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_aab8a44dfe87df1106a9eecc225638148"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#aab8a44dfe87df1106a9eecc225638148">AKPTInGameMode::HandleMatchDefeat</a></div><div class="ttdeci">void HandleMatchDefeat()</div><div class="ttdoc">게임에서 패배했을 때 호출됩니다.</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00678">KPTInGameMode.cpp:678</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_ac4cacdaa16686d29b0f27a2dd65da50a"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#ac4cacdaa16686d29b0f27a2dd65da50a">AKPTInGameMode::HandleSeamlessTravelPlayer</a></div><div class="ttdeci">virtual void HandleSeamlessTravelPlayer(AController *&amp;C) override</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00082">KPTInGameMode.cpp:82</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_ac4d5a3516261d8a8f1c85bc8a123f87c"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#ac4d5a3516261d8a8f1c85bc8a123f87c">AKPTInGameMode::OnBossHPChanged</a></div><div class="ttdeci">FOnBossHPChanged OnBossHPChanged</div><div class="ttdef"><b>Definition</b> <a href="#l00056">KPTInGameMode.h:56</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_accedad98ce10e39419a3dbe21eb0286d"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#accedad98ce10e39419a3dbe21eb0286d">AKPTInGameMode::OnTeamStatsComponentReady</a></div><div class="ttdeci">void OnTeamStatsComponentReady(UTeamStatsComponent *TeamStats)</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00729">KPTInGameMode.cpp:729</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_acd0b193dd9ce700d2a4cb3953565584c"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#acd0b193dd9ce700d2a4cb3953565584c">AKPTInGameMode::StartNightPhase</a></div><div class="ttdeci">void StartNightPhase()</div><div class="ttdoc">야간 페이즈의 핵심 로직을 실행합니다.</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00606">KPTInGameMode.cpp:606</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_acde5763daa38af9c93badb25bf0f59d1"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#acde5763daa38af9c93badb25bf0f59d1">AKPTInGameMode::HandleMatchVictory</a></div><div class="ttdeci">void HandleMatchVictory()</div><div class="ttdoc">게임에서 승리했을 때 호출됩니다.</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00661">KPTInGameMode.cpp:661</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_ad299e138b605334f03841982928f4e6e"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#ad299e138b605334f03841982928f4e6e">AKPTInGameMode::InitializePlayerForCurrentPhase</a></div><div class="ttdeci">void InitializePlayerForCurrentPhase(APlayerController *PlayerController)</div><div class="ttdoc">특정 플레이어를 현재 게임 페이즈에 맞게 초기화합니다.</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00194">KPTInGameMode.cpp:194</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_ad512d0001ed08acca93e718fad244290"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#ad512d0001ed08acca93e718fad244290">AKPTInGameMode::OnBossSpawned</a></div><div class="ttdeci">FOnBossSpawned OnBossSpawned</div><div class="ttdef"><b>Definition</b> <a href="#l00053">KPTInGameMode.h:53</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_ad904efb516b64eddf8aef8f50e3c42a1"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#ad904efb516b64eddf8aef8f50e3c42a1">AKPTInGameMode::CheckAllPlayersReadyForNight</a></div><div class="ttdeci">void CheckAllPlayersReadyForNight()</div><div class="ttdoc">모든 플레이어가 야간 페이즈로 넘어갈 준비가 되었는지 확인합니다.</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00340">KPTInGameMode.cpp:340</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_addf2d1d15bcb20d2c98f7e9f9f724f26"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#addf2d1d15bcb20d2c98f7e9f9f724f26">AKPTInGameMode::AKPTInGameMode</a></div><div class="ttdeci">AKPTInGameMode()</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_mode_8cpp_source.html#l00039">KPTInGameMode.cpp:39</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_mode_html_ae299756023ed050373847ba468bd7885"><div class="ttname"><a href="class_a_k_p_t_in_game_mode.html#ae299756023ed050373847ba468bd7885">AKPTInGameMode::OnBossDefeated</a></div><div class="ttdeci">FOnBossDefeated OnBossDefeated</div><div class="ttdef"><b>Definition</b> <a href="#l00059">KPTInGameMode.h:59</a></div></div>
+<div class="ttc" id="aclass_u_in_game_phase_manager_component_html"><div class="ttname"><a href="class_u_in_game_phase_manager_component.html">UInGamePhaseManagerComponent</a></div><div class="ttdef"><b>Definition</b> <a href="_in_game_phase_manager_component_8h_source.html#l00011">InGamePhaseManagerComponent.h:13</a></div></div>
+<div class="ttc" id="aclass_u_reward_manager_subsystem_html"><div class="ttname"><a href="class_u_reward_manager_subsystem.html">URewardManagerSubsystem</a></div><div class="ttdef"><b>Definition</b> <a href="_reward_manager_subsystem_8h_source.html#l00023">RewardManagerSubsystem.h:25</a></div></div>
+<div class="ttc" id="aclass_u_shop_manager_subsystem_html"><div class="ttname"><a href="class_u_shop_manager_subsystem.html">UShopManagerSubsystem</a></div><div class="ttdef"><b>Definition</b> <a href="_shop_manager_subsystem_8h_source.html#l00014">ShopManagerSubsystem.h:16</a></div></div>
+<div class="ttc" id="aclass_u_stage_manager_subsystem_html"><div class="ttname"><a href="class_u_stage_manager_subsystem.html">UStageManagerSubsystem</a></div><div class="ttdoc">밤 페이즈 스테이지 진행에 관련된 헬퍼함수의 모음 UStageManagerSubsystem는 Stage에서 무엇을 해야 하는가?</div><div class="ttdef"><b>Definition</b> <a href="_stage_manager_subsystem_8h_source.html#l00017">StageManagerSubsystem.h:19</a></div></div>
+<div class="ttc" id="aclass_u_team_stats_component_html"><div class="ttname"><a href="class_u_team_stats_component.html">UTeamStatsComponent</a></div><div class="ttdef"><b>Definition</b> <a href="_team_stats_component_8h_source.html#l00012">TeamStatsComponent.h:14</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_9d0f275b41fa002800a89310ba1ebe25.html">Core</a></li><li class="navelem"><a href="_k_p_t_in_game_mode_8h.html">KPTInGameMode.h</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

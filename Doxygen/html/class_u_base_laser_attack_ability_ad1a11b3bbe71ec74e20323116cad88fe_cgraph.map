@@ -1,0 +1,16 @@
+<map id="UBaseLaserAttackAbility::ActivateAbility_BP" name="UBaseLaserAttackAbility::ActivateAbility_BP">
+<area shape="rect" id="Node000001" title="This function is meant to be implemented in Blueprint to define the ability&#39;s activation flow." alt="" coords="5,39,173,81"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="46,39,44,29,51,20,66,14,89,12,113,14,128,21,126,26,112,20,89,17,68,19,54,24,49,30,51,38"/>
+<area shape="rect" id="Node000002" href="$class_u_base_laser_attack_ability.html#a26ff67b6441cf3c270bb40024bb261f0" title=" " alt="" coords="233,5,400,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,54,217,47,218,53,173,59"/>
+<area shape="rect" id="Node000003" href="$class_u_base_laser_attack_ability.html#a872ab3f13348f056b6148f62cf3fffc7" title=" " alt="" coords="233,72,400,115"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="173,70,218,76,217,82,173,75"/>
+<area shape="rect" id="Node000005" href="$class_u_base_laser_attack_ability.html#aa398b1c8400be1004cc48ab88c2372a9" title=" " alt="" coords="221,139,413,181"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="131,79,222,124,236,130,234,135,220,129,128,84"/>
+<area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="233,33,188,39,187,34,232,28"/>
+<area shape="rect" id="Node000004" href="$class_u_base_laser_attack_ability.html#a1f265f5b299f3057b632ab3d32970ea6" title="Cleans up all spawned lasers and stops timers." alt="" coords="465,72,632,115"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="401,99,449,100,449,105,401,105"/>
+<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="464,87,416,87,416,82,464,82"/>
+<area shape="rect" id="Node000006" href="$class_u_base_laser_attack_ability.html#abd26ecf6cee23237e9249ce68b42fa62" title=" " alt="" coords="461,139,636,181"/>
+<area shape="poly" id="edge8_Node000005_Node000006" title=" " alt="" coords="413,157,445,157,445,163,413,163"/>
+</map>

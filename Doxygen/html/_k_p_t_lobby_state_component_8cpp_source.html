@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Core/Component/Lobby/KPTLobbyStateComponent.cpp 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_k_p_t_lobby_state_component_8cpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">KPTLobbyStateComponent.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_k_p_t_lobby_state_component_8cpp.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_k_p_t_lobby_state_component_8h.html">KPTLobbyStateComponent.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_k_p_t_player_state_8h.html">Character/KPTPlayerState.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_k_p_t_lobby_game_mode_8h.html">Core/KPTLobbyGameMode.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_k_p_t_lobby_game_state_8h.html">Core/KPTLobbyGameState.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;Net/UnrealNetwork.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="}">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_u_k_p_t_lobby_state_component.html#aee5ea5dd6bde7a9d6937501812615487">   12</a></span><a class="code hl_function" href="class_u_k_p_t_lobby_state_component.html#aee5ea5dd6bde7a9d6937501812615487">UKPTLobbyStateComponent::UKPTLobbyStateComponent</a>()</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    SetIsReplicatedByDefault(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_variable" href="class_u_k_p_t_lobby_state_component.html#a08d7fbc1fae876383fe5fdf65c5310cb">bIsReady</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>}</div>
+</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_u_k_p_t_lobby_state_component.html#a8845a02ebf9ad0a1a1716fc3604f8498">   18</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_k_p_t_lobby_state_component.html#a8845a02ebf9ad0a1a1716fc3604f8498">UKPTLobbyStateComponent::GetLifetimeReplicatedProps</a>(TArray&lt;FLifetimeProperty&gt;&amp; OutLifetimeProps)<span class="keyword"> const</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword"></span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    Super::GetLifetimeReplicatedProps(OutLifetimeProps);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    DOREPLIFETIME_CONDITION_NOTIFY(<a class="code hl_function" href="class_u_k_p_t_lobby_state_component.html#aee5ea5dd6bde7a9d6937501812615487">UKPTLobbyStateComponent</a>, <a class="code hl_variable" href="class_u_k_p_t_lobby_state_component.html#a08d7fbc1fae876383fe5fdf65c5310cb">bIsReady</a>, COND_None, REPNOTIFY_OnChanged);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    DOREPLIFETIME_CONDITION_NOTIFY(<a class="code hl_function" href="class_u_k_p_t_lobby_state_component.html#aee5ea5dd6bde7a9d6937501812615487">UKPTLobbyStateComponent</a>, <a class="code hl_variable" href="class_u_k_p_t_lobby_state_component.html#a5960527baa362bd309163be93fabfb6c">SelectedCharacterID</a>, COND_None, REPNOTIFY_OnChanged);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>}</div>
+</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_u_k_p_t_lobby_state_component.html#ad7785e5aac339aeb02edb1c89c3daf0c">   25</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_k_p_t_lobby_state_component.html#ad7785e5aac339aeb02edb1c89c3daf0c">UKPTLobbyStateComponent::SetReadyStatus</a>(<span class="keywordtype">bool</span> bInIsReady)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordflow">if</span> (GetOwner()-&gt;HasAuthority())</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <a class="code hl_variable" href="class_u_k_p_t_lobby_state_component.html#a08d7fbc1fae876383fe5fdf65c5310cb">bIsReady</a> = bInIsReady;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_function" href="class_u_k_p_t_lobby_state_component.html#a1e0cfe62a0675e8fc87db7086a23bdf5">BroadcastOnReadyStatusChanged</a>(); <span class="comment">// 서버에서도 호출</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="comment">// GameMode에게 상태 변경 알림</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="class_a_k_p_t_player_state.html">AKPTPlayerState</a>* PS = Cast&lt;AKPTPlayerState&gt;(GetOwner()))</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="class_a_k_p_t_lobby_game_mode.html">AKPTLobbyGameMode</a>* GM = GetWorld()-&gt;GetAuthGameMode&lt;AKPTLobbyGameMode&gt;())</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                GM-&gt;UpdatePlayerReadyState(PS-&gt;GetPlayerController(), <a class="code hl_variable" href="class_u_k_p_t_lobby_state_component.html#a08d7fbc1fae876383fe5fdf65c5310cb">bIsReady</a>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
+</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_u_k_p_t_lobby_state_component.html#ace741de15feaf7eecba3c429be3995ad">   43</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_k_p_t_lobby_state_component.html#ace741de15feaf7eecba3c429be3995ad">UKPTLobbyStateComponent::SetSelectedCharacter</a>(<span class="keyword">const</span> FGameplayTag&amp; InCharacterID)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">if</span> (GetOwner()-&gt;HasAuthority())</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="comment">// TODO: 여기서도 PlayerState의 UnlockedCharacterIDs를 참조하여 언락 여부 검증 가능</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_variable" href="class_u_k_p_t_lobby_state_component.html#a5960527baa362bd309163be93fabfb6c">SelectedCharacterID</a> = InCharacterID;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_function" href="class_u_k_p_t_lobby_state_component.html#ac81bf6f532fa9503447699b77694ee5f">OnRep_SelectedCharacterID</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
+</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_u_k_p_t_lobby_state_component.html#a1e0cfe62a0675e8fc87db7086a23bdf5">   53</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_k_p_t_lobby_state_component.html#a1e0cfe62a0675e8fc87db7086a23bdf5">UKPTLobbyStateComponent::BroadcastOnReadyStatusChanged</a>()</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>{</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_variable" href="class_u_k_p_t_lobby_state_component.html#ad9993a8a30f63f5c6e416b90f10d9a60">OnReadyStatusChanged</a>.Broadcast(<a class="code hl_variable" href="class_u_k_p_t_lobby_state_component.html#a08d7fbc1fae876383fe5fdf65c5310cb">bIsReady</a>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="class_u_k_p_t_lobby_state_component.html#a6c8e7ea5f398b32706327825f35ae9c4">   58</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_k_p_t_lobby_state_component.html#a6c8e7ea5f398b32706327825f35ae9c4">UKPTLobbyStateComponent::BeginPlay</a>()</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>{</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    Super::BeginPlay();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">if</span> (AActor* Owner = GetOwner(); Owner &amp;&amp; Owner-&gt;Implements&lt;<a class="code hl_class" href="class_u_component_owner_interface.html">UComponentOwnerInterface</a>&gt;())</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        IComponentOwnerInterface::Execute_NotifyComponentReady(Owner, <span class="keyword">this</span>);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <a class="code hl_variable" href="class_u_k_p_t_lobby_state_component.html#a08d7fbc1fae876383fe5fdf65c5310cb">bIsReady</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_u_k_p_t_lobby_state_component.html#afd58261cb32fc12fbceef70202ac5e40">   68</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_k_p_t_lobby_state_component.html#afd58261cb32fc12fbceef70202ac5e40">UKPTLobbyStateComponent::OnRep_IsReady</a>()</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>{</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_function" href="class_u_k_p_t_lobby_state_component.html#a1e0cfe62a0675e8fc87db7086a23bdf5">BroadcastOnReadyStatusChanged</a>();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>}</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_u_k_p_t_lobby_state_component.html#a96dab6d260d935c8d8bf94cb043fee4f">   73</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_k_p_t_lobby_state_component.html#a96dab6d260d935c8d8bf94cb043fee4f">UKPTLobbyStateComponent::BroadcastSelectedCharacterIDChange</a>()</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>{</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_variable" href="class_u_k_p_t_lobby_state_component.html#ab41a5a5591e7ce54c8cf8e7c39d934ef">OnSelectedCharacterChanged</a>.Broadcast(<a class="code hl_variable" href="class_u_k_p_t_lobby_state_component.html#a5960527baa362bd309163be93fabfb6c">SelectedCharacterID</a>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}</div>
+</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="foldopen" id="foldopen00078" data-start="{" data-end="}">
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_u_k_p_t_lobby_state_component.html#ac81bf6f532fa9503447699b77694ee5f">   78</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_k_p_t_lobby_state_component.html#ac81bf6f532fa9503447699b77694ee5f">UKPTLobbyStateComponent::OnRep_SelectedCharacterID</a>()</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>{</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <a class="code hl_function" href="class_u_k_p_t_lobby_state_component.html#a96dab6d260d935c8d8bf94cb043fee4f">BroadcastSelectedCharacterIDChange</a>();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>}</div>
+</div>
+<div class="ttc" id="a_k_p_t_lobby_game_mode_8h_html"><div class="ttname"><a href="_k_p_t_lobby_game_mode_8h.html">KPTLobbyGameMode.h</a></div></div>
+<div class="ttc" id="a_k_p_t_lobby_game_state_8h_html"><div class="ttname"><a href="_k_p_t_lobby_game_state_8h.html">KPTLobbyGameState.h</a></div></div>
+<div class="ttc" id="a_k_p_t_lobby_state_component_8h_html"><div class="ttname"><a href="_k_p_t_lobby_state_component_8h.html">KPTLobbyStateComponent.h</a></div></div>
+<div class="ttc" id="a_k_p_t_player_state_8h_html"><div class="ttname"><a href="_k_p_t_player_state_8h.html">KPTPlayerState.h</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_lobby_game_mode_html"><div class="ttname"><a href="class_a_k_p_t_lobby_game_mode.html">AKPTLobbyGameMode</a></div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_lobby_game_mode_8h_source.html#l00010">KPTLobbyGameMode.h:12</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html"><div class="ttname"><a href="class_a_k_p_t_player_state.html">AKPTPlayerState</a></div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_player_state_8h_source.html#l00040">KPTPlayerState.h:42</a></div></div>
+<div class="ttc" id="aclass_u_component_owner_interface_html"><div class="ttname"><a href="class_u_component_owner_interface.html">UComponentOwnerInterface</a></div><div class="ttdef"><b>Definition</b> <a href="_component_owner_interface_8h_source.html#l00013">ComponentOwnerInterface.h:15</a></div></div>
+<div class="ttc" id="aclass_u_k_p_t_lobby_state_component_html_a08d7fbc1fae876383fe5fdf65c5310cb"><div class="ttname"><a href="class_u_k_p_t_lobby_state_component.html#a08d7fbc1fae876383fe5fdf65c5310cb">UKPTLobbyStateComponent::bIsReady</a></div><div class="ttdeci">bool bIsReady</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_lobby_state_component_8h_source.html#l00058">KPTLobbyStateComponent.h:58</a></div></div>
+<div class="ttc" id="aclass_u_k_p_t_lobby_state_component_html_a1e0cfe62a0675e8fc87db7086a23bdf5"><div class="ttname"><a href="class_u_k_p_t_lobby_state_component.html#a1e0cfe62a0675e8fc87db7086a23bdf5">UKPTLobbyStateComponent::BroadcastOnReadyStatusChanged</a></div><div class="ttdeci">void BroadcastOnReadyStatusChanged()</div><div class="ttdef"><b>Definition</b> <a href="#l00053">KPTLobbyStateComponent.cpp:53</a></div></div>
+<div class="ttc" id="aclass_u_k_p_t_lobby_state_component_html_a5960527baa362bd309163be93fabfb6c"><div class="ttname"><a href="class_u_k_p_t_lobby_state_component.html#a5960527baa362bd309163be93fabfb6c">UKPTLobbyStateComponent::SelectedCharacterID</a></div><div class="ttdeci">FGameplayTag SelectedCharacterID</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_lobby_state_component_8h_source.html#l00061">KPTLobbyStateComponent.h:61</a></div></div>
+<div class="ttc" id="aclass_u_k_p_t_lobby_state_component_html_a6c8e7ea5f398b32706327825f35ae9c4"><div class="ttname"><a href="class_u_k_p_t_lobby_state_component.html#a6c8e7ea5f398b32706327825f35ae9c4">UKPTLobbyStateComponent::BeginPlay</a></div><div class="ttdeci">virtual void BeginPlay() override</div><div class="ttdef"><b>Definition</b> <a href="#l00058">KPTLobbyStateComponent.cpp:58</a></div></div>
+<div class="ttc" id="aclass_u_k_p_t_lobby_state_component_html_a8845a02ebf9ad0a1a1716fc3604f8498"><div class="ttname"><a href="class_u_k_p_t_lobby_state_component.html#a8845a02ebf9ad0a1a1716fc3604f8498">UKPTLobbyStateComponent::GetLifetimeReplicatedProps</a></div><div class="ttdeci">virtual void GetLifetimeReplicatedProps(TArray&lt; FLifetimeProperty &gt; &amp;OutLifetimeProps) const override</div><div class="ttdef"><b>Definition</b> <a href="#l00018">KPTLobbyStateComponent.cpp:18</a></div></div>
+<div class="ttc" id="aclass_u_k_p_t_lobby_state_component_html_a96dab6d260d935c8d8bf94cb043fee4f"><div class="ttname"><a href="class_u_k_p_t_lobby_state_component.html#a96dab6d260d935c8d8bf94cb043fee4f">UKPTLobbyStateComponent::BroadcastSelectedCharacterIDChange</a></div><div class="ttdeci">void BroadcastSelectedCharacterIDChange()</div><div class="ttdef"><b>Definition</b> <a href="#l00073">KPTLobbyStateComponent.cpp:73</a></div></div>
+<div class="ttc" id="aclass_u_k_p_t_lobby_state_component_html_ab41a5a5591e7ce54c8cf8e7c39d934ef"><div class="ttname"><a href="class_u_k_p_t_lobby_state_component.html#ab41a5a5591e7ce54c8cf8e7c39d934ef">UKPTLobbyStateComponent::OnSelectedCharacterChanged</a></div><div class="ttdeci">FOnSelectedCharacterChanged OnSelectedCharacterChanged</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_lobby_state_component_8h_source.html#l00046">KPTLobbyStateComponent.h:46</a></div></div>
+<div class="ttc" id="aclass_u_k_p_t_lobby_state_component_html_ac81bf6f532fa9503447699b77694ee5f"><div class="ttname"><a href="class_u_k_p_t_lobby_state_component.html#ac81bf6f532fa9503447699b77694ee5f">UKPTLobbyStateComponent::OnRep_SelectedCharacterID</a></div><div class="ttdeci">void OnRep_SelectedCharacterID()</div><div class="ttdef"><b>Definition</b> <a href="#l00078">KPTLobbyStateComponent.cpp:78</a></div></div>
+<div class="ttc" id="aclass_u_k_p_t_lobby_state_component_html_ace741de15feaf7eecba3c429be3995ad"><div class="ttname"><a href="class_u_k_p_t_lobby_state_component.html#ace741de15feaf7eecba3c429be3995ad">UKPTLobbyStateComponent::SetSelectedCharacter</a></div><div class="ttdeci">void SetSelectedCharacter(const FGameplayTag &amp;InCharacterID)</div><div class="ttdef"><b>Definition</b> <a href="#l00043">KPTLobbyStateComponent.cpp:43</a></div></div>
+<div class="ttc" id="aclass_u_k_p_t_lobby_state_component_html_ad7785e5aac339aeb02edb1c89c3daf0c"><div class="ttname"><a href="class_u_k_p_t_lobby_state_component.html#ad7785e5aac339aeb02edb1c89c3daf0c">UKPTLobbyStateComponent::SetReadyStatus</a></div><div class="ttdeci">void SetReadyStatus(bool bInIsReady)</div><div class="ttdef"><b>Definition</b> <a href="#l00025">KPTLobbyStateComponent.cpp:25</a></div></div>
+<div class="ttc" id="aclass_u_k_p_t_lobby_state_component_html_ad9993a8a30f63f5c6e416b90f10d9a60"><div class="ttname"><a href="class_u_k_p_t_lobby_state_component.html#ad9993a8a30f63f5c6e416b90f10d9a60">UKPTLobbyStateComponent::OnReadyStatusChanged</a></div><div class="ttdeci">FOnReadyStatusChanged OnReadyStatusChanged</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_lobby_state_component_8h_source.html#l00043">KPTLobbyStateComponent.h:43</a></div></div>
+<div class="ttc" id="aclass_u_k_p_t_lobby_state_component_html_aee5ea5dd6bde7a9d6937501812615487"><div class="ttname"><a href="class_u_k_p_t_lobby_state_component.html#aee5ea5dd6bde7a9d6937501812615487">UKPTLobbyStateComponent::UKPTLobbyStateComponent</a></div><div class="ttdeci">UKPTLobbyStateComponent()</div><div class="ttdef"><b>Definition</b> <a href="#l00012">KPTLobbyStateComponent.cpp:12</a></div></div>
+<div class="ttc" id="aclass_u_k_p_t_lobby_state_component_html_afd58261cb32fc12fbceef70202ac5e40"><div class="ttname"><a href="class_u_k_p_t_lobby_state_component.html#afd58261cb32fc12fbceef70202ac5e40">UKPTLobbyStateComponent::OnRep_IsReady</a></div><div class="ttdeci">void OnRep_IsReady()</div><div class="ttdef"><b>Definition</b> <a href="#l00068">KPTLobbyStateComponent.cpp:68</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_9d0f275b41fa002800a89310ba1ebe25.html">Core</a></li><li class="navelem"><a href="dir_c4b505f52885608e828b3baedebd7535.html">Component</a></li><li class="navelem"><a href="dir_8aa00e6bc033085e3ea6f87254f87024.html">Lobby</a></li><li class="navelem"><a href="_k_p_t_lobby_state_component_8cpp.html">KPTLobbyStateComponent.cpp</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

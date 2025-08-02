@@ -1,0 +1,6 @@
+<map id="UPlayerRewardStateComponent::InitializeBroadCast" name="UPlayerRewardStateComponent::InitializeBroadCast">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,217,72"/>
+<area shape="rect" id="Node000002" href="$class_u_player_reward_state_component.html#a2f2fd74ee9948c46f7c7c88f869a0f24" title="처리해야 할 보상의 개수를 반환합니다." alt="" coords="265,29,476,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,48,249,48,249,53,217,53"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="321,29,319,19,328,10,345,5,370,3,398,5,414,11,413,16,397,10,370,8,346,10,331,15,325,21,327,28"/>
+</map>

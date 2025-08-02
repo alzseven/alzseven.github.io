@@ -1,0 +1,5 @@
+<map id="AKPTInGameMode::CheckAllPlayersReadyForNight" name="AKPTInGameMode::CheckAllPlayersReadyForNight">
+<area shape="rect" id="Node000001" title="모든 플레이어가 야간 페이즈로 넘어갈 준비가 되었는지 확인합니다." alt="" coords="244,5,439,48"/>
+<area shape="rect" id="Node000002" href="$class_a_k_p_t_in_game_mode.html#a5139e6eb55204de25e844d6aa4f49420" title="플레이어가 상점에서 &#39;준비 완료&#39; 버튼을 눌렀을 때 호출됩니다." alt="" coords="5,5,196,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="228,29,196,29,196,24,228,24"/>
+</map>

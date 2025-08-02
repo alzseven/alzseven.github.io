@@ -1,0 +1,26 @@
+<map id="ABossMonsterBase::Die" name="ABossMonsterBase::Die">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,224,171,251"/>
+<area shape="rect" id="Node000002" href="$class_a_boss_monster_base.html#a148ab71c8d5d40090cc9f63fe81065b3" title=" " alt="" coords="219,216,417,259"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,235,203,235,203,240,171,240"/>
+<area shape="poly" id="edge7_Node000002_Node000002" title=" " alt="" coords="274,216,272,206,280,197,295,191,318,189,342,192,357,198,355,203,341,197,318,195,296,197,283,201,278,207,279,215"/>
+<area shape="rect" id="Node000003" href="$class_a_boss_monster_base.html#aad59c8c0ed3f6b9090cd0e29d35ae192" title=" " alt="" coords="470,5,686,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="330,214,383,142,420,100,463,64,484,53,487,57,467,69,424,104,387,145,334,217"/>
+<area shape="rect" id="Node000004" href="$class_a_boss_monster_base.html#a4b2b95b0be9b302d6d58c10635dc1cd0" title=" " alt="" coords="476,123,680,149"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="359,213,464,166,506,151,508,157,466,170,362,218"/>
+<area shape="rect" id="Node000005" href="$class_a_boss_monster_base.html#a96aef28a337652697596cc5012797c78" title=" " alt="" coords="751,73,945,116"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="334,214,387,158,423,130,464,108,532,88,603,78,672,75,736,78,735,83,672,81,603,83,533,93,466,113,426,134,391,162,338,217"/>
+<area shape="rect" id="Node000006" href="$class_a_boss_monster_base.html#ad00d7b706c434e7c530716da0af6e165" title=" " alt="" coords="739,148,957,191"/>
+<area shape="poly" id="edge11_Node000002_Node000006" title=" " alt="" coords="417,217,465,209,723,179,724,184,465,215,418,222"/>
+<area shape="rect" id="Node000007" href="$class_a_boss_monster_base.html#a3b52848f049e5ff80f0c8482db6b3b0f" title=" " alt="" coords="465,224,691,251"/>
+<area shape="poly" id="edge8_Node000002_Node000007" title=" " alt="" coords="417,235,449,235,449,240,417,240"/>
+<area shape="rect" id="Node000008" href="$class_a_boss_monster_base.html#aef9ea8fef296e1bb0638775ce217b934" title=" " alt="" coords="471,275,685,317"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="416,257,466,268,465,273,415,262"/>
+<area shape="rect" id="Node000009" href="$class_a_boss_monster_base.html#a076ed5a106ae8e6ff87cafd69ce10793" title=" " alt="" coords="470,341,686,384"/>
+<area shape="poly" id="edge10_Node000002_Node000009" title=" " alt="" coords="350,257,403,292,466,327,481,333,479,338,464,332,400,297,347,261"/>
+<area shape="rect" id="Node000010" href="$class_a_boss_monster_base.html#afae75c91bcb32e406d8239386654a58b" title=" " alt="" coords="466,408,690,451"/>
+<area shape="poly" id="edge12_Node000002_Node000010" title=" " alt="" coords="336,258,388,325,425,362,466,394,475,398,472,403,464,398,421,366,384,329,331,261"/>
+<area shape="rect" id="Node000011" href="$class_a_boss_monster_base.html#ae9a85f58384f8e9789d540167cb9f59f" title=" " alt="" coords="493,475,663,501"/>
+<area shape="poly" id="edge13_Node000002_Node000011" title=" " alt="" coords="329,258,347,301,376,357,416,413,440,439,467,460,480,468,477,473,463,465,436,443,412,417,372,360,342,304,324,260"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="670,119,735,109,736,114,670,125"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="681,146,724,151,723,157,681,151"/>
+</map>

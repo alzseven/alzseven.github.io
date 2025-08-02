@@ -1,0 +1,14 @@
+<map id="AKPTLobbyPlayerController::Server_SelectCharacter" name="AKPTLobbyPlayerController::Server_SelectCharacter">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,190,123"/>
+<area shape="poly" id="edge6_Node000001_Node000001" title=" " alt="" coords="53,80,52,70,59,61,74,55,98,53,122,56,137,62,135,67,121,61,97,59,76,61,62,65,57,71,59,79"/>
+<area shape="rect" id="Node000002" href="$class_a_k_p_t_lobby_player_controller.html#aed631b62d6aa2bff4969e7b4b22ec9ae" title=" " alt="" coords="238,51,422,93"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,87,222,83,222,88,191,92"/>
+<area shape="rect" id="Node000003" href="$class_a_k_p_t_lobby_player_controller.html#ad0a944b2a4df4237b8b961eebb4ca1e1" title=" " alt="" coords="470,5,654,48"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="135,77,183,54,237,36,292,26,349,20,454,18,455,23,349,25,293,31,238,41,185,59,137,82"/>
+<area shape="rect" id="Node000004" href="$class_a_k_p_t_lobby_player_controller.html#ac612045f4dabb0881f558a1a266ebd18" title=" " alt="" coords="470,84,654,127"/>
+<area shape="poly" id="edge7_Node000001_Node000004" title=" " alt="" coords="190,102,238,103,454,103,454,109,238,108,190,107"/>
+<area shape="rect" id="Node000005" href="$class_a_k_p_t_lobby_player_controller.html#a0f474796b79489cca5ff654c30e25e1a" title=" " alt="" coords="238,168,422,211"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="157,121,258,160,256,165,155,126"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="422,51,454,45,455,50,423,57"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="423,83,455,87,454,93,422,88"/>
+</map>

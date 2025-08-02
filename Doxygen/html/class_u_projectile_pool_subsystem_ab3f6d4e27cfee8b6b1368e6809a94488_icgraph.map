@@ -1,0 +1,15 @@
+<map id="UProjectilePoolSubsystem::RequestProjectile" name="UProjectilePoolSubsystem::RequestProjectile">
+<area shape="rect" id="Node000001" title=" " alt="" coords="646,83,824,125"/>
+<area shape="rect" id="Node000002" href="$class_u_base_skill_ability.html#add7b774bb674e60d694ab62b61e24378" title=" " alt="" coords="408,49,594,92"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="631,92,594,87,595,81,632,87"/>
+<area shape="rect" id="Node000005" href="$class_u_straight_seq_skill_ability.html#a207d39125f09d62a172614e0490a0f14" title=" " alt="" coords="404,116,598,159"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="632,121,599,126,599,121,631,116"/>
+<area shape="rect" id="Node000003" href="$class_u_orbit_skill_ability.html#a30cfb801f01a4750000faaa655b36ae8" title=" " alt="" coords="5,8,126,51"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="443,45,401,28,355,16,295,9,234,9,126,20,126,15,234,4,295,4,357,11,402,23,445,40"/>
+<area shape="rect" id="Node000004" href="$class_u_base_skill_ability.html#ade62b76d04ebd1cfb7fd24381996b226" title=" " alt="" coords="174,49,356,92"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="392,73,356,73,356,68,392,68"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="158,51,126,44,127,39,159,46"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="297,36,285,30,265,28,246,30,235,35,230,41,232,48,227,49,225,39,232,30,245,25,265,23,286,25,299,31"/>
+<area shape="rect" id="Node000006" href="$class_u_straight_seq_skill_ability.html#a6d9f4b84aaff3534ef4b2ad2dba6954c" title=" " alt="" coords="185,116,345,159"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="388,140,346,140,346,135,388,135"/>
+</map>

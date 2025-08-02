@@ -1,0 +1,9 @@
+<map id="UShopUI::UpdateRerollCost" name="UShopUI::UpdateRerollCost">
+<area shape="rect" id="Node000001" title=" " alt="" coords="708,13,896,40"/>
+<area shape="rect" id="Node000002" href="$class_u_shop_u_i.html#a4c04b00e51e3f9b202b95d09b119de8f" title=" " alt="" coords="468,5,660,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="692,29,661,29,661,24,692,24"/>
+<area shape="rect" id="Node000003" href="$class_u_shop_u_i.html#ab6eba1623182f0c5644886c65af5f8b3" title=" " alt="" coords="232,13,420,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="453,29,420,29,420,24,453,24"/>
+<area shape="rect" id="Node000004" href="$class_u_shop_u_i.html#ab8d30aa4ab0a8bf7ed1d77aa1f2ba1f5" title=" " alt="" coords="5,13,184,40"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="216,29,184,29,184,24,216,24"/>
+</map>

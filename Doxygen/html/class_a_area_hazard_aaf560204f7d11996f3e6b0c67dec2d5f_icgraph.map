@@ -1,0 +1,6 @@
+<map id="AAreaHazard::Multicast_SpawnIndicator" name="AAreaHazard::Multicast_SpawnIndicator">
+<area shape="rect" id="Node000001" title=" " alt="" coords="268,29,428,72"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="386,16,372,10,348,8,326,10,312,15,307,21,308,28,303,29,301,19,309,10,324,5,348,3,373,5,388,11"/>
+<area shape="rect" id="Node000002" href="$class_a_area_hazard.html#affe525f8354dd2bb5192cc33a27c1347" title=" " alt="" coords="5,37,220,64"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="252,53,220,53,220,48,252,48"/>
+</map>

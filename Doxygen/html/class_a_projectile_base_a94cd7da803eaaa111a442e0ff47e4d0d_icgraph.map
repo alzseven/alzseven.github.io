@@ -1,0 +1,6 @@
+<map id="AProjectileBase::StartLifeSpan_Implementation" name="AProjectileBase::StartLifeSpan_Implementation">
+<area shape="rect" id="Node000001" title=" " alt="" coords="255,21,426,64"/>
+<area shape="rect" id="Node000002" href="$class_a_projectile_base.html#accdb8884434cad3f7584b871734c3ddd" title=" " alt="" coords="5,29,207,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="239,45,207,45,207,40,239,40"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="147,17,133,10,106,8,81,10,68,15,65,20,71,27,67,31,59,21,64,11,80,5,106,3,134,5,149,12"/>
+</map>

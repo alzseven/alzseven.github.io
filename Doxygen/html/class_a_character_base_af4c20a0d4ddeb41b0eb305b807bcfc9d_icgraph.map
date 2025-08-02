@@ -1,0 +1,7 @@
+<map id="ACharacterBase::HandleDeath" name="ACharacterBase::HandleDeath">
+<area shape="rect" id="Node000001" title=" " alt="" coords="231,29,432,56"/>
+<area shape="rect" id="Node000002" href="$class_a_character_base.html#af3460531018611a7b3b2c59779c65ead" title=" " alt="" coords="5,29,183,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,54,183,54,183,49,215,49"/>
+<area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="198,31,230,31,230,36,198,36"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="135,17,121,10,94,8,69,10,55,15,52,20,58,27,54,31,47,21,52,11,68,5,94,3,123,5,138,12"/>
+</map>

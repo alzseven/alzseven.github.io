@@ -1,0 +1,23 @@
+<map id="UKPTPlayerAttributeSet::OnRep_Luck" name="UKPTPlayerAttributeSet::OnRep_Luck">
+<area shape="rect" id="Node000001" title=" " alt="" coords="492,164,655,207"/>
+<area shape="rect" id="Node000002" href="$class_u_k_p_t_player_attribute_set.html#aaccb4f2cf58d289eb2975916a716bbfb" title=" " alt="" coords="5,5,201,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="493,161,168,51,170,46,494,156"/>
+<area shape="rect" id="Node000003" href="$class_u_k_p_t_player_attribute_set.html#aa4a7eb9b5df34c17e1cc753ae89d5e43" title=" " alt="" coords="249,205,444,248"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="477,206,445,211,444,206,476,200"/>
+<area shape="poly" id="edge5_Node000003_Node000002" title=" " alt="" coords="317,195,256,119,224,85,199,62,179,51,182,46,202,58,228,81,260,116,322,192"/>
+<area shape="poly" id="edge8_Node000003_Node000003" title=" " alt="" coords="383,192,369,186,346,184,325,186,312,191,307,197,308,204,303,205,301,195,309,186,324,181,346,179,371,181,385,187"/>
+<area shape="rect" id="Node000004" href="$class_u_k_p_t_player_attribute_set.html#ac3bf3a46ba9760619053d10ee02b6ef1" title=" " alt="" coords="5,72,201,115"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="305,198,256,162,199,129,174,118,176,113,202,124,259,158,308,193"/>
+<area shape="rect" id="Node000005" href="$class_u_k_p_t_player_attribute_set.html#acc786b130189c40cf55e6a58368a3925" title=" " alt="" coords="5,139,201,181"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="251,203,183,185,184,179,252,198"/>
+<area shape="rect" id="Node000006" href="$class_u_k_p_t_player_attribute_set.html#a54a39af55450b3d8d28f9f7369c5bf61" title=" " alt="" coords="5,205,201,248"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="233,229,201,229,201,224,233,224"/>
+<area shape="rect" id="Node000007" href="$class_u_k_p_t_player_attribute_set.html#a7261aed8152b11c300848caf183908dd" title=" " alt="" coords="5,272,201,315"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="252,255,184,274,183,269,251,250"/>
+<area shape="rect" id="Node000008" href="$class_u_k_p_t_player_attribute_set.html#a2d787ccd6ff19db4387c42d768bc1812" title=" " alt="" coords="5,339,201,381"/>
+<area shape="poly" id="edge9_Node000003_Node000008" title=" " alt="" coords="308,260,259,295,202,329,176,341,174,336,199,324,256,291,305,256"/>
+<area shape="rect" id="Node000009" href="$class_u_k_p_t_player_attribute_set.html#aaf7bc48b18716a7e51e0449846c8cbb7" title=" " alt="" coords="5,405,201,448"/>
+<area shape="poly" id="edge10_Node000003_Node000009" title=" " alt="" coords="325,263,274,330,240,365,202,396,182,407,179,402,199,391,237,361,270,326,321,259"/>
+<area shape="rect" id="Node000010" href="$class_u_k_p_t_player_attribute_set.html#a985c6d40f9248c71ef2cd9b2d990122f" title=" " alt="" coords="5,472,201,515"/>
+<area shape="poly" id="edge11_Node000003_Node000010" title=" " alt="" coords="334,263,315,308,286,362,249,415,202,462,184,474,182,469,199,458,244,412,281,359,310,306,330,261"/>
+</map>

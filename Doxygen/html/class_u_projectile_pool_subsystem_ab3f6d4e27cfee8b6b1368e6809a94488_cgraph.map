@@ -1,0 +1,5 @@
+<map id="UProjectilePoolSubsystem::RequestProjectile" name="UProjectilePoolSubsystem::RequestProjectile">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,183,48"/>
+<area shape="rect" id="Node000002" href="$class_a_projectile_base.html#aed98ae66bdee935c0599c6b220123111" title=" " alt="" coords="231,13,443,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,24,215,24,215,29,183,29"/>
+</map>

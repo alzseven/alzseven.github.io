@@ -1,0 +1,10 @@
+<map id="AProjectileBase::OnLifeSpanExpired" name="AProjectileBase::OnLifeSpanExpired">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,196,72"/>
+<area shape="rect" id="Node000002" href="$class_a_projectile_base.html#a2276af661735f8971f6af66c6db7633d" title=" " alt="" coords="244,37,445,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,48,228,48,228,53,196,53"/>
+<area shape="rect" id="Node000003" href="$class_a_projectile_base.html#a56f85c58a5c516ddd3e66fbb115eb20d" title=" " alt="" coords="493,29,678,72"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="445,48,477,48,477,53,445,53"/>
+<area shape="rect" id="Node000004" href="$class_a_projectile_base.html#a76b21edb2d7e6427f03a3be58488ef52" title=" " alt="" coords="726,29,902,72"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="679,48,710,48,710,53,679,53"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="771,29,769,19,776,10,791,5,814,3,838,5,853,11,851,16,837,10,814,8,792,10,779,15,774,21,776,28"/>
+</map>

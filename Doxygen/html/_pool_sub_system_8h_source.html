@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Core/SubSystem/PoolSubSystem.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_pool_sub_system_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PoolSubSystem.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_pool_sub_system_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Subsystems/GameInstanceSubsystem.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;PoolSubSystem.generated.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span></div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_u_pool_sub_system.html">   12</a></span>UCLASS()</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>class KPT_API <a class="code hl_class" href="class_u_pool_sub_system.html">UPoolSubSystem</a> : public UGameInstanceSubsystem</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">// Subsystem이 초기화될 때 호출됩니다.</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_pool_sub_system.html#aa3cfda98559585fc90a4553f24172cde">Initialize</a>(FSubsystemCollectionBase&amp; Collection) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="comment">// Subsystem이 종료될 때 호출됩니다.</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_pool_sub_system.html#ab25704b2597e32de00b8e25adbac8305">Deinitialize</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Pool SubSystem&quot;</span>)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_pool_sub_system.html#a3ee510d13e32e150d336ee52a3494a42">SpawnFromPool</a>(TSubclassOf&lt;AActor&gt; PoolClass, FVector Location, FRotator Rotation, AActor*&amp; SpawnedActor);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Pool SubSystem&quot;</span>) </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_pool_sub_system.html#a13674eeb60968e86a0a06840070cf751">ReturnToPool</a>(AActor* Poolable);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Pool SubSystem&quot;</span>)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_pool_sub_system.html#ae6ab82e14866e260ddcf76f961090a9c">InitializePool</a>(TSubclassOf&lt;AActor&gt; PoolClass, int32 MaxSize);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Pool SubSystem&quot;</span>)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    int32 <a class="code hl_function" href="class_u_pool_sub_system.html#a4ff787afb980411f6532ff06d6e925eb">GetNumCurrentActivateObjects</a>(TSubclassOf&lt;AActor&gt; PoolClass);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    TMap&lt;UClass*, TArray&lt;AActor*&gt;&gt; ObjectPools;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    AActor* GetActorFromPool(TSubclassOf&lt;AActor&gt; PoolClass, FVector Location = FVector::Zero(), FRotator Rotation = FRotator::ZeroRotator);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>};</div>
+</div>
+<div class="ttc" id="aclass_u_pool_sub_system_html"><div class="ttname"><a href="class_u_pool_sub_system.html">UPoolSubSystem</a></div><div class="ttdef"><b>Definition</b> <a href="#l00012">PoolSubSystem.h:14</a></div></div>
+<div class="ttc" id="aclass_u_pool_sub_system_html_a13674eeb60968e86a0a06840070cf751"><div class="ttname"><a href="class_u_pool_sub_system.html#a13674eeb60968e86a0a06840070cf751">UPoolSubSystem::ReturnToPool</a></div><div class="ttdeci">void ReturnToPool(AActor *Poolable)</div><div class="ttdef"><b>Definition</b> <a href="_pool_sub_system_8cpp_source.html#l00029">PoolSubSystem.cpp:29</a></div></div>
+<div class="ttc" id="aclass_u_pool_sub_system_html_a3ee510d13e32e150d336ee52a3494a42"><div class="ttname"><a href="class_u_pool_sub_system.html#a3ee510d13e32e150d336ee52a3494a42">UPoolSubSystem::SpawnFromPool</a></div><div class="ttdeci">void SpawnFromPool(TSubclassOf&lt; AActor &gt; PoolClass, FVector Location, FRotator Rotation, AActor *&amp;SpawnedActor)</div><div class="ttdef"><b>Definition</b> <a href="_pool_sub_system_8cpp_source.html#l00018">PoolSubSystem.cpp:18</a></div></div>
+<div class="ttc" id="aclass_u_pool_sub_system_html_a4ff787afb980411f6532ff06d6e925eb"><div class="ttname"><a href="class_u_pool_sub_system.html#a4ff787afb980411f6532ff06d6e925eb">UPoolSubSystem::GetNumCurrentActivateObjects</a></div><div class="ttdeci">int32 GetNumCurrentActivateObjects(TSubclassOf&lt; AActor &gt; PoolClass)</div><div class="ttdef"><b>Definition</b> <a href="_pool_sub_system_8cpp_source.html#l00100">PoolSubSystem.cpp:100</a></div></div>
+<div class="ttc" id="aclass_u_pool_sub_system_html_aa3cfda98559585fc90a4553f24172cde"><div class="ttname"><a href="class_u_pool_sub_system.html#aa3cfda98559585fc90a4553f24172cde">UPoolSubSystem::Initialize</a></div><div class="ttdeci">virtual void Initialize(FSubsystemCollectionBase &amp;Collection) override</div><div class="ttdef"><b>Definition</b> <a href="_pool_sub_system_8cpp_source.html#l00008">PoolSubSystem.cpp:8</a></div></div>
+<div class="ttc" id="aclass_u_pool_sub_system_html_ab25704b2597e32de00b8e25adbac8305"><div class="ttname"><a href="class_u_pool_sub_system.html#ab25704b2597e32de00b8e25adbac8305">UPoolSubSystem::Deinitialize</a></div><div class="ttdeci">virtual void Deinitialize() override</div><div class="ttdef"><b>Definition</b> <a href="_pool_sub_system_8cpp_source.html#l00013">PoolSubSystem.cpp:13</a></div></div>
+<div class="ttc" id="aclass_u_pool_sub_system_html_ae6ab82e14866e260ddcf76f961090a9c"><div class="ttname"><a href="class_u_pool_sub_system.html#ae6ab82e14866e260ddcf76f961090a9c">UPoolSubSystem::InitializePool</a></div><div class="ttdeci">void InitializePool(TSubclassOf&lt; AActor &gt; PoolClass, int32 MaxSize)</div><div class="ttdef"><b>Definition</b> <a href="_pool_sub_system_8cpp_source.html#l00048">PoolSubSystem.cpp:48</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_9d0f275b41fa002800a89310ba1ebe25.html">Core</a></li><li class="navelem"><a href="dir_c5adcac0dad4fd3c0e6e6b5ea3efe6f7.html">SubSystem</a></li><li class="navelem"><a href="_pool_sub_system_8h.html">PoolSubSystem.h</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<map id="그래픽컬한 클래스 계통도" name="그래픽컬한 클래스 계통도">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,385,123,412"/>
+<area shape="rect" id="Node000001" href="$struct_f_b_g_m_data.html" title=" " alt="" coords="225,5,312,32"/>
+<area shape="poly" id="edge64_Node000000_Node000001" title=" " alt="" coords="62,369,66,303,81,215,94,168,113,122,137,80,169,42,195,26,224,18,225,23,197,31,172,46,142,83,117,125,99,170,86,216,71,303,68,370"/>
+<area shape="rect" id="Node000002" href="$struct_f_card_reward_data.html" title=" " alt="" coords="204,56,334,83"/>
+<area shape="poly" id="edge65_Node000000_Node000002" title=" " alt="" coords="64,369,71,311,87,237,101,198,119,159,141,124,169,93,185,82,202,74,204,79,187,86,172,97,145,127,123,162,106,200,93,238,76,312,69,370"/>
+<area shape="rect" id="Node000003" href="$struct_f_character_data.html" title=" " alt="" coords="212,107,326,133"/>
+<area shape="poly" id="edge66_Node000000_Node000003" title=" " alt="" coords="66,370,76,321,94,260,125,197,145,168,169,143,188,131,210,123,212,128,191,136,172,147,149,172,129,200,99,261,81,322,72,371"/>
+<area shape="rect" id="Node000004" href="$struct_f_damage_attach_actor_info_row.html" title=" " alt="" coords="171,157,367,184"/>
+<area shape="poly" id="edge67_Node000000_Node000004" title=" " alt="" coords="70,369,82,330,102,282,131,235,169,194,188,182,191,187,172,198,135,238,107,285,87,332,75,371"/>
+<area shape="rect" id="Node000005" href="$struct_f_item_data_row.html" title=" " alt="" coords="214,208,324,235"/>
+<area shape="poly" id="edge68_Node000000_Node000005" title=" " alt="" coords="75,370,111,306,137,273,169,244,190,233,212,226,214,231,192,238,172,249,141,276,115,309,79,372"/>
+<area shape="rect" id="Node000006" href="$struct_f_level_data_row.html" title=" " alt="" coords="211,259,326,285"/>
+<area shape="poly" id="edge69_Node000000_Node000006" title=" " alt="" coords="83,371,120,332,144,312,169,295,210,279,212,284,172,300,147,316,124,336,87,375"/>
+<area shape="rect" id="Node000007" href="$struct_f_mission_data_table_row.html" title=" " alt="" coords="189,309,349,336"/>
+<area shape="poly" id="edge70_Node000000_Node000007" title=" " alt="" coords="103,375,170,346,206,334,208,339,172,350,105,380"/>
+<area shape="rect" id="Node000008" href="$struct_f_mission_timeline_row.html" title=" " alt="" coords="194,360,344,387"/>
+<area shape="poly" id="edge71_Node000000_Node000008" title=" " alt="" coords="138,387,193,380,194,385,138,392"/>
+<area shape="rect" id="Node000009" href="$struct_f_monster_data.html" title=" " alt="" coords="217,411,321,437"/>
+<area shape="poly" id="edge72_Node000000_Node000009" title=" " alt="" coords="139,405,216,415,216,420,138,410"/>
+<area shape="rect" id="Node000010" href="$struct_f_skill_buff_data.html" title=" " alt="" coords="216,461,322,488"/>
+<area shape="poly" id="edge73_Node000000_Node000010" title=" " alt="" coords="105,417,172,447,216,461,215,466,170,452,103,422"/>
+<area shape="rect" id="Node000011" href="$struct_f_skill_data.html" title=" " alt="" coords="228,512,310,539"/>
+<area shape="poly" id="edge74_Node000000_Node000011" title=" " alt="" coords="87,422,124,462,147,481,172,498,199,509,228,517,226,522,198,515,169,502,144,485,120,465,83,426"/>
+<area shape="rect" id="Node000012" href="$struct_f_skill_v_f_x_data_row.html" title=" " alt="" coords="201,563,336,589"/>
+<area shape="poly" id="edge75_Node000000_Node000012" title=" " alt="" coords="79,425,115,488,141,521,172,548,202,563,200,568,169,553,137,525,111,491,75,428"/>
+<area shape="rect" id="Node000013" href="$struct_f_stage_data_row.html" title=" " alt="" coords="210,613,328,640"/>
+<area shape="poly" id="edge76_Node000000_Node000013" title=" " alt="" coords="75,426,87,466,107,513,135,560,172,599,190,610,210,617,208,622,188,615,169,603,131,563,102,515,82,468,70,428"/>
+<area shape="rect" id="Node000014" href="$struct_f_team_level_up_data.html" title="팀 레벨별 성장 데이터를 정의하는 구조체입니다." alt="" coords="200,664,338,691"/>
+<area shape="poly" id="edge77_Node000000_Node000014" title=" " alt="" coords="72,427,81,475,99,536,129,598,149,626,172,650,201,666,199,671,169,654,145,629,125,600,94,538,76,477,66,428"/>
+<area shape="rect" id="Node000015" href="$struct_f_widget_info_row.html" title=" " alt="" coords="209,715,328,741"/>
+<area shape="poly" id="edge78_Node000000_Node000015" title=" " alt="" coords="69,427,76,485,93,559,106,598,123,635,145,670,172,701,190,712,210,720,208,725,187,717,169,705,141,673,119,638,101,600,87,561,71,486,64,428"/>
+<area shape="rect" id="Node000016" href="$struct_f_yong_character_data_info.html" title=" " alt="" coords="186,765,352,792"/>
+<area shape="poly" id="edge79_Node000000_Node000016" title=" " alt="" coords="68,428,71,494,86,582,99,628,117,673,142,715,172,751,188,763,185,767,169,755,137,718,113,675,94,629,81,583,66,495,62,428"/>
+</map>

@@ -1,0 +1,24 @@
+<map id="UShopManagerSubsystem::ProcessPurchaseRequest" name="UShopManagerSubsystem::ProcessPurchaseRequest">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,154,187,197"/>
+<area shape="rect" id="Node000002" href="$class_u_player_wallet_component.html#a6dd5acbe6b24519fc223cb7d267e190c" title=" " alt="" coords="496,67,668,110"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,152,127,121,155,85,191,51,234,25,290,7,336,4,384,12,443,25,488,39,530,57,528,62,487,44,441,30,383,17,336,9,291,12,236,30,195,55,159,89,131,124,112,155"/>
+<area shape="rect" id="Node000003" href="$class_a_k_p_t_player_state.html#ad16de49a5aa9fc63b311aafb84b70e3f" title=" " alt="" coords="235,63,442,106"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="146,151,234,116,252,109,254,114,236,121,148,156"/>
+<area shape="rect" id="Node000004" href="$class_a_k_p_t_player_state.html#a27d8ea4d3a564c296af3ca1ac0298224" title=" " alt="" coords="244,154,433,197"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="187,173,228,173,228,178,187,178"/>
+<area shape="rect" id="Node000005" href="$class_u_inventory_manager.html#affc3d5e5e27c0a4a4ef88c1622c38793" title=" " alt="" coords="250,311,426,354"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="127,195,236,273,284,301,281,306,233,278,124,199"/>
+<area shape="rect" id="Node000008" href="$class_u_player_wallet_component.html#aba92f9e5375ec0f2dfa312175ab6ee61" title=" " alt="" coords="253,221,424,263"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="177,195,244,213,243,219,175,200"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="542,67,540,57,547,48,561,43,582,41,605,43,619,49,616,54,604,48,582,46,562,48,550,53,545,59,547,66"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="292,63,291,53,298,44,314,39,338,37,364,39,380,45,378,50,363,44,338,42,315,44,301,49,296,55,298,62"/>
+<area shape="poly" id="edge6_Node000004_Node000004" title=" " alt="" coords="292,154,291,144,298,135,314,129,338,127,364,130,380,136,378,141,363,135,338,133,315,135,301,139,296,145,298,153"/>
+<area shape="poly" id="edge10_Node000005_Node000005" title=" " alt="" coords="292,311,291,301,298,292,314,287,338,285,364,287,380,293,378,298,363,292,338,290,315,292,301,297,296,303,298,310"/>
+<area shape="rect" id="Node000006" href="$class_u_inventory_manager.html#ab993a5f8cc32d22723e45aae7f00be07" title=" " alt="" coords="490,311,674,354"/>
+<area shape="poly" id="edge8_Node000005_Node000006" title=" " alt="" coords="427,330,475,330,475,335,427,335"/>
+<area shape="rect" id="Node000007" href="$class_u_inventory_manager.html#a0ec24d982954c6b105ec7feb362a5c6c" title=" " alt="" coords="722,311,866,354"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="675,330,707,330,707,335,675,335"/>
+<area shape="poly" id="edge12_Node000008_Node000002" title=" " alt="" coords="417,218,441,206,500,164,549,119,553,123,504,168,443,211,419,223"/>
+<area shape="rect" id="Node000009" href="$class_u_player_wallet_component.html#ab679569285e7f915b08ffb945b2e2c3a" title=" " alt="" coords="496,221,668,263"/>
+<area shape="poly" id="edge13_Node000008_Node000009" title=" " alt="" coords="424,239,481,239,481,245,424,245"/>
+</map>

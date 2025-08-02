@@ -1,0 +1,7 @@
+<map id="UPlayerRewardStateComponent::BroadCastPendingChoicesChanged" name="UPlayerRewardStateComponent::BroadCastPendingChoicesChanged">
+<area shape="rect" id="Node000001" title=" " alt="" coords="265,39,503,81"/>
+<area shape="rect" id="Node000002" href="$class_u_player_reward_state_component.html#a68a049a6a47e5a1afa7d22cd8e6de9de" title="OfferedChoices 배열이 클라이언트로 복제 완료되었을 때 호출됩니다." alt="" coords="5,5,217,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="249,46,217,42,217,37,249,41"/>
+<area shape="rect" id="Node000003" href="$class_u_player_reward_state_component.html#ad3870d8283288aa39f8ea488eb131f12" title="서버에서만 호출: 새로운 보상 목록을 설정합니다." alt="" coords="5,72,217,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="249,79,217,83,217,78,249,74"/>
+</map>

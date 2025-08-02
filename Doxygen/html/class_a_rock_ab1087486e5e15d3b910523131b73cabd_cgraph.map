@@ -1,0 +1,5 @@
+<map id="ARock::BeginPlay" name="ARock::BeginPlay">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,134,32"/>
+<area shape="rect" id="Node000002" href="$class_a_rock.html#af5979cb69b762482d7943295008990e5" title=" " alt="" coords="182,5,285,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,16,166,16,166,21,134,21"/>
+</map>

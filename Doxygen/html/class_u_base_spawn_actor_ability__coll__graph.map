@@ -1,0 +1,5 @@
+<map id="UBaseSpawnActorAbility" name="UBaseSpawnActorAbility">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,123,450,443"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="170,5,286,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,89,230,123,225,123,225,89"/>
+</map>

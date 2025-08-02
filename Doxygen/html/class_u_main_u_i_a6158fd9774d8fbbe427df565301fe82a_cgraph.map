@@ -1,0 +1,15 @@
+<map id="UMainUI::OnClickedSetting" name="UMainUI::OnClickedSetting">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,189,61"/>
+<area shape="rect" id="Node000002" href="$class_u_u_i_base.html#a7db928b8721c8dede4954eed8695c0e4" title=" " alt="" coords="237,5,471,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,35,221,31,221,37,189,40"/>
+<area shape="rect" id="Node000003" href="$class_u_u_i_manager_subsystem.html#a291d9552775bf1843f433b3e363b0543" title=" " alt="" coords="273,56,434,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="189,56,259,64,258,69,189,61"/>
+<area shape="rect" id="Node000004" href="$class_u_u_i_manager_subsystem.html#ae6e92a8dab7f856443cfe5c4d00b25c9" title=" " alt="" coords="519,23,680,65"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="435,64,504,54,504,60,435,69"/>
+<area shape="rect" id="Node000007" href="$class_u_u_i_manager_subsystem.html#af61f694a539b5d427654903bc5944cf0" title=" " alt="" coords="519,89,680,132"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="435,86,504,95,504,100,435,91"/>
+<area shape="rect" id="Node000005" href="$class_u_u_i_manager_subsystem.html#acaac8367f6b3ad4c0509900d7f01b65a" title=" " alt="" coords="728,23,920,65"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="680,41,713,41,713,47,680,47"/>
+<area shape="rect" id="Node000006" href="$class_u_u_i_manager_subsystem.html#a6c815ab68107e8e616ddb62dd3391d2c" title=" " alt="" coords="968,23,1129,65"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="920,41,952,41,952,47,920,47"/>
+</map>

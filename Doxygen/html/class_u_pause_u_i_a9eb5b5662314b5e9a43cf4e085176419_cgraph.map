@@ -1,0 +1,26 @@
+<map id="UPauseUI::NativeConstruct" name="UPauseUI::NativeConstruct">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,148,191,175"/>
+<area shape="rect" id="Node000002" href="$class_u_pause_u_i.html#a5910729a1146468a2a5a445648d12fa0" title=" " alt="" coords="246,97,456,124"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,145,265,125,267,130,169,150"/>
+<area shape="rect" id="Node000008" href="$class_u_pause_u_i.html#adabd322b8b6a7947e70f65047fc58ad6" title=" " alt="" coords="251,148,450,175"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="191,159,235,159,235,164,191,164"/>
+<area shape="rect" id="Node000009" href="$class_u_pause_u_i.html#a62bca9ade6ab183a9115ae315dcedd13" title=" " alt="" coords="242,199,460,225"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="169,173,267,192,265,198,168,178"/>
+<area shape="rect" id="Node000010" href="$class_u_pause_u_i.html#ad272156d61dc1a44318b188bf06d403e" title=" " alt="" coords="239,47,463,73"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="119,145,171,114,238,83,260,75,262,81,240,88,174,119,122,150"/>
+<area shape="rect" id="Node000011" href="$class_u_pause_u_i.html#ad4831c2e5374425482573c3e662ea4cc" title=" " alt="" coords="243,249,459,276"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="122,173,174,204,240,235,262,242,260,247,238,240,171,209,119,177"/>
+<area shape="rect" id="Node000003" href="$class_u_u_i_manager_subsystem.html#aed4b9c08eec4848386a3a89108827ffd" title=" " alt="" coords="525,5,731,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="425,94,462,83,486,71,510,58,528,51,530,56,512,62,488,75,464,88,426,99"/>
+<area shape="rect" id="Node000004" href="$class_u_u_i_base.html#a7db928b8721c8dede4954eed8695c0e4" title=" " alt="" coords="511,72,745,99"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="456,98,495,95,496,100,456,104"/>
+<area shape="rect" id="Node000005" href="$class_u_u_i_manager_subsystem.html#a1e0415f5fab1f4658e1aee52f1ee1a0b" title="지정된 인스턴스 ID의 위젯을 화면에서 숨깁니다." alt="" coords="548,123,709,165"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="456,121,533,130,532,135,456,126"/>
+<area shape="rect" id="Node000006" href="$class_u_u_i_manager_subsystem.html#acaac8367f6b3ad4c0509900d7f01b65a" title=" " alt="" coords="793,123,985,165"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="709,141,778,141,778,147,709,147"/>
+<area shape="rect" id="Node000007" href="$class_u_u_i_manager_subsystem.html#a6c815ab68107e8e616ddb62dd3391d2c" title=" " alt="" coords="1033,123,1194,165"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="985,141,1017,141,1017,147,985,147"/>
+<area shape="poly" id="edge10_Node000010_Node000003" title=" " alt="" coords="463,44,509,38,510,44,464,49"/>
+<area shape="poly" id="edge11_Node000010_Node000004" title=" " alt="" coords="464,68,496,71,495,76,463,73"/>
+<area shape="poly" id="edge12_Node000010_Node000005" title=" " alt="" coords="426,71,464,83,488,95,512,108,534,116,532,121,510,113,486,100,462,88,425,77"/>
+</map>

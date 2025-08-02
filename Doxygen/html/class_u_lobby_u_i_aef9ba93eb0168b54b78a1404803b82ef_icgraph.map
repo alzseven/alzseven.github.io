@@ -1,0 +1,8 @@
+<map id="ULobbyUI::OnSessionSearchFinished" name="ULobbyUI::OnSessionSearchFinished">
+<area shape="rect" id="Node000001" title=" " alt="" coords="237,29,430,72"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="372,16,357,10,333,8,311,10,297,15,292,21,294,28,289,29,287,19,294,10,310,5,333,3,359,5,374,11"/>
+<area shape="rect" id="Node000002" href="$class_u_lobby_u_i.html#a23f225f9b4d655c2a638dc48a5f0810e" title=" " alt="" coords="5,12,189,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,41,189,38,189,33,221,36"/>
+<area shape="rect" id="Node000003" href="$class_u_lobby_u_i.html#a5dbad1b50286a6d2b8726985d6fb7279" title=" " alt="" coords="9,63,185,89"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="222,65,186,69,185,64,221,60"/>
+</map>

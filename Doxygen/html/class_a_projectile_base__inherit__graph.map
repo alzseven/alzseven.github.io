@@ -1,0 +1,9 @@
+<map id="AProjectileBase" name="AProjectileBase">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,123,345,1692"/>
+<area shape="rect" id="Node000003" href="$class_a_active_projectile.html" title=" " alt="" coords="19,1988,129,2057"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="105,1707,80,1988,74,1987,100,1706"/>
+<area shape="rect" id="Node000004" href="$class_a_delay_projectile_base.html" title=" " alt="" coords="154,1740,402,2305"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="252,1706,255,1740,249,1740,246,1707"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="150,5,201,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,89,178,123,173,123,173,89"/>
+</map>

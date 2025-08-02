@@ -1,0 +1,9 @@
+<map id="IPoolable" name="IPoolable">
+<area shape="rect" id="Node000001" title=" " alt="" coords="339,5,512,96"/>
+<area shape="rect" id="Node000002" href="$class_a_experience.html" title=" " alt="" coords="5,208,280,1088"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="333,107,312,125,294,146,254,210,250,207,290,142,308,121,330,103"/>
+<area shape="rect" id="Node000003" href="$class_a_gold.html" title=" " alt="" coords="304,235,546,1062"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="428,111,428,235,423,235,423,111"/>
+<area shape="rect" id="Node000004" href="$class_a_minion_monster.html" title=" " alt="" coords="571,144,808,1153"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="523,103,543,121,561,142,573,161,569,164,557,146,539,125,519,107"/>
+</map>

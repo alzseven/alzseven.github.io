@@ -1,0 +1,16 @@
+<map id="ALaserBeam::SetLaserBeamEnd" name="ALaserBeam::SetLaserBeamEnd">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,115,219,141"/>
+<area shape="poly" id="edge7_Node000001_Node000001" title=" " alt="" coords="67,116,59,106,64,96,82,90,112,88,145,91,161,97,159,102,143,96,112,93,83,95,67,100,64,105,71,112"/>
+<area shape="rect" id="Node000002" href="$class_a_laser_beam.html#a6769e1b955b27da48560b5da262b00f1" title=" " alt="" coords="302,5,465,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,112,191,77,266,42,289,34,291,39,268,46,194,81,136,116"/>
+<area shape="rect" id="Node000003" href="$class_a_laser_beam.html#a06d33ee7187f343e4549552bde6e39cd" title=" " alt="" coords="307,56,460,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="177,111,303,84,304,89,178,117"/>
+<area shape="rect" id="Node000004" href="$class_a_laser_beam.html#a9b8586a019c38cf75c76f4fbd162b733" title=" " alt="" coords="267,107,500,149"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="219,125,251,125,251,131,219,131"/>
+<area shape="rect" id="Node000006" href="$class_a_laser_beam.html#ad8bdeaad72d677a90b75a369bb62320e" title=" " alt="" coords="272,173,495,200"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="178,139,304,167,303,172,177,145"/>
+<area shape="rect" id="Node000007" href="$class_a_laser_beam.html#a111ed739e94f25374d405dc8fc83edf9" title=" " alt="" coords="274,224,492,251"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="136,140,194,175,268,210,291,217,289,222,266,214,191,179,133,144"/>
+<area shape="rect" id="Node000005" href="$class_a_laser_beam.html#aaa6dcf969e8b56800ee9794dc278a856" title=" " alt="" coords="548,115,727,141"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="501,125,532,125,532,131,501,131"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="UStageManagerSubsystem" name="UStageManagerSubsystem">
+<area shape="rect" id="Node000001" title="밤 페이즈 스테이지 진행에 관련된 헬퍼함수의 모음 UStageManagerSubsystem는 Stage에서 무엇을 해야 하는가?" alt="" coords="148,459,355,832"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,240,125,309"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,322,160,458,156,460,87,324"/>
+<area shape="rect" id="Node000003" href="$struct_f_stage_data_row.html" title=" " alt="" coords="149,163,354,387"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="254,386,254,441,249,441,249,386"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="198,13,305,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="254,98,254,163,249,163,249,98"/>
+<area shape="rect" id="Node000005" href="$struct_f_phase_action_data.html" title=" " alt="" coords="378,229,581,320"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="455,321,367,464,362,461,451,318"/>
+<area shape="rect" id="Node000006" href="$struct_f_boss_phase_data.html" title=" " alt="" coords="404,5,555,91"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="482,90,482,212,477,212,477,90"/>
+</map>

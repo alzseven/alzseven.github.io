@@ -1,0 +1,6 @@
+<map id="ASquareIndicatorActor::InitializeIndicator" name="ASquareIndicatorActor::InitializeIndicator">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,158,72"/>
+<area shape="rect" id="Node000002" href="$class_a_square_indicator_actor.html#abaa166e37d10c0f111215543b145e586" title=" " alt="" coords="206,29,385,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,48,190,48,190,53,158,53"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="255,29,253,19,260,10,274,5,295,3,318,5,332,11,330,16,317,10,295,8,275,10,263,15,258,21,260,28"/>
+</map>

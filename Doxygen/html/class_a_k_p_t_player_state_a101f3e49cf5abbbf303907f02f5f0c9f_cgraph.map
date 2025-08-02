@@ -1,0 +1,7 @@
+<map id="AKPTPlayerState::ResetForNewGame" name="AKPTPlayerState::ResetForNewGame">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,192,48"/>
+<area shape="rect" id="Node000002" href="$class_a_k_p_t_player_state.html#ae76783471e033ac0ece5ebe988856b1b" title="업그레이드 선택 기회를 추가합니다." alt="" coords="240,5,443,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,24,224,24,224,29,192,29"/>
+<area shape="rect" id="Node000003" href="$class_a_k_p_t_player_state.html#aa41c46851e05f762ccd8c2fc98aa505a" title=" " alt="" coords="491,5,664,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="443,24,475,24,475,29,443,29"/>
+</map>

@@ -1,0 +1,35 @@
+<map id="UUIManagerSubsystem::HideWidget" name="UUIManagerSubsystem::HideWidget">
+<area shape="rect" id="Node000001" title="지정된 인스턴스 ID의 위젯을 화면에서 숨깁니다." alt="" coords="957,207,1118,249"/>
+<area shape="rect" id="Node000002" href="$class_u_event_u_i.html#a63b5c4977ff4bce0a6c0039111a5e37b" title=" " alt="" coords="703,5,890,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1016,194,972,127,942,92,907,62,887,51,890,46,910,58,946,88,976,124,1021,192"/>
+<area shape="rect" id="Node000003" href="$class_u_transition_u_i.html#ab196f60a081ad3cb90e2562cd4da6dc5" title=" " alt="" coords="692,72,901,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1001,198,958,162,907,129,882,118,884,113,910,124,961,158,1005,194"/>
+<area shape="rect" id="Node000004" href="$class_u_pause_u_i.html#a5910729a1146468a2a5a445648d12fa0" title=" " alt="" coords="692,139,901,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="971,203,908,180,866,168,867,163,909,175,973,198"/>
+<area shape="rect" id="Node000007" href="$class_u_shop_u_i.html#a86e30b557b9c8efbcb66007ad6987b84" title=" " alt="" coords="695,240,898,267"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="941,241,899,245,898,240,941,235"/>
+<area shape="rect" id="Node000009" href="$class_u_pause_u_i.html#ad272156d61dc1a44318b188bf06d403e" title=" " alt="" coords="684,189,909,216"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="941,221,909,217,909,212,941,215"/>
+<area shape="rect" id="Node000010" href="$class_u_u_i_manager_subsystem.html#ab97849a761dc09f79fcbf69c45fc0ae3" title=" " alt="" coords="716,291,877,333"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="971,258,910,281,875,293,873,288,908,276,969,253"/>
+<area shape="rect" id="Node000011" href="$class_u_skill_slot_u_i.html#a767d282f328026f7c4ecf7df95201611" title=" " alt="" coords="701,357,892,400"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="1010,263,966,307,910,348,886,359,884,354,907,343,962,303,1006,259"/>
+<area shape="rect" id="Node000012" href="$class_u_u_i_manager_subsystem.html#aec1290f1100ff3c1b7fa144daec04166" title=" " alt="" coords="706,424,887,467"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="1023,264,1005,300,979,340,948,380,910,414,888,427,886,422,907,410,944,376,975,337,1000,297,1018,262"/>
+<area shape="rect" id="Node000005" href="$class_u_pause_u_i.html#a9eb5b5662314b5e9a43cf4e085176419" title=" " alt="" coords="438,139,623,165"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="676,155,623,155,623,149,676,149"/>
+<area shape="rect" id="Node000006" href="$class_u_pause_u_i.html#a044a4b6a8ff4a00b6065ca292cb165a9" title=" " alt="" coords="441,189,619,216"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="708,171,605,191,604,186,707,166"/>
+<area shape="rect" id="Node000008" href="$class_u_shop_u_i.html#ab8d30aa4ab0a8bf7ed1d77aa1f2ba1f5" title=" " alt="" coords="441,240,619,267"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="679,256,620,256,620,251,679,251"/>
+<area shape="poly" id="edge9_Node000009_Node000005" title=" " alt="" coords="707,188,604,169,605,163,708,183"/>
+<area shape="poly" id="edge10_Node000009_Node000006" title=" " alt="" coords="669,205,620,205,620,200,669,200"/>
+<area shape="rect" id="Node000013" href="$class_u_u_i_manager_subsystem.html#a246ae6eabb3d321cdc4abc2068ca1e61" title=" " alt="" coords="424,424,636,467"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="691,448,637,448,637,443,691,443"/>
+<area shape="rect" id="Node000014" href="$class_u_u_i_manager_subsystem.html#ae786dee1d051999eb3e98960d96a39d4" title=" " alt="" coords="215,391,376,433"/>
+<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="408,431,376,426,377,421,409,425"/>
+<area shape="rect" id="Node000015" href="$class_u_u_i_manager_subsystem.html#a8199a73ecef396d77dc15b4049ad7491" title=" " alt="" coords="215,457,376,500"/>
+<area shape="poly" id="edge16_Node000013_Node000015" title=" " alt="" coords="409,465,377,470,376,465,408,460"/>
+<area shape="rect" id="Node000016" href="$class_u_u_i_manager_subsystem.html#a0ece8b5888a4cfe5b70f308dcfb28478" title=" " alt="" coords="5,457,167,500"/>
+<area shape="poly" id="edge17_Node000015_Node000016" title=" " alt="" coords="199,481,167,481,167,476,199,476"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="UShopUI::InitializeWalletEvents" name="UShopUI::InitializeWalletEvents">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,173,77"/>
+<area shape="rect" id="Node000002" href="$class_u_player_wallet_component.html#ac18a8cff3cae7dacd942d37f3c0a0155" title=" " alt="" coords="221,5,392,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,42,205,38,206,43,174,47"/>
+<area shape="rect" id="Node000003" href="$class_u_shop_u_i.html#afb6c36fae37308fde008155569288662" title=" " alt="" coords="230,72,382,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="174,65,215,70,214,76,173,70"/>
+</map>

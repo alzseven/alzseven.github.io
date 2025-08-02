@@ -1,0 +1,7 @@
+<map id="UGameplayAbility_BossBreath" name="UGameplayAbility_BossBreath">
+<area shape="rect" id="Node000001" title=" " alt="" coords="6,693,450,896"/>
+<area shape="rect" id="Node000002" href="$class_u_gameplay_ability___trace_base.html" title=" " alt="" coords="5,123,450,645"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,660,230,694,225,694,225,660"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="170,5,286,75"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="230,89,230,123,225,123,225,89"/>
+</map>

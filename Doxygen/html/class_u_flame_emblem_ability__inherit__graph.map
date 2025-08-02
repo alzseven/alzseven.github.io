@@ -1,0 +1,7 @@
+<map id="UFlameEmblemAbility" name="UFlameEmblemAbility">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,501,450,773"/>
+<area shape="rect" id="Node000002" href="$class_u_item_ability.html" title=" " alt="" coords="5,123,450,453"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,468,230,502,225,502,225,468"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="170,5,286,75"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="230,90,230,123,225,123,225,90"/>
+</map>

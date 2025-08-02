@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/UI/Event/EventUI.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_event_u_i_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">EventUI.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_event_u_i_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_u_i_base_8h.html">UI/UIBase.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;EventUI.generated.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">class </span>APostProcessVolume;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">class </span>UTextBlock;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">class </span>UImage;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_u_event_u_i.html">   16</a></span>UCLASS()</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>class KPT_API <a class="code hl_class" href="class_u_event_u_i.html">UEventUI</a> : public <a class="code hl_class" href="class_u_u_i_base.html">UUIBase</a></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    UFUNCTION()</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_event_u_i.html#a63b5c4977ff4bce0a6c0039111a5e37b">HandleAnimationFinished</a>();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;UI Effects&quot;</span>)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_event_u_i.html#a65c4055c60a8b4072d2c96441706130c">StartGrayscaleFade</a>(<span class="keywordtype">bool</span> bFadeToGrayscale, <span class="keywordtype">float</span> Duration = 2.0f);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">//void SetGrayscaleEffect(bool bEnable);</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_event_u_i.html#a257111240d13d4090ec44913eb5d74b6">UpdateGrayscaleFade</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_u_event_u_i.html#a902cf7fec2aa832771ca922308e9a615">   33</a></span>    <span class="keyword">const</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_event_u_i.html#a902cf7fec2aa832771ca922308e9a615">SetEventId</a>(<a class="code hl_variable" href="_level_u_i_data_asset_8h.html#a29dbed6663866446956d4a1f6b64d32d">EUIEventId</a> NewEventId){<a class="code hl_variable" href="class_u_event_u_i.html#a3e2b4cdfa0a52477afe744cde063e2a5">EventId</a> = NewEventId;};</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_u_event_u_i.html#aa730e7fc6067835911911123b0a5c5db">   34</a></span>    <span class="keyword">const</span> <a class="code hl_variable" href="_level_u_i_data_asset_8h.html#a29dbed6663866446956d4a1f6b64d32d">EUIEventId</a> <a class="code hl_function" href="class_u_event_u_i.html#aa730e7fc6067835911911123b0a5c5db">GetEventId</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> <a class="code hl_variable" href="class_u_event_u_i.html#a3e2b4cdfa0a52477afe744cde063e2a5">EventId</a>;};</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> NativeConstruct() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> NativePreConstruct() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> NativeDestruct() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_u_event_u_i.html#ada2c151403265318b13513c71e74677b">   44</a></span>    TObjectPtr&lt;UTextBlock&gt; <a class="code hl_variable" href="class_u_event_u_i.html#ada2c151403265318b13513c71e74677b">EventText</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">// UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">// TObjectPtr&lt;UImage&gt; EventImage;</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">// UPROPERTY(BlueprintReadWrite)</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">// TObjectPtr&lt;UMaterialInstanceDynamic&gt; EventImageMaterial;</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    UPROPERTY(Transient, meta = (BindWidgetAnimOptional))</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="class_u_event_u_i.html#ae0471a02a8a1e99e022ba8a19e85a43a">   53</a></span>    TObjectPtr&lt;UWidgetAnimation&gt; <a class="code hl_variable" href="class_u_event_u_i.html#ae0471a02a8a1e99e022ba8a19e85a43a">SurvivalAnimation</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    UPROPERTY(Transient, meta = (BindWidgetAnimOptional))</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_u_event_u_i.html#a26dc8942ca2506543522cb40cfe575a0">   56</a></span>    TObjectPtr&lt;UWidgetAnimation&gt; <a class="code hl_variable" href="class_u_event_u_i.html#a26dc8942ca2506543522cb40cfe575a0">DefeatAnimation</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    UPROPERTY(Transient, meta = (BindWidgetAnimOptional))</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_u_event_u_i.html#a5fc0b4276e2388b3870d2e8a441307e8">   59</a></span>    TObjectPtr&lt;UWidgetAnimation&gt; <a class="code hl_variable" href="class_u_event_u_i.html#a5fc0b4276e2388b3870d2e8a441307e8">WinAnimation</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_u_event_u_i.html#a3e2b4cdfa0a52477afe744cde063e2a5">   61</a></span>    <a class="code hl_variable" href="_level_u_i_data_asset_8h.html#a29dbed6663866446956d4a1f6b64d32d">EUIEventId</a> <a class="code hl_variable" href="class_u_event_u_i.html#a3e2b4cdfa0a52477afe744cde063e2a5">EventId</a> = <a class="code hl_variable" href="_level_u_i_data_asset_8h.html#a29dbed6663866446956d4a1f6b64d32d">EUIEventId</a>::None;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    UPROPERTY()</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_u_event_u_i.html#ae16e5c4ea458213827a0668698515b2d">   64</a></span>    TObjectPtr&lt;APostProcessVolume&gt; <a class="code hl_variable" href="class_u_event_u_i.html#ae16e5c4ea458213827a0668698515b2d">TargetPostProcessVolume</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">// 페이드 효과를 제어하는 타이머 핸들</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="class_u_event_u_i.html#aef5363f29980f749fdb4406fde519690">   69</a></span>    FTimerHandle <a class="code hl_variable" href="class_u_event_u_i.html#aef5363f29980f749fdb4406fde519690">GrayscaleFadeTimerHandle</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_u_event_u_i.html#a42430e26b118b8c3976cbbffe634a84f">   71</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_event_u_i.html#a42430e26b118b8c3976cbbffe634a84f">StartSaturation</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_u_event_u_i.html#aeeaa3f48b1eb28bce8d58a4561410c28">   72</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_event_u_i.html#aeeaa3f48b1eb28bce8d58a4561410c28">EndSaturation</a>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">// 페이드 효과의 총 지속 시간과 시작 시간</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_u_event_u_i.html#afb7d64b609a00c1917233fe1141f43a8">   75</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_event_u_i.html#afb7d64b609a00c1917233fe1141f43a8">FadeDuration</a>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_u_event_u_i.html#a053141b6dc9c5df3d85cc1be51baa7a6">   76</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_event_u_i.html#a053141b6dc9c5df3d85cc1be51baa7a6">FadeStartTime</a>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>};</div>
+</div>
+<div class="ttc" id="a_level_u_i_data_asset_8h_html_a29dbed6663866446956d4a1f6b64d32d"><div class="ttname"><a href="_level_u_i_data_asset_8h.html#a29dbed6663866446956d4a1f6b64d32d">EUIEventId</a></div><div class="ttdeci">enum enum class EUIEventId</div><div class="ttdef"><b>Definition</b> <a href="_level_u_i_data_asset_8h_source.html#l00045">LevelUIDataAsset.h:44</a></div></div>
+<div class="ttc" id="a_u_i_base_8h_html"><div class="ttname"><a href="_u_i_base_8h.html">UIBase.h</a></div></div>
+<div class="ttc" id="aclass_u_event_u_i_html"><div class="ttname"><a href="class_u_event_u_i.html">UEventUI</a></div><div class="ttdef"><b>Definition</b> <a href="#l00016">EventUI.h:18</a></div></div>
+<div class="ttc" id="aclass_u_event_u_i_html_a053141b6dc9c5df3d85cc1be51baa7a6"><div class="ttname"><a href="class_u_event_u_i.html#a053141b6dc9c5df3d85cc1be51baa7a6">UEventUI::FadeStartTime</a></div><div class="ttdeci">float FadeStartTime</div><div class="ttdef"><b>Definition</b> <a href="#l00076">EventUI.h:76</a></div></div>
+<div class="ttc" id="aclass_u_event_u_i_html_a257111240d13d4090ec44913eb5d74b6"><div class="ttname"><a href="class_u_event_u_i.html#a257111240d13d4090ec44913eb5d74b6">UEventUI::UpdateGrayscaleFade</a></div><div class="ttdeci">void UpdateGrayscaleFade()</div><div class="ttdef"><b>Definition</b> <a href="_event_u_i_8cpp_source.html#l00170">EventUI.cpp:170</a></div></div>
+<div class="ttc" id="aclass_u_event_u_i_html_a26dc8942ca2506543522cb40cfe575a0"><div class="ttname"><a href="class_u_event_u_i.html#a26dc8942ca2506543522cb40cfe575a0">UEventUI::DefeatAnimation</a></div><div class="ttdeci">TObjectPtr&lt; UWidgetAnimation &gt; DefeatAnimation</div><div class="ttdef"><b>Definition</b> <a href="#l00056">EventUI.h:56</a></div></div>
+<div class="ttc" id="aclass_u_event_u_i_html_a3e2b4cdfa0a52477afe744cde063e2a5"><div class="ttname"><a href="class_u_event_u_i.html#a3e2b4cdfa0a52477afe744cde063e2a5">UEventUI::EventId</a></div><div class="ttdeci">EUIEventId EventId</div><div class="ttdef"><b>Definition</b> <a href="#l00061">EventUI.h:61</a></div></div>
+<div class="ttc" id="aclass_u_event_u_i_html_a42430e26b118b8c3976cbbffe634a84f"><div class="ttname"><a href="class_u_event_u_i.html#a42430e26b118b8c3976cbbffe634a84f">UEventUI::StartSaturation</a></div><div class="ttdeci">float StartSaturation</div><div class="ttdef"><b>Definition</b> <a href="#l00071">EventUI.h:71</a></div></div>
+<div class="ttc" id="aclass_u_event_u_i_html_a5fc0b4276e2388b3870d2e8a441307e8"><div class="ttname"><a href="class_u_event_u_i.html#a5fc0b4276e2388b3870d2e8a441307e8">UEventUI::WinAnimation</a></div><div class="ttdeci">TObjectPtr&lt; UWidgetAnimation &gt; WinAnimation</div><div class="ttdef"><b>Definition</b> <a href="#l00059">EventUI.h:59</a></div></div>
+<div class="ttc" id="aclass_u_event_u_i_html_a63b5c4977ff4bce0a6c0039111a5e37b"><div class="ttname"><a href="class_u_event_u_i.html#a63b5c4977ff4bce0a6c0039111a5e37b">UEventUI::HandleAnimationFinished</a></div><div class="ttdeci">void HandleAnimationFinished()</div><div class="ttdef"><b>Definition</b> <a href="_event_u_i_8cpp_source.html#l00084">EventUI.cpp:84</a></div></div>
+<div class="ttc" id="aclass_u_event_u_i_html_a65c4055c60a8b4072d2c96441706130c"><div class="ttname"><a href="class_u_event_u_i.html#a65c4055c60a8b4072d2c96441706130c">UEventUI::StartGrayscaleFade</a></div><div class="ttdeci">void StartGrayscaleFade(bool bFadeToGrayscale, float Duration=2.0f)</div><div class="ttdef"><b>Definition</b> <a href="_event_u_i_8cpp_source.html#l00112">EventUI.cpp:112</a></div></div>
+<div class="ttc" id="aclass_u_event_u_i_html_a902cf7fec2aa832771ca922308e9a615"><div class="ttname"><a href="class_u_event_u_i.html#a902cf7fec2aa832771ca922308e9a615">UEventUI::SetEventId</a></div><div class="ttdeci">const void SetEventId(EUIEventId NewEventId)</div><div class="ttdef"><b>Definition</b> <a href="#l00033">EventUI.h:33</a></div></div>
+<div class="ttc" id="aclass_u_event_u_i_html_aa730e7fc6067835911911123b0a5c5db"><div class="ttname"><a href="class_u_event_u_i.html#aa730e7fc6067835911911123b0a5c5db">UEventUI::GetEventId</a></div><div class="ttdeci">const EUIEventId GetEventId() const</div><div class="ttdef"><b>Definition</b> <a href="#l00034">EventUI.h:34</a></div></div>
+<div class="ttc" id="aclass_u_event_u_i_html_ada2c151403265318b13513c71e74677b"><div class="ttname"><a href="class_u_event_u_i.html#ada2c151403265318b13513c71e74677b">UEventUI::EventText</a></div><div class="ttdeci">TObjectPtr&lt; UTextBlock &gt; EventText</div><div class="ttdef"><b>Definition</b> <a href="#l00044">EventUI.h:44</a></div></div>
+<div class="ttc" id="aclass_u_event_u_i_html_ae0471a02a8a1e99e022ba8a19e85a43a"><div class="ttname"><a href="class_u_event_u_i.html#ae0471a02a8a1e99e022ba8a19e85a43a">UEventUI::SurvivalAnimation</a></div><div class="ttdeci">TObjectPtr&lt; UWidgetAnimation &gt; SurvivalAnimation</div><div class="ttdef"><b>Definition</b> <a href="#l00053">EventUI.h:53</a></div></div>
+<div class="ttc" id="aclass_u_event_u_i_html_ae16e5c4ea458213827a0668698515b2d"><div class="ttname"><a href="class_u_event_u_i.html#ae16e5c4ea458213827a0668698515b2d">UEventUI::TargetPostProcessVolume</a></div><div class="ttdeci">TObjectPtr&lt; APostProcessVolume &gt; TargetPostProcessVolume</div><div class="ttdef"><b>Definition</b> <a href="#l00064">EventUI.h:64</a></div></div>
+<div class="ttc" id="aclass_u_event_u_i_html_aeeaa3f48b1eb28bce8d58a4561410c28"><div class="ttname"><a href="class_u_event_u_i.html#aeeaa3f48b1eb28bce8d58a4561410c28">UEventUI::EndSaturation</a></div><div class="ttdeci">float EndSaturation</div><div class="ttdef"><b>Definition</b> <a href="#l00072">EventUI.h:72</a></div></div>
+<div class="ttc" id="aclass_u_event_u_i_html_aef5363f29980f749fdb4406fde519690"><div class="ttname"><a href="class_u_event_u_i.html#aef5363f29980f749fdb4406fde519690">UEventUI::GrayscaleFadeTimerHandle</a></div><div class="ttdeci">FTimerHandle GrayscaleFadeTimerHandle</div><div class="ttdef"><b>Definition</b> <a href="#l00069">EventUI.h:69</a></div></div>
+<div class="ttc" id="aclass_u_event_u_i_html_afb7d64b609a00c1917233fe1141f43a8"><div class="ttname"><a href="class_u_event_u_i.html#afb7d64b609a00c1917233fe1141f43a8">UEventUI::FadeDuration</a></div><div class="ttdeci">float FadeDuration</div><div class="ttdef"><b>Definition</b> <a href="#l00075">EventUI.h:75</a></div></div>
+<div class="ttc" id="aclass_u_u_i_base_html"><div class="ttname"><a href="class_u_u_i_base.html">UUIBase</a></div><div class="ttdef"><b>Definition</b> <a href="_u_i_base_8h_source.html#l00013">UIBase.h:15</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_03a35ccb76f34b0c5c973a49dad1c475.html">UI</a></li><li class="navelem"><a href="dir_f5872a2ea57811211db6659abcbff9aa.html">Event</a></li><li class="navelem"><a href="_event_u_i_8h.html">EventUI.h</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<map id="ALaserBeam::BeginPlay" name="ALaserBeam::BeginPlay">
+<area shape="rect" id="Node000001" title=" " alt="" coords="267,29,430,56"/>
+<area shape="rect" id="Node000002" href="$class_a_laser_beam.html#a96f742b5a6217893cd4380c2900b1f9a" title=" " alt="" coords="5,29,219,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="251,45,219,45,219,40,251,40"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="153,17,139,10,112,8,87,10,74,15,70,20,77,27,72,31,65,21,70,11,86,5,112,3,141,5,155,12"/>
+</map>

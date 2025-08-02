@@ -1,0 +1,6 @@
+<map id="AKPTLobbyPlayerController::Server_SelectCharacter" name="AKPTLobbyPlayerController::Server_SelectCharacter">
+<area shape="rect" id="Node000001" title=" " alt="" coords="238,29,422,72"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="368,16,353,10,330,8,308,10,294,15,289,21,291,28,286,29,284,19,291,10,307,5,330,3,355,5,370,11"/>
+<area shape="rect" id="Node000002" href="$class_a_k_p_t_lobby_player_controller.html#a7a184f940bbc89d9a398437bf3845a8c" title=" " alt="" coords="5,29,190,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="222,53,190,53,190,48,222,48"/>
+</map>

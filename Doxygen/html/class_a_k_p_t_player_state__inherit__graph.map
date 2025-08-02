@@ -1,0 +1,9 @@
+<map id="AKPTPlayerState" name="AKPTPlayerState">
+<area shape="rect" id="Node000001" title=" " alt="" coords="46,139,334,1787"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,93,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,97,66,138,60,139,54,98"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="117,13,264,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="193,97,193,139,188,139,188,97"/>
+<area shape="rect" id="Node000004" href="$class_i_component_owner_interface.html" title=" " alt="" coords="288,5,504,91"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="386,105,337,323,332,321,381,104"/>
+</map>

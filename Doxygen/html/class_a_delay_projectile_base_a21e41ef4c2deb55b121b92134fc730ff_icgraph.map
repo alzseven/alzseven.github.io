@@ -1,0 +1,6 @@
+<map id="ADelayProjectileBase::OnGroundHit" name="ADelayProjectileBase::OnGroundHit">
+<area shape="rect" id="Node000001" title=" " alt="" coords="251,29,399,72"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="361,16,347,10,325,8,304,10,291,15,286,21,288,28,283,29,281,19,288,10,303,5,325,3,349,5,363,11"/>
+<area shape="rect" id="Node000002" href="$class_a_delay_projectile_base.html#a2ee2f7c1e60d44c30e70b862fe60b65e" title=" " alt="" coords="5,29,203,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="235,53,203,53,203,48,235,48"/>
+</map>

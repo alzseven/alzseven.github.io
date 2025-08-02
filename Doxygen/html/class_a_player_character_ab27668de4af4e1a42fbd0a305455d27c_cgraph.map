@@ -1,0 +1,16 @@
+<map id="APlayerCharacter::PossessedBy" name="APlayerCharacter::PossessedBy">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,125,219,152"/>
+<area shape="rect" id="Node000002" href="$class_a_character_base.html#a95af118879a84d2bdf38415bd3ba946b" title=" " alt="" coords="274,5,473,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,122,194,91,266,58,282,51,284,56,268,62,196,96,138,127"/>
+<area shape="rect" id="Node000003" href="$class_a_character_base.html#a32f62fc8a23241478fdb058a964d43c6" title=" " alt="" coords="287,72,460,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="193,122,271,108,272,114,194,127"/>
+<area shape="rect" id="Node000006" href="$class_a_player_character.html#a3fb30258e9c50fa94f65c208ced85d4f" title=" " alt="" coords="283,163,464,205"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="194,150,268,163,267,168,193,155"/>
+<area shape="rect" id="Node000007" href="$class_a_player_character.html#a75342cef43efe106243cc97061445939" title=" " alt="" coords="267,229,480,256"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="137,150,195,182,268,215,290,222,288,227,266,220,193,187,135,155"/>
+<area shape="rect" id="Node000004" href="$class_a_k_p_t_player_state.html#a3f0fd46533843d108f4569bd68d9b233" title=" " alt="" coords="544,43,734,85"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="460,81,529,73,529,79,461,86"/>
+<area shape="rect" id="Node000005" href="$class_a_k_p_t_player_state.html#ada4f68af7bd5cdad585719dd13b64e86" title=" " alt="" coords="528,109,750,136"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="461,100,513,106,513,111,460,106"/>
+<area shape="poly" id="edge6_Node000006_Node000006" title=" " alt="" coords="324,163,322,153,330,144,348,138,373,136,401,138,418,145,416,150,400,144,373,141,349,143,333,148,327,154,329,161"/>
+</map>

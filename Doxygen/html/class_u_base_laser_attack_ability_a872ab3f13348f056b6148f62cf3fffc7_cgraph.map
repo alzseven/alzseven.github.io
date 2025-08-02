@@ -1,0 +1,6 @@
+<map id="UBaseLaserAttackAbility::EndAbility" name="UBaseLaserAttackAbility::EndAbility">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,173,48"/>
+<area shape="rect" id="Node000002" href="$class_u_base_laser_attack_ability.html#a1f265f5b299f3057b632ab3d32970ea6" title="Cleans up all spawned lasers and stops timers." alt="" coords="221,5,388,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,33,205,33,205,38,173,38"/>
+<area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="220,21,188,20,189,15,220,15"/>
+</map>

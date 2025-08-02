@@ -1,0 +1,8 @@
+<map id="APlayerCharacter::MulticastHit" name="APlayerCharacter::MulticastHit">
+<area shape="rect" id="Node000001" title=" " alt="" coords="242,31,444,57"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="385,18,371,12,343,9,317,11,303,16,300,21,306,29,302,32,295,22,300,12,316,6,343,4,372,7,387,13"/>
+<area shape="rect" id="Node000002" href="$class_a_player_character.html#af89c388d6da40981bf481d3e362ec117" title=" " alt="" coords="5,5,194,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="226,35,194,31,194,26,226,29"/>
+<area shape="rect" id="Node000003" href="$class_a_player_character.html#aa53af85940804a30afc629ff3f77c94c" title=" " alt="" coords="5,56,194,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="226,59,194,62,194,57,226,53"/>
+</map>

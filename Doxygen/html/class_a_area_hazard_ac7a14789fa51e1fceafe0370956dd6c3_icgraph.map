@@ -1,0 +1,7 @@
+<map id="AAreaHazard::DeactivateHazard" name="AAreaHazard::DeactivateHazard">
+<area shape="rect" id="Node000001" title=" " alt="" coords="513,5,725,32"/>
+<area shape="rect" id="Node000002" href="$class_a_area_hazard.html#af9d0f183dfa48a1becd97c99172e33d6" title=" " alt="" coords="268,5,465,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="497,21,465,21,465,16,497,16"/>
+<area shape="rect" id="Node000003" href="$class_a_area_hazard.html#affe525f8354dd2bb5192cc33a27c1347" title=" " alt="" coords="5,5,220,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="252,21,220,21,220,16,252,16"/>
+</map>

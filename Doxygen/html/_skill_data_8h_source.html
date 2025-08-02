@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Skill/Data/SkillData.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_skill_data_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SkillData.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_skill_data_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;Engine/DataTable.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;GameplayAbilitySpec.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;GameplayTagContainer.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;SkillData.generated.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">class </span>UGameplayEffect;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">class </span>UGameplayAbility;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">class </span><a class="code hl_class" href="class_u_movement_strategy_base.html">UMovementStrategyBase</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// 데이터 테이블의 실제 행이 될 구조체</span></div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_f_detailed_skill_data.html">   15</a></span>USTRUCT(BlueprintType)</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">struct </span><a class="code hl_struct" href="struct_f_detailed_skill_data.html">FDetailedSkillData</a> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">// --- 레벨과 무관한 고정 데이터 ---</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=<span class="stringliteral">&quot;Base Data&quot;</span>)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="struct_f_detailed_skill_data.html#a96a45c86610b40bcf65490a04dd8d06d">   25</a></span>    int32 <a class="code hl_variable" href="struct_f_detailed_skill_data.html#a96a45c86610b40bcf65490a04dd8d06d">NumToSpawn</a> = 0; <span class="comment">// 발사체 수</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=<span class="stringliteral">&quot;Base Data&quot;</span>)<span class="comment">//x</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_f_detailed_skill_data.html#a00ba74893b5c7d68f8d3cf2e3c2363de">   28</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_f_detailed_skill_data.html#a00ba74893b5c7d68f8d3cf2e3c2363de">ProjectileSpeed</a> = 0.f; <span class="comment">// 발사체 속도</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=<span class="stringliteral">&quot;Base Data&quot;</span>)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="struct_f_detailed_skill_data.html#af03bfc787413d6ee0abb700f68e18ee1">   31</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_f_detailed_skill_data.html#af03bfc787413d6ee0abb700f68e18ee1">CooldownTime</a> = 0.f; <span class="comment">// 쿨타임</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=<span class="stringliteral">&quot;Base Data&quot;</span>)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="struct_f_detailed_skill_data.html#ace688cee2a8bc2541458a19161a2e06f">   34</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_f_detailed_skill_data.html#ace688cee2a8bc2541458a19161a2e06f">SkillDamage</a> = 0.0f; <span class="comment">// 데미지</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=<span class="stringliteral">&quot;Base Data&quot;</span>)<span class="comment">//x</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_f_detailed_skill_data.html#a5c11ad8fb76dd455982659b808263f5f">   37</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_f_detailed_skill_data.html#a5c11ad8fb76dd455982659b808263f5f">ProjectileSizeMultiplier</a> = 0.0f; <span class="comment">// 발사체 크기 배율</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=<span class="stringliteral">&quot;Base Data&quot;</span>)</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="struct_f_detailed_skill_data.html#aae47c49fdfd1e01db6c84e9202747611">   40</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_f_detailed_skill_data.html#aae47c49fdfd1e01db6c84e9202747611">AttackArea</a> = 0.0f; <span class="comment">// 공격 범위</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=<span class="stringliteral">&quot;Base Data&quot;</span>)</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="struct_f_detailed_skill_data.html#a9a217337e2a22d4d2216c0f63ecba194">   43</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_f_detailed_skill_data.html#a9a217337e2a22d4d2216c0f63ecba194">ProjectileLife</a> = 0.0f; <span class="comment">//발사체 수명</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=<span class="stringliteral">&quot;Base Data&quot;</span>)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="struct_f_detailed_skill_data.html#abbbc6fc8945fed2e778883a14c218d08">   46</a></span>    int32 <a class="code hl_variable" href="struct_f_detailed_skill_data.html#abbbc6fc8945fed2e778883a14c218d08">MaxPierceCount</a> = 0; <span class="comment">// 관통 횟수. 0이면 첫 충돌 후 파괴, -1이면 무한 관통.</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>};</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="};">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="struct_f_skill_data.html">   49</a></span>USTRUCT(BlueprintType)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>struct <a class="code hl_struct" href="struct_f_skill_data.html">FSkillData</a> : public FTableRowBase</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>{</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="struct_f_skill_data.html#a0c3fd505e7f17b73be98f6f5043a5bc6">   56</a></span>    TSubclassOf&lt;UGameplayAbility&gt; <a class="code hl_variable" href="struct_f_skill_data.html#a0c3fd505e7f17b73be98f6f5043a5bc6">AbilityClass</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="struct_f_skill_data.html#a25828a596b9ab9c0a92d961bb1538e0d">   59</a></span>    FName <a class="code hl_variable" href="struct_f_skill_data.html#a25828a596b9ab9c0a92d961bb1538e0d">SkillName</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="struct_f_skill_data.html#a7939ceb9e41448efcfe402f15fc4f2e5">   62</a></span>    TObjectPtr&lt;UTexture2D&gt; <a class="code hl_variable" href="struct_f_skill_data.html#a7939ceb9e41448efcfe402f15fc4f2e5">SkillIcon</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly)</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="struct_f_skill_data.html#a48f8c88d6d7460a249790202c63f1708">   65</a></span>    TSubclassOf&lt;AActor&gt; <a class="code hl_variable" href="struct_f_skill_data.html#a48f8c88d6d7460a249790202c63f1708">ProjectileClass</a>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="comment">// 스킬 자체를 식별하는 고유 태그입니다.</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">// 기존 CooldownTag와 별개로, 이 스킬 전체를 대표하는 태그로 사용합니다.</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="comment">// 예: &quot;Skill.Passive.Bible&quot;</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=<span class="stringliteral">&quot;Skill&quot;</span>)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="struct_f_skill_data.html#a9c39cc276a6a95b55a8cd6a9bef73f6f">   71</a></span>    FGameplayTag <a class="code hl_variable" href="struct_f_skill_data.html#a9c39cc276a6a95b55a8cd6a9bef73f6f">SkillTag</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=<span class="stringliteral">&quot;Skill&quot;</span>)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="struct_f_skill_data.html#aa4d110d89fa740f1cd87570c34a9e96d">   73</a></span>    FGameplayTag <a class="code hl_variable" href="struct_f_skill_data.html#aa4d110d89fa740f1cd87570c34a9e96d">VFXCueTag</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="comment">//쿨타임 돌릴 범용GE</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="struct_f_skill_data.html#a2af4474f47b73f9fceef508521917617">   77</a></span>    TSubclassOf&lt;UGameplayEffect&gt; <a class="code hl_variable" href="struct_f_skill_data.html#a2af4474f47b73f9fceef508521917617">CooldownEffectClass</a>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">// 쿨타임용 태그</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="struct_f_skill_data.html#a82da937114e815f67a9da1193e7d07fe">   80</a></span>    FGameplayTag <a class="code hl_variable" href="struct_f_skill_data.html#a82da937114e815f67a9da1193e7d07fe">CooldownTag</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">//데미지용 GE</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly)</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="struct_f_skill_data.html#afb7c28d784c17353f31749996ebbf566">   84</a></span>    TSubclassOf&lt;UGameplayEffect&gt; <a class="code hl_variable" href="struct_f_skill_data.html#afb7c28d784c17353f31749996ebbf566">PayloadEffectClass</a>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly)</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="struct_f_skill_data.html#aa5e4f55e189fe597f94a6b689b0a6770">   87</a></span>    TSubclassOf&lt;<a class="code hl_class" href="class_u_movement_strategy_base.html">UMovementStrategyBase</a>&gt; <a class="code hl_variable" href="struct_f_skill_data.html#aa5e4f55e189fe597f94a6b689b0a6770">MovementStrategyClass</a>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly)</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="struct_f_skill_data.html#a60f3c260cd66ff2ffcf924d877257862">   90</a></span>    <a class="code hl_struct" href="struct_f_detailed_skill_data.html">FDetailedSkillData</a> <a class="code hl_variable" href="struct_f_skill_data.html#a60f3c260cd66ff2ffcf924d877257862">DataTable</a>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>};</div>
+</div>
+<div class="ttc" id="aclass_u_movement_strategy_base_html"><div class="ttname"><a href="class_u_movement_strategy_base.html">UMovementStrategyBase</a></div><div class="ttdef"><b>Definition</b> <a href="_movement_strategy_base_8h_source.html#l00012">MovementStrategyBase.h:14</a></div></div>
+<div class="ttc" id="astruct_f_detailed_skill_data_html"><div class="ttname"><a href="struct_f_detailed_skill_data.html">FDetailedSkillData</a></div><div class="ttdef"><b>Definition</b> <a href="#l00015">SkillData.h:17</a></div></div>
+<div class="ttc" id="astruct_f_detailed_skill_data_html_a00ba74893b5c7d68f8d3cf2e3c2363de"><div class="ttname"><a href="struct_f_detailed_skill_data.html#a00ba74893b5c7d68f8d3cf2e3c2363de">FDetailedSkillData::ProjectileSpeed</a></div><div class="ttdeci">float ProjectileSpeed</div><div class="ttdef"><b>Definition</b> <a href="#l00028">SkillData.h:28</a></div></div>
+<div class="ttc" id="astruct_f_detailed_skill_data_html_a5c11ad8fb76dd455982659b808263f5f"><div class="ttname"><a href="struct_f_detailed_skill_data.html#a5c11ad8fb76dd455982659b808263f5f">FDetailedSkillData::ProjectileSizeMultiplier</a></div><div class="ttdeci">float ProjectileSizeMultiplier</div><div class="ttdef"><b>Definition</b> <a href="#l00037">SkillData.h:37</a></div></div>
+<div class="ttc" id="astruct_f_detailed_skill_data_html_a96a45c86610b40bcf65490a04dd8d06d"><div class="ttname"><a href="struct_f_detailed_skill_data.html#a96a45c86610b40bcf65490a04dd8d06d">FDetailedSkillData::NumToSpawn</a></div><div class="ttdeci">int32 NumToSpawn</div><div class="ttdef"><b>Definition</b> <a href="#l00025">SkillData.h:25</a></div></div>
+<div class="ttc" id="astruct_f_detailed_skill_data_html_a9a217337e2a22d4d2216c0f63ecba194"><div class="ttname"><a href="struct_f_detailed_skill_data.html#a9a217337e2a22d4d2216c0f63ecba194">FDetailedSkillData::ProjectileLife</a></div><div class="ttdeci">float ProjectileLife</div><div class="ttdef"><b>Definition</b> <a href="#l00043">SkillData.h:43</a></div></div>
+<div class="ttc" id="astruct_f_detailed_skill_data_html_aae47c49fdfd1e01db6c84e9202747611"><div class="ttname"><a href="struct_f_detailed_skill_data.html#aae47c49fdfd1e01db6c84e9202747611">FDetailedSkillData::AttackArea</a></div><div class="ttdeci">float AttackArea</div><div class="ttdef"><b>Definition</b> <a href="#l00040">SkillData.h:40</a></div></div>
+<div class="ttc" id="astruct_f_detailed_skill_data_html_abbbc6fc8945fed2e778883a14c218d08"><div class="ttname"><a href="struct_f_detailed_skill_data.html#abbbc6fc8945fed2e778883a14c218d08">FDetailedSkillData::MaxPierceCount</a></div><div class="ttdeci">int32 MaxPierceCount</div><div class="ttdef"><b>Definition</b> <a href="#l00046">SkillData.h:46</a></div></div>
+<div class="ttc" id="astruct_f_detailed_skill_data_html_ace688cee2a8bc2541458a19161a2e06f"><div class="ttname"><a href="struct_f_detailed_skill_data.html#ace688cee2a8bc2541458a19161a2e06f">FDetailedSkillData::SkillDamage</a></div><div class="ttdeci">float SkillDamage</div><div class="ttdef"><b>Definition</b> <a href="#l00034">SkillData.h:34</a></div></div>
+<div class="ttc" id="astruct_f_detailed_skill_data_html_af03bfc787413d6ee0abb700f68e18ee1"><div class="ttname"><a href="struct_f_detailed_skill_data.html#af03bfc787413d6ee0abb700f68e18ee1">FDetailedSkillData::CooldownTime</a></div><div class="ttdeci">float CooldownTime</div><div class="ttdef"><b>Definition</b> <a href="#l00031">SkillData.h:31</a></div></div>
+<div class="ttc" id="astruct_f_skill_data_html"><div class="ttname"><a href="struct_f_skill_data.html">FSkillData</a></div><div class="ttdef"><b>Definition</b> <a href="#l00049">SkillData.h:51</a></div></div>
+<div class="ttc" id="astruct_f_skill_data_html_a0c3fd505e7f17b73be98f6f5043a5bc6"><div class="ttname"><a href="struct_f_skill_data.html#a0c3fd505e7f17b73be98f6f5043a5bc6">FSkillData::AbilityClass</a></div><div class="ttdeci">TSubclassOf&lt; UGameplayAbility &gt; AbilityClass</div><div class="ttdef"><b>Definition</b> <a href="#l00056">SkillData.h:56</a></div></div>
+<div class="ttc" id="astruct_f_skill_data_html_a25828a596b9ab9c0a92d961bb1538e0d"><div class="ttname"><a href="struct_f_skill_data.html#a25828a596b9ab9c0a92d961bb1538e0d">FSkillData::SkillName</a></div><div class="ttdeci">FName SkillName</div><div class="ttdef"><b>Definition</b> <a href="#l00059">SkillData.h:59</a></div></div>
+<div class="ttc" id="astruct_f_skill_data_html_a2af4474f47b73f9fceef508521917617"><div class="ttname"><a href="struct_f_skill_data.html#a2af4474f47b73f9fceef508521917617">FSkillData::CooldownEffectClass</a></div><div class="ttdeci">TSubclassOf&lt; UGameplayEffect &gt; CooldownEffectClass</div><div class="ttdef"><b>Definition</b> <a href="#l00077">SkillData.h:77</a></div></div>
+<div class="ttc" id="astruct_f_skill_data_html_a48f8c88d6d7460a249790202c63f1708"><div class="ttname"><a href="struct_f_skill_data.html#a48f8c88d6d7460a249790202c63f1708">FSkillData::ProjectileClass</a></div><div class="ttdeci">TSubclassOf&lt; AActor &gt; ProjectileClass</div><div class="ttdef"><b>Definition</b> <a href="#l00065">SkillData.h:65</a></div></div>
+<div class="ttc" id="astruct_f_skill_data_html_a60f3c260cd66ff2ffcf924d877257862"><div class="ttname"><a href="struct_f_skill_data.html#a60f3c260cd66ff2ffcf924d877257862">FSkillData::DataTable</a></div><div class="ttdeci">FDetailedSkillData DataTable</div><div class="ttdef"><b>Definition</b> <a href="#l00090">SkillData.h:90</a></div></div>
+<div class="ttc" id="astruct_f_skill_data_html_a7939ceb9e41448efcfe402f15fc4f2e5"><div class="ttname"><a href="struct_f_skill_data.html#a7939ceb9e41448efcfe402f15fc4f2e5">FSkillData::SkillIcon</a></div><div class="ttdeci">TObjectPtr&lt; UTexture2D &gt; SkillIcon</div><div class="ttdef"><b>Definition</b> <a href="#l00062">SkillData.h:62</a></div></div>
+<div class="ttc" id="astruct_f_skill_data_html_a82da937114e815f67a9da1193e7d07fe"><div class="ttname"><a href="struct_f_skill_data.html#a82da937114e815f67a9da1193e7d07fe">FSkillData::CooldownTag</a></div><div class="ttdeci">FGameplayTag CooldownTag</div><div class="ttdef"><b>Definition</b> <a href="#l00080">SkillData.h:80</a></div></div>
+<div class="ttc" id="astruct_f_skill_data_html_a9c39cc276a6a95b55a8cd6a9bef73f6f"><div class="ttname"><a href="struct_f_skill_data.html#a9c39cc276a6a95b55a8cd6a9bef73f6f">FSkillData::SkillTag</a></div><div class="ttdeci">FGameplayTag SkillTag</div><div class="ttdef"><b>Definition</b> <a href="#l00071">SkillData.h:71</a></div></div>
+<div class="ttc" id="astruct_f_skill_data_html_aa4d110d89fa740f1cd87570c34a9e96d"><div class="ttname"><a href="struct_f_skill_data.html#aa4d110d89fa740f1cd87570c34a9e96d">FSkillData::VFXCueTag</a></div><div class="ttdeci">FGameplayTag VFXCueTag</div><div class="ttdef"><b>Definition</b> <a href="#l00073">SkillData.h:73</a></div></div>
+<div class="ttc" id="astruct_f_skill_data_html_aa5e4f55e189fe597f94a6b689b0a6770"><div class="ttname"><a href="struct_f_skill_data.html#aa5e4f55e189fe597f94a6b689b0a6770">FSkillData::MovementStrategyClass</a></div><div class="ttdeci">TSubclassOf&lt; UMovementStrategyBase &gt; MovementStrategyClass</div><div class="ttdef"><b>Definition</b> <a href="#l00087">SkillData.h:87</a></div></div>
+<div class="ttc" id="astruct_f_skill_data_html_afb7c28d784c17353f31749996ebbf566"><div class="ttname"><a href="struct_f_skill_data.html#afb7c28d784c17353f31749996ebbf566">FSkillData::PayloadEffectClass</a></div><div class="ttdeci">TSubclassOf&lt; UGameplayEffect &gt; PayloadEffectClass</div><div class="ttdef"><b>Definition</b> <a href="#l00084">SkillData.h:84</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_835db7cc60e52a26a89059f64164cf8e.html">Skill</a></li><li class="navelem"><a href="dir_afcbbbf26d05390b0b37a1ba1eb19bd1.html">Data</a></li><li class="navelem"><a href="_skill_data_8h.html">SkillData.h</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

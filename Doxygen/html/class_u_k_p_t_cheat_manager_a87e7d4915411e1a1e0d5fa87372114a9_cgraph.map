@@ -1,0 +1,17 @@
+<map id="UKPTCheatManager::AddSkill" name="UKPTCheatManager::AddSkill">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,204,107"/>
+<area shape="rect" id="Node000002" href="$class_u_skill_manager_component.html#ade57574476c2faa9d7356406cdd70b40" title=" " alt="" coords="252,72,425,115"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,91,236,91,236,96,204,96"/>
+<area shape="rect" id="Node000003" href="$class_u_skill_manager_component.html#abd079bd1871419539a26030ab82b5cf4" title=" " alt="" coords="473,5,646,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="410,69,471,50,473,56,412,74"/>
+<area shape="rect" id="Node000005" href="$class_u_skill_manager_component.html#a9f545589b45bf8e8dcb86d6a76e46e7d" title=" " alt="" coords="473,72,646,115"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="425,91,457,91,457,96,425,96"/>
+<area shape="rect" id="Node000008" href="$class_u_skill_manager_component.html#a3b41166a0321b681e053fea536b461ee" title=" " alt="" coords="473,139,646,181"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="412,113,473,131,471,136,410,118"/>
+<area shape="rect" id="Node000004" href="$class_u_skill_manager_component.html#a300da93de3b72a22e7eb816885db5f88" title=" " alt="" coords="694,5,868,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="647,24,679,24,679,29,647,29"/>
+<area shape="rect" id="Node000006" href="$class_u_base_skill_ability.html#a8e1e476e767f4c1567a3ea52725b9fdd" title=" " alt="" coords="710,72,852,115"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="647,91,694,91,694,96,647,96"/>
+<area shape="rect" id="Node000007" href="$class_u_base_skill_ability.html#ac270dffb5b74e423d2892af6f5e510f8" title=" " alt="" coords="713,139,849,181"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="633,113,699,132,697,138,632,118"/>
+</map>

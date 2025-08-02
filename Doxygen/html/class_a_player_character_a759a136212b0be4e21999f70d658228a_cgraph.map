@@ -1,0 +1,9 @@
+<map id="APlayerCharacter::OnRep_PlayerState" name="APlayerCharacter::OnRep_PlayerState">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,179,77"/>
+<area shape="rect" id="Node000002" href="$class_a_character_base.html#a32f62fc8a23241478fdb058a964d43c6" title=" " alt="" coords="227,35,400,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,53,211,53,211,59,179,59"/>
+<area shape="rect" id="Node000003" href="$class_a_k_p_t_player_state.html#a3f0fd46533843d108f4569bd68d9b233" title=" " alt="" coords="464,5,654,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="400,43,449,37,450,42,401,48"/>
+<area shape="rect" id="Node000004" href="$class_a_k_p_t_player_state.html#ada4f68af7bd5cdad585719dd13b64e86" title=" " alt="" coords="448,72,670,99"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="401,64,433,68,432,73,400,69"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="AMission_OneBound::StartMission" name="AMission_OneBound::StartMission">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,157,48"/>
+<area shape="rect" id="Node000002" href="$class_a_mission_actor_base.html#acba20c1a5954ed70352f61766c4ef6b8" title=" " alt="" coords="205,5,349,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,24,189,24,189,29,157,29"/>
+</map>

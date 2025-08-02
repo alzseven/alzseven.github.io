@@ -1,0 +1,10 @@
+<map id="C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Core/Component/Shop" name="C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Core/Component/Shop">
+<area shape="rect" id="node1" href="dir_77de7791ca00f61e92f2e90bdcbcf204.html" title="Shop" alt="" coords="68,53,119,80"/>
+<area shape="rect" id="node2" href="dir_642992c390f4111062490d0864235fba.html" title="Interface" alt="" coords="5,128,78,155"/>
+<area shape="poly" id="edge1" href="dir_000055_000031.html" alt="" coords="87,82,61,117,57,114,82,79"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000055_000031.html" title="2" alt="" coords="64,110,71,126"/>
+<area shape="rect" id="node3" href="dir_c5adcac0dad4fd3c0e6e6b5ea3efe6f7.html" title="SubSystem" alt="" coords="102,128,192,155"/>
+<area shape="poly" id="edge2" href="dir_000055_000063.html" alt="" coords="105,79,131,114,126,117,101,82"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000055_000063.html" title="1" alt="" coords="130,100,137,116"/>
+<area shape="rect" id="clust1" href="dir_c4b505f52885608e828b3baedebd7535.html" title="Component" alt="" coords="50,16,138,91"/>
+</map>

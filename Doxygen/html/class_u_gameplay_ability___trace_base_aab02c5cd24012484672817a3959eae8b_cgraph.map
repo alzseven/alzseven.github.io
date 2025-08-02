@@ -1,0 +1,14 @@
+<map id="UGameplayAbility_TraceBase::OnTraceHitBP" name="UGameplayAbility_TraceBase::OnTraceHitBP">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,93,202,136"/>
+<area shape="poly" id="edge7_Node000001_Node000001" title=" " alt="" coords="57,93,55,83,63,74,79,69,104,67,130,69,145,75,143,80,128,74,103,72,80,74,66,79,61,85,62,92"/>
+<area shape="rect" id="Node000002" href="$class_u_gameplay_ability___trace_base.html#a8cbf0758a9b7e43db6f8ece876f468da" title=" " alt="" coords="250,5,446,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,90,271,51,273,56,166,95"/>
+<area shape="rect" id="Node000003" href="$class_u_gameplay_ability___trace_base.html#a6ab220e0256558c7742e77bf52ef7329" title=" " alt="" coords="738,93,935,136"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="202,109,250,108,470,106,690,108,723,109,722,114,690,113,470,111,250,113,202,114"/>
+<area shape="rect" id="Node000004" href="$class_u_gameplay_ability___trace_base.html#af45bd75cfce61a7c8368270e14ba2da2" title=" " alt="" coords="250,123,446,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="202,133,234,137,234,142,202,138"/>
+<area shape="poly" id="edge6_Node000004_Node000001" title=" " alt="" coords="249,126,217,122,217,117,249,121"/>
+<area shape="rect" id="Node000005" href="$class_u_gameplay_ability___trace_base.html#a9228e5548e9603d5db0a4851528699b9" title=" " alt="" coords="494,123,690,165"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="446,141,478,141,478,147,446,147"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="690,130,722,126,723,131,691,135"/>
+</map>

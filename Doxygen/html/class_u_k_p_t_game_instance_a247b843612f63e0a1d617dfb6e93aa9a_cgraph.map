@@ -1,0 +1,7 @@
+<map id="UKPTGameInstance::DestroySession" name="UKPTGameInstance::DestroySession">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,202,81"/>
+<area shape="rect" id="Node000002" href="$class_u_session_manager_subsystem.html#a6846ba200eac4764e0929d76afe96b8a" title=" " alt="" coords="250,5,444,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,44,234,39,234,45,202,49"/>
+<area shape="rect" id="Node000003" href="$class_u_k_p_t_game_instance.html#a6ef8602fc18fdf7147dc6a74b5039cc8" title=" " alt="" coords="254,72,440,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="202,71,238,76,238,81,202,76"/>
+</map>

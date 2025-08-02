@@ -1,0 +1,8 @@
+<map id="UEnemyFlockingComponent::RegisterToManager" name="UEnemyFlockingComponent::RegisterToManager">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,63,194,105"/>
+<area shape="rect" id="Node000002" href="$class_u_enemy_flocking_component.html#a0ce25b018b74ace0f8408f5ab57825fd" title=" " alt="" coords="242,29,430,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,68,226,63,227,69,195,73"/>
+<area shape="rect" id="Node000003" href="$class_a_flocking_manager.html#a4b92de9f155e1e77afd5ff7699fe369a" title=" " alt="" coords="243,96,429,139"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="195,95,228,99,227,105,194,100"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="291,29,289,19,297,10,312,5,336,3,361,5,376,11,374,16,360,10,336,8,314,10,300,15,294,21,296,28"/>
+</map>

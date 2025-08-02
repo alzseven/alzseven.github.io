@@ -1,0 +1,31 @@
+<map id="UStageManagerSubsystem::StartPhase" name="UStageManagerSubsystem::StartPhase">
+<area shape="rect" id="Node000001" title=" " alt="" coords="2260,59,2442,101"/>
+<area shape="rect" id="Node000002" href="$class_u_stage_manager_subsystem.html#a10be946619661f166108878489139489" title=" " alt="" coords="2031,29,2212,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2245,69,2212,65,2213,60,2245,64"/>
+<area shape="rect" id="Node000003" href="$class_u_stage_manager_subsystem.html#ad0af6446e32468e50889d617d579207f" title=" " alt="" coords="1802,59,1983,101"/>
+<area shape="poly" id="edge17_Node000001_Node000003" title=" " alt="" coords="2245,86,2212,87,2031,87,1983,86,1983,80,2031,81,2212,81,2245,81"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="2159,16,2145,10,2122,8,2100,10,2087,15,2082,21,2083,28,2078,29,2076,19,2084,10,2099,5,2122,3,2146,5,2161,11"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="2016,67,1984,71,1983,66,2015,62"/>
+<area shape="rect" id="Node000004" href="$class_a_k_p_t_in_game_mode.html#acd0b193dd9ce700d2a4cb3953565584c" title="야간 페이즈의 핵심 로직을 실행합니다." alt="" coords="1552,59,1754,101"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="1786,83,1754,83,1754,77,1786,77"/>
+<area shape="rect" id="Node000005" href="$class_a_k_p_t_in_game_mode.html#a84edc1df98161132b7b803669c9299a0" title="야간 페이즈를 시작하기 위한 준비 및 전환을 시작합니다." alt="" coords="1298,29,1504,72"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="1536,69,1505,65,1505,60,1537,64"/>
+<area shape="rect" id="Node000006" href="$class_a_k_p_t_in_game_mode.html#a410acd626df9144d7ebb63b535dbc37b" title=" " alt="" coords="1052,29,1250,72"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="1283,53,1251,53,1251,48,1283,48"/>
+<area shape="rect" id="Node000007" href="$class_a_k_p_t_in_game_mode.html#a1c856c37dce7343a381723b5d842ecf7" title="모든 플레이어가 사망했는지 확인합니다." alt="" coords="751,37,1004,64"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="1036,53,1004,53,1004,48,1036,48"/>
+<area shape="poly" id="edge8_Node000007_Node000007" title=" " alt="" coords="925,25,909,19,877,16,849,18,833,23,829,28,836,35,832,39,824,29,829,19,848,13,878,11,910,13,927,20"/>
+<area shape="rect" id="Node000008" href="$class_a_k_p_t_in_game_mode.html#a0e1dec85eeba3835d463238c88f8904b" title="야간 페이즈를 종료하고, 게임 종료 조건을 확인하거나 새 라운드를 시작합니다." alt="" coords="494,88,690,131"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="794,70,691,92,690,87,793,65"/>
+<area shape="rect" id="Node000009" href="$class_a_k_p_t_in_game_mode.html#a3a63b6ea26b3ef6a916ca7b5fed4813f" title="플레이어가 사망했을 때 호출됩니다." alt="" coords="480,37,703,64"/>
+<area shape="poly" id="edge11_Node000007_Node000009" title=" " alt="" coords="736,53,704,53,704,48,736,48"/>
+<area shape="poly" id="edge10_Node000008_Node000004" title=" " alt="" coords="705,104,1552,80,1552,85,706,109"/>
+<area shape="rect" id="Node000010" href="$class_a_player_character.html#aa38c751d8495a3e3d999eafad23d7a88" title=" " alt="" coords="255,12,408,39"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="465,41,408,35,408,30,465,36"/>
+<area shape="rect" id="Node000011" href="$class_a_character_base.html#af4c20a0d4ddeb41b0eb305b807bcfc9d" title=" " alt="" coords="231,63,432,89"/>
+<area shape="poly" id="edge13_Node000009_Node000011" title=" " alt="" coords="465,66,433,69,432,64,464,60"/>
+<area shape="rect" id="Node000012" href="$class_a_character_base.html#af3460531018611a7b3b2c59779c65ead" title=" " alt="" coords="5,63,183,89"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="215,88,183,87,183,82,215,82"/>
+<area shape="poly" id="edge15_Node000012_Node000011" title=" " alt="" coords="198,64,230,64,230,70,198,70"/>
+<area shape="poly" id="edge16_Node000012_Node000012" title=" " alt="" coords="135,50,121,44,94,41,69,43,55,48,52,53,58,61,54,64,47,54,52,44,68,38,94,36,123,39,138,45"/>
+</map>

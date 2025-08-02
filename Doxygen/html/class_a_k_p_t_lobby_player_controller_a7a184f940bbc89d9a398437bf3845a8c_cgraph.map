@@ -1,0 +1,16 @@
+<map id="AKPTLobbyPlayerController::RequestSelectCharacter" name="AKPTLobbyPlayerController::RequestSelectCharacter">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,190,123"/>
+<area shape="rect" id="Node000002" href="$class_a_k_p_t_lobby_player_controller.html#a59c9366cd56cc64e871da1ffa6c5f2cc" title=" " alt="" coords="238,80,422,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,99,222,99,222,104,190,104"/>
+<area shape="poly" id="edge7_Node000002_Node000002" title=" " alt="" coords="286,80,284,70,291,61,307,55,330,53,355,56,370,62,368,67,353,61,330,59,308,61,294,65,289,71,291,79"/>
+<area shape="rect" id="Node000003" href="$class_a_k_p_t_lobby_player_controller.html#aed631b62d6aa2bff4969e7b4b22ec9ae" title=" " alt="" coords="470,51,654,93"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="422,87,454,83,455,88,423,92"/>
+<area shape="rect" id="Node000004" href="$class_a_k_p_t_lobby_player_controller.html#ad0a944b2a4df4237b8b961eebb4ca1e1" title=" " alt="" coords="702,5,887,48"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="367,77,415,54,469,36,524,26,581,20,687,18,687,23,581,25,525,31,471,41,417,59,370,82"/>
+<area shape="rect" id="Node000005" href="$class_a_k_p_t_lobby_player_controller.html#ac612045f4dabb0881f558a1a266ebd18" title=" " alt="" coords="702,84,887,127"/>
+<area shape="poly" id="edge8_Node000002_Node000005" title=" " alt="" coords="423,102,470,103,687,103,687,109,470,108,423,107"/>
+<area shape="rect" id="Node000006" href="$class_a_k_p_t_lobby_player_controller.html#a0f474796b79489cca5ff654c30e25e1a" title=" " alt="" coords="470,168,654,211"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="389,121,491,160,489,165,388,126"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="654,51,686,45,687,50,655,57"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="655,83,687,87,686,93,655,88"/>
+</map>

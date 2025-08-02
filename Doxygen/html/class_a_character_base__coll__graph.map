@@ -1,0 +1,7 @@
+<map id="ACharacterBase" name="ACharacterBase">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,123,259,533"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="26,5,103,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,89,86,122,81,123,73,90"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="127,5,274,75"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="191,90,184,123,178,122,186,89"/>
+</map>

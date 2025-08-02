@@ -1,0 +1,8 @@
+<map id="AKPTMainPlayerController::ShowDamageFloater" name="AKPTMainPlayerController::ShowDamageFloater">
+<area shape="rect" id="Node000001" title=" " alt="" coords="494,29,671,72"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="621,16,607,10,583,8,560,10,547,15,541,21,543,28,538,29,536,19,544,10,559,5,583,3,608,5,623,11"/>
+<area shape="rect" id="Node000002" href="$class_u_k_p_t_base_attribute_set.html#afc4d5faaf00935c85fec041169977759" title=" " alt="" coords="249,29,446,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="478,53,446,53,446,48,478,48"/>
+<area shape="rect" id="Node000003" href="$class_u_k_p_t_base_attribute_set.html#a225f828fc9a99dbe8962a5fefb7518e6" title=" " alt="" coords="5,29,201,72"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="233,53,201,53,201,48,233,48"/>
+</map>

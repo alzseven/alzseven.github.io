@@ -1,0 +1,17 @@
+<map id="AProjectileBase::OnActivated_Implementation" name="AProjectileBase::OnActivated_Implementation">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,200,81"/>
+<area shape="rect" id="Node000002" href="$class_a_projectile_base.html#a183da78e0cee66595989812aec0ff7c9" title=" " alt="" coords="248,72,435,115"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,71,233,75,232,81,200,76"/>
+<area shape="rect" id="Node000007" href="$class_a_projectile_base.html#a808564bfde8ad88e8379b7d576ed2626" title=" " alt="" coords="256,5,426,48"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="200,44,240,38,241,43,201,49"/>
+<area shape="rect" id="Node000003" href="$class_a_projectile_base.html#a643fc0b4a82ec643f5d958ec6a30a060" title=" " alt="" coords="483,9,687,52"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="426,69,484,54,486,59,428,74"/>
+<area shape="rect" id="Node000004" href="$class_a_projectile_base.html#a2276af661735f8971f6af66c6db7633d" title=" " alt="" coords="484,80,686,107"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="436,91,469,91,469,96,436,96"/>
+<area shape="rect" id="Node000005" href="$class_a_projectile_base.html#a56f85c58a5c516ddd3e66fbb115eb20d" title=" " alt="" coords="735,72,921,115"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="686,91,720,91,720,96,686,96"/>
+<area shape="rect" id="Node000006" href="$class_a_projectile_base.html#a76b21edb2d7e6427f03a3be58488ef52" title=" " alt="" coords="969,72,1144,115"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="921,91,953,91,953,96,921,96"/>
+<area shape="poly" id="edge6_Node000006_Node000006" title=" " alt="" coords="1013,72,1011,62,1019,53,1034,47,1056,45,1081,48,1095,54,1093,59,1079,53,1056,51,1035,53,1022,57,1016,63,1018,71"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="427,25,467,26,467,31,427,31"/>
+</map>

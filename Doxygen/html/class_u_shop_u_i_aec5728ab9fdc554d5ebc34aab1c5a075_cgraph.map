@@ -1,0 +1,5 @@
+<map id="UShopUI::UpdateInventoryBindings" name="UShopUI::UpdateInventoryBindings">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,185,48"/>
+<area shape="rect" id="Node000002" href="$class_u_inventory_u_i.html#acdd39c140fa026f46f9752565a706880" title=" " alt="" coords="233,13,450,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,24,217,24,217,29,185,29"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="AMinionMonster::OnRep_SpawnLocation" name="AMinionMonster::OnRep_SpawnLocation">
+<area shape="rect" id="Node000001" title=" " alt="" coords="264,63,428,105"/>
+<area shape="rect" id="Node000002" href="$class_a_minion_monster.html#a0dc3c10547100acaed04aa410111401b" title=" " alt="" coords="22,29,199,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="248,73,199,66,199,61,249,68"/>
+<area shape="rect" id="Node000003" href="$class_a_minion_monster.html#a9d04c28642a18379b51b882681acb85a" title=" " alt="" coords="5,96,216,139"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="249,100,216,105,216,100,248,95"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="149,16,134,10,110,8,88,10,75,15,69,21,71,28,66,29,64,19,72,10,87,5,111,3,136,5,151,11"/>
+</map>

@@ -1,0 +1,16 @@
+<map id="UBaseLaserAttackAbility::ActivateAbility" name="UBaseLaserAttackAbility::ActivateAbility">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,173,81"/>
+<area shape="rect" id="Node000002" href="$class_u_base_laser_attack_ability.html#ad1a11b3bbe71ec74e20323116cad88fe" title="This function is meant to be implemented in Blueprint to define the ability&#39;s activation flow." alt="" coords="221,39,388,81"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,66,205,66,205,72,173,71"/>
+<area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="220,54,188,54,189,48,220,49"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="263,39,262,29,269,20,283,14,304,12,327,14,341,21,339,25,326,20,304,17,284,19,272,24,267,30,269,38"/>
+<area shape="rect" id="Node000003" href="$class_u_base_laser_attack_ability.html#a872ab3f13348f056b6148f62cf3fffc7" title=" " alt="" coords="448,5,616,48"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="388,45,433,38,433,44,389,50"/>
+<area shape="rect" id="Node000005" href="$class_u_base_laser_attack_ability.html#aa398b1c8400be1004cc48ab88c2372a9" title=" " alt="" coords="436,72,628,115"/>
+<area shape="poly" id="edge7_Node000002_Node000005" title=" " alt="" coords="389,70,421,74,420,80,388,75"/>
+<area shape="rect" id="Node000004" href="$class_u_base_laser_attack_ability.html#a1f265f5b299f3057b632ab3d32970ea6" title="Cleans up all spawned lasers and stops timers." alt="" coords="680,5,848,48"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="616,33,664,33,664,38,616,38"/>
+<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="680,21,631,20,631,15,680,15"/>
+<area shape="rect" id="Node000006" href="$class_u_base_laser_attack_ability.html#abd26ecf6cee23237e9249ce68b42fa62" title=" " alt="" coords="676,72,852,115"/>
+<area shape="poly" id="edge8_Node000005_Node000006" title=" " alt="" coords="629,91,660,91,660,96,629,96"/>
+</map>

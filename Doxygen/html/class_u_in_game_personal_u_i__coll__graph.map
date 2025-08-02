@@ -1,0 +1,7 @@
+<map id="UInGamePersonalUI" name="UInGamePersonalUI">
+<area shape="rect" id="Node000001" title=" " alt="" coords="48,405,180,475"/>
+<area shape="rect" id="Node000002" href="$class_u_u_i_base.html" title=" " alt="" coords="5,123,222,357"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,372,116,406,111,406,111,372"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="69,5,159,75"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="116,90,116,123,111,123,111,90"/>
+</map>

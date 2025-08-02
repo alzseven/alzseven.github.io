@@ -1,0 +1,36 @@
+<map id="UKPTCheatManager::AddItem" name="UKPTCheatManager::AddItem">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,248,205,275"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="62,249,54,239,59,229,76,223,105,221,136,224,153,231,150,236,135,229,105,227,77,229,62,234,59,239,66,246"/>
+<area shape="rect" id="Node000002" href="$class_u_k_p_t_cheat_manager.html#a87e7d4915411e1a1e0d5fa87372114a9" title=" " alt="" coords="266,157,464,184"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="140,245,252,203,302,186,303,192,254,208,142,250"/>
+<area shape="rect" id="Node000010" href="$class_u_k_p_t_cheat_manager.html#a2f6a2c23884c9b374fc32b17cbc45b98" title=" " alt="" coords="262,217,468,244"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="205,247,246,242,247,247,206,252"/>
+<area shape="rect" id="Node000013" href="$class_u_k_p_t_cheat_manager.html#ab6e715a2dbc2c08726f644b6bd0c6e12" title=" " alt="" coords="255,269,476,312"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="206,270,240,274,239,279,205,275"/>
+<area shape="rect" id="Node000015" href="$class_u_k_p_t_cheat_manager.html#ad680147373532691154ba6be8ce3aed3" title=" " alt="" coords="253,352,478,379"/>
+<area shape="poly" id="edge16_Node000001_Node000015" title=" " alt="" coords="139,273,254,322,312,344,310,349,252,326,137,278"/>
+<area shape="rect" id="Node000003" href="$class_u_skill_manager_component.html#ade57574476c2faa9d7356406cdd70b40" title=" " alt="" coords="526,95,699,137"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="428,154,510,136,511,141,430,159"/>
+<area shape="rect" id="Node000004" href="$class_u_skill_manager_component.html#abd079bd1871419539a26030ab82b5cf4" title=" " alt="" coords="747,5,921,48"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="664,92,746,58,761,52,763,57,748,62,666,97"/>
+<area shape="rect" id="Node000006" href="$class_u_skill_manager_component.html#a9f545589b45bf8e8dcb86d6a76e46e7d" title=" " alt="" coords="747,72,921,115"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="700,104,731,101,732,106,700,110"/>
+<area shape="rect" id="Node000009" href="$class_u_skill_manager_component.html#a3b41166a0321b681e053fea536b461ee" title=" " alt="" coords="747,139,921,181"/>
+<area shape="poly" id="edge9_Node000003_Node000009" title=" " alt="" coords="700,131,732,137,731,142,699,136"/>
+<area shape="rect" id="Node000005" href="$class_u_skill_manager_component.html#a300da93de3b72a22e7eb816885db5f88" title=" " alt="" coords="969,5,1142,48"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="921,24,953,24,953,29,921,29"/>
+<area shape="rect" id="Node000007" href="$class_u_base_skill_ability.html#a8e1e476e767f4c1567a3ea52725b9fdd" title=" " alt="" coords="984,72,1126,115"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="921,91,968,91,968,96,921,96"/>
+<area shape="rect" id="Node000008" href="$class_u_base_skill_ability.html#ac270dffb5b74e423d2892af6f5e510f8" title=" " alt="" coords="987,139,1124,181"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="908,113,973,132,971,138,906,118"/>
+<area shape="rect" id="Node000011" href="$class_u_skill_buff_system_statics.html#a251cdb91c889fc43c1645ff6396ebd13" title=" " alt="" coords="530,207,695,249"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="469,227,514,226,514,232,469,232"/>
+<area shape="rect" id="Node000012" href="$struct_f_magnitude_by_rarity.html#a0fc048b3197b409649ad98007b8189d6" title=" " alt="" coords="752,229,916,272"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="696,234,736,238,736,243,695,239"/>
+<area shape="poly" id="edge13_Node000012_Node000012" title=" " alt="" coords="792,229,790,219,797,210,812,205,834,203,858,205,872,211,870,216,856,210,834,208,813,210,800,215,795,221,797,228"/>
+<area shape="rect" id="Node000014" href="$class_u_skill_buff_system_statics.html#aa9aa30ae17bec437d00fb1e3c277d73e" title=" " alt="" coords="530,273,695,316"/>
+<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="476,290,514,290,514,296,476,295"/>
+<area shape="rect" id="Node000016" href="$class_u_inventory_manager.html#a3b3f70075ad63d4e9a454068ac6d26b9" title=" " alt="" coords="541,364,684,407"/>
+<area shape="poly" id="edge17_Node000015_Node000016" title=" " alt="" coords="479,372,526,376,525,381,478,377"/>
+<area shape="poly" id="edge18_Node000016_Node000016" title=" " alt="" coords="571,364,569,354,576,345,591,339,613,337,636,340,651,346,648,351,635,345,613,343,592,345,579,349,574,355,576,363"/>
+</map>

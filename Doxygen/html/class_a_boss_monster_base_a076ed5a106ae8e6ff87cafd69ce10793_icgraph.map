@@ -1,0 +1,8 @@
+<map id="ABossMonsterBase::SendSpawnEventToGameMode" name="ABossMonsterBase::SendSpawnEventToGameMode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="465,29,680,72"/>
+<area shape="rect" id="Node000002" href="$class_a_boss_monster_base.html#a148ab71c8d5d40090cc9f63fe81065b3" title=" " alt="" coords="219,29,417,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="449,53,417,53,417,48,449,48"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="355,16,341,10,318,8,296,10,283,15,278,21,279,28,274,29,272,19,280,10,295,5,318,3,342,5,357,11"/>
+<area shape="rect" id="Node000003" href="$class_a_boss_monster_base.html#a3a77a8ea16e8085f13e426f1eab5c5c7" title=" " alt="" coords="5,37,171,64"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="203,53,171,53,171,48,203,48"/>
+</map>

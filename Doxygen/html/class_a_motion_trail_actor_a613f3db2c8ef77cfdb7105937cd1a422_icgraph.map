@@ -1,0 +1,10 @@
+<map id="AMotionTrailActor::BeginPlay" name="AMotionTrailActor::BeginPlay">
+<area shape="rect" id="Node000001" title=" " alt="" coords="679,29,813,72"/>
+<area shape="rect" id="Node000002" href="$class_a_motion_trail_actor.html#add2e53c2e4bcf588d4cd824fb0c9e4c4" title=" " alt="" coords="498,29,631,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="664,53,632,53,632,48,664,48"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="594,16,583,10,565,8,548,10,538,14,534,21,535,28,530,29,528,19,534,10,546,5,565,3,584,5,596,11"/>
+<area shape="rect" id="Node000003" href="$class_u_anim_notify_state___motion_trail.html#a5ad3153645f36fd74720fb405e83b3e4" title=" " alt="" coords="252,29,450,72"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="483,53,450,53,450,48,483,48"/>
+<area shape="rect" id="Node000004" href="$class_u_anim_notify_state___motion_trail.html#a0bae292f17ccdc01081ec57ca7f0c3d5" title=" " alt="" coords="5,29,204,72"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="236,53,204,53,204,48,236,48"/>
+</map>

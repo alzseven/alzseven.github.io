@@ -1,0 +1,8 @@
+<map id="AKPTLobbyDisplayPawn::OnLobbyStateUpdated" name="AKPTLobbyDisplayPawn::OnLobbyStateUpdated">
+<area shape="rect" id="Node000001" title=" " alt="" coords="449,35,617,77"/>
+<area shape="rect" id="Node000002" href="$class_a_k_p_t_lobby_display_pawn.html#a4aa3e5cab874b72a1ea1b4b0ba8a82f0" title=" " alt="" coords="222,5,401,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="433,45,401,41,402,36,434,40"/>
+<area shape="rect" id="Node000003" href="$class_a_k_p_t_lobby_display_pawn.html#a75b0e46e75c0076bb6dedb1fa2c70a74" title=" " alt="" coords="5,35,174,77"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="433,62,401,63,222,63,174,62,174,56,222,57,401,57,433,57"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="207,43,174,48,174,42,206,38"/>
+</map>

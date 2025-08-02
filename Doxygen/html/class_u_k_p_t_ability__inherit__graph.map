@@ -1,0 +1,11 @@
+<map id="UKPTAbility" name="UKPTAbility">
+<area shape="rect" id="Node000001" title=" " alt="" coords="226,123,440,251"/>
+<area shape="rect" id="Node000003" href="$class_u_minion_ability.html" title=" " alt="" coords="134,307,321,376"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="284,264,253,308,249,305,279,261"/>
+<area shape="rect" id="Node000005" href="$class_u_minion_projectile.html" title=" " alt="" coords="346,299,534,384"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="388,261,413,297,409,300,383,264"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="275,5,391,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="336,89,336,123,330,123,330,89"/>
+<area shape="rect" id="Node000004" href="$class_u_minion_suicide.html" title=" " alt="" coords="5,432,450,1147"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="230,391,230,432,225,432,225,391"/>
+</map>

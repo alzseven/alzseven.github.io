@@ -1,0 +1,13 @@
+<map id="UInventoryUI::UpdateInventoryUI" name="UInventoryUI::UpdateInventoryUI">
+<area shape="rect" id="Node000001" title=" " alt="" coords="758,35,976,61"/>
+<area shape="rect" id="Node000002" href="$class_u_in_game_h_u_d.html#abfc3adf935b5d41562a31bf38f472c1d" title=" " alt="" coords="490,5,710,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="742,37,710,33,711,28,743,32"/>
+<area shape="rect" id="Node000004" href="$class_u_shop_u_i.html#aec5728ab9fdc554d5ebc34aab1c5a075" title=" " alt="" coords="510,56,690,99"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="743,64,691,70,690,65,743,59"/>
+<area shape="rect" id="Node000003" href="$class_u_in_game_h_u_d.html#ac0dc199f4499dcb804507ef05df5a3f7" title=" " alt="" coords="232,5,442,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="474,21,442,21,442,16,474,16"/>
+<area shape="rect" id="Node000005" href="$class_u_shop_u_i.html#ab6eba1623182f0c5644886c65af5f8b3" title=" " alt="" coords="243,64,431,91"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="495,80,432,80,432,75,495,75"/>
+<area shape="rect" id="Node000006" href="$class_u_shop_u_i.html#ab8d30aa4ab0a8bf7ed1d77aa1f2ba1f5" title=" " alt="" coords="5,64,184,91"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="227,80,184,80,184,75,227,75"/>
+</map>

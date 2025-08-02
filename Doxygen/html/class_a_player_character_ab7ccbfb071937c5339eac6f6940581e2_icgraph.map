@@ -1,0 +1,6 @@
+<map id="APlayerCharacter::ClientCameraShake" name="APlayerCharacter::ClientCameraShake">
+<area shape="rect" id="Node000001" title=" " alt="" coords="242,29,408,72"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="361,16,348,10,325,8,304,10,291,15,285,21,287,28,282,29,280,19,287,10,302,5,325,3,349,5,363,11"/>
+<area shape="rect" id="Node000002" href="$class_a_player_character.html#af89c388d6da40981bf481d3e362ec117" title=" " alt="" coords="5,37,194,64"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="226,53,194,53,194,48,226,48"/>
+</map>

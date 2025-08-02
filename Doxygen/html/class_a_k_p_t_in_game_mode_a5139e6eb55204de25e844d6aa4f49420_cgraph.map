@@ -1,0 +1,11 @@
+<map id="AKPTInGameMode::PlayerIsReadyForNight" name="AKPTInGameMode::PlayerIsReadyForNight">
+<area shape="rect" id="Node000001" title="플레이어가 상점에서 &#39;준비 완료&#39; 버튼을 눌렀을 때 호출됩니다." alt="" coords="5,39,196,81"/>
+<area shape="rect" id="Node000002" href="$class_a_k_p_t_in_game_mode.html#ad904efb516b64eddf8aef8f50e3c42a1" title="모든 플레이어가 야간 페이즈로 넘어갈 준비가 되었는지 확인합니다." alt="" coords="248,5,443,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,44,232,39,232,45,197,50"/>
+<area shape="rect" id="Node000004" href="$class_a_k_p_t_player_state.html#ae76783471e033ac0ece5ebe988856b1b" title="업그레이드 선택 기회를 추가합니다." alt="" coords="244,72,447,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="197,70,228,75,228,80,196,76"/>
+<area shape="rect" id="Node000003" href="$class_a_k_p_t_in_game_mode.html#a87cb6168b8662d3ba2ebc02f0695522c" title=" " alt="" coords="495,5,676,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="443,24,480,24,480,29,443,29"/>
+<area shape="rect" id="Node000005" href="$class_a_k_p_t_player_state.html#aa41c46851e05f762ccd8c2fc98aa505a" title=" " alt="" coords="499,72,672,115"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="447,91,483,91,483,96,447,96"/>
+</map>

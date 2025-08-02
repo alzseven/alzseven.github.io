@@ -1,0 +1,7 @@
+<map id="AKPTInGameMode::HandleMatchDefeat" name="AKPTInGameMode::HandleMatchDefeat">
+<area shape="rect" id="Node000001" title="게임에서 패배했을 때 호출됩니다." alt="" coords="5,5,225,48"/>
+<area shape="rect" id="Node000002" href="$class_a_k_p_t_in_game_mode.html#a2a532fe05b539d72cc039305ee771c40" title=" " alt="" coords="273,5,492,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="225,24,257,24,257,29,225,29"/>
+<area shape="rect" id="Node000003" href="$class_a_k_p_t_in_game_mode.html#aa81ccab3f271d21f9a65bb8f42eb6f70" title=" " alt="" coords="540,5,735,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="493,24,524,24,524,29,493,29"/>
+</map>

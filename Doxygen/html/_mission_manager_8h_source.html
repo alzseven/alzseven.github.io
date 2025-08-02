@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Mission/MissionManager.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_mission_manager_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">MissionManager.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_mission_manager_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;GameFramework/Actor.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;MissionManager.generated.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">class </span><a class="code hl_class" href="class_a_mission_actor_base.html">AMissionActorBase</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">class </span>UDataTable;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// [추가] 미션의 상태를 명확하게 정의하는 열거형입니다.</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>UENUM(BlueprintType)</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="_mission_manager_8h.html#a4a921fed56feda4535a7ad92aae19d3b">   14</a></span>enum class <a class="code hl_variable" href="_mission_manager_8h.html#a4a921fed56feda4535a7ad92aae19d3b">EMissionState</a> : uint8</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    Pending,   <span class="comment">// 시작 대기</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="_mission_manager_8h.html#af856ca72ae48410fc97883a93bf3fe99">   17</a></span>    <a class="code hl_variable" href="_mission_manager_8h.html#af856ca72ae48410fc97883a93bf3fe99">Active</a>,    <span class="comment">// 진행 중</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="_mission_manager_8h.html#a93b47578ff1736f37f2cbd3d359f866c">   18</a></span>    <a class="code hl_variable" href="_mission_manager_8h.html#a93b47578ff1736f37f2cbd3d359f866c">Succeeded</a>, <span class="comment">// 성공</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="_mission_manager_8h.html#afc3ef95bb62985016c0eaa519e1c0c7a">   19</a></span>    <a class="code hl_variable" href="_mission_manager_8h.html#afc3ef95bb62985016c0eaa519e1c0c7a">Failed</a>     <span class="comment">// 실패 (시간 초과 등)</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>};</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// [수정] 활성화된 미션의 상태를 추적하는 구조체입니다.</span></div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="struct_f_active_mission.html">   23</a></span>USTRUCT(BlueprintType)</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">struct </span><a class="code hl_struct" href="struct_f_active_mission.html">FActiveMission</a></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>{</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    UPROPERTY(BlueprintReadOnly)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_f_active_mission.html#a4eaa27e9d70b53cd8a291f1621568120">   29</a></span>    FName <a class="code hl_variable" href="struct_f_active_mission.html#a4eaa27e9d70b53cd8a291f1621568120">MissionID</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    UPROPERTY(BlueprintReadOnly)</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="struct_f_active_mission.html#aa899c2ccf3d96261d1d328416604acc6">   32</a></span>    TObjectPtr&lt;<a class="code hl_class" href="class_a_mission_actor_base.html">AMissionActorBase</a>&gt; <a class="code hl_variable" href="struct_f_active_mission.html#aa899c2ccf3d96261d1d328416604acc6">MissionActor</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    UPROPERTY(BlueprintReadOnly)</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="struct_f_active_mission.html#a6ee06f02a5fd08358e9708e70a6bbbc5">   35</a></span>    <a class="code hl_variable" href="_mission_manager_8h.html#a4a921fed56feda4535a7ad92aae19d3b">EMissionState</a> <a class="code hl_variable" href="struct_f_active_mission.html#a6ee06f02a5fd08358e9708e70a6bbbc5">State</a> = <a class="code hl_variable" href="_mission_manager_8h.html#a4a921fed56feda4535a7ad92aae19d3b">EMissionState</a>::Pending;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">// 미션 시간 초과를 처리하기 위한 타이머 핸들입니다.</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct_f_active_mission.html#ab410e25dcab9530e394bd5cc36b9fb50">   38</a></span>    FTimerHandle <a class="code hl_variable" href="struct_f_active_mission.html#ab410e25dcab9530e394bd5cc36b9fb50">MissionTimerHandle</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>};</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">// [추가] GameState 등 외부 시스템이 구독하여 미션 완료를 감지할 수 있는 델리게이트입니다.</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnGlobalMissionCompletedSignature, FName, CompletedMissionID);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="};">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_a_mission_manager.html">   44</a></span>UCLASS()</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>class KPT_API <a class="code hl_function" href="class_a_mission_manager.html#a646056ee18f623b6e1453f72e4a95c1a">AMissionManager</a> : public AActor</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>{</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">public</span>: </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_function" href="class_a_mission_manager.html#a646056ee18f623b6e1453f72e4a95c1a">AMissionManager</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">// GameState에서 이 델리게이트에 바인딩하여 보상 선택 UI를 띄우는 등의 로직을 처리할 수 있습니다.</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    UPROPERTY(BlueprintAssignable, Category = <span class="stringliteral">&quot;Mission&quot;</span>)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_a_mission_manager.html#a8c75ff50ebc12bcd5d9783a0dd548121">   54</a></span>    FOnGlobalMissionCompletedSignature <a class="code hl_variable" href="class_a_mission_manager.html#a8c75ff50ebc12bcd5d9783a0dd548121">OnGlobalMissionCompleted</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>protected:</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// 미션 데이터 테이블 - 에디터에서 세팅</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Mission&quot;</span>)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_a_mission_manager.html#a7c26a5a914166f74f9673633b0b2b528">   59</a></span>    TObjectPtr&lt;UDataTable&gt; <a class="code hl_variable" href="class_a_mission_manager.html#a7c26a5a914166f74f9673633b0b2b528">MissionDataTable</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">// 미션 시작 시간 테이블 - 에디터에서 세팅</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Timeline&quot;</span>)</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_a_mission_manager.html#aa2bb45fc2aff16a59b4c3363828a1fc0">   63</a></span>    TObjectPtr&lt;UDataTable&gt; <a class="code hl_variable" href="class_a_mission_manager.html#aa2bb45fc2aff16a59b4c3363828a1fc0">TimelineDataTable</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="comment">// 활성화된 미션 배열 (UI 갱신 등을 위해 리플리케이트)</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    UPROPERTY(BlueprintReadOnly, ReplicatedUsing = OnRep_ActiveMissions)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_a_mission_manager.html#a252e78995c73f7586c9759372eaa18b5">   67</a></span>    TArray&lt;<a class="code hl_struct" href="struct_f_active_mission.html">FActiveMission</a>&gt; <a class="code hl_variable" href="class_a_mission_manager.html#a252e78995c73f7586c9759372eaa18b5">ActiveMissions</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    virtual <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_mission_manager.html#ac515cb49965a073fc5314e994e0b4cd8">GetLifetimeReplicatedProps</a>(TArray&lt;class FLifetimeProperty&gt;&amp; OutLifetimeProps) const override;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    virtual <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_mission_manager.html#af1b756c8c3e5f4e5eb76263115b71207">BeginPlay</a>() override;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>private:</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    UFUNCTION()</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordtype">void</span> StartMission(FName InMissionID, FName InSpawnPointTag);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="comment">// [수정] MissionActor의 OnMissionCompleted 델리게이트에 바인딩될 함수입니다.</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    UFUNCTION()</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span> HandleMissionCompletion(FName InMissionID);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="comment">// [추가] 미션 시간 초과 시 타이머에 의해 호출될 함수</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    UFUNCTION()</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> HandleMissionTimeout(FName InMissionID);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="comment">// [추가] ActiveMissions 배열이 리플리케이트될 때 클라이언트에서 호출됩니다.</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    UFUNCTION()</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">void</span> OnRep_ActiveMissions();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>};</div>
+</div>
+<div class="ttc" id="a_mission_manager_8h_html_a4a921fed56feda4535a7ad92aae19d3b"><div class="ttname"><a href="_mission_manager_8h.html#a4a921fed56feda4535a7ad92aae19d3b">EMissionState</a></div><div class="ttdeci">enum enum class EMissionState</div><div class="ttdef"><b>Definition</b> <a href="#l00014">MissionManager.h:13</a></div></div>
+<div class="ttc" id="a_mission_manager_8h_html_a93b47578ff1736f37f2cbd3d359f866c"><div class="ttname"><a href="_mission_manager_8h.html#a93b47578ff1736f37f2cbd3d359f866c">Succeeded</a></div><div class="ttdeci">enum enum class Succeeded</div><div class="ttdef"><b>Definition</b> <a href="#l00018">MissionManager.h:18</a></div></div>
+<div class="ttc" id="a_mission_manager_8h_html_af856ca72ae48410fc97883a93bf3fe99"><div class="ttname"><a href="_mission_manager_8h.html#af856ca72ae48410fc97883a93bf3fe99">Active</a></div><div class="ttdeci">enum enum class Active</div><div class="ttdef"><b>Definition</b> <a href="#l00017">MissionManager.h:17</a></div></div>
+<div class="ttc" id="a_mission_manager_8h_html_afc3ef95bb62985016c0eaa519e1c0c7a"><div class="ttname"><a href="_mission_manager_8h.html#afc3ef95bb62985016c0eaa519e1c0c7a">Failed</a></div><div class="ttdeci">enum enum class Failed</div><div class="ttdef"><b>Definition</b> <a href="#l00019">MissionManager.h:20</a></div></div>
+<div class="ttc" id="aclass_a_mission_actor_base_html"><div class="ttname"><a href="class_a_mission_actor_base.html">AMissionActorBase</a></div><div class="ttdef"><b>Definition</b> <a href="_mission_actor_base_8h_source.html#l00010">MissionActorBase.h:12</a></div></div>
+<div class="ttc" id="aclass_a_mission_manager_html_a252e78995c73f7586c9759372eaa18b5"><div class="ttname"><a href="class_a_mission_manager.html#a252e78995c73f7586c9759372eaa18b5">AMissionManager::ActiveMissions</a></div><div class="ttdeci">TArray&lt; FActiveMission &gt; ActiveMissions</div><div class="ttdef"><b>Definition</b> <a href="#l00067">MissionManager.h:67</a></div></div>
+<div class="ttc" id="aclass_a_mission_manager_html_a646056ee18f623b6e1453f72e4a95c1a"><div class="ttname"><a href="class_a_mission_manager.html#a646056ee18f623b6e1453f72e4a95c1a">AMissionManager::AMissionManager</a></div><div class="ttdeci">AMissionManager()</div><div class="ttdef"><b>Definition</b> <a href="_mission_manager_8cpp_source.html#l00013">MissionManager.cpp:13</a></div></div>
+<div class="ttc" id="aclass_a_mission_manager_html_a7c26a5a914166f74f9673633b0b2b528"><div class="ttname"><a href="class_a_mission_manager.html#a7c26a5a914166f74f9673633b0b2b528">AMissionManager::MissionDataTable</a></div><div class="ttdeci">TObjectPtr&lt; UDataTable &gt; MissionDataTable</div><div class="ttdef"><b>Definition</b> <a href="#l00059">MissionManager.h:59</a></div></div>
+<div class="ttc" id="aclass_a_mission_manager_html_a8c75ff50ebc12bcd5d9783a0dd548121"><div class="ttname"><a href="class_a_mission_manager.html#a8c75ff50ebc12bcd5d9783a0dd548121">AMissionManager::OnGlobalMissionCompleted</a></div><div class="ttdeci">FOnGlobalMissionCompletedSignature OnGlobalMissionCompleted</div><div class="ttdef"><b>Definition</b> <a href="#l00054">MissionManager.h:54</a></div></div>
+<div class="ttc" id="aclass_a_mission_manager_html_aa2bb45fc2aff16a59b4c3363828a1fc0"><div class="ttname"><a href="class_a_mission_manager.html#aa2bb45fc2aff16a59b4c3363828a1fc0">AMissionManager::TimelineDataTable</a></div><div class="ttdeci">TObjectPtr&lt; UDataTable &gt; TimelineDataTable</div><div class="ttdef"><b>Definition</b> <a href="#l00063">MissionManager.h:63</a></div></div>
+<div class="ttc" id="aclass_a_mission_manager_html_ac515cb49965a073fc5314e994e0b4cd8"><div class="ttname"><a href="class_a_mission_manager.html#ac515cb49965a073fc5314e994e0b4cd8">AMissionManager::GetLifetimeReplicatedProps</a></div><div class="ttdeci">virtual void GetLifetimeReplicatedProps(TArray&lt; class FLifetimeProperty &gt; &amp;OutLifetimeProps) const override</div><div class="ttdef"><b>Definition</b> <a href="_mission_manager_8cpp_source.html#l00020">MissionManager.cpp:20</a></div></div>
+<div class="ttc" id="aclass_a_mission_manager_html_af1b756c8c3e5f4e5eb76263115b71207"><div class="ttname"><a href="class_a_mission_manager.html#af1b756c8c3e5f4e5eb76263115b71207">AMissionManager::BeginPlay</a></div><div class="ttdeci">virtual void BeginPlay() override</div><div class="ttdef"><b>Definition</b> <a href="_mission_manager_8cpp_source.html#l00026">MissionManager.cpp:26</a></div></div>
+<div class="ttc" id="astruct_f_active_mission_html"><div class="ttname"><a href="struct_f_active_mission.html">FActiveMission</a></div><div class="ttdef"><b>Definition</b> <a href="#l00023">MissionManager.h:25</a></div></div>
+<div class="ttc" id="astruct_f_active_mission_html_a4eaa27e9d70b53cd8a291f1621568120"><div class="ttname"><a href="struct_f_active_mission.html#a4eaa27e9d70b53cd8a291f1621568120">FActiveMission::MissionID</a></div><div class="ttdeci">FName MissionID</div><div class="ttdef"><b>Definition</b> <a href="#l00029">MissionManager.h:29</a></div></div>
+<div class="ttc" id="astruct_f_active_mission_html_a6ee06f02a5fd08358e9708e70a6bbbc5"><div class="ttname"><a href="struct_f_active_mission.html#a6ee06f02a5fd08358e9708e70a6bbbc5">FActiveMission::State</a></div><div class="ttdeci">EMissionState State</div><div class="ttdef"><b>Definition</b> <a href="#l00035">MissionManager.h:35</a></div></div>
+<div class="ttc" id="astruct_f_active_mission_html_aa899c2ccf3d96261d1d328416604acc6"><div class="ttname"><a href="struct_f_active_mission.html#aa899c2ccf3d96261d1d328416604acc6">FActiveMission::MissionActor</a></div><div class="ttdeci">TObjectPtr&lt; AMissionActorBase &gt; MissionActor</div><div class="ttdef"><b>Definition</b> <a href="#l00032">MissionManager.h:32</a></div></div>
+<div class="ttc" id="astruct_f_active_mission_html_ab410e25dcab9530e394bd5cc36b9fb50"><div class="ttname"><a href="struct_f_active_mission.html#ab410e25dcab9530e394bd5cc36b9fb50">FActiveMission::MissionTimerHandle</a></div><div class="ttdeci">FTimerHandle MissionTimerHandle</div><div class="ttdef"><b>Definition</b> <a href="#l00038">MissionManager.h:38</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_c2a92469ce9c0e68583a633287ca3b8b.html">Mission</a></li><li class="navelem"><a href="_mission_manager_8h.html">MissionManager.h</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

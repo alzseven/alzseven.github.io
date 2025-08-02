@@ -1,0 +1,23 @@
+<map id="AMinionMonster::MulticastSetDesiredRotator" name="AMinionMonster::MulticastSetDesiredRotator">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,205,182,248"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="47,205,46,195,53,186,69,181,94,179,119,181,135,187,133,192,118,186,93,184,70,186,56,191,51,197,53,204"/>
+<area shape="rect" id="Node000002" href="$class_a_minion_monster.html#ae43c84a0c54f363183929ec3e07cbead" title=" " alt="" coords="251,5,422,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,203,152,132,187,92,228,58,236,53,239,57,231,62,191,96,157,135,109,206"/>
+<area shape="rect" id="Node000003" href="$class_a_minion_monster.html#afa673a065f725133d8e430587d6b4cb9" title=" " alt="" coords="241,72,433,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="112,203,162,155,194,130,228,108,243,102,245,107,231,113,197,134,165,159,116,207"/>
+<area shape="rect" id="Node000006" href="$class_a_minion_monster.html#a45150a2594b5f489332a13ed092638f3" title=" " alt="" coords="255,123,419,165"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="152,202,229,175,249,168,251,173,231,180,154,207"/>
+<area shape="rect" id="Node000007" href="$class_a_minion_monster.html#a84d245ac273bcfc522953e2d2c7964b3" title=" " alt="" coords="235,213,438,240"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="182,224,219,224,219,229,182,229"/>
+<area shape="rect" id="Node000008" href="$class_a_minion_monster.html#ac7f7238f040b7b0747852d5686571f8f" title=" " alt="" coords="246,264,428,307"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="183,245,231,257,230,262,181,251"/>
+<area shape="rect" id="Node000009" href="$class_a_minion_monster.html#a156f349f4943df609b1541a5050ed972" title=" " alt="" coords="230,331,444,373"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="123,246,172,282,231,316,244,322,242,327,228,321,169,286,120,251"/>
+<area shape="rect" id="Node000010" href="$class_a_minion_monster.html#ae7e6c5d889b8de78285021ecfe796683" title=" " alt="" coords="235,397,438,440"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="110,247,158,314,192,351,231,383,239,388,236,392,228,388,188,355,154,318,106,250"/>
+<area shape="rect" id="Node000004" href="$class_a_monster_base.html#a806800ef93729cb23610941f16f2786c" title=" " alt="" coords="512,35,684,77"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="433,72,496,65,497,70,434,77"/>
+<area shape="rect" id="Node000005" href="$class_u_pool_sub_system.html#a13674eeb60968e86a0a06840070cf751" title=" " alt="" coords="492,101,704,128"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="434,93,477,98,476,104,433,99"/>
+<area shape="poly" id="edge8_Node000007_Node000007" title=" " alt="" coords="296,215,289,205,294,195,310,189,337,187,366,189,381,196,379,201,365,194,337,192,311,194,297,199,294,204,300,211"/>
+</map>

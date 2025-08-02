@@ -1,0 +1,8 @@
+<map id="APlayerCharacter::BeginPlay" name="APlayerCharacter::BeginPlay">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,67,197,93"/>
+<area shape="rect" id="Node000002" href="$class_a_player_character.html#acebac2f94ebae86a8ae3562176924141" title=" " alt="" coords="266,29,437,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,66,250,60,250,65,197,71"/>
+<area shape="rect" id="Node000003" href="$class_a_player_character.html#a75342cef43efe106243cc97061445939" title=" " alt="" coords="245,96,458,123"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="197,89,229,92,229,98,197,94"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="304,29,302,19,310,10,327,5,351,3,378,5,394,11,392,16,377,10,351,8,328,10,313,15,307,21,309,28"/>
+</map>

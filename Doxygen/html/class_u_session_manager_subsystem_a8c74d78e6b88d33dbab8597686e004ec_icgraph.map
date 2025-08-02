@@ -1,0 +1,8 @@
+<map id="USessionManagerSubsystem::JoinSession" name="USessionManagerSubsystem::JoinSession">
+<area shape="rect" id="Node000001" title=" " alt="" coords="275,51,469,93"/>
+<area shape="rect" id="Node000002" href="$class_u_k_p_t_game_instance.html#a62ea4b50c620155f8a633c5bae834eaa" title=" " alt="" coords="5,5,227,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="259,55,227,49,228,44,260,49"/>
+<area shape="rect" id="Node000003" href="$class_u_session_manager_subsystem.html#a1fd21ef6dd10342bfccc3db126ed5c4b" title=" " alt="" coords="19,96,213,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="259,95,214,103,213,97,259,89"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="158,83,142,77,116,75,92,77,77,81,71,87,73,95,68,96,66,86,74,77,91,71,116,69,143,72,160,78"/>
+</map>

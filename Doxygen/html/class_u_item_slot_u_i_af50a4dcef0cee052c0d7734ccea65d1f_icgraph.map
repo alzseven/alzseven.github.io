@@ -1,0 +1,11 @@
+<map id="UItemSlotUI::CancelHideTooltipTimer" name="UItemSlotUI::CancelHideTooltipTimer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="494,64,702,107"/>
+<area shape="rect" id="Node000002" href="$class_u_item_slot_u_i.html#a7de6ada872906bb5f597e74aa2dd7779" title=" " alt="" coords="264,43,432,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="478,74,432,68,432,63,479,69"/>
+<area shape="rect" id="Node000005" href="$class_u_item_slot_u_i.html#aa98a4cd4efa1b7ca7c541bb53c583223" title=" " alt="" coords="250,93,446,136"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="479,102,447,106,446,101,478,97"/>
+<area shape="rect" id="Node000003" href="$class_u_item_slot_u_i.html#a9ef307fd2a44bbbe6cbf8803a0c7e1da" title=" " alt="" coords="5,5,202,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="248,47,202,41,202,36,249,41"/>
+<area shape="rect" id="Node000004" href="$class_u_item_slot_u_i.html#ad9253b75b68c4fb680a6336cfcedd8f1" title=" " alt="" coords="28,72,179,99"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="249,71,179,79,179,74,248,65"/>
+</map>

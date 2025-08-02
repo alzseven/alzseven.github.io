@@ -1,0 +1,7 @@
+<map id="UMinionAbility" name="UMinionAbility">
+<area shape="rect" id="Node000001" title=" " alt="" coords="19,299,206,368"/>
+<area shape="rect" id="Node000002" href="$class_u_k_p_t_ability.html" title=" " alt="" coords="5,123,219,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,265,115,299,110,299,110,265"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="54,5,170,75"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="115,89,115,123,110,123,110,89"/>
+</map>

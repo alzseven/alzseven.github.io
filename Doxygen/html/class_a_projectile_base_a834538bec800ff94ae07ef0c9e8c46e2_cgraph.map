@@ -1,0 +1,14 @@
+<map id="AProjectileBase::OnDeactivated_Implementation" name="AProjectileBase::OnDeactivated_Implementation">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,215,77"/>
+<area shape="rect" id="Node000002" href="$class_a_projectile_base.html#a183da78e0cee66595989812aec0ff7c9" title=" " alt="" coords="263,35,450,77"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,53,247,53,247,59,215,59"/>
+<area shape="rect" id="Node000003" href="$class_a_projectile_base.html#a643fc0b4a82ec643f5d958ec6a30a060" title=" " alt="" coords="498,5,702,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="450,42,482,38,483,43,451,47"/>
+<area shape="rect" id="Node000004" href="$class_a_projectile_base.html#a2276af661735f8971f6af66c6db7633d" title=" " alt="" coords="500,72,701,99"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="451,65,484,69,484,74,450,70"/>
+<area shape="rect" id="Node000005" href="$class_a_projectile_base.html#a56f85c58a5c516ddd3e66fbb115eb20d" title=" " alt="" coords="750,64,936,107"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="701,83,735,83,735,88,701,88"/>
+<area shape="rect" id="Node000006" href="$class_a_projectile_base.html#a76b21edb2d7e6427f03a3be58488ef52" title=" " alt="" coords="984,64,1159,107"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="936,83,968,83,968,88,936,88"/>
+<area shape="poly" id="edge6_Node000006_Node000006" title=" " alt="" coords="1028,64,1026,54,1034,45,1049,39,1071,37,1096,40,1110,46,1108,51,1094,45,1071,43,1050,45,1037,49,1031,55,1033,63"/>
+</map>

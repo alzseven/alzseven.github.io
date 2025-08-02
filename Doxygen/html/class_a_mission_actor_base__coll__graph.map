@@ -1,0 +1,7 @@
+<map id="AMissionActorBase" name="AMissionActorBase">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,213,201,709"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="6,51,57,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="43,134,58,213,53,214,38,135"/>
+<area shape="rect" id="Node000003" href="$class_i_mission_interface.html" title=" " alt="" coords="81,5,270,165"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="160,180,154,214,148,213,155,179"/>
+</map>

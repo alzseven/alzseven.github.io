@@ -1,0 +1,8 @@
+<map id="AMinionMonster::ServerLogic" name="AMinionMonster::ServerLogic">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,198,81"/>
+<area shape="rect" id="Node000002" href="$class_a_monster_base.html#a806800ef93729cb23610941f16f2786c" title=" " alt="" coords="261,5,434,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,51,246,41,247,46,186,57"/>
+<area shape="rect" id="Node000003" href="$class_a_minion_monster.html#a84d245ac273bcfc522953e2d2c7964b3" title=" " alt="" coords="246,96,449,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="186,79,249,90,248,95,185,85"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="306,97,299,87,304,77,320,71,347,69,377,72,392,79,390,84,376,77,347,75,321,77,307,81,304,87,310,94"/>
+</map>

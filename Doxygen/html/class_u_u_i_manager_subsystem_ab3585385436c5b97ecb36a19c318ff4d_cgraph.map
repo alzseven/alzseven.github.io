@@ -1,0 +1,5 @@
+<map id="UUIManagerSubsystem::GetSingletonWidget" name="UUIManagerSubsystem::GetSingletonWidget">
+<area shape="rect" id="Node000001" title="지정된 ID를 가진 &#39;싱글톤&#39; 위젯 객체 포인터를 반환합니다." alt="" coords="5,5,167,48"/>
+<area shape="rect" id="Node000002" href="$class_u_u_i_manager_subsystem.html#aed4b9c08eec4848386a3a89108827ffd" title=" " alt="" coords="215,5,421,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,24,199,24,199,29,167,29"/>
+</map>

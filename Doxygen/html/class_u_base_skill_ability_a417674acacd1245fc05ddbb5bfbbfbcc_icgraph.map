@@ -1,0 +1,13 @@
+<map id="UBaseSkillAbility::ApplySkillCooldown" name="UBaseSkillAbility::ApplySkillCooldown">
+<area shape="rect" id="Node000001" title=" " alt="" coords="456,53,593,96"/>
+<area shape="rect" id="Node000002" href="$class_u_orbit_skill_ability.html#a30cfb801f01a4750000faaa655b36ae8" title=" " alt="" coords="25,12,146,54"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="475,47,442,31,407,20,338,10,268,9,202,14,147,23,146,18,202,9,268,4,339,4,409,14,444,26,477,42"/>
+<area shape="rect" id="Node000003" href="$class_u_base_skill_ability.html#ade62b76d04ebd1cfb7fd24381996b226" title=" " alt="" coords="220,53,402,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="440,77,402,77,402,72,440,72"/>
+<area shape="rect" id="Node000004" href="$class_u_straight_seq_skill_ability.html#a207d39125f09d62a172614e0490a0f14" title=" " alt="" coords="214,120,408,162"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="442,103,383,121,381,116,440,98"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="204,57,145,46,146,41,205,52"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="345,40,332,34,311,32,291,33,278,38,274,44,275,52,270,53,268,43,275,34,290,28,311,26,334,29,348,35"/>
+<area shape="rect" id="Node000005" href="$class_u_straight_seq_skill_ability.html#a6d9f4b84aaff3534ef4b2ad2dba6954c" title=" " alt="" coords="5,120,166,162"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="198,144,166,144,166,138,198,138"/>
+</map>

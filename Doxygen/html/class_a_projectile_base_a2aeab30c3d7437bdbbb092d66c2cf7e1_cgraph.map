@@ -1,0 +1,17 @@
+<map id="AProjectileBase::OnDeactivated" name="AProjectileBase::OnDeactivated">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,43,215,69"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="67,44,59,34,65,24,82,18,110,16,141,19,157,25,155,30,140,24,110,21,83,23,68,28,64,33,71,40"/>
+<area shape="rect" id="Node000002" href="$class_a_projectile_base.html#a834538bec800ff94ae07ef0c9e8c46e2" title=" " alt="" coords="263,35,472,77"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="215,53,247,53,247,59,215,59"/>
+<area shape="rect" id="Node000003" href="$class_a_projectile_base.html#a183da78e0cee66595989812aec0ff7c9" title=" " alt="" coords="520,35,707,77"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="472,53,505,53,505,59,472,59"/>
+<area shape="rect" id="Node000004" href="$class_a_projectile_base.html#a643fc0b4a82ec643f5d958ec6a30a060" title=" " alt="" coords="755,5,960,48"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="708,42,740,38,740,43,708,47"/>
+<area shape="rect" id="Node000005" href="$class_a_projectile_base.html#a2276af661735f8971f6af66c6db7633d" title=" " alt="" coords="757,72,958,99"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="708,65,742,69,741,74,708,70"/>
+<area shape="rect" id="Node000006" href="$class_a_projectile_base.html#a56f85c58a5c516ddd3e66fbb115eb20d" title=" " alt="" coords="1008,64,1193,107"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="959,83,992,83,992,88,959,88"/>
+<area shape="rect" id="Node000007" href="$class_a_projectile_base.html#a76b21edb2d7e6427f03a3be58488ef52" title=" " alt="" coords="1241,64,1416,107"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="1193,83,1225,83,1225,88,1193,88"/>
+<area shape="poly" id="edge8_Node000007_Node000007" title=" " alt="" coords="1285,64,1284,54,1291,45,1306,39,1329,37,1353,40,1368,46,1366,51,1352,45,1329,43,1307,45,1294,49,1289,55,1291,63"/>
+</map>

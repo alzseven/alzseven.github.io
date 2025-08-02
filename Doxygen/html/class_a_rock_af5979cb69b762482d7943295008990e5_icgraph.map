@@ -1,0 +1,5 @@
+<map id="ARock::OnHit" name="ARock::OnHit">
+<area shape="rect" id="Node000001" title=" " alt="" coords="182,5,285,32"/>
+<area shape="rect" id="Node000002" href="$class_a_rock.html#ab1087486e5e15d3b910523131b73cabd" title=" " alt="" coords="5,5,134,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,21,134,21,134,16,166,16"/>
+</map>

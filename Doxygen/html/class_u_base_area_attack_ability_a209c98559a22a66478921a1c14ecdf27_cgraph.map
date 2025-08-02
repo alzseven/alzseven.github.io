@@ -1,0 +1,7 @@
+<map id="UBaseAreaAttackAbility::SpawnAreaHazards" name="UBaseAreaAttackAbility::SpawnAreaHazards">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,168,81"/>
+<area shape="rect" id="Node000002" href="$class_u_base_area_attack_ability.html#a23ca22c8b2de675a1a6336ad957154e7" title=" " alt="" coords="216,5,385,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,45,200,40,201,45,169,50"/>
+<area shape="rect" id="Node000003" href="$class_u_base_area_attack_ability.html#ab9bff87644ec29cba63e8c0adbe115b7" title=" " alt="" coords="219,72,382,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="169,70,204,76,203,81,168,75"/>
+</map>

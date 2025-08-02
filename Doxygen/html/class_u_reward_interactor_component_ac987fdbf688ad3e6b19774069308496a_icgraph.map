@@ -1,0 +1,6 @@
+<map id="URewardInteractorComponent::Server_SendRewardChoice" name="URewardInteractorComponent::Server_SendRewardChoice">
+<area shape="rect" id="Node000001" title="선택된 보상 정보를 서버로 전송하는 RPC입니다." alt="" coords="252,29,450,72"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="391,16,376,10,351,8,328,10,313,15,308,21,309,28,304,29,302,19,310,10,326,5,351,3,377,5,393,11"/>
+<area shape="rect" id="Node000002" href="$class_u_reward_interactor_component.html#a2de8f08d9a5e6d095a20381e72e23815" title="UI(블루프린트)에서 플레이어가 보상을 선택했을 때 호출하는 함수입니다." alt="" coords="5,29,204,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="236,53,204,53,204,48,236,48"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="ALaserBeam::ActivateLaser" name="ALaserBeam::ActivateLaser">
+<area shape="rect" id="Node000001" title=" " alt="" coords="221,13,405,40"/>
+<area shape="rect" id="Node000002" href="$class_u_base_laser_attack_ability.html#ac49822a928fe96077caded42985e05d7" title="Spawns the laser beams and starts their rotation and damage ticks." alt="" coords="5,5,173,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="205,29,173,29,173,24,205,24"/>
+</map>

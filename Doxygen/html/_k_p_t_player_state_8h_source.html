@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Character/KPTPlayerState.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_k_p_t_player_state_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">KPTPlayerState.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_k_p_t_player_state_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;AbilitySystemInterface.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;GameplayTagContainer.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_component_owner_interface_8h.html">Core/Interface/ComponentOwnerInterface.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;GameFramework/PlayerState.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;KPTPlayerState.generated.h&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">class </span><a class="code hl_class" href="class_u_k_p_t_player_attribute_set.html">UKPTPlayerAttributeSet</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">class </span><a class="code hl_class" href="class_u_k_p_t_lobby_state_component.html">UKPTLobbyStateComponent</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">class </span><a class="code hl_class" href="class_u_player_shop_state_component.html">UPlayerShopStateComponent</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">class </span><a class="code hl_class" href="class_u_inventory_manager.html">UInventoryManager</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">class </span><a class="code hl_class" href="class_u_player_wallet_component.html">UPlayerWalletComponent</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">struct </span>FOnAttributeChangeData;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">class </span><a class="code hl_class" href="class_u_k_p_t_ability_system_component.html">UKPTAbilitySystemComponent</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">class </span>UKPTAttributeSet;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">class </span><a class="code hl_class" href="class_u_skill_attribute_set.html">USkillAttributeSet</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">class </span><a class="code hl_class" href="class_u_player_reward_state_component.html">UPlayerRewardStateComponent</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnPlayerDiedChanged, <span class="keywordtype">bool</span>, bIsDead);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnInventoryManagerReady, <a class="code hl_class" href="class_u_inventory_manager.html">UInventoryManager</a>*, PhaseManager);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnWalletComponentReady, <a class="code hl_class" href="class_u_player_wallet_component.html">UPlayerWalletComponent</a>*, TeamStats);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnShopStateComponentReady, <a class="code hl_class" href="class_u_player_shop_state_component.html">UPlayerShopStateComponent</a>*, TeamStats);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnRewardStateComponentReady, <a class="code hl_class" href="class_u_player_reward_state_component.html">UPlayerRewardStateComponent</a>*, TeamStats);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnLobbyStateComponentReady, <a class="code hl_class" href="class_u_k_p_t_lobby_state_component.html">UKPTLobbyStateComponent</a>*, TeamStats);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">// UI(블루프린트)에서 구독할 델리게이트들</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnHealthUpdatedSignature, <span class="keywordtype">float</span>, CurrentHealth, <span class="keywordtype">float</span>, MaxHealth);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">// DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnPendingChoicesChanged, int32, NewCount);</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnPersonalStateTagChangedSignature, <span class="keyword">const</span> FGameplayTag&amp;, NewStateTag);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="};">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html">   40</a></span>UCLASS()</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>class KPT_API <a class="code hl_function" href="class_a_k_p_t_player_state.html#a7e3cdd9a6d476ca0de715af51bc40936">AKPTPlayerState</a> : public APlayerState, public IAbilitySystemInterface, public <a class="code hl_class" href="class_i_component_owner_interface.html">IComponentOwnerInterface</a></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_function" href="class_a_k_p_t_player_state.html#a7e3cdd9a6d476ca0de715af51bc40936">AKPTPlayerState</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_player_state.html#ac656f8848d8a326e03ae9012d2ff5ec8">NotifyComponentReady_Implementation</a>(UActorComponent* Component) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">virtual</span> UAbilitySystemComponent* <a class="code hl_function" href="class_a_k_p_t_player_state.html#a3f0fd46533843d108f4569bd68d9b233">GetAbilitySystemComponent</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#ada4f68af7bd5cdad585719dd13b64e86">   52</a></span>    <a class="code hl_class" href="class_u_k_p_t_player_attribute_set.html">UKPTPlayerAttributeSet</a>* <a class="code hl_function" href="class_a_k_p_t_player_state.html#ada4f68af7bd5cdad585719dd13b64e86">GetAttributeSet</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_k_p_t_player_state.html#ab9b1845e5f526a53a1fb2d9963ac53b0">AttributeSet</a>; }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    UFUNCTION(BlueprintPure, Category=<span class="stringliteral">&quot;PlayerState&quot;</span>)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#a57012cefe259a3b7e78bffd3e86197cd">   55</a></span>    FGameplayTag <a class="code hl_function" href="class_a_k_p_t_player_state.html#a57012cefe259a3b7e78bffd3e86197cd">GetPersonalTag</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_k_p_t_player_state.html#a403e604d3651619319e4d5e497329de4">PersonalStateTag</a>; }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// --- 레벨업 카드 선택 관련 ---</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="comment">// 플레이어가 카드 선택을 완료했는지 여부. 모든 클라이언트에 복제됩니다.</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    UPROPERTY(Replicated, BlueprintReadOnly, Category = <span class="stringliteral">&quot;RewardChoice&quot;</span>)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#a0cd025f8f991b6d4ac718bac0930fffe">   60</a></span>    bool <a class="code hl_variable" href="class_a_k_p_t_player_state.html#a0cd025f8f991b6d4ac718bac0930fffe">bHasFinishedCardSelection</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="comment">// UI에서 바인딩할 델리게이트</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    UPROPERTY(BlueprintAssignable, Category = <span class="stringliteral">&quot;GAS|Attributes&quot;</span>)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#a97a6635178532512a0814809ae994d50">   64</a></span>    FOnHealthUpdatedSignature <a class="code hl_variable" href="class_a_k_p_t_player_state.html#a97a6635178532512a0814809ae994d50">OnHealthUpdated</a>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">// --- Delegates ---</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    UPROPERTY(BlueprintAssignable, Category=<span class="stringliteral">&quot;Events&quot;</span>)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#ad5f0fa4ac50fe5241326bc50d9282a34">   68</a></span>    FOnInventoryManagerReady <a class="code hl_variable" href="class_a_k_p_t_player_state.html#ad5f0fa4ac50fe5241326bc50d9282a34">OnInventoryManagerReady</a>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    UPROPERTY(BlueprintAssignable, Category=<span class="stringliteral">&quot;Events&quot;</span>)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#a81ec60b2383ace680b5f8eba654861d9">   71</a></span>    FOnWalletComponentReady <a class="code hl_variable" href="class_a_k_p_t_player_state.html#a81ec60b2383ace680b5f8eba654861d9">OnWalletComponentReady</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    UPROPERTY(BlueprintAssignable, Category=<span class="stringliteral">&quot;Events&quot;</span>)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#aa66e54ec77a098a8cb820639dc8a1742">   74</a></span>    FOnShopStateComponentReady <a class="code hl_variable" href="class_a_k_p_t_player_state.html#aa66e54ec77a098a8cb820639dc8a1742">OnShopStateComponentReady</a>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    UPROPERTY(BlueprintAssignable, Category=<span class="stringliteral">&quot;Events&quot;</span>)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#af2c7bf26fd61f2ae9f3bf49ab973b61f">   77</a></span>    FOnRewardStateComponentReady <a class="code hl_variable" href="class_a_k_p_t_player_state.html#af2c7bf26fd61f2ae9f3bf49ab973b61f">OnRewardStateComponentReady</a>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    UPROPERTY(BlueprintAssignable, Category=<span class="stringliteral">&quot;Events&quot;</span>)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#ab90667bab4e4c539763a7cf14ae6bf64">   80</a></span>    FOnLobbyStateComponentReady <a class="code hl_variable" href="class_a_k_p_t_player_state.html#ab90667bab4e4c539763a7cf14ae6bf64">OnLobbyStateComponentReady</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">// 외부 시스템(UIManager 등)이 UI 초기화를 위해 현재 스탯 값의 브로드캐스트를 요청하는 함수.</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;GAS|Attributes&quot;</span>)</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_player_state.html#aa03218968d976e6cd9cb07e6423b52e0">BroadcastInitialHealth</a>() const;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#a19e57d5f1b1836fac9e537aa41eab852">   86</a></span>    <a class="code hl_class" href="class_u_skill_attribute_set.html">USkillAttributeSet</a>* <a class="code hl_function" href="class_a_k_p_t_player_state.html#a19e57d5f1b1836fac9e537aa41eab852">GetSkillAttributeSet</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_k_p_t_player_state.html#a85fcd3c29e5a87d369cab13d8004d565">SkillAttributeSet</a>; }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="comment">// UI나 다른 클래스에서 PlayerInventoryComponent에 쉽게 접근할 수 있도록 Getter 함수를 제공합니다.</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    UFUNCTION(BlueprintPure, Category = <span class="stringliteral">&quot;PlayerState|Components&quot;</span>)</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#ad16de49a5aa9fc63b311aafb84b70e3f">   90</a></span>    <a class="code hl_class" href="class_u_inventory_manager.html">UInventoryManager</a>* <a class="code hl_function" href="class_a_k_p_t_player_state.html#ad16de49a5aa9fc63b311aafb84b70e3f">GetInventoryManager</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_k_p_t_player_state.html#a8aa419fa7b96343497016995ffdb169b">InventoryManager</a>; }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    UFUNCTION(BlueprintPure, Category = <span class="stringliteral">&quot;PlayerState|Components&quot;</span>)</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#a27d8ea4d3a564c296af3ca1ac0298224">   93</a></span>    <a class="code hl_class" href="class_u_player_wallet_component.html">UPlayerWalletComponent</a>* <a class="code hl_function" href="class_a_k_p_t_player_state.html#a27d8ea4d3a564c296af3ca1ac0298224">GetWalletComponent</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_k_p_t_player_state.html#ac6790af14d1505769e8f09bce6b05292">WalletComponent</a>; }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    UFUNCTION(BlueprintPure, Category = <span class="stringliteral">&quot;PlayerState|Components&quot;</span>)</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#a7789be3e05ccea22c983d507f9931e8c">   96</a></span>    <a class="code hl_class" href="class_u_player_shop_state_component.html">UPlayerShopStateComponent</a>* <a class="code hl_function" href="class_a_k_p_t_player_state.html#a7789be3e05ccea22c983d507f9931e8c">GetShopStateComponent</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_k_p_t_player_state.html#aff19f717e84846e3094f5df20f8d3866">ShopStateComponent</a>; }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    UFUNCTION(BlueprintPure, Category = <span class="stringliteral">&quot;PlayerState|Components&quot;</span>)</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#a6989c3ebb86791d3a7265d8f5dc90b93">   99</a></span>    <a class="code hl_class" href="class_u_player_reward_state_component.html">UPlayerRewardStateComponent</a>* <a class="code hl_function" href="class_a_k_p_t_player_state.html#a6989c3ebb86791d3a7265d8f5dc90b93">GetRewardStateComponent</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_k_p_t_player_state.html#a4e6134f7b3c8ec83e7c82741fd20dd29">RewardStateComponent</a>; }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    UFUNCTION(BlueprintPure, Category = <span class="stringliteral">&quot;PlayerState|Components&quot;</span>)</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#a8897c48d34fa49288cc9c5328fc86d95">  102</a></span>    <a class="code hl_class" href="class_u_k_p_t_lobby_state_component.html">UKPTLobbyStateComponent</a>* <a class="code hl_function" href="class_a_k_p_t_player_state.html#a8897c48d34fa49288cc9c5328fc86d95">GetLobbyStateComponent</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="class_a_k_p_t_player_state.html#a5c7044402eec61ab9f6e6d2a9c033474">LobbyStateComponent</a>; }</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_player_reward_state_component.html#a9a02648425e3688e8921ef2254481ea3">BeginPlay</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_player_reward_state_component.html#aca3ad6eb25b5ea9c2499fb2737433944">GetLifetimeReplicatedProps</a>(TArray&lt;FLifetimeProperty&gt;&amp; OutLifetimeProps) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="comment">// AbilitySystemComponent와 AttributeSet은 가장 먼저 생성되는 것이 좋음</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Abilities&quot;</span>, meta = (AllowPrivateAccess = <span class="stringliteral">&quot;true&quot;</span>))</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#a9c1d71490d09d65029f86cfc2fad5bcb">  110</a></span>    TObjectPtr&lt;<a class="code hl_class" href="class_u_k_p_t_ability_system_component.html">UKPTAbilitySystemComponent</a>&gt; <a class="code hl_variable" href="class_a_k_p_t_player_state.html#a9c1d71490d09d65029f86cfc2fad5bcb">AbilitySystemComponent</a>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Abilities&quot;</span>, meta = (AllowPrivateAccess = <span class="stringliteral">&quot;true&quot;</span>))</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#ab9b1845e5f526a53a1fb2d9963ac53b0">  113</a></span>    TObjectPtr&lt;<a class="code hl_class" href="class_u_k_p_t_player_attribute_set.html">UKPTPlayerAttributeSet</a>&gt; <a class="code hl_variable" href="class_a_k_p_t_player_state.html#ab9b1845e5f526a53a1fb2d9963ac53b0">AttributeSet</a>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    virtual <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_player_state.html#abf1782e6cf894b5e7aeba843915644fe">OnHealthAttributeUpdated</a>(const FOnAttributeChangeData&amp; Data);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    virtual <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_player_state.html#abd0d9f02a68399e61e6d853deb4f52d6">OnMaxHealthAttributeUpdated</a>(const FOnAttributeChangeData&amp; Data);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Abilities&quot;</span>, meta = (AllowPrivateAccess = <span class="stringliteral">&quot;true&quot;</span>))</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#a85fcd3c29e5a87d369cab13d8004d565">  119</a></span>    TObjectPtr&lt;<a class="code hl_class" href="class_u_skill_attribute_set.html">USkillAttributeSet</a>&gt; <a class="code hl_variable" href="class_a_k_p_t_player_state.html#a85fcd3c29e5a87d369cab13d8004d565">SkillAttributeSet</a>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="comment">// 상점 관련 기능을 담당하는 컴포넌트</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Replicated, Category = <span class="stringliteral">&quot;Components&quot;</span>, meta = (AllowPrivateAccess = <span class="stringliteral">&quot;true&quot;</span>))</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#a8aa419fa7b96343497016995ffdb169b">  123</a></span>    TObjectPtr&lt;<a class="code hl_class" href="class_u_inventory_manager.html">UInventoryManager</a>&gt; <a class="code hl_variable" href="class_a_k_p_t_player_state.html#a8aa419fa7b96343497016995ffdb169b">InventoryManager</a>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Replicated, Category = <span class="stringliteral">&quot;Components&quot;</span>)</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#ac6790af14d1505769e8f09bce6b05292">  126</a></span>    TObjectPtr&lt;<a class="code hl_class" href="class_u_player_wallet_component.html">UPlayerWalletComponent</a>&gt; <a class="code hl_variable" href="class_a_k_p_t_player_state.html#ac6790af14d1505769e8f09bce6b05292">WalletComponent</a>;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Replicated, Category = <span class="stringliteral">&quot;Components&quot;</span>)</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#aff19f717e84846e3094f5df20f8d3866">  129</a></span>    TObjectPtr&lt;<a class="code hl_class" href="class_u_player_shop_state_component.html">UPlayerShopStateComponent</a>&gt; <a class="code hl_variable" href="class_a_k_p_t_player_state.html#aff19f717e84846e3094f5df20f8d3866">ShopStateComponent</a>;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Replicated, Category = <span class="stringliteral">&quot;Components&quot;</span>)</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#a4e6134f7b3c8ec83e7c82741fd20dd29">  132</a></span>    TObjectPtr&lt;<a class="code hl_class" href="class_u_player_reward_state_component.html">UPlayerRewardStateComponent</a>&gt; <a class="code hl_variable" href="class_a_k_p_t_player_state.html#a4e6134f7b3c8ec83e7c82741fd20dd29">RewardStateComponent</a>;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Replicated, Category = <span class="stringliteral">&quot;Components&quot;</span>)</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#a5c7044402eec61ab9f6e6d2a9c033474">  135</a></span>    TObjectPtr&lt;<a class="code hl_class" href="class_u_k_p_t_lobby_state_component.html">UKPTLobbyStateComponent</a>&gt; <a class="code hl_variable" href="class_a_k_p_t_player_state.html#a5c7044402eec61ab9f6e6d2a9c033474">LobbyStateComponent</a>;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    UFUNCTION()</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_player_state.html#a07ef29186790cc31bb20a4cfe1569147">OnDeadTagChanged</a>(const FGameplayTag Tag, int32 NewCount);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    UPROPERTY(BlueprintAssignable, Category=<span class="stringliteral">&quot;Events&quot;</span>)</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#ad6da4860cc611c39cd727e42171108f0">  141</a></span>    FOnPlayerDiedChanged <a class="code hl_variable" href="class_a_k_p_t_player_state.html#ad6da4860cc611c39cd727e42171108f0">OnPlayerDiedChanged</a>;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>public:</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="comment">// UPROPERTY(BlueprintAssignable, Category=&quot;PlayerState|UI&quot;)</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="comment">// FOnPendingChoicesChanged OnPendingUpgradeChoicesChanged;</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    UPROPERTY(BlueprintAssignable, Category=<span class="stringliteral">&quot;PlayerState|UI&quot;</span>)</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#a0c09db565ad2f49962ff3cebcb57404d">  148</a></span>    FOnPersonalStateTagChangedSignature <a class="code hl_variable" href="class_a_k_p_t_player_state.html#a0c09db565ad2f49962ff3cebcb57404d">OnPersonalStateTagChanged</a>;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    UPROPERTY(BlueprintReadWrite, Category=<span class="stringliteral">&quot;PlayerState|UI&quot;</span>)</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#ac993829d8bc78643733f8e0e2f1ec9fd">  151</a></span>    FOnPersonalStateTagChangedSignature <a class="code hl_variable" href="class_a_k_p_t_player_state.html#ac993829d8bc78643733f8e0e2f1ec9fd">OnPersonalStateTagChangedForUI</a>;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="comment">// [변경] 이름을 더 명확하게 변경: PendingLevelUps -&gt; PendingUpgradeChoices</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="comment">// UPROPERTY(ReplicatedUsing = OnRep_PendingUpgradeChoices, BlueprintReadOnly, Category=&quot;PlayerState&quot;)</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="comment">// int32 PendingUpgradeChoices;</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    UPROPERTY(ReplicatedUsing = <a class="code hl_function" href="class_a_k_p_t_player_state.html#aa41c46851e05f762ccd8c2fc98aa505a">OnRep_PersonalStateTag</a>, BlueprintReadOnly, Category=<span class="stringliteral">&quot;PlayerState&quot;</span>)</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="class_a_k_p_t_player_state.html#a403e604d3651619319e4d5e497329de4">  160</a></span>    FGameplayTag <a class="code hl_variable" href="class_a_k_p_t_player_state.html#a403e604d3651619319e4d5e497329de4">PersonalStateTag</a>;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="comment">// --- 서버 전용 함수 ---</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="comment">// void AddPendingUpgradeChoices(int32 Count);</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="comment">// /** 업그레이드 선택 기회를 하나 소모합니다. */</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="comment">// void ConsumeUpgradeChoice();</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_player_state.html#ae76783471e033ac0ece5ebe988856b1b">SetPersonalStateTag</a>(const FGameplayTag&amp; NewStateTag);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    UFUNCTION(BlueprintCallable, Category=<span class="stringliteral">&quot;PlayerState&quot;</span>)</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_player_state.html#a3365ca20e3a9c6a56fd42223c7b4b37d">BroadCastStateTag</a>();</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="comment">// UFUNCTION(BlueprintPure, Category=&quot;PlayerState&quot;)</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="comment">// int32 GetPendingUpgradeChoices() const { return PendingUpgradeChoices; }</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_player_state.html#a101f3e49cf5abbbf303907f02f5f0c9f">ResetForNewGame</a>();</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>protected:</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="comment">// UFUNCTION()</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="comment">// void OnRep_PendingUpgradeChoices();</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="comment">// [추가] PersonalStateTag의 RepNotify 함수</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    UFUNCTION()</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_k_p_t_player_state.html#aa41c46851e05f762ccd8c2fc98aa505a">OnRep_PersonalStateTag</a>(); <span class="comment">// 이전 태그를 파라미터로 받으면 디버깅이나 로직 분기에 유용할 수 있습니다.</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="comment">// virtual void CopyProperties(APlayerState* PlayerState) override;</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>};</div>
+</div>
+<div class="ttc" id="a_component_owner_interface_8h_html"><div class="ttname"><a href="_component_owner_interface_8h.html">ComponentOwnerInterface.h</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_a07ef29186790cc31bb20a4cfe1569147"><div class="ttname"><a href="class_a_k_p_t_player_state.html#a07ef29186790cc31bb20a4cfe1569147">AKPTPlayerState::OnDeadTagChanged</a></div><div class="ttdeci">void OnDeadTagChanged(const FGameplayTag Tag, int32 NewCount)</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_player_state_8cpp_source.html#l00172">KPTPlayerState.cpp:172</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_a0c09db565ad2f49962ff3cebcb57404d"><div class="ttname"><a href="class_a_k_p_t_player_state.html#a0c09db565ad2f49962ff3cebcb57404d">AKPTPlayerState::OnPersonalStateTagChanged</a></div><div class="ttdeci">FOnPersonalStateTagChangedSignature OnPersonalStateTagChanged</div><div class="ttdoc">UI 바인딩을 위한 델리게이트</div><div class="ttdef"><b>Definition</b> <a href="#l00148">KPTPlayerState.h:148</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_a0cd025f8f991b6d4ac718bac0930fffe"><div class="ttname"><a href="class_a_k_p_t_player_state.html#a0cd025f8f991b6d4ac718bac0930fffe">AKPTPlayerState::bHasFinishedCardSelection</a></div><div class="ttdeci">bool bHasFinishedCardSelection</div><div class="ttdef"><b>Definition</b> <a href="#l00060">KPTPlayerState.h:60</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_a101f3e49cf5abbbf303907f02f5f0c9f"><div class="ttname"><a href="class_a_k_p_t_player_state.html#a101f3e49cf5abbbf303907f02f5f0c9f">AKPTPlayerState::ResetForNewGame</a></div><div class="ttdeci">void ResetForNewGame()</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_player_state_8cpp_source.html#l00203">KPTPlayerState.cpp:203</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_a19e57d5f1b1836fac9e537aa41eab852"><div class="ttname"><a href="class_a_k_p_t_player_state.html#a19e57d5f1b1836fac9e537aa41eab852">AKPTPlayerState::GetSkillAttributeSet</a></div><div class="ttdeci">USkillAttributeSet * GetSkillAttributeSet() const</div><div class="ttdef"><b>Definition</b> <a href="#l00086">KPTPlayerState.h:86</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_a27d8ea4d3a564c296af3ca1ac0298224"><div class="ttname"><a href="class_a_k_p_t_player_state.html#a27d8ea4d3a564c296af3ca1ac0298224">AKPTPlayerState::GetWalletComponent</a></div><div class="ttdeci">UPlayerWalletComponent * GetWalletComponent() const</div><div class="ttdef"><b>Definition</b> <a href="#l00093">KPTPlayerState.h:93</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_a3365ca20e3a9c6a56fd42223c7b4b37d"><div class="ttname"><a href="class_a_k_p_t_player_state.html#a3365ca20e3a9c6a56fd42223c7b4b37d">AKPTPlayerState::BroadCastStateTag</a></div><div class="ttdeci">void BroadCastStateTag()</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_player_state_8cpp_source.html#l00197">KPTPlayerState.cpp:197</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_a3f0fd46533843d108f4569bd68d9b233"><div class="ttname"><a href="class_a_k_p_t_player_state.html#a3f0fd46533843d108f4569bd68d9b233">AKPTPlayerState::GetAbilitySystemComponent</a></div><div class="ttdeci">virtual UAbilitySystemComponent * GetAbilitySystemComponent() const override</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_player_state_8cpp_source.html#l00113">KPTPlayerState.cpp:113</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_a403e604d3651619319e4d5e497329de4"><div class="ttname"><a href="class_a_k_p_t_player_state.html#a403e604d3651619319e4d5e497329de4">AKPTPlayerState::PersonalStateTag</a></div><div class="ttdeci">FGameplayTag PersonalStateTag</div><div class="ttdoc">처리해야 할 누적된 업그레이드 카드 선택 기회의 수입니다.</div><div class="ttdef"><b>Definition</b> <a href="#l00160">KPTPlayerState.h:160</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_a4e6134f7b3c8ec83e7c82741fd20dd29"><div class="ttname"><a href="class_a_k_p_t_player_state.html#a4e6134f7b3c8ec83e7c82741fd20dd29">AKPTPlayerState::RewardStateComponent</a></div><div class="ttdeci">TObjectPtr&lt; UPlayerRewardStateComponent &gt; RewardStateComponent</div><div class="ttdef"><b>Definition</b> <a href="#l00132">KPTPlayerState.h:132</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_a57012cefe259a3b7e78bffd3e86197cd"><div class="ttname"><a href="class_a_k_p_t_player_state.html#a57012cefe259a3b7e78bffd3e86197cd">AKPTPlayerState::GetPersonalTag</a></div><div class="ttdeci">FGameplayTag GetPersonalTag() const</div><div class="ttdef"><b>Definition</b> <a href="#l00055">KPTPlayerState.h:55</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_a5c7044402eec61ab9f6e6d2a9c033474"><div class="ttname"><a href="class_a_k_p_t_player_state.html#a5c7044402eec61ab9f6e6d2a9c033474">AKPTPlayerState::LobbyStateComponent</a></div><div class="ttdeci">TObjectPtr&lt; UKPTLobbyStateComponent &gt; LobbyStateComponent</div><div class="ttdef"><b>Definition</b> <a href="#l00135">KPTPlayerState.h:135</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_a6989c3ebb86791d3a7265d8f5dc90b93"><div class="ttname"><a href="class_a_k_p_t_player_state.html#a6989c3ebb86791d3a7265d8f5dc90b93">AKPTPlayerState::GetRewardStateComponent</a></div><div class="ttdeci">UPlayerRewardStateComponent * GetRewardStateComponent() const</div><div class="ttdef"><b>Definition</b> <a href="#l00099">KPTPlayerState.h:99</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_a7789be3e05ccea22c983d507f9931e8c"><div class="ttname"><a href="class_a_k_p_t_player_state.html#a7789be3e05ccea22c983d507f9931e8c">AKPTPlayerState::GetShopStateComponent</a></div><div class="ttdeci">UPlayerShopStateComponent * GetShopStateComponent() const</div><div class="ttdef"><b>Definition</b> <a href="#l00096">KPTPlayerState.h:96</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_a7e3cdd9a6d476ca0de715af51bc40936"><div class="ttname"><a href="class_a_k_p_t_player_state.html#a7e3cdd9a6d476ca0de715af51bc40936">AKPTPlayerState::AKPTPlayerState</a></div><div class="ttdeci">AKPTPlayerState()</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_player_state_8cpp_source.html#l00017">KPTPlayerState.cpp:17</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_a81ec60b2383ace680b5f8eba654861d9"><div class="ttname"><a href="class_a_k_p_t_player_state.html#a81ec60b2383ace680b5f8eba654861d9">AKPTPlayerState::OnWalletComponentReady</a></div><div class="ttdeci">FOnWalletComponentReady OnWalletComponentReady</div><div class="ttdef"><b>Definition</b> <a href="#l00071">KPTPlayerState.h:71</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_a85fcd3c29e5a87d369cab13d8004d565"><div class="ttname"><a href="class_a_k_p_t_player_state.html#a85fcd3c29e5a87d369cab13d8004d565">AKPTPlayerState::SkillAttributeSet</a></div><div class="ttdeci">TObjectPtr&lt; USkillAttributeSet &gt; SkillAttributeSet</div><div class="ttdef"><b>Definition</b> <a href="#l00119">KPTPlayerState.h:119</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_a8897c48d34fa49288cc9c5328fc86d95"><div class="ttname"><a href="class_a_k_p_t_player_state.html#a8897c48d34fa49288cc9c5328fc86d95">AKPTPlayerState::GetLobbyStateComponent</a></div><div class="ttdeci">UKPTLobbyStateComponent * GetLobbyStateComponent() const</div><div class="ttdef"><b>Definition</b> <a href="#l00102">KPTPlayerState.h:102</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_a8aa419fa7b96343497016995ffdb169b"><div class="ttname"><a href="class_a_k_p_t_player_state.html#a8aa419fa7b96343497016995ffdb169b">AKPTPlayerState::InventoryManager</a></div><div class="ttdeci">TObjectPtr&lt; UInventoryManager &gt; InventoryManager</div><div class="ttdef"><b>Definition</b> <a href="#l00123">KPTPlayerState.h:123</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_a97a6635178532512a0814809ae994d50"><div class="ttname"><a href="class_a_k_p_t_player_state.html#a97a6635178532512a0814809ae994d50">AKPTPlayerState::OnHealthUpdated</a></div><div class="ttdeci">FOnHealthUpdatedSignature OnHealthUpdated</div><div class="ttdef"><b>Definition</b> <a href="#l00064">KPTPlayerState.h:64</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_a9c1d71490d09d65029f86cfc2fad5bcb"><div class="ttname"><a href="class_a_k_p_t_player_state.html#a9c1d71490d09d65029f86cfc2fad5bcb">AKPTPlayerState::AbilitySystemComponent</a></div><div class="ttdeci">TObjectPtr&lt; UKPTAbilitySystemComponent &gt; AbilitySystemComponent</div><div class="ttdef"><b>Definition</b> <a href="#l00110">KPTPlayerState.h:110</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_aa03218968d976e6cd9cb07e6423b52e0"><div class="ttname"><a href="class_a_k_p_t_player_state.html#aa03218968d976e6cd9cb07e6423b52e0">AKPTPlayerState::BroadcastInitialHealth</a></div><div class="ttdeci">void BroadcastInitialHealth() const</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_player_state_8cpp_source.html#l00062">KPTPlayerState.cpp:62</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_aa41c46851e05f762ccd8c2fc98aa505a"><div class="ttname"><a href="class_a_k_p_t_player_state.html#aa41c46851e05f762ccd8c2fc98aa505a">AKPTPlayerState::OnRep_PersonalStateTag</a></div><div class="ttdeci">void OnRep_PersonalStateTag()</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_player_state_8cpp_source.html#l00244">KPTPlayerState.cpp:244</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_aa66e54ec77a098a8cb820639dc8a1742"><div class="ttname"><a href="class_a_k_p_t_player_state.html#aa66e54ec77a098a8cb820639dc8a1742">AKPTPlayerState::OnShopStateComponentReady</a></div><div class="ttdeci">FOnShopStateComponentReady OnShopStateComponentReady</div><div class="ttdef"><b>Definition</b> <a href="#l00074">KPTPlayerState.h:74</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_ab90667bab4e4c539763a7cf14ae6bf64"><div class="ttname"><a href="class_a_k_p_t_player_state.html#ab90667bab4e4c539763a7cf14ae6bf64">AKPTPlayerState::OnLobbyStateComponentReady</a></div><div class="ttdeci">FOnLobbyStateComponentReady OnLobbyStateComponentReady</div><div class="ttdef"><b>Definition</b> <a href="#l00080">KPTPlayerState.h:80</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_ab9b1845e5f526a53a1fb2d9963ac53b0"><div class="ttname"><a href="class_a_k_p_t_player_state.html#ab9b1845e5f526a53a1fb2d9963ac53b0">AKPTPlayerState::AttributeSet</a></div><div class="ttdeci">TObjectPtr&lt; UKPTPlayerAttributeSet &gt; AttributeSet</div><div class="ttdef"><b>Definition</b> <a href="#l00113">KPTPlayerState.h:113</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_abd0d9f02a68399e61e6d853deb4f52d6"><div class="ttname"><a href="class_a_k_p_t_player_state.html#abd0d9f02a68399e61e6d853deb4f52d6">AKPTPlayerState::OnMaxHealthAttributeUpdated</a></div><div class="ttdeci">virtual void OnMaxHealthAttributeUpdated(const FOnAttributeChangeData &amp;Data)</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_player_state_8cpp_source.html#l00146">KPTPlayerState.cpp:146</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_abf1782e6cf894b5e7aeba843915644fe"><div class="ttname"><a href="class_a_k_p_t_player_state.html#abf1782e6cf894b5e7aeba843915644fe">AKPTPlayerState::OnHealthAttributeUpdated</a></div><div class="ttdeci">virtual void OnHealthAttributeUpdated(const FOnAttributeChangeData &amp;Data)</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_player_state_8cpp_source.html#l00139">KPTPlayerState.cpp:139</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_ac656f8848d8a326e03ae9012d2ff5ec8"><div class="ttname"><a href="class_a_k_p_t_player_state.html#ac656f8848d8a326e03ae9012d2ff5ec8">AKPTPlayerState::NotifyComponentReady_Implementation</a></div><div class="ttdeci">virtual void NotifyComponentReady_Implementation(UActorComponent *Component) override</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_player_state_8cpp_source.html#l00038">KPTPlayerState.cpp:38</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_ac6790af14d1505769e8f09bce6b05292"><div class="ttname"><a href="class_a_k_p_t_player_state.html#ac6790af14d1505769e8f09bce6b05292">AKPTPlayerState::WalletComponent</a></div><div class="ttdeci">TObjectPtr&lt; UPlayerWalletComponent &gt; WalletComponent</div><div class="ttdef"><b>Definition</b> <a href="#l00126">KPTPlayerState.h:126</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_ac993829d8bc78643733f8e0e2f1ec9fd"><div class="ttname"><a href="class_a_k_p_t_player_state.html#ac993829d8bc78643733f8e0e2f1ec9fd">AKPTPlayerState::OnPersonalStateTagChangedForUI</a></div><div class="ttdeci">FOnPersonalStateTagChangedSignature OnPersonalStateTagChangedForUI</div><div class="ttdef"><b>Definition</b> <a href="#l00151">KPTPlayerState.h:151</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_ad16de49a5aa9fc63b311aafb84b70e3f"><div class="ttname"><a href="class_a_k_p_t_player_state.html#ad16de49a5aa9fc63b311aafb84b70e3f">AKPTPlayerState::GetInventoryManager</a></div><div class="ttdeci">UInventoryManager * GetInventoryManager() const</div><div class="ttdef"><b>Definition</b> <a href="#l00090">KPTPlayerState.h:90</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_ad5f0fa4ac50fe5241326bc50d9282a34"><div class="ttname"><a href="class_a_k_p_t_player_state.html#ad5f0fa4ac50fe5241326bc50d9282a34">AKPTPlayerState::OnInventoryManagerReady</a></div><div class="ttdeci">FOnInventoryManagerReady OnInventoryManagerReady</div><div class="ttdef"><b>Definition</b> <a href="#l00068">KPTPlayerState.h:68</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_ad6da4860cc611c39cd727e42171108f0"><div class="ttname"><a href="class_a_k_p_t_player_state.html#ad6da4860cc611c39cd727e42171108f0">AKPTPlayerState::OnPlayerDiedChanged</a></div><div class="ttdeci">FOnPlayerDiedChanged OnPlayerDiedChanged</div><div class="ttdef"><b>Definition</b> <a href="#l00141">KPTPlayerState.h:141</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_ada4f68af7bd5cdad585719dd13b64e86"><div class="ttname"><a href="class_a_k_p_t_player_state.html#ada4f68af7bd5cdad585719dd13b64e86">AKPTPlayerState::GetAttributeSet</a></div><div class="ttdeci">UKPTPlayerAttributeSet * GetAttributeSet() const</div><div class="ttdef"><b>Definition</b> <a href="#l00052">KPTPlayerState.h:52</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_ae76783471e033ac0ece5ebe988856b1b"><div class="ttname"><a href="class_a_k_p_t_player_state.html#ae76783471e033ac0ece5ebe988856b1b">AKPTPlayerState::SetPersonalStateTag</a></div><div class="ttdeci">void SetPersonalStateTag(const FGameplayTag &amp;NewStateTag)</div><div class="ttdoc">업그레이드 선택 기회를 추가합니다.</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_player_state_8cpp_source.html#l00183">KPTPlayerState.cpp:183</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_af2c7bf26fd61f2ae9f3bf49ab973b61f"><div class="ttname"><a href="class_a_k_p_t_player_state.html#af2c7bf26fd61f2ae9f3bf49ab973b61f">AKPTPlayerState::OnRewardStateComponentReady</a></div><div class="ttdeci">FOnRewardStateComponentReady OnRewardStateComponentReady</div><div class="ttdef"><b>Definition</b> <a href="#l00077">KPTPlayerState.h:77</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html_aff19f717e84846e3094f5df20f8d3866"><div class="ttname"><a href="class_a_k_p_t_player_state.html#aff19f717e84846e3094f5df20f8d3866">AKPTPlayerState::ShopStateComponent</a></div><div class="ttdeci">TObjectPtr&lt; UPlayerShopStateComponent &gt; ShopStateComponent</div><div class="ttdef"><b>Definition</b> <a href="#l00129">KPTPlayerState.h:129</a></div></div>
+<div class="ttc" id="aclass_i_component_owner_interface_html"><div class="ttname"><a href="class_i_component_owner_interface.html">IComponentOwnerInterface</a></div><div class="ttdef"><b>Definition</b> <a href="_component_owner_interface_8h_source.html#l00019">ComponentOwnerInterface.h:20</a></div></div>
+<div class="ttc" id="aclass_u_inventory_manager_html"><div class="ttname"><a href="class_u_inventory_manager.html">UInventoryManager</a></div><div class="ttdef"><b>Definition</b> <a href="_inventory_manager_8h_source.html#l00018">InventoryManager.h:20</a></div></div>
+<div class="ttc" id="aclass_u_k_p_t_ability_system_component_html"><div class="ttname"><a href="class_u_k_p_t_ability_system_component.html">UKPTAbilitySystemComponent</a></div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_ability_system_component_8h_source.html#l00011">KPTAbilitySystemComponent.h:13</a></div></div>
+<div class="ttc" id="aclass_u_k_p_t_lobby_state_component_html"><div class="ttname"><a href="class_u_k_p_t_lobby_state_component.html">UKPTLobbyStateComponent</a></div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_lobby_state_component_8h_source.html#l00015">KPTLobbyStateComponent.h:17</a></div></div>
+<div class="ttc" id="aclass_u_k_p_t_player_attribute_set_html"><div class="ttname"><a href="class_u_k_p_t_player_attribute_set.html">UKPTPlayerAttributeSet</a></div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_player_attribute_set_8h_source.html#l00013">KPTPlayerAttributeSet.h:15</a></div></div>
+<div class="ttc" id="aclass_u_player_reward_state_component_html"><div class="ttname"><a href="class_u_player_reward_state_component.html">UPlayerRewardStateComponent</a></div><div class="ttdoc">플레이어에게 제시된 보상 선택지에 대한 데이터를 저장하고 복제하는 컴포넌트입니다.</div><div class="ttdef"><b>Definition</b> <a href="_player_reward_state_component_8h_source.html#l00023">PlayerRewardStateComponent.h:25</a></div></div>
+<div class="ttc" id="aclass_u_player_reward_state_component_html_a9a02648425e3688e8921ef2254481ea3"><div class="ttname"><a href="class_u_player_reward_state_component.html#a9a02648425e3688e8921ef2254481ea3">UPlayerRewardStateComponent::BeginPlay</a></div><div class="ttdeci">virtual void BeginPlay() override</div><div class="ttdef"><b>Definition</b> <a href="_player_reward_state_component_8cpp_source.html#l00072">PlayerRewardStateComponent.cpp:72</a></div></div>
+<div class="ttc" id="aclass_u_player_reward_state_component_html_aca3ad6eb25b5ea9c2499fb2737433944"><div class="ttname"><a href="class_u_player_reward_state_component.html#aca3ad6eb25b5ea9c2499fb2737433944">UPlayerRewardStateComponent::GetLifetimeReplicatedProps</a></div><div class="ttdeci">virtual void GetLifetimeReplicatedProps(TArray&lt; FLifetimeProperty &gt; &amp;OutLifetimeProps) const override</div><div class="ttdef"><b>Definition</b> <a href="_player_reward_state_component_8cpp_source.html#l00015">PlayerRewardStateComponent.cpp:15</a></div></div>
+<div class="ttc" id="aclass_u_player_shop_state_component_html"><div class="ttname"><a href="class_u_player_shop_state_component.html">UPlayerShopStateComponent</a></div><div class="ttdef"><b>Definition</b> <a href="_player_shop_state_component_8h_source.html#l00013">PlayerShopStateComponent.h:15</a></div></div>
+<div class="ttc" id="aclass_u_player_wallet_component_html"><div class="ttname"><a href="class_u_player_wallet_component.html">UPlayerWalletComponent</a></div><div class="ttdef"><b>Definition</b> <a href="_player_wallet_component_8h_source.html#l00012">PlayerWalletComponent.h:14</a></div></div>
+<div class="ttc" id="aclass_u_skill_attribute_set_html"><div class="ttname"><a href="class_u_skill_attribute_set.html">USkillAttributeSet</a></div><div class="ttdef"><b>Definition</b> <a href="_skill_attribute_set_8h_source.html#l00018">SkillAttributeSet.h:20</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_1eb36676b273c08f950c547eb5d7aef0.html">Character</a></li><li class="navelem"><a href="_k_p_t_player_state_8h.html">KPTPlayerState.h</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

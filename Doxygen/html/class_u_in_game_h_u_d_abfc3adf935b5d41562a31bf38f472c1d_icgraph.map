@@ -1,0 +1,5 @@
+<map id="UInGameHUD::OnPlayerStateSet" name="UInGameHUD::OnPlayerStateSet">
+<area shape="rect" id="Node000001" title=" " alt="" coords="264,5,484,32"/>
+<area shape="rect" id="Node000002" href="$class_u_in_game_h_u_d.html#ac0dc199f4499dcb804507ef05df5a3f7" title=" " alt="" coords="5,5,216,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="248,21,216,21,216,16,248,16"/>
+</map>

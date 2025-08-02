@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Item/ItemBase.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_item_base_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">ItemBase.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_item_base_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;ActiveGameplayEffectHandle.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;AttributeSet.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;GameplayAbilitySpecHandle.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;Abilities/GameplayAbility.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;GameFramework/Actor.h&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;ItemBase.generated.h&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">class </span><a class="code hl_class" href="class_u_item_ability.html">UItemAbility</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">class </span>UGameplayAbility;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">class </span>UGameplayEffect;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>UENUM(BlueprintType)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="_item_base_8h.html#a80a7e6defbe522a34fc115ec56cc8c3e">   19</a></span>enum class <a class="code hl_variable" href="_item_base_8h.html#a80a7e6defbe522a34fc115ec56cc8c3e">EKPTItemType</a> : uint8</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    StatOnly,       <span class="comment">// 단순 스탯 증가형</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="_item_base_8h.html#a98ea13b4cb010f2082a829c5a39e5587">   22</a></span>    <a class="code hl_variable" href="_item_base_8h.html#a98ea13b4cb010f2082a829c5a39e5587">PassiveAbility</a>, <span class="comment">// 썬파이어 같은 기능/패시브형</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>};</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="struct_f_item_u_i_data.html">   25</a></span>USTRUCT(BlueprintType)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">struct </span><a class="code hl_struct" href="struct_f_item_u_i_data.html">FItemUIData</a></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="struct_f_item_u_i_data.html#a2c14a7f964637e155d0cb5ae2bd41013">   31</a></span>    FText <a class="code hl_variable" href="struct_f_item_u_i_data.html#a2c14a7f964637e155d0cb5ae2bd41013">DisplayName</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly)</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="struct_f_item_u_i_data.html#af48cdc441996217df59de3e2c52e6b49">   34</a></span>    FText <a class="code hl_variable" href="struct_f_item_u_i_data.html#af48cdc441996217df59de3e2c52e6b49">Description</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly)</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_f_item_u_i_data.html#a406b6b91d22763a2fec3648db55260a1">   37</a></span>    TObjectPtr&lt;UTexture2D&gt; <a class="code hl_variable" href="struct_f_item_u_i_data.html#a406b6b91d22763a2fec3648db55260a1">Icon</a> = <span class="keywordtype">nullptr</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>};</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="};">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="struct_f_item_data_row.html">   40</a></span>USTRUCT(BlueprintType)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>struct <a class="code hl_struct" href="struct_f_item_data_row.html">FItemDataRow</a> : public FTableRowBase</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly)</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="struct_f_item_data_row.html#ac5e2047466c8b288d49a05be45a9a7d9">   46</a></span>    TSubclassOf&lt;UGameplayEffect&gt; <a class="code hl_variable" href="struct_f_item_data_row.html#ac5e2047466c8b288d49a05be45a9a7d9">ItemBuffEffect</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="struct_f_item_data_row.html#a26f00e00da9718f74fdfe1d6124a1e0a">   49</a></span>    FName <a class="code hl_variable" href="struct_f_item_data_row.html#a26f00e00da9718f74fdfe1d6124a1e0a">ItemId</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly)</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="struct_f_item_data_row.html#ad166ccd77038027ad56f572322f02f91">   52</a></span>    <a class="code hl_struct" href="struct_f_item_u_i_data.html">FItemUIData</a> <a class="code hl_variable" href="struct_f_item_data_row.html#ad166ccd77038027ad56f572322f02f91">UIData</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="struct_f_item_data_row.html#a3df597817eb68cb3b3ddd3991f9f9ac1">   55</a></span>    <a class="code hl_variable" href="_item_base_8h.html#a80a7e6defbe522a34fc115ec56cc8c3e">EKPTItemType</a> <a class="code hl_variable" href="struct_f_item_data_row.html#a3df597817eb68cb3b3ddd3991f9f9ac1">ItemType</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">// 영향을 줄 어트리뷰트</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(EditCondition=<span class="stringliteral">&quot;ItemType==EKPTItemType::StatOnly&quot;</span>))</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="struct_f_item_data_row.html#a6498e3bf01036446ad1a20a71132232f">   59</a></span>    FGameplayAttribute <a class="code hl_variable" href="struct_f_item_data_row.html#a6498e3bf01036446ad1a20a71132232f">AffectedAttribute</a>; </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(EditCondition=<span class="stringliteral">&quot;ItemType==EKPTItemType::StatOnly&quot;</span>))</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="struct_f_item_data_row.html#aa4efc8d4600930700ac3e3f3e3c48827">   62</a></span>    FGameplayTag <a class="code hl_variable" href="struct_f_item_data_row.html#aa4efc8d4600930700ac3e3f3e3c48827">AttributeTag</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">// 해당 어트리뷰트의 배율</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(EditCondition=<span class="stringliteral">&quot;ItemType==EKPTItemType::StatOnly&quot;</span>))</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="struct_f_item_data_row.html#a87652f7ebd859ecdc97428f3fff73bcf">   66</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_f_item_data_row.html#a87652f7ebd859ecdc97428f3fff73bcf">Multiplier</a>; </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">// 아이템 자체가 가져야 할 기능</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly, meta=(EditCondition=<span class="stringliteral">&quot;ItemType==EKPTItemType::PassiveAbility&quot;</span>))</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="struct_f_item_data_row.html#abbb8b49f8aacf2ea033fdc4723651eff">   70</a></span>    TSubclassOf&lt;<a class="code hl_class" href="class_u_item_ability.html">UItemAbility</a>&gt; <a class="code hl_variable" href="struct_f_item_data_row.html#abbb8b49f8aacf2ea033fdc4723651eff">PassiveAbilityClass</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">// 희귀도 (상점 등장 확률의 가중치로 사용됩니다. 높을수록 잘 나옵니다.)</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=<span class="stringliteral">&quot;Shop Logic&quot;</span>)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="struct_f_item_data_row.html#a923ba3c616173df24d86ce48b295b712">   74</a></span>    int32 <a class="code hl_variable" href="struct_f_item_data_row.html#a923ba3c616173df24d86ce48b295b712">Rarity</a> = 100;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="comment">// // 고유 아이템 여부 (true이면 한 번만 구매 가능합니다.)</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="comment">// UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=&quot;Shop Logic&quot;)</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">// bool bIsUnique = true;</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">//</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="comment">// // 최대 중첩 수 (bIsUnique가 false일 때만 의미가 있습니다.)</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="comment">// UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=&quot;Shop Logic&quot;, meta=(EditCondition=&quot;!bIsUnique&quot;))</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">// int32 MaxStackCount = 5;</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="comment">//</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="comment">// // 이 아이템이 상점에 등장하기 위한 최소 팀 레벨 조건입니다.</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="comment">// UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=&quot;Shop Logic&quot;)</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">// int32 RequiredTeamLevel = 1;</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly)</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="struct_f_item_data_row.html#ac0c5a0d4cbeb3c15fc124f770a992c32">   89</a></span>    int32 <a class="code hl_variable" href="struct_f_item_data_row.html#ac0c5a0d4cbeb3c15fc124f770a992c32">Price</a>;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>};</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="foldopen" id="foldopen00093" data-start="{" data-end="};">
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="struct_f_item_instance.html">   93</a></span>USTRUCT(BlueprintType)</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>struct <a class="code hl_struct" href="struct_f_item_instance.html">FItemInstance</a></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>{</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keyword">static</span> <a class="code hl_struct" href="struct_f_item_instance.html">FItemInstance</a> <a class="code hl_function" href="struct_f_item_instance.html#af9cc775ad1d0625199141e41f68df090">CreateItemByDef</a>(<a class="code hl_struct" href="struct_f_item_data_row.html">FItemDataRow</a>* InItemRow);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="struct_f_item_instance.html#aa889d22f274495c0b4aebbafaf991fda">  101</a></span>    <a class="code hl_struct" href="struct_f_item_data_row.html">FItemDataRow</a>* <a class="code hl_variable" href="struct_f_item_instance.html#aa889d22f274495c0b4aebbafaf991fda">ItemDataRow</a>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="comment">// 아이템이 ASC에 부여한 EffectSpecHandle을 저장</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="struct_f_item_instance.html#a2764e58f063d2d69ad632acedecf7bf8">  104</a></span>    FActiveGameplayEffectHandle <a class="code hl_variable" href="struct_f_item_instance.html#a2764e58f063d2d69ad632acedecf7bf8">GrantedEffectHandle</a>;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="comment">// 아이템이 ASC에 부여한 AbilitySpecHandle을 저장</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="struct_f_item_instance.html#ade75184e7059e7d53d29fef0099808d5">  107</a></span>    FGameplayAbilitySpecHandle <a class="code hl_variable" href="struct_f_item_instance.html#ade75184e7059e7d53d29fef0099808d5">GrantedAbilityHandle</a>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>};</div>
+</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment"> * 자기 자신한테 부여하는경우 생각하자.</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment"> */</span></div>
+<div class="foldopen" id="foldopen00113" data-start="{" data-end="};">
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="class_u_item_ability.html">  113</a></span>UCLASS()</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>class KPT_API <a class="code hl_function" href="class_u_item_ability.html#a24164069a9ae6383451a78c8556582fe">UItemAbility</a> : public UGameplayAbility</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>{</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <a class="code hl_function" href="class_u_item_ability.html#a24164069a9ae6383451a78c8556582fe">UItemAbility</a>();</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_item_ability.html#a127f0e42d28c1c1e8480d08e0fc2c7a2">ActivateAbility</a>(<span class="keyword">const</span> FGameplayAbilitySpecHandle Handle, <span class="keyword">const</span> FGameplayAbilityActorInfo* ActorInfo,</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="keyword">const</span> FGameplayAbilityActivationInfo ActivationInfo, <span class="keyword">const</span> FGameplayEventData* TriggerEventData) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_item_ability.html#abceccfba359a3c2ae52deb4ff8796e4d">EndAbility</a>(<span class="keyword">const</span> FGameplayAbilitySpecHandle Handle, <span class="keyword">const</span> FGameplayAbilityActorInfo* ActorInfo,</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <span class="keyword">const</span> FGameplayAbilityActivationInfo ActivationInfo, <span class="keywordtype">bool</span> bReplicateEndAbility, <span class="keywordtype">bool</span> bWasCancelled) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="comment">//Temp</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    UPROPERTY(EditAnywhere, BlueprintReadWrite)</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="class_u_item_ability.html#a8999df001c3a2cebe918fa612f270b51">  129</a></span>    int32 <a class="code hl_variable" href="class_u_item_ability.html#a8999df001c3a2cebe918fa612f270b51">AbilityCount</a> = 0;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="comment">//Temp</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    UPROPERTY(EditAnywhere, BlueprintReadWrite)</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="class_u_item_ability.html#a6585b613fe815014149ba61021d407df">  133</a></span>    TSubclassOf&lt;UGameplayEffect&gt; <a class="code hl_variable" href="class_u_item_ability.html#a6585b613fe815014149ba61021d407df">HpUpgrade</a>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="comment">//어빌리티가 영향을 준 EffectHandles. 나중에 필요시 해제하기위함</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="class_u_item_ability.html#aced9be06bf288cc0cc5983bb584fe533">  136</a></span>    TArray&lt;FActiveGameplayEffectHandle&gt; <a class="code hl_variable" href="class_u_item_ability.html#aced9be06bf288cc0cc5983bb584fe533">AffectEffectHandles</a>;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>};</div>
+</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="foldopen" id="foldopen00139" data-start="{" data-end="};">
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="class_u_stack_item_ability.html">  139</a></span>UCLASS()</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>class <a class="code hl_class" href="class_u_stack_item_ability.html">UStackItemAbility</a> : public <a class="code hl_function" href="class_u_item_ability.html#a24164069a9ae6383451a78c8556582fe">UItemAbility</a></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>{</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_stack_item_ability.html#ab9839968ee5aa12f7b451907affa42c5">ActivateAbility</a>(<span class="keyword">const</span> FGameplayAbilitySpecHandle Handle, <span class="keyword">const</span> FGameplayAbilityActorInfo* ActorInfo,</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <span class="keyword">const</span> FGameplayAbilityActivationInfo ActivationInfo, <span class="keyword">const</span> FGameplayEventData* TriggerEventData) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_stack_item_ability.html#acdf9d1f555bbab61f6348764e1d2b08b">EndAbility</a>(<span class="keyword">const</span> FGameplayAbilitySpecHandle Handle, <span class="keyword">const</span> FGameplayAbilityActorInfo* ActorInfo,</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <span class="keyword">const</span> FGameplayAbilityActivationInfo ActivationInfo, <span class="keywordtype">bool</span> bReplicateEndAbility, <span class="keywordtype">bool</span> bWasCancelled) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="comment">//Temp</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    UPROPERTY(EditAnywhere, BlueprintReadWrite)</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="class_u_stack_item_ability.html#a10f3bcd9a5af1e125b17e8f78fbe4c8d">  152</a></span>    TSubclassOf&lt;UGameplayEffect&gt; <a class="code hl_variable" href="class_u_stack_item_ability.html#a10f3bcd9a5af1e125b17e8f78fbe4c8d">BuffEffect</a>;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>};</div>
+</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="comment"> * 공격 적중 시 화염 디버프 부여.</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="comment"> * n초에 한번 플레이어의 AttackPower을 상대에게 도트 데미지를 n초 동안 준다.</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="comment"> */</span></div>
+<div class="foldopen" id="foldopen00159" data-start="{" data-end="};">
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="class_u_flame_emblem_ability.html">  159</a></span>UCLASS()</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>class <a class="code hl_function" href="class_u_flame_emblem_ability.html#a76773e75f9fdb1f5d6b356f8e12930c7">UFlameEmblemAbility</a> : public <a class="code hl_function" href="class_u_item_ability.html#a24164069a9ae6383451a78c8556582fe">UItemAbility</a></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>{</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <a class="code hl_function" href="class_u_flame_emblem_ability.html#a76773e75f9fdb1f5d6b356f8e12930c7">UFlameEmblemAbility</a>();</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_flame_emblem_ability.html#adc04a0f2484d1e87e69481905df36b06">ActivateAbility</a>(<span class="keyword">const</span> FGameplayAbilitySpecHandle Handle, <span class="keyword">const</span> FGameplayAbilityActorInfo* ActorInfo,</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <span class="keyword">const</span> FGameplayAbilityActivationInfo ActivationInfo, <span class="keyword">const</span> FGameplayEventData* TriggerEventData) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_flame_emblem_ability.html#a08502d793efad9487e5c4d6b494863bb">EndAbility</a>(<span class="keyword">const</span> FGameplayAbilitySpecHandle Handle, <span class="keyword">const</span> FGameplayAbilityActorInfo* ActorInfo,</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keyword">const</span> FGameplayAbilityActivationInfo ActivationInfo, <span class="keywordtype">bool</span> bReplicateEndAbility, <span class="keywordtype">bool</span> bWasCancelled) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    UPROPERTY(EditAnywhere, BlueprintReadWrite)</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="class_u_flame_emblem_ability.html#a0fed4e52627f03a0e79dc4cba3ca5e22">  173</a></span>    TSubclassOf&lt;UGameplayEffect&gt; <a class="code hl_variable" href="class_u_flame_emblem_ability.html#a0fed4e52627f03a0e79dc4cba3ca5e22">FlameEffect</a>;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>};</div>
+</div>
+<div class="ttc" id="a_item_base_8h_html_a80a7e6defbe522a34fc115ec56cc8c3e"><div class="ttname"><a href="_item_base_8h.html#a80a7e6defbe522a34fc115ec56cc8c3e">EKPTItemType</a></div><div class="ttdeci">enum enum class EKPTItemType</div><div class="ttdef"><b>Definition</b> <a href="#l00019">ItemBase.h:18</a></div></div>
+<div class="ttc" id="a_item_base_8h_html_a98ea13b4cb010f2082a829c5a39e5587"><div class="ttname"><a href="_item_base_8h.html#a98ea13b4cb010f2082a829c5a39e5587">PassiveAbility</a></div><div class="ttdeci">enum enum class PassiveAbility</div><div class="ttdef"><b>Definition</b> <a href="#l00022">ItemBase.h:22</a></div></div>
+<div class="ttc" id="aclass_u_flame_emblem_ability_html_a08502d793efad9487e5c4d6b494863bb"><div class="ttname"><a href="class_u_flame_emblem_ability.html#a08502d793efad9487e5c4d6b494863bb">UFlameEmblemAbility::EndAbility</a></div><div class="ttdeci">virtual void EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled) override</div><div class="ttdef"><b>Definition</b> <a href="_item_base_8cpp_source.html#l00135">ItemBase.cpp:135</a></div></div>
+<div class="ttc" id="aclass_u_flame_emblem_ability_html_a0fed4e52627f03a0e79dc4cba3ca5e22"><div class="ttname"><a href="class_u_flame_emblem_ability.html#a0fed4e52627f03a0e79dc4cba3ca5e22">UFlameEmblemAbility::FlameEffect</a></div><div class="ttdeci">TSubclassOf&lt; UGameplayEffect &gt; FlameEffect</div><div class="ttdef"><b>Definition</b> <a href="#l00173">ItemBase.h:173</a></div></div>
+<div class="ttc" id="aclass_u_flame_emblem_ability_html_a76773e75f9fdb1f5d6b356f8e12930c7"><div class="ttname"><a href="class_u_flame_emblem_ability.html#a76773e75f9fdb1f5d6b356f8e12930c7">UFlameEmblemAbility::UFlameEmblemAbility</a></div><div class="ttdeci">UFlameEmblemAbility()</div><div class="ttdef"><b>Definition</b> <a href="_item_base_8cpp_source.html#l00081">ItemBase.cpp:81</a></div></div>
+<div class="ttc" id="aclass_u_flame_emblem_ability_html_adc04a0f2484d1e87e69481905df36b06"><div class="ttname"><a href="class_u_flame_emblem_ability.html#adc04a0f2484d1e87e69481905df36b06">UFlameEmblemAbility::ActivateAbility</a></div><div class="ttdeci">virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData *TriggerEventData) override</div><div class="ttdef"><b>Definition</b> <a href="_item_base_8cpp_source.html#l00091">ItemBase.cpp:91</a></div></div>
+<div class="ttc" id="aclass_u_item_ability_html"><div class="ttname"><a href="class_u_item_ability.html">UItemAbility</a></div><div class="ttdef"><b>Definition</b> <a href="#l00113">ItemBase.h:115</a></div></div>
+<div class="ttc" id="aclass_u_item_ability_html_a127f0e42d28c1c1e8480d08e0fc2c7a2"><div class="ttname"><a href="class_u_item_ability.html#a127f0e42d28c1c1e8480d08e0fc2c7a2">UItemAbility::ActivateAbility</a></div><div class="ttdeci">virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData *TriggerEventData) override</div><div class="ttdef"><b>Definition</b> <a href="_item_base_8cpp_source.html#l00031">ItemBase.cpp:31</a></div></div>
+<div class="ttc" id="aclass_u_item_ability_html_a24164069a9ae6383451a78c8556582fe"><div class="ttname"><a href="class_u_item_ability.html#a24164069a9ae6383451a78c8556582fe">UItemAbility::UItemAbility</a></div><div class="ttdeci">UItemAbility()</div><div class="ttdef"><b>Definition</b> <a href="_item_base_8cpp_source.html#l00021">ItemBase.cpp:21</a></div></div>
+<div class="ttc" id="aclass_u_item_ability_html_a6585b613fe815014149ba61021d407df"><div class="ttname"><a href="class_u_item_ability.html#a6585b613fe815014149ba61021d407df">UItemAbility::HpUpgrade</a></div><div class="ttdeci">TSubclassOf&lt; UGameplayEffect &gt; HpUpgrade</div><div class="ttdef"><b>Definition</b> <a href="#l00133">ItemBase.h:133</a></div></div>
+<div class="ttc" id="aclass_u_item_ability_html_a8999df001c3a2cebe918fa612f270b51"><div class="ttname"><a href="class_u_item_ability.html#a8999df001c3a2cebe918fa612f270b51">UItemAbility::AbilityCount</a></div><div class="ttdeci">int32 AbilityCount</div><div class="ttdef"><b>Definition</b> <a href="#l00129">ItemBase.h:129</a></div></div>
+<div class="ttc" id="aclass_u_item_ability_html_abceccfba359a3c2ae52deb4ff8796e4d"><div class="ttname"><a href="class_u_item_ability.html#abceccfba359a3c2ae52deb4ff8796e4d">UItemAbility::EndAbility</a></div><div class="ttdeci">virtual void EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled) override</div><div class="ttdef"><b>Definition</b> <a href="_item_base_8cpp_source.html#l00015">ItemBase.cpp:15</a></div></div>
+<div class="ttc" id="aclass_u_item_ability_html_aced9be06bf288cc0cc5983bb584fe533"><div class="ttname"><a href="class_u_item_ability.html#aced9be06bf288cc0cc5983bb584fe533">UItemAbility::AffectEffectHandles</a></div><div class="ttdeci">TArray&lt; FActiveGameplayEffectHandle &gt; AffectEffectHandles</div><div class="ttdef"><b>Definition</b> <a href="#l00136">ItemBase.h:136</a></div></div>
+<div class="ttc" id="aclass_u_stack_item_ability_html"><div class="ttname"><a href="class_u_stack_item_ability.html">UStackItemAbility</a></div><div class="ttdef"><b>Definition</b> <a href="#l00139">ItemBase.h:141</a></div></div>
+<div class="ttc" id="aclass_u_stack_item_ability_html_a10f3bcd9a5af1e125b17e8f78fbe4c8d"><div class="ttname"><a href="class_u_stack_item_ability.html#a10f3bcd9a5af1e125b17e8f78fbe4c8d">UStackItemAbility::BuffEffect</a></div><div class="ttdeci">TSubclassOf&lt; UGameplayEffect &gt; BuffEffect</div><div class="ttdef"><b>Definition</b> <a href="#l00152">ItemBase.h:152</a></div></div>
+<div class="ttc" id="aclass_u_stack_item_ability_html_ab9839968ee5aa12f7b451907affa42c5"><div class="ttname"><a href="class_u_stack_item_ability.html#ab9839968ee5aa12f7b451907affa42c5">UStackItemAbility::ActivateAbility</a></div><div class="ttdeci">virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData *TriggerEventData) override</div><div class="ttdef"><b>Definition</b> <a href="_item_base_8cpp_source.html#l00055">ItemBase.cpp:55</a></div></div>
+<div class="ttc" id="aclass_u_stack_item_ability_html_acdf9d1f555bbab61f6348764e1d2b08b"><div class="ttname"><a href="class_u_stack_item_ability.html#acdf9d1f555bbab61f6348764e1d2b08b">UStackItemAbility::EndAbility</a></div><div class="ttdeci">virtual void EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled) override</div><div class="ttdef"><b>Definition</b> <a href="_item_base_8cpp_source.html#l00075">ItemBase.cpp:75</a></div></div>
+<div class="ttc" id="astruct_f_item_data_row_html"><div class="ttname"><a href="struct_f_item_data_row.html">FItemDataRow</a></div><div class="ttdef"><b>Definition</b> <a href="#l00040">ItemBase.h:42</a></div></div>
+<div class="ttc" id="astruct_f_item_data_row_html_a26f00e00da9718f74fdfe1d6124a1e0a"><div class="ttname"><a href="struct_f_item_data_row.html#a26f00e00da9718f74fdfe1d6124a1e0a">FItemDataRow::ItemId</a></div><div class="ttdeci">FName ItemId</div><div class="ttdef"><b>Definition</b> <a href="#l00049">ItemBase.h:49</a></div></div>
+<div class="ttc" id="astruct_f_item_data_row_html_a3df597817eb68cb3b3ddd3991f9f9ac1"><div class="ttname"><a href="struct_f_item_data_row.html#a3df597817eb68cb3b3ddd3991f9f9ac1">FItemDataRow::ItemType</a></div><div class="ttdeci">EKPTItemType ItemType</div><div class="ttdef"><b>Definition</b> <a href="#l00055">ItemBase.h:55</a></div></div>
+<div class="ttc" id="astruct_f_item_data_row_html_a6498e3bf01036446ad1a20a71132232f"><div class="ttname"><a href="struct_f_item_data_row.html#a6498e3bf01036446ad1a20a71132232f">FItemDataRow::AffectedAttribute</a></div><div class="ttdeci">FGameplayAttribute AffectedAttribute</div><div class="ttdef"><b>Definition</b> <a href="#l00059">ItemBase.h:59</a></div></div>
+<div class="ttc" id="astruct_f_item_data_row_html_a87652f7ebd859ecdc97428f3fff73bcf"><div class="ttname"><a href="struct_f_item_data_row.html#a87652f7ebd859ecdc97428f3fff73bcf">FItemDataRow::Multiplier</a></div><div class="ttdeci">float Multiplier</div><div class="ttdef"><b>Definition</b> <a href="#l00066">ItemBase.h:66</a></div></div>
+<div class="ttc" id="astruct_f_item_data_row_html_a923ba3c616173df24d86ce48b295b712"><div class="ttname"><a href="struct_f_item_data_row.html#a923ba3c616173df24d86ce48b295b712">FItemDataRow::Rarity</a></div><div class="ttdeci">int32 Rarity</div><div class="ttdef"><b>Definition</b> <a href="#l00074">ItemBase.h:74</a></div></div>
+<div class="ttc" id="astruct_f_item_data_row_html_aa4efc8d4600930700ac3e3f3e3c48827"><div class="ttname"><a href="struct_f_item_data_row.html#aa4efc8d4600930700ac3e3f3e3c48827">FItemDataRow::AttributeTag</a></div><div class="ttdeci">FGameplayTag AttributeTag</div><div class="ttdef"><b>Definition</b> <a href="#l00062">ItemBase.h:62</a></div></div>
+<div class="ttc" id="astruct_f_item_data_row_html_abbb8b49f8aacf2ea033fdc4723651eff"><div class="ttname"><a href="struct_f_item_data_row.html#abbb8b49f8aacf2ea033fdc4723651eff">FItemDataRow::PassiveAbilityClass</a></div><div class="ttdeci">TSubclassOf&lt; UItemAbility &gt; PassiveAbilityClass</div><div class="ttdef"><b>Definition</b> <a href="#l00070">ItemBase.h:70</a></div></div>
+<div class="ttc" id="astruct_f_item_data_row_html_ac0c5a0d4cbeb3c15fc124f770a992c32"><div class="ttname"><a href="struct_f_item_data_row.html#ac0c5a0d4cbeb3c15fc124f770a992c32">FItemDataRow::Price</a></div><div class="ttdeci">int32 Price</div><div class="ttdef"><b>Definition</b> <a href="#l00089">ItemBase.h:89</a></div></div>
+<div class="ttc" id="astruct_f_item_data_row_html_ac5e2047466c8b288d49a05be45a9a7d9"><div class="ttname"><a href="struct_f_item_data_row.html#ac5e2047466c8b288d49a05be45a9a7d9">FItemDataRow::ItemBuffEffect</a></div><div class="ttdeci">TSubclassOf&lt; UGameplayEffect &gt; ItemBuffEffect</div><div class="ttdef"><b>Definition</b> <a href="#l00046">ItemBase.h:46</a></div></div>
+<div class="ttc" id="astruct_f_item_data_row_html_ad166ccd77038027ad56f572322f02f91"><div class="ttname"><a href="struct_f_item_data_row.html#ad166ccd77038027ad56f572322f02f91">FItemDataRow::UIData</a></div><div class="ttdeci">FItemUIData UIData</div><div class="ttdef"><b>Definition</b> <a href="#l00052">ItemBase.h:52</a></div></div>
+<div class="ttc" id="astruct_f_item_instance_html"><div class="ttname"><a href="struct_f_item_instance.html">FItemInstance</a></div><div class="ttdef"><b>Definition</b> <a href="#l00093">ItemBase.h:95</a></div></div>
+<div class="ttc" id="astruct_f_item_instance_html_a2764e58f063d2d69ad632acedecf7bf8"><div class="ttname"><a href="struct_f_item_instance.html#a2764e58f063d2d69ad632acedecf7bf8">FItemInstance::GrantedEffectHandle</a></div><div class="ttdeci">FActiveGameplayEffectHandle GrantedEffectHandle</div><div class="ttdef"><b>Definition</b> <a href="#l00104">ItemBase.h:104</a></div></div>
+<div class="ttc" id="astruct_f_item_instance_html_aa889d22f274495c0b4aebbafaf991fda"><div class="ttname"><a href="struct_f_item_instance.html#aa889d22f274495c0b4aebbafaf991fda">FItemInstance::ItemDataRow</a></div><div class="ttdeci">FItemDataRow * ItemDataRow</div><div class="ttdef"><b>Definition</b> <a href="#l00101">ItemBase.h:101</a></div></div>
+<div class="ttc" id="astruct_f_item_instance_html_ade75184e7059e7d53d29fef0099808d5"><div class="ttname"><a href="struct_f_item_instance.html#ade75184e7059e7d53d29fef0099808d5">FItemInstance::GrantedAbilityHandle</a></div><div class="ttdeci">FGameplayAbilitySpecHandle GrantedAbilityHandle</div><div class="ttdef"><b>Definition</b> <a href="#l00107">ItemBase.h:107</a></div></div>
+<div class="ttc" id="astruct_f_item_instance_html_af9cc775ad1d0625199141e41f68df090"><div class="ttname"><a href="struct_f_item_instance.html#af9cc775ad1d0625199141e41f68df090">FItemInstance::CreateItemByDef</a></div><div class="ttdeci">static FItemInstance CreateItemByDef(FItemDataRow *InItemRow)</div><div class="ttdef"><b>Definition</b> <a href="_item_base_8cpp_source.html#l00008">ItemBase.cpp:8</a></div></div>
+<div class="ttc" id="astruct_f_item_u_i_data_html"><div class="ttname"><a href="struct_f_item_u_i_data.html">FItemUIData</a></div><div class="ttdef"><b>Definition</b> <a href="#l00025">ItemBase.h:27</a></div></div>
+<div class="ttc" id="astruct_f_item_u_i_data_html_a2c14a7f964637e155d0cb5ae2bd41013"><div class="ttname"><a href="struct_f_item_u_i_data.html#a2c14a7f964637e155d0cb5ae2bd41013">FItemUIData::DisplayName</a></div><div class="ttdeci">FText DisplayName</div><div class="ttdef"><b>Definition</b> <a href="#l00031">ItemBase.h:31</a></div></div>
+<div class="ttc" id="astruct_f_item_u_i_data_html_a406b6b91d22763a2fec3648db55260a1"><div class="ttname"><a href="struct_f_item_u_i_data.html#a406b6b91d22763a2fec3648db55260a1">FItemUIData::Icon</a></div><div class="ttdeci">TObjectPtr&lt; UTexture2D &gt; Icon</div><div class="ttdef"><b>Definition</b> <a href="#l00037">ItemBase.h:37</a></div></div>
+<div class="ttc" id="astruct_f_item_u_i_data_html_af48cdc441996217df59de3e2c52e6b49"><div class="ttname"><a href="struct_f_item_u_i_data.html#af48cdc441996217df59de3e2c52e6b49">FItemUIData::Description</a></div><div class="ttdeci">FText Description</div><div class="ttdef"><b>Definition</b> <a href="#l00034">ItemBase.h:34</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_ad35c7fc4aea2ef35443e05a44b4fdd0.html">Item</a></li><li class="navelem"><a href="_item_base_8h.html">ItemBase.h</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

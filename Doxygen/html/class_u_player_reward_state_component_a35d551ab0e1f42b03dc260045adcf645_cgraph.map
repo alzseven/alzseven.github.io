@@ -1,0 +1,6 @@
+<map id="UPlayerRewardStateComponent::BroadCastPendingChoicesChanged" name="UPlayerRewardStateComponent::BroadCastPendingChoicesChanged">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,244,72"/>
+<area shape="rect" id="Node000002" href="$class_u_player_reward_state_component.html#a2f2fd74ee9948c46f7c7c88f869a0f24" title="처리해야 할 보상의 개수를 반환합니다." alt="" coords="292,29,503,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="244,48,276,48,276,53,244,53"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="346,29,344,19,353,10,370,5,397,3,427,5,444,11,442,16,425,10,397,8,371,10,355,15,349,21,351,28"/>
+</map>

@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Core/Component/Flocking/EnemyFlockingComponent.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_enemy_flocking_component_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">EnemyFlockingComponent.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_enemy_flocking_component_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Components/ActorComponent.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;EnemyFlockingComponent.generated.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">class </span><a class="code hl_class" href="class_a_minion_monster.html">AMinionMonster</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>UENUM(BlueprintType)</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="_enemy_flocking_component_8h.html#ac11ccc8b6a9542d49bf2d967d646bef1">   12</a></span>enum class <a class="code hl_variable" href="_enemy_flocking_component_8h.html#ac11ccc8b6a9542d49bf2d967d646bef1">EFlockingAgentType</a> : uint8</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    MOVABLE UMETA(Displayname = <span class="stringliteral">&quot;MOVABLE&quot;</span>),</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="_enemy_flocking_component_8h.html#a7b40710b564f5f678560bf1d1e0f4599">   15</a></span>    <a class="code hl_variable" href="_enemy_flocking_component_8h.html#a7b40710b564f5f678560bf1d1e0f4599">STATIC</a> UMETA(Displayname = <span class="stringliteral">&quot;STATIC&quot;</span>)</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>};</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="struct_f_flocking_data.html">   18</a></span>USTRUCT()</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>struct <a class="code hl_function" href="struct_f_flocking_data.html#a3c96d371a151f1bdc38dcc760852ce95">FFlockingData</a></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="struct_f_flocking_data.html#af22717a4a70a10e5ed553c464f6c0e33">   23</a></span>    FVector2D <a class="code hl_variable" href="struct_f_flocking_data.html#af22717a4a70a10e5ed553c464f6c0e33">Position</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="struct_f_flocking_data.html#a01ac64d71160fe858aeb59dfa38f4d72">   24</a></span>    FVector2D <a class="code hl_variable" href="struct_f_flocking_data.html#a01ac64d71160fe858aeb59dfa38f4d72">Velocity</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="struct_f_flocking_data.html#adc475b2577bf8c068758e44ec54717f1">   25</a></span>    FVector2D <a class="code hl_variable" href="struct_f_flocking_data.html#adc475b2577bf8c068758e44ec54717f1">Acceleration</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="struct_f_flocking_data.html#a76e31cd5c8ee01a6589e5f5b8ed17339">   26</a></span>    int32 <a class="code hl_variable" href="struct_f_flocking_data.html#a76e31cd5c8ee01a6589e5f5b8ed17339">GridCellIndex</a>; <span class="comment">// 공간 분할용</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="struct_f_flocking_data.html#a1c392454ba506a8822e59786cd2378d7">   27</a></span>    TArray&lt;int32&gt; <a class="code hl_variable" href="struct_f_flocking_data.html#a1c392454ba506a8822e59786cd2378d7">NeighborIndices</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_f_flocking_data.html#a3c96d371a151f1bdc38dcc760852ce95">   29</a></span>    <a class="code hl_function" href="struct_f_flocking_data.html#a3c96d371a151f1bdc38dcc760852ce95">FFlockingData</a>()</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_variable" href="struct_f_flocking_data.html#af22717a4a70a10e5ed553c464f6c0e33">Position</a> = FVector2D::ZeroVector;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_variable" href="struct_f_flocking_data.html#a01ac64d71160fe858aeb59dfa38f4d72">Velocity</a> = FVector2D::ZeroVector;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_variable" href="struct_f_flocking_data.html#adc475b2577bf8c068758e44ec54717f1">Acceleration</a> = FVector2D::ZeroVector;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_variable" href="struct_f_flocking_data.html#a76e31cd5c8ee01a6589e5f5b8ed17339">GridCellIndex</a> = -1;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>};</div>
+</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">class </span><a class="code hl_class" href="class_a_flocking_manager.html">AFlockingManager</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="};">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_u_enemy_flocking_component.html">   40</a></span>UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">class </span>KPT_API <a class="code hl_function" href="class_u_enemy_flocking_component.html#a517a8d581b07249abf0d71f3fdb6882c">UEnemyFlockingComponent</a> : <span class="keyword">public</span> UActorComponent</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_function" href="class_u_enemy_flocking_component.html#a517a8d581b07249abf0d71f3fdb6882c">UEnemyFlockingComponent</a>();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    UFUNCTION(BlueprintCallable)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_enemy_flocking_component.html#ac050e0310218391c1df9dda2331e15b5">RegisterToManager</a>(<a class="code hl_friend" href="class_u_enemy_flocking_component.html#a0ce25b018b74ace0f8408f5ab57825fd">AFlockingManager</a>* Manager);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    UFUNCTION(BlueprintCallable)</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_enemy_flocking_component.html#a43875b1f9675ee98357a0e228b7b6b31">UnRegisterFromManager</a>(<a class="code hl_friend" href="class_u_enemy_flocking_component.html#a0ce25b018b74ace0f8408f5ab57825fd">AFlockingManager</a>* Manager);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_enemy_flocking_component.html#a3dfd0183216b15605036f42cc4409726">SetCachedOwner</a>(<a class="code hl_class" href="class_a_minion_monster.html">AMinionMonster</a>* InOwner);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_class" href="class_a_minion_monster.html">AMinionMonster</a>* <a class="code hl_function" href="class_u_enemy_flocking_component.html#ac79c0e2038083e4b08ac401c174e5bb1">GetCachedOwner</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_u_enemy_flocking_component.html#a29895b799cb9e65a826b77bb9b1526df">   57</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_enemy_flocking_component.html#a29895b799cb9e65a826b77bb9b1526df">SetMove</a>(<span class="keywordtype">bool</span> bInMove)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        bCanMove = bInMove;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> SetTarget(AActor* InTargetActor);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    AActor* GetTarget() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="comment">// Flocking 파라미터</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    UPROPERTY(EditAnywhere, Category = <span class="stringliteral">&quot;Flocking&quot;</span>)</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_u_enemy_flocking_component.html#ae334034c0e93e1557eec0291b52dd9cc">   68</a></span>    float <a class="code hl_variable" href="class_u_enemy_flocking_component.html#ae334034c0e93e1557eec0291b52dd9cc">SeparationRadius</a> = 150.0f;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    UPROPERTY(EditAnywhere, Category = <span class="stringliteral">&quot;Flocking&quot;</span>)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_u_enemy_flocking_component.html#ae33519fef10da7f2a41f93d6fc929491">   71</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_enemy_flocking_component.html#ae33519fef10da7f2a41f93d6fc929491">AlignmentRadius</a> = 300.0f;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    UPROPERTY(EditAnywhere, Category = <span class="stringliteral">&quot;Flocking&quot;</span>)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_u_enemy_flocking_component.html#a90c309391c1ec067d7bb8a4092c5c06f">   74</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_enemy_flocking_component.html#a90c309391c1ec067d7bb8a4092c5c06f">CohesionRadius</a> = 300.0f;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    UPROPERTY(EditAnywhere, Category = <span class="stringliteral">&quot;Flocking&quot;</span>)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="class_u_enemy_flocking_component.html#a15fa7608b5edab3f525e356f7f7fc120">   77</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_enemy_flocking_component.html#a15fa7608b5edab3f525e356f7f7fc120">MaxSpeed</a> = 100.0f;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    UPROPERTY(EditAnywhere, Category = <span class="stringliteral">&quot;Flocking&quot;</span>)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="class_u_enemy_flocking_component.html#ab3829ebcd208ec2825d0925e4b117182">   80</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_enemy_flocking_component.html#ab3829ebcd208ec2825d0925e4b117182">MaxForce</a> = 400.0f;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">// 가중치</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    UPROPERTY(EditAnywhere, Category = <span class="stringliteral">&quot;Flocking|Weights&quot;</span>)</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="class_u_enemy_flocking_component.html#af8bb18bc388064aaa9395081aba7f060">   84</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_enemy_flocking_component.html#af8bb18bc388064aaa9395081aba7f060">SeparationWeight</a> = 3.0f;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    UPROPERTY(EditAnywhere, Category = <span class="stringliteral">&quot;Flocking|Weights&quot;</span>)</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_u_enemy_flocking_component.html#a159e8f83f7ecfcfa761c31dab605c8bc">   87</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_enemy_flocking_component.html#a159e8f83f7ecfcfa761c31dab605c8bc">AlignmentWeight</a> = 1.0f;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    UPROPERTY(EditAnywhere, Category = <span class="stringliteral">&quot;Flocking|Weights&quot;</span>)</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_u_enemy_flocking_component.html#a37d1568be61bd5dc39f2e934a5995aed">   90</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_enemy_flocking_component.html#a37d1568be61bd5dc39f2e934a5995aed">CohesionWeight</a> = 1.0f;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    UPROPERTY(EditAnywhere, Category = <span class="stringliteral">&quot;Flocking|Weights&quot;</span>)</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_u_enemy_flocking_component.html#a8d3275ba35f729bd992f7423811c5145">   93</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_enemy_flocking_component.html#a8d3275ba35f729bd992f7423811c5145">TargetWeight</a> = 1.5f;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_u_enemy_flocking_component.html#ac7254c42a530304682a351d024514210">   97</a></span>    FVector2D <a class="code hl_function" href="class_u_enemy_flocking_component.html#ac7254c42a530304682a351d024514210">GetVelocity2D</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> FlockData.Velocity; }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="class_u_enemy_flocking_component.html#a1c014da6e9feda584ebaff7f69be03e6">   99</a></span>    FVector2D <a class="code hl_variable" href="class_u_enemy_flocking_component.html#a1c014da6e9feda584ebaff7f69be03e6">CachedSeparation</a> = FVector2D::ZeroVector;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_u_enemy_flocking_component.html#a910278d2c5766aec51255e4148f0c556">  100</a></span>    FVector2D <a class="code hl_variable" href="class_u_enemy_flocking_component.html#a910278d2c5766aec51255e4148f0c556">CachedAvoidance</a> = FVector2D::ZeroVector;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="class_u_enemy_flocking_component.html#a51415a848122d2ad5fd86e48282d21b0">  101</a></span>    FVector2D <a class="code hl_variable" href="class_u_enemy_flocking_component.html#a51415a848122d2ad5fd86e48282d21b0">CachedToTarget</a> = FVector2D::ZeroVector;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_u_enemy_flocking_component.html#ada5e5b4dcdec93ec6dec678110259abf">  103</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_enemy_flocking_component.html#ada5e5b4dcdec93ec6dec678110259abf">UpdateInterval</a> = 0.25f;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="class_u_enemy_flocking_component.html#a2a7f4e66aaf15980808ef469dfdf173c">  105</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_enemy_flocking_component.html#a2a7f4e66aaf15980808ef469dfdf173c">CurrentInterval</a> = <a class="code hl_variable" href="class_u_enemy_flocking_component.html#ada5e5b4dcdec93ec6dec678110259abf">UpdateInterval</a>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    UPROPERTY()</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <a class="code hl_struct" href="struct_f_flocking_data.html">FFlockingData</a> FlockData;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    UPROPERTY()</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    TObjectPtr&lt;<a class="code hl_friend" href="class_u_enemy_flocking_component.html#a0ce25b018b74ace0f8408f5ab57825fd">AFlockingManager</a>&gt; FlockingManager;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    UPROPERTY()</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    TObjectPtr&lt;AActor&gt; Target;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    UPROPERTY(EditAnywhere, Category = <span class="stringliteral">&quot;Flocking|Agent&quot;</span>)</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <a class="code hl_variable" href="_enemy_flocking_component_8h.html#ac11ccc8b6a9542d49bf2d967d646bef1">EFlockingAgentType</a> FlockingAgentType;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordtype">bool</span> bRemoved = false;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordtype">bool</span> bPathfinding = false;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    TArray&lt;FVector&gt; PathPoints;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    int32 CurrentPathIndex = 1;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    UPROPERTY()</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    TObjectPtr&lt;<a class="code hl_class" href="class_a_minion_monster.html">AMinionMonster</a>&gt; CachedMinion;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordtype">bool</span> bCanMove = true;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="class_u_enemy_flocking_component.html#a0ce25b018b74ace0f8408f5ab57825fd">  132</a></span>    friend class <a class="code hl_friend" href="class_u_enemy_flocking_component.html#a0ce25b018b74ace0f8408f5ab57825fd">AFlockingManager</a>;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordtype">bool</span> bRegistered = false;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>};</div>
+</div>
+<div class="ttc" id="a_enemy_flocking_component_8h_html_a7b40710b564f5f678560bf1d1e0f4599"><div class="ttname"><a href="_enemy_flocking_component_8h.html#a7b40710b564f5f678560bf1d1e0f4599">STATIC</a></div><div class="ttdeci">enum enum class STATIC</div><div class="ttdef"><b>Definition</b> <a href="#l00015">EnemyFlockingComponent.h:16</a></div></div>
+<div class="ttc" id="a_enemy_flocking_component_8h_html_ac11ccc8b6a9542d49bf2d967d646bef1"><div class="ttname"><a href="_enemy_flocking_component_8h.html#ac11ccc8b6a9542d49bf2d967d646bef1">EFlockingAgentType</a></div><div class="ttdeci">enum enum class EFlockingAgentType</div><div class="ttdef"><b>Definition</b> <a href="#l00012">EnemyFlockingComponent.h:11</a></div></div>
+<div class="ttc" id="aclass_a_flocking_manager_html"><div class="ttname"><a href="class_a_flocking_manager.html">AFlockingManager</a></div><div class="ttdef"><b>Definition</b> <a href="_flocking_manager_8h_source.html#l00068">FlockingManager.h:70</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html"><div class="ttname"><a href="class_a_minion_monster.html">AMinionMonster</a></div><div class="ttdef"><b>Definition</b> <a href="_minion_monster_8h_source.html#l00031">MinionMonster.h:33</a></div></div>
+<div class="ttc" id="aclass_u_enemy_flocking_component_html_a0ce25b018b74ace0f8408f5ab57825fd"><div class="ttname"><a href="class_u_enemy_flocking_component.html#a0ce25b018b74ace0f8408f5ab57825fd">UEnemyFlockingComponent::AFlockingManager</a></div><div class="ttdeci">friend class AFlockingManager</div><div class="ttdef"><b>Definition</b> <a href="#l00132">EnemyFlockingComponent.h:132</a></div></div>
+<div class="ttc" id="aclass_u_enemy_flocking_component_html_a159e8f83f7ecfcfa761c31dab605c8bc"><div class="ttname"><a href="class_u_enemy_flocking_component.html#a159e8f83f7ecfcfa761c31dab605c8bc">UEnemyFlockingComponent::AlignmentWeight</a></div><div class="ttdeci">float AlignmentWeight</div><div class="ttdef"><b>Definition</b> <a href="#l00087">EnemyFlockingComponent.h:87</a></div></div>
+<div class="ttc" id="aclass_u_enemy_flocking_component_html_a15fa7608b5edab3f525e356f7f7fc120"><div class="ttname"><a href="class_u_enemy_flocking_component.html#a15fa7608b5edab3f525e356f7f7fc120">UEnemyFlockingComponent::MaxSpeed</a></div><div class="ttdeci">float MaxSpeed</div><div class="ttdef"><b>Definition</b> <a href="#l00077">EnemyFlockingComponent.h:77</a></div></div>
+<div class="ttc" id="aclass_u_enemy_flocking_component_html_a1c014da6e9feda584ebaff7f69be03e6"><div class="ttname"><a href="class_u_enemy_flocking_component.html#a1c014da6e9feda584ebaff7f69be03e6">UEnemyFlockingComponent::CachedSeparation</a></div><div class="ttdeci">FVector2D CachedSeparation</div><div class="ttdef"><b>Definition</b> <a href="#l00099">EnemyFlockingComponent.h:99</a></div></div>
+<div class="ttc" id="aclass_u_enemy_flocking_component_html_a29895b799cb9e65a826b77bb9b1526df"><div class="ttname"><a href="class_u_enemy_flocking_component.html#a29895b799cb9e65a826b77bb9b1526df">UEnemyFlockingComponent::SetMove</a></div><div class="ttdeci">void SetMove(bool bInMove)</div><div class="ttdef"><b>Definition</b> <a href="#l00057">EnemyFlockingComponent.h:57</a></div></div>
+<div class="ttc" id="aclass_u_enemy_flocking_component_html_a2a7f4e66aaf15980808ef469dfdf173c"><div class="ttname"><a href="class_u_enemy_flocking_component.html#a2a7f4e66aaf15980808ef469dfdf173c">UEnemyFlockingComponent::CurrentInterval</a></div><div class="ttdeci">float CurrentInterval</div><div class="ttdef"><b>Definition</b> <a href="#l00105">EnemyFlockingComponent.h:105</a></div></div>
+<div class="ttc" id="aclass_u_enemy_flocking_component_html_a37d1568be61bd5dc39f2e934a5995aed"><div class="ttname"><a href="class_u_enemy_flocking_component.html#a37d1568be61bd5dc39f2e934a5995aed">UEnemyFlockingComponent::CohesionWeight</a></div><div class="ttdeci">float CohesionWeight</div><div class="ttdef"><b>Definition</b> <a href="#l00090">EnemyFlockingComponent.h:90</a></div></div>
+<div class="ttc" id="aclass_u_enemy_flocking_component_html_a3dfd0183216b15605036f42cc4409726"><div class="ttname"><a href="class_u_enemy_flocking_component.html#a3dfd0183216b15605036f42cc4409726">UEnemyFlockingComponent::SetCachedOwner</a></div><div class="ttdeci">void SetCachedOwner(AMinionMonster *InOwner)</div><div class="ttdef"><b>Definition</b> <a href="_enemy_flocking_component_8cpp_source.html#l00032">EnemyFlockingComponent.cpp:32</a></div></div>
+<div class="ttc" id="aclass_u_enemy_flocking_component_html_a43875b1f9675ee98357a0e228b7b6b31"><div class="ttname"><a href="class_u_enemy_flocking_component.html#a43875b1f9675ee98357a0e228b7b6b31">UEnemyFlockingComponent::UnRegisterFromManager</a></div><div class="ttdeci">void UnRegisterFromManager(AFlockingManager *Manager)</div><div class="ttdef"><b>Definition</b> <a href="_enemy_flocking_component_8cpp_source.html#l00024">EnemyFlockingComponent.cpp:24</a></div></div>
+<div class="ttc" id="aclass_u_enemy_flocking_component_html_a51415a848122d2ad5fd86e48282d21b0"><div class="ttname"><a href="class_u_enemy_flocking_component.html#a51415a848122d2ad5fd86e48282d21b0">UEnemyFlockingComponent::CachedToTarget</a></div><div class="ttdeci">FVector2D CachedToTarget</div><div class="ttdef"><b>Definition</b> <a href="#l00101">EnemyFlockingComponent.h:101</a></div></div>
+<div class="ttc" id="aclass_u_enemy_flocking_component_html_a517a8d581b07249abf0d71f3fdb6882c"><div class="ttname"><a href="class_u_enemy_flocking_component.html#a517a8d581b07249abf0d71f3fdb6882c">UEnemyFlockingComponent::UEnemyFlockingComponent</a></div><div class="ttdeci">UEnemyFlockingComponent()</div><div class="ttdef"><b>Definition</b> <a href="_enemy_flocking_component_8cpp_source.html#l00012">EnemyFlockingComponent.cpp:12</a></div></div>
+<div class="ttc" id="aclass_u_enemy_flocking_component_html_a8d3275ba35f729bd992f7423811c5145"><div class="ttname"><a href="class_u_enemy_flocking_component.html#a8d3275ba35f729bd992f7423811c5145">UEnemyFlockingComponent::TargetWeight</a></div><div class="ttdeci">float TargetWeight</div><div class="ttdef"><b>Definition</b> <a href="#l00093">EnemyFlockingComponent.h:93</a></div></div>
+<div class="ttc" id="aclass_u_enemy_flocking_component_html_a90c309391c1ec067d7bb8a4092c5c06f"><div class="ttname"><a href="class_u_enemy_flocking_component.html#a90c309391c1ec067d7bb8a4092c5c06f">UEnemyFlockingComponent::CohesionRadius</a></div><div class="ttdeci">float CohesionRadius</div><div class="ttdef"><b>Definition</b> <a href="#l00074">EnemyFlockingComponent.h:74</a></div></div>
+<div class="ttc" id="aclass_u_enemy_flocking_component_html_a910278d2c5766aec51255e4148f0c556"><div class="ttname"><a href="class_u_enemy_flocking_component.html#a910278d2c5766aec51255e4148f0c556">UEnemyFlockingComponent::CachedAvoidance</a></div><div class="ttdeci">FVector2D CachedAvoidance</div><div class="ttdef"><b>Definition</b> <a href="#l00100">EnemyFlockingComponent.h:100</a></div></div>
+<div class="ttc" id="aclass_u_enemy_flocking_component_html_ab3829ebcd208ec2825d0925e4b117182"><div class="ttname"><a href="class_u_enemy_flocking_component.html#ab3829ebcd208ec2825d0925e4b117182">UEnemyFlockingComponent::MaxForce</a></div><div class="ttdeci">float MaxForce</div><div class="ttdef"><b>Definition</b> <a href="#l00080">EnemyFlockingComponent.h:80</a></div></div>
+<div class="ttc" id="aclass_u_enemy_flocking_component_html_ac050e0310218391c1df9dda2331e15b5"><div class="ttname"><a href="class_u_enemy_flocking_component.html#ac050e0310218391c1df9dda2331e15b5">UEnemyFlockingComponent::RegisterToManager</a></div><div class="ttdeci">void RegisterToManager(AFlockingManager *Manager)</div><div class="ttdef"><b>Definition</b> <a href="_enemy_flocking_component_8cpp_source.html#l00016">EnemyFlockingComponent.cpp:16</a></div></div>
+<div class="ttc" id="aclass_u_enemy_flocking_component_html_ac7254c42a530304682a351d024514210"><div class="ttname"><a href="class_u_enemy_flocking_component.html#ac7254c42a530304682a351d024514210">UEnemyFlockingComponent::GetVelocity2D</a></div><div class="ttdeci">FVector2D GetVelocity2D() const</div><div class="ttdef"><b>Definition</b> <a href="#l00097">EnemyFlockingComponent.h:97</a></div></div>
+<div class="ttc" id="aclass_u_enemy_flocking_component_html_ac79c0e2038083e4b08ac401c174e5bb1"><div class="ttname"><a href="class_u_enemy_flocking_component.html#ac79c0e2038083e4b08ac401c174e5bb1">UEnemyFlockingComponent::GetCachedOwner</a></div><div class="ttdeci">AMinionMonster * GetCachedOwner()</div><div class="ttdef"><b>Definition</b> <a href="_enemy_flocking_component_8cpp_source.html#l00037">EnemyFlockingComponent.cpp:37</a></div></div>
+<div class="ttc" id="aclass_u_enemy_flocking_component_html_ada5e5b4dcdec93ec6dec678110259abf"><div class="ttname"><a href="class_u_enemy_flocking_component.html#ada5e5b4dcdec93ec6dec678110259abf">UEnemyFlockingComponent::UpdateInterval</a></div><div class="ttdeci">float UpdateInterval</div><div class="ttdef"><b>Definition</b> <a href="#l00103">EnemyFlockingComponent.h:103</a></div></div>
+<div class="ttc" id="aclass_u_enemy_flocking_component_html_ae334034c0e93e1557eec0291b52dd9cc"><div class="ttname"><a href="class_u_enemy_flocking_component.html#ae334034c0e93e1557eec0291b52dd9cc">UEnemyFlockingComponent::SeparationRadius</a></div><div class="ttdeci">float SeparationRadius</div><div class="ttdef"><b>Definition</b> <a href="#l00068">EnemyFlockingComponent.h:68</a></div></div>
+<div class="ttc" id="aclass_u_enemy_flocking_component_html_ae33519fef10da7f2a41f93d6fc929491"><div class="ttname"><a href="class_u_enemy_flocking_component.html#ae33519fef10da7f2a41f93d6fc929491">UEnemyFlockingComponent::AlignmentRadius</a></div><div class="ttdeci">float AlignmentRadius</div><div class="ttdef"><b>Definition</b> <a href="#l00071">EnemyFlockingComponent.h:71</a></div></div>
+<div class="ttc" id="aclass_u_enemy_flocking_component_html_af8bb18bc388064aaa9395081aba7f060"><div class="ttname"><a href="class_u_enemy_flocking_component.html#af8bb18bc388064aaa9395081aba7f060">UEnemyFlockingComponent::SeparationWeight</a></div><div class="ttdeci">float SeparationWeight</div><div class="ttdef"><b>Definition</b> <a href="#l00084">EnemyFlockingComponent.h:84</a></div></div>
+<div class="ttc" id="astruct_f_flocking_data_html"><div class="ttname"><a href="struct_f_flocking_data.html">FFlockingData</a></div><div class="ttdef"><b>Definition</b> <a href="#l00018">EnemyFlockingComponent.h:20</a></div></div>
+<div class="ttc" id="astruct_f_flocking_data_html_a01ac64d71160fe858aeb59dfa38f4d72"><div class="ttname"><a href="struct_f_flocking_data.html#a01ac64d71160fe858aeb59dfa38f4d72">FFlockingData::Velocity</a></div><div class="ttdeci">FVector2D Velocity</div><div class="ttdef"><b>Definition</b> <a href="#l00024">EnemyFlockingComponent.h:24</a></div></div>
+<div class="ttc" id="astruct_f_flocking_data_html_a1c392454ba506a8822e59786cd2378d7"><div class="ttname"><a href="struct_f_flocking_data.html#a1c392454ba506a8822e59786cd2378d7">FFlockingData::NeighborIndices</a></div><div class="ttdeci">TArray&lt; int32 &gt; NeighborIndices</div><div class="ttdef"><b>Definition</b> <a href="#l00027">EnemyFlockingComponent.h:27</a></div></div>
+<div class="ttc" id="astruct_f_flocking_data_html_a3c96d371a151f1bdc38dcc760852ce95"><div class="ttname"><a href="struct_f_flocking_data.html#a3c96d371a151f1bdc38dcc760852ce95">FFlockingData::FFlockingData</a></div><div class="ttdeci">FFlockingData()</div><div class="ttdef"><b>Definition</b> <a href="#l00029">EnemyFlockingComponent.h:29</a></div></div>
+<div class="ttc" id="astruct_f_flocking_data_html_a76e31cd5c8ee01a6589e5f5b8ed17339"><div class="ttname"><a href="struct_f_flocking_data.html#a76e31cd5c8ee01a6589e5f5b8ed17339">FFlockingData::GridCellIndex</a></div><div class="ttdeci">int32 GridCellIndex</div><div class="ttdef"><b>Definition</b> <a href="#l00026">EnemyFlockingComponent.h:26</a></div></div>
+<div class="ttc" id="astruct_f_flocking_data_html_adc475b2577bf8c068758e44ec54717f1"><div class="ttname"><a href="struct_f_flocking_data.html#adc475b2577bf8c068758e44ec54717f1">FFlockingData::Acceleration</a></div><div class="ttdeci">FVector2D Acceleration</div><div class="ttdef"><b>Definition</b> <a href="#l00025">EnemyFlockingComponent.h:25</a></div></div>
+<div class="ttc" id="astruct_f_flocking_data_html_af22717a4a70a10e5ed553c464f6c0e33"><div class="ttname"><a href="struct_f_flocking_data.html#af22717a4a70a10e5ed553c464f6c0e33">FFlockingData::Position</a></div><div class="ttdeci">FVector2D Position</div><div class="ttdef"><b>Definition</b> <a href="#l00023">EnemyFlockingComponent.h:23</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_9d0f275b41fa002800a89310ba1ebe25.html">Core</a></li><li class="navelem"><a href="dir_c4b505f52885608e828b3baedebd7535.html">Component</a></li><li class="navelem"><a href="dir_cb06985b1f769d20de23e9e1e765fba6.html">Flocking</a></li><li class="navelem"><a href="_enemy_flocking_component_8h.html">EnemyFlockingComponent.h</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

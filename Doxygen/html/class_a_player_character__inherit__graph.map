@@ -1,0 +1,13 @@
+<map id="APlayerCharacter" name="APlayerCharacter">
+<area shape="rect" id="Node000001" title=" " alt="" coords="253,581,483,2113"/>
+<area shape="rect" id="Node000002" href="$class_a_character_base.html" title=" " alt="" coords="5,123,259,533"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,547,256,850,251,851,180,549"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="26,5,103,75"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="78,89,86,122,81,123,73,90"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="127,5,274,75"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="191,90,184,123,178,122,186,89"/>
+<area shape="rect" id="Node000005" href="$class_i_combat_interface.html" title=" " alt="" coords="283,248,453,408"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="371,423,371,582,366,582,366,423"/>
+<area shape="rect" id="Node000006" href="$class_i_k_p_t_pausable_interface.html" title=" " alt="" coords="477,293,622,363"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="544,378,486,702,481,701,538,377"/>
+</map>

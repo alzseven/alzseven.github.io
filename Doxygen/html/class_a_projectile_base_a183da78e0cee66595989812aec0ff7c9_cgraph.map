@@ -1,0 +1,12 @@
+<map id="AProjectileBase::OnCapsuleBeginOverlap" name="AProjectileBase::OnCapsuleBeginOverlap">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,193,77"/>
+<area shape="rect" id="Node000002" href="$class_a_projectile_base.html#a643fc0b4a82ec643f5d958ec6a30a060" title=" " alt="" coords="241,5,445,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,42,225,38,225,43,194,47"/>
+<area shape="rect" id="Node000003" href="$class_a_projectile_base.html#a2276af661735f8971f6af66c6db7633d" title=" " alt="" coords="242,72,444,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,65,227,69,226,74,193,70"/>
+<area shape="rect" id="Node000004" href="$class_a_projectile_base.html#a56f85c58a5c516ddd3e66fbb115eb20d" title=" " alt="" coords="493,64,678,107"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="444,83,477,83,477,88,444,88"/>
+<area shape="rect" id="Node000005" href="$class_a_projectile_base.html#a76b21edb2d7e6427f03a3be58488ef52" title=" " alt="" coords="726,64,902,107"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="679,83,710,83,710,88,679,88"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="771,64,769,54,776,45,791,39,814,37,838,40,853,46,851,51,837,45,814,43,792,45,779,49,774,55,776,63"/>
+</map>

@@ -1,0 +1,18 @@
+<map id="UGameplayAbility_TraceBase::OnTraceHit" name="UGameplayAbility_TraceBase::OnTraceHit">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1227,96,1423,139"/>
+<area shape="rect" id="Node000002" href="$class_u_gameplay_ability___trace_base.html#af45bd75cfce61a7c8368270e14ba2da2" title=" " alt="" coords="983,96,1179,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1212,120,1180,120,1180,115,1212,115"/>
+<area shape="rect" id="Node000003" href="$class_u_gameplay_ability___trace_base.html#a5166fe938f5e822a37e7526d8b95d271" title=" " alt="" coords="738,5,935,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1011,92,934,62,902,51,903,46,936,58,1013,87"/>
+<area shape="rect" id="Node000007" href="$class_u_gameplay_ability___trace_base.html#aab02c5cd24012484672817a3959eae8b" title=" " alt="" coords="738,96,935,139"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="967,129,935,129,935,124,967,124"/>
+<area shape="rect" id="Node000004" href="$class_u_gameplay_ability___boss_rock_drop.html#ae3ea23fe4ff008d87e87ee9fb09eb08f" title=" " alt="" coords="490,5,690,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="723,29,691,29,691,24,723,24"/>
+<area shape="rect" id="Node000005" href="$class_u_gameplay_ability___boss_rock_drop.html#af96f3d05b72995df2afa9a9a9963996f" title=" " alt="" coords="248,5,442,48"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="474,38,442,38,442,33,474,33"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="457,15,489,15,489,20,457,20"/>
+<area shape="rect" id="Node000006" href="$class_u_gameplay_ability___boss_rock_drop.html#ae20c146f70f4656b0bad279aee6ed5bd" title=" " alt="" coords="5,5,200,48"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="232,29,200,29,200,24,232,24"/>
+<area shape="poly" id="edge8_Node000007_Node000002" title=" " alt="" coords="950,106,982,106,982,111,950,111"/>
+<area shape="poly" id="edge9_Node000007_Node000007" title=" " alt="" coords="876,83,861,77,836,75,813,77,799,81,794,87,795,95,790,96,788,86,796,77,812,71,837,69,863,72,878,78"/>
+</map>

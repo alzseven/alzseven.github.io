@@ -1,0 +1,20 @@
+<map id="USwitchSkillAbility" name="USwitchSkillAbility">
+<area shape="rect" id="Node000001" title=" " alt="" coords="189,2766,311,2836"/>
+<area shape="rect" id="Node000002" href="$class_u_base_skill_ability.html" title=" " alt="" coords="27,2130,472,2717"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="252,2732,252,2767,247,2767,247,2732"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,1588,121,1658"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="72,1672,101,1863,124,1984,152,2106,159,2130,154,2131,147,2107,119,1986,95,1864,66,1673"/>
+<area shape="rect" id="Node000004" href="$struct_f_detailed_skill_data.html" title=" " alt="" coords="133,511,318,729"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="216,730,193,969,172,1298,166,1484,165,1676,170,1869,183,2058,190,2113,184,2114,178,2059,165,1869,160,1676,161,1484,167,1298,188,968,211,729"/>
+<area shape="rect" id="Node000005" href="$struct_f_skill_data.html" title=" " alt="" coords="336,1444,568,1802"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="253,728,411,1428,406,1429,248,729"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="410,1802,331,2115,325,2114,405,1801"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="399,585,506,655"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="455,670,455,1445,450,1445,450,670"/>
+<area shape="rect" id="Node000007" href="$class_u_k_p_t_player_attribute_set.html" title=" " alt="" coords="593,1188,814,2058"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="595,2036,583,2060,538,2131,485,2199,481,2195,533,2128,578,2057,591,2034"/>
+<area shape="rect" id="Node000008" href="$class_u_k_p_t_base_attribute_set.html" title=" " alt="" coords="576,124,831,1116"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="706,1131,706,1188,700,1188,700,1131"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="658,5,748,75"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="706,90,706,124,700,124,700,90"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="UInventoryManager::ServerAddItemToInventory" name="UInventoryManager::ServerAddItemToInventory">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,29,182,72"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="50,29,48,19,56,10,71,5,94,3,118,5,133,11,131,16,117,10,93,8,72,10,59,15,54,21,55,28"/>
+<area shape="rect" id="Node000002" href="$class_u_inventory_manager.html#ab993a5f8cc32d22723e45aae7f00be07" title=" " alt="" coords="230,29,414,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,48,214,48,214,53,182,53"/>
+<area shape="rect" id="Node000003" href="$class_u_inventory_manager.html#a0ec24d982954c6b105ec7feb362a5c6c" title=" " alt="" coords="462,29,605,72"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="414,48,446,48,446,53,414,53"/>
+</map>

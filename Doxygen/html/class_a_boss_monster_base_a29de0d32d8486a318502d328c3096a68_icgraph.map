@@ -1,0 +1,6 @@
+<map id="ABossMonsterBase::Multicast_AddDamageFloater" name="ABossMonsterBase::Multicast_AddDamageFloater">
+<area shape="rect" id="Node000001" title=" " alt="" coords="255,29,453,72"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="394,16,379,10,354,8,330,10,316,15,310,21,312,28,307,29,305,19,313,10,329,5,354,3,380,5,396,11"/>
+<area shape="rect" id="Node000002" href="$class_a_boss_monster_base.html#aebebabc296fffff53b11c82e663de4fc" title=" " alt="" coords="5,37,207,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="239,53,207,53,207,48,239,48"/>
+</map>

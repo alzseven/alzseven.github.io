@@ -1,0 +1,10 @@
+<map id="UInventoryManager::UInventoryManager" name="UInventoryManager::UInventoryManager">
+<area shape="rect" id="Node000001" title=" " alt="" coords="691,29,835,72"/>
+<area shape="rect" id="Node000002" href="$class_u_inventory_manager.html#ab993a5f8cc32d22723e45aae7f00be07" title=" " alt="" coords="459,29,643,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="676,53,644,53,644,48,676,48"/>
+<area shape="rect" id="Node000003" href="$class_u_inventory_manager.html#affc3d5e5e27c0a4a4ef88c1622c38793" title=" " alt="" coords="235,29,411,72"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="444,53,412,53,412,48,444,48"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="360,16,346,10,323,8,301,10,288,15,283,21,285,28,280,29,278,19,285,10,300,5,323,3,347,5,362,11"/>
+<area shape="rect" id="Node000004" href="$class_u_shop_manager_subsystem.html#aab60cace693da061856579c41401dd4a" title=" " alt="" coords="5,29,187,72"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="219,53,187,53,187,48,219,48"/>
+</map>

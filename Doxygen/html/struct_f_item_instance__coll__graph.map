@@ -1,0 +1,9 @@
+<map id="FItemInstance" name="FItemInstance">
+<area shape="rect" id="Node000001" title=" " alt="" coords="27,565,250,720"/>
+<area shape="rect" id="Node000002" href="$struct_f_item_data_row.html" title=" " alt="" coords="31,205,246,493"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,493,141,548,136,548,136,493"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,35,112,104"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="75,118,100,205,95,206,70,119"/>
+<area shape="rect" id="Node000004" href="$struct_f_item_u_i_data.html" title=" " alt="" coords="136,5,304,133"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="204,134,188,190,183,188,199,133"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="AMinionMonster::FinishDying" name="AMinionMonster::FinishDying">
+<area shape="rect" id="Node000001" title=" " alt="" coords="230,37,422,64"/>
+<area shape="rect" id="Node000002" href="$class_a_minion_monster.html#a0dc3c10547100acaed04aa410111401b" title=" " alt="" coords="5,29,182,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,53,182,53,182,48,214,48"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="131,16,117,10,93,8,72,10,58,15,53,21,55,28,49,29,48,19,55,10,70,5,94,3,118,5,133,11"/>
+</map>

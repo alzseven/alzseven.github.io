@@ -1,0 +1,15 @@
+<map id="AKPTLobbyGameMode::PostLogin" name="AKPTLobbyGameMode::PostLogin">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,105,172,148"/>
+<area shape="rect" id="Node000002" href="$class_a_k_p_t_lobby_game_state.html#a2132d2cf98501e81533c59a90a344875" title=" " alt="" coords="234,72,392,115"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,112,218,105,219,110,172,117"/>
+<area shape="rect" id="Node000005" href="$class_a_k_p_t_player_state.html#a101f3e49cf5abbbf303907f02f5f0c9f" title=" " alt="" coords="220,139,406,181"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="172,136,205,141,204,147,171,142"/>
+<area shape="rect" id="Node000003" href="$class_a_k_p_t_lobby_game_state.html#ad3e23aefadf77ce7d9914ed71ce1fcdb" title=" " alt="" coords="473,5,638,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="391,69,460,50,461,55,393,74"/>
+<area shape="rect" id="Node000004" href="$class_a_k_p_t_lobby_game_state.html#a2c2579115ce65383ac18f545fe417e51" title=" " alt="" coords="472,72,639,115"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="392,91,456,91,456,96,392,96"/>
+<area shape="rect" id="Node000006" href="$class_a_k_p_t_player_state.html#ae76783471e033ac0ece5ebe988856b1b" title="업그레이드 선택 기회를 추가합니다." alt="" coords="454,139,657,181"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="406,157,438,157,438,163,406,163"/>
+<area shape="rect" id="Node000007" href="$class_a_k_p_t_player_state.html#aa41c46851e05f762ccd8c2fc98aa505a" title=" " alt="" coords="705,139,879,181"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="658,157,690,157,690,163,658,163"/>
+</map>

@@ -1,0 +1,27 @@
+var class_u_base_laser_attack_ability =
+[
+    [ "UBaseLaserAttackAbility", "class_u_base_laser_attack_ability.html#abd26ecf6cee23237e9249ce68b42fa62", null ],
+    [ "ActivateAbility", "class_u_base_laser_attack_ability.html#a26ff67b6441cf3c270bb40024bb261f0", null ],
+    [ "ActivateAbility_BP", "class_u_base_laser_attack_ability.html#ad1a11b3bbe71ec74e20323116cad88fe", null ],
+    [ "EndAbility", "class_u_base_laser_attack_ability.html#a872ab3f13348f056b6148f62cf3fffc7", null ],
+    [ "FinishLaserAttack", "class_u_base_laser_attack_ability.html#a1f265f5b299f3057b632ab3d32970ea6", null ],
+    [ "GetLifetimeReplicatedProps", "class_u_base_laser_attack_ability.html#aa398b1c8400be1004cc48ab88c2372a9", null ],
+    [ "SpawnAndStartLasers", "class_u_base_laser_attack_ability.html#ac49822a928fe96077caded42985e05d7", null ],
+    [ "SpawnLaserIndicator", "class_u_base_laser_attack_ability.html#a674fe5df0cdc156691878ce8e00f15f2", null ],
+    [ "bInfiniteDuration", "class_u_base_laser_attack_ability.html#ae15806bde680b99e1d95ae68e2fed7f1", null ],
+    [ "CastingMontage", "class_u_base_laser_attack_ability.html#a727c7965fcefc52a0f75b864922506a3", null ],
+    [ "DamageGameplayTag", "class_u_base_laser_attack_ability.html#a0d0b62e41bad262d0a70dd8295ea6826", null ],
+    [ "DamagePerSecond", "class_u_base_laser_attack_ability.html#a35b3f984a62e5bd03f9894eb57bfdf2c", null ],
+    [ "DamageTickInterval", "class_u_base_laser_attack_ability.html#a36c4194dbb2a144b0faa7d2f3abdc639", null ],
+    [ "IndicatorTime", "class_u_base_laser_attack_ability.html#aed70cc1062f9a93c8ad517e5632386c0", null ],
+    [ "InitialRotationOffset", "class_u_base_laser_attack_ability.html#a21606085ba0ccebb2f3066921459b0bb", null ],
+    [ "LaserBeamClass", "class_u_base_laser_attack_ability.html#aeba0f1d87bfd73bd5ffc85c456a9d069", null ],
+    [ "LaserDuration", "class_u_base_laser_attack_ability.html#a3cdd77ecb02c7b3ffa1161894f732ff2", null ],
+    [ "LaserIndicatorClass", "class_u_base_laser_attack_ability.html#aa532f1e8319047faa3a5e7f453e4b627", null ],
+    [ "LaserLength", "class_u_base_laser_attack_ability.html#a4d6fd6f66ecce3751871926729982427", null ],
+    [ "LaserWidth", "class_u_base_laser_attack_ability.html#a052684343b2b10826cd3d60f21b819d7", null ],
+    [ "NumberOfLasers", "class_u_base_laser_attack_ability.html#a89d3e422478438952bdc03c0391b8e08", null ],
+    [ "PayloadEffectClass", "class_u_base_laser_attack_ability.html#aeb50e2a57d521db100b75b7d84ec04df", null ],
+    [ "RotationSpeed", "class_u_base_laser_attack_ability.html#a21c04aa288316941f07a73bd46cb55bf", null ],
+    [ "SpawnRadius", "class_u_base_laser_attack_ability.html#ad50f21c620a0524361b37fbfb8c21b41", null ]
+];

@@ -1,0 +1,13 @@
+<map id="UUIManagerSubsystem::OnChangeGameStateTag" name="UUIManagerSubsystem::OnChangeGameStateTag">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,184,81"/>
+<area shape="rect" id="Node000002" href="$class_u_u_i_manager_subsystem.html#a3d1d102db04c24f74872b749cc41e0cf" title=" " alt="" coords="232,39,393,81"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="184,57,216,57,216,63,184,63"/>
+<area shape="rect" id="Node000003" href="$class_u_u_i_manager_subsystem.html#ae6e92a8dab7f856443cfe5c4d00b25c9" title=" " alt="" coords="441,5,602,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="393,44,425,39,426,45,394,50"/>
+<area shape="rect" id="Node000006" href="$class_u_u_i_manager_subsystem.html#af61f694a539b5d427654903bc5944cf0" title=" " alt="" coords="441,72,602,115"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="394,70,426,75,425,81,393,76"/>
+<area shape="rect" id="Node000004" href="$class_u_u_i_manager_subsystem.html#acaac8367f6b3ad4c0509900d7f01b65a" title=" " alt="" coords="650,5,842,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="602,24,635,24,635,29,602,29"/>
+<area shape="rect" id="Node000005" href="$class_u_u_i_manager_subsystem.html#a6c815ab68107e8e616ddb62dd3391d2c" title=" " alt="" coords="890,5,1051,48"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="842,24,874,24,874,29,842,29"/>
+</map>

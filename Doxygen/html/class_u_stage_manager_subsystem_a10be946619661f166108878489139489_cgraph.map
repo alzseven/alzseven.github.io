@@ -1,0 +1,13 @@
+<map id="UStageManagerSubsystem::SetStageDataToSpawner" name="UStageManagerSubsystem::SetStageDataToSpawner">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,93,187,136"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="52,93,51,83,58,74,73,69,96,67,121,69,135,75,133,80,119,74,96,72,74,74,61,79,56,85,58,92"/>
+<area shape="rect" id="Node000002" href="$class_u_stage_manager_subsystem.html#a8386ea09d547e37b0110a5f62dd2fb9d" title=" " alt="" coords="235,5,416,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,90,252,52,254,57,155,95"/>
+<area shape="rect" id="Node000003" href="$class_u_stage_manager_subsystem.html#a1b506743975f481d0cd15a1153f0820d" title=" " alt="" coords="464,93,645,136"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="187,109,235,108,416,108,448,109,448,114,416,113,235,113,187,114"/>
+<area shape="rect" id="Node000004" href="$class_u_stage_manager_subsystem.html#acee67f86b9c712f48829d333b472a58a" title=" " alt="" coords="235,123,416,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="187,124,220,128,219,133,187,129"/>
+<area shape="rect" id="Node000005" href="$class_u_stage_manager_subsystem.html#a8a5a0fc89c9effbbb84cb8ea7729d1bc" title=" " alt="" coords="235,189,416,232"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="144,134,236,175,250,181,248,186,234,180,142,139"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="416,130,448,126,449,131,417,135"/>
+</map>

@@ -1,0 +1,38 @@
+<map id="AKPTInGameMode::StartPlay" name="AKPTInGameMode::StartPlay">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,180,202,207"/>
+<area shape="rect" id="Node000002" href="$class_a_k_p_t_in_game_mode.html#a334c0aa77939b7960e58785eff22e00e" title=" " alt="" coords="254,5,468,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,178,168,120,206,87,248,58,258,53,261,57,251,62,209,91,172,124,118,181"/>
+<area shape="rect" id="Node000003" href="$class_a_k_p_t_in_game_mode.html#a0368a48967da2d4e05b79760d325efd2" title=" " alt="" coords="254,72,468,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="131,177,249,124,267,118,269,123,251,129,133,182"/>
+<area shape="rect" id="Node000004" href="$class_a_k_p_t_in_game_mode.html#a97f3e2361fae3fa048ea5c3c5f5c41b8" title=" " alt="" coords="254,139,468,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="202,178,238,173,239,178,203,183"/>
+<area shape="rect" id="Node000005" href="$class_a_k_p_t_in_game_mode.html#a53520ef95b9f8a4c66bfbb5277630e59" title=" " alt="" coords="258,205,464,248"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="203,203,243,209,242,214,202,209"/>
+<area shape="rect" id="Node000006" href="$class_a_k_p_t_in_game_mode.html#accedad98ce10e39419a3dbe21eb0286d" title=" " alt="" coords="250,272,472,315"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="133,205,251,258,269,264,267,269,249,262,131,210"/>
+<area shape="rect" id="Node000007" href="$class_a_k_p_t_in_game_mode.html#a9f93e98963e67a4aec973d492c0b437a" title="새 라운드를 시작합니다." alt="" coords="257,339,465,365"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="118,205,171,264,209,297,251,324,264,330,262,335,248,329,205,301,167,267,114,209"/>
+<area shape="rect" id="Node000008" href="$class_a_k_p_t_in_game_mode.html#aa4f70056d702908efb82a3a085b2d832" title="주간 페이즈의 시작을 처리합니다." alt="" coords="520,331,727,373"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="465,349,504,349,504,355,465,355"/>
+<area shape="rect" id="Node000009" href="$class_a_k_p_t_in_game_mode.html#ad299e138b605334f03841982928f4e6e" title="특정 플레이어를 현재 게임 페이즈에 맞게 초기화합니다." alt="" coords="775,331,966,373"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="728,349,760,349,760,355,728,355"/>
+<area shape="rect" id="Node000010" href="$class_a_k_p_t_player_state.html#a3f0fd46533843d108f4569bd68d9b233" title=" " alt="" coords="1530,216,1720,259"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="878,329,897,292,926,247,964,202,987,183,1012,168,1048,153,1085,142,1160,130,1237,129,1314,136,1387,151,1454,169,1562,207,1561,212,1453,174,1386,156,1313,142,1237,134,1161,135,1086,147,1050,158,1015,173,990,188,968,206,930,250,902,295,883,332"/>
+<area shape="rect" id="Node000011" href="$class_a_k_p_t_player_state.html#a6989c3ebb86791d3a7265d8f5dc90b93" title=" " alt="" coords="1025,207,1224,249"/>
+<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="899,328,951,293,1012,259,1027,253,1029,258,1015,264,954,298,902,332"/>
+<area shape="rect" id="Node000012" href="$class_u_player_reward_state_component.html#a13152160f317ee674b6c1dde2d1bb0e7" title="처리해야 할 보상이 남아있는지 확인합니다." alt="" coords="1019,297,1230,340"/>
+<area shape="poly" id="edge12_Node000009_Node000012" title=" " alt="" coords="966,337,1003,332,1003,337,966,342"/>
+<area shape="rect" id="Node000013" href="$class_a_k_p_t_in_game_mode.html#a1a9ee04a849c50e213574d166ea3eda5" title="특정 플레이어에게 카드 선택 기회를 제공합니다." alt="" coords="1034,364,1215,407"/>
+<area shape="poly" id="edge14_Node000009_Node000013" title=" " alt="" coords="966,362,1019,369,1018,374,966,367"/>
+<area shape="rect" id="Node000014" href="$class_a_k_p_t_in_game_mode.html#a23300b5648c661902a39ec934b2de357" title=" " alt="" coords="1014,431,1235,473"/>
+<area shape="poly" id="edge15_Node000009_Node000014" title=" " alt="" coords="915,371,1015,416,1033,423,1031,428,1013,421,913,376"/>
+<area shape="rect" id="Node000016" href="$class_a_k_p_t_player_state.html#ae76783471e033ac0ece5ebe988856b1b" title="업그레이드 선택 기회를 추가합니다." alt="" coords="1023,497,1226,540"/>
+<area shape="poly" id="edge18_Node000009_Node000016" title=" " alt="" coords="891,372,943,427,977,457,1015,483,1025,488,1022,493,1012,488,974,461,939,431,887,376"/>
+<area shape="poly" id="edge11_Node000011_Node000011" title=" " alt="" coords="1076,207,1075,197,1083,188,1099,182,1124,180,1151,182,1168,189,1166,194,1150,188,1124,185,1100,187,1085,192,1080,198,1082,206"/>
+<area shape="poly" id="edge13_Node000012_Node000012" title=" " alt="" coords="1076,297,1075,287,1083,278,1099,273,1124,271,1151,273,1168,279,1166,284,1150,278,1124,276,1100,278,1085,283,1080,289,1082,296"/>
+<area shape="rect" id="Node000015" href="$class_a_k_p_t_in_game_mode.html#a4d83e6405b91bdefb43aeac062b7b099" title=" " alt="" coords="1283,307,1482,349"/>
+<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="1205,428,1234,416,1289,387,1338,356,1340,361,1291,392,1236,421,1207,433"/>
+<area shape="poly" id="edge17_Node000015_Node000010" title=" " alt="" coords="1441,304,1551,262,1553,267,1443,309"/>
+<area shape="rect" id="Node000017" href="$class_a_k_p_t_player_state.html#aa41c46851e05f762ccd8c2fc98aa505a" title=" " alt="" coords="1296,497,1469,540"/>
+<area shape="poly" id="edge19_Node000016_Node000017" title=" " alt="" coords="1226,516,1281,516,1281,521,1226,521"/>
+</map>

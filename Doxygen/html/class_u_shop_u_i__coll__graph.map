@@ -1,0 +1,7 @@
+<map id="UShopUI" name="UShopUI">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,405,264,1408"/>
+<area shape="rect" id="Node000002" href="$class_u_u_i_base.html" title=" " alt="" coords="26,123,243,357"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,372,138,406,132,406,132,372"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="90,5,180,75"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="138,90,138,123,132,123,132,90"/>
+</map>

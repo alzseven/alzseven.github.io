@@ -1,0 +1,25 @@
+<map id="UInGameHUD::OnGameStateSet" name="UInGameHUD::OnGameStateSet">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,143,224,169"/>
+<area shape="rect" id="Node000002" href="$class_u_in_game_h_u_d.html#ad4ea3a784dd89f918799a49b145846ba" title=" " alt="" coords="272,135,493,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,153,256,153,256,159,224,159"/>
+<area shape="rect" id="Node000003" href="$class_u_in_game_h_u_d.html#ab7c7e04ab365d90d164230522904ef06" title=" " alt="" coords="543,72,791,115"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="482,131,552,116,553,121,483,137"/>
+<area shape="rect" id="Node000007" href="$class_u_in_game_h_u_d.html#ae5432789c54f0fb4c503b8b353c46029" title=" " alt="" coords="541,168,793,211"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="494,166,526,170,525,175,493,172"/>
+<area shape="rect" id="Node000004" href="$class_u_state_manager_component.html#aa02160df8ceffa37f487dfbdfc8cb2fd" title=" " alt="" coords="865,5,1044,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="761,69,849,48,850,54,763,74"/>
+<area shape="rect" id="Node000006" href="$class_u_in_game_h_u_d.html#a202062936a0a60c05aac96f89709a2cf" title=" " alt="" coords="841,72,1068,115"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="792,91,826,91,826,96,792,96"/>
+<area shape="rect" id="Node000005" href="$class_u_state_manager_component.html#ac4e405056aaabb201b59d2885dcc22be" title=" " alt="" coords="1116,5,1295,48"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1045,24,1100,24,1100,29,1045,29"/>
+<area shape="rect" id="Node000008" href="$class_u_team_stats_component.html#a02772b4fd5c6a00656403377a0c9ca8d" title=" " alt="" coords="874,139,1035,181"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="793,174,858,167,859,172,794,179"/>
+<area shape="rect" id="Node000011" href="$class_u_in_game_h_u_d.html#a7e1db18a43569f61eaf2b3e499cc4f0d" title=" " alt="" coords="864,205,1045,232"/>
+<area shape="poly" id="edge10_Node000007_Node000011" title=" " alt="" coords="794,200,849,205,849,211,793,205"/>
+<area shape="rect" id="Node000012" href="$class_u_in_game_h_u_d.html#abec8edfbf2a43178d1311adb10cf1f8d" title=" " alt="" coords="860,256,1049,283"/>
+<area shape="poly" id="edge11_Node000007_Node000012" title=" " alt="" coords="734,209,842,241,873,249,872,255,841,247,733,214"/>
+<area shape="rect" id="Node000009" href="$class_u_team_stats_component.html#a1029e934e4cbbaee54579856de5fc89a" title=" " alt="" coords="1118,105,1292,148"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="1035,147,1103,138,1104,143,1036,152"/>
+<area shape="rect" id="Node000010" href="$class_u_team_stats_component.html#a468a4b3491d730096db1e25973108d28" title=" " alt="" coords="1125,172,1286,215"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="1036,168,1110,178,1109,183,1035,173"/>
+</map>

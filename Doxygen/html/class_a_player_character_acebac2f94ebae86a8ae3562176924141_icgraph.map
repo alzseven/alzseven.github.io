@@ -1,0 +1,6 @@
+<map id="APlayerCharacter::DetectInteractables" name="APlayerCharacter::DetectInteractables">
+<area shape="rect" id="Node000001" title=" " alt="" coords="245,29,416,72"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="368,16,354,10,330,8,309,10,295,15,290,21,292,28,287,29,285,19,292,10,308,5,330,3,355,5,370,11"/>
+<area shape="rect" id="Node000002" href="$class_a_player_character.html#aabd1d46483746c34c35da55d816d22f3" title=" " alt="" coords="5,37,197,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,53,197,53,197,48,230,48"/>
+</map>

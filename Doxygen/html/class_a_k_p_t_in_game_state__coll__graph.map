@@ -1,0 +1,7 @@
+<map id="AKPTInGameState" name="AKPTInGameState">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,139,275,549"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="11,13,96,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,96,83,138,78,139,65,98"/>
+<area shape="rect" id="Node000003" href="$class_i_component_owner_interface.html" title=" " alt="" coords="120,5,336,91"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="214,106,204,140,199,138,209,104"/>
+</map>

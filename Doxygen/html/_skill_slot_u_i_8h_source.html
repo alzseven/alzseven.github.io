@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/UI/Skill/SkillSlotUI.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_skill_slot_u_i_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SkillSlotUI.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_skill_slot_u_i_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_u_i_base_8h.html">UI/UIBase.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_game_structs_8h.html">Data/GameStructs.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_skill_data_8h.html">Skill/Data/SkillData.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;SkillSlotUI.generated.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">class </span>URichTextBlock;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">class </span>UTextBlock;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">class </span>UImage;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">class </span><a class="code hl_class" href="class_u_button_image.html">UButtonImage</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">class </span>UBorder;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">class </span>UMultiLineEditableTextBox;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnAppearAnimationFinished, int32, Index);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnHoveredSkillSlotUI, <a class="code hl_class" href="class_u_skill_slot_u_i.html">USkillSlotUI</a>*, SkillSlotUI);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnUnHoveredSkillSlotUI, <a class="code hl_class" href="class_u_skill_slot_u_i.html">USkillSlotUI</a>*, SkillSlotUI);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="_skill_slot_u_i_8h.html#a86f3dfd2d412dce983b5b3895035f482">   25</a></span>UENUM()</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>enum class <a class="code hl_variable" href="_skill_slot_u_i_8h.html#a86f3dfd2d412dce983b5b3895035f482">ESkillSlotType</a></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="_skill_slot_u_i_8h.html#a91761da4aa7d1caad73e7c61e6931fd4">   28</a></span>    <a class="code hl_variable" href="_skill_slot_u_i_8h.html#abe6319162529a716a082e8c9346f5dc4">TYPE_REWARD</a>, <a class="code hl_variable" href="_skill_slot_u_i_8h.html#a91761da4aa7d1caad73e7c61e6931fd4">TYPE_HUD</a>, TYPE_SELECT</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
+</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html">   31</a></span>UCLASS()</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>class KPT_API <a class="code hl_class" href="class_u_skill_slot_u_i.html">USkillSlotUI</a> : public <a class="code hl_class" href="class_u_u_i_base.html">UUIBase</a></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">// public:</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">//  UFUNCTION(BlueprintImplementableEvent)</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">//  void ChangeColor();</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_skill_slot_u_i.html#aec345f99572d29e26320369d80b46c11">NativeTick</a>(<span class="keyword">const</span> FGeometry&amp; MyGeometry, <span class="keywordtype">float</span> InDeltaTime) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_skill_slot_u_i.html#a6c721baa884c62c5f499ab183184d6fd">NativeConstruct</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_skill_slot_u_i.html#a743cf77b779c8b2c80581b1a7e5fc0ba">NativePreConstruct</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_skill_slot_u_i.html#ab4043a2f763166785ed122652128b362">NativeDestruct</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_skill_slot_u_i.html#ac228e5bfd8e2d7d6ec8e67b4c9c58a1b">NativeOnMouseEnter</a>(FGeometry <span class="keyword">const</span>&amp; MyGeometry, FPointerEvent <span class="keyword">const</span>&amp; MouseEvent) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">// OnMouseLeave 대신 NativeOnMouseLeave를 사용합니다.</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_skill_slot_u_i.html#ad886c9732b982f05b48a725078be1a3d">NativeOnMouseLeave</a>(FPointerEvent <span class="keyword">const</span>&amp; MouseEvent) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    UFUNCTION()</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_skill_slot_u_i.html#a3bdd171fdd89a129a456c9b89bf47c6d">UpdateSlotVisual</a>(<a class="code hl_struct" href="struct_f_card_reward_data.html">FCardRewardData</a> SkillData, FName RowName);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_skill_slot_u_i.html#a3bdd171fdd89a129a456c9b89bf47c6d">UpdateSlotVisual</a>(<a class="code hl_struct" href="struct_f_skill_data.html">FSkillData</a> SkillData);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    UFUNCTION()</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_skill_slot_u_i.html#ae67da149a1fa61dd34827795ab8821e5">PreUpdateSlotVisual</a>(<a class="code hl_struct" href="struct_f_skill_data.html">FSkillData</a> SkillData);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    UFUNCTION()</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_skill_slot_u_i.html#a2b5671d82fb41eaf7d665e35297e6338">ClearSlotVisual</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a5158c653f4c572e913425c50d0dfc131">   66</a></span>    FOnAppearAnimationFinished <a class="code hl_variable" href="class_u_skill_slot_u_i.html#a5158c653f4c572e913425c50d0dfc131">OnAppearAnimationFinished</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    UFUNCTION()</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    void <a class="code hl_function" href="class_u_skill_slot_u_i.html#ae29097debd34c3eee32bed4d79194efd">HandleFinishedAppearAnimation</a>();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    UFUNCTION()</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_skill_slot_u_i.html#a767d282f328026f7c4ecf7df95201611">HandleFinishedOnClickedAnimation</a>();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    UFUNCTION()</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a2053db65a67f4996fa1946275722b29d">   75</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_skill_slot_u_i.html#a2053db65a67f4996fa1946275722b29d">SetSlotIndex</a>(int32 Index){<a class="code hl_variable" href="class_u_skill_slot_u_i.html#a6f7e450f6b82bd93683c101ef9a7bd0d">SlotIndex</a> = Index;};</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    UFUNCTION()</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    void PlayAppearAnimation();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    UFUNCTION()</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">void</span> PlayOnClickedAnimation();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    UFUNCTION()</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">void</span> UpdateCooldown(<span class="keywordtype">float</span> DeltaTime);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    UFUNCTION()</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">void</span> SelectMatchingVisual(<span class="keywordtype">bool</span> bIsSelect);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    UFUNCTION()</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#ab9c3f9b553d1c30ca37bbeb0d354c2d0">   90</a></span>    const FName <a class="code hl_function" href="class_u_skill_slot_u_i.html#ab9c3f9b553d1c30ca37bbeb0d354c2d0">GetCachedRow</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_u_skill_slot_u_i.html#ac2689ad649ef1fa76c4b15e6a63fc9d8">CachedRowName</a>; };</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    UFUNCTION()</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#af9bb6c6d104da52f0a3ccd902859e934">   93</a></span>    const FName <a class="code hl_function" href="class_u_skill_slot_u_i.html#af9bb6c6d104da52f0a3ccd902859e934">GetCachedSkillId</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_u_skill_slot_u_i.html#a3810e3eacfc89243a4de3de42eec10b1">CachedSkillId</a>; };</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    UFUNCTION()</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a6fcc9f2a147965a08aa852a6f1ff5ecc">   96</a></span>    const <a class="code hl_struct" href="struct_f_skill_data.html">FSkillData</a>&amp; <a class="code hl_function" href="class_u_skill_slot_u_i.html#a6fcc9f2a147965a08aa852a6f1ff5ecc">GetCachedSkillData</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="class_u_skill_slot_u_i.html#af93ba19ae84f41f4d000aeb58dc0a94a">CachedSkillData</a>; };</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="comment">// UFUNCTION()</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="comment">// int32 GetSlotIndex(int32 Index){SlotIndex = Index;};</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a363402a86ab9704ce5c3cc8934702224">  100</a></span>    FOnHoveredSkillSlotUI <a class="code hl_variable" href="class_u_skill_slot_u_i.html#a363402a86ab9704ce5c3cc8934702224">OnHoveredSkillSlotUI</a>;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a48baf474dd2d777fbb4a67d00f29db16">  101</a></span>    FOnUnHoveredSkillSlotUI <a class="code hl_variable" href="class_u_skill_slot_u_i.html#a48baf474dd2d777fbb4a67d00f29db16">OnUnHoveredSkillSlotUI</a>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    UFUNCTION()</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a22d62ba007e72596a3b3f8e3b7704891">  105</a></span>    const <span class="keywordtype">bool</span> <a class="code hl_function" href="class_u_skill_slot_u_i.html#a22d62ba007e72596a3b3f8e3b7704891">GetIsPreSlot</a>(){<span class="keywordflow">return</span> <a class="code hl_variable" href="class_u_skill_slot_u_i.html#aed51aefee05267bb14981a8c9f4d92bf">bIsPreSlot</a>;};</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a178384a006379c316abd741b1209d715">  108</a></span>    FWidgetAnimationDynamicEvent <a class="code hl_variable" href="class_u_skill_slot_u_i.html#a178384a006379c316abd741b1209d715">AppearAnimationFinishEvent</a>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#ac064ca1d3197fabbf57a0c587dbdfbef">  109</a></span>    FWidgetAnimationDynamicEvent <a class="code hl_variable" href="class_u_skill_slot_u_i.html#ac064ca1d3197fabbf57a0c587dbdfbef">ClickedAnimationFinishEvent</a>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    FReply <a class="code hl_function" href="class_u_skill_slot_u_i.html#a6ab55b4b37bfa83881de545f29a7091a">NativeOnMouseButtonDown</a>( <span class="keyword">const</span> FGeometry&amp; InGeometry, <span class="keyword">const</span> FPointerEvent&amp; InMouseEvent ) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (BindWidget))</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a1a20a2e910e89be373ab207a7398dacb">  116</a></span>    TObjectPtr&lt;UImage&gt; <a class="code hl_variable" href="class_u_skill_slot_u_i.html#a1a20a2e910e89be373ab207a7398dacb">SkillImage</a>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (BindWidgetOptional))</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a2a39a51fd1bec614881f72ca52a195ec">  119</a></span>    TObjectPtr&lt;URichTextBlock&gt; <a class="code hl_variable" href="class_u_skill_slot_u_i.html#a2a39a51fd1bec614881f72ca52a195ec">SkillDesc</a>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (BindWidgetOptional))</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#ad1edb201379f6acef8114a10b9f56022">  122</a></span>    TObjectPtr&lt;UImage&gt; <a class="code hl_variable" href="class_u_skill_slot_u_i.html#ad1edb201379f6acef8114a10b9f56022">SkillOutlineImage</a>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (BindWidgetOptional))</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#ab16bdd0084eb24b34f023c0d6f636ecd">  125</a></span>    TObjectPtr&lt;UTextBlock&gt; <a class="code hl_variable" href="class_u_skill_slot_u_i.html#ab16bdd0084eb24b34f023c0d6f636ecd">RewardType</a>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (BindWidgetOptional))</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a0a293f02b7202e4cd38d23d554eca748">  128</a></span>    TObjectPtr&lt;UTextBlock&gt; <a class="code hl_variable" href="class_u_skill_slot_u_i.html#a0a293f02b7202e4cd38d23d554eca748">SkillName</a>;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (BindWidgetOptional))</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a4847ec6170b258d18d62bfd37de8fd71">  131</a></span>    TObjectPtr&lt;UImage&gt; <a class="code hl_variable" href="class_u_skill_slot_u_i.html#a4847ec6170b258d18d62bfd37de8fd71">SelectImage</a>;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (BindWidgetOptional))</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a48f25b052e541186fd62475b1018534b">  134</a></span>    TObjectPtr&lt;UBorder&gt; <a class="code hl_variable" href="class_u_skill_slot_u_i.html#a48f25b052e541186fd62475b1018534b">SkillBorder</a>;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    UPROPERTY(VisibleAnywhere, BlueprintReadWrite)</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#ac2689ad649ef1fa76c4b15e6a63fc9d8">  137</a></span>    FName <a class="code hl_variable" href="class_u_skill_slot_u_i.html#ac2689ad649ef1fa76c4b15e6a63fc9d8">CachedRowName</a>;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    UPROPERTY(VisibleAnywhere, BlueprintReadWrite)</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a3810e3eacfc89243a4de3de42eec10b1">  140</a></span>    FName <a class="code hl_variable" href="class_u_skill_slot_u_i.html#a3810e3eacfc89243a4de3de42eec10b1">CachedSkillId</a>;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    UPROPERTY(Transient, meta = (BindWidgetAnimOptional))</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a79e97f39247a3afec0291caac5cf1fe5">  143</a></span>    TObjectPtr&lt;UWidgetAnimation&gt; <a class="code hl_variable" href="class_u_skill_slot_u_i.html#a79e97f39247a3afec0291caac5cf1fe5">AppearAnimation</a>;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    UPROPERTY(Transient, meta = (BindWidgetAnimOptional))</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#ae28e78a64a7c93df069152009955dbfd">  146</a></span>    TObjectPtr&lt;UWidgetAnimation&gt; <a class="code hl_variable" href="class_u_skill_slot_u_i.html#ae28e78a64a7c93df069152009955dbfd">OnMouseAnimation</a>;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    UPROPERTY(Transient, meta = (BindWidgetAnimOptional))</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a41bc7aabc8ccd34abf01a8413d9349e5">  149</a></span>    TObjectPtr&lt;UWidgetAnimation&gt; <a class="code hl_variable" href="class_u_skill_slot_u_i.html#a41bc7aabc8ccd34abf01a8413d9349e5">OnClickedAnimation</a>;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    UPROPERTY(Transient, meta = (BindWidgetAnimOptional))</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a68c7391eb817582db4845ed48ffa71ca">  152</a></span>    TObjectPtr&lt;UWidgetAnimation&gt; <a class="code hl_variable" href="class_u_skill_slot_u_i.html#a68c7391eb817582db4845ed48ffa71ca">OnSkillCoolTimeAnimation</a>;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    UPROPERTY()</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a6f7e450f6b82bd93683c101ef9a7bd0d">  155</a></span>    int32 <a class="code hl_variable" href="class_u_skill_slot_u_i.html#a6f7e450f6b82bd93683c101ef9a7bd0d">SlotIndex</a>;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    UPROPERTY()</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a71d9267de8b7399f7cbd6135224e48b9">  158</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_u_skill_slot_u_i.html#a71d9267de8b7399f7cbd6135224e48b9">bHasInitSkillData</a> = false;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    UPROPERTY(BlueprintReadWrite, meta = (BindWidgetOptional))</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a8f0fcc15899e3951f11a9722968dd600">  162</a></span>    TObjectPtr&lt;UImage&gt; <a class="code hl_variable" href="class_u_skill_slot_u_i.html#a8f0fcc15899e3951f11a9722968dd600">CoolTimeImage</a>;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    UPROPERTY(BlueprintReadWrite)</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a3ea9463026faedf67c30f67b3ed8a19a">  165</a></span>    TObjectPtr&lt;UMaterialInstanceDynamic&gt; <a class="code hl_variable" href="class_u_skill_slot_u_i.html#a3ea9463026faedf67c30f67b3ed8a19a">CooldownMaterial</a>;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    UPROPERTY()</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#ac5d18896a68877366f553e9cb2e45eb6">  168</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_skill_slot_u_i.html#ac5d18896a68877366f553e9cb2e45eb6">CurSkillCoolTime</a> = 0.f;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    UPROPERTY()</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a5685a6099aaf5fb75ef6bc1d3fdc2d2a">  171</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_skill_slot_u_i.html#a5685a6099aaf5fb75ef6bc1d3fdc2d2a">MaxSkillCoolTime</a> = 1.f;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    UPROPERTY()</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#aed51aefee05267bb14981a8c9f4d92bf">  174</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_u_skill_slot_u_i.html#aed51aefee05267bb14981a8c9f4d92bf">bIsPreSlot</a> = false;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    UPROPERTY()</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a0e40eb2be794d2a797388873877c83b2">  177</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_u_skill_slot_u_i.html#a0e40eb2be794d2a797388873877c83b2">bHasCachedSkillData</a> = false;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#af93ba19ae84f41f4d000aeb58dc0a94a">  179</a></span>    <a class="code hl_struct" href="struct_f_skill_data.html">FSkillData</a> <a class="code hl_variable" href="class_u_skill_slot_u_i.html#af93ba19ae84f41f4d000aeb58dc0a94a">CachedSkillData</a>;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    UPROPERTY(EditAnywhere, BlueprintReadWrite)</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a5d2fce2c243fc75a9668c184576e3376">  182</a></span>    <a class="code hl_variable" href="_skill_slot_u_i_8h.html#a86f3dfd2d412dce983b5b3895035f482">ESkillSlotType</a> <a class="code hl_variable" href="class_u_skill_slot_u_i.html#a5d2fce2c243fc75a9668c184576e3376">SlotType</a> = <a class="code hl_variable" href="_skill_slot_u_i_8h.html#a86f3dfd2d412dce983b5b3895035f482">ESkillSlotType</a>::<a class="code hl_variable" href="_skill_slot_u_i_8h.html#a91761da4aa7d1caad73e7c61e6931fd4">TYPE_HUD</a>;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="comment">// 블루프린트에서 각 등급에 맞는 머티리얼 인스턴스를 할당할 변수들입니다.</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Materials&quot;</span>)</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#ac9e41b774d59b5f83bf96ec7253fcfb6">  186</a></span>    UMaterialInterface* <a class="code hl_variable" href="class_u_skill_slot_u_i.html#ac9e41b774d59b5f83bf96ec7253fcfb6">CommonMaterial</a>;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Materials&quot;</span>)</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a6d99a38d9d9ab8b82751bd4992cca059">  189</a></span>    UMaterialInterface* <a class="code hl_variable" href="class_u_skill_slot_u_i.html#a6d99a38d9d9ab8b82751bd4992cca059">RareMaterial</a>;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Materials&quot;</span>)</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#ac434d635f1b2d4f9bf338659172cb9ed">  192</a></span>    UMaterialInterface* <a class="code hl_variable" href="class_u_skill_slot_u_i.html#ac434d635f1b2d4f9bf338659172cb9ed">EpicMaterial</a>;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Materials&quot;</span>)</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno"><a class="line" href="class_u_skill_slot_u_i.html#a654f256dcec9a38d2184d9af2bda3e71">  195</a></span>    UMaterialInterface* <a class="code hl_variable" href="class_u_skill_slot_u_i.html#a654f256dcec9a38d2184d9af2bda3e71">LegendaryMaterial</a>;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="comment">// UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = &quot;Texture&quot;)</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <span class="comment">// UTexture* CommonTexture;</span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <span class="comment">//</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="comment">// UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = &quot;Texture&quot;)</span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="comment">// UTexture* RareTexture;</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="comment">//</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="comment">// UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = &quot;Texture&quot;)</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="comment">// UTexture* EpicTexture;</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <span class="comment">//</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="comment">// UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = &quot;Texture&quot;)</span></div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    <span class="comment">// UTexture* LegendaryTexture;</span></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <span class="comment">// UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (BindWidget))</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="comment">// TObjectPtr&lt;UImage&gt; ButtonIcon;</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="comment">//</span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="comment">// UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (BindWidget))</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="comment">// TObjectPtr&lt;UButtonImage&gt; ButtonImage;</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>};</div>
+</div>
+<div class="ttc" id="a_game_structs_8h_html"><div class="ttname"><a href="_game_structs_8h.html">GameStructs.h</a></div></div>
+<div class="ttc" id="a_skill_data_8h_html"><div class="ttname"><a href="_skill_data_8h.html">SkillData.h</a></div></div>
+<div class="ttc" id="a_skill_slot_u_i_8h_html_a86f3dfd2d412dce983b5b3895035f482"><div class="ttname"><a href="_skill_slot_u_i_8h.html#a86f3dfd2d412dce983b5b3895035f482">ESkillSlotType</a></div><div class="ttdeci">enum enum class ESkillSlotType</div><div class="ttdef"><b>Definition</b> <a href="#l00025">SkillSlotUI.h:27</a></div></div>
+<div class="ttc" id="a_skill_slot_u_i_8h_html_a91761da4aa7d1caad73e7c61e6931fd4"><div class="ttname"><a href="_skill_slot_u_i_8h.html#a91761da4aa7d1caad73e7c61e6931fd4">TYPE_HUD</a></div><div class="ttdeci">TYPE_HUD</div><div class="ttdef"><b>Definition</b> <a href="#l00028">SkillSlotUI.h:28</a></div></div>
+<div class="ttc" id="a_skill_slot_u_i_8h_html_abe6319162529a716a082e8c9346f5dc4"><div class="ttname"><a href="_skill_slot_u_i_8h.html#abe6319162529a716a082e8c9346f5dc4">TYPE_REWARD</a></div><div class="ttdeci">TYPE_REWARD</div><div class="ttdef"><b>Definition</b> <a href="#l00028">SkillSlotUI.h:28</a></div></div>
+<div class="ttc" id="a_u_i_base_8h_html"><div class="ttname"><a href="_u_i_base_8h.html">UIBase.h</a></div></div>
+<div class="ttc" id="aclass_u_button_image_html"><div class="ttname"><a href="class_u_button_image.html">UButtonImage</a></div><div class="ttdef"><b>Definition</b> <a href="_button_image_8h_source.html#l00015">ButtonImage.h:17</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html"><div class="ttname"><a href="class_u_skill_slot_u_i.html">USkillSlotUI</a></div><div class="ttdef"><b>Definition</b> <a href="#l00031">SkillSlotUI.h:33</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a0a293f02b7202e4cd38d23d554eca748"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a0a293f02b7202e4cd38d23d554eca748">USkillSlotUI::SkillName</a></div><div class="ttdeci">TObjectPtr&lt; UTextBlock &gt; SkillName</div><div class="ttdef"><b>Definition</b> <a href="#l00128">SkillSlotUI.h:128</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a0e40eb2be794d2a797388873877c83b2"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a0e40eb2be794d2a797388873877c83b2">USkillSlotUI::bHasCachedSkillData</a></div><div class="ttdeci">bool bHasCachedSkillData</div><div class="ttdef"><b>Definition</b> <a href="#l00177">SkillSlotUI.h:177</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a178384a006379c316abd741b1209d715"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a178384a006379c316abd741b1209d715">USkillSlotUI::AppearAnimationFinishEvent</a></div><div class="ttdeci">FWidgetAnimationDynamicEvent AppearAnimationFinishEvent</div><div class="ttdef"><b>Definition</b> <a href="#l00108">SkillSlotUI.h:108</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a1a20a2e910e89be373ab207a7398dacb"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a1a20a2e910e89be373ab207a7398dacb">USkillSlotUI::SkillImage</a></div><div class="ttdeci">TObjectPtr&lt; UImage &gt; SkillImage</div><div class="ttdef"><b>Definition</b> <a href="#l00116">SkillSlotUI.h:116</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a2053db65a67f4996fa1946275722b29d"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a2053db65a67f4996fa1946275722b29d">USkillSlotUI::SetSlotIndex</a></div><div class="ttdeci">void SetSlotIndex(int32 Index)</div><div class="ttdef"><b>Definition</b> <a href="#l00075">SkillSlotUI.h:75</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a22d62ba007e72596a3b3f8e3b7704891"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a22d62ba007e72596a3b3f8e3b7704891">USkillSlotUI::GetIsPreSlot</a></div><div class="ttdeci">const bool GetIsPreSlot()</div><div class="ttdef"><b>Definition</b> <a href="#l00105">SkillSlotUI.h:105</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a2a39a51fd1bec614881f72ca52a195ec"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a2a39a51fd1bec614881f72ca52a195ec">USkillSlotUI::SkillDesc</a></div><div class="ttdeci">TObjectPtr&lt; URichTextBlock &gt; SkillDesc</div><div class="ttdef"><b>Definition</b> <a href="#l00119">SkillSlotUI.h:119</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a2b5671d82fb41eaf7d665e35297e6338"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a2b5671d82fb41eaf7d665e35297e6338">USkillSlotUI::ClearSlotVisual</a></div><div class="ttdeci">void ClearSlotVisual()</div><div class="ttdef"><b>Definition</b> <a href="_skill_slot_u_i_8cpp_source.html#l00362">SkillSlotUI.cpp:362</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a363402a86ab9704ce5c3cc8934702224"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a363402a86ab9704ce5c3cc8934702224">USkillSlotUI::OnHoveredSkillSlotUI</a></div><div class="ttdeci">FOnHoveredSkillSlotUI OnHoveredSkillSlotUI</div><div class="ttdef"><b>Definition</b> <a href="#l00100">SkillSlotUI.h:100</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a3810e3eacfc89243a4de3de42eec10b1"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a3810e3eacfc89243a4de3de42eec10b1">USkillSlotUI::CachedSkillId</a></div><div class="ttdeci">FName CachedSkillId</div><div class="ttdef"><b>Definition</b> <a href="#l00140">SkillSlotUI.h:140</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a3bdd171fdd89a129a456c9b89bf47c6d"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a3bdd171fdd89a129a456c9b89bf47c6d">USkillSlotUI::UpdateSlotVisual</a></div><div class="ttdeci">void UpdateSlotVisual(FCardRewardData SkillData, FName RowName)</div><div class="ttdef"><b>Definition</b> <a href="_skill_slot_u_i_8cpp_source.html#l00187">SkillSlotUI.cpp:187</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a3ea9463026faedf67c30f67b3ed8a19a"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a3ea9463026faedf67c30f67b3ed8a19a">USkillSlotUI::CooldownMaterial</a></div><div class="ttdeci">TObjectPtr&lt; UMaterialInstanceDynamic &gt; CooldownMaterial</div><div class="ttdef"><b>Definition</b> <a href="#l00165">SkillSlotUI.h:165</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a41bc7aabc8ccd34abf01a8413d9349e5"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a41bc7aabc8ccd34abf01a8413d9349e5">USkillSlotUI::OnClickedAnimation</a></div><div class="ttdeci">TObjectPtr&lt; UWidgetAnimation &gt; OnClickedAnimation</div><div class="ttdef"><b>Definition</b> <a href="#l00149">SkillSlotUI.h:149</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a4847ec6170b258d18d62bfd37de8fd71"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a4847ec6170b258d18d62bfd37de8fd71">USkillSlotUI::SelectImage</a></div><div class="ttdeci">TObjectPtr&lt; UImage &gt; SelectImage</div><div class="ttdef"><b>Definition</b> <a href="#l00131">SkillSlotUI.h:131</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a48baf474dd2d777fbb4a67d00f29db16"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a48baf474dd2d777fbb4a67d00f29db16">USkillSlotUI::OnUnHoveredSkillSlotUI</a></div><div class="ttdeci">FOnUnHoveredSkillSlotUI OnUnHoveredSkillSlotUI</div><div class="ttdef"><b>Definition</b> <a href="#l00101">SkillSlotUI.h:101</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a48f25b052e541186fd62475b1018534b"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a48f25b052e541186fd62475b1018534b">USkillSlotUI::SkillBorder</a></div><div class="ttdeci">TObjectPtr&lt; UBorder &gt; SkillBorder</div><div class="ttdef"><b>Definition</b> <a href="#l00134">SkillSlotUI.h:134</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a5158c653f4c572e913425c50d0dfc131"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a5158c653f4c572e913425c50d0dfc131">USkillSlotUI::OnAppearAnimationFinished</a></div><div class="ttdeci">FOnAppearAnimationFinished OnAppearAnimationFinished</div><div class="ttdef"><b>Definition</b> <a href="#l00066">SkillSlotUI.h:66</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a5685a6099aaf5fb75ef6bc1d3fdc2d2a"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a5685a6099aaf5fb75ef6bc1d3fdc2d2a">USkillSlotUI::MaxSkillCoolTime</a></div><div class="ttdeci">float MaxSkillCoolTime</div><div class="ttdef"><b>Definition</b> <a href="#l00171">SkillSlotUI.h:171</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a5d2fce2c243fc75a9668c184576e3376"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a5d2fce2c243fc75a9668c184576e3376">USkillSlotUI::SlotType</a></div><div class="ttdeci">ESkillSlotType SlotType</div><div class="ttdef"><b>Definition</b> <a href="#l00182">SkillSlotUI.h:182</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a654f256dcec9a38d2184d9af2bda3e71"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a654f256dcec9a38d2184d9af2bda3e71">USkillSlotUI::LegendaryMaterial</a></div><div class="ttdeci">UMaterialInterface * LegendaryMaterial</div><div class="ttdef"><b>Definition</b> <a href="#l00195">SkillSlotUI.h:195</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a68c7391eb817582db4845ed48ffa71ca"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a68c7391eb817582db4845ed48ffa71ca">USkillSlotUI::OnSkillCoolTimeAnimation</a></div><div class="ttdeci">TObjectPtr&lt; UWidgetAnimation &gt; OnSkillCoolTimeAnimation</div><div class="ttdef"><b>Definition</b> <a href="#l00152">SkillSlotUI.h:152</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a6ab55b4b37bfa83881de545f29a7091a"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a6ab55b4b37bfa83881de545f29a7091a">USkillSlotUI::NativeOnMouseButtonDown</a></div><div class="ttdeci">FReply NativeOnMouseButtonDown(const FGeometry &amp;InGeometry, const FPointerEvent &amp;InMouseEvent) override</div><div class="ttdef"><b>Definition</b> <a href="_skill_slot_u_i_8cpp_source.html#l00180">SkillSlotUI.cpp:180</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a6c721baa884c62c5f499ab183184d6fd"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a6c721baa884c62c5f499ab183184d6fd">USkillSlotUI::NativeConstruct</a></div><div class="ttdeci">virtual void NativeConstruct() override</div><div class="ttdef"><b>Definition</b> <a href="_skill_slot_u_i_8cpp_source.html#l00022">SkillSlotUI.cpp:22</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a6d99a38d9d9ab8b82751bd4992cca059"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a6d99a38d9d9ab8b82751bd4992cca059">USkillSlotUI::RareMaterial</a></div><div class="ttdeci">UMaterialInterface * RareMaterial</div><div class="ttdef"><b>Definition</b> <a href="#l00189">SkillSlotUI.h:189</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a6f7e450f6b82bd93683c101ef9a7bd0d"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a6f7e450f6b82bd93683c101ef9a7bd0d">USkillSlotUI::SlotIndex</a></div><div class="ttdeci">int32 SlotIndex</div><div class="ttdef"><b>Definition</b> <a href="#l00155">SkillSlotUI.h:155</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a6fcc9f2a147965a08aa852a6f1ff5ecc"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a6fcc9f2a147965a08aa852a6f1ff5ecc">USkillSlotUI::GetCachedSkillData</a></div><div class="ttdeci">const FSkillData &amp; GetCachedSkillData()</div><div class="ttdef"><b>Definition</b> <a href="#l00096">SkillSlotUI.h:96</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a71d9267de8b7399f7cbd6135224e48b9"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a71d9267de8b7399f7cbd6135224e48b9">USkillSlotUI::bHasInitSkillData</a></div><div class="ttdeci">bool bHasInitSkillData</div><div class="ttdef"><b>Definition</b> <a href="#l00158">SkillSlotUI.h:158</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a743cf77b779c8b2c80581b1a7e5fc0ba"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a743cf77b779c8b2c80581b1a7e5fc0ba">USkillSlotUI::NativePreConstruct</a></div><div class="ttdeci">virtual void NativePreConstruct() override</div><div class="ttdef"><b>Definition</b> <a href="_skill_slot_u_i_8cpp_source.html#l00045">SkillSlotUI.cpp:45</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a767d282f328026f7c4ecf7df95201611"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a767d282f328026f7c4ecf7df95201611">USkillSlotUI::HandleFinishedOnClickedAnimation</a></div><div class="ttdeci">void HandleFinishedOnClickedAnimation()</div><div class="ttdef"><b>Definition</b> <a href="_skill_slot_u_i_8cpp_source.html#l00104">SkillSlotUI.cpp:104</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a79e97f39247a3afec0291caac5cf1fe5"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a79e97f39247a3afec0291caac5cf1fe5">USkillSlotUI::AppearAnimation</a></div><div class="ttdeci">TObjectPtr&lt; UWidgetAnimation &gt; AppearAnimation</div><div class="ttdef"><b>Definition</b> <a href="#l00143">SkillSlotUI.h:143</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_a8f0fcc15899e3951f11a9722968dd600"><div class="ttname"><a href="class_u_skill_slot_u_i.html#a8f0fcc15899e3951f11a9722968dd600">USkillSlotUI::CoolTimeImage</a></div><div class="ttdeci">TObjectPtr&lt; UImage &gt; CoolTimeImage</div><div class="ttdef"><b>Definition</b> <a href="#l00162">SkillSlotUI.h:162</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_ab16bdd0084eb24b34f023c0d6f636ecd"><div class="ttname"><a href="class_u_skill_slot_u_i.html#ab16bdd0084eb24b34f023c0d6f636ecd">USkillSlotUI::RewardType</a></div><div class="ttdeci">TObjectPtr&lt; UTextBlock &gt; RewardType</div><div class="ttdef"><b>Definition</b> <a href="#l00125">SkillSlotUI.h:125</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_ab4043a2f763166785ed122652128b362"><div class="ttname"><a href="class_u_skill_slot_u_i.html#ab4043a2f763166785ed122652128b362">USkillSlotUI::NativeDestruct</a></div><div class="ttdeci">virtual void NativeDestruct() override</div><div class="ttdef"><b>Definition</b> <a href="_skill_slot_u_i_8cpp_source.html#l00060">SkillSlotUI.cpp:60</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_ab9c3f9b553d1c30ca37bbeb0d354c2d0"><div class="ttname"><a href="class_u_skill_slot_u_i.html#ab9c3f9b553d1c30ca37bbeb0d354c2d0">USkillSlotUI::GetCachedRow</a></div><div class="ttdeci">const FName GetCachedRow()</div><div class="ttdef"><b>Definition</b> <a href="#l00090">SkillSlotUI.h:90</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_ac064ca1d3197fabbf57a0c587dbdfbef"><div class="ttname"><a href="class_u_skill_slot_u_i.html#ac064ca1d3197fabbf57a0c587dbdfbef">USkillSlotUI::ClickedAnimationFinishEvent</a></div><div class="ttdeci">FWidgetAnimationDynamicEvent ClickedAnimationFinishEvent</div><div class="ttdef"><b>Definition</b> <a href="#l00109">SkillSlotUI.h:109</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_ac228e5bfd8e2d7d6ec8e67b4c9c58a1b"><div class="ttname"><a href="class_u_skill_slot_u_i.html#ac228e5bfd8e2d7d6ec8e67b4c9c58a1b">USkillSlotUI::NativeOnMouseEnter</a></div><div class="ttdeci">virtual void NativeOnMouseEnter(FGeometry const &amp;MyGeometry, FPointerEvent const &amp;MouseEvent) override</div><div class="ttdef"><b>Definition</b> <a href="_skill_slot_u_i_8cpp_source.html#l00065">SkillSlotUI.cpp:65</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_ac2689ad649ef1fa76c4b15e6a63fc9d8"><div class="ttname"><a href="class_u_skill_slot_u_i.html#ac2689ad649ef1fa76c4b15e6a63fc9d8">USkillSlotUI::CachedRowName</a></div><div class="ttdeci">FName CachedRowName</div><div class="ttdef"><b>Definition</b> <a href="#l00137">SkillSlotUI.h:137</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_ac434d635f1b2d4f9bf338659172cb9ed"><div class="ttname"><a href="class_u_skill_slot_u_i.html#ac434d635f1b2d4f9bf338659172cb9ed">USkillSlotUI::EpicMaterial</a></div><div class="ttdeci">UMaterialInterface * EpicMaterial</div><div class="ttdef"><b>Definition</b> <a href="#l00192">SkillSlotUI.h:192</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_ac5d18896a68877366f553e9cb2e45eb6"><div class="ttname"><a href="class_u_skill_slot_u_i.html#ac5d18896a68877366f553e9cb2e45eb6">USkillSlotUI::CurSkillCoolTime</a></div><div class="ttdeci">float CurSkillCoolTime</div><div class="ttdef"><b>Definition</b> <a href="#l00168">SkillSlotUI.h:168</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_ac9e41b774d59b5f83bf96ec7253fcfb6"><div class="ttname"><a href="class_u_skill_slot_u_i.html#ac9e41b774d59b5f83bf96ec7253fcfb6">USkillSlotUI::CommonMaterial</a></div><div class="ttdeci">UMaterialInterface * CommonMaterial</div><div class="ttdef"><b>Definition</b> <a href="#l00186">SkillSlotUI.h:186</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_ad1edb201379f6acef8114a10b9f56022"><div class="ttname"><a href="class_u_skill_slot_u_i.html#ad1edb201379f6acef8114a10b9f56022">USkillSlotUI::SkillOutlineImage</a></div><div class="ttdeci">TObjectPtr&lt; UImage &gt; SkillOutlineImage</div><div class="ttdef"><b>Definition</b> <a href="#l00122">SkillSlotUI.h:122</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_ad886c9732b982f05b48a725078be1a3d"><div class="ttname"><a href="class_u_skill_slot_u_i.html#ad886c9732b982f05b48a725078be1a3d">USkillSlotUI::NativeOnMouseLeave</a></div><div class="ttdeci">virtual void NativeOnMouseLeave(FPointerEvent const &amp;MouseEvent) override</div><div class="ttdef"><b>Definition</b> <a href="_skill_slot_u_i_8cpp_source.html#l00086">SkillSlotUI.cpp:86</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_ae28e78a64a7c93df069152009955dbfd"><div class="ttname"><a href="class_u_skill_slot_u_i.html#ae28e78a64a7c93df069152009955dbfd">USkillSlotUI::OnMouseAnimation</a></div><div class="ttdeci">TObjectPtr&lt; UWidgetAnimation &gt; OnMouseAnimation</div><div class="ttdef"><b>Definition</b> <a href="#l00146">SkillSlotUI.h:146</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_ae29097debd34c3eee32bed4d79194efd"><div class="ttname"><a href="class_u_skill_slot_u_i.html#ae29097debd34c3eee32bed4d79194efd">USkillSlotUI::HandleFinishedAppearAnimation</a></div><div class="ttdeci">void HandleFinishedAppearAnimation()</div><div class="ttdef"><b>Definition</b> <a href="_skill_slot_u_i_8cpp_source.html#l00098">SkillSlotUI.cpp:98</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_ae67da149a1fa61dd34827795ab8821e5"><div class="ttname"><a href="class_u_skill_slot_u_i.html#ae67da149a1fa61dd34827795ab8821e5">USkillSlotUI::PreUpdateSlotVisual</a></div><div class="ttdeci">void PreUpdateSlotVisual(FSkillData SkillData)</div><div class="ttdef"><b>Definition</b> <a href="_skill_slot_u_i_8cpp_source.html#l00344">SkillSlotUI.cpp:344</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_aec345f99572d29e26320369d80b46c11"><div class="ttname"><a href="class_u_skill_slot_u_i.html#aec345f99572d29e26320369d80b46c11">USkillSlotUI::NativeTick</a></div><div class="ttdeci">virtual void NativeTick(const FGeometry &amp;MyGeometry, float InDeltaTime) override</div><div class="ttdef"><b>Definition</b> <a href="_skill_slot_u_i_8cpp_source.html#l00050">SkillSlotUI.cpp:50</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_aed51aefee05267bb14981a8c9f4d92bf"><div class="ttname"><a href="class_u_skill_slot_u_i.html#aed51aefee05267bb14981a8c9f4d92bf">USkillSlotUI::bIsPreSlot</a></div><div class="ttdeci">bool bIsPreSlot</div><div class="ttdef"><b>Definition</b> <a href="#l00174">SkillSlotUI.h:174</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_af93ba19ae84f41f4d000aeb58dc0a94a"><div class="ttname"><a href="class_u_skill_slot_u_i.html#af93ba19ae84f41f4d000aeb58dc0a94a">USkillSlotUI::CachedSkillData</a></div><div class="ttdeci">FSkillData CachedSkillData</div><div class="ttdef"><b>Definition</b> <a href="#l00179">SkillSlotUI.h:179</a></div></div>
+<div class="ttc" id="aclass_u_skill_slot_u_i_html_af9bb6c6d104da52f0a3ccd902859e934"><div class="ttname"><a href="class_u_skill_slot_u_i.html#af9bb6c6d104da52f0a3ccd902859e934">USkillSlotUI::GetCachedSkillId</a></div><div class="ttdeci">const FName GetCachedSkillId()</div><div class="ttdef"><b>Definition</b> <a href="#l00093">SkillSlotUI.h:93</a></div></div>
+<div class="ttc" id="aclass_u_u_i_base_html"><div class="ttname"><a href="class_u_u_i_base.html">UUIBase</a></div><div class="ttdef"><b>Definition</b> <a href="_u_i_base_8h_source.html#l00013">UIBase.h:15</a></div></div>
+<div class="ttc" id="astruct_f_card_reward_data_html"><div class="ttname"><a href="struct_f_card_reward_data.html">FCardRewardData</a></div><div class="ttdef"><b>Definition</b> <a href="_game_structs_8h_source.html#l00050">GameStructs.h:52</a></div></div>
+<div class="ttc" id="astruct_f_skill_data_html"><div class="ttname"><a href="struct_f_skill_data.html">FSkillData</a></div><div class="ttdef"><b>Definition</b> <a href="_skill_data_8h_source.html#l00049">SkillData.h:51</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_03a35ccb76f34b0c5c973a49dad1c475.html">UI</a></li><li class="navelem"><a href="dir_ff5db37e0cc6dd4146f872e37621551a.html">Skill</a></li><li class="navelem"><a href="_skill_slot_u_i_8h.html">SkillSlotUI.h</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

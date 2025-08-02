@@ -1,0 +1,6 @@
+<map id="AProjectileBase::OnActivated_Implementation" name="AProjectileBase::OnActivated_Implementation">
+<area shape="rect" id="Node000001" title=" " alt="" coords="248,21,442,64"/>
+<area shape="rect" id="Node000002" href="$class_a_projectile_base.html#a98af5749663255a0ea9dbcfb5849fe9b" title=" " alt="" coords="5,29,200,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="232,45,200,45,200,40,232,40"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="145,17,130,10,102,8,77,10,63,15,60,20,66,27,62,31,54,21,60,11,76,5,103,3,132,5,147,12"/>
+</map>

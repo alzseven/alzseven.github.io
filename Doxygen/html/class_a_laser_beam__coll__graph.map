@@ -1,0 +1,5 @@
+<map id="ALaserBeam" name="ALaserBeam">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,123,280,853"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="118,5,168,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,90,146,123,140,123,140,90"/>
+</map>

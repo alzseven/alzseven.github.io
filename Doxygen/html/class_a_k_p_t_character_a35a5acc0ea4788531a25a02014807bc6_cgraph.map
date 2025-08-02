@@ -1,0 +1,7 @@
+<map id="AKPTCharacter::SetupPlayerInputComponent" name="AKPTCharacter::SetupPlayerInputComponent">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,198,65"/>
+<area shape="rect" id="Node000002" href="$class_a_k_p_t_character.html#a472590cc75bb2d4bbd21f01f4a1a5bdf" title="Called for looking input" alt="" coords="248,5,397,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,30,232,26,232,32,198,36"/>
+<area shape="rect" id="Node000003" href="$class_a_k_p_t_character.html#ad02769e9ba7ea1d65f425450b7fb0c8e" title="Called for movement input" alt="" coords="246,56,399,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="198,52,231,56,230,61,198,58"/>
+</map>

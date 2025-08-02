@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/AI/MinionMonster.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_minion_monster_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">MinionMonster.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_minion_monster_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="_monster_base_8h.html">MonsterBase.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_poolable_8h.html">Core/Interface/Pooling/Poolable.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_damage_floater_interface_8h.html">Core/Interface/UI/DamageFloaterInterface.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_vector_quantized2_d_8h.html">Core/Util/VectorQuantized2D.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;MinionMonster.generated.h&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">class </span><a class="code hl_class" href="class_a_gold.html">AGold</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">class </span><a class="code hl_class" href="class_a_experience.html">AExperience</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">class </span><a class="code hl_class" href="class_a_flocking_manager.html">AFlockingManager</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">class </span><a class="code hl_class" href="class_u_enemy_flocking_component.html">UEnemyFlockingComponent</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">class </span><a class="code hl_class" href="class_a_player_character.html">APlayerCharacter</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>UENUM(BlueprintType, meta = (Bitflags, UseEnumValuesAsMaskValuesInEditor = <span class="keyword">true</span>))</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="_minion_monster_8h.html#a3723e2e483d0a82c53687da782205f28">   20</a></span>enum class <a class="code hl_variable" href="_minion_monster_8h.html#a3723e2e483d0a82c53687da782205f28">EMinionState</a> : uint8</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    None = 0 UMETA(Hidden),</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="_minion_monster_8h.html#a9a3e2140b6068caa1c2600f181be578b">   23</a></span>    <a class="code hl_variable" href="_minion_monster_8h.html#a9a3e2140b6068caa1c2600f181be578b">Spawning</a> = 1 &lt;&lt; 0 UMETA(DisplayName = <span class="stringliteral">&quot;Spawning&quot;</span>),</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="_minion_monster_8h.html#a44eebc802e987be78479d3bae629e044">   24</a></span>    <a class="code hl_variable" href="_minion_monster_8h.html#a44eebc802e987be78479d3bae629e044">Idle</a> = 1 &lt;&lt; 1 UMETA(DisplayName = <span class="stringliteral">&quot;Idle&quot;</span>),</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="_minion_monster_8h.html#ac6a36919b29304414f6d378761cc0d56">   25</a></span>    <a class="code hl_variable" href="_minion_monster_8h.html#ac6a36919b29304414f6d378761cc0d56">Attack</a> = 1 &lt;&lt; 3 UMETA(DisplayName = <span class="stringliteral">&quot;Attack&quot;</span>),</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="_minion_monster_8h.html#a0e87370cc7a7ed566c96cb2a404cdcbb">   26</a></span>    <a class="code hl_variable" href="_minion_monster_8h.html#a0e87370cc7a7ed566c96cb2a404cdcbb">Dead</a> = 1 &lt;&lt; 4 UMETA(DisplayName = <span class="stringliteral">&quot;Dead&quot;</span>),</div>
+<div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="_minion_monster_8h.html#a11bdec782da5af5523f4ae7d4081a7d5">   27</a></span>    <a class="code hl_variable" href="_minion_monster_8h.html#a11bdec782da5af5523f4ae7d4081a7d5">DeSpawning</a> = 1 &lt;&lt; 5 UMETA(DisplayName = <span class="stringliteral">&quot;DeSpawning&quot;</span>)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
+</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_a_minion_monster.html">   31</a></span>UCLASS()</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>class KPT_API <a class="code hl_function" href="class_a_minion_monster.html#a822a7b6541077b4a8054e81023d0edf6">AMinionMonster</a> : public <a class="code hl_function" href="class_a_monster_base.html#af01421fb824f0341ae4fe95b39cab2cc">AMonsterBase</a>, public <a class="code hl_class" href="class_i_poolable.html">IPoolable</a>, public <a class="code hl_class" href="class_i_damage_floater_interface.html">IDamageFloaterInterface</a></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_player_character.html#a3c8c259b3de2772ba836acc7fed05832">GetLifetimeReplicatedProps</a>(TArray&lt;FLifetimeProperty&gt;&amp; OutLifetimeProps) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">// Sets default values for this actor&#39;s properties</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_function" href="class_a_minion_monster.html#a822a7b6541077b4a8054e81023d0edf6">AMinionMonster</a>();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_a_minion_monster.html#a822a7b6541077b4a8054e81023d0edf6">~AMinionMonster</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">// Called when the game starts or when spawned</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_player_character.html#aabd1d46483746c34c35da55d816d22f3">BeginPlay</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_minion_monster.html#a9d04c28642a18379b51b882681acb85a">OnSpawnFromPool_Implementation</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_minion_monster.html#aef4ee3d8dedd4094d93c19d4ac32ca6a">OnReturnToPool_Implementation</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_minion_monster.html#a8e858fecfccc8fd45d96ce265fc1c4a0">ServerLogic</a>(<span class="keywordtype">float</span> DeltaTime) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_player_character.html#aa004cab44548a13b86956fd2d922160a">Tick</a>(<span class="keywordtype">float</span> DeltaSeconds) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    UFUNCTION(BlueprintCallable)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_minion_monster.html#a49af5c742e2b37a2081e8233f19b6ec4">InitMinionMonster</a>(<a class="code hl_struct" href="struct_f_monster_data.html">FMonsterData</a> Data);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_player_character.html#aa38c751d8495a3e3d999eafad23d7a88">Die</a>(<span class="keywordtype">bool</span> bStageEnded = <span class="keyword">false</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_player_character.html#af89c388d6da40981bf481d3e362ec117">Damaged</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_player_character.html#af89c388d6da40981bf481d3e362ec117">Damaged</a>(<span class="keywordtype">float</span> DamageAmount, <span class="keywordtype">bool</span> IsCritical) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">     * Combat</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    UFUNCTION(BlueprintImplementableEvent)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_a_minion_monster.html#a974502f283017a9da85299a4075289c5">   67</a></span>    void <a class="code hl_function" href="class_a_minion_monster.html#a974502f283017a9da85299a4075289c5">DropExp</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    UFUNCTION(BlueprintImplementableEvent)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_a_minion_monster.html#a3a16bd11e82fc828ec71c56674926af8">   70</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_minion_monster.html#a3a16bd11e82fc828ec71c56674926af8">OnHit</a>();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    UFUNCTION(BlueprintCallable)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_minion_monster.html#a617617f553cc4a44ab771182d6a5baeb">OnDeath</a>();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    UFUNCTION(NetMulticast, Unreliable)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_a_minion_monster.html#a0dc3c10547100acaed04aa410111401b">   76</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_minion_monster.html#a0dc3c10547100acaed04aa410111401b">MulticastSetDesiredRotator</a>(<span class="keywordtype">float</span> Yaw);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>public:</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    virtual <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_minion_monster.html#ae43c84a0c54f363183929ec3e07cbead">ActivateDamageFloater</a>(<span class="keywordtype">float</span> DamageAmount, <span class="keywordtype">bool</span> IsCritical,AActor* AttachActor) override;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    UFUNCTION(BlueprintCallable)</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_minion_monster.html#afa673a065f725133d8e430587d6b4cb9">FinishDying</a>();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    UFUNCTION()</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_minion_monster.html#a84d245ac273bcfc522953e2d2c7964b3">OnTargetDied</a>();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    UFUNCTION(BlueprintCallable)</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_minion_monster.html#ae7e6c5d889b8de78285021ecfe796683">UpdateMinionState</a>(<a class="code hl_variable" href="_minion_monster_8h.html#a3723e2e483d0a82c53687da782205f28">EMinionState</a> InNewState);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="comment">//test</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="comment">// 복제될 위치 정보</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_minion_monster.html#a156f349f4943df609b1541a5050ed972">UpdateFlockingLocation</a>();</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    UFUNCTION()</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_minion_monster.html#a45150a2594b5f489332a13ed092638f3">OnRep_SpawnLocation</a>();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_a_minion_monster.html#ac7f7238f040b7b0747852d5686571f8f">SmoothToServerPosition</a>(<span class="keywordtype">float</span> DeltaTime);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="comment">//UPROPERTY(ReplicatedUsing=OnRep_ServerPosition)</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_a_minion_monster.html#a3084807353b86ba7470891f412b83d4c">  103</a></span>    FVector <a class="code hl_variable" href="class_a_minion_monster.html#a3084807353b86ba7470891f412b83d4c">ServerPosition</a>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="comment">// 보간용 변수들</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="class_a_minion_monster.html#a647a0d064b6fd27e0d6f1ba3a447d737">  106</a></span>    FVector <a class="code hl_variable" href="class_a_minion_monster.html#a647a0d064b6fd27e0d6f1ba3a447d737">InterpolationStartPos</a>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="class_a_minion_monster.html#a9c2b226f0b45e36ceef78eea16e06c8a">  107</a></span>    FVector <a class="code hl_variable" href="class_a_minion_monster.html#a9c2b226f0b45e36ceef78eea16e06c8a">InterpolationTargetPos</a>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="class_a_minion_monster.html#a26e10d88ae36c58b82b34323b1f7018b">  108</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_a_minion_monster.html#a26e10d88ae36c58b82b34323b1f7018b">InterpolationTime</a>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="class_a_minion_monster.html#a646f0c353cb810242795dcb5238b757d">  109</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_a_minion_monster.html#a646f0c353cb810242795dcb5238b757d">InterpolationSpeed</a> = 10.0f;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="class_a_minion_monster.html#a591c0d9a4ed5f51e3e4e161be09df665">  112</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_a_minion_monster.html#a591c0d9a4ed5f51e3e4e161be09df665">RotationUpdateInterval</a> = 0.25f;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="class_a_minion_monster.html#ab4ccff6566421173e0d7fae8c506a782">  113</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_a_minion_monster.html#ab4ccff6566421173e0d7fae8c506a782">ElapsedRotationUpdateInterval</a> = <a class="code hl_variable" href="class_a_minion_monster.html#a591c0d9a4ed5f51e3e4e161be09df665">RotationUpdateInterval</a>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    UPROPERTY(ReplicatedUsing=<a class="code hl_function" href="class_a_minion_monster.html#a45150a2594b5f489332a13ed092638f3">OnRep_SpawnLocation</a>)</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="class_a_minion_monster.html#a71964a6078380d23dae72d9813c08832">  116</a></span>    FVector <a class="code hl_variable" href="class_a_minion_monster.html#a71964a6078380d23dae72d9813c08832">SpawnLocation</a>;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>private:</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordtype">void</span> ServerSpawnFromPool();</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordtype">void</span> RegisterToFlockingManager();</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordtype">void</span> UnRegisterToFlockingManager();</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordtype">void</span> CreateItem();</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordtype">bool</span> bCanMove();</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordtype">void</span> UpdateRotation(<span class="keywordtype">float</span> DeltaTime);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordtype">void</span> Spawning(<span class="keywordtype">float</span> DeltaTime);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keywordtype">void</span> FindTarget();</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordtype">bool</span> CanAttack(<span class="keywordtype">float</span> DeltaTime);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keywordtype">void</span> Attack(<span class="keywordtype">float</span> DeltaTime);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>protected:</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = <span class="stringliteral">&quot;Minion Info&quot;</span>, Replicated)</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="class_a_minion_monster.html#ae4ff9b71172f60f40c5489f0b89d435a">  132</a></span>    <a class="code hl_variable" href="_minion_monster_8h.html#a3723e2e483d0a82c53687da782205f28">EMinionState</a> <a class="code hl_variable" href="class_a_minion_monster.html#ae4ff9b71172f60f40c5489f0b89d435a">MinionState</a>;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    UPROPERTY(VisibleAnywhere, BlueprintReadOnly)</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="class_a_minion_monster.html#ad80e0779559c508cf3ec8af1d5ece828">  135</a></span>    TObjectPtr&lt;<a class="code hl_class" href="class_u_enemy_flocking_component.html">UEnemyFlockingComponent</a>&gt; <a class="code hl_variable" href="class_a_minion_monster.html#ad80e0779559c508cf3ec8af1d5ece828">FlockingComponent</a>;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    UPROPERTY(EditAnywhere, Category = <span class="stringliteral">&quot;GAS&quot;</span>, BlueprintReadWrite)</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="class_a_minion_monster.html#a4ac8865ce233fbf20b1dcb26329b3ce7">  138</a></span>    TSubclassOf&lt;UGameplayAbility&gt; <a class="code hl_variable" href="class_a_minion_monster.html#a4ac8865ce233fbf20b1dcb26329b3ce7">AttackAbilityClass</a>;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = <span class="stringliteral">&quot;GAS&quot;</span>)</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="class_a_minion_monster.html#a0a18fb8a06849ae28ea5db8d249291dc">  141</a></span>    TSubclassOf&lt;UGameplayAbility&gt; <a class="code hl_variable" href="class_a_minion_monster.html#a0a18fb8a06849ae28ea5db8d249291dc">DeadAbilityClass</a>;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = <span class="stringliteral">&quot;Animation&quot;</span>)</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="class_a_minion_monster.html#a090e7b48e77f324a5f3bb63df3f70cdc">  144</a></span>    TObjectPtr&lt;UAnimMontage&gt; <a class="code hl_variable" href="class_a_minion_monster.html#a090e7b48e77f324a5f3bb63df3f70cdc">DeathMontage</a>;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    UPROPERTY(BlueprintReadWrite)</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="class_a_minion_monster.html#aa8e2a15f49024cf3094cc660d9b99e97">  147</a></span>    TSet&lt;TObjectPtr&lt;<a class="code hl_class" href="class_u_k_p_t_ability_system_component.html">UKPTAbilitySystemComponent</a>&gt;&gt; <a class="code hl_variable" href="class_a_minion_monster.html#aa8e2a15f49024cf3094cc660d9b99e97">PlayerASC</a>;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    UPROPERTY(EditAnywhere)</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="class_a_minion_monster.html#a5d122bc80b8e1a57a9e966ffe40171d5">  150</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_a_minion_monster.html#a5d122bc80b8e1a57a9e966ffe40171d5">DamageDelay</a> = 1.f;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="class_a_minion_monster.html#a9ea6ca007bd795a203e00e73ca34d271">  152</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_a_minion_monster.html#a9ea6ca007bd795a203e00e73ca34d271">ElapsedDamageDelay</a> = 0.f;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    UPROPERTY(EditAnywhere, Category = <span class="stringliteral">&quot;GAS&quot;</span>)</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="class_a_minion_monster.html#a944ed75e0085bd5e44d1069170fa5fc2">  155</a></span>    TSubclassOf&lt;UGameplayEffect&gt; <a class="code hl_variable" href="class_a_minion_monster.html#a944ed75e0085bd5e44d1069170fa5fc2">DamageEffectClass</a>;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    UPROPERTY(EditAnywhere, Category=<span class="stringliteral">&quot;Target&quot;</span>)</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="class_a_minion_monster.html#a6ca15fa335210ca0e2d33b449db55caf">  158</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_a_minion_monster.html#a6ca15fa335210ca0e2d33b449db55caf">TargetFindTimer</a> = 2.5f;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="class_a_minion_monster.html#a88ea93f6b629f5abe06df4bf74cf106e">  160</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_a_minion_monster.html#a88ea93f6b629f5abe06df4bf74cf106e">ElapsedTargetFindTimer</a> = <a class="code hl_variable" href="class_a_minion_monster.html#a6ca15fa335210ca0e2d33b449db55caf">TargetFindTimer</a>;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>private:</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    UPROPERTY()</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    TObjectPtr&lt;<a class="code hl_class" href="class_a_flocking_manager.html">AFlockingManager</a>&gt; FlockingManager;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    UPROPERTY(EditAnywhere, Category=<span class="stringliteral">&quot;LootingClass&quot;</span>)</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    TSubclassOf&lt;AActor&gt; ExperienceClass;</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    UPROPERTY(EditAnywhere, Category=<span class="stringliteral">&quot;LootingClass&quot;</span>)</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    TSubclassOf&lt;<a class="code hl_class" href="class_a_gold.html">AGold</a>&gt; GoldClass;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    UPROPERTY(EditAnywhere)</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="keywordtype">float</span> AttackDelay = 2.5f;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keywordtype">float</span> ElapsedAttackTime = 0.f;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    UPROPERTY(EditAnywhere, Category = <span class="stringliteral">&quot;Combat&quot;</span>)</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <span class="keywordtype">float</span> AttackDistance = 550.f;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="keywordtype">bool</span> bUpdateRotation = false;</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keywordtype">bool</span> bUpdateInterpolation = false;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    UPROPERTY(BlueprintReadOnly, meta = (AllowPrivateAccess = <span class="stringliteral">&quot;true&quot;</span>))</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    FRotator DesiredRotator = FRotator::ZeroRotator;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    UPROPERTY(EditAnywhere)</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordtype">float</span> RotationSpeed = 100.f;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="keywordtype">float</span> SpawnDestZ = 0.f;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keywordtype">float</span> SpawnStartZ = 0.f;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keywordtype">float</span> ElapsedSpawnTime = 0.f;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    UPROPERTY(EditAnywhere, Category=<span class="stringliteral">&quot;Spawn&quot;</span>)</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <span class="keywordtype">float</span> SpawningSpeed = 1.f;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    </div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>};</div>
+</div>
+<div class="ttc" id="a_damage_floater_interface_8h_html"><div class="ttname"><a href="_damage_floater_interface_8h.html">DamageFloaterInterface.h</a></div></div>
+<div class="ttc" id="a_minion_monster_8h_html_a0e87370cc7a7ed566c96cb2a404cdcbb"><div class="ttname"><a href="_minion_monster_8h.html#a0e87370cc7a7ed566c96cb2a404cdcbb">Dead</a></div><div class="ttdeci">enum enum class Dead</div><div class="ttdef"><b>Definition</b> <a href="#l00026">MinionMonster.h:26</a></div></div>
+<div class="ttc" id="a_minion_monster_8h_html_a11bdec782da5af5523f4ae7d4081a7d5"><div class="ttname"><a href="_minion_monster_8h.html#a11bdec782da5af5523f4ae7d4081a7d5">DeSpawning</a></div><div class="ttdeci">enum enum class DeSpawning</div><div class="ttdef"><b>Definition</b> <a href="#l00027">MinionMonster.h:27</a></div></div>
+<div class="ttc" id="a_minion_monster_8h_html_a3723e2e483d0a82c53687da782205f28"><div class="ttname"><a href="_minion_monster_8h.html#a3723e2e483d0a82c53687da782205f28">EMinionState</a></div><div class="ttdeci">enum enum class EMinionState</div><div class="ttdef"><b>Definition</b> <a href="#l00020">MinionMonster.h:19</a></div></div>
+<div class="ttc" id="a_minion_monster_8h_html_a44eebc802e987be78479d3bae629e044"><div class="ttname"><a href="_minion_monster_8h.html#a44eebc802e987be78479d3bae629e044">Idle</a></div><div class="ttdeci">enum enum class Idle</div><div class="ttdef"><b>Definition</b> <a href="#l00024">MinionMonster.h:24</a></div></div>
+<div class="ttc" id="a_minion_monster_8h_html_a9a3e2140b6068caa1c2600f181be578b"><div class="ttname"><a href="_minion_monster_8h.html#a9a3e2140b6068caa1c2600f181be578b">Spawning</a></div><div class="ttdeci">enum enum class Spawning</div><div class="ttdef"><b>Definition</b> <a href="#l00023">MinionMonster.h:23</a></div></div>
+<div class="ttc" id="a_minion_monster_8h_html_ac6a36919b29304414f6d378761cc0d56"><div class="ttname"><a href="_minion_monster_8h.html#ac6a36919b29304414f6d378761cc0d56">Attack</a></div><div class="ttdeci">enum enum class Attack</div><div class="ttdef"><b>Definition</b> <a href="#l00025">MinionMonster.h:25</a></div></div>
+<div class="ttc" id="a_monster_base_8h_html"><div class="ttname"><a href="_monster_base_8h.html">MonsterBase.h</a></div></div>
+<div class="ttc" id="a_poolable_8h_html"><div class="ttname"><a href="_poolable_8h.html">Poolable.h</a></div></div>
+<div class="ttc" id="a_vector_quantized2_d_8h_html"><div class="ttname"><a href="_vector_quantized2_d_8h.html">VectorQuantized2D.h</a></div></div>
+<div class="ttc" id="aclass_a_experience_html"><div class="ttname"><a href="class_a_experience.html">AExperience</a></div><div class="ttdef"><b>Definition</b> <a href="_experience_8h_source.html#l00013">Experience.h:15</a></div></div>
+<div class="ttc" id="aclass_a_flocking_manager_html"><div class="ttname"><a href="class_a_flocking_manager.html">AFlockingManager</a></div><div class="ttdef"><b>Definition</b> <a href="_flocking_manager_8h_source.html#l00068">FlockingManager.h:70</a></div></div>
+<div class="ttc" id="aclass_a_gold_html"><div class="ttname"><a href="class_a_gold.html">AGold</a></div><div class="ttdef"><b>Definition</b> <a href="_gold_8h_source.html#l00012">Gold.h:14</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a090e7b48e77f324a5f3bb63df3f70cdc"><div class="ttname"><a href="class_a_minion_monster.html#a090e7b48e77f324a5f3bb63df3f70cdc">AMinionMonster::DeathMontage</a></div><div class="ttdeci">TObjectPtr&lt; UAnimMontage &gt; DeathMontage</div><div class="ttdef"><b>Definition</b> <a href="#l00144">MinionMonster.h:144</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a0a18fb8a06849ae28ea5db8d249291dc"><div class="ttname"><a href="class_a_minion_monster.html#a0a18fb8a06849ae28ea5db8d249291dc">AMinionMonster::DeadAbilityClass</a></div><div class="ttdeci">TSubclassOf&lt; UGameplayAbility &gt; DeadAbilityClass</div><div class="ttdef"><b>Definition</b> <a href="#l00141">MinionMonster.h:141</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a0dc3c10547100acaed04aa410111401b"><div class="ttname"><a href="class_a_minion_monster.html#a0dc3c10547100acaed04aa410111401b">AMinionMonster::MulticastSetDesiredRotator</a></div><div class="ttdeci">void MulticastSetDesiredRotator(float Yaw)</div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a156f349f4943df609b1541a5050ed972"><div class="ttname"><a href="class_a_minion_monster.html#a156f349f4943df609b1541a5050ed972">AMinionMonster::UpdateFlockingLocation</a></div><div class="ttdeci">void UpdateFlockingLocation()</div><div class="ttdef"><b>Definition</b> <a href="_minion_monster_8cpp_source.html#l00555">MinionMonster.cpp:555</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a26e10d88ae36c58b82b34323b1f7018b"><div class="ttname"><a href="class_a_minion_monster.html#a26e10d88ae36c58b82b34323b1f7018b">AMinionMonster::InterpolationTime</a></div><div class="ttdeci">float InterpolationTime</div><div class="ttdef"><b>Definition</b> <a href="#l00108">MinionMonster.h:108</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a3084807353b86ba7470891f412b83d4c"><div class="ttname"><a href="class_a_minion_monster.html#a3084807353b86ba7470891f412b83d4c">AMinionMonster::ServerPosition</a></div><div class="ttdeci">FVector ServerPosition</div><div class="ttdef"><b>Definition</b> <a href="#l00103">MinionMonster.h:103</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a3a16bd11e82fc828ec71c56674926af8"><div class="ttname"><a href="class_a_minion_monster.html#a3a16bd11e82fc828ec71c56674926af8">AMinionMonster::OnHit</a></div><div class="ttdeci">void OnHit()</div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a45150a2594b5f489332a13ed092638f3"><div class="ttname"><a href="class_a_minion_monster.html#a45150a2594b5f489332a13ed092638f3">AMinionMonster::OnRep_SpawnLocation</a></div><div class="ttdeci">void OnRep_SpawnLocation()</div><div class="ttdef"><b>Definition</b> <a href="_minion_monster_8cpp_source.html#l00565">MinionMonster.cpp:565</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a49af5c742e2b37a2081e8233f19b6ec4"><div class="ttname"><a href="class_a_minion_monster.html#a49af5c742e2b37a2081e8233f19b6ec4">AMinionMonster::InitMinionMonster</a></div><div class="ttdeci">void InitMinionMonster(FMonsterData Data)</div><div class="ttdef"><b>Definition</b> <a href="_minion_monster_8cpp_source.html#l00205">MinionMonster.cpp:205</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a4ac8865ce233fbf20b1dcb26329b3ce7"><div class="ttname"><a href="class_a_minion_monster.html#a4ac8865ce233fbf20b1dcb26329b3ce7">AMinionMonster::AttackAbilityClass</a></div><div class="ttdeci">TSubclassOf&lt; UGameplayAbility &gt; AttackAbilityClass</div><div class="ttdef"><b>Definition</b> <a href="#l00138">MinionMonster.h:138</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a591c0d9a4ed5f51e3e4e161be09df665"><div class="ttname"><a href="class_a_minion_monster.html#a591c0d9a4ed5f51e3e4e161be09df665">AMinionMonster::RotationUpdateInterval</a></div><div class="ttdeci">float RotationUpdateInterval</div><div class="ttdef"><b>Definition</b> <a href="#l00112">MinionMonster.h:112</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a5d122bc80b8e1a57a9e966ffe40171d5"><div class="ttname"><a href="class_a_minion_monster.html#a5d122bc80b8e1a57a9e966ffe40171d5">AMinionMonster::DamageDelay</a></div><div class="ttdeci">float DamageDelay</div><div class="ttdef"><b>Definition</b> <a href="#l00150">MinionMonster.h:150</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a617617f553cc4a44ab771182d6a5baeb"><div class="ttname"><a href="class_a_minion_monster.html#a617617f553cc4a44ab771182d6a5baeb">AMinionMonster::OnDeath</a></div><div class="ttdeci">void OnDeath()</div><div class="ttdef"><b>Definition</b> <a href="_minion_monster_8cpp_source.html#l00270">MinionMonster.cpp:270</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a646f0c353cb810242795dcb5238b757d"><div class="ttname"><a href="class_a_minion_monster.html#a646f0c353cb810242795dcb5238b757d">AMinionMonster::InterpolationSpeed</a></div><div class="ttdeci">float InterpolationSpeed</div><div class="ttdef"><b>Definition</b> <a href="#l00109">MinionMonster.h:109</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a647a0d064b6fd27e0d6f1ba3a447d737"><div class="ttname"><a href="class_a_minion_monster.html#a647a0d064b6fd27e0d6f1ba3a447d737">AMinionMonster::InterpolationStartPos</a></div><div class="ttdeci">FVector InterpolationStartPos</div><div class="ttdef"><b>Definition</b> <a href="#l00106">MinionMonster.h:106</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a6ca15fa335210ca0e2d33b449db55caf"><div class="ttname"><a href="class_a_minion_monster.html#a6ca15fa335210ca0e2d33b449db55caf">AMinionMonster::TargetFindTimer</a></div><div class="ttdeci">float TargetFindTimer</div><div class="ttdef"><b>Definition</b> <a href="#l00158">MinionMonster.h:158</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a71964a6078380d23dae72d9813c08832"><div class="ttname"><a href="class_a_minion_monster.html#a71964a6078380d23dae72d9813c08832">AMinionMonster::SpawnLocation</a></div><div class="ttdeci">FVector SpawnLocation</div><div class="ttdef"><b>Definition</b> <a href="#l00116">MinionMonster.h:116</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a822a7b6541077b4a8054e81023d0edf6"><div class="ttname"><a href="class_a_minion_monster.html#a822a7b6541077b4a8054e81023d0edf6">AMinionMonster::AMinionMonster</a></div><div class="ttdeci">AMinionMonster()</div><div class="ttdef"><b>Definition</b> <a href="_minion_monster_8cpp_source.html#l00038">MinionMonster.cpp:38</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a84d245ac273bcfc522953e2d2c7964b3"><div class="ttname"><a href="class_a_minion_monster.html#a84d245ac273bcfc522953e2d2c7964b3">AMinionMonster::OnTargetDied</a></div><div class="ttdeci">void OnTargetDied()</div><div class="ttdef"><b>Definition</b> <a href="_minion_monster_8cpp_source.html#l00332">MinionMonster.cpp:332</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a88ea93f6b629f5abe06df4bf74cf106e"><div class="ttname"><a href="class_a_minion_monster.html#a88ea93f6b629f5abe06df4bf74cf106e">AMinionMonster::ElapsedTargetFindTimer</a></div><div class="ttdeci">float ElapsedTargetFindTimer</div><div class="ttdef"><b>Definition</b> <a href="#l00160">MinionMonster.h:160</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a8e858fecfccc8fd45d96ce265fc1c4a0"><div class="ttname"><a href="class_a_minion_monster.html#a8e858fecfccc8fd45d96ce265fc1c4a0">AMinionMonster::ServerLogic</a></div><div class="ttdeci">virtual void ServerLogic(float DeltaTime) override</div><div class="ttdef"><b>Definition</b> <a href="_minion_monster_8cpp_source.html#l00154">MinionMonster.cpp:154</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a944ed75e0085bd5e44d1069170fa5fc2"><div class="ttname"><a href="class_a_minion_monster.html#a944ed75e0085bd5e44d1069170fa5fc2">AMinionMonster::DamageEffectClass</a></div><div class="ttdeci">TSubclassOf&lt; UGameplayEffect &gt; DamageEffectClass</div><div class="ttdef"><b>Definition</b> <a href="#l00155">MinionMonster.h:155</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a974502f283017a9da85299a4075289c5"><div class="ttname"><a href="class_a_minion_monster.html#a974502f283017a9da85299a4075289c5">AMinionMonster::DropExp</a></div><div class="ttdeci">void DropExp()</div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a9c2b226f0b45e36ceef78eea16e06c8a"><div class="ttname"><a href="class_a_minion_monster.html#a9c2b226f0b45e36ceef78eea16e06c8a">AMinionMonster::InterpolationTargetPos</a></div><div class="ttdeci">FVector InterpolationTargetPos</div><div class="ttdef"><b>Definition</b> <a href="#l00107">MinionMonster.h:107</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a9d04c28642a18379b51b882681acb85a"><div class="ttname"><a href="class_a_minion_monster.html#a9d04c28642a18379b51b882681acb85a">AMinionMonster::OnSpawnFromPool_Implementation</a></div><div class="ttdeci">virtual void OnSpawnFromPool_Implementation() override</div><div class="ttdef"><b>Definition</b> <a href="_minion_monster_8cpp_source.html#l00093">MinionMonster.cpp:93</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_a9ea6ca007bd795a203e00e73ca34d271"><div class="ttname"><a href="class_a_minion_monster.html#a9ea6ca007bd795a203e00e73ca34d271">AMinionMonster::ElapsedDamageDelay</a></div><div class="ttdeci">float ElapsedDamageDelay</div><div class="ttdef"><b>Definition</b> <a href="#l00152">MinionMonster.h:152</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_aa8e2a15f49024cf3094cc660d9b99e97"><div class="ttname"><a href="class_a_minion_monster.html#aa8e2a15f49024cf3094cc660d9b99e97">AMinionMonster::PlayerASC</a></div><div class="ttdeci">TSet&lt; TObjectPtr&lt; UKPTAbilitySystemComponent &gt; &gt; PlayerASC</div><div class="ttdef"><b>Definition</b> <a href="#l00147">MinionMonster.h:147</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_ab4ccff6566421173e0d7fae8c506a782"><div class="ttname"><a href="class_a_minion_monster.html#ab4ccff6566421173e0d7fae8c506a782">AMinionMonster::ElapsedRotationUpdateInterval</a></div><div class="ttdeci">float ElapsedRotationUpdateInterval</div><div class="ttdef"><b>Definition</b> <a href="#l00113">MinionMonster.h:113</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_ac7f7238f040b7b0747852d5686571f8f"><div class="ttname"><a href="class_a_minion_monster.html#ac7f7238f040b7b0747852d5686571f8f">AMinionMonster::SmoothToServerPosition</a></div><div class="ttdeci">void SmoothToServerPosition(float DeltaTime)</div><div class="ttdef"><b>Definition</b> <a href="_minion_monster_8cpp_source.html#l00581">MinionMonster.cpp:581</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_ad80e0779559c508cf3ec8af1d5ece828"><div class="ttname"><a href="class_a_minion_monster.html#ad80e0779559c508cf3ec8af1d5ece828">AMinionMonster::FlockingComponent</a></div><div class="ttdeci">TObjectPtr&lt; UEnemyFlockingComponent &gt; FlockingComponent</div><div class="ttdef"><b>Definition</b> <a href="#l00135">MinionMonster.h:135</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_ae43c84a0c54f363183929ec3e07cbead"><div class="ttname"><a href="class_a_minion_monster.html#ae43c84a0c54f363183929ec3e07cbead">AMinionMonster::ActivateDamageFloater</a></div><div class="ttdeci">virtual void ActivateDamageFloater(float DamageAmount, bool IsCritical, AActor *AttachActor) override</div><div class="ttdef"><b>Definition</b> <a href="_minion_monster_8cpp_source.html#l00289">MinionMonster.cpp:289</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_ae4ff9b71172f60f40c5489f0b89d435a"><div class="ttname"><a href="class_a_minion_monster.html#ae4ff9b71172f60f40c5489f0b89d435a">AMinionMonster::MinionState</a></div><div class="ttdeci">EMinionState MinionState</div><div class="ttdef"><b>Definition</b> <a href="#l00132">MinionMonster.h:132</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_ae7e6c5d889b8de78285021ecfe796683"><div class="ttname"><a href="class_a_minion_monster.html#ae7e6c5d889b8de78285021ecfe796683">AMinionMonster::UpdateMinionState</a></div><div class="ttdeci">void UpdateMinionState(EMinionState InNewState)</div><div class="ttdef"><b>Definition</b> <a href="_minion_monster_8cpp_source.html#l00546">MinionMonster.cpp:546</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_aef4ee3d8dedd4094d93c19d4ac32ca6a"><div class="ttname"><a href="class_a_minion_monster.html#aef4ee3d8dedd4094d93c19d4ac32ca6a">AMinionMonster::OnReturnToPool_Implementation</a></div><div class="ttdeci">virtual void OnReturnToPool_Implementation() override</div><div class="ttdef"><b>Definition</b> <a href="_minion_monster_8cpp_source.html#l00123">MinionMonster.cpp:123</a></div></div>
+<div class="ttc" id="aclass_a_minion_monster_html_afa673a065f725133d8e430587d6b4cb9"><div class="ttname"><a href="class_a_minion_monster.html#afa673a065f725133d8e430587d6b4cb9">AMinionMonster::FinishDying</a></div><div class="ttdeci">void FinishDying()</div><div class="ttdef"><b>Definition</b> <a href="_minion_monster_8cpp_source.html#l00294">MinionMonster.cpp:294</a></div></div>
+<div class="ttc" id="aclass_a_monster_base_html_af01421fb824f0341ae4fe95b39cab2cc"><div class="ttname"><a href="class_a_monster_base.html#af01421fb824f0341ae4fe95b39cab2cc">AMonsterBase::AMonsterBase</a></div><div class="ttdeci">AMonsterBase()</div><div class="ttdef"><b>Definition</b> <a href="_monster_base_8cpp_source.html#l00031">MonsterBase.cpp:31</a></div></div>
+<div class="ttc" id="aclass_a_player_character_html"><div class="ttname"><a href="class_a_player_character.html">APlayerCharacter</a></div><div class="ttdef"><b>Definition</b> <a href="_player_character_8h_source.html#l00034">PlayerCharacter.h:36</a></div></div>
+<div class="ttc" id="aclass_a_player_character_html_a3c8c259b3de2772ba836acc7fed05832"><div class="ttname"><a href="class_a_player_character.html#a3c8c259b3de2772ba836acc7fed05832">APlayerCharacter::GetLifetimeReplicatedProps</a></div><div class="ttdeci">virtual void GetLifetimeReplicatedProps(TArray&lt; class FLifetimeProperty &gt; &amp;OutLifetimeProps) const override</div><div class="ttdef"><b>Definition</b> <a href="_player_character_8cpp_source.html#l00444">PlayerCharacter.cpp:444</a></div></div>
+<div class="ttc" id="aclass_a_player_character_html_aa004cab44548a13b86956fd2d922160a"><div class="ttname"><a href="class_a_player_character.html#aa004cab44548a13b86956fd2d922160a">APlayerCharacter::Tick</a></div><div class="ttdeci">virtual void Tick(float DeltaTime) override</div><div class="ttdef"><b>Definition</b> <a href="_player_character_8cpp_source.html#l00272">PlayerCharacter.cpp:272</a></div></div>
+<div class="ttc" id="aclass_a_player_character_html_aa38c751d8495a3e3d999eafad23d7a88"><div class="ttname"><a href="class_a_player_character.html#aa38c751d8495a3e3d999eafad23d7a88">APlayerCharacter::Die</a></div><div class="ttdeci">virtual void Die(bool bStageEnded=false) override</div><div class="ttdef"><b>Definition</b> <a href="_player_character_8cpp_source.html#l00041">PlayerCharacter.cpp:41</a></div></div>
+<div class="ttc" id="aclass_a_player_character_html_aabd1d46483746c34c35da55d816d22f3"><div class="ttname"><a href="class_a_player_character.html#aabd1d46483746c34c35da55d816d22f3">APlayerCharacter::BeginPlay</a></div><div class="ttdeci">virtual void BeginPlay() override</div><div class="ttdef"><b>Definition</b> <a href="_player_character_8cpp_source.html#l00235">PlayerCharacter.cpp:235</a></div></div>
+<div class="ttc" id="aclass_a_player_character_html_af89c388d6da40981bf481d3e362ec117"><div class="ttname"><a href="class_a_player_character.html#af89c388d6da40981bf481d3e362ec117">APlayerCharacter::Damaged</a></div><div class="ttdeci">virtual void Damaged() override</div><div class="ttdef"><b>Definition</b> <a href="_player_character_8cpp_source.html#l00035">PlayerCharacter.cpp:35</a></div></div>
+<div class="ttc" id="aclass_i_damage_floater_interface_html"><div class="ttname"><a href="class_i_damage_floater_interface.html">IDamageFloaterInterface</a></div><div class="ttdef"><b>Definition</b> <a href="_damage_floater_interface_8h_source.html#l00019">DamageFloaterInterface.h:20</a></div></div>
+<div class="ttc" id="aclass_i_poolable_html"><div class="ttname"><a href="class_i_poolable.html">IPoolable</a></div><div class="ttdef"><b>Definition</b> <a href="_poolable_8h_source.html#l00019">Poolable.h:20</a></div></div>
+<div class="ttc" id="aclass_u_enemy_flocking_component_html"><div class="ttname"><a href="class_u_enemy_flocking_component.html">UEnemyFlockingComponent</a></div><div class="ttdef"><b>Definition</b> <a href="_enemy_flocking_component_8h_source.html#l00040">EnemyFlockingComponent.h:42</a></div></div>
+<div class="ttc" id="aclass_u_k_p_t_ability_system_component_html"><div class="ttname"><a href="class_u_k_p_t_ability_system_component.html">UKPTAbilitySystemComponent</a></div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_ability_system_component_8h_source.html#l00011">KPTAbilitySystemComponent.h:13</a></div></div>
+<div class="ttc" id="astruct_f_monster_data_html"><div class="ttname"><a href="struct_f_monster_data.html">FMonsterData</a></div><div class="ttdef"><b>Definition</b> <a href="_monster_data_8h_source.html#l00012">MonsterData.h:14</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_afd4929045c9ece13bdaf7ce47ec67c0.html">AI</a></li><li class="navelem"><a href="_minion_monster_8h.html">MinionMonster.h</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

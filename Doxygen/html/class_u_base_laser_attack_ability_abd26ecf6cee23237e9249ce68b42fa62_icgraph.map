@@ -1,0 +1,11 @@
+<map id="UBaseLaserAttackAbility::UBaseLaserAttackAbility" name="UBaseLaserAttackAbility::UBaseLaserAttackAbility">
+<area shape="rect" id="Node000001" title=" " alt="" coords="676,29,852,72"/>
+<area shape="rect" id="Node000002" href="$class_u_base_laser_attack_ability.html#aa398b1c8400be1004cc48ab88c2372a9" title=" " alt="" coords="436,29,628,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="661,53,629,53,629,48,661,48"/>
+<area shape="rect" id="Node000003" href="$class_u_base_laser_attack_ability.html#ad1a11b3bbe71ec74e20323116cad88fe" title="This function is meant to be implemented in Blueprint to define the ability&#39;s activation flow." alt="" coords="221,29,388,72"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="420,53,388,53,388,48,420,48"/>
+<area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="339,16,326,10,304,8,284,10,272,15,267,21,269,28,263,29,262,19,269,10,283,5,304,3,327,5,341,11"/>
+<area shape="rect" id="Node000004" href="$class_u_base_laser_attack_ability.html#a26ff67b6441cf3c270bb40024bb261f0" title=" " alt="" coords="5,29,173,72"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="205,62,173,62,173,57,205,57"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="189,39,220,39,220,45,189,44"/>
+</map>

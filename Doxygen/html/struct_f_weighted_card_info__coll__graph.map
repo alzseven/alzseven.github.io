@@ -1,0 +1,9 @@
+<map id="FWeightedCardInfo" name="FWeightedCardInfo">
+<area shape="rect" id="Node000001" title=" " alt="" coords="9,673,199,775"/>
+<area shape="rect" id="Node000002" href="$struct_f_offered_card_info.html" title=" " alt="" coords="37,532,170,601"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,601,106,657,101,657,101,601"/>
+<area shape="rect" id="Node000003" href="$struct_f_card_reward_data.html" title=" " alt="" coords="5,124,202,460"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="106,460,106,515,101,515,101,460"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="50,5,157,75"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="106,90,106,124,101,124,101,90"/>
+</map>

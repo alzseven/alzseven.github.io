@@ -1,0 +1,14 @@
+<map id="UGameplayAbility_TraceBase::HandleTraceResult" name="UGameplayAbility_TraceBase::HandleTraceResult">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,96,202,139"/>
+<area shape="rect" id="Node000002" href="$class_u_gameplay_ability___trace_base.html#a9228e5548e9603d5db0a4851528699b9" title=" " alt="" coords="250,5,446,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,93,249,58,267,51,268,56,251,62,160,98"/>
+<area shape="rect" id="Node000004" href="$class_u_gameplay_ability___trace_base.html#aab02c5cd24012484672817a3959eae8b" title=" " alt="" coords="250,96,446,139"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="202,124,234,124,234,129,202,129"/>
+<area shape="rect" id="Node000003" href="$class_u_gameplay_ability___trace_base.html#a6ab220e0256558c7742e77bf52ef7329" title=" " alt="" coords="494,17,690,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="447,29,479,30,478,36,446,34"/>
+<area shape="poly" id="edge6_Node000004_Node000001" title=" " alt="" coords="249,111,217,111,217,106,249,106"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="416,93,508,63,510,68,417,98"/>
+<area shape="poly" id="edge7_Node000004_Node000004" title=" " alt="" coords="302,96,300,86,308,77,324,71,348,69,374,72,390,78,388,83,373,77,348,75,325,77,310,81,305,87,307,95"/>
+<area shape="rect" id="Node000005" href="$class_u_gameplay_ability___trace_base.html#a8cbf0758a9b7e43db6f8ece876f468da" title=" " alt="" coords="494,96,690,139"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="446,115,478,115,478,120,446,120"/>
+</map>

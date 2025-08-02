@@ -1,0 +1,20 @@
+<map id="C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Core/Component/GameState/TeamStatsComponent.cpp" name="C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Core/Component/GameState/TeamStatsComponent.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="486,5,808,80"/>
+<area shape="rect" id="Node000002" href="$_team_stats_component_8h.html" title=" " alt="" coords="338,136,500,163"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="568,83,462,131,459,127,565,78"/>
+<area shape="rect" id="Node000006" href="$_component_owner_interface_8h.html" title=" " alt="" coords="559,128,734,171"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="650,80,650,113,644,113,644,80"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="759,136,903,163"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="713,78,797,126,794,130,710,83"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="485,219,590,245"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="439,161,508,208,505,212,436,165"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,219,214,245"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="371,166,174,217,172,212,369,161"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="238,219,461,245"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="410,165,372,209,368,205,406,161"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="620,173,568,212,565,207,617,169"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="614,219,749,245"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="658,170,673,203,668,205,653,172"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="773,219,1022,245"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="712,169,845,211,843,216,711,174"/>
+</map>

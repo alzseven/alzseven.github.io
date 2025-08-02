@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/AI/Boss/Abilities/AbilityTasks/AbilityTask_Trace.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_ability_task___trace_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AbilityTask_Trace.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_ability_task___trace_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Abilities/Tasks/AbilityTask.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;AbilityTask_Trace.generated.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FTraceResultDelegate, <span class="keyword">const</span> FGameplayAbilityTargetDataHandle&amp;, TargetData);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>UENUM(BlueprintType)</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="_ability_task___trace_8h.html#a472c9048d3513ed0a1d0e16ea50e6673">   13</a></span>enum class <a class="code hl_variable" href="_ability_task___trace_8h.html#a472c9048d3513ed0a1d0e16ea50e6673">ETraceShape</a> : uint8</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    Line UMETA(DisplayName = <span class="stringliteral">&quot;Line Trace&quot;</span>),</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="_ability_task___trace_8h.html#a7c4bf6038ec59cae952238d780bc73cd">   16</a></span>    <a class="code hl_variable" href="_ability_task___trace_8h.html#a7c4bf6038ec59cae952238d780bc73cd">Box</a> UMETA(DisplayName = <span class="stringliteral">&quot;Box Trace&quot;</span>),</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="_ability_task___trace_8h.html#ad9284a91e34401f6e1b8058d2f5fe26c">   17</a></span>    <a class="code hl_variable" href="_ability_task___trace_8h.html#ad9284a91e34401f6e1b8058d2f5fe26c">Sphere</a> UMETA(DisplayName = <span class="stringliteral">&quot;Sphere Trace&quot;</span>),</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="_ability_task___trace_8h.html#ac80fb51642470e38721eb88616920551">   18</a></span>    <a class="code hl_variable" href="_ability_task___trace_8h.html#ac80fb51642470e38721eb88616920551">Capsule</a> UMETA(DisplayName = <span class="stringliteral">&quot;Capsule Trace&quot;</span>),</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="_ability_task___trace_8h.html#a5814c85b04f3bb510d4d61ca8974b35d">   19</a></span>    <a class="code hl_variable" href="_ability_task___trace_8h.html#a5814c85b04f3bb510d4d61ca8974b35d">Cone</a> UMETA(DisplayName = <span class="stringliteral">&quot;Cone Trace&quot;</span>)</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>};</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_u_ability_task___trace.html">   25</a></span>UCLASS()</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>class KPT_API <a class="code hl_class" href="class_u_ability_task___trace.html">UAbilityTask_Trace</a> : public UAbilityTask</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Ability|Tasks&quot;</span>, meta = (DisplayName = <span class="stringliteral">&quot;TraceTask&quot;</span>, HidePin = <span class="stringliteral">&quot;OwningAbility&quot;</span>, DefaultToSelf = <span class="stringliteral">&quot;OwningAbility&quot;</span>, BlueprintInternalUseOnly = <span class="stringliteral">&quot;TRUE&quot;</span>))</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">static</span> <a class="code hl_class" href="class_u_ability_task___trace.html">UAbilityTask_Trace</a>* <a class="code hl_function" href="class_u_ability_task___trace.html#aa06c0d6db644bb80df707ec0eb27c221">TraceTask</a>(</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    UGameplayAbility* OwningAbility,</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_variable" href="_ability_task___trace_8h.html#a472c9048d3513ed0a1d0e16ea50e6673">ETraceShape</a> Shape,</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    FVector TraceStart,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    FVector TraceEnd,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    FVector HalfSize, <span class="comment">// Box, Sphere(X), Capsule(Radius=X, HalfHeight=Z), Cone(Radius=X, Degree=Z)</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">float</span> TickInterval,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">float</span> Duration,</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    TSubclassOf&lt;AActor&gt; FilterClass,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">bool</span> bDebug);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    UPROPERTY(BlueprintAssignable)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_u_ability_task___trace.html#a186fcd598b2266d88ed2c4ef829ae1ee">   44</a></span>    FTraceResultDelegate <a class="code hl_variable" href="class_u_ability_task___trace.html#a186fcd598b2266d88ed2c4ef829ae1ee">OnTraceResult</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>protected:</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    virtual <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_ability_task___trace.html#a8430739944034ca2b6025a7fe2244e0a">Activate</a>() override;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    virtual <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_ability_task___trace.html#a10a8e2cd7242bc06bb2cc1c552ea586d">OnDestroy</a>(<span class="keywordtype">bool</span> bInOwnerFinished) override;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_ability_task___trace.html#a70b4116bb908174822ff86c79838e3ea">PerformTrace</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    TArray&lt;AActor*&gt; <a class="code hl_function" href="class_u_ability_task___trace.html#ac8e5a1f4322b3ca0f7ecbfba302b09c5">PerformConeTrace</a>();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>private:</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    FTimerHandle TraceTimerHandle;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    FTimerHandle DurationTimerHandle;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <a class="code hl_variable" href="_ability_task___trace_8h.html#a472c9048d3513ed0a1d0e16ea50e6673">ETraceShape</a> TraceShape;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    FVector StartLocation;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    FVector EndLocation;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    FVector ShapeHalfSize;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">float</span> TraceInterval;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">float</span> TaskDuration;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    TSubclassOf&lt;AActor&gt; TargetFilterClass;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">bool</span> bShowDebug;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>};</div>
+</div>
+<div class="ttc" id="a_ability_task___trace_8h_html_a472c9048d3513ed0a1d0e16ea50e6673"><div class="ttname"><a href="_ability_task___trace_8h.html#a472c9048d3513ed0a1d0e16ea50e6673">ETraceShape</a></div><div class="ttdeci">enum enum class ETraceShape</div><div class="ttdef"><b>Definition</b> <a href="#l00013">AbilityTask_Trace.h:12</a></div></div>
+<div class="ttc" id="a_ability_task___trace_8h_html_a5814c85b04f3bb510d4d61ca8974b35d"><div class="ttname"><a href="_ability_task___trace_8h.html#a5814c85b04f3bb510d4d61ca8974b35d">Cone</a></div><div class="ttdeci">enum enum class Cone</div><div class="ttdef"><b>Definition</b> <a href="#l00019">AbilityTask_Trace.h:20</a></div></div>
+<div class="ttc" id="a_ability_task___trace_8h_html_a7c4bf6038ec59cae952238d780bc73cd"><div class="ttname"><a href="_ability_task___trace_8h.html#a7c4bf6038ec59cae952238d780bc73cd">Box</a></div><div class="ttdeci">enum enum class Box</div><div class="ttdef"><b>Definition</b> <a href="#l00016">AbilityTask_Trace.h:16</a></div></div>
+<div class="ttc" id="a_ability_task___trace_8h_html_ac80fb51642470e38721eb88616920551"><div class="ttname"><a href="_ability_task___trace_8h.html#ac80fb51642470e38721eb88616920551">Capsule</a></div><div class="ttdeci">enum enum class Capsule</div><div class="ttdef"><b>Definition</b> <a href="#l00018">AbilityTask_Trace.h:18</a></div></div>
+<div class="ttc" id="a_ability_task___trace_8h_html_ad9284a91e34401f6e1b8058d2f5fe26c"><div class="ttname"><a href="_ability_task___trace_8h.html#ad9284a91e34401f6e1b8058d2f5fe26c">Sphere</a></div><div class="ttdeci">enum enum class Sphere</div><div class="ttdef"><b>Definition</b> <a href="#l00017">AbilityTask_Trace.h:17</a></div></div>
+<div class="ttc" id="aclass_u_ability_task___trace_html"><div class="ttname"><a href="class_u_ability_task___trace.html">UAbilityTask_Trace</a></div><div class="ttdef"><b>Definition</b> <a href="#l00025">AbilityTask_Trace.h:27</a></div></div>
+<div class="ttc" id="aclass_u_ability_task___trace_html_a10a8e2cd7242bc06bb2cc1c552ea586d"><div class="ttname"><a href="class_u_ability_task___trace.html#a10a8e2cd7242bc06bb2cc1c552ea586d">UAbilityTask_Trace::OnDestroy</a></div><div class="ttdeci">virtual void OnDestroy(bool bInOwnerFinished) override</div><div class="ttdef"><b>Definition</b> <a href="_ability_task___trace_8cpp_source.html#l00053">AbilityTask_Trace.cpp:53</a></div></div>
+<div class="ttc" id="aclass_u_ability_task___trace_html_a186fcd598b2266d88ed2c4ef829ae1ee"><div class="ttname"><a href="class_u_ability_task___trace.html#a186fcd598b2266d88ed2c4ef829ae1ee">UAbilityTask_Trace::OnTraceResult</a></div><div class="ttdeci">FTraceResultDelegate OnTraceResult</div><div class="ttdef"><b>Definition</b> <a href="#l00044">AbilityTask_Trace.h:44</a></div></div>
+<div class="ttc" id="aclass_u_ability_task___trace_html_a70b4116bb908174822ff86c79838e3ea"><div class="ttname"><a href="class_u_ability_task___trace.html#a70b4116bb908174822ff86c79838e3ea">UAbilityTask_Trace::PerformTrace</a></div><div class="ttdeci">void PerformTrace()</div><div class="ttdef"><b>Definition</b> <a href="_ability_task___trace_8cpp_source.html#l00064">AbilityTask_Trace.cpp:64</a></div></div>
+<div class="ttc" id="aclass_u_ability_task___trace_html_a8430739944034ca2b6025a7fe2244e0a"><div class="ttname"><a href="class_u_ability_task___trace.html#a8430739944034ca2b6025a7fe2244e0a">UAbilityTask_Trace::Activate</a></div><div class="ttdeci">virtual void Activate() override</div><div class="ttdef"><b>Definition</b> <a href="_ability_task___trace_8cpp_source.html#l00030">AbilityTask_Trace.cpp:30</a></div></div>
+<div class="ttc" id="aclass_u_ability_task___trace_html_aa06c0d6db644bb80df707ec0eb27c221"><div class="ttname"><a href="class_u_ability_task___trace.html#aa06c0d6db644bb80df707ec0eb27c221">UAbilityTask_Trace::TraceTask</a></div><div class="ttdeci">static UAbilityTask_Trace * TraceTask(UGameplayAbility *OwningAbility, ETraceShape Shape, FVector TraceStart, FVector TraceEnd, FVector HalfSize, float TickInterval, float Duration, TSubclassOf&lt; AActor &gt; FilterClass, bool bDebug)</div><div class="ttdef"><b>Definition</b> <a href="_ability_task___trace_8cpp_source.html#l00012">AbilityTask_Trace.cpp:12</a></div></div>
+<div class="ttc" id="aclass_u_ability_task___trace_html_ac8e5a1f4322b3ca0f7ecbfba302b09c5"><div class="ttname"><a href="class_u_ability_task___trace.html#ac8e5a1f4322b3ca0f7ecbfba302b09c5">UAbilityTask_Trace::PerformConeTrace</a></div><div class="ttdeci">TArray&lt; AActor * &gt; PerformConeTrace()</div><div class="ttdef"><b>Definition</b> <a href="_ability_task___trace_8cpp_source.html#l00147">AbilityTask_Trace.cpp:147</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_afd4929045c9ece13bdaf7ce47ec67c0.html">AI</a></li><li class="navelem"><a href="dir_1b246ab125890ce6af8a97e8bed77d9e.html">Boss</a></li><li class="navelem"><a href="dir_892f73ec7fb75e2bcaefe61773391411.html">Abilities</a></li><li class="navelem"><a href="dir_dca4e14a3258cf3115cd8ec697ed534b.html">AbilityTasks</a></li><li class="navelem"><a href="_ability_task___trace_8h.html">AbilityTask_Trace.h</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

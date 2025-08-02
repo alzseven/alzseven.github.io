@@ -1,0 +1,35 @@
+<map id="UInGameHUD::NativeConstruct" name="UInGameHUD::NativeConstruct">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,187,216,213"/>
+<area shape="rect" id="Node000002" href="$class_u_in_game_h_u_d.html#adecf96b1c0383fa1989f7b5c55bb06ce" title=" " alt="" coords="265,145,483,172"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,183,269,172,270,178,201,189"/>
+<area shape="rect" id="Node000014" href="$class_u_in_game_h_u_d.html#abfc3adf935b5d41562a31bf38f472c1d" title=" " alt="" coords="264,212,484,239"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="216,207,248,211,248,216,216,213"/>
+<area shape="rect" id="Node000003" href="$class_u_in_game_h_u_d.html#ad4ea3a784dd89f918799a49b145846ba" title=" " alt="" coords="538,120,759,163"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="483,149,522,147,523,152,484,154"/>
+<area shape="rect" id="Node000004" href="$class_u_in_game_h_u_d.html#ab7c7e04ab365d90d164230522904ef06" title=" " alt="" coords="815,72,1064,115"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="759,120,799,114,800,119,760,126"/>
+<area shape="rect" id="Node000008" href="$class_u_in_game_h_u_d.html#ae5432789c54f0fb4c503b8b353c46029" title=" " alt="" coords="813,168,1066,211"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="760,157,798,163,797,169,759,162"/>
+<area shape="rect" id="Node000005" href="$class_u_state_manager_component.html#aa02160df8ceffa37f487dfbdfc8cb2fd" title=" " alt="" coords="1137,5,1316,48"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1034,69,1121,48,1123,54,1035,74"/>
+<area shape="rect" id="Node000007" href="$class_u_in_game_h_u_d.html#a202062936a0a60c05aac96f89709a2cf" title=" " alt="" coords="1114,72,1340,115"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="1064,91,1098,91,1098,96,1064,96"/>
+<area shape="rect" id="Node000006" href="$class_u_state_manager_component.html#ac4e405056aaabb201b59d2885dcc22be" title=" " alt="" coords="1388,5,1567,48"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="1317,24,1372,24,1372,29,1317,29"/>
+<area shape="rect" id="Node000009" href="$class_u_team_stats_component.html#a02772b4fd5c6a00656403377a0c9ca8d" title=" " alt="" coords="1146,139,1308,181"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="1066,174,1131,167,1131,172,1066,179"/>
+<area shape="rect" id="Node000012" href="$class_u_in_game_h_u_d.html#a7e1db18a43569f61eaf2b3e499cc4f0d" title=" " alt="" coords="1137,205,1317,232"/>
+<area shape="poly" id="edge11_Node000008_Node000012" title=" " alt="" coords="1066,200,1122,205,1121,211,1066,205"/>
+<area shape="rect" id="Node000013" href="$class_u_in_game_h_u_d.html#abec8edfbf2a43178d1311adb10cf1f8d" title=" " alt="" coords="1133,256,1321,283"/>
+<area shape="poly" id="edge12_Node000008_Node000013" title=" " alt="" coords="1006,209,1114,241,1146,249,1144,255,1113,247,1005,214"/>
+<area shape="rect" id="Node000010" href="$class_u_team_stats_component.html#a1029e934e4cbbaee54579856de5fc89a" title=" " alt="" coords="1390,105,1565,148"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="1308,147,1375,138,1376,143,1308,152"/>
+<area shape="rect" id="Node000011" href="$class_u_team_stats_component.html#a468a4b3491d730096db1e25973108d28" title=" " alt="" coords="1397,172,1558,215"/>
+<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="1308,168,1382,178,1381,183,1308,173"/>
+<area shape="rect" id="Node000015" href="$class_u_in_game_h_u_d.html#aa8fd5d34dc9c18bdb1a55eb622a42806" title=" " alt="" coords="560,187,737,213"/>
+<area shape="poly" id="edge14_Node000014_Node000015" title=" " alt="" coords="484,213,545,207,545,212,485,218"/>
+<area shape="rect" id="Node000016" href="$class_u_inventory_u_i.html#acdd39c140fa026f46f9752565a706880" title=" " alt="" coords="540,237,757,264"/>
+<area shape="poly" id="edge15_Node000014_Node000016" title=" " alt="" coords="485,233,525,237,524,242,484,238"/>
+<area shape="rect" id="Node000017" href="$class_u_in_game_h_u_d.html#a85333cf2907edf334c985eb0262fba59" title=" " alt="" coords="532,288,765,315"/>
+<area shape="poly" id="edge16_Node000014_Node000017" title=" " alt="" coords="416,237,533,273,565,281,563,287,531,279,414,242"/>
+</map>

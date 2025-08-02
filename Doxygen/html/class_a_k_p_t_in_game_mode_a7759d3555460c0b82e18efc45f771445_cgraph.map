@@ -1,0 +1,18 @@
+<map id="AKPTInGameMode::OnPlayerFinishedRewardChoice" name="AKPTInGameMode::OnPlayerFinishedRewardChoice">
+<area shape="rect" id="Node000001" title="플레이어가 카드 보상 선택을 마쳤을 때 RewardManagerSubsystem이 호출합니다." alt="" coords="5,147,202,189"/>
+<area shape="rect" id="Node000002" href="$class_u_player_reward_state_component.html#a95117aadcc03b57ba7dbed9a30cf82f7" title="서버 전용: 처리 완료된 보상을 목록에서 제거합니다." alt="" coords="250,5,461,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,144,183,105,248,64,274,52,277,57,251,69,186,109,133,148"/>
+<area shape="rect" id="Node000003" href="$class_u_player_reward_state_component.html#a13152160f317ee674b6c1dde2d1bb0e7" title="처리해야 할 보상이 남아있는지 확인합니다." alt="" coords="509,35,720,77"/>
+<area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="151,144,198,125,249,108,374,81,493,64,494,70,375,87,250,113,200,130,153,149"/>
+<area shape="rect" id="Node000004" href="$class_a_k_p_t_player_state.html#a6989c3ebb86791d3a7265d8f5dc90b93" title=" " alt="" coords="256,147,454,189"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="202,165,241,165,241,171,202,171"/>
+<area shape="rect" id="Node000005" href="$class_a_k_p_t_in_game_mode.html#a1a9ee04a849c50e213574d166ea3eda5" title="특정 플레이어에게 카드 선택 기회를 제공합니다." alt="" coords="265,213,446,256"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="187,187,258,206,257,211,186,192"/>
+<area shape="rect" id="Node000006" href="$class_a_k_p_t_player_state.html#ae76783471e033ac0ece5ebe988856b1b" title="업그레이드 선택 기회를 추가합니다." alt="" coords="254,280,457,323"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="133,188,186,227,251,266,264,271,261,276,248,270,183,231,130,192"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="462,36,494,40,493,45,461,41"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="566,35,564,25,572,16,589,10,615,8,642,10,659,17,657,22,641,16,615,13,590,15,575,20,569,26,571,33"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="308,147,306,137,314,128,330,122,355,120,382,122,398,129,396,134,381,128,355,125,331,127,317,132,311,138,313,146"/>
+<area shape="rect" id="Node000007" href="$class_a_k_p_t_player_state.html#aa41c46851e05f762ccd8c2fc98aa505a" title=" " alt="" coords="528,280,701,323"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="457,299,512,299,512,304,457,304"/>
+</map>

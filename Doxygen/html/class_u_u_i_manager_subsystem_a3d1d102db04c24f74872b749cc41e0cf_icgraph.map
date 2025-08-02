@@ -1,0 +1,13 @@
+<map id="UUIManagerSubsystem::ShowEventWidget" name="UUIManagerSubsystem::ShowEventWidget">
+<area shape="rect" id="Node000001" title=" " alt="" coords="911,39,1072,81"/>
+<area shape="rect" id="Node000002" href="$class_u_u_i_manager_subsystem.html#ac0719470d72fdf3bd3d14b976ad44e33" title=" " alt="" coords="684,39,863,81"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="895,63,863,63,863,57,895,57"/>
+<area shape="rect" id="Node000003" href="$class_u_u_i_manager_subsystem.html#a246ae6eabb3d321cdc4abc2068ca1e61" title=" " alt="" coords="424,39,636,81"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="669,63,637,63,637,57,669,57"/>
+<area shape="rect" id="Node000004" href="$class_u_u_i_manager_subsystem.html#ae786dee1d051999eb3e98960d96a39d4" title=" " alt="" coords="215,5,376,48"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="408,45,376,41,377,35,409,40"/>
+<area shape="rect" id="Node000005" href="$class_u_u_i_manager_subsystem.html#a8199a73ecef396d77dc15b4049ad7491" title=" " alt="" coords="215,72,376,115"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="409,80,377,85,376,79,408,75"/>
+<area shape="rect" id="Node000006" href="$class_u_u_i_manager_subsystem.html#a0ece8b5888a4cfe5b70f308dcfb28478" title=" " alt="" coords="5,72,167,115"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="199,96,167,96,167,91,199,91"/>
+</map>

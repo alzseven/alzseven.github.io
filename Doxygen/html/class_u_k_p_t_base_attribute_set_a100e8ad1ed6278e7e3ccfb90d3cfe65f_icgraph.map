@@ -1,0 +1,15 @@
+<map id="UKPTBaseAttributeSet::OnRep_MaxHealth" name="UKPTBaseAttributeSet::OnRep_MaxHealth">
+<area shape="rect" id="Node000001" title=" " alt="" coords="492,47,648,89"/>
+<area shape="rect" id="Node000002" href="$class_u_k_p_t_base_attribute_set.html#a225f828fc9a99dbe8962a5fefb7518e6" title=" " alt="" coords="5,5,201,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="476,58,444,55,201,35,201,30,444,49,477,53"/>
+<area shape="rect" id="Node000003" href="$class_u_k_p_t_base_attribute_set.html#a0ba619d0da98bad19dd79d40adfad15a" title=" " alt="" coords="249,88,444,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="477,88,445,94,444,89,476,83"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="266,85,167,51,169,46,268,80"/>
+<area shape="poly" id="edge6_Node000003_Node000003" title=" " alt="" coords="383,75,369,69,346,67,325,69,312,73,307,79,309,87,304,88,302,78,309,69,324,63,346,61,370,64,385,70"/>
+<area shape="rect" id="Node000004" href="$class_u_k_p_t_base_attribute_set.html#a1c7ea0c5c42ca83c2c5f60a9a3a443f5" title=" " alt="" coords="5,72,201,115"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="233,105,201,102,201,97,233,99"/>
+<area shape="rect" id="Node000005" href="$class_u_k_p_t_base_attribute_set.html#a6069c0ab57ba2aba9b4af10c0b3f2c60" title=" " alt="" coords="5,139,201,181"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="234,135,202,142,200,137,233,130"/>
+<area shape="rect" id="Node000006" href="$class_u_k_p_t_base_attribute_set.html#a4dfece0df7d554071feee1899bd701e9" title=" " alt="" coords="5,205,201,248"/>
+<area shape="poly" id="edge7_Node000003_Node000006" title=" " alt="" coords="300,142,253,169,202,196,174,207,172,202,200,191,251,165,297,137"/>
+</map>

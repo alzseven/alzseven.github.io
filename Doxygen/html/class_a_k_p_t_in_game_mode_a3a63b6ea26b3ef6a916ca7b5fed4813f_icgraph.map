@@ -1,0 +1,11 @@
+<map id="AKPTInGameMode::OnPlayerDied" name="AKPTInGameMode::OnPlayerDied">
+<area shape="rect" id="Node000001" title="플레이어가 사망했을 때 호출됩니다." alt="" coords="480,31,703,57"/>
+<area shape="rect" id="Node000002" href="$class_a_player_character.html#aa38c751d8495a3e3d999eafad23d7a88" title=" " alt="" coords="255,5,408,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="465,34,408,29,408,23,465,29"/>
+<area shape="rect" id="Node000003" href="$class_a_character_base.html#af4c20a0d4ddeb41b0eb305b807bcfc9d" title=" " alt="" coords="231,56,432,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="465,59,433,62,432,57,464,54"/>
+<area shape="rect" id="Node000004" href="$class_a_character_base.html#af3460531018611a7b3b2c59779c65ead" title=" " alt="" coords="5,56,183,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="215,81,183,81,183,75,215,76"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="198,58,230,58,230,63,198,63"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="135,44,121,37,94,35,69,37,55,41,52,47,58,54,54,57,47,47,52,37,68,31,94,29,123,32,138,39"/>
+</map>

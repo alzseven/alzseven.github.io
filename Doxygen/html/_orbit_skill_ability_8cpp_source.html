@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Skill/Ability/OrbitSkillAbility.cpp 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_orbit_skill_ability_8cpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">OrbitSkillAbility.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_orbit_skill_ability_8cpp.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_orbit_skill_ability_8h.html">Skill/Ability/OrbitSkillAbility.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="}">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="class_u_orbit_skill_ability.html#a30cfb801f01a4750000faaa655b36ae8">    6</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_orbit_skill_ability.html#a30cfb801f01a4750000faaa655b36ae8">UOrbitSkillAbility::ActivateAbility</a>(<span class="keyword">const</span> FGameplayAbilitySpecHandle Handle,</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keyword">const</span> FGameplayAbilityActorInfo* ActorInfo, <span class="keyword">const</span> FGameplayAbilityActivationInfo ActivationInfo,</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keyword">const</span> FGameplayEventData* TriggerEventData)</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    Super::ActivateAbility(Handle, ActorInfo, ActivationInfo, TriggerEventData);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    TArray&lt;FTransform&gt; SpawnTransforms = <a class="code hl_function" href="class_u_base_skill_ability.html#ade62b76d04ebd1cfb7fd24381996b226">CalculateSpawnTransforms</a>(GetAvatarActorFromActorInfo(), <a class="code hl_variable" href="class_u_base_skill_ability.html#a03f1bd628d71e2f7e5327ccae8f106d9">CalculatedStatusData</a>.NumToSpawn);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordflow">for</span> (int32 i = 0;i&lt;SpawnTransforms.Num();i++)</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <a class="code hl_function" href="class_u_base_skill_ability.html#add7b774bb674e60d694ab62b61e24378">SpawnAndInitializeProjectile</a>(SpawnTransforms[i], i,SpawnTransforms.Num());</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    }</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>     <a class="code hl_function" href="class_u_base_skill_ability.html#a417674acacd1245fc05ddbb5bfbbfbcc">ApplySkillCooldown</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>     <a class="code hl_function" href="class_u_base_skill_ability.html#a1fa54aaab0a6c87d2296637a99572b03">OnEndAbility</a>(Handle, ActorInfo, ActivationInfo, <span class="keyword">true</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>}</div>
+</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_u_orbit_skill_ability.html#a229fb444da31a8bb9281e02b9f6768fb">   21</a></span>TArray&lt;FTransform&gt; <a class="code hl_function" href="class_u_orbit_skill_ability.html#a229fb444da31a8bb9281e02b9f6768fb">UOrbitSkillAbility::CalculateSpawnTransforms_Implementation</a>(AActor* Caster, int32 SpawnCount)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    TArray&lt;FTransform&gt; Transforms;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">// 유효성 검사: Caster가 없거나 생성할 개수가 0 이하면 빈 배열을 반환합니다.</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordflow">if</span> (!Caster || SpawnCount &lt;= 0)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">return</span> Transforms;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">const</span> FVector CasterLocation = Caster-&gt;GetActorLocation();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">// 이 값은 데이터 테이블(DT_SkillLevelData)에서 읽어온 &#39;EffectRadius&#39;가 되어야 합니다.</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">// 여기서는 예시로 150.0f를 사용합니다.</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> SpawnRadius = <a class="code hl_variable" href="class_u_base_skill_ability.html#a03f1bd628d71e2f7e5327ccae8f106d9">CalculatedStatusData</a>.AttackArea;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">// 투사체 사이의 각도 간격을 계산합니다.</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> AngleStep = 360.0f / SpawnCount;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">for</span> (int32 i = 0; i &lt; SpawnCount; ++i)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="comment">// 현재 투사체의 각도를 계산합니다.</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> CurrentAngle = AngleStep * i;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keyword">const</span> <span class="keywordtype">float</span> AngleInRadians = FMath::DegreesToRadians(CurrentAngle);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="comment">// 중심점(Caster)으로부터의 오프셋(거리와 방향)을 계산합니다.</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="comment">// Z축 값은 0으로 하여 Caster와 같은 높이에 스폰되도록 합니다.</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keyword">const</span> FVector Offset = FVector(SpawnRadius * FMath::Cos(AngleInRadians), SpawnRadius * FMath::Sin(AngleInRadians), 0.f);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="comment">// 최종 스폰 위치를 계산합니다.</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">const</span> FVector SpawnLocation = CasterLocation + Offset;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="comment">// 투사체가 원의 바깥쪽을 바라보도록 회전값을 계산합니다.</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="comment">// Offset 벡터의 방향이 바로 바깥쪽을 향하는 방향이므로, 이 벡터를 사용해 회전값을 만듭니다.</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keyword">const</span> FRotator SpawnRotation = Offset.Rotation() + FRotator(0,90,0);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="comment">// 계산된 위치와 회전값으로 Transform을 만들고 배열에 추가합니다.</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        Transforms.Emplace(SpawnRotation, SpawnLocation);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">return</span> Transforms;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
+</div>
+<div class="ttc" id="a_orbit_skill_ability_8h_html"><div class="ttname"><a href="_orbit_skill_ability_8h.html">OrbitSkillAbility.h</a></div></div>
+<div class="ttc" id="aclass_u_base_skill_ability_html_a03f1bd628d71e2f7e5327ccae8f106d9"><div class="ttname"><a href="class_u_base_skill_ability.html#a03f1bd628d71e2f7e5327ccae8f106d9">UBaseSkillAbility::CalculatedStatusData</a></div><div class="ttdeci">FDetailedSkillData CalculatedStatusData</div><div class="ttdef"><b>Definition</b> <a href="_base_skill_ability_8h_source.html#l00035">BaseSkillAbility.h:35</a></div></div>
+<div class="ttc" id="aclass_u_base_skill_ability_html_a1fa54aaab0a6c87d2296637a99572b03"><div class="ttname"><a href="class_u_base_skill_ability.html#a1fa54aaab0a6c87d2296637a99572b03">UBaseSkillAbility::OnEndAbility</a></div><div class="ttdeci">virtual void OnEndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled)</div><div class="ttdef"><b>Definition</b> <a href="_base_skill_ability_8cpp_source.html#l00242">BaseSkillAbility.cpp:242</a></div></div>
+<div class="ttc" id="aclass_u_base_skill_ability_html_a417674acacd1245fc05ddbb5bfbbfbcc"><div class="ttname"><a href="class_u_base_skill_ability.html#a417674acacd1245fc05ddbb5bfbbfbcc">UBaseSkillAbility::ApplySkillCooldown</a></div><div class="ttdeci">void ApplySkillCooldown()</div><div class="ttdef"><b>Definition</b> <a href="_base_skill_ability_8cpp_source.html#l00225">BaseSkillAbility.cpp:225</a></div></div>
+<div class="ttc" id="aclass_u_base_skill_ability_html_add7b774bb674e60d694ab62b61e24378"><div class="ttname"><a href="class_u_base_skill_ability.html#add7b774bb674e60d694ab62b61e24378">UBaseSkillAbility::SpawnAndInitializeProjectile</a></div><div class="ttdeci">virtual void SpawnAndInitializeProjectile(const FTransform &amp;SpawnTransform, int32 Index, int32 TotalCount)</div><div class="ttdef"><b>Definition</b> <a href="_base_skill_ability_8cpp_source.html#l00166">BaseSkillAbility.cpp:166</a></div></div>
+<div class="ttc" id="aclass_u_base_skill_ability_html_ade62b76d04ebd1cfb7fd24381996b226"><div class="ttname"><a href="class_u_base_skill_ability.html#ade62b76d04ebd1cfb7fd24381996b226">UBaseSkillAbility::CalculateSpawnTransforms</a></div><div class="ttdeci">TArray&lt; FTransform &gt; CalculateSpawnTransforms(AActor *Caster, int32 SpawnCount)</div></div>
+<div class="ttc" id="aclass_u_orbit_skill_ability_html_a229fb444da31a8bb9281e02b9f6768fb"><div class="ttname"><a href="class_u_orbit_skill_ability.html#a229fb444da31a8bb9281e02b9f6768fb">UOrbitSkillAbility::CalculateSpawnTransforms_Implementation</a></div><div class="ttdeci">virtual TArray&lt; FTransform &gt; CalculateSpawnTransforms_Implementation(AActor *Caster, int32 SpawnCount) override</div><div class="ttdef"><b>Definition</b> <a href="#l00021">OrbitSkillAbility.cpp:21</a></div></div>
+<div class="ttc" id="aclass_u_orbit_skill_ability_html_a30cfb801f01a4750000faaa655b36ae8"><div class="ttname"><a href="class_u_orbit_skill_ability.html#a30cfb801f01a4750000faaa655b36ae8">UOrbitSkillAbility::ActivateAbility</a></div><div class="ttdeci">virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData *TriggerEventData) override</div><div class="ttdef"><b>Definition</b> <a href="#l00006">OrbitSkillAbility.cpp:6</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_835db7cc60e52a26a89059f64164cf8e.html">Skill</a></li><li class="navelem"><a href="dir_450d4bb011d81f3d6e7dc615ecdadbdc.html">Ability</a></li><li class="navelem"><a href="_orbit_skill_ability_8cpp.html">OrbitSkillAbility.cpp</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

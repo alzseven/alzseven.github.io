@@ -1,0 +1,18 @@
+<map id="AProjectileBase::OnCapsuleBeginOverlap" name="AProjectileBase::OnCapsuleBeginOverlap">
+<area shape="rect" id="Node000001" title=" " alt="" coords="520,93,707,136"/>
+<area shape="rect" id="Node000002" href="$class_a_projectile_base.html#a4af0692f0f34f13e9252c856b34ef20e" title=" " alt="" coords="270,23,464,65"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="521,91,444,69,445,63,523,86"/>
+<area shape="rect" id="Node000004" href="$class_a_projectile_base.html#a834538bec800ff94ae07ef0c9e8c46e2" title=" " alt="" coords="263,93,472,136"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="504,117,473,117,473,112,504,112"/>
+<area shape="rect" id="Node000006" href="$class_a_delay_projectile_base.html#a21e41ef4c2deb55b121b92134fc730ff" title=" " alt="" coords="293,184,442,227"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="540,144,428,186,427,181,538,139"/>
+<area shape="rect" id="Node000003" href="$class_a_projectile_base.html#a98af5749663255a0ea9dbcfb5849fe9b" title=" " alt="" coords="13,29,207,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="255,46,208,46,208,41,255,41"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="155,17,140,10,110,8,83,10,68,15,64,20,71,27,67,31,59,21,65,11,82,5,110,3,141,5,157,12"/>
+<area shape="rect" id="Node000005" href="$class_a_projectile_base.html#a2aeab30c3d7437bdbbb092d66c2cf7e1" title=" " alt="" coords="5,104,215,131"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="247,119,215,119,215,114,247,113"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="155,92,140,85,110,83,83,85,68,90,64,95,71,102,67,105,59,95,65,85,82,79,110,77,141,80,157,87"/>
+<area shape="poly" id="edge9_Node000006_Node000006" title=" " alt="" coords="407,171,392,165,367,163,344,165,330,169,324,175,326,183,321,184,319,174,327,165,343,159,367,157,394,160,409,166"/>
+<area shape="rect" id="Node000007" href="$class_a_delay_projectile_base.html#a2ee2f7c1e60d44c30e70b862fe60b65e" title=" " alt="" coords="11,184,209,227"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="278,208,209,208,209,203,278,203"/>
+</map>

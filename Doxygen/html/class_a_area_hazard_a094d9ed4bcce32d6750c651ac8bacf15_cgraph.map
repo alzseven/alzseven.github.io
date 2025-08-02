@@ -1,0 +1,7 @@
+<map id="AAreaHazard::BeginPlay" name="AAreaHazard::BeginPlay">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,172,40"/>
+<area shape="rect" id="Node000002" href="$class_a_area_hazard.html#af8d0dba4ea83c0c16335dbad95946bf1" title=" " alt="" coords="220,13,422,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,24,204,24,204,29,172,29"/>
+<area shape="rect" id="Node000003" href="$class_a_area_hazard.html#a08671a76a20608d282e8f4158ebea873" title=" " alt="" coords="470,5,644,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="423,24,454,24,454,29,423,29"/>
+</map>

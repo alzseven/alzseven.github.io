@@ -1,0 +1,7 @@
+<map id="AKPTInGameMode::ShareTeamGold" name="AKPTInGameMode::ShareTeamGold">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,241,40"/>
+<area shape="rect" id="Node000002" href="$class_u_player_wallet_component.html#a7cab4a8e3b21d6b74891e61dd0dbf95c" title=" " alt="" coords="289,5,460,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="241,24,273,24,273,29,241,29"/>
+<area shape="rect" id="Node000003" href="$class_u_player_wallet_component.html#ab679569285e7f915b08ffb945b2e2c3a" title=" " alt="" coords="508,5,679,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="460,24,492,24,492,29,460,29"/>
+</map>

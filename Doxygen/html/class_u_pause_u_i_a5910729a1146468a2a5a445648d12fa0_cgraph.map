@@ -1,0 +1,13 @@
+<map id="UPauseUI::HandleClickedClose" name="UPauseUI::HandleClickedClose">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,72,215,99"/>
+<area shape="rect" id="Node000002" href="$class_u_u_i_manager_subsystem.html#aed4b9c08eec4848386a3a89108827ffd" title=" " alt="" coords="277,5,483,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,69,263,49,265,54,176,74"/>
+<area shape="rect" id="Node000003" href="$class_u_u_i_base.html#a7db928b8721c8dede4954eed8695c0e4" title=" " alt="" coords="263,72,497,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="215,83,247,83,247,88,215,88"/>
+<area shape="rect" id="Node000004" href="$class_u_u_i_manager_subsystem.html#a1e0415f5fab1f4658e1aee52f1ee1a0b" title="지정된 인스턴스 ID의 위젯을 화면에서 숨깁니다." alt="" coords="299,123,460,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="176,97,284,121,283,126,174,102"/>
+<area shape="rect" id="Node000005" href="$class_u_u_i_manager_subsystem.html#acaac8367f6b3ad4c0509900d7f01b65a" title=" " alt="" coords="545,123,736,165"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="461,141,529,141,529,147,461,147"/>
+<area shape="rect" id="Node000006" href="$class_u_u_i_manager_subsystem.html#a6c815ab68107e8e616ddb62dd3391d2c" title=" " alt="" coords="784,123,946,165"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="737,141,769,141,769,147,737,147"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="UPauseUI" name="UPauseUI">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,405,253,1275"/>
+<area shape="rect" id="Node000002" href="$class_u_u_i_base.html" title=" " alt="" coords="21,123,238,357"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,372,132,406,127,406,127,372"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="84,5,174,75"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="132,90,132,123,127,123,127,90"/>
+</map>

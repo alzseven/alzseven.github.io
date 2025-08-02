@@ -1,0 +1,9 @@
+<map id="UGameplayAbility_TraceBase" name="UGameplayAbility_TraceBase">
+<area shape="rect" id="Node000001" title=" " alt="" coords="238,123,683,645"/>
+<area shape="rect" id="Node000003" href="$class_u_gameplay_ability___boss_breath.html" title=" " alt="" coords="5,883,449,1085"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="356,660,269,884,264,882,351,658"/>
+<area shape="rect" id="Node000004" href="$class_u_gameplay_ability___boss_rock_drop.html" title=" " alt="" coords="473,693,918,1275"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="571,658,584,693,579,695,566,660"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="403,5,518,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="463,89,463,123,458,123,458,89"/>
+</map>

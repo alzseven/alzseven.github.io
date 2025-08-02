@@ -1,0 +1,97 @@
+<map id="AKPTInGameMode::OnPlayerDied" name="AKPTInGameMode::OnPlayerDied">
+<area shape="rect" id="Node000001" title="플레이어가 사망했을 때 호출됩니다." alt="" coords="5,597,229,624"/>
+<area shape="rect" id="Node000002" href="$class_a_k_p_t_in_game_mode.html#a1c856c37dce7343a381723b5d842ecf7" title="모든 플레이어가 사망했는지 확인합니다." alt="" coords="277,597,529,624"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="229,608,261,608,261,613,229,613"/>
+<area shape="rect" id="Node000008" href="$class_a_k_p_t_in_game_mode.html#a4d83e6405b91bdefb43aeac062b7b099" title=" " alt="" coords="1902,123,2101,165"/>
+<area shape="poly" id="edge56_Node000001_Node000008" title=" " alt="" coords="121,596,140,545,174,465,223,369,287,266,324,215,365,167,409,122,457,83,508,50,563,25,621,8,682,3,1207,3,1305,6,1406,15,1602,44,1776,81,1911,115,1910,121,1775,86,1601,49,1405,20,1305,11,1207,8,682,8,622,14,564,30,510,55,460,87,413,126,369,171,328,218,291,269,228,371,179,468,145,547,126,598"/>
+<area shape="rect" id="Node000013" href="$class_a_k_p_t_in_game_mode.html#aab8a44dfe87df1106a9eecc225638148" title="게임에서 패배했을 때 호출됩니다." alt="" coords="1616,1056,1836,1099"/>
+<area shape="poly" id="edge55_Node000001_Node000013" title=" " alt="" coords="128,623,193,725,247,797,314,874,392,947,435,979,481,1008,528,1032,578,1051,629,1063,682,1067,1207,1067,1601,1072,1601,1077,1207,1072,682,1072,628,1068,576,1056,526,1037,478,1013,432,984,389,951,310,877,242,800,188,728,124,626"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="356,599,348,589,353,579,372,573,403,571,437,573,454,581,452,585,436,579,403,576,373,578,357,583,353,588,360,595"/>
+<area shape="rect" id="Node000003" href="$class_a_k_p_t_in_game_mode.html#aa1438e6b6ee34fd792e397dedd825ff0" title=" " alt="" coords="1095,43,1316,85"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="401,597,403,506,409,439,422,364,442,286,474,210,494,174,517,140,544,110,576,83,613,64,665,52,727,44,797,40,944,41,1079,49,1079,55,944,46,797,45,728,49,666,57,615,69,578,88,548,114,521,144,498,177,478,212,448,287,427,365,414,440,408,506,406,597"/>
+<area shape="rect" id="Node000005" href="$class_a_k_p_t_in_game_mode.html#a410acd626df9144d7ebb63b535dbc37b" title=" " alt="" coords="584,619,783,661"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="530,621,569,625,569,631,529,627"/>
+<area shape="rect" id="Node000007" href="$class_a_k_p_t_in_game_mode.html#a23300b5648c661902a39ec934b2de357" title=" " alt="" coords="1615,181,1837,224"/>
+<area shape="poly" id="edge52_Node000002_Node000007" title=" " alt="" coords="411,595,477,509,531,449,596,386,671,326,755,275,799,255,845,240,893,230,941,227,1207,227,1414,221,1600,210,1600,215,1415,227,1207,232,941,232,893,235,847,245,801,260,757,280,674,330,599,390,534,453,481,513,415,599"/>
+<area shape="poly" id="edge53_Node000002_Node000008" title=" " alt="" coords="406,596,424,543,459,466,482,424,509,382,540,343,575,309,639,264,697,240,759,228,838,213,983,187,1132,168,1280,154,1425,145,1687,137,1886,138,1886,143,1687,142,1425,150,1281,159,1132,173,984,193,839,219,760,233,699,246,642,268,579,313,544,347,513,385,486,427,463,468,429,545,411,598"/>
+<area shape="rect" id="Node000017" href="$class_a_k_p_t_in_game_mode.html#a87cb6168b8662d3ba2ebc02f0695522c" title=" " alt="" coords="1635,989,1817,1032"/>
+<area shape="poly" id="edge51_Node000002_Node000017" title=" " alt="" coords="408,624,420,691,431,739,447,791,470,845,498,897,534,944,579,983,625,1010,668,1026,708,1031,748,1030,834,1017,884,1011,941,1008,1207,1008,1620,1008,1620,1013,1207,1013,941,1013,885,1016,835,1022,749,1035,708,1037,667,1031,623,1015,575,987,530,948,494,900,465,847,442,793,426,740,414,692,403,625"/>
+<area shape="rect" id="Node000036" href="$class_a_k_p_t_in_game_mode.html#aa8b93d6bdef1ef7d2ddd4d2018bc94cb" title=" " alt="" coords="848,560,1037,603"/>
+<area shape="poly" id="edge54_Node000002_Node000036" title=" " alt="" coords="529,601,833,585,833,590,530,606"/>
+<area shape="rect" id="Node000037" href="$class_a_k_p_t_in_game_mode.html#a334c0aa77939b7960e58785eff22e00e" title=" " alt="" coords="577,864,790,907"/>
+<area shape="poly" id="edge48_Node000002_Node000037" title=" " alt="" coords="413,623,435,665,472,724,520,788,548,817,579,843,596,854,593,859,575,847,545,821,516,791,467,727,431,668,408,626"/>
+<area shape="rect" id="Node000038" href="$class_a_k_p_t_in_game_mode.html#a0368a48967da2d4e05b79760d325efd2" title=" " alt="" coords="577,931,790,973"/>
+<area shape="poly" id="edge49_Node000002_Node000038" title=" " alt="" coords="410,623,428,677,461,757,484,800,511,842,543,882,579,917,583,920,580,924,575,921,539,886,507,845,479,802,456,759,423,679,405,625"/>
+<area shape="rect" id="Node000039" href="$class_a_k_p_t_in_game_mode.html#a97f3e2361fae3fa048ea5c3c5f5c41b8" title=" " alt="" coords="577,97,790,140"/>
+<area shape="poly" id="edge50_Node000002_Node000039" title=" " alt="" coords="403,596,414,521,441,404,464,338,493,273,530,211,575,157,588,146,591,150,579,161,534,215,497,276,469,340,446,405,419,522,408,597"/>
+<area shape="rect" id="Node000004" href="$class_a_k_p_t_player_state.html#a3f0fd46533843d108f4569bd68d9b233" title=" " alt="" coords="2162,123,2351,165"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="1317,61,1473,63,1671,70,1891,84,2111,108,2157,116,2156,121,2111,113,1891,89,1671,75,1473,68,1316,66"/>
+<area shape="rect" id="Node000006" href="$class_a_k_p_t_in_game_mode.html#a84edc1df98161132b7b803669c9299a0" title="야간 페이즈를 시작하기 위한 준비 및 전환을 시작합니다." alt="" coords="839,677,1046,720"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="781,659,831,671,830,676,780,665"/>
+<area shape="rect" id="Node000014" href="$class_a_k_p_t_in_game_mode.html#a2a532fe05b539d72cc039305ee771c40" title=" " alt="" coords="1892,923,2111,965"/>
+<area shape="poly" id="edge34_Node000005_Node000014" title=" " alt="" coords="715,660,770,697,804,715,839,729,908,742,1027,754,1345,778,1661,805,1777,822,1818,831,1845,842,1862,858,1871,875,1878,892,1893,909,1900,913,1897,917,1890,913,1874,895,1866,877,1858,861,1842,846,1817,836,1776,827,1660,810,1344,783,1026,759,908,747,838,735,802,720,768,701,712,664"/>
+<area shape="rect" id="Node000028" href="$class_a_k_p_t_in_game_mode.html#a9f93e98963e67a4aec973d492c0b437a" title="새 라운드를 시작합니다." alt="" coords="838,627,1047,653"/>
+<area shape="poly" id="edge35_Node000005_Node000028" title=" " alt="" coords="783,637,823,637,823,643,783,643"/>
+<area shape="poly" id="edge47_Node000005_Node000036" title=" " alt="" coords="780,615,833,603,834,609,781,621"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="1022,674,1045,663,1100,628,1142,594,1177,560,1207,525,1270,454,1311,416,1362,375,1427,331,1480,299,1607,240,1639,227,1641,232,1609,245,1483,304,1430,335,1366,379,1314,420,1274,457,1211,529,1181,563,1146,598,1103,632,1048,668,1025,679"/>
+<area shape="rect" id="Node000009" href="$class_a_k_p_t_in_game_mode.html#acd0b193dd9ce700d2a4cb3953565584c" title="야간 페이즈의 핵심 로직을 실행합니다." alt="" coords="1105,683,1306,725"/>
+<area shape="poly" id="edge10_Node000006_Node000009" title=" " alt="" coords="1046,698,1089,699,1089,704,1046,703"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="1829,178,1886,166,1887,171,1830,183"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="2101,141,2147,141,2147,147,2101,147"/>
+<area shape="rect" id="Node000010" href="$class_a_k_p_t_in_game_mode.html#a0e1dec85eeba3835d463238c88f8904b" title="야간 페이즈를 종료하고, 게임 종료 조건을 확인하거나 새 라운드를 시작합니다." alt="" coords="1364,856,1560,899"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="1240,724,1418,845,1415,849,1237,728"/>
+<area shape="rect" id="Node000021" href="$class_u_stage_manager_subsystem.html#afc484834b3d364a92817a4e6475bc810" title=" " alt="" coords="1372,619,1553,661"/>
+<area shape="poly" id="edge24_Node000009_Node000021" title=" " alt="" coords="1293,679,1358,663,1360,668,1294,685"/>
+<area shape="rect" id="Node000022" href="$class_u_stage_manager_subsystem.html#ad0af6446e32468e50889d617d579207f" title=" " alt="" coords="1372,685,1553,728"/>
+<area shape="poly" id="edge25_Node000009_Node000022" title=" " alt="" coords="1306,702,1356,703,1356,708,1306,708"/>
+<area shape="poly" id="edge12_Node000010_Node000002" title=" " alt="" coords="1364,876,1255,868,1122,854,979,832,838,800,722,762,610,716,513,671,442,634,444,629,516,666,612,711,724,757,839,795,980,827,1123,849,1255,863,1364,871"/>
+<area shape="rect" id="Node000011" href="$class_a_k_p_t_in_game_mode.html#a447cf5f334247ed8640cee6ae43bc376" title="팀의 경험치를 확인하고 레벨업을 처리합니다." alt="" coords="1626,856,1826,899"/>
+<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="1561,875,1611,875,1611,880,1561,880"/>
+<area shape="poly" id="edge15_Node000010_Node000013" title=" " alt="" coords="1479,898,1530,969,1567,1008,1610,1042,1618,1047,1615,1051,1607,1046,1564,1012,1526,972,1474,901"/>
+<area shape="rect" id="Node000016" href="$class_a_k_p_t_in_game_mode.html#acde5763daa38af9c93badb25bf0f59d1" title="게임에서 승리했을 때 호출됩니다." alt="" coords="1616,923,1836,965"/>
+<area shape="poly" id="edge18_Node000010_Node000016" title=" " alt="" coords="1550,897,1625,916,1623,921,1549,902"/>
+<area shape="poly" id="edge20_Node000010_Node000017" title=" " alt="" coords="1491,897,1544,937,1610,975,1623,981,1621,986,1607,980,1541,941,1488,901"/>
+<area shape="rect" id="Node000018" href="$class_a_k_p_t_in_game_mode.html#a6855178c3536314307a454f02abe0c82" title=" " alt="" coords="1608,755,1844,781"/>
+<area shape="poly" id="edge21_Node000010_Node000018" title=" " alt="" coords="1515,853,1677,785,1679,790,1517,858"/>
+<area shape="rect" id="Node000012" href="$class_u_player_reward_state_component.html#a9707a634f494b85a8bc0875f09b08b48" title="서버 전용: 처리해야 할 보상을 목록에 추가합니다." alt="" coords="1896,856,2107,899"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="1826,875,1880,875,1880,880,1826,880"/>
+<area shape="poly" id="edge16_Node000013_Node000014" title=" " alt="" coords="1813,1053,1843,1042,1904,1008,1958,973,1961,977,1907,1013,1845,1046,1815,1058"/>
+<area shape="rect" id="Node000015" href="$class_a_k_p_t_in_game_mode.html#aa81ccab3f271d21f9a65bb8f42eb6f70" title=" " alt="" coords="2159,923,2354,965"/>
+<area shape="poly" id="edge17_Node000014_Node000015" title=" " alt="" coords="2112,941,2143,941,2143,947,2112,947"/>
+<area shape="poly" id="edge19_Node000016_Node000014" title=" " alt="" coords="1836,941,1876,941,1876,947,1836,947"/>
+<area shape="rect" id="Node000019" href="$class_u_player_wallet_component.html#a7cab4a8e3b21d6b74891e61dd0dbf95c" title=" " alt="" coords="1916,771,2087,813"/>
+<area shape="poly" id="edge22_Node000018_Node000019" title=" " alt="" coords="1844,776,1900,781,1900,786,1844,781"/>
+<area shape="rect" id="Node000020" href="$class_u_player_wallet_component.html#ab679569285e7f915b08ffb945b2e2c3a" title=" " alt="" coords="2171,771,2342,813"/>
+<area shape="poly" id="edge23_Node000019_Node000020" title=" " alt="" coords="2088,789,2155,789,2155,795,2088,795"/>
+<area shape="rect" id="Node000023" href="$class_u_stage_manager_subsystem.html#a10be946619661f166108878489139489" title=" " alt="" coords="1635,637,1817,680"/>
+<area shape="poly" id="edge26_Node000022_Node000023" title=" " alt="" coords="1553,688,1620,675,1620,681,1554,693"/>
+<area shape="rect" id="Node000027" href="$class_u_stage_manager_subsystem.html#a8a5a0fc89c9effbbb84cb8ea7729d1bc" title=" " alt="" coords="1911,704,2092,747"/>
+<area shape="poly" id="edge33_Node000022_Node000027" title=" " alt="" coords="1553,707,1896,719,1895,724,1553,712"/>
+<area shape="poly" id="edge31_Node000023_Node000023" title=" " alt="" coords="1676,637,1674,627,1683,618,1700,613,1726,611,1754,613,1771,619,1769,624,1753,618,1726,616,1701,618,1685,623,1679,629,1681,636"/>
+<area shape="rect" id="Node000024" href="$class_u_stage_manager_subsystem.html#a8386ea09d547e37b0110a5f62dd2fb9d" title=" " alt="" coords="1911,520,2092,563"/>
+<area shape="poly" id="edge27_Node000023_Node000024" title=" " alt="" coords="1770,634,1891,579,1923,566,1925,571,1893,584,1772,639"/>
+<area shape="rect" id="Node000025" href="$class_u_stage_manager_subsystem.html#a1b506743975f481d0cd15a1153f0820d" title=" " alt="" coords="2166,608,2347,651"/>
+<area shape="poly" id="edge28_Node000023_Node000025" title=" " alt="" coords="1817,634,1891,623,1953,618,2001,619,2111,623,2151,623,2151,629,2111,628,2001,624,1953,624,1892,628,1818,640"/>
+<area shape="rect" id="Node000026" href="$class_u_stage_manager_subsystem.html#acee67f86b9c712f48829d333b472a58a" title=" " alt="" coords="1911,637,2092,680"/>
+<area shape="poly" id="edge29_Node000023_Node000026" title=" " alt="" coords="1817,656,1895,656,1895,661,1817,661"/>
+<area shape="poly" id="edge32_Node000023_Node000027" title=" " alt="" coords="1818,678,1896,697,1895,702,1816,683"/>
+<area shape="poly" id="edge30_Node000026_Node000025" title=" " alt="" coords="2092,646,2150,639,2151,644,2093,651"/>
+<area shape="rect" id="Node000029" href="$class_a_k_p_t_in_game_mode.html#aa4f70056d702908efb82a3a085b2d832" title="주간 페이즈의 시작을 처리합니다." alt="" coords="1102,272,1309,315"/>
+<area shape="poly" id="edge36_Node000028_Node000029" title=" " alt="" coords="1030,624,1045,613,1068,579,1077,545,1076,511,1070,476,1064,441,1062,405,1070,369,1093,332,1102,322,1106,326,1097,335,1075,371,1068,406,1069,440,1075,475,1081,510,1082,546,1073,581,1049,616,1034,628"/>
+<area shape="rect" id="Node000030" href="$class_a_k_p_t_in_game_mode.html#ad299e138b605334f03841982928f4e6e" title="특정 플레이어를 현재 게임 페이즈에 맞게 초기화합니다." alt="" coords="1367,389,1557,432"/>
+<area shape="poly" id="edge37_Node000029_Node000030" title=" " alt="" coords="1255,313,1401,380,1399,385,1253,318"/>
+<area shape="poly" id="edge38_Node000030_Node000004" title=" " alt="" coords="1531,387,1559,369,1574,348,1581,327,1588,305,1607,285,1638,265,1666,253,1693,246,1719,243,1775,242,1843,233,2110,175,2146,167,2147,172,2112,180,1844,239,1775,247,1719,249,1694,251,1668,258,1640,270,1610,289,1593,308,1586,328,1579,350,1562,373,1534,391"/>
+<area shape="poly" id="edge44_Node000030_Node000007" title=" " alt="" coords="1534,387,1558,369,1570,353,1577,338,1581,306,1586,274,1593,257,1606,241,1620,230,1623,234,1610,245,1598,260,1591,275,1586,307,1582,339,1575,356,1562,373,1538,391"/>
+<area shape="rect" id="Node000031" href="$class_a_k_p_t_player_state.html#a6989c3ebb86791d3a7265d8f5dc90b93" title=" " alt="" coords="1627,389,1825,432"/>
+<area shape="poly" id="edge39_Node000030_Node000031" title=" " alt="" coords="1558,408,1612,408,1612,413,1558,413"/>
+<area shape="rect" id="Node000032" href="$class_u_player_reward_state_component.html#a13152160f317ee674b6c1dde2d1bb0e7" title="처리해야 할 보상이 남아있는지 확인합니다." alt="" coords="1620,480,1832,523"/>
+<area shape="poly" id="edge41_Node000030_Node000032" title=" " alt="" coords="1528,430,1648,472,1646,477,1526,435"/>
+<area shape="rect" id="Node000033" href="$class_a_k_p_t_in_game_mode.html#a1a9ee04a849c50e213574d166ea3eda5" title="특정 플레이어에게 카드 선택 기회를 제공합니다." alt="" coords="1635,299,1817,341"/>
+<area shape="poly" id="edge43_Node000030_Node000033" title=" " alt="" coords="1514,386,1607,351,1629,344,1631,349,1609,356,1516,391"/>
+<area shape="rect" id="Node000034" href="$class_a_k_p_t_player_state.html#ae76783471e033ac0ece5ebe988856b1b" title="업그레이드 선택 기회를 추가합니다." alt="" coords="1624,547,1828,589"/>
+<area shape="poly" id="edge45_Node000030_Node000034" title=" " alt="" coords="1485,430,1538,482,1573,509,1610,532,1621,538,1618,543,1607,537,1569,513,1535,486,1481,434"/>
+<area shape="poly" id="edge40_Node000031_Node000031" title=" " alt="" coords="1676,389,1674,379,1683,370,1700,365,1726,363,1754,365,1771,371,1769,376,1753,370,1726,368,1701,370,1685,375,1679,381,1681,388"/>
+<area shape="poly" id="edge42_Node000032_Node000032" title=" " alt="" coords="1676,480,1674,470,1683,461,1700,455,1726,453,1754,456,1771,462,1769,467,1753,461,1726,459,1701,461,1685,465,1679,471,1681,479"/>
+<area shape="rect" id="Node000035" href="$class_a_k_p_t_player_state.html#aa41c46851e05f762ccd8c2fc98aa505a" title=" " alt="" coords="1915,453,2088,496"/>
+<area shape="poly" id="edge46_Node000034_Node000035" title=" " alt="" coords="1812,543,1843,532,1866,519,1891,506,1906,499,1908,504,1893,510,1869,524,1845,537,1814,549"/>
+</map>

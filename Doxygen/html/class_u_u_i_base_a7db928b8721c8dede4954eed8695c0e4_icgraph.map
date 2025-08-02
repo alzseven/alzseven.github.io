@@ -1,0 +1,29 @@
+<map id="UUIBase::GetUIManagerSubsystem" name="UUIBase::GetUIManagerSubsystem">
+<area shape="rect" id="Node000001" title=" " alt="" coords="511,189,745,216"/>
+<area shape="rect" id="Node000002" href="$class_u_event_u_i.html#a63b5c4977ff4bce0a6c0039111a5e37b" title=" " alt="" coords="258,5,444,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="603,180,543,121,504,89,462,62,437,51,439,46,464,58,507,85,546,117,607,176"/>
+<area shape="rect" id="Node000003" href="$class_u_transition_u_i.html#ab196f60a081ad3cb90e2562cd4da6dc5" title=" " alt="" coords="246,72,456,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="585,184,528,157,462,129,429,118,431,113,464,124,530,152,588,180"/>
+<area shape="rect" id="Node000004" href="$class_u_pause_u_i.html#a5910729a1146468a2a5a445648d12fa0" title=" " alt="" coords="246,189,456,216"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="495,205,456,205,456,200,495,200"/>
+<area shape="rect" id="Node000007" href="$class_u_shop_u_i.html#a86e30b557b9c8efbcb66007ad6987b84" title=" " alt="" coords="250,240,452,267"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="537,222,428,242,427,237,536,217"/>
+<area shape="rect" id="Node000009" href="$class_u_pause_u_i.html#ad272156d61dc1a44318b188bf06d403e" title=" " alt="" coords="239,139,463,165"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="536,189,427,169,428,163,537,183"/>
+<area shape="rect" id="Node000010" href="$class_u_skill_slot_u_i.html#a767d282f328026f7c4ecf7df95201611" title=" " alt="" coords="255,291,446,333"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="588,226,530,253,464,281,431,293,429,288,462,276,528,249,585,221"/>
+<area shape="rect" id="Node000011" href="$class_u_main_u_i.html#a6158fd9774d8fbbe427df565301fe82a" title=" " alt="" coords="259,357,442,384"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="607,230,547,289,508,321,464,348,435,359,433,354,462,343,504,317,544,285,604,226"/>
+<area shape="rect" id="Node000005" href="$class_u_pause_u_i.html#a9eb5b5662314b5e9a43cf4e085176419" title=" " alt="" coords="5,189,191,216"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="231,205,191,205,191,200,231,200"/>
+<area shape="rect" id="Node000006" href="$class_u_pause_u_i.html#a044a4b6a8ff4a00b6065ca292cb165a9" title=" " alt="" coords="9,139,187,165"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="265,188,168,169,169,163,266,183"/>
+<area shape="rect" id="Node000008" href="$class_u_shop_u_i.html#ab8d30aa4ab0a8bf7ed1d77aa1f2ba1f5" title=" " alt="" coords="9,240,187,267"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="234,256,188,256,188,251,234,251"/>
+<area shape="poly" id="edge9_Node000009_Node000005" title=" " alt="" coords="266,172,169,191,168,186,265,166"/>
+<area shape="poly" id="edge10_Node000009_Node000006" title=" " alt="" coords="223,155,188,155,188,149,223,149"/>
+<area shape="rect" id="Node000012" href="$class_u_main_u_i.html#a64fc3061e4828b4d481930c7205a2a48" title=" " alt="" coords="10,383,186,409"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="244,384,187,390,187,384,243,379"/>
+<area shape="rect" id="Node000013" href="$class_u_main_u_i.html#a2683c924b81eaceaaaa22fab1a07802f" title=" " alt="" coords="13,332,183,359"/>
+<area shape="poly" id="edge14_Node000011_Node000013" title=" " alt="" coords="244,363,183,356,183,351,244,357"/>
+</map>

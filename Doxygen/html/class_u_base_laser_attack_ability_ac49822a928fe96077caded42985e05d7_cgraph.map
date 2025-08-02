@@ -1,0 +1,17 @@
+<map id="UBaseLaserAttackAbility::SpawnAndStartLasers" name="UBaseLaserAttackAbility::SpawnAndStartLasers">
+<area shape="rect" id="Node000001" title="Spawns the laser beams and starts their rotation and damage ticks." alt="" coords="5,85,173,128"/>
+<area shape="rect" id="Node000002" href="$class_a_laser_beam.html#afe56308672c73f22ea50ced018ca6f5d" title=" " alt="" coords="222,5,406,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,82,220,42,241,34,242,39,222,46,132,87"/>
+<area shape="rect" id="Node000003" href="$class_u_base_laser_attack_ability.html#a872ab3f13348f056b6148f62cf3fffc7" title=" " alt="" coords="231,56,398,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="173,93,215,88,215,93,174,98"/>
+<area shape="rect" id="Node000004" href="$class_u_base_laser_attack_ability.html#a1f265f5b299f3057b632ab3d32970ea6" title="Cleans up all spawned lasers and stops timers." alt="" coords="484,56,651,99"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="173,107,221,108,314,112,408,108,468,99,469,104,408,113,314,117,221,113,173,112"/>
+<area shape="rect" id="Node000005" href="$class_a_laser_beam.html#a11ecd803838b440840e791e3e9ecddab" title=" " alt="" coords="221,173,408,200"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="150,126,222,152,259,165,257,170,220,157,148,131"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="398,83,469,83,469,89,398,89"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="484,71,413,71,413,66,484,66"/>
+<area shape="rect" id="Node000006" href="$class_a_laser_beam.html#ad8bdeaad72d677a90b75a369bb62320e" title=" " alt="" coords="456,148,679,175"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="408,175,440,171,441,177,409,180"/>
+<area shape="rect" id="Node000007" href="$class_a_laser_beam.html#a111ed739e94f25374d405dc8fc83edf9" title=" " alt="" coords="458,199,677,225"/>
+<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="409,193,443,197,443,202,408,199"/>
+</map>

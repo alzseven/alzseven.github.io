@@ -1,0 +1,21 @@
+<map id="ADelayProjectileBase::OnGroundHit" name="ADelayProjectileBase::OnGroundHit">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,72,154,115"/>
+<area shape="poly" id="edge10_Node000001_Node000001" title=" " alt="" coords="38,72,37,62,44,53,58,47,80,45,103,48,117,54,114,59,101,53,79,51,59,53,47,57,42,63,44,71"/>
+<area shape="rect" id="Node000002" href="$class_a_delay_projectile_base.html#ad1e9ceeb62eadddb485f7c448193c862" title=" " alt="" coords="221,5,370,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,69,208,51,210,56,151,74"/>
+<area shape="rect" id="Node000005" href="$class_a_projectile_base.html#a183da78e0cee66595989812aec0ff7c9" title=" " alt="" coords="202,72,389,115"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="154,91,186,91,186,96,154,96"/>
+<area shape="rect" id="Node000006" href="$class_a_projectile_base.html#a2276af661735f8971f6af66c6db7633d" title=" " alt="" coords="437,131,638,157"/>
+<area shape="poly" id="edge11_Node000001_Node000006" title=" " alt="" coords="150,113,202,124,315,137,421,142,421,147,314,142,201,129,149,118"/>
+<area shape="rect" id="Node000003" href="$class_a_projectile_base.html#a808564bfde8ad88e8379b7d576ed2626" title=" " alt="" coords="452,8,623,51"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="370,25,437,26,437,31,370,30"/>
+<area shape="rect" id="Node000004" href="$class_a_projectile_base.html#a643fc0b4a82ec643f5d958ec6a30a060" title=" " alt="" coords="686,35,891,77"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="624,36,671,41,670,46,623,41"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="389,84,670,62,671,68,390,89"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="390,110,456,124,455,130,389,116"/>
+<area shape="rect" id="Node000007" href="$class_a_projectile_base.html#a56f85c58a5c516ddd3e66fbb115eb20d" title=" " alt="" coords="696,123,881,165"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="639,141,680,141,680,147,639,147"/>
+<area shape="rect" id="Node000008" href="$class_a_projectile_base.html#a76b21edb2d7e6427f03a3be58488ef52" title=" " alt="" coords="939,123,1114,165"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="882,141,923,141,923,147,882,147"/>
+<area shape="poly" id="edge9_Node000008_Node000008" title=" " alt="" coords="981,123,979,113,987,104,1003,98,1026,96,1052,98,1067,105,1065,110,1050,104,1026,101,1004,103,990,108,985,114,986,122"/>
+</map>

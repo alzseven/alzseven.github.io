@@ -1,0 +1,26 @@
+<map id="AProjectileBase::ApplyDamageToTarget" name="AProjectileBase::ApplyDamageToTarget">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1001,97,1205,140"/>
+<area shape="rect" id="Node000002" href="$class_a_projectile_base.html#a183da78e0cee66595989812aec0ff7c9" title=" " alt="" coords="765,131,953,173"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="986,137,954,142,953,137,985,132"/>
+<area shape="rect" id="Node000009" href="$class_a_projectile_base.html#a808564bfde8ad88e8379b7d576ed2626" title=" " alt="" coords="774,64,944,107"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="985,105,944,100,945,94,986,100"/>
+<area shape="rect" id="Node000003" href="$class_a_projectile_base.html#a4af0692f0f34f13e9252c856b34ef20e" title=" " alt="" coords="516,72,710,115"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="751,129,705,118,706,113,753,124"/>
+<area shape="rect" id="Node000005" href="$class_a_projectile_base.html#a834538bec800ff94ae07ef0c9e8c46e2" title=" " alt="" coords="508,195,717,237"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="760,180,698,197,697,192,759,175"/>
+<area shape="rect" id="Node000007" href="$class_a_delay_projectile_base.html#a21e41ef4c2deb55b121b92134fc730ff" title=" " alt="" coords="281,124,430,167"/>
+<area shape="poly" id="edge8_Node000002_Node000007" title=" " alt="" coords="750,153,430,149,430,144,750,148"/>
+<area shape="rect" id="Node000004" href="$class_a_projectile_base.html#a98af5749663255a0ea9dbcfb5849fe9b" title=" " alt="" coords="258,49,452,76"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="500,83,453,77,453,72,500,77"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="399,37,384,30,355,28,329,30,314,35,311,40,317,47,313,51,306,41,311,31,328,25,355,23,386,25,401,32"/>
+<area shape="rect" id="Node000006" href="$class_a_projectile_base.html#a2aeab30c3d7437bdbbb092d66c2cf7e1" title=" " alt="" coords="251,215,460,241"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="492,224,460,226,460,220,492,219"/>
+<area shape="poly" id="edge7_Node000006_Node000006" title=" " alt="" coords="399,202,384,196,355,193,329,195,314,200,311,205,317,213,313,216,306,206,311,196,328,190,355,188,386,191,401,197"/>
+<area shape="poly" id="edge10_Node000007_Node000007" title=" " alt="" coords="396,111,381,105,355,103,332,105,317,109,311,115,313,123,308,124,306,114,314,105,330,99,355,97,382,100,398,106"/>
+<area shape="rect" id="Node000008" href="$class_a_delay_projectile_base.html#a2ee2f7c1e60d44c30e70b862fe60b65e" title=" " alt="" coords="5,124,203,167"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="266,148,203,148,203,143,266,143"/>
+<area shape="poly" id="edge14_Node000009_Node000003" title=" " alt="" coords="759,91,710,93,710,88,758,86"/>
+<area shape="rect" id="Node000010" href="$class_a_delay_projectile_base.html#ad1e9ceeb62eadddb485f7c448193c862" title=" " alt="" coords="538,5,687,48"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="758,64,687,47,688,42,759,59"/>
+<area shape="poly" id="edge13_Node000010_Node000007" title=" " alt="" coords="525,56,509,62,461,90,398,126,395,121,459,86,507,58,523,51"/>
+</map>

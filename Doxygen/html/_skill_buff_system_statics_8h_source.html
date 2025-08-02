@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Skill/SkillBuffSystemStatics.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_skill_buff_system_statics_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SkillBuffSystemStatics.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_skill_buff_system_statics_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Kismet/BlueprintFunctionLibrary.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;GameplayTagContainer.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_skill_buff_data_8h.html">Skill/Data/SkillBuffData.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;SkillBuffSystemStatics.generated.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">class </span>UAbilitySystemComponent;</div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_u_skill_buff_system_statics.html">   12</a></span>UCLASS()</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>class KPT_API <a class="code hl_class" href="class_u_skill_buff_system_statics.html">USkillBuffSystemStatics</a> : public UBlueprintFunctionLibrary</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">// [수정] 함수 시그니처에 ECardRarity Rarity 파라미터 추가</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Buff System&quot;</span>)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_u_skill_buff_system_statics.html#a251cdb91c889fc43c1645ff6396ebd13">ApplyBuff</a>(UAbilitySystemComponent* TargetASC, FName TargetSkillTag, FName BuffID, <a class="code hl_variable" href="_game_enums_8h.html#afae5aa8a8dec1e4d2c9f695c8bfc7a8d">ECardRarity</a> Rarity);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Buff System&quot;</span>)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">static</span> <a class="code hl_struct" href="struct_f_detailed_skill_data.html">FDetailedSkillData</a> <a class="code hl_function" href="class_u_skill_buff_system_statics.html#aa9aa30ae17bec437d00fb1e3c277d73e">GetSkillStatus</a>(UAbilitySystemComponent* TargetASC, FName TargetSkillTag);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Buff System&quot;</span>)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">static</span> <a class="code hl_struct" href="struct_f_skill_data.html">FSkillData</a> <a class="code hl_function" href="class_u_skill_buff_system_statics.html#aaf13275a7aa45f462a34d4a4ee4469cb">GetBaseSkillData</a>(UAbilitySystemComponent* TargetASC, FName TargetSkillTag);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>};</div>
+</div>
+<div class="ttc" id="a_game_enums_8h_html_afae5aa8a8dec1e4d2c9f695c8bfc7a8d"><div class="ttname"><a href="_game_enums_8h.html#afae5aa8a8dec1e4d2c9f695c8bfc7a8d">ECardRarity</a></div><div class="ttdeci">enum enum class enum enum class ECardRarity</div><div class="ttdef"><b>Definition</b> <a href="_game_enums_8h_source.html#l00102">GameEnums.h:101</a></div></div>
+<div class="ttc" id="a_skill_buff_data_8h_html"><div class="ttname"><a href="_skill_buff_data_8h.html">SkillBuffData.h</a></div></div>
+<div class="ttc" id="aclass_u_skill_buff_system_statics_html"><div class="ttname"><a href="class_u_skill_buff_system_statics.html">USkillBuffSystemStatics</a></div><div class="ttdef"><b>Definition</b> <a href="#l00012">SkillBuffSystemStatics.h:14</a></div></div>
+<div class="ttc" id="aclass_u_skill_buff_system_statics_html_a251cdb91c889fc43c1645ff6396ebd13"><div class="ttname"><a href="class_u_skill_buff_system_statics.html#a251cdb91c889fc43c1645ff6396ebd13">USkillBuffSystemStatics::ApplyBuff</a></div><div class="ttdeci">static bool ApplyBuff(UAbilitySystemComponent *TargetASC, FName TargetSkillTag, FName BuffID, ECardRarity Rarity)</div><div class="ttdef"><b>Definition</b> <a href="_skill_buff_system_statics_8cpp_source.html#l00010">SkillBuffSystemStatics.cpp:10</a></div></div>
+<div class="ttc" id="aclass_u_skill_buff_system_statics_html_aa9aa30ae17bec437d00fb1e3c277d73e"><div class="ttname"><a href="class_u_skill_buff_system_statics.html#aa9aa30ae17bec437d00fb1e3c277d73e">USkillBuffSystemStatics::GetSkillStatus</a></div><div class="ttdeci">static FDetailedSkillData GetSkillStatus(UAbilitySystemComponent *TargetASC, FName TargetSkillTag)</div><div class="ttdef"><b>Definition</b> <a href="_skill_buff_system_statics_8cpp_source.html#l00082">SkillBuffSystemStatics.cpp:82</a></div></div>
+<div class="ttc" id="aclass_u_skill_buff_system_statics_html_aaf13275a7aa45f462a34d4a4ee4469cb"><div class="ttname"><a href="class_u_skill_buff_system_statics.html#aaf13275a7aa45f462a34d4a4ee4469cb">USkillBuffSystemStatics::GetBaseSkillData</a></div><div class="ttdeci">static FSkillData GetBaseSkillData(UAbilitySystemComponent *TargetASC, FName TargetSkillTag)</div><div class="ttdef"><b>Definition</b> <a href="_skill_buff_system_statics_8cpp_source.html#l00109">SkillBuffSystemStatics.cpp:109</a></div></div>
+<div class="ttc" id="astruct_f_detailed_skill_data_html"><div class="ttname"><a href="struct_f_detailed_skill_data.html">FDetailedSkillData</a></div><div class="ttdef"><b>Definition</b> <a href="_skill_data_8h_source.html#l00015">SkillData.h:17</a></div></div>
+<div class="ttc" id="astruct_f_skill_data_html"><div class="ttname"><a href="struct_f_skill_data.html">FSkillData</a></div><div class="ttdef"><b>Definition</b> <a href="_skill_data_8h_source.html#l00049">SkillData.h:51</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_835db7cc60e52a26a89059f64164cf8e.html">Skill</a></li><li class="navelem"><a href="_skill_buff_system_statics_8h.html">SkillBuffSystemStatics.h</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

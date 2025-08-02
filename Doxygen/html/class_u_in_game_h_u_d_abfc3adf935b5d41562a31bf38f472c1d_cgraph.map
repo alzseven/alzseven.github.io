@@ -1,0 +1,9 @@
+<map id="UInGameHUD::OnPlayerStateSet" name="UInGameHUD::OnPlayerStateSet">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,226,83"/>
+<area shape="rect" id="Node000002" href="$class_u_in_game_h_u_d.html#aa8fd5d34dc9c18bdb1a55eb622a42806" title=" " alt="" coords="302,5,478,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,53,299,33,300,38,192,58"/>
+<area shape="rect" id="Node000003" href="$class_u_inventory_u_i.html#acdd39c140fa026f46f9752565a706880" title=" " alt="" coords="282,56,499,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="226,67,266,67,266,72,226,72"/>
+<area shape="rect" id="Node000004" href="$class_u_in_game_h_u_d.html#a85333cf2907edf334c985eb0262fba59" title=" " alt="" coords="274,107,507,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="192,81,300,101,299,106,191,86"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="AKPTInGameMode::SetAllPlayersSkillEnabled" name="AKPTInGameMode::SetAllPlayersSkillEnabled">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,227,48"/>
+<area shape="rect" id="Node000002" href="$class_a_k_p_t_in_game_mode.html#a4d83e6405b91bdefb43aeac062b7b099" title=" " alt="" coords="275,5,474,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="227,24,259,24,259,29,227,29"/>
+<area shape="rect" id="Node000003" href="$class_a_k_p_t_player_state.html#a3f0fd46533843d108f4569bd68d9b233" title=" " alt="" coords="522,5,711,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="475,24,507,24,507,29,475,29"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="UShopManagerSubsystem::InitializeShopForPlayer" name="UShopManagerSubsystem::InitializeShopForPlayer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,141,183,184"/>
+<area shape="rect" id="Node000002" href="$class_u_shop_manager_subsystem.html#a753f472cc5049d1e88a2109695987513" title=" " alt="" coords="246,5,423,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,139,167,98,229,58,241,52,244,57,232,62,170,102,121,143"/>
+<area shape="rect" id="Node000003" href="$class_a_k_p_t_player_state.html#ad16de49a5aa9fc63b311aafb84b70e3f" title=" " alt="" coords="231,96,438,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="183,143,215,137,216,142,184,149"/>
+<area shape="rect" id="Node000004" href="$class_a_k_p_t_player_state.html#a7789be3e05ccea22c983d507f9931e8c" title=" " alt="" coords="243,187,426,229"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="184,177,228,185,227,191,183,182"/>
+<area shape="rect" id="Node000005" href="$class_u_team_stats_component.html#a89b05be1fedf439ee7f39e52cdf03def" title=" " alt="" coords="254,277,415,320"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="134,182,232,239,282,267,279,272,229,244,131,187"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="289,96,287,86,295,77,311,71,334,69,360,72,375,78,373,83,359,77,334,75,312,77,298,81,292,87,294,95"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="289,187,287,177,295,168,311,162,334,160,360,162,375,169,373,174,359,168,334,165,312,167,298,172,292,178,294,186"/>
+<area shape="poly" id="edge7_Node000005_Node000005" title=" " alt="" coords="289,277,287,267,295,258,311,253,334,251,360,253,375,259,373,264,359,258,334,256,312,258,298,263,292,269,294,276"/>
+</map>

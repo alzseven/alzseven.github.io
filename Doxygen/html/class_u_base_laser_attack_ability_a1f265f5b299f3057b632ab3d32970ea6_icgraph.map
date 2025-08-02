@@ -1,0 +1,17 @@
+<map id="UBaseLaserAttackAbility::FinishLaserAttack" name="UBaseLaserAttackAbility::FinishLaserAttack">
+<area shape="rect" id="Node000001" title="Cleans up all spawned lasers and stops timers." alt="" coords="651,99,819,141"/>
+<area shape="rect" id="Node000002" href="$class_u_base_laser_attack_ability.html#a872ab3f13348f056b6148f62cf3fffc7" title=" " alt="" coords="436,99,603,141"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="635,132,604,131,604,126,636,126"/>
+<area shape="rect" id="Node000005" href="$class_u_base_laser_attack_ability.html#ac49822a928fe96077caded42985e05d7" title="Spawns the laser beams and starts their rotation and damage ticks." alt="" coords="221,163,388,205"/>
+<area shape="poly" id="edge9_Node000001_Node000005" title=" " alt="" coords="641,148,604,156,492,172,388,181,388,176,491,167,603,151,640,143"/>
+<area shape="poly" id="edge6_Node000002_Node000001" title=" " alt="" coords="619,108,651,109,651,114,619,114"/>
+<area shape="rect" id="Node000003" href="$class_u_base_laser_attack_ability.html#ad1a11b3bbe71ec74e20323116cad88fe" title="This function is meant to be implemented in Blueprint to define the ability&#39;s activation flow." alt="" coords="221,29,388,72"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="436,96,372,75,374,70,438,91"/>
+<area shape="poly" id="edge7_Node000002_Node000005" title=" " alt="" coords="432,149,379,165,378,159,431,144"/>
+<area shape="rect" id="Node000006" href="$class_u_base_laser_attack_ability.html#a674fe5df0cdc156691878ce8e00f15f2" title=" " alt="" coords="221,96,388,139"/>
+<area shape="poly" id="edge8_Node000002_Node000006" title=" " alt="" coords="420,121,389,121,389,116,420,116"/>
+<area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="339,16,326,10,304,8,284,10,272,15,267,21,269,28,263,29,262,19,269,10,283,5,304,3,327,5,341,11"/>
+<area shape="rect" id="Node000004" href="$class_u_base_laser_attack_ability.html#a26ff67b6441cf3c270bb40024bb261f0" title=" " alt="" coords="5,29,173,72"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="205,62,173,62,173,57,205,57"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="189,39,220,39,220,45,189,44"/>
+</map>

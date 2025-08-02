@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/UI/InGame/InGameHUD.cpp 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_in_game_h_u_d_8cpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">InGameHUD.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_in_game_h_u_d_8cpp.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_in_game_h_u_d_8h.html">UI/InGame/InGameHUD.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;GameplayEffectTypes.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_progress_bar_base_8h.html">UI/ProgressBarBase.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="_progress_bar_value_base_8h.html">UI/ProgressBarValueBase.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="_inventory_u_i_8h.html">UI/Item/InventoryUI.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;Components/EditableTextBox.h&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="_k_p_t_player_state_8h.html">Character/KPTPlayerState.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_k_p_t_in_game_state_8h.html">Core/KPTInGameState.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="_team_stats_component_8h.html">Core/Component/GameState/TeamStatsComponent.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_in_game_phase_manager_component_8h.html">Core/Component/GameState/InGamePhaseManagerComponent.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;GameplayTagsManager.h&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;Animation/WidgetAnimation.h&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="_player_character_8h.html">Character/PlayerCharacter.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;Components/CanvasPanelSlot.h&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;Components/TextBlock.h&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="_k_p_t_main_player_controller_8h.html">Core/KPTMainPlayerController.h</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="_inventory_manager_8h.html">Item/InventoryManager/InventoryManager.h</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="_skill_manager_component_8h.html">Skill/SkillManagerComponent.h</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="_skill_slot_u_i_8h.html">UI/Skill/SkillSlotUI.h</a>&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_u_in_game_h_u_d.html#abfc3adf935b5d41562a31bf38f472c1d">   25</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_in_game_h_u_d.html#abfc3adf935b5d41562a31bf38f472c1d">UInGameHUD::OnPlayerStateSet</a>()</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="class_a_k_p_t_player_state.html">AKPTPlayerState</a>* PlayerState = Cast&lt;AKPTPlayerState&gt;(GetOwningPlayerState()))</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        PlayerState-&gt;OnHealthUpdated.RemoveDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_u_in_game_h_u_d.html#aa8fd5d34dc9c18bdb1a55eb622a42806">UInGameHUD::UpdateHP</a>);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        PlayerState-&gt;OnHealthUpdated.AddDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_u_in_game_h_u_d.html#aa8fd5d34dc9c18bdb1a55eb622a42806">UInGameHUD::UpdateHP</a>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="comment">//Inventory-&gt;UpdateInventoryUI 인벤토리 바인딩하고 업데이트 한 번</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_in_game_h_u_d.html#ab2d7cf056d300f11080507259b2e28e5">SkillSlot0</a> &amp;&amp; <a class="code hl_variable" href="class_u_in_game_h_u_d.html#a371dbf47c4fcfd18e68dad39c4fc55e5">SkillSlot1</a> &amp;&amp; <a class="code hl_variable" href="class_u_in_game_h_u_d.html#a6a0eb9d49a09186cb76bca32ba05ff06">SkillSlot2</a> &amp;&amp; <a class="code hl_variable" href="class_u_in_game_h_u_d.html#ab769090e2653cd65237ccdc282783bec">SkillSlot3</a>)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <a class="code hl_variable" href="class_u_in_game_h_u_d.html#abfb6566908f9d6b4e41b949c3c394247">SkillSlots</a>.Add(<a class="code hl_variable" href="class_u_in_game_h_u_d.html#ab2d7cf056d300f11080507259b2e28e5">SkillSlot0</a>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <a class="code hl_variable" href="class_u_in_game_h_u_d.html#abfb6566908f9d6b4e41b949c3c394247">SkillSlots</a>.Add(<a class="code hl_variable" href="class_u_in_game_h_u_d.html#a371dbf47c4fcfd18e68dad39c4fc55e5">SkillSlot1</a>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <a class="code hl_variable" href="class_u_in_game_h_u_d.html#abfb6566908f9d6b4e41b949c3c394247">SkillSlots</a>.Add(<a class="code hl_variable" href="class_u_in_game_h_u_d.html#a6a0eb9d49a09186cb76bca32ba05ff06">SkillSlot2</a>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <a class="code hl_variable" href="class_u_in_game_h_u_d.html#abfb6566908f9d6b4e41b949c3c394247">SkillSlots</a>.Add(<a class="code hl_variable" href="class_u_in_game_h_u_d.html#ab769090e2653cd65237ccdc282783bec">SkillSlot3</a>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="comment">// 나도 이러고 싶지 않았어</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">// 주석  why</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="class_u_inventory_manager.html">UInventoryManager</a>* InventoryManager = PlayerState-&gt;GetInventoryManager())</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            InventoryManager-&gt;OnInventoryChanged.RemoveDynamic(<a class="code hl_variable" href="class_u_in_game_h_u_d.html#a3b30d46b7dab70df9a2c46d7a92b7ddf">Inventory</a>, &amp;<a class="code hl_function" href="class_u_inventory_u_i.html#acdd39c140fa026f46f9752565a706880">UInventoryUI::UpdateInventoryUI</a>);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            InventoryManager-&gt;OnInventoryChanged.AddDynamic(<a class="code hl_variable" href="class_u_in_game_h_u_d.html#a3b30d46b7dab70df9a2c46d7a92b7ddf">Inventory</a>, &amp;<a class="code hl_function" href="class_u_inventory_u_i.html#acdd39c140fa026f46f9752565a706880">UInventoryUI::UpdateInventoryUI</a>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            InventoryManager-&gt;OnInventoryChanged.Broadcast(InventoryManager-&gt;GetEquippedUIItems());</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="comment">//InventoryManager-&gt;</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="class_a_player_character.html">APlayerCharacter</a>* Player= Cast&lt;APlayerCharacter&gt;(GetOwningPlayerPawn()))</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="class_u_skill_manager_component.html">USkillManagerComponent</a>* SkillManager = Player-&gt;GetComponentByClass&lt;<a class="code hl_class" href="class_u_skill_manager_component.html">USkillManagerComponent</a>&gt;())</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                SkillManager-&gt;OnAddSkill.RemoveDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_u_in_game_h_u_d.html#a85333cf2907edf334c985eb0262fba59">UInGameHUD::UpdateSkillSlotData</a>);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                SkillManager-&gt;OnAddSkill.AddDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_u_in_game_h_u_d.html#a85333cf2907edf334c985eb0262fba59">UInGameHUD::UpdateSkillSlotData</a>);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                <a class="code hl_function" href="class_u_in_game_h_u_d.html#a85333cf2907edf334c985eb0262fba59">UpdateSkillSlotData</a>(SkillManager-&gt;GetOwnedSkillIDs()); <span class="comment">// 최초 한 번 초기화</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="comment">//바인딩하고 ㅊ최초 호출 한 번 </span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        PlayerState-&gt;BroadcastInitialHealth(); <span class="comment">// 최초 동기화</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_u_in_game_h_u_d.html#ac0dc199f4499dcb804507ef05df5a3f7">   68</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_in_game_h_u_d.html#ac0dc199f4499dcb804507ef05df5a3f7">UInGameHUD::NativeConstruct</a>()</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>{</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    Super::NativeConstruct();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="class_a_k_p_t_player_state.html">AKPTPlayerState</a>* PlayerState = Cast&lt;AKPTPlayerState&gt;(GetOwningPlayerState()))</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <a class="code hl_function" href="class_u_in_game_h_u_d.html#abfc3adf935b5d41562a31bf38f472c1d">OnPlayerStateSet</a>();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="class_a_k_p_t_in_game_state.html">AKPTInGameState</a>* GameState = Cast&lt;AKPTInGameState&gt;(GetWorld()-&gt;GetGameState()))</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <a class="code hl_function" href="class_u_in_game_h_u_d.html#adecf96b1c0383fa1989f7b5c55bb06ce">OnGameStateSet</a>(GameState);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        GetWorld()-&gt;GameStateSetEvent.AddLambda([<span class="keyword">this</span>](AGameStateBase* GS)</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="class_a_k_p_t_in_game_state.html">AKPTInGameState</a>* State = Cast&lt;AKPTInGameState&gt;(GS))</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                <a class="code hl_function" href="class_u_in_game_h_u_d.html#adecf96b1c0383fa1989f7b5c55bb06ce">OnGameStateSet</a>(State);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        });</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>}</div>
+</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="foldopen" id="foldopen00093" data-start="{" data-end="}">
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_u_in_game_h_u_d.html#a149c2cc60cb57b6b98c0e33d818d4e2e">   93</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_in_game_h_u_d.html#a149c2cc60cb57b6b98c0e33d818d4e2e">UInGameHUD::NativePreConstruct</a>()</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>{</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    Super::NativePreConstruct();</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}</div>
+</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="foldopen" id="foldopen00098" data-start="{" data-end="}">
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="class_u_in_game_h_u_d.html#a7205a00fd4017016f9526f6f4665a2df">   98</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_in_game_h_u_d.html#a7205a00fd4017016f9526f6f4665a2df">UInGameHUD::NativeDestruct</a>()</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>{</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    Super::NativeDestruct();</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>}</div>
+</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="foldopen" id="foldopen00103" data-start="{" data-end="}">
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_u_in_game_h_u_d.html#a1637d6c1911a5cfcff7692108cc44f63">  103</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_in_game_h_u_d.html#a1637d6c1911a5cfcff7692108cc44f63">UInGameHUD::LateInit</a>()</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>{</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>}</div>
+</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="foldopen" id="foldopen00107" data-start="{" data-end="}">
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="class_u_in_game_h_u_d.html#aa8fd5d34dc9c18bdb1a55eb622a42806">  107</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_in_game_h_u_d.html#aa8fd5d34dc9c18bdb1a55eb622a42806">UInGameHUD::UpdateHP</a>(<span class="keywordtype">float</span> CurHP, <span class="keywordtype">float</span> MaxHP)</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>{</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <a class="code hl_variable" href="class_u_in_game_h_u_d.html#a75bc1a548e0cc6647ddedae3683d74d0">HP</a>-&gt;SetPercent(<span class="keywordtype">float</span>(CurHP / MaxHP));</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_in_game_h_u_d.html#a143a8e119888088f792f432d7b1ff498">HPTemp</a>)</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <a class="code hl_variable" href="class_u_in_game_h_u_d.html#a143a8e119888088f792f432d7b1ff498">HPTemp</a>-&gt;SetPercent(int32(CurHP) ,int32(MaxHP));</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>}</div>
+</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="foldopen" id="foldopen00116" data-start="{" data-end="}">
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="class_u_in_game_h_u_d.html#a7e1db18a43569f61eaf2b3e499cc4f0d">  116</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_in_game_h_u_d.html#a7e1db18a43569f61eaf2b3e499cc4f0d">UInGameHUD::UpdateExp</a>(int32 CurExp, int32 MaxExp)</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>{</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <a class="code hl_variable" href="class_u_in_game_h_u_d.html#ad3b657b2646ffb308177780836805b25">Exp</a>-&gt;SetPercent(CurExp, MaxExp);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>}</div>
+</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="foldopen" id="foldopen00121" data-start="{" data-end="}">
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="class_u_in_game_h_u_d.html#abec8edfbf2a43178d1311adb10cf1f8d">  121</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_in_game_h_u_d.html#abec8edfbf2a43178d1311adb10cf1f8d">UInGameHUD::UpdateLevel</a>(int32 NewLevel)</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>{</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    this-&gt;<a class="code hl_variable" href="class_u_in_game_h_u_d.html#a165490db7091285a35a39ce507b242f1">Level</a>-&gt;SetText(FText::AsNumber(NewLevel));</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="comment">//StopAnimation(LevelLoopAnimation);</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="comment">//PlayAnimation(LevelUpAnimation);</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>}</div>
+</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="foldopen" id="foldopen00129" data-start="{" data-end="}">
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="class_u_in_game_h_u_d.html#a85333cf2907edf334c985eb0262fba59">  129</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_in_game_h_u_d.html#a85333cf2907edf334c985eb0262fba59">UInGameHUD::UpdateSkillSlotData</a>(<span class="keyword">const</span> TArray&lt;FName&gt;&amp; SkillNames)</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>{</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_u_in_game_h_u_d.html#aea4fd06e9a58c9e922e8a200ac9c8435">SkillDataTable</a>)</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; SkillNames.Num(); ++i)</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            <span class="keywordflow">if</span> (i &gt;= <a class="code hl_variable" href="class_u_in_game_h_u_d.html#abfb6566908f9d6b4e41b949c3c394247">SkillSlots</a>.Num())</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            <a class="code hl_struct" href="struct_f_skill_data.html">FSkillData</a>* SkillData = <a class="code hl_variable" href="class_u_in_game_h_u_d.html#aea4fd06e9a58c9e922e8a200ac9c8435">SkillDataTable</a>-&gt;FindRow&lt;<a class="code hl_struct" href="struct_f_skill_data.html">FSkillData</a>&gt;(SkillNames[i], <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            <span class="keywordflow">if</span> (SkillData)</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                <a class="code hl_variable" href="class_u_in_game_h_u_d.html#abfb6566908f9d6b4e41b949c3c394247">SkillSlots</a>[i]-&gt;UpdateSlotVisual(*SkillData);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            }</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    }</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>}</div>
+</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="foldopen" id="foldopen00150" data-start="{" data-end="}">
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="class_u_in_game_h_u_d.html#ae5432789c54f0fb4c503b8b353c46029">  150</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_in_game_h_u_d.html#ae5432789c54f0fb4c503b8b353c46029">UInGameHUD::TeamStatsComponentsReadyHandle</a>(<a class="code hl_class" href="class_u_team_stats_component.html">UTeamStatsComponent</a>* Stats)</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>{</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    Stats-&gt;<a class="code hl_variable" href="class_u_team_stats_component.html#a4708b46c58d519cec37b9ecd6e251a01">OnTeamLevelUp</a>.RemoveDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_u_in_game_h_u_d.html#abec8edfbf2a43178d1311adb10cf1f8d">UInGameHUD::UpdateLevel</a>);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    Stats-&gt;<a class="code hl_variable" href="class_u_team_stats_component.html#a29b49c0efd64c1250ab683c6c77154c8">OnTeamExperienceUpdated</a>.RemoveDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_u_in_game_h_u_d.html#a7e1db18a43569f61eaf2b3e499cc4f0d">UInGameHUD::UpdateExp</a>);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    Stats-&gt;<a class="code hl_variable" href="class_u_team_stats_component.html#a4708b46c58d519cec37b9ecd6e251a01">OnTeamLevelUp</a>.AddDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_u_in_game_h_u_d.html#abec8edfbf2a43178d1311adb10cf1f8d">UInGameHUD::UpdateLevel</a>);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    Stats-&gt;<a class="code hl_variable" href="class_u_team_stats_component.html#a29b49c0efd64c1250ab683c6c77154c8">OnTeamExperienceUpdated</a>.AddDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_u_in_game_h_u_d.html#a7e1db18a43569f61eaf2b3e499cc4f0d">UInGameHUD::UpdateExp</a>);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    Stats-&gt;<a class="code hl_function" href="class_u_team_stats_component.html#a02772b4fd5c6a00656403377a0c9ca8d">BroadcastInitialValues</a>();</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>}</div>
+</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="foldopen" id="foldopen00160" data-start="{" data-end="}">
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="class_u_in_game_h_u_d.html#ab7c7e04ab365d90d164230522904ef06">  160</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_in_game_h_u_d.html#ab7c7e04ab365d90d164230522904ef06">UInGameHUD::InGamePhaseManagerReadyHandle</a>(<a class="code hl_class" href="class_u_in_game_phase_manager_component.html">UInGamePhaseManagerComponent</a>* PhaseManager)</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>{</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    PhaseManager-&gt;<a class="code hl_variable" href="class_u_state_manager_component.html#a111b4b56bc506f0c7b11a106329198d8">OnStateTagsChanged</a>.RemoveDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_u_in_game_h_u_d.html#a202062936a0a60c05aac96f89709a2cf">UInGameHUD::StateTagsChangedSetPhaseText</a>);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    PhaseManager-&gt;<a class="code hl_variable" href="class_u_state_manager_component.html#a111b4b56bc506f0c7b11a106329198d8">OnStateTagsChanged</a>.AddDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_u_in_game_h_u_d.html#a202062936a0a60c05aac96f89709a2cf">UInGameHUD::StateTagsChangedSetPhaseText</a>);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    PhaseManager-&gt;<a class="code hl_function" href="class_u_state_manager_component.html#aa02160df8ceffa37f487dfbdfc8cb2fd">InitialBroadCast</a>();</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>}</div>
+</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="foldopen" id="foldopen00167" data-start="{" data-end="}">
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="class_u_in_game_h_u_d.html#a202062936a0a60c05aac96f89709a2cf">  167</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_in_game_h_u_d.html#a202062936a0a60c05aac96f89709a2cf">UInGameHUD::StateTagsChangedSetPhaseText</a>(<span class="keyword">const</span> FGameplayTagContainer&amp; CurrentTags)</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>{</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="comment">// 블루프린트에서 하드코딩된 &#39;InGame.Phase.Night&#39; 태그를 가져옵니다.</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="keyword">const</span> FGameplayTag NightTag = FGameplayTag::RequestGameplayTag(FName(<span class="stringliteral">&quot;InGame.Phase.Night&quot;</span>));</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="comment">// 위젯과 태그가 유효한지 확인합니다.</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="class_u_in_game_h_u_d.html#a99e751f56f20c1bb51a8b56d769eadbc">Timer</a> || !NightTag.IsValid())</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    {</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    }</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="comment">// 블루프린트의 If(Branch) 노드: CurrentTags에 NightTag가 없는 경우에만 실행합니다.</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordflow">if</span> (!CurrentTags.HasTag(NightTag))</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    {</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <span class="comment">// 블루프린트의 ForEachLoop: 컨테이너의 모든 태그를 순회합니다.</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        <span class="comment">// 참고: 이 로직은 루프가 돌 때마다 텍스트를 계속 덮어쓰므로,</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        <span class="comment">// 최종적으로는 컨테이너의 마지막 태그 이름만 표시됩니다.</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        FText TextToSet;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> FGameplayTag&amp; Tag : CurrentTags)</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        {</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            <span class="comment">// 블루프린트의 GetTagName -&gt; Conv_NameToText 노드에 해당합니다.</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            <span class="comment">// 태그를 FText로 변환합니다.</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            TextToSet = FText::FromName(Tag.GetTagName());</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        }</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>        <span class="comment">// 블루프린트의 SetText 노드: 변환된 텍스트를 EditableTextBox에 설정합니다.</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        <span class="comment">// 루프가 모두 돈 후 마지막으로 변환된 텍스트가 설정됩니다.</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <span class="keywordflow">if</span> (!TextToSet.IsEmpty())</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        {</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            <a class="code hl_variable" href="class_u_in_game_h_u_d.html#a99e751f56f20c1bb51a8b56d769eadbc">Timer</a>-&gt;SetText(TextToSet);</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        }</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    }</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>}</div>
+</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="foldopen" id="foldopen00201" data-start="{" data-end="}">
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="class_u_in_game_h_u_d.html#adecf96b1c0383fa1989f7b5c55bb06ce">  201</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_in_game_h_u_d.html#adecf96b1c0383fa1989f7b5c55bb06ce">UInGameHUD::OnGameStateSet</a>(AGameStateBase* GameState)</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>{</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="class_a_k_p_t_in_game_state.html">AKPTInGameState</a>* KPTGameState = Cast&lt;AKPTInGameState&gt;(GameState))</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    {</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <a class="code hl_function" href="class_u_in_game_h_u_d.html#ad4ea3a784dd89f918799a49b145846ba">BindToGameStateDelegates</a>(KPTGameState);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    }</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    {</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        GetWorld()-&gt;GameStateSetEvent.AddLambda([<span class="keyword">this</span>](AGameStateBase* GS)</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        {</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="class_a_k_p_t_in_game_state.html">AKPTInGameState</a>* State = Cast&lt;AKPTInGameState&gt;(GS))</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            {</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>                <a class="code hl_function" href="class_u_in_game_h_u_d.html#ad4ea3a784dd89f918799a49b145846ba">BindToGameStateDelegates</a>(State);</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            }</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        });</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    }</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>}</div>
+</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="foldopen" id="foldopen00220" data-start="{" data-end="}">
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno"><a class="line" href="class_u_in_game_h_u_d.html#ad4ea3a784dd89f918799a49b145846ba">  220</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_u_in_game_h_u_d.html#ad4ea3a784dd89f918799a49b145846ba">UInGameHUD::BindToGameStateDelegates</a>(<a class="code hl_class" href="class_a_k_p_t_in_game_state.html">AKPTInGameState</a>* GameState)</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>{</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    <span class="keywordflow">if</span> (!GameState)</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    {</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    }</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="class_u_team_stats_component.html">UTeamStatsComponent</a>* Stats = GameState-&gt;<a class="code hl_variable" href="class_a_k_p_t_in_game_state.html#a2d092a575682ffe5176517581bd0502d">TeamStatsComponent</a>)</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <a class="code hl_function" href="class_u_in_game_h_u_d.html#ae5432789c54f0fb4c503b8b353c46029">TeamStatsComponentsReadyHandle</a>(GameState-&gt;<a class="code hl_variable" href="class_a_k_p_t_in_game_state.html#a2d092a575682ffe5176517581bd0502d">TeamStatsComponent</a>);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    }</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    {</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        GameState-&gt;<a class="code hl_variable" href="class_a_k_p_t_in_game_state.html#a2d510b623cc613a0414a7c09ca60b22e">OnTeamStatsComponentReady</a>.RemoveDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_u_in_game_h_u_d.html#ae5432789c54f0fb4c503b8b353c46029">UInGameHUD::TeamStatsComponentsReadyHandle</a>);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        GameState-&gt;<a class="code hl_variable" href="class_a_k_p_t_in_game_state.html#a2d510b623cc613a0414a7c09ca60b22e">OnTeamStatsComponentReady</a>.AddDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_u_in_game_h_u_d.html#ae5432789c54f0fb4c503b8b353c46029">UInGameHUD::TeamStatsComponentsReadyHandle</a>);</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    }</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    <span class="keywordflow">if</span> (<a class="code hl_class" href="class_u_in_game_phase_manager_component.html">UInGamePhaseManagerComponent</a>* PhaseManager = GameState-&gt;<a class="code hl_variable" href="class_a_k_p_t_in_game_state.html#aea7ce0dc48b66d23c2ab2a3915a83da8">InGamePhaseManager</a>)</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    {</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        <a class="code hl_function" href="class_u_in_game_h_u_d.html#ab7c7e04ab365d90d164230522904ef06">InGamePhaseManagerReadyHandle</a>(GameState-&gt;<a class="code hl_variable" href="class_a_k_p_t_in_game_state.html#aea7ce0dc48b66d23c2ab2a3915a83da8">InGamePhaseManager</a>);</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    }</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    {</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>        GameState-&gt;<a class="code hl_variable" href="class_a_k_p_t_in_game_state.html#a3bbe65c2fa9209d7c88f6eca2e05eeac">OnInGamePhaseManagerReady</a>.RemoveDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_u_in_game_h_u_d.html#ab7c7e04ab365d90d164230522904ef06">UInGameHUD::InGamePhaseManagerReadyHandle</a>);</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        GameState-&gt;<a class="code hl_variable" href="class_a_k_p_t_in_game_state.html#a3bbe65c2fa9209d7c88f6eca2e05eeac">OnInGamePhaseManagerReady</a>.AddDynamic(<span class="keyword">this</span>, &amp;<a class="code hl_function" href="class_u_in_game_h_u_d.html#ab7c7e04ab365d90d164230522904ef06">UInGameHUD::InGamePhaseManagerReadyHandle</a>);</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    }</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>}</div>
+</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="ttc" id="a_in_game_h_u_d_8h_html"><div class="ttname"><a href="_in_game_h_u_d_8h.html">InGameHUD.h</a></div></div>
+<div class="ttc" id="a_in_game_phase_manager_component_8h_html"><div class="ttname"><a href="_in_game_phase_manager_component_8h.html">InGamePhaseManagerComponent.h</a></div></div>
+<div class="ttc" id="a_inventory_manager_8h_html"><div class="ttname"><a href="_inventory_manager_8h.html">InventoryManager.h</a></div></div>
+<div class="ttc" id="a_inventory_u_i_8h_html"><div class="ttname"><a href="_inventory_u_i_8h.html">InventoryUI.h</a></div></div>
+<div class="ttc" id="a_k_p_t_in_game_state_8h_html"><div class="ttname"><a href="_k_p_t_in_game_state_8h.html">KPTInGameState.h</a></div></div>
+<div class="ttc" id="a_k_p_t_main_player_controller_8h_html"><div class="ttname"><a href="_k_p_t_main_player_controller_8h.html">KPTMainPlayerController.h</a></div></div>
+<div class="ttc" id="a_k_p_t_player_state_8h_html"><div class="ttname"><a href="_k_p_t_player_state_8h.html">KPTPlayerState.h</a></div></div>
+<div class="ttc" id="a_player_character_8h_html"><div class="ttname"><a href="_player_character_8h.html">PlayerCharacter.h</a></div></div>
+<div class="ttc" id="a_progress_bar_base_8h_html"><div class="ttname"><a href="_progress_bar_base_8h.html">ProgressBarBase.h</a></div></div>
+<div class="ttc" id="a_progress_bar_value_base_8h_html"><div class="ttname"><a href="_progress_bar_value_base_8h.html">ProgressBarValueBase.h</a></div></div>
+<div class="ttc" id="a_skill_manager_component_8h_html"><div class="ttname"><a href="_skill_manager_component_8h.html">SkillManagerComponent.h</a></div></div>
+<div class="ttc" id="a_skill_slot_u_i_8h_html"><div class="ttname"><a href="_skill_slot_u_i_8h.html">SkillSlotUI.h</a></div></div>
+<div class="ttc" id="a_team_stats_component_8h_html"><div class="ttname"><a href="_team_stats_component_8h.html">TeamStatsComponent.h</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_state_html"><div class="ttname"><a href="class_a_k_p_t_in_game_state.html">AKPTInGameState</a></div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_state_8h_source.html#l00018">KPTInGameState.h:20</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_state_html_a2d092a575682ffe5176517581bd0502d"><div class="ttname"><a href="class_a_k_p_t_in_game_state.html#a2d092a575682ffe5176517581bd0502d">AKPTInGameState::TeamStatsComponent</a></div><div class="ttdeci">TObjectPtr&lt; UTeamStatsComponent &gt; TeamStatsComponent</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_state_8h_source.html#l00045">KPTInGameState.h:45</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_state_html_a2d510b623cc613a0414a7c09ca60b22e"><div class="ttname"><a href="class_a_k_p_t_in_game_state.html#a2d510b623cc613a0414a7c09ca60b22e">AKPTInGameState::OnTeamStatsComponentReady</a></div><div class="ttdeci">FOnTeamStatsComponentReady OnTeamStatsComponentReady</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_state_8h_source.html#l00038">KPTInGameState.h:38</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_state_html_a3bbe65c2fa9209d7c88f6eca2e05eeac"><div class="ttname"><a href="class_a_k_p_t_in_game_state.html#a3bbe65c2fa9209d7c88f6eca2e05eeac">AKPTInGameState::OnInGamePhaseManagerReady</a></div><div class="ttdeci">FOnInGamePhaseManagerReady OnInGamePhaseManagerReady</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_state_8h_source.html#l00035">KPTInGameState.h:35</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_in_game_state_html_aea7ce0dc48b66d23c2ab2a3915a83da8"><div class="ttname"><a href="class_a_k_p_t_in_game_state.html#aea7ce0dc48b66d23c2ab2a3915a83da8">AKPTInGameState::InGamePhaseManager</a></div><div class="ttdeci">TObjectPtr&lt; UInGamePhaseManagerComponent &gt; InGamePhaseManager</div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_in_game_state_8h_source.html#l00042">KPTInGameState.h:42</a></div></div>
+<div class="ttc" id="aclass_a_k_p_t_player_state_html"><div class="ttname"><a href="class_a_k_p_t_player_state.html">AKPTPlayerState</a></div><div class="ttdef"><b>Definition</b> <a href="_k_p_t_player_state_8h_source.html#l00040">KPTPlayerState.h:42</a></div></div>
+<div class="ttc" id="aclass_a_player_character_html"><div class="ttname"><a href="class_a_player_character.html">APlayerCharacter</a></div><div class="ttdef"><b>Definition</b> <a href="_player_character_8h_source.html#l00034">PlayerCharacter.h:36</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_a143a8e119888088f792f432d7b1ff498"><div class="ttname"><a href="class_u_in_game_h_u_d.html#a143a8e119888088f792f432d7b1ff498">UInGameHUD::HPTemp</a></div><div class="ttdeci">TObjectPtr&lt; UProgressBarValueBase &gt; HPTemp</div><div class="ttdef"><b>Definition</b> <a href="_in_game_h_u_d_8h_source.html#l00071">InGameHUD.h:71</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_a149c2cc60cb57b6b98c0e33d818d4e2e"><div class="ttname"><a href="class_u_in_game_h_u_d.html#a149c2cc60cb57b6b98c0e33d818d4e2e">UInGameHUD::NativePreConstruct</a></div><div class="ttdeci">virtual void NativePreConstruct() override</div><div class="ttdef"><b>Definition</b> <a href="#l00093">InGameHUD.cpp:93</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_a1637d6c1911a5cfcff7692108cc44f63"><div class="ttname"><a href="class_u_in_game_h_u_d.html#a1637d6c1911a5cfcff7692108cc44f63">UInGameHUD::LateInit</a></div><div class="ttdeci">virtual void LateInit() override</div><div class="ttdef"><b>Definition</b> <a href="#l00103">InGameHUD.cpp:103</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_a165490db7091285a35a39ce507b242f1"><div class="ttname"><a href="class_u_in_game_h_u_d.html#a165490db7091285a35a39ce507b242f1">UInGameHUD::Level</a></div><div class="ttdeci">TObjectPtr&lt; UTextBlock &gt; Level</div><div class="ttdef"><b>Definition</b> <a href="_in_game_h_u_d_8h_source.html#l00077">InGameHUD.h:77</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_a202062936a0a60c05aac96f89709a2cf"><div class="ttname"><a href="class_u_in_game_h_u_d.html#a202062936a0a60c05aac96f89709a2cf">UInGameHUD::StateTagsChangedSetPhaseText</a></div><div class="ttdeci">void StateTagsChangedSetPhaseText(const FGameplayTagContainer &amp;CurrentTags)</div><div class="ttdef"><b>Definition</b> <a href="#l00167">InGameHUD.cpp:167</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_a371dbf47c4fcfd18e68dad39c4fc55e5"><div class="ttname"><a href="class_u_in_game_h_u_d.html#a371dbf47c4fcfd18e68dad39c4fc55e5">UInGameHUD::SkillSlot1</a></div><div class="ttdeci">TObjectPtr&lt; USkillSlotUI &gt; SkillSlot1</div><div class="ttdef"><b>Definition</b> <a href="_in_game_h_u_d_8h_source.html#l00095">InGameHUD.h:95</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_a3b30d46b7dab70df9a2c46d7a92b7ddf"><div class="ttname"><a href="class_u_in_game_h_u_d.html#a3b30d46b7dab70df9a2c46d7a92b7ddf">UInGameHUD::Inventory</a></div><div class="ttdeci">TObjectPtr&lt; UInventoryUI &gt; Inventory</div><div class="ttdef"><b>Definition</b> <a href="_in_game_h_u_d_8h_source.html#l00083">InGameHUD.h:83</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_a6a0eb9d49a09186cb76bca32ba05ff06"><div class="ttname"><a href="class_u_in_game_h_u_d.html#a6a0eb9d49a09186cb76bca32ba05ff06">UInGameHUD::SkillSlot2</a></div><div class="ttdeci">TObjectPtr&lt; USkillSlotUI &gt; SkillSlot2</div><div class="ttdef"><b>Definition</b> <a href="_in_game_h_u_d_8h_source.html#l00098">InGameHUD.h:98</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_a7205a00fd4017016f9526f6f4665a2df"><div class="ttname"><a href="class_u_in_game_h_u_d.html#a7205a00fd4017016f9526f6f4665a2df">UInGameHUD::NativeDestruct</a></div><div class="ttdeci">virtual void NativeDestruct() override</div><div class="ttdef"><b>Definition</b> <a href="#l00098">InGameHUD.cpp:98</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_a75bc1a548e0cc6647ddedae3683d74d0"><div class="ttname"><a href="class_u_in_game_h_u_d.html#a75bc1a548e0cc6647ddedae3683d74d0">UInGameHUD::HP</a></div><div class="ttdeci">TObjectPtr&lt; UProgressBarBase &gt; HP</div><div class="ttdef"><b>Definition</b> <a href="_in_game_h_u_d_8h_source.html#l00068">InGameHUD.h:68</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_a7e1db18a43569f61eaf2b3e499cc4f0d"><div class="ttname"><a href="class_u_in_game_h_u_d.html#a7e1db18a43569f61eaf2b3e499cc4f0d">UInGameHUD::UpdateExp</a></div><div class="ttdeci">void UpdateExp(int32 CurExp, int32 MaxExp)</div><div class="ttdef"><b>Definition</b> <a href="#l00116">InGameHUD.cpp:116</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_a85333cf2907edf334c985eb0262fba59"><div class="ttname"><a href="class_u_in_game_h_u_d.html#a85333cf2907edf334c985eb0262fba59">UInGameHUD::UpdateSkillSlotData</a></div><div class="ttdeci">void UpdateSkillSlotData(const TArray&lt; FName &gt; &amp;SkillNames)</div><div class="ttdef"><b>Definition</b> <a href="#l00129">InGameHUD.cpp:129</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_a99e751f56f20c1bb51a8b56d769eadbc"><div class="ttname"><a href="class_u_in_game_h_u_d.html#a99e751f56f20c1bb51a8b56d769eadbc">UInGameHUD::Timer</a></div><div class="ttdeci">TObjectPtr&lt; UTextBlock &gt; Timer</div><div class="ttdef"><b>Definition</b> <a href="_in_game_h_u_d_8h_source.html#l00080">InGameHUD.h:80</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_aa8fd5d34dc9c18bdb1a55eb622a42806"><div class="ttname"><a href="class_u_in_game_h_u_d.html#aa8fd5d34dc9c18bdb1a55eb622a42806">UInGameHUD::UpdateHP</a></div><div class="ttdeci">void UpdateHP(float CurHP, float MaxHP)</div><div class="ttdef"><b>Definition</b> <a href="#l00107">InGameHUD.cpp:107</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_ab2d7cf056d300f11080507259b2e28e5"><div class="ttname"><a href="class_u_in_game_h_u_d.html#ab2d7cf056d300f11080507259b2e28e5">UInGameHUD::SkillSlot0</a></div><div class="ttdeci">TObjectPtr&lt; USkillSlotUI &gt; SkillSlot0</div><div class="ttdef"><b>Definition</b> <a href="_in_game_h_u_d_8h_source.html#l00092">InGameHUD.h:92</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_ab769090e2653cd65237ccdc282783bec"><div class="ttname"><a href="class_u_in_game_h_u_d.html#ab769090e2653cd65237ccdc282783bec">UInGameHUD::SkillSlot3</a></div><div class="ttdeci">TObjectPtr&lt; USkillSlotUI &gt; SkillSlot3</div><div class="ttdef"><b>Definition</b> <a href="_in_game_h_u_d_8h_source.html#l00101">InGameHUD.h:101</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_ab7c7e04ab365d90d164230522904ef06"><div class="ttname"><a href="class_u_in_game_h_u_d.html#ab7c7e04ab365d90d164230522904ef06">UInGameHUD::InGamePhaseManagerReadyHandle</a></div><div class="ttdeci">void InGamePhaseManagerReadyHandle(UInGamePhaseManagerComponent *Manager)</div><div class="ttdef"><b>Definition</b> <a href="#l00160">InGameHUD.cpp:160</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_abec8edfbf2a43178d1311adb10cf1f8d"><div class="ttname"><a href="class_u_in_game_h_u_d.html#abec8edfbf2a43178d1311adb10cf1f8d">UInGameHUD::UpdateLevel</a></div><div class="ttdeci">void UpdateLevel(int32 NewLevel)</div><div class="ttdef"><b>Definition</b> <a href="#l00121">InGameHUD.cpp:121</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_abfb6566908f9d6b4e41b949c3c394247"><div class="ttname"><a href="class_u_in_game_h_u_d.html#abfb6566908f9d6b4e41b949c3c394247">UInGameHUD::SkillSlots</a></div><div class="ttdeci">TArray&lt; TObjectPtr&lt; USkillSlotUI &gt; &gt; SkillSlots</div><div class="ttdef"><b>Definition</b> <a href="_in_game_h_u_d_8h_source.html#l00104">InGameHUD.h:104</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_abfc3adf935b5d41562a31bf38f472c1d"><div class="ttname"><a href="class_u_in_game_h_u_d.html#abfc3adf935b5d41562a31bf38f472c1d">UInGameHUD::OnPlayerStateSet</a></div><div class="ttdeci">void OnPlayerStateSet()</div><div class="ttdef"><b>Definition</b> <a href="#l00025">InGameHUD.cpp:25</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_ac0dc199f4499dcb804507ef05df5a3f7"><div class="ttname"><a href="class_u_in_game_h_u_d.html#ac0dc199f4499dcb804507ef05df5a3f7">UInGameHUD::NativeConstruct</a></div><div class="ttdeci">virtual void NativeConstruct() override</div><div class="ttdef"><b>Definition</b> <a href="#l00068">InGameHUD.cpp:68</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_ad3b657b2646ffb308177780836805b25"><div class="ttname"><a href="class_u_in_game_h_u_d.html#ad3b657b2646ffb308177780836805b25">UInGameHUD::Exp</a></div><div class="ttdeci">TObjectPtr&lt; UProgressBarValueBase &gt; Exp</div><div class="ttdef"><b>Definition</b> <a href="_in_game_h_u_d_8h_source.html#l00074">InGameHUD.h:74</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_ad4ea3a784dd89f918799a49b145846ba"><div class="ttname"><a href="class_u_in_game_h_u_d.html#ad4ea3a784dd89f918799a49b145846ba">UInGameHUD::BindToGameStateDelegates</a></div><div class="ttdeci">void BindToGameStateDelegates(AKPTInGameState *GameState)</div><div class="ttdef"><b>Definition</b> <a href="#l00220">InGameHUD.cpp:220</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_adecf96b1c0383fa1989f7b5c55bb06ce"><div class="ttname"><a href="class_u_in_game_h_u_d.html#adecf96b1c0383fa1989f7b5c55bb06ce">UInGameHUD::OnGameStateSet</a></div><div class="ttdeci">void OnGameStateSet(AGameStateBase *GameState)</div><div class="ttdef"><b>Definition</b> <a href="#l00201">InGameHUD.cpp:201</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_ae5432789c54f0fb4c503b8b353c46029"><div class="ttname"><a href="class_u_in_game_h_u_d.html#ae5432789c54f0fb4c503b8b353c46029">UInGameHUD::TeamStatsComponentsReadyHandle</a></div><div class="ttdeci">void TeamStatsComponentsReadyHandle(UTeamStatsComponent *Stats)</div><div class="ttdef"><b>Definition</b> <a href="#l00150">InGameHUD.cpp:150</a></div></div>
+<div class="ttc" id="aclass_u_in_game_h_u_d_html_aea4fd06e9a58c9e922e8a200ac9c8435"><div class="ttname"><a href="class_u_in_game_h_u_d.html#aea4fd06e9a58c9e922e8a200ac9c8435">UInGameHUD::SkillDataTable</a></div><div class="ttdeci">TObjectPtr&lt; UDataTable &gt; SkillDataTable</div><div class="ttdef"><b>Definition</b> <a href="_in_game_h_u_d_8h_source.html#l00107">InGameHUD.h:107</a></div></div>
+<div class="ttc" id="aclass_u_in_game_phase_manager_component_html"><div class="ttname"><a href="class_u_in_game_phase_manager_component.html">UInGamePhaseManagerComponent</a></div><div class="ttdef"><b>Definition</b> <a href="_in_game_phase_manager_component_8h_source.html#l00011">InGamePhaseManagerComponent.h:13</a></div></div>
+<div class="ttc" id="aclass_u_inventory_manager_html"><div class="ttname"><a href="class_u_inventory_manager.html">UInventoryManager</a></div><div class="ttdef"><b>Definition</b> <a href="_inventory_manager_8h_source.html#l00018">InventoryManager.h:20</a></div></div>
+<div class="ttc" id="aclass_u_inventory_u_i_html_acdd39c140fa026f46f9752565a706880"><div class="ttname"><a href="class_u_inventory_u_i.html#acdd39c140fa026f46f9752565a706880">UInventoryUI::UpdateInventoryUI</a></div><div class="ttdeci">void UpdateInventoryUI(const TArray&lt; FName &gt; &amp;NewItems)</div><div class="ttdef"><b>Definition</b> <a href="_inventory_u_i_8cpp_source.html#l00048">InventoryUI.cpp:48</a></div></div>
+<div class="ttc" id="aclass_u_skill_manager_component_html"><div class="ttname"><a href="class_u_skill_manager_component.html">USkillManagerComponent</a></div><div class="ttdef"><b>Definition</b> <a href="_skill_manager_component_8h_source.html#l00016">SkillManagerComponent.h:18</a></div></div>
+<div class="ttc" id="aclass_u_state_manager_component_html_a111b4b56bc506f0c7b11a106329198d8"><div class="ttname"><a href="class_u_state_manager_component.html#a111b4b56bc506f0c7b11a106329198d8">UStateManagerComponent::OnStateTagsChanged</a></div><div class="ttdeci">FOnStateTagsChanged OnStateTagsChanged</div><div class="ttdef"><b>Definition</b> <a href="_u_state_manager_component_8h_source.html#l00027">UStateManagerComponent.h:27</a></div></div>
+<div class="ttc" id="aclass_u_state_manager_component_html_aa02160df8ceffa37f487dfbdfc8cb2fd"><div class="ttname"><a href="class_u_state_manager_component.html#aa02160df8ceffa37f487dfbdfc8cb2fd">UStateManagerComponent::InitialBroadCast</a></div><div class="ttdeci">void InitialBroadCast()</div><div class="ttdef"><b>Definition</b> <a href="_u_state_manager_component_8cpp_source.html#l00079">UStateManagerComponent.cpp:79</a></div></div>
+<div class="ttc" id="aclass_u_team_stats_component_html"><div class="ttname"><a href="class_u_team_stats_component.html">UTeamStatsComponent</a></div><div class="ttdef"><b>Definition</b> <a href="_team_stats_component_8h_source.html#l00012">TeamStatsComponent.h:14</a></div></div>
+<div class="ttc" id="aclass_u_team_stats_component_html_a02772b4fd5c6a00656403377a0c9ca8d"><div class="ttname"><a href="class_u_team_stats_component.html#a02772b4fd5c6a00656403377a0c9ca8d">UTeamStatsComponent::BroadcastInitialValues</a></div><div class="ttdeci">void BroadcastInitialValues()</div><div class="ttdef"><b>Definition</b> <a href="_team_stats_component_8cpp_source.html#l00071">TeamStatsComponent.cpp:71</a></div></div>
+<div class="ttc" id="aclass_u_team_stats_component_html_a29b49c0efd64c1250ab683c6c77154c8"><div class="ttname"><a href="class_u_team_stats_component.html#a29b49c0efd64c1250ab683c6c77154c8">UTeamStatsComponent::OnTeamExperienceUpdated</a></div><div class="ttdeci">FOnTeamExperiencesUpdatedSignature OnTeamExperienceUpdated</div><div class="ttdef"><b>Definition</b> <a href="_team_stats_component_8h_source.html#l00029">TeamStatsComponent.h:29</a></div></div>
+<div class="ttc" id="aclass_u_team_stats_component_html_a4708b46c58d519cec37b9ecd6e251a01"><div class="ttname"><a href="class_u_team_stats_component.html#a4708b46c58d519cec37b9ecd6e251a01">UTeamStatsComponent::OnTeamLevelUp</a></div><div class="ttdeci">FOnTeamLevelUpdatedSignature OnTeamLevelUp</div><div class="ttdef"><b>Definition</b> <a href="_team_stats_component_8h_source.html#l00026">TeamStatsComponent.h:26</a></div></div>
+<div class="ttc" id="astruct_f_skill_data_html"><div class="ttname"><a href="struct_f_skill_data.html">FSkillData</a></div><div class="ttdef"><b>Definition</b> <a href="_skill_data_8h_source.html#l00049">SkillData.h:51</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_03a35ccb76f34b0c5c973a49dad1c475.html">UI</a></li><li class="navelem"><a href="dir_fb824ba87454e4eb2eaf965fb5e879a0.html">InGame</a></li><li class="navelem"><a href="_in_game_h_u_d_8cpp.html">InGameHUD.cpp</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<map id="UKPTCheatManager::RemoveItem" name="UKPTCheatManager::RemoveItem">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,231,64"/>
+<area shape="rect" id="Node000002" href="$class_u_inventory_manager.html#a3b3f70075ad63d4e9a454068ac6d26b9" title=" " alt="" coords="279,29,422,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="231,48,263,48,263,53,231,53"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="306,29,305,19,312,10,327,5,350,3,375,5,390,11,388,16,374,10,350,8,328,10,315,15,310,21,311,28"/>
+</map>

@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>KPT: C:/Users/user/Perforce/alz7_CobaltbruWorkspace_00/KPT/Source/KPT/Skill/Ability/Trace/GameplayAbility_TraceBase.h 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">KPT<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">KPT Project Documentation</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','검색',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_gameplay_ability___trace_base_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">로딩중...</div>
+<div class="SRStatus" id="Searching">검색중...</div>
+<div class="SRStatus" id="NoMatches">일치하는것 없음</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">GameplayAbility_TraceBase.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_gameplay_ability___trace_base_8h.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Fill out your copyright notice in the Description page of Project Settings.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;CoreMinimal.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Abilities/GameplayAbility.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="_ability_task___trace_8h.html">AI/Boss/Abilities/AbilityTasks/AbilityTask_Trace.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;GameplayAbility_TraceBase.generated.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="struct_f_trace_config.html">   10</a></span>USTRUCT(BlueprintType)</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">struct </span><a class="code hl_struct" href="struct_f_trace_config.html">FTraceConfig</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="struct_f_trace_config.html#abed661f185a656b4d429da6677cf96ea">   16</a></span>    <a class="code hl_variable" href="_ability_task___trace_8h.html#a472c9048d3513ed0a1d0e16ea50e6673">ETraceShape</a> <a class="code hl_variable" href="struct_f_trace_config.html#abed661f185a656b4d429da6677cf96ea">TraceShape</a> = <a class="code hl_variable" href="_ability_task___trace_8h.html#a472c9048d3513ed0a1d0e16ea50e6673">ETraceShape</a>::<a class="code hl_variable" href="_ability_task___trace_8h.html#ad9284a91e34401f6e1b8058d2f5fe26c">Sphere</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="struct_f_trace_config.html#a06128ff91d20674d6717ddd7e2ec516d">   19</a></span>    FVector <a class="code hl_variable" href="struct_f_trace_config.html#a06128ff91d20674d6717ddd7e2ec516d">HalfSize</a> = FVector(100.f, 100.f, 100.f);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_f_trace_config.html#a9f5f8563b5ef191c76835b72599818e0">   22</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_f_trace_config.html#a9f5f8563b5ef191c76835b72599818e0">TickInterval</a> = 0.1f;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="struct_f_trace_config.html#a8ba98c41c3c97bfa58958c5f85e8e4a6">   25</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_f_trace_config.html#a8ba98c41c3c97bfa58958c5f85e8e4a6">Duration</a> = 5.f;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_f_trace_config.html#adbaaf512ef9781d5a42297573f380f5c">   28</a></span>    TSubclassOf&lt;AActor&gt; <a class="code hl_variable" href="struct_f_trace_config.html#adbaaf512ef9781d5a42297573f380f5c">FilterClass</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="struct_f_trace_config.html#a919b51b3275b10679cdd613a5716d4fa">   31</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="struct_f_trace_config.html#a919b51b3275b10679cdd613a5716d4fa">bShowDebug</a> = true;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>};</div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_u_gameplay_ability___trace_base.html">   37</a></span>UCLASS(Abstract, BlueprintType, Blueprintable)</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>class KPT_API <a class="code hl_function" href="class_u_gameplay_ability___trace_base.html#a46850068439b1ec04a91a537afd7ecbc">UGameplayAbility_TraceBase</a> : public UGameplayAbility</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    GENERATED_BODY()</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_function" href="class_u_gameplay_ability___trace_base.html#a46850068439b1ec04a91a537afd7ecbc">UGameplayAbility_TraceBase</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Trace&quot;</span>)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_u_gameplay_ability___trace_base.html#a6b22bc5fc3e92d81ce0a96824287e23c">   47</a></span>    virtual <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_gameplay_ability___trace_base.html#a6b22bc5fc3e92d81ce0a96824287e23c">CalculateTracePoints</a>(FVector&amp; OutStartLocation, FVector&amp; OutEndLocation) {}</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Trace&quot;</span>)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    void ExecuteTrace();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    UFUNCTION(BlueprintCallable, Category = <span class="stringliteral">&quot;Trace&quot;</span>)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    virtual <span class="keywordtype">void</span> OnTraceHit(const FGameplayAbilityTargetDataHandle&amp; TargetData);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    UFUNCTION(BlueprintImplementableEvent, Category = <span class="stringliteral">&quot;Trace&quot;</span>)</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_u_gameplay_ability___trace_base.html#aab02c5cd24012484672817a3959eae8b">   56</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_gameplay_ability___trace_base.html#aab02c5cd24012484672817a3959eae8b">OnTraceHitBP</a>(const FGameplayAbilityTargetDataHandle&amp; TargetData);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    virtual <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_gameplay_ability___trace_base.html#a8cbf0758a9b7e43db6f8ece876f468da">ActivateAbility</a>(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData) override;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    UFUNCTION()</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_gameplay_ability___trace_base.html#af45bd75cfce61a7c8368270e14ba2da2">HandleTraceResult</a>(const FGameplayAbilityTargetDataHandle&amp; TargetData);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_u_gameplay_ability___trace_base.html#a6ab220e0256558c7742e77bf52ef7329">ApplyEffectToTarget</a>(AActor* Target, <span class="keywordtype">float</span> DamageAmount);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>protected:</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Trace Settings&quot;</span>)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_u_gameplay_ability___trace_base.html#a2e078229e044d1d089517cb904e12cd8">   67</a></span>    <a class="code hl_struct" href="struct_f_trace_config.html">FTraceConfig</a> <a class="code hl_variable" href="class_u_gameplay_ability___trace_base.html#a2e078229e044d1d089517cb904e12cd8">TraceConfig</a>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Damage&quot;</span>)</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_u_gameplay_ability___trace_base.html#afbe10238297fbfadd92a99ee1e1bd28b">   70</a></span>    TSubclassOf&lt;UGameplayEffect&gt; <a class="code hl_variable" href="class_u_gameplay_ability___trace_base.html#afbe10238297fbfadd92a99ee1e1bd28b">PayloadEffectClass</a>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Damage&quot;</span>)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_u_gameplay_ability___trace_base.html#ab45a160426d06c01c1e709b839ba2f3a">   73</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="class_u_gameplay_ability___trace_base.html#ab45a160426d06c01c1e709b839ba2f3a">BaseDamage</a> = 50.f;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = <span class="stringliteral">&quot;Damage&quot;</span>)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_u_gameplay_ability___trace_base.html#a60517b335e87fb714ebbf0fed8a6568e">   76</a></span>    FGameplayTag <a class="code hl_variable" href="class_u_gameplay_ability___trace_base.html#a60517b335e87fb714ebbf0fed8a6568e">DamageTag</a> = FGameplayTag::RequestGameplayTag(<span class="stringliteral">&quot;Data.Damage.FinalSkillDamage&quot;</span>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>private:</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    UPROPERTY()</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <a class="code hl_class" href="class_u_ability_task___trace.html">UAbilityTask_Trace</a>* TraceTask;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>};</div>
+</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    </div>
+<div class="ttc" id="a_ability_task___trace_8h_html"><div class="ttname"><a href="_ability_task___trace_8h.html">AbilityTask_Trace.h</a></div></div>
+<div class="ttc" id="a_ability_task___trace_8h_html_a472c9048d3513ed0a1d0e16ea50e6673"><div class="ttname"><a href="_ability_task___trace_8h.html#a472c9048d3513ed0a1d0e16ea50e6673">ETraceShape</a></div><div class="ttdeci">enum enum class ETraceShape</div><div class="ttdef"><b>Definition</b> <a href="_ability_task___trace_8h_source.html#l00013">AbilityTask_Trace.h:12</a></div></div>
+<div class="ttc" id="a_ability_task___trace_8h_html_ad9284a91e34401f6e1b8058d2f5fe26c"><div class="ttname"><a href="_ability_task___trace_8h.html#ad9284a91e34401f6e1b8058d2f5fe26c">Sphere</a></div><div class="ttdeci">enum enum class Sphere</div><div class="ttdef"><b>Definition</b> <a href="_ability_task___trace_8h_source.html#l00017">AbilityTask_Trace.h:17</a></div></div>
+<div class="ttc" id="aclass_u_ability_task___trace_html"><div class="ttname"><a href="class_u_ability_task___trace.html">UAbilityTask_Trace</a></div><div class="ttdef"><b>Definition</b> <a href="_ability_task___trace_8h_source.html#l00025">AbilityTask_Trace.h:27</a></div></div>
+<div class="ttc" id="aclass_u_gameplay_ability___trace_base_html_a2e078229e044d1d089517cb904e12cd8"><div class="ttname"><a href="class_u_gameplay_ability___trace_base.html#a2e078229e044d1d089517cb904e12cd8">UGameplayAbility_TraceBase::TraceConfig</a></div><div class="ttdeci">FTraceConfig TraceConfig</div><div class="ttdef"><b>Definition</b> <a href="#l00067">GameplayAbility_TraceBase.h:67</a></div></div>
+<div class="ttc" id="aclass_u_gameplay_ability___trace_base_html_a46850068439b1ec04a91a537afd7ecbc"><div class="ttname"><a href="class_u_gameplay_ability___trace_base.html#a46850068439b1ec04a91a537afd7ecbc">UGameplayAbility_TraceBase::UGameplayAbility_TraceBase</a></div><div class="ttdeci">UGameplayAbility_TraceBase()</div><div class="ttdef"><b>Definition</b> <a href="_gameplay_ability___trace_base_8cpp_source.html#l00009">GameplayAbility_TraceBase.cpp:9</a></div></div>
+<div class="ttc" id="aclass_u_gameplay_ability___trace_base_html_a60517b335e87fb714ebbf0fed8a6568e"><div class="ttname"><a href="class_u_gameplay_ability___trace_base.html#a60517b335e87fb714ebbf0fed8a6568e">UGameplayAbility_TraceBase::DamageTag</a></div><div class="ttdeci">FGameplayTag DamageTag</div><div class="ttdef"><b>Definition</b> <a href="#l00076">GameplayAbility_TraceBase.h:76</a></div></div>
+<div class="ttc" id="aclass_u_gameplay_ability___trace_base_html_a6ab220e0256558c7742e77bf52ef7329"><div class="ttname"><a href="class_u_gameplay_ability___trace_base.html#a6ab220e0256558c7742e77bf52ef7329">UGameplayAbility_TraceBase::ApplyEffectToTarget</a></div><div class="ttdeci">void ApplyEffectToTarget(AActor *Target, float DamageAmount)</div><div class="ttdef"><b>Definition</b> <a href="_gameplay_ability___trace_base_8cpp_source.html#l00069">GameplayAbility_TraceBase.cpp:69</a></div></div>
+<div class="ttc" id="aclass_u_gameplay_ability___trace_base_html_a6b22bc5fc3e92d81ce0a96824287e23c"><div class="ttname"><a href="class_u_gameplay_ability___trace_base.html#a6b22bc5fc3e92d81ce0a96824287e23c">UGameplayAbility_TraceBase::CalculateTracePoints</a></div><div class="ttdeci">virtual void CalculateTracePoints(FVector &amp;OutStartLocation, FVector &amp;OutEndLocation)</div><div class="ttdef"><b>Definition</b> <a href="#l00047">GameplayAbility_TraceBase.h:47</a></div></div>
+<div class="ttc" id="aclass_u_gameplay_ability___trace_base_html_a8cbf0758a9b7e43db6f8ece876f468da"><div class="ttname"><a href="class_u_gameplay_ability___trace_base.html#a8cbf0758a9b7e43db6f8ece876f468da">UGameplayAbility_TraceBase::ActivateAbility</a></div><div class="ttdeci">virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo *ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData *TriggerEventData) override</div><div class="ttdef"><b>Definition</b> <a href="_gameplay_ability___trace_base_8cpp_source.html#l00056">GameplayAbility_TraceBase.cpp:56</a></div></div>
+<div class="ttc" id="aclass_u_gameplay_ability___trace_base_html_aab02c5cd24012484672817a3959eae8b"><div class="ttname"><a href="class_u_gameplay_ability___trace_base.html#aab02c5cd24012484672817a3959eae8b">UGameplayAbility_TraceBase::OnTraceHitBP</a></div><div class="ttdeci">void OnTraceHitBP(const FGameplayAbilityTargetDataHandle &amp;TargetData)</div></div>
+<div class="ttc" id="aclass_u_gameplay_ability___trace_base_html_ab45a160426d06c01c1e709b839ba2f3a"><div class="ttname"><a href="class_u_gameplay_ability___trace_base.html#ab45a160426d06c01c1e709b839ba2f3a">UGameplayAbility_TraceBase::BaseDamage</a></div><div class="ttdeci">float BaseDamage</div><div class="ttdef"><b>Definition</b> <a href="#l00073">GameplayAbility_TraceBase.h:73</a></div></div>
+<div class="ttc" id="aclass_u_gameplay_ability___trace_base_html_af45bd75cfce61a7c8368270e14ba2da2"><div class="ttname"><a href="class_u_gameplay_ability___trace_base.html#af45bd75cfce61a7c8368270e14ba2da2">UGameplayAbility_TraceBase::HandleTraceResult</a></div><div class="ttdeci">void HandleTraceResult(const FGameplayAbilityTargetDataHandle &amp;TargetData)</div><div class="ttdef"><b>Definition</b> <a href="_gameplay_ability___trace_base_8cpp_source.html#l00063">GameplayAbility_TraceBase.cpp:63</a></div></div>
+<div class="ttc" id="aclass_u_gameplay_ability___trace_base_html_afbe10238297fbfadd92a99ee1e1bd28b"><div class="ttname"><a href="class_u_gameplay_ability___trace_base.html#afbe10238297fbfadd92a99ee1e1bd28b">UGameplayAbility_TraceBase::PayloadEffectClass</a></div><div class="ttdeci">TSubclassOf&lt; UGameplayEffect &gt; PayloadEffectClass</div><div class="ttdef"><b>Definition</b> <a href="#l00070">GameplayAbility_TraceBase.h:70</a></div></div>
+<div class="ttc" id="astruct_f_trace_config_html"><div class="ttname"><a href="struct_f_trace_config.html">FTraceConfig</a></div><div class="ttdef"><b>Definition</b> <a href="#l00010">GameplayAbility_TraceBase.h:12</a></div></div>
+<div class="ttc" id="astruct_f_trace_config_html_a06128ff91d20674d6717ddd7e2ec516d"><div class="ttname"><a href="struct_f_trace_config.html#a06128ff91d20674d6717ddd7e2ec516d">FTraceConfig::HalfSize</a></div><div class="ttdeci">FVector HalfSize</div><div class="ttdef"><b>Definition</b> <a href="#l00019">GameplayAbility_TraceBase.h:19</a></div></div>
+<div class="ttc" id="astruct_f_trace_config_html_a8ba98c41c3c97bfa58958c5f85e8e4a6"><div class="ttname"><a href="struct_f_trace_config.html#a8ba98c41c3c97bfa58958c5f85e8e4a6">FTraceConfig::Duration</a></div><div class="ttdeci">float Duration</div><div class="ttdef"><b>Definition</b> <a href="#l00025">GameplayAbility_TraceBase.h:25</a></div></div>
+<div class="ttc" id="astruct_f_trace_config_html_a919b51b3275b10679cdd613a5716d4fa"><div class="ttname"><a href="struct_f_trace_config.html#a919b51b3275b10679cdd613a5716d4fa">FTraceConfig::bShowDebug</a></div><div class="ttdeci">bool bShowDebug</div><div class="ttdef"><b>Definition</b> <a href="#l00031">GameplayAbility_TraceBase.h:31</a></div></div>
+<div class="ttc" id="astruct_f_trace_config_html_a9f5f8563b5ef191c76835b72599818e0"><div class="ttname"><a href="struct_f_trace_config.html#a9f5f8563b5ef191c76835b72599818e0">FTraceConfig::TickInterval</a></div><div class="ttdeci">float TickInterval</div><div class="ttdef"><b>Definition</b> <a href="#l00022">GameplayAbility_TraceBase.h:22</a></div></div>
+<div class="ttc" id="astruct_f_trace_config_html_abed661f185a656b4d429da6677cf96ea"><div class="ttname"><a href="struct_f_trace_config.html#abed661f185a656b4d429da6677cf96ea">FTraceConfig::TraceShape</a></div><div class="ttdeci">ETraceShape TraceShape</div><div class="ttdef"><b>Definition</b> <a href="#l00016">GameplayAbility_TraceBase.h:16</a></div></div>
+<div class="ttc" id="astruct_f_trace_config_html_adbaaf512ef9781d5a42297573f380f5c"><div class="ttname"><a href="struct_f_trace_config.html#adbaaf512ef9781d5a42297573f380f5c">FTraceConfig::FilterClass</a></div><div class="ttdeci">TSubclassOf&lt; AActor &gt; FilterClass</div><div class="ttdef"><b>Definition</b> <a href="#l00028">GameplayAbility_TraceBase.h:28</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a href="dir_def50d448366cfe38104feea5fe71f1d.html">KPT</a></li><li class="navelem"><a href="dir_835db7cc60e52a26a89059f64164cf8e.html">Skill</a></li><li class="navelem"><a href="dir_450d4bb011d81f3d6e7dc615ecdadbdc.html">Ability</a></li><li class="navelem"><a href="dir_1d4c255552f75b33764d2dbadb379684.html">Trace</a></li><li class="navelem"><a href="_gameplay_ability___trace_base_8h.html">GameplayAbility_TraceBase.h</a></li>
+    <li class="footer">다음에 의해 생성됨 :  <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

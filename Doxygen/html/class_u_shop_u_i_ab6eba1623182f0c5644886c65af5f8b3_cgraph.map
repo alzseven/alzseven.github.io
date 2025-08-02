@@ -1,0 +1,21 @@
+<map id="UShopUI::OnPlayerStateSet" name="UShopUI::OnPlayerStateSet">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,189,194,216"/>
+<area shape="rect" id="Node000002" href="$class_u_shop_u_i.html#a4c04b00e51e3f9b202b95d09b119de8f" title=" " alt="" coords="242,107,434,149"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,186,252,152,254,157,145,191"/>
+<area shape="rect" id="Node000006" href="$class_u_shop_u_i.html#acd415ee3a7ed77868e02887e70e320f1" title=" " alt="" coords="254,181,422,224"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="194,200,239,200,239,205,194,205"/>
+<area shape="rect" id="Node000009" href="$class_u_shop_u_i.html#aec5728ab9fdc554d5ebc34aab1c5a075" title=" " alt="" coords="248,265,428,308"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="141,214,261,257,260,262,139,219"/>
+<area shape="rect" id="Node000003" href="$class_u_player_shop_state_component.html#a078059700c5316cabc7d861369c3f281" title=" " alt="" coords="492,5,689,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="380,104,481,58,499,51,501,56,483,62,382,109"/>
+<area shape="rect" id="Node000004" href="$class_u_shop_u_i.html#a95de2e9bace7f58e6e1edb779ad2c315" title=" " alt="" coords="497,72,684,99"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="434,109,492,99,493,105,435,114"/>
+<area shape="rect" id="Node000005" href="$class_u_shop_u_i.html#a6ac15391515db01ec002ad18e30657c6" title=" " alt="" coords="506,123,675,149"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="435,128,490,130,490,135,434,134"/>
+<area shape="rect" id="Node000007" href="$class_u_player_wallet_component.html#ac18a8cff3cae7dacd942d37f3c0a0155" title=" " alt="" coords="505,173,676,216"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="422,197,489,195,489,201,422,203"/>
+<area shape="rect" id="Node000008" href="$class_u_shop_u_i.html#afb6c36fae37308fde008155569288662" title=" " alt="" coords="514,240,667,267"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="423,217,506,234,505,239,422,222"/>
+<area shape="rect" id="Node000010" href="$class_u_inventory_u_i.html#acdd39c140fa026f46f9752565a706880" title=" " alt="" coords="482,291,699,317"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="428,290,467,293,466,298,428,295"/>
+</map>
