@@ -1,0 +1,376 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>코코차차 포지셔닝 맵</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500;800&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; each map is a full-width figure with its numbered key beside (stacks on phone). */
+:root{
+  --bg:#f6f8f9; --surface:#ffffff; --ink:#10212b; --ink-2:#4a5a63; --ink-3:#7b8a92;
+  --rule:#dbe3e7; --grid:#e7edf0; --zone:#fdf1ea;
+  --s-comp:#2a78d6; --s-coco:#eb6834; --s-ref:#1baf7a;
+  --f-display:"Gothic A1","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --f-body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f171c; --surface:#16212a; --ink:#e8eef1; --ink-2:#a9b8c0; --ink-3:#7d8e97;
+  --rule:#26343d; --grid:#1f2c34; --zone:#2a1f19;
+  --s-comp:#3987e5; --s-coco:#d95926; --s-ref:#199e70; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f171c; --surface:#16212a; --ink:#e8eef1; --ink-2:#a9b8c0; --ink-3:#7d8e97;
+  --rule:#26343d; --grid:#1f2c34; --zone:#2a1f19;
+  --s-comp:#3987e5; --s-coco:#d95926; --s-ref:#199e70; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.65;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px}
+.wrap{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--f-display);font-weight:800;text-wrap:balance;margin:0;line-height:1.25}
+h1{font-size:clamp(28px,4.4vw,40px);letter-spacing:-.01em}
+h2{font-size:22px}
+h3{font-size:16px;font-weight:800}
+p{margin:0;max-width:68ch}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+header{display:flex;flex-direction:column;gap:14px}
+.lede{font-size:17px;color:var(--ink)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:13px;color:var(--ink-2)}
+.meta b{font-family:var(--f-mono);font-weight:500;color:var(--ink)}
+section{display:flex;flex-direction:column;gap:18px}
+.sec-head{display:flex;flex-direction:column;gap:6px;border-top:2px solid var(--ink);padding-top:14px}
+.sec-head p{color:var(--ink-2)}
+.figure{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:16px;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:20px}
+@media (max-width:820px){.figure{grid-template-columns:1fr}}
+.chart{min-width:0;position:relative}
+.chart svg{width:100%;height:auto;display:block}
+.key{min-width:0;font-size:13px;display:flex;flex-direction:column;gap:10px}
+.key ol{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr;gap:3px;max-height:520px;overflow:auto}
+.key li{display:grid;grid-template-columns:26px 1fr auto;gap:8px;align-items:baseline;padding:3px 4px;border-radius:4px;cursor:default}
+.key li:hover,.key li.on{background:var(--grid)}
+.key .n{font-family:var(--f-mono);font-size:12px;color:var(--ink-2);text-align:right}
+.key .v{font-family:var(--f-mono);font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.takeaways{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.take{border-left:3px solid var(--rule);padding:2px 0 2px 12px;font-size:14px;color:var(--ink-2)}
+.take b{color:var(--ink);display:block;font-weight:600;margin-bottom:2px}
+.take.hot{border-left-color:var(--s-coco)}
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--bg);font-size:12px;line-height:1.45;padding:7px 9px;border-radius:4px;max-width:240px;z-index:5}
+.tip[hidden]{display:none!important}
+table{border-collapse:collapse;width:100%;font-size:13px}
+.tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--rule);border-radius:6px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-weight:600;color:var(--ink-2);font-size:12px;white-space:nowrap}
+td.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.coco td{background:var(--zone)}
+tbody tr:last-child td{border-bottom:0}
+.cands{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.cand{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:14px 16px;display:flex;flex-direction:column;gap:6px}
+.cand .q{font-family:var(--f-display);font-weight:800;font-size:18px;line-height:1.35}
+.cand .w{font-size:13px;color:var(--ink-2)}
+.note{font-size:13px;color:var(--ink-2)}
+.fit td{text-align:center}
+.fit td:first-child,.fit th:first-child{text-align:left}
+.fit th{text-align:center;white-space:normal;min-width:84px}
+.fit .core th.g2,.fit td.g2{background:var(--zone)}
+.pips{display:inline-flex;gap:3px}
+.pips i{width:9px;height:9px;border-radius:50%;border:1.5px solid var(--ink-2);display:inline-block}
+.pips i.f{background:var(--ink);border-color:var(--ink)}
+.verdict{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.vd{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--ink-2)}
+.vd .role{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.vd b{font-family:var(--f-display);font-size:16px;color:var(--ink)}
+.vd.core{border-color:var(--s-coco);border-width:2px}
+.vd .say{color:var(--ink)}
+.identity{font-family:var(--f-display);font-weight:800;font-size:clamp(20px,3vw,26px);line-height:1.4;max-width:30ch;text-wrap:balance}
+ul.plain{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px;max-width:72ch}
+a{color:var(--s-comp)}
+:focus-visible{outline:2px solid var(--s-coco);outline-offset:2px}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">콘크리트무드 업[業] 프로젝트 · 중간 작업본 v2 · 네이버 보완</div>
+  <h1>코코차차 포지셔닝 맵</h1>
+  <p class="lede">제주 만들기 체험은 대부분 <b>미리 예약하는 1~2시간, 3~6만 원짜리</b> 클래스다. 반대편인 <b>"지나가다 들러 20분, 골라서 끼워 완성"</b>하는 자리는 가방 조합으로는 비어 있다(가장 가까운 이웃은 동문시장 청년몰 지하의 공덕방). 원도심 소품샵 후기의 절반 이상이 그곳을 <b>공항 가기 전·동문시장 근처에서 들르는 곳</b>으로 쓰고 있어서, 코코차차 조합 바가 들어갈 틈은 바로 그 동선 위다.</p>
+  <div class="meta">
+    <span>수집 <b>2026-10-21</b></span>
+    <span>체험 공방 <b>23곳</b> · 소품샵·브랜드 <b>15곳</b></span>
+    <span>공개 후기 <b>카카오 570건 + 네이버 100건</b> 코딩, 네이버 리뷰 수·키워드 21곳</span>
+    <span>점 위치는 <b>팀 판단</b>이며 고객 인식 조사가 아님</span>
+  </div>
+</header>
+
+<section id="groups">
+  <div class="sec-head">
+    <div class="eyebrow">고객 그룹 · 소품샵이냐 공방이냐</div>
+    <h2>비교 대상은 손님이 정한다</h2>
+    <p>같은 코코차차라도 누가 오느냐에 따라 대안이 다르다. 다섯 그룹을 기존 근거(후기 570건, 설문 15건, 벤치마킹 인터뷰, 운영 제약, 대표 동기)로 판정했다. 점수는 팀 판단이다.</p>
+  </div>
+  <div class="verdict">
+    <div class="vd core"><span class="role">정체성의 축</span><b>G2 데이트·친구</b><span>대안: 원데이 클래스(예약, 1~2시간, 3~6만 원)</span><span class="say">"원데이 클래스보다 가볍고, 소품샵보다 내 것"</span></div>
+    <div class="vd"><span class="role">사업의 축</span><b>G5 창업자·팀</b><span>대안: 온라인 소량 인쇄, 출강 공방</span><span class="say">"우리가 만든 그 조합 그대로 10개"</span></div>
+    <div class="vd"><span class="role">겨울 육성 · 검증 필요</span><b>G3 '나를 위한' 도민</b><span>대안: 예약 클래스, 무료 공예 프로그램</span><span class="say">"끈만 바꾸러 또 오는 곳"</span></div>
+    <div class="vd"><span class="role">성수기 보너스</span><b>G1 공항 가기 전 여행자</b><span>대안: 섬조각 같은 소품샵</span><span class="say">"산 것 말고 만든 것"</span></div>
+    <div class="vd"><span class="role">막지 않되 겨냥하지 않음</span><b>G4 아이 동반 가족</b><span>대안: 미야우먼트, 노꼬메</span><span class="say">수요는 크지만 타깃·톤·안전이 다르다</span></div>
+  </div>
+  <div class="tbl"><table class="fit">
+    <thead><tr><th>기준</th><th>G1 여행자</th><th class="g2">G2 데이트·친구</th><th>G3 도민</th><th>G4 가족</th><th>G5 창업자·팀</th></tr></thead>
+    <tbody id="fitBody"></tbody>
+  </table></div>
+  <div class="take hot" style="max-width:none"><b>정체성 한 문장 (G2 기준, 팀 회의에서 확정)</b><span class="identity">원도심 지하의 작은 작업실. 들러서 20분, 고르고 끼워 내 가방을 들고 나간다.</span></div>
+  <div class="takeaways">
+    <div class="take"><b>왜 공방 프레임인가</b>소품샵과 비교하면 인지도·접근성·가격에서 진다. 원데이 클래스와 비교하면 짧다·싸다·기술이 필요 없다·같이 고른다가 바로 장점이 된다.</div>
+    <div class="take"><b>대표 동기와도 맞는다</b>직원이 만드는 장면은 대부분의 시간에 없다. 6인 테이블에서 손님이 고르고 끼우는 장면을 쇼룸이자 릴스 소재로 쓴다.</div>
+    <div class="take"><b>가장 약한 고리는 도민</b>공개 후기에서 도민 단서는 5%뿐이다. 남은 인터뷰는 2030 도민 여성에 집중한다.</div>
+  </div>
+</section>
+
+<section id="main">
+  <div class="sec-head">
+    <div class="eyebrow">메인 맵 · 제주 만들기 체험</div>
+    <h2>체험은 오른쪽 위에 몰려 있다</h2>
+    <p>가로는 손이 하는 일(왼쪽: 골라서 조합·꾸미기, 오른쪽: 기술을 배워 제작), 세로는 가는 방식(아래: 지나가다 바로, 위: 미리 예약)이다. 점 크기는 1인 가격(네이버 공개가 반영)이고, 가격을 확인하지 못한 곳은 속이 빈 점이다. 매장 원데이를 쉬는 언제나 소소는 뺐다.</p>
+  </div>
+  <div class="figure">
+    <div class="chart" id="mapM"></div>
+    <div class="key">
+      <div class="legend"><span><i class="dot" style="background:var(--s-coco)"></i>코코차차 (안)</span><span><i class="dot" style="background:var(--s-comp)"></i>제주 체험 공방</span></div>
+      <ol id="keyM"></ol>
+    </div>
+  </div>
+  <div class="takeaways">
+    <div class="take hot"><b>빈자리: 워크인 × 가방 조합</b>왼쪽 아래에는 미야우먼트(볼펜·키캡 꾸미기)와 올망(애월)뿐이고, 둘 다 워크인을 명시하지 않는다. 원도심 공덕방(티셔츠 커스텀 2.5만 원)이 패브릭 꾸미기를 하고 있어 빈자리는 '가방 조합'으로 좁아졌다. 공덕방 워크인 여부는 미확인.</div>
+    <div class="take"><b>수요는 있다</b>미야우먼트에 '고르고 끼우는' 꾸미기 후기가 최근 몇 달 꾸준히 붙었다(블로그 71건). 다만 아이·엄마 중심이라 2030 여성 × 매일 드는 가방과는 겹치지 않는다.</div>
+    <div class="take"><b>A 클래스는 붐비는 쪽</b>실크스크린 클래스는 예약·1~2시간·3~6만 원 무리 속으로 들어간다. 정면 경쟁보다 B 조합 바를 깊게 하는 확장판이 맞다.</div>
+  </div>
+</section>
+
+<section id="sub">
+  <div class="sec-head">
+    <div class="eyebrow">보조 맵 · 원도심 소품·패브릭 브랜드</div>
+    <h2>미감만으로는 이웃과 구분되지 않는다</h2>
+    <p>가로는 미감(왼쪽: 차분·내추럴·빈티지, 오른쪽: 원색·키치·캐릭터), 세로는 제주 이야기(아래: 범용, 위: 제주를 전면에)다. 점 크기는 네이버 방문자 리뷰 수(인지도 대용, 로그 눈금)다.</p>
+  </div>
+  <div class="figure">
+    <div class="chart" id="mapS"></div>
+    <div class="key">
+      <div class="legend"><span><i class="dot" style="background:var(--s-coco)"></i>코코차차 (현재)</span><span><i class="dot" style="background:var(--s-comp)"></i>제주 소품샵·브랜드</span><span><i class="dot" style="background:var(--s-ref)"></i>대표가 꼽은 레퍼런스</span></div>
+      <ol id="keyS"></ol>
+    </div>
+  </div>
+  <div class="takeaways">
+    <div class="take"><b>키치 자리는 이미 붐빈다</b>네이버 방문자 리뷰가 섬조각 10,003건, 우디버디 4,309건이다. 코코차차 네이버 플레이스에는 리뷰 탭 자체가 없다.</div>
+    <div class="take hot"><b>차별은 '직접 만든 원단'</b>이웃 대부분은 캐릭터 굿즈를 들여와 판다. 후기에 반복되는 "흔한 귤 소품 말고"에 답하는 것은 핸드메이드 쪽이다.</div>
+    <div class="take"><b>레퍼런스는 정돈된 컬러</b>아에이오우·FAFF는 색을 쓰되 정돈된 쪽(왼쪽)에 있다. 설문의 "촌스럽다(코랄)", "요즘 유행 색 조합으로"와 같은 방향의 신호다.</div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="sec-head">
+    <div class="eyebrow">후기 분석 · 사람들이 기대하는 것</div>
+    <h2>소품샵은 동선과 구경, 체험은 함께 만든 '나만의 것'</h2>
+    <p>각 묶음 후기 중 그 키워드가 나온 비율. 체험 공방 273건, 소품샵 297건. 협찬 표시 글과 사업자 본인의 홍보 글은 뺐다.</p>
+  </div>
+  <div class="figure" style="grid-template-columns:1fr">
+    <div class="legend"><span><i class="dot" style="background:var(--s-comp)"></i>체험 공방 (N=273)</span><span><i class="dot" style="background:var(--s-ref)"></i>소품샵 (N=297)</span></div>
+    <div class="chart" id="bars"></div>
+  </div>
+  <div class="takeaways">
+    <div class="take"><b>"공항 가기 전에"</b>소품샵 후기의 53%가 공항 근처·동문시장·마지막 날을 말한다. 미리 예약하는 클래스는 이 틈에 잘 안 들어간다.</div>
+    <div class="take"><b>체험의 보상은 동행과 결과물</b>아이·가족(28%), 연인(19%), 친구(10%)과 함께, 나만의 결과물·추억(19%)을 남긴다.</div>
+    <div class="take"><b>도민은 후기에 잘 안 보인다</b>카카오 27곳 합쳐 도민 단서 20여 건, 네이버 최신 100건 중 0건이다. 겨울 도민 판단은 인터뷰로 확인해야 한다.</div>
+    <div class="take hot"><b>사람 대신 설명</b>네이버 체험 공방 키워드 1~2위는 "초보자에게도 적합해요", "친절해요"다. 멜로우니스 만족도 고르기·결과물·설명의 묶음이다. 무인 조합 바는 POP·단계 카드·시연 영상이 설명을 맡아야 한다.</div>
+  </div>
+</section>
+
+<section id="b2b">
+  <div class="sec-head">
+    <div class="eyebrow">소량 굿즈 비교 · 10개 주문 기준</div>
+    <h2>"소량 가능"만으로는 이길 수 없다</h2>
+    <p>공개 가격표의 시작가 기준이며 실제 견적과 다를 수 있다. 문의·견적 제출은 하지 않았다.</p>
+  </div>
+  <div class="figure" style="grid-template-columns:1fr">
+    <div class="chart" id="price"></div>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>서비스</th><th>유형</th><th>품목</th><th>최소 수량</th><th>개당(10개)</th><th>판·셋업비</th><th>핸드메이드</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://www.marpple.com/kr/product/list/10" target="_blank" rel="noopener">마플</a></td><td>온라인 소량 인쇄</td><td>코튼 파우치(중) / 풀프린팅 캔버스 파우치(중)</td><td class="num">1개</td><td class="num">4,830~ / 17,220~</td><td>표시 없음</td><td>✕</td></tr>
+      <tr><td><a href="https://www.redprinting.co.kr/ko/landing/fabric_cotton_cloth_pouch" target="_blank" rel="noopener">레드프린팅</a></td><td>온라인 소량 인쇄</td><td>광목 파우치</td><td class="num">1개</td><td class="num">8,800~</td><td>없음</td><td>✕</td></tr>
+      <tr><td><a href="https://dbprint.kr/product/%EC%8B%A4%ED%81%AC%EC%8A%A4%ED%81%AC%EB%A6%B0-%EC%97%90%EC%BD%94%EB%B0%B1-%EC%9D%B8%EC%87%84-%EC%A3%BC%EB%AC%B8%EC%A0%9C%EC%9E%91/294/" target="_blank" rel="noopener">db print</a></td><td>실크스크린 공방</td><td>실크 에코백 1도</td><td class="num">10장</td><td class="num">9,000</td><td>불명</td><td>△</td></tr>
+      <tr><td><a href="https://wp.bizhows.com/cms/miri_popup/7700_200_7369_2/" target="_blank" rel="noopener">비즈하우스</a></td><td>판촉 실크인쇄</td><td>실크 에코백 1도</td><td class="num">50개</td><td class="num">(50개 4,070)</td><td>불명</td><td>✕</td></tr>
+      <tr><td><a href="https://www.mungchiemb.co.kr/goods/goods_view.php?goodsNo=1000000396" target="_blank" rel="noopener">자수 와펜 업체</a></td><td>와펜</td><td>자수 와펜</td><td class="num">20~100장</td><td class="num">1,100~1,200/장</td><td><b>약 5만 원</b></td><td>✕</td></tr>
+      <tr class="coco"><td><b>코코차차 기본</b></td><td>핸드메이드</td><td>지퍼파우치(소) + 기존 도안 + 로고 라벨</td><td class="num">확인 필요</td><td class="num">9,000 + 라벨</td><td>0 (라벨 방식에 따라)</td><td>✅</td></tr>
+      <tr class="coco"><td><b>코코차차 맞춤 인쇄</b></td><td>핸드메이드</td><td>지퍼파우치(소) + 고객 로고 판</td><td class="num">확인 필요</td><td class="num">약 18,500</td><td>9만 원</td><td>✅</td></tr>
+    </tbody>
+  </table></div>
+  <div class="takeaways">
+    <div class="take"><b>맞춤 인쇄는 2~4배</b>같은 10개면 온라인 파우치는 약 5천~1만 원, 코코차차 맞춤 인쇄는 약 1.85만 원이다. 기본 메뉴(기존 도안 + 로고 라벨)를 앞에 둔다.</div>
+    <div class="take hot"><b>와펜도 판비가 있다</b>자수 와펜은 판비 약 5만 원, 최소 20~100장이 흔하다. "판비 0"을 지키려면 우븐 라벨·인쇄 라벨·열전사를 먼저 검토한다.</div>
+    <div class="take"><b>단체는 출강 공방이 채우고 있다</b>원도심 공방 6곳이 학교·기관 출강이 주력이다. 코코차차의 단체 접점은 "체험한 조합 그대로 팀 굿즈 10개"에 둔다.</div>
+  </div>
+</section>
+
+<section id="brand">
+  <div class="sec-head">
+    <div class="eyebrow">결론 · 팀 회의에서 고를 것</div>
+    <h2>브랜드 한 문장 후보</h2>
+    <p>기존 "바다의 조각을 패브릭에 담다. 또 다른 섬"과 팀 제안 "조합·자국"을 한 문장으로 묶었다.</p>
+  </div>
+  <div class="cands">
+    <div class="cand"><div class="eyebrow">안 1</div><div class="q">또 다른 섬에서 고르는 나만의 바다 조각</div><div class="w">기존 언어 + 고르는 경험. 초안 02 콘셉트를 그대로 잇는다.</div></div>
+    <div class="cand"><div class="eyebrow">안 2</div><div class="q">고르고, 끼우고, 들고 나가는 바다 조각</div><div class="w">워크인 20분의 동작 그대로. 동선 위 손님에게 바로 읽힌다.</div></div>
+    <div class="cand"><div class="eyebrow">안 3</div><div class="q">쓸수록 자국이 남는, 내가 고른 바다 조각</div><div class="w">원단 스토리 + 고르는 경험. "낡아 보인다"는 오해를 막는 설명과 이어진다.</div></div>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>접점</th><th>바꿀 것</th><th>근거</th></tr></thead>
+    <tbody>
+      <tr><td>네이버 플레이스 설정</td><td>업종(현재 '가방제조') 재검토, 리뷰 받기 켜기, 사진 20장 이상, 클래스 예약 상품 등록</td><td>현재 사진 3장, 리뷰·예약 탭 없음</td></tr>
+      <tr><td>네이버 플레이스·카카오맵 소개 첫 줄</td><td>"동문시장·공항 근처 · 예약 없이 20분 · 나만의 가방"</td><td>후기 키워드 1위가 동선. 현재 소개에는 위치·체험 정보 없음</td></tr>
+      <tr><td>입간판·건물 입구 표식</td><td>거북이 + "예약 없이 20분" 한 줄</td><td>워크인임을 밖에서 알려야 들어온다</td></tr>
+      <tr><td>조합 바 메뉴판 POP</td><td>본체 × 끈 × 꾸밈 + 추천 조합 3종(정돈된 톤 포함)</td><td>고르는 재미, 레퍼런스 톤</td></tr>
+      <tr><td>원단 태그</td><td>"하얀 자국은 햇빛에 바랜 흔적, 쓸수록 더 남아요"</td><td>설문 "더럽다·재활용·벼룩시장 같다"</td></tr>
+      <tr><td>후기 장치</td><td>완성품 사진 존 + 후기 QR(다음 방문 혜택)</td><td>체험·소품샵 모두 블로그가 주 정보원</td></tr>
+      <tr><td>단체 소개 자료</td><td>"체험한 조합 그대로 팀 굿즈 10개부터"</td><td>출강 공방과 겹치지 않게</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="limits">
+  <div class="sec-head">
+    <div class="eyebrow">한계와 남은 결정</div>
+    <h2>이 맵으로 말할 수 있는 것의 범위</h2>
+  </div>
+  <ul class="plain note">
+    <li>점 위치는 공개 정보(후기·소개)를 보고 팀이 매긴 1~5점이다. 고객 인식 조사가 아니다.</li>
+    <li>후기 코딩은 카카오 570건 + 네이버 최신 100건(5곳)이다. 네이버 나머지 16곳은 리뷰 수·키워드만 봤다. <b>미야우먼트 가격, 공덕방·미야우먼트의 워크인 여부는 확인하지 못했다.</b></li>
+    <li>블로그는 여행자가 주로, 만족한 사람이 주로 쓴다. 키워드 집계는 단어 매칭이라 문맥을 놓칠 수 있다.</li>
+    <li>설문 15건은 지인 중심 도민 표본이라 경향의 단서로만 쓴다.</li>
+    <li>팀 회의에서 정할 것: 브랜드 한 문장, A 클래스를 확장판으로 낮출지, 정돈된 톤의 추천 조합을 제안할지, 중간 발표에 맵을 넣을지.</li>
+  </ul>
+</section>
+</div>
+
+<script>
+const M=[
+ {n:'B',name:'코코차차 B 조합 바',x:1,y:1,p:13500,c:'coco',d:'본체·끈·꾸밈 골라 끼우기 · 20~30분 · 1.2~1.5만 원(안)'},
+ {n:'A',name:'코코차차 A 실크스크린',x:2.5,y:4,p:22500,c:'coco',d:'기존 판 찍기 + 조합 · 2~2.5만 원(안)'},
+ {n:1,name:'미야우먼트',x:1.5,y:2,p:null,d:'건입동 · 볼펜 꾸미기·키캡 · "상시 체험"(워크인 미확인) · 네이버 리뷰 176'},
+ {n:2,name:'노꼬메공방',x:3,y:5,p:40000,d:'건입동 · 레진 제주바다 트레이 · 4만 원 · 30~60분 · 예약자만'},
+ {n:3,name:'모아이',x:4.5,y:5,p:null,d:'일도이동 · 도자 물레·실버 · 100% 예약제 · 가격 변동'},
+ {n:4,name:'멜로우니스 향수공방',x:2.5,y:5,p:54000,d:'이도일동 · 조향 · 4.9~6만 원 · 약 60분 · 예약금'},
+ {n:5,name:'모들미술 취미화실',x:4,y:4,p:35000,d:'일도일동 · 그림 원데이 · 3.5만 원 · 60~120분'},
+ {n:6,name:'꿈이다공방',x:3.5,y:4,p:20000,d:'삼도이동 · 모루·양말목·테라리움 · 1~8만 원(양말목 2만) · 출강 중심'},
+ {n:7,name:'공덕방 (신규)',x:2,y:3,p:20000,d:'동문시장 청년몰 지하 · 손그림 키링 1.5만 · 열전사 티셔츠 커스텀 2.5만 · 워크인 미확인(세로 위치 임시)'},
+ {n:8,name:'무드랜드',x:3,y:5,p:47500,d:'노형동 · 캔들 제작 4.5~5만 원 · 예약제·한 팀씩'},
+ {n:9,name:'블리스앤',x:3,y:5,p:35000,d:'아라동 · 석고방향제·글라스아트 3~4만 원 · 60~90분 · 예약제'},
+ {n:10,name:'아트글로리',x:3,y:5,p:35000,d:'이도이동 · 비즈·매듭 3.5만 원~ · 60분 · 예약제'},
+ {n:11,name:'달달핸디',x:4.5,y:4.5,p:40000,d:'이도이동 · 재봉틀 입문 4만 원 · 120분'},
+ {n:12,name:'제주소품샵 올망',x:2.5,y:2,p:null,d:'애월 · 소품샵 + 자개모빌 체험 · 현행 조건 미확인'},
+ {n:13,name:'알제이 체험스튜디오',x:3,y:5,p:30000,d:'애월 · 나무 키링 3만 원 · 도마 4.3만~ · 사전 예약제'},
+ {n:14,name:'레더한가죽공방',x:4.5,y:4.5,p:35000,d:'함덕 · 가죽 키링 2.8~4만 원 · 60~150분'},
+ {n:15,name:'핸드아트제주',x:4,y:4.5,p:null,d:'함덕 · 가죽·목공 (벤치마킹)'},
+ {n:16,name:'초담',x:4,y:5,p:50000,d:'성읍 · 천아트 · 5만 원'},
+ {n:17,name:'소길차롱',x:2.5,y:4,p:10000,d:'애월 · 풋감염색 손수건 · 1만 원'},
+ {n:18,name:'작은작업실 작은실',x:4.5,y:5,p:40000,d:'서귀포 · 북커버(미싱) · 4만 원'},
+ {n:19,name:'바다야',x:2.5,y:4,p:30000,d:'서귀포 · 해녀 테왁 키링 · 3만 원'},
+ {n:20,name:'몸냥공작소',x:4.5,y:5,p:60000,d:'애월 · 인형(미싱) · 6만 원'},
+ {n:21,name:'가죽장이야우',x:4.5,y:5,p:45000,d:'서귀포 · 카드지갑 · 4.5만 원'},
+ {n:22,name:'홀리레더',x:4.5,y:5,p:63000,d:'제주시 화북 · 동글지갑 · 6.3만 원'},
+ {n:23,name:'수마노가죽공방 (신규)',x:4.5,y:4.5,p:32500,d:'관덕로 · 가죽 키링 3~3.5만 원 · 1:1'}
+];
+const S=[
+ {n:'C',name:'코코차차 (현재)',x:5,y:3.5,r:0,c:'coco',d:'원색 패브릭 가방·파우치 · 네이버 리뷰 탭 없음 · 카카오 후기 0'},
+ {n:1,name:'섬조각',x:4.5,y:3.5,r:10003,d:'키티 키링·제주 한정 · 네이버 방문자 10,003 · 설문 회상 2회'},
+ {n:2,name:'우디버디',x:4.5,y:3,r:4309,d:'키티·말랑이·키캡 · 네이버 4,309'},
+ {n:3,name:'호끄만거',x:3.5,y:3.5,r:478,d:'자체 제작·직접 찍은 제주 엽서 · 네이버 478'},
+ {n:4,name:'아꼬미상점',x:4.5,y:1.5,r:129,d:'산리오·몬치치·빈티지 + 자체 패브릭 · 네이버 129'},
+ {n:5,name:'플라네하우스',x:2,y:1.5,r:3550,d:'빈티지·엔틱·액세서리 · 네이버 3,550 · 설문 회상 2회'},
+ {n:6,name:'슬로모',x:1.5,y:1.5,r:139,d:'그릇·홈카페 리빙 · 네이버 139'},
+ {n:7,name:'클래식문구사',x:1.5,y:2,r:264,d:'문구·엽서·제주 잡지 · 네이버 264'},
+ {n:8,name:'오브젝트 제주점',x:3.5,y:2.5,r:null,d:'캐릭터 문구·제주 한정판 (구좌) · 네이버 미조사'},
+ {n:9,name:'모아이',x:2,y:1.5,r:131,d:'자체 유약 도자기·실버 · 네이버 131'},
+ {n:10,name:'무료히',x:1,y:1.5,r:null,d:'차분한 도자기·빈티지 · 네이버 미조사'},
+ {n:11,name:'고고동동',x:3.5,y:5,r:null,d:'제주 캐릭터 인형(귤·동백·유채) · 네이버 미조사'},
+ {n:12,name:'사름',x:1,y:4,r:null,d:'감물 원단 소품 (같은 공간)'},
+ {n:'R1',name:'아에이오우',x:3,y:1,r:null,c:'ref',d:'패턴 파우치 1.75~2.9만 원 · 올리브·레몬·인디고, 꽃·체크'},
+ {n:'R2',name:'FAFF',x:3.5,y:1,r:null,c:'ref',d:'천 조각 소품 · "Play with colors!"'}
+];
+const NS='http://www.w3.org/2000/svg';
+function el(t,a,p){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function spread(pts){const seen={};pts.forEach(p=>{const k=p.x+','+p.y;const i=seen[k]=(seen[k]||0)+1;p._i=i-1});pts.forEach(p=>{const tot=pts.filter(q=>q.x===p.x&&q.y===p.y).length;if(tot>1){const a=(p._i/tot)*Math.PI*2-Math.PI/2,s=tot>4?0.34:tot>2?0.26:0.18;p._dx=Math.cos(a)*s;p._dy=Math.sin(a)*s}else{p._dx=0;p._dy=0}})}
+function scatter(id,keyId,pts,opt){
+ spread(pts);
+ const W=640,H=520,L=54,R=18,T=18,B=58;
+ const sx=v=>L+(v-0.5)/5*(W-L-R), sy=v=>H-B-(v-0.5)/5*(H-T-B);
+ const host=document.getElementById(id);
+ const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':opt.aria},host);
+ if(opt.zone){const z=opt.zone;el('rect',{x:sx(z[0]),y:sy(z[3]),width:sx(z[2])-sx(z[0]),height:sy(z[1])-sy(z[3]),fill:'var(--zone)',rx:6},svg);
+   const t=el('text',{x:sx(z[0])+8,y:sy(z[3])+18,fill:'var(--ink-2)','font-size':12,'font-family':'var(--f-body)'},svg);t.textContent=opt.zoneLabel}
+ for(let v=1;v<=5;v++){el('line',{x1:sx(v),x2:sx(v),y1:sy(0.5),y2:sy(5.5),stroke:'var(--grid)','stroke-width':1},svg);el('line',{x1:sx(0.5),x2:sx(5.5),y1:sy(v),y2:sy(v),stroke:'var(--grid)','stroke-width':1},svg)}
+ el('line',{x1:sx(0.5),x2:sx(5.5),y1:sy(0.5),y2:sy(0.5),stroke:'var(--ink-3)','stroke-width':1},svg);
+ el('line',{x1:sx(0.5),x2:sx(0.5),y1:sy(0.5),y2:sy(5.5),stroke:'var(--ink-3)','stroke-width':1},svg);
+ const ax=(x,y,txt,anchor,rot)=>{const t=el('text',{x,y,fill:'var(--ink-2)','font-size':12,'text-anchor':anchor,'font-family':'var(--f-body)'},svg);if(rot)t.setAttribute('transform',`rotate(-90 ${x} ${y})`);t.textContent=txt};
+ ax(sx(0.6),H-B+22,opt.xl[0],'start');ax(sx(5.4),H-B+22,opt.xl[1],'end');
+ ax((sx(0.5)+sx(5.5))/2,H-12,opt.xt,'middle');
+ ax(22,sy(0.6),opt.yl[0],'start',true);ax(22,sy(5.4),opt.yl[1],'end',true);
+ const tip=document.createElement('div');tip.className='tip';tip.hidden=true;host.appendChild(tip);
+ const key=document.getElementById(keyId);const nodes={};
+ pts.forEach(p=>{
+  const col=p.c==='coco'?'var(--s-coco)':p.c==='ref'?'var(--s-ref)':'var(--s-comp)';
+  const r=opt.radius(p);const cx=sx(p.x+p._dx),cy=sy(p.y+p._dy);
+  const g=el('g',{tabindex:0,role:'button','aria-label':p.name+' · '+p.d},svg);
+  el('circle',{cx,cy,r:r+2,fill:'var(--surface)'},g);
+  const hollow=opt.hollow(p);
+  const c=el('circle',{cx,cy,r,fill:hollow?'var(--surface)':col,stroke:col,'stroke-width':hollow?2:0},g);
+  const t=el('text',{x:cx,y:cy+4,'text-anchor':'middle','font-size':String(p.n).length>1?10:11,'font-family':'var(--f-mono)','font-weight':500,fill:hollow?'var(--ink)':'#ffffff'},g);t.textContent=p.n;
+  if(p.c==='coco'){const lt=el('text',{x:cx,y:cy+r+16,'text-anchor':'middle','font-size':12,'font-weight':600,fill:'var(--ink)','font-family':'var(--f-body)',stroke:'var(--surface)','stroke-width':4,'paint-order':'stroke'},g);lt.textContent=p.name}
+  const show=e=>{const b=host.getBoundingClientRect();const pt=svg.getBoundingClientRect();tip.innerHTML='<b>'+p.name+'</b><br>'+p.d;tip.hidden=false;const px=(cx/W)*pt.width+(pt.left-b.left),py=(cy/H)*pt.height+(pt.top-b.top);tip.style.left=Math.min(px+12,b.width-250)+'px';tip.style.top=(py+12)+'px';nodes[p.n].li.classList.add('on')};
+  const hide=()=>{tip.hidden=true;nodes[p.n].li.classList.remove('on')};
+  g.addEventListener('pointerenter',show);g.addEventListener('pointerleave',hide);g.addEventListener('focus',show);g.addEventListener('blur',hide);
+  const li=document.createElement('li');li.innerHTML=`<span class="n">${p.n}</span><span>${p.name}</span><span class="v">${opt.val(p)}</span>`;key.appendChild(li);
+  li.addEventListener('pointerenter',()=>{c.setAttribute('stroke','var(--ink)');c.setAttribute('stroke-width',3);li.classList.add('on')});
+  li.addEventListener('pointerleave',()=>{c.setAttribute('stroke',col);c.setAttribute('stroke-width',hollow?2:0);li.classList.remove('on')});
+  nodes[p.n]={li,c};
+ });
+}
+scatter('mapM','keyM',M,{aria:'제주 만들기 체험 포지셔닝 맵',xl:['골라서 조합','기술 배워 제작'],xt:'손이 하는 일',yl:['지나가다 바로','미리 예약'],
+ zone:[0.5,0.5,2.2,2.6],zoneLabel:'빈자리: 워크인 조합',
+ radius:p=>p.p?Math.max(9,Math.sqrt(p.p/1000)*2.3):10,hollow:p=>!p.p,
+ val:p=>p.p?(p.p/10000).toFixed(1).replace('.0','')+'만':'—'});
+scatter('mapS','keyS',S,{aria:'원도심 소품·패브릭 브랜드 포지셔닝 맵',xl:['차분·내추럴','원색·키치'],xt:'미감',yl:['범용','제주 전면'],
+ radius:p=>p.r?Math.max(9,6+4.5*Math.log10(p.r+1)):10,hollow:p=>p.r===null||p.r===0,
+ val:p=>p.c==='ref'?'레퍼런스':p.r===null?'—':p.r===0?'없음':p.r.toLocaleString()});
+
+// group fit table
+const FIT=[['원하는 것 ↔ 줄 수 있는 것',2,3,2,2,2],['운영 제약(무인·1인·생산)',3,3,2,2,1],['겨울(11~2월)에도 있나',1,2,3,1,3],['지하에서 닿나(검색·예약)',1,3,2,3,2],['기업 목적(2030 여성·B2B·6:4)',2,3,3,1,3],['대표 동기(만드는 장면·공간)',1,3,2,2,2],['근거의 힘',3,2,1,3,2]];
+(function(){const tb=document.getElementById('fitBody');const lab=['낮음','보통','높음'];
+ FIT.forEach(r=>{const tr=document.createElement('tr');tr.innerHTML='<td>'+r[0]+'</td>'+r.slice(1).map((v,i)=>`<td class="${i===1?'g2':''}" aria-label="${lab[v-1]}"><span class="pips">${[1,2,3].map(k=>`<i class="${k<=v?'f':''}"></i>`).join('')}</span></td>`).join('');tb.appendChild(tr)})})();
+
+// review keyword bars
+const KW=[['동선: 공항·동문시장·마지막 날',21,53],['구경·분위기',20,46],['귀여움',13,35],['아이·가족 동행',28,2],['선물·기념품',8,23],['나만의 결과물·추억',19,4],['커플·데이트',19,0],['예약',18,1],['유니크·"흔한 것 말고"',3,14],['제주다움',13,10],['실내·궂은 날',10,1],['고르는 재미',9,5]];
+(function(){const host=document.getElementById('bars');const W=760,rowH=40,L=220,R=56,T=6;const H=T+KW.length*rowH+24;
+ const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':'후기 키워드 비율'},host);const sx=v=>L+v/60*(W-L-R);
+ [0,20,40,60].forEach(v=>{el('line',{x1:sx(v),x2:sx(v),y1:T,y2:H-22,stroke:'var(--grid)'},svg);const t=el('text',{x:sx(v),y:H-6,'text-anchor':'middle','font-size':11,fill:'var(--ink-3)','font-family':'var(--f-mono)'},svg);t.textContent=v+'%'});
+ const tip=document.createElement('div');tip.className='tip';tip.hidden=true;host.appendChild(tip);
+ KW.forEach((k,i)=>{const y=T+i*rowH;const lab=el('text',{x:L-10,y:y+22,'text-anchor':'end','font-size':13,fill:'var(--ink)','font-family':'var(--f-body)'},svg);lab.textContent=k[0];
+  [[k[1],'var(--s-comp)','체험 공방'],[k[2],'var(--s-ref)','소품샵']].forEach((s,j)=>{const by=y+6+j*15;const w=Math.max(2,sx(s[0])-L);
+   const g=el('g',{},svg);el('rect',{x:L,y:by-2,width:sx(60)-L,height:16,fill:'transparent'},g);el('rect',{x:L,y:by,width:w,height:12,rx:3,fill:s[1]},g);
+   const t=el('text',{x:L+w+6,y:by+10,'font-size':11,fill:'var(--ink-2)','font-family':'var(--f-mono)'},g);t.textContent=s[0]+'%';
+   g.addEventListener('pointerenter',e=>{const b=host.getBoundingClientRect(),pt=svg.getBoundingClientRect();tip.innerHTML='<b>'+k[0]+'</b><br>'+s[2]+' '+s[0]+'%';tip.hidden=false;tip.style.left=Math.min(((L+w)/W)*pt.width+12,b.width-200)+'px';tip.style.top=((by)/H)*pt.height+'px'});
+   g.addEventListener('pointerleave',()=>tip.hidden=true)})});
+})();
+
+// price bars
+const PR=[['마플 코튼 파우치(중)',4830,'comp'],['레드프린팅 광목 파우치',8800,'comp'],['db print 실크 에코백 1도',9000,'comp'],['코코차차 기본 (파우치 + 로고 라벨)',9000,'coco','+ 라벨 비용'],['마플 풀프린팅 캔버스 파우치(중)',17220,'comp'],['코코차차 맞춤 인쇄 (1회 10개)',18500,'coco','판비 9만 원 포함']];
+(function(){const host=document.getElementById('price');const W=760,rowH=34,L=250,R=110,T=6;const H=T+PR.length*rowH+24;
+ const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':'10개 주문 시 개당 가격 비교'},host);const sx=v=>L+v/20000*(W-L-R);
+ [0,5000,10000,15000,20000].forEach(v=>{el('line',{x1:sx(v),x2:sx(v),y1:T,y2:H-22,stroke:'var(--grid)'},svg);const t=el('text',{x:sx(v),y:H-6,'text-anchor':'middle','font-size':11,fill:'var(--ink-3)','font-family':'var(--f-mono)'},svg);t.textContent=(v/1000)+'천'});
+ PR.forEach((p,i)=>{const y=T+i*rowH;const lab=el('text',{x:L-10,y:y+19,'text-anchor':'end','font-size':13,fill:'var(--ink)','font-weight':p[2]==='coco'?600:400,'font-family':'var(--f-body)'},svg);lab.textContent=p[0];
+  const w=sx(p[1])-L;el('rect',{x:L,y:y+8,width:w,height:14,rx:3,fill:p[2]==='coco'?'var(--s-coco)':'var(--s-comp)'},svg);
+  const t=el('text',{x:L+w+6,y:y+19,'font-size':11,fill:'var(--ink-2)','font-family':'var(--f-mono)'},svg);t.textContent=p[1].toLocaleString()+'원'+(p[3]?' '+p[3]:'')});
+})();
+</script>
+
+</body></html>
