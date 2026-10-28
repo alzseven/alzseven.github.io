@@ -1,0 +1,71 @@
+{
+  "purpose": "기존 문서가 지정한 글꼴의 로컬 동봉. 글꼴 데이터 변경 없음.",
+  "paperlogy_official": "https://freesentation.blog/paperlogyfont",
+  "pretendard_official": "https://github.com/orioncactus/pretendard/tree/v1.3.9",
+  "licences": {
+    "Paperlogy-LICENSE.txt": "https://www.designptn.com/wp-content/uploads/2024/08/OFL-license.txt",
+    "Pretendard-LICENSE.txt": "https://raw.githubusercontent.com/orioncactus/pretendard/refs/tags/v1.3.9/LICENSE"
+  },
+  "assets": [
+    {
+      "file": "Paperlogy-1Thin.woff2",
+      "bytes": 160076,
+      "sha256": "b7c08d2177b7658394579da16ee843b32bb9e53b1284870779c55ab11c10b9d5",
+      "source": "https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2"
+    },
+    {
+      "file": "Paperlogy-2ExtraLight.woff2",
+      "bytes": 156464,
+      "sha256": "8bd6479eed48abd3052b7f4f259b81896ee27b1e2aaf1eb04524393c9e50466e",
+      "source": "https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2"
+    },
+    {
+      "file": "Paperlogy-3Light.woff2",
+      "bytes": 161500,
+      "sha256": "dfb9ddf9f03c66985550413cfe68c966819379acbd72ec1d058af3c19d6edbf2",
+      "source": "https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2"
+    },
+    {
+      "file": "Paperlogy-4Regular.woff2",
+      "bytes": 160808,
+      "sha256": "ad469e33f2ee5f96ba7f3e5df09350daac0420c6a60264119da201eb1bbbfae9",
+      "source": "https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2"
+    },
+    {
+      "file": "Paperlogy-5Medium.woff2",
+      "bytes": 161144,
+      "sha256": "0fb26c0c6e4d446354570415f03987c4a5bda1895a38f5547e3878d769acecc0",
+      "source": "https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2"
+    },
+    {
+      "file": "Paperlogy-6SemiBold.woff2",
+      "bytes": 160464,
+      "sha256": "b1b59a791202385f16458b36b3a4bdc7e5accafa1cd8eaee1dfbb7e94cc9e8cb",
+      "source": "https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2"
+    },
+    {
+      "file": "Paperlogy-7Bold.woff2",
+      "bytes": 161384,
+      "sha256": "390de733d213ad164d4089dbc93b8baf49b9bec8d33f49edcb06b60ab014d7cf",
+      "source": "https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2"
+    },
+    {
+      "file": "Paperlogy-8ExtraBold.woff2",
+      "bytes": 156112,
+      "sha256": "329c646cc0575dba1a558d34280cab70c57fe811c9aa9542136105e9d3132d5b",
+      "source": "https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2"
+    },
+    {
+      "file": "Paperlogy-9Black.woff2",
+      "bytes": 164128,
+      "sha256": "ec848b871330702aa83006e8b6223eb776632f13a8c87b07a4022843d8df6797",
+      "source": "https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2"
+    },
+    {
+      "file": "PretendardVariable.woff2",
+      "bytes": 2057688,
+      "sha256": "9599f12fd42fc0bce1cd50b47a0c022e108d7aa64dd0d1bb0ed44f3282d900b4",
+      "source": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/variable/woff2/PretendardVariable.woff2"
+    }
+  ]
+}
