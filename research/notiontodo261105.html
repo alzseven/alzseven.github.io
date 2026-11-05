@@ -257,6 +257,13 @@ body.locked{overflow:hidden}
 .mbar i{display:block;height:100%;background:var(--accent)}
 @media (max-width:680px){.pair{gap:8px}.pair figure{padding:6px}}
 
+.scope{margin-top:12px;background:var(--warn-soft);border-radius:10px;padding:10px 14px;font-size:14px;color:var(--text)}
+details.hint summary{cursor:pointer;font-weight:700;font-size:14.5px}
+details.hint[open] summary{margin-bottom:6px}
+details.hint summary .muted{font-weight:400;font-size:13px}
+.outside li{margin:6px 0}
+.scenes{margin:6px 0 0;padding-left:18px}
+
 @media (max-width:900px){
   .ov{grid-template-columns:repeat(2,1fr)}
   .ov .ovc:last-child{grid-column:1/-1}
@@ -289,6 +296,7 @@ body.locked{overflow:hidden}
     <a href="#t3">3 검색 노출</a>
     <a href="#t4">4 유사업체</a>
     <a href="#t5">5 후기</a>
+    <a href="#outside">남은 일</a>
     <a href="#meeting">회의</a>
     <a href="#faq">질문</a>
     <a href="#library">자료실</a>
@@ -302,6 +310,7 @@ body.locked{overflow:hidden}
   <div class="eyebrow">6팀 · 알제이웍스 네이버 예약 활성화</div>
   <h1>노션 할일 5개 — 무엇을, 왜, 어디까지</h1>
   <p class="sub">할일마다 <b>왜 하는지</b>, <b>이미 알고 있는 것</b>, <b>비어 있는 것</b>, <b>맡은 사람이 할 일</b>을 모았습니다. 초록 칸은 다시 조사하지 않아도 되는 내용이고, 주황 테두리 칸만 채우면 됩니다.</p>
+  <p class="scope"><b>이 페이지의 범위:</b> 팀원이 <b>지금 보충할 일</b> 안내예요. 프로젝트 전체 요구사항이나 완료 기준이 아니에요. 그 밖에 남은 일은 <a href="#outside">이 페이지 밖에 남은 일</a>에 있어요.</p>
   <div class="meta"><span>기준일 2026-11-05 (밤 폰 조사·검색량 반영)</span><span>작성 6팀 기록자</span><span>체크 표시는 이 기기에만 저장돼요</span></div>
 </header>
 
@@ -319,15 +328,15 @@ body.locked{overflow:hidden}
       <div class="card accent">
         <h3>지금의 제안 한 줄</h3>
         <p style="color:var(--text)">손님이 <b>고르기 전에 묻는 값</b>(나이·시간·1인 1체험·귤밭 위치)과 <b>와 봐야 아는 장점</b>(깨끗한 오픈 주방, 일행이 각자 다른 체험, 여유)을 페이지 맨 위로 올리고, <b>겨울은 감귤</b>로 시작한다.</p>
-        <p style="margin-top:8px">노션 할일 5개는 이 제안의 근거를 사람 눈으로 확인해, 발표에서 "직접 보니"라고 말할 수 있게 하는 일이에요.</p>
+        <p style="margin-top:8px">노션 할일 5개는 <b>이 제안이 맞는지 확인하고, 다르면 고치기 위한 조사</b>예요. 발표에서 "직접 보니"라고 말할 수 있게 하는 목적도 있어요.</p>
       </div>
     </div>
 
-    <h3 style="margin-top:22px">네이버 안의 알제이 가게 세 곳</h3>
+    <h3 style="margin-top:22px">네이버 안의 알제이 — 플레이스 2개, 예약 서비스 최소 3개</h3>
     <div class="abc">
       <div class="card accent"><div class="l">A</div><div class="nm">알제이웍스 · 선결제</div><p><b>이번 제안에서 바꾸는 곳</b> (팀장님 면담 11/4)</p><div class="tel">☎ 0507-1464-0838</div></div>
       <div class="card"><div class="l" style="color:var(--muted)">B</div><div class="nm">알제이</div><p>같은 공방의 다른 플레이스. 분명한 오류만 고치고 <b>비교 기준</b>으로 둠</p><div class="tel">☎ 0507-1369-1320</div></div>
-      <div class="card"><div class="l" style="color:var(--muted)">C</div><div class="nm">프로그램</div><p>네이버 검색의 '프로그램' 칸에 따로 올라간 상품 9종</p><div class="tel">&nbsp;</div></div>
+      <div class="card"><div class="l" style="color:var(--muted)">C</div><div class="nm">프로그램</div><p>네이버 검색의 '프로그램' 칸에 따로 올라간 상품 9종. 플레이스가 아니라 따로 연결된 예약 서비스</p><div class="tel">&nbsp;</div></div>
     </div>
     <p class="small" style="margin-top:8px">"알제이"로 검색하면 A와 B가 같이 나와요. <b>전화번호로 구분하세요.</b></p>
 
@@ -337,7 +346,7 @@ body.locked{overflow:hidden}
       <div class="ar">→</div>
       <div class="st me"><span class="tag accent">지금</span><b style="margin-top:6px">② 사람이 직접 보고 판단</b><span>맡은 사람이 할 일</span></div>
       <div class="ar">→</div>
-      <div class="st"><span class="tag warn">요청 중</span><b style="margin-top:6px">③ 기업 숫자로 확인</b><span>스마트플레이스 통계</span></div>
+      <div class="st"><span class="tag warn">발송 전</span><b style="margin-top:6px">③ 기업 숫자로 확인</b><span>스마트플레이스 통계 (기업 확인 목록에 넣어 둠)</span></div>
     </div>
 
     <h3 style="margin-top:22px">모두 지킬 것</h3>
@@ -357,11 +366,11 @@ body.locked{overflow:hidden}
   <div class="finds">
     <a class="fd" href="#t3">
       <div class="fk">검색 노출 · 할일 3</div>
-      <h3>손님이 쓰는 검색어에 알제이가 안 나와요</h3>
+      <h3>조사한 검색어 6개의 장소 목록에 A·B가 없었어요</h3>
       <div class="big">0<span>/ 24번</span></div>
       <div class="cells" role="img" aria-label="24번 검색 중 장소 목록에 A·B가 나온 횟수 0번"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-      <p class="cap">팀장님이 꼽은 검색어 6개를 PC로 12번, 폰으로 12번(위치 없음·애월) 검색했어요. 칸 하나가 검색 한 번이고, 장소 목록에 A·B가 나온 칸은 없어요.</p>
-      <p class="so"><b>그래서</b>화면을 고쳐도 손님이 먼저 찾아와야 봐요. 검색에서 보이는 길도 같이 봐야 해요.</p>
+      <p class="cap">팀장님이 꼽은 검색어 6개를 PC로 12번, 폰으로 12번(위치 없음·애월) 검색했어요. 칸 하나가 검색 한 번이고, 장소 목록에 A·B가 나온 칸은 없어요. 쇼핑 영역(PC)과 프로그램 칸(애월 위치)에는 나온 적 있어요.</p>
+      <p class="so"><b>그래서</b>화면을 고쳐도 손님이 먼저 찾아와야 봐요. 손님이 실제로 어떤 말로 찾는지는 "처음부터 찾기"로 따로 봐요.</p>
     </a>
     <a class="fd" href="#t3">
       <div class="fk">월 검색량 · 할일 3</div>
@@ -392,7 +401,7 @@ body.locked{overflow:hidden}
       <div class="big">16<span>/ 1,070개</span></div>
       <div class="pb" role="img" aria-label="후기 1,070개 중 불만 16건, 약 1.5%"><i></i></div>
       <p class="cap">불만이 든 후기 16건: 체험이 힘듦 6 · 시간 모자람 5 · 찾아가기 2 · 예약 헤맴 2 · 기타 2 (한 후기가 두 가지에 들 수 있어요). 직원·청결·맛·가격 불만은 0건이에요.</p>
-      <p class="so"><b>그래서</b>문제는 체험 자체보다 "고르기 전 정보" 쪽일 가능성이 커요. 다만 후기는 이미 와서 만족한 사람의 말이에요.</p>
+      <p class="so"><b>그래서</b>후기 속 불만은 적어요. 하지만 <b>예약 전에 왜 안 하는지는 아직 몰라요.</b> 후기는 이미 와서 만족한 사람의 말이고, 본문도 앞 20어절뿐이에요.</p>
     </a>
     <a class="fd" href="#t4">
       <div class="fk">비슷한 업체 · 할일 4</div>
@@ -427,7 +436,7 @@ body.locked{overflow:hidden}
           <li><b>유입 검색어 6개:</b> 제주 애월 가볼만한 곳 · 제주 아이들과 가볼만한 곳 · 10월 가볼만한 곳 · 11월 여행 · 제주 이색 체험 · 제주 실내 체험</li>
           <li><b>주력 체험:</b> 성인은 도마·인센스·샹그리아/뱅쇼, 어린이는 피자·오메기·키링/도장. 패키지와 단품이 반반</li>
           <li><b>가장 많이 받는 질문:</b> 1인 1체험인지 · 미취학 아이 체험비 · 다 다른 체험을 골라도 되는지 · 다 같이 모여 시작하는지</li>
-          <li><b>안내했으면 줄었을 문의:</b> 피자 2인 1판 · 동반 입장 무료 · 귤밭이 다른 장소(차로 3분)</li>
+          <li><b>안내했으면 줄었을 문의:</b> 피자 2인 1판 · 동반 입장 무료 · 귤밭이 다른 장소(차로 약 3분·4~5분, 회사 확인 전)</li>
           <li><b>와서야 아는 장점:</b> 시간 제한 없는 여유 · 개수대까지 열린 주방 · 한 공간에서 다른 체험 · 공항과 가까움</li>
           <li><b>노쇼:</b> A는 선결제라 없음, B는 있음. 취소 이유는 날씨·비행기 연착·아이가 아픔</li>
         </ul>
@@ -441,8 +450,8 @@ body.locked{overflow:hidden}
         </ul>
       </div>
     </div>
-    <div class="hint">
-      <h3>예약해 보기 길잡이 — 폰 조사(11/5 밤)에서 미리 찾아 둔 것</h3>
+    <details class="hint">
+      <summary>해 본 뒤에 펼쳐 보기 — 폰 조사(11/5 밤)에서 찾아 둔 위치 <span class="muted">· 미리 보면 "찾을 수 있었나"를 제대로 잴 수 없어요</span></summary>
       <ul>
         <li><b>동반 무료:</b> 상품 상세를 한참 내린 "안내" 칸에 "체험 인원 외 무료 동행 가능"이 있어요. 맨 위에는 없어요</li>
         <li><b>1인 1체험 · 일행끼리 진행:</b> A 정보 탭과 첫 상품에서 문구를 못 찾았어요</li>
@@ -450,14 +459,16 @@ body.locked{overflow:hidden}
         <li><b>환불:</b> 정보 탭 소개 끝과 상품 안내 칸에 "당일 취소·노쇼 환불 불가". 결제 직전 화면에도 나오는지 봐 주세요</li>
         <li><b>가격:</b> A는 예약 목록과 상품 첫 화면에 가격이 없어요. 날짜·인원을 고르면 나오는지 봐 주세요</li>
       </ul>
-      <h3 style="margin-top:12px">발표용 5줄 후보 — 이 중 5개를 고르면 돼요</h3>
+    </details>
+    <div class="hint">
+      <h3>발표용 5줄 후보 — 이 중 5개를 고르면 돼요</h3>
       <ol class="small" style="margin:4px 0 0">
         <li>예약은 스마트플레이스가 약 80%예요</li>
         <li>손님은 도외 관광객이 약 80%예요</li>
         <li>A는 선결제라 노쇼가 없고, B는 노쇼가 있어요</li>
         <li>예약 전 가장 많은 질문은 1인 1체험·미취학 아이 체험비·각자 다른 체험·다 같이 시작하는지예요</li>
         <li>체험자 기준 1인 1체험이고 동반 입장은 무료인데, 안내에 없어서 문의가 생겨요</li>
-        <li>피자 2인 1판, 귤밭이 다른 장소(차로 3분)라는 걸 안내했으면 문의가 줄었을 거예요</li>
+        <li>피자 2인 1판, 귤밭이 다른 장소라는 걸 안내했으면 문의가 줄었을 거예요 (거리는 팀장님 약 3분·대표님 4~5분, 회사 확인 전)</li>
         <li>와서야 아는 장점: 시간 제한 없는 여유, 개수대까지 열린 주방, 한 공간에서 다른 체험, 공항과 가까움</li>
         <li>예약 탭 개선은 알제이웍스(A)에서 하기로 했어요</li>
       </ol>
@@ -469,6 +480,7 @@ body.locked{overflow:hidden}
         <li><label><input type="checkbox" data-k="t1b"><span>단계마다 걸린 시간, 헷갈린 점, 찾던 정보가 어디 있었는지 적기<small>특히 "가장 많이 받는 질문" 4개의 답을 화면에서 찾을 수 있었는지</small></span></label></li>
         <li><label><input type="checkbox" data-k="t1c"><span>면담 내용을 발표용 5줄로 줄이기 (위 초록 칸에서 고르기)</span></label></li>
       </ul>
+      <div class="warnline" style="margin-top:10px">이건 <b>팀 안의 점검</b>이에요. 실제 손님이 왜 고르거나 그만두는지는 <a href="#t3">3번</a>의 <b>"처음부터 찾기" 고객 시험</b>에서 따로 봐요.</div>
       <div class="tcap">노션에 적을 표</div>
       <div class="tbl"><table>
         <tr><th>단계</th><th>걸린 시간</th><th>헷갈린 점</th><th>찾던 정보가 있었나</th></tr>
@@ -491,7 +503,7 @@ body.locked{overflow:hidden}
       <div class="box known">
         <h3><i class="dot"></i>이미 알고 있는 것 · AI 화면 조사 11/3~5</h3>
         <ul>
-          <li>네이버 안에 알제이 가게가 <b>세 곳(A·B·C)</b>으로 나뉘어 있어요</li>
+          <li>알제이는 네이버에서 <b>플레이스 2개(A·B)</b>에 <b>예약 서비스 최소 3개(A 예약·B 예약·C 프로그램)</b>로 나뉘어 있어요</li>
           <li>같은 상품인데 <b>시간·연령·인원 표기가 A·B·C마다 달라요</b></li>
           <li>C 상품 9종이 모두 "전 연령·1시간"으로 같게 적혀 있어요</li>
           <li><b>A 소개는 "최대 150명 수용"으로 시작해요.</b> 개인·소규모 손님 대상 제안과 맞지 않을 수 있어요</li>
@@ -538,7 +550,7 @@ body.locked{overflow:hidden}
         <tr><td>홈 첫 사진 5장</td><td class="muted">각 사진이 무엇인지 적기</td><td>① 고양이 모양 도마 ② 도마 여러 개 ③ 방문자 영상(뺌) ④ 기타 모양 도마와 귤 ⑤ 강아지 그림 도마. <b>쿠킹·감귤청 사진 없음</b></td></tr>
         <tr><td>1인 1체험 · 동반 무료</td><td>소개·상품 맨 위에는 없음 (11/3)</td><td>맨 위에는 없음. 상품 상세를 한참 내린 안내 칸에 "체험 인원 외 무료 동행 가능"</td></tr>
         <tr><td>일행끼리 진행하는지</td><td>소개·상품 맨 위에는 없음 (11/3)</td><td>없음. "프라이빗한 체험에도 완벽한 공간"이라는 공간 설명만</td></tr>
-        <tr><td>귤밭 위치 (차로 3분)</td><td>소개·상품 맨 위에는 없음 (11/3)</td><td>정보 탭·홈·예약 목록·첫 상품 어디에도 없음</td></tr>
+        <tr><td>귤밭 위치 (차로 약 3분·4~5분, 회사 확인 전)</td><td>소개·상품 맨 위에는 없음 (11/3)</td><td>정보 탭·홈·예약 목록·첫 상품 어디에도 없음</td></tr>
         <tr><td>대표 상품 첫 줄: 연령</td><td>상품마다 다름</td><td>첫 화면에 없음</td></tr>
         <tr><td>대표 상품 첫 줄: 총 시간</td><td>상품마다 다름</td><td>첫 화면에 없음. 접힌 설명을 펴면 "약 50분 내외", 소개에는 "약 60분"</td></tr>
         <tr><td>피자 2인 1판 가능 여부</td><td>분명하지 않음</td><td class="blank"></td></tr>
@@ -551,10 +563,11 @@ body.locked{overflow:hidden}
         <li><label><input type="checkbox" data-k="t2b"><span>자기 폰으로 <b>A(알제이웍스)</b>를 손님처럼 둘러보고, "여기서 멈출 것 같다"는 곳 한 군데 적기</span></label></li>
         <li><label><input type="checkbox" data-k="t2c"><span>(선택) 피자 단품 상세에서 "2인 1판"이 되는지 확인해 위 표 빈칸 채우기</span></label></li>
       </ul>
-      <div class="hint" style="margin-top:10px"><h3>"멈출 것 같은 곳" 예시 — 골라도 되고 직접 적어도 돼요</h3><ul>
+      <div class="warnline" style="margin-top:10px">이건 <b>팀 안의 점검</b>이에요. 실제 손님이 왜 고르거나 그만두는지는 <a href="#t3">3번</a>의 <b>"처음부터 찾기" 고객 시험</b>에서 따로 봐요.</div>
+      <details class="hint" style="margin-top:10px"><summary>"멈출 것 같은 곳" 예시 — 직접 적은 뒤에 펼쳐 보기 <span class="muted">· 먼저 보면 이 중에서 고르게 돼요</span></summary><ul>
           <li>상품을 눌렀는데 가격이 안 보임</li><li>상품마다·화면마다 시간이 다르게 적혀 있음</li>
           <li>귤밭이 어디인지, 다른 장소인지 모름</li><li>검색에서 A·B가 둘 다 "알제이"라 어디로 예약할지 모름</li>
-          <li>사진은 도마인데 첫 상품은 감귤청이라 무엇을 하는 곳인지 헷갈림</li></ul></div>
+          <li>사진은 도마인데 첫 상품은 감귤청이라 무엇을 하는 곳인지 헷갈림</li></ul></details>
       
     </div>
     <p class="refs">참고 자료 · <button class="docbtn" data-doc="phone">A 화면 폰 점검표 (11/5 밤)</button> · <button class="docbtn" data-doc="w1">W1 현재 상태 — A·B·C 화면</button> · <button class="docbtn" data-doc="w6">W6 격차 분석 — 문제점 G-01~11</button> · <button class="docbtn" data-doc="facts">상품 사실표</button></p>
@@ -564,9 +577,9 @@ body.locked{overflow:hidden}
 <!-- 3 -->
 <section class="block task" id="t3">
   <div class="panel">
-    <div class="top"><span class="num">3</span><h2 style="margin:0">검색 노출 조사</h2><span class="tag">선택 · 약 20분</span></div>
+    <div class="top"><span class="num">3</span><h2 style="margin:0">검색 노출 조사</h2><span class="tag">11/10~14 · 1인 약 15분</span></div>
     <p class="why">손님은 업체 이름보다 <b>"제주 아이들과 가볼만한 곳"</b> 같은 말로 검색해요. 거기서 알제이가 안 보이면, 화면을 아무리 고쳐도 손님이 들어오지 않아요.</p>
-    <div class="go"><span class="gl">바로 가기</span><a class="gobtn" href="https://m.search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%20%EC%95%A0%EC%9B%94%20%EA%B0%80%EB%B3%BC%EB%A7%8C%ED%95%9C%20%EA%B3%B3" target="_blank" rel="noopener">제주 애월 가볼만한 곳</a><a class="gobtn" href="https://m.search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%20%EC%95%84%EC%9D%B4%EB%93%A4%EA%B3%BC%20%EA%B0%80%EB%B3%BC%EB%A7%8C%ED%95%9C%20%EA%B3%B3" target="_blank" rel="noopener">제주 아이들과 가볼만한 곳</a><a class="gobtn" href="https://m.search.naver.com/search.naver?query=10%EC%9B%94%20%EA%B0%80%EB%B3%BC%EB%A7%8C%ED%95%9C%20%EA%B3%B3" target="_blank" rel="noopener">10월 가볼만한 곳</a><a class="gobtn" href="https://m.search.naver.com/search.naver?query=11%EC%9B%94%20%EC%97%AC%ED%96%89" target="_blank" rel="noopener">11월 여행</a><a class="gobtn" href="https://m.search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%20%EC%9D%B4%EC%83%89%20%EC%B2%B4%ED%97%98" target="_blank" rel="noopener">제주 이색 체험</a><a class="gobtn" href="https://m.search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%20%EC%8B%A4%EB%82%B4%20%EC%B2%B4%ED%97%98" target="_blank" rel="noopener">제주 실내 체험</a></div><p class="done"><b>끝나는 기준</b>(선택) 네이버 앱으로 6개를 보고, 아래 표와 다른 것만 적으면 끝이에요.</p>
+    <div class="go"><span class="gl">바로 가기</span><a class="gobtn" href="https://m.search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%20%EC%95%A0%EC%9B%94%20%EA%B0%80%EB%B3%BC%EB%A7%8C%ED%95%9C%20%EA%B3%B3" target="_blank" rel="noopener">제주 애월 가볼만한 곳</a><a class="gobtn" href="https://m.search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%20%EC%95%84%EC%9D%B4%EB%93%A4%EA%B3%BC%20%EA%B0%80%EB%B3%BC%EB%A7%8C%ED%95%9C%20%EA%B3%B3" target="_blank" rel="noopener">제주 아이들과 가볼만한 곳</a><a class="gobtn" href="https://m.search.naver.com/search.naver?query=10%EC%9B%94%20%EA%B0%80%EB%B3%BC%EB%A7%8C%ED%95%9C%20%EA%B3%B3" target="_blank" rel="noopener">10월 가볼만한 곳</a><a class="gobtn" href="https://m.search.naver.com/search.naver?query=11%EC%9B%94%20%EC%97%AC%ED%96%89" target="_blank" rel="noopener">11월 여행</a><a class="gobtn" href="https://m.search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%20%EC%9D%B4%EC%83%89%20%EC%B2%B4%ED%97%98" target="_blank" rel="noopener">제주 이색 체험</a><a class="gobtn" href="https://m.search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%20%EC%8B%A4%EB%82%B4%20%EC%B2%B4%ED%97%98" target="_blank" rel="noopener">제주 실내 체험</a></div><p class="done"><b>끝나는 기준</b>"처음부터 찾기" 기록 5~6명분이 모이면 끝이에요. 네이버 앱 비교는 선택이에요.</p>
     <div class="cols">
       <div class="box known">
         <h3><i class="dot"></i>이미 알고 있는 것 · AI 조사 11/3·11/5</h3>
@@ -596,7 +609,7 @@ body.locked{overflow:hidden}
         <h3><i class="dot"></i>비어 있는 것</h3>
         <ul>
           <li><b>네이버 앱·지도 앱 결과가 없어요.</b> 폰의 크롬으로만 봤어요. 앱은 개인 로그인 상태라 AI가 조작하지 않았어요</li>
-          <li>알제이의 <b>진짜 유입 검색어 통계</b> (스마트플레이스 통계, 기업에 요청 중)</li>
+          <li>알제이의 <b>진짜 유입 검색어 통계</b> (스마트플레이스 통계. 기업 확인 목록에 넣어 뒀고 아직 안 보냄)</li>
         </ul>
       </div>
     </div>
@@ -611,6 +624,21 @@ body.locked{overflow:hidden}
       </table></div></div>
     <div class="box todo">
       <h3><i class="dot"></i>맡은 사람이 할 일</h3>
+      <h3 style="margin-top:6px">① 고객 시험 "처음부터 찾기" · 11/10~11/14 · 5~6명 <span class="muted" style="font-weight:400;font-size:13px">검증계획 2단계</span></h3>
+      <p class="small">위 표는 <b>정해 둔 검색어</b>에서 알제이가 보이는지 본 거예요. 이 시험은 <b>손님이 스스로 검색어를 정하고 업체를 고르는 과정</b>을 봐요. 목적이 달라요.</p>
+      <ul class="small">
+        <li><b>참가자:</b> 알제이를 모르는 사람 5~6명 (아이 있는 부모 2, 커플 2, 친구 여행 1~2)</li>
+        <li><b>도구:</b> 참가자 자기 폰, 실제 네이버. 시안은 쓰지 않아요</li>
+        <li><b>진행:</b> 상황 카드를 하나 주고 검색어부터 참가자가 정해요. 진행자는 화면만 보고 메모하고, 10분 안에 "여기 예약하겠다" 한 곳을 고르게 해요
+          <ol class="scenes"><li>"애월에 묵고 있다. 비가 와서 오후에 4살 아이와 실내에서 할 걸 찾는다"</li><li>"여행 마지막 날, 비행기 전에 둘이 2시간 정도 할 체험을 찾는다"</li><li>"친구 넷이 겨울 제주에서 할 만한 체험을 찾는다. 둘은 요리, 둘은 만들기"</li></ol></li>
+        <li><b>기록:</b> 처음 친 검색어 · 알제이가 보였나(어느 블록, 몇 번째) · 눌렀나 · 최종 선택과 이유 · 알제이를 안 골랐다면 무엇 때문에 · 비교한 다른 곳</li>
+        <li><b>끝난 뒤:</b> 알제이 화면을 보여 주고 "이걸 봤다면 골랐을까요? 왜?"</li>
+      </ul>
+      <ul class="check">
+        <li><label><input type="checkbox" data-k="t3b"><span>참가자 5~6명 모으기</span></label></li>
+        <li><label><input type="checkbox" data-k="t3c"><span>시험 진행하고 기록하기</span></label></li>
+      </ul>
+      <h3 style="margin-top:12px">② (선택) 네이버 앱 비교</h3>
       <ul class="check">
         <li><label><input type="checkbox" data-k="t3a"><span>(선택) 네이버 앱에서 검색어 6개를 검색해 위 표 마지막 칸 채우기<small>앱 결과가 위와 다른지만 적으면 돼요</small></span></label></li>
       </ul>
@@ -624,7 +652,7 @@ body.locked{overflow:hidden}
   <div class="panel">
     <div class="top"><span class="num">4</span><h2 style="margin:0">유사업체 3곳 (벤치마킹)</h2><span class="tag">회의</span></div>
     <p class="why">알제이와 <b>같은 분야의 다른 곳은 첫 화면에서 무엇을 보여 주는지</b> 나란히 보려는 거예요. 알제이 사진과 소개를 어떻게 바꿀지 근거가 생겨요.</p>
-    <div class="go"><span class="gl">바로 가기</span><a class="gobtn" href="경쟁후보_탐색기.html" target="_blank" rel="noopener">경쟁 후보 탐색기 (52곳)</a><a class="gobtn" href="W9_경쟁사추이_중간공유.html" target="_blank" rel="noopener">경쟁사 추이 한 장 요약</a></div><p class="done"><b>끝나는 기준</b>회의에서 3곳을 정하고 날짜를 적으면 끝이에요. 캡처는 기록자가 해요.</p>
+    <div class="go"><span class="gl">바로 가기</span><a class="gobtn" href="경쟁후보_탐색기.html" target="_blank" rel="noopener">경쟁 후보 탐색기 (52곳)</a><a class="gobtn" href="W9_경쟁사추이_중간공유.html" target="_blank" rel="noopener">경쟁사 추이 한 장 요약</a></div><p class="done"><b>끝나는 기준 (회의 선정 담당)</b>3곳을 정하고 날짜를 적으면 끝이에요. 그다음 기록자가 3곳을 캡처하고, 사진·상품명·설명·가격·예약 방식 비교표와 <b>알제이에 적용할 점</b>을 정리해요 (시안 개선 지시 2부).</p>
     <div class="cols">
       <div class="box known">
         <h3><i class="dot"></i>이미 알고 있는 것</h3>
@@ -705,6 +733,16 @@ body.locked{overflow:hidden}
   </div>
 </section>
 
+<!-- 밖에 남은 일 -->
+<section class="block" id="outside">
+  <div class="head"><h2>이 페이지 밖에 남은 일</h2><p>팀원 할일 5개만 끝내서는 프로젝트가 끝나지 않아요. 이 페이지가 다루지 않는 일이에요.</p></div>
+  <div class="panel"><ul class="outside">
+    <li><b>고객 시험:</b> "처음부터 찾기" 5~6명(<a href="#t3">할일 3</a>에 넣음), 최근 손님에게 짧게 묻기(검증계획 3단계, 대표 협조), 손님 인터뷰</li>
+    <li><b>기업 확인:</b> 기업 확인 목록 발송과 회신. 스마트플레이스 통계, 예약 숫자, 귤밭 거리 같은 사실값이 여기서 확정돼요. <b>보내는 날은 아직 안 정했어요.</b></li>
+    <li><b>산출물:</b> 최종제안(기업용), 산출물 1 벤치마킹 비교표 갱신, A 기준 화면 시안, 11/13 중간 발표, 11/25 최종 발표</li>
+  </ul></div>
+</section>
+
 <!-- 회의 -->
 <section class="block" id="meeting">
   <div class="head"><h2>회의에서 정할 것</h2></div>
@@ -712,6 +750,7 @@ body.locked{overflow:hidden}
     <li><div><b>유사업체 3곳</b><div class="small">4번 표의 제안대로 갈지. 특히 쿠킹은 토토와 레몬뮤지엄 중 어디로 할지. 빠진 후보까지 보려면 <a href="경쟁후보_탐색기.html" target="_blank" rel="noopener">경쟁 후보 탐색기</a></div></div></li>
     
     <li><div><b>할일 담당</b><div class="small">1·2·3·5번 각각 누가 맡을지 (4번 캡처는 기록자)</div></div></li>
+    <li><div><b>"처음부터 찾기" 고객 시험</b><div class="small">참가자 5~6명을 누가 모으고, 누가 진행·기록할지 (11/10~11/14)</div></div></li>
     <li><div><b>손님 인터뷰</b><div class="small">다시 시도할지, 회사 설문 QR 회신만 기다릴지</div></div></li>
   </ol>
 </section>
@@ -6677,7 +6716,7 @@ PC 통합검색10개 검색어, 모바일 도메인3개 검색어, 390×844px �
   var tasks=[
     {id:'t1',n:1,t:'현장답사 정리',f:2,lab:'팀장님 얘기만 있음',d:'A에서 예약해 보기(결제 직전까지), 면담을 발표용 5줄로',tm:'약 1시간'},
     {id:'t2',n:2,t:'스마트플레이스 진단',f:4,lab:'폰 점검표 끝',d:'A를 손님처럼 보고 "여기서 멈출 곳" 한 줄',tm:'약 10분'},
-    {id:'t3',n:3,t:'검색 노출',f:4,lab:'폰·검색량까지 채움',d:'(선택) 네이버 앱으로 6개 검색해 다른 점 적기',tm:'약 20분'},
+    {id:'t3',n:3,t:'검색 노출',f:3,lab:'노출 조사 끝, 손님 시험 남음',d:'"처음부터 찾기" 고객 시험 5~6명 (+ 선택: 앱 비교)',tm:'11/10~14'},
     {id:'t4',n:4,t:'유사업체 3곳',f:3,lab:'A·B 폰 캡처 끝',d:'회의에서 3곳 정하기 (캡처는 기록자)',tm:'회의'},
     {id:'t5',n:5,t:'후기 분석',f:4,lab:'알제이 쪽은 다',d:'후기 50개 직접 읽고 인상 적기 → AI 집계와 비교',tm:'약 1시간'}
   ];
