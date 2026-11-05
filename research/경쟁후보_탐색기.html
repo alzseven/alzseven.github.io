@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>경쟁 후보 탐색기</title>
+<style>
+:root{
+  color-scheme: light;
+  --bg:#f6f4ef; --surface:#ffffff; --soft:#f2efe8; --line:#e4dfd4; --line-soft:#eeeae2;
+  --text:#1d1c1a; --text-2:#4d4a44; --muted:#827d73;
+  --accent:#d9661f; --accent-ink:#b4500f; --accent-soft:#fbe9db;
+  --ok:#2f7d4f; --ok-soft:#e3f1e8; --warn:#9a6a06; --warn-soft:#f8eed2; --no:#b03a2e; --no-soft:#f7e2de;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --ink:#1d1c1a; --grid:#ebe7de;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --bg:#121211; --surface:#1b1a19; --soft:#252421; --line:#35332f; --line-soft:#2a2926;
+    --text:#f0ede6; --text-2:#c9c5bb; --muted:#928e85;
+    --accent:#f08a45; --accent-ink:#f5a26a; --accent-soft:#3a281b;
+    --ok:#6cc08e; --ok-soft:#1c3325; --warn:#e2b04a; --warn-soft:#382d15; --no:#ec8576; --no-soft:#3b2220;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --ink:#f0ede6; --grid:#2c2b28;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --bg:#121211; --surface:#1b1a19; --soft:#252421; --line:#35332f; --line-soft:#2a2926;
+  --text:#f0ede6; --text-2:#c9c5bb; --muted:#928e85;
+  --accent:#f08a45; --accent-ink:#f5a26a; --accent-soft:#3a281b;
+  --ok:#6cc08e; --ok-soft:#1c3325; --warn:#e2b04a; --warn-soft:#382d15; --no:#ec8576; --no-soft:#3b2220;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --ink:#f0ede6; --grid:#2c2b28;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;font-size:15.5px;line-height:1.6;word-break:keep-all;overflow-wrap:break-word}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px 72px}
+a{color:var(--accent-ink)}
+h1{font-size:28px;line-height:1.3;margin:6px 0 8px}
+h2{font-size:20px;margin:0 0 4px}
+h3{font-size:16px;margin:0 0 6px}
+p{margin:6px 0}
+.muted{color:var(--muted)} .small{font-size:13.5px;color:var(--text-2)}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding-top:28px}
+.eyebrow{font-size:13px;color:var(--accent-ink);font-weight:700}
+.theme{flex:none;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:999px;width:36px;height:36px;cursor:pointer}
+section{margin-top:26px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.lead{color:var(--text-2);margin:0 0 12px}
+
+/* KPI */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.kpi .v{font-size:30px;font-weight:800;line-height:1.1;font-variant-numeric:tabular-nums}
+.kpi .l{font-size:13.5px;color:var(--text-2)}
+
+/* decision cards */
+.dec{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.dc{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.dc .fh{display:flex;align-items:center;gap:8px}
+.dc .fh i{width:12px;height:12px;border-radius:50%}
+.dc .fh b{font-size:17px}
+.dc .q{font-size:13.5px;color:var(--text-2);margin:0}
+.opt{border:1px solid var(--line-soft);border-radius:10px;padding:10px 12px;background:var(--bg);cursor:pointer;text-align:left;font:inherit;color:inherit;width:100%}
+.opt:hover,.opt.sel{border-color:var(--accent)}
+.opt .nm{font-weight:700;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.opt .nums{font-size:13px;color:var(--text-2);font-variant-numeric:tabular-nums;margin-top:2px}
+.opt .why{font-size:13px;margin-top:4px}
+
+.tag{display:inline-block;font-size:11.5px;font-weight:700;padding:1px 7px;border-radius:6px;background:var(--soft);color:var(--text-2);white-space:nowrap}
+.tag.pick{background:var(--ok-soft);color:var(--ok)}
+.tag.hold{background:var(--warn-soft);color:var(--warn)}
+.tag.fail{background:var(--no-soft);color:var(--no)}
+.tag.rec{background:var(--accent-soft);color:var(--accent-ink)}
+.tag.f3{background:transparent;border:1px solid var(--line);color:var(--muted)}
+
+/* filters */
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--text-2);border-radius:999px;padding:5px 12px;font:inherit;font-size:13.5px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.chip[aria-pressed="true"]{background:var(--text);color:var(--surface);border-color:var(--text)}
+.chip i{width:10px;height:10px;border-radius:50%;display:inline-block}
+select,input[type=search]{font:inherit;font-size:13.5px;padding:6px 10px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--text)}
+input[type=search]{min-width:160px;flex:1;max-width:260px}
+
+/* chart */
+.chartwrap{position:relative}
+svg{display:block;width:100%;height:auto}
+.ax text{font-size:11px;fill:var(--muted)}
+.ax line{stroke:var(--grid)}
+.lane{fill:var(--soft)}
+.ref{stroke:var(--muted);stroke-width:1.2}
+.ref.d{stroke-dasharray:4 4}
+.reflab{font-size:11px;fill:var(--muted)}
+.pt{cursor:pointer}
+.pt .m{stroke:var(--surface);stroke-width:2}
+.pt.dim{opacity:.18}
+.pt.sel .m{stroke:var(--text);stroke-width:2.5}
+.plab{font-size:11.5px;fill:var(--text);paint-order:stroke;stroke:var(--surface);stroke-width:3px;stroke-linejoin:round;pointer-events:none}
+.lbarrow{stroke-width:1.6;fill:none}
+.tip{position:absolute;pointer-events:none;background:var(--text);color:var(--surface);font-size:12.5px;line-height:1.45;padding:8px 10px;border-radius:8px;max-width:240px;opacity:0;transition:opacity .1s;z-index:5}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;color:var(--text-2);margin-top:8px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.legend i.dia{border-radius:0;transform:rotate(45deg);width:9px;height:9px;background:var(--ink)}
+.legend i.line{width:18px;height:0;border-top:1.5px solid var(--muted);border-radius:0}
+.legend i.dash{width:18px;height:0;border-top:1.5px dashed var(--muted);border-radius:0}
+
+/* table */
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:760px}
+th,td{padding:8px 10px;border-bottom:1px solid var(--line-soft);text-align:left;vertical-align:top}
+th{background:var(--soft);font-size:12.5px;color:var(--text-2);font-weight:700;position:sticky;top:0;cursor:pointer;user-select:none;white-space:nowrap}
+th[aria-sort="ascending"]::after{content:" ▲";font-size:10px}
+th[aria-sort="descending"]::after{content:" ▼";font-size:10px}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+tbody tr{cursor:pointer}
+tbody tr:hover{background:var(--soft)}
+tbody tr.sel{background:var(--accent-soft)}
+.fdot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:0}
+.cnt{font-size:13px;color:var(--muted);margin:8px 2px 0}
+
+/* detail */
+.detail{margin-top:12px;display:none}
+.detail.on{display:block}
+.detail dl{display:grid;grid-template-columns:max-content 1fr;gap:4px 14px;margin:8px 0 0;font-size:14px}
+.detail dt{color:var(--muted)}
+.detail dd{margin:0}
+
+.notes li{margin:4px 0}
+footer{margin-top:30px;font-size:12.5px;color:var(--muted)}
+
+@media (max-width:900px){.dec{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){h1{font-size:23px}.panel{padding:14px}.kpi .v{font-size:24px}.ax text,.reflab{font-size:14px}.plab{font-size:14px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="top">
+  <div>
+    <div class="eyebrow">6팀 · 알제이웍스 · 회의용</div>
+    <h1>경쟁 후보 탐색기</h1>
+    <p class="small">11/5에 살펴본 비슷한 업체 52곳을 한곳에 모았어요. <b>화면 비교에 쓸 3곳</b>(공예·쿠킹·감귤 하나씩)을 회의에서 고를 때 보는 페이지예요. 빠진 후보와 빠진 이유도 모두 볼 수 있어요.</p>
+  </div>
+  <button class="theme" id="themeBtn" aria-label="밝게/어둡게 바꾸기" title="밝게/어둡게">◐</button>
+</div>
+
+<div class="kpis" id="kpis"></div>
+
+<section>
+  <h2>회의에서 고를 것</h2>
+  <p class="lead">분야마다 하나씩이에요. 추천은 팀원 안내 4번 표의 제안이고, 정하는 건 팀이에요. 카드를 누르면 아래 그림과 표에서 그 업체가 표시돼요.</p>
+  <div class="dec" id="dec"></div>
+</section>
+
+<section>
+  <div class="panel">
+    <h2>작년과 올해 5~10월 리뷰</h2>
+    <p class="lead">점 하나가 업체 하나예요. <b>대각선보다 위면 작년보다 늘었고, 아래면 줄었어요.</b> 점선(작년의 90%)보다 아래면 기준 ③에서 빠져요. 작년 리뷰를 끝까지 못 모은 곳은 왼쪽 띠에 따로 놓았어요.</p>
+    <div class="filters" id="chartFilters"></div>
+    <div class="chartwrap" id="chartwrap">
+      <svg id="chart" viewBox="0 0 680 460" role="img" aria-labelledby="chartDesc"><desc id="chartDesc">업체별 2025년 5~10월과 2026년 5~10월 방문자 리뷰 수. 아래 표에 같은 숫자가 있어요.</desc></svg>
+      <div class="tip" id="tip" role="tooltip"></div>
+    </div>
+    <div class="legend" id="legend"></div>
+    <p class="small" style="margin-top:8px">눈금은 작은 숫자가 뭉치지 않게 제곱근으로 늘였어요. 화살표는 "이 값 이상"이라는 뜻이에요(목록이 더 열리지 않아 끝까지 못 셈). 리뷰 300개 미만인 곳은 작년 비교를 하지 않아 그림에 없어요.</p>
+  </div>
+</section>
+
+<section>
+  <div class="panel">
+    <h2>52곳 전체</h2>
+    <p class="lead">제목을 누르면 정렬, 줄을 누르면 자세히 보기예요.</p>
+    <div class="filters" id="tableFilters"></div>
+    <div class="tbl"><table id="tbl">
+      <thead><tr>
+        <th data-k="n">업체</th><th data-k="f">분야</th><th data-k="st">결과</th>
+        <th data-k="rv" class="n">방문자 리뷰</th><th data-k="rt" class="n">별점</th>
+        <th data-k="pv" class="n">작년 5~10월</th><th data-k="cu" class="n">올해 5~10월</th><th data-k="ratio" class="n">작년 대비</th>
+        <th data-k="why">이유</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table></div>
+    <p class="cnt" id="cnt"></p>
+    <div class="panel detail" id="detail"></div>
+  </div>
+</section>
+
+<section>
+  <div class="panel">
+    <h2>어떻게 걸렀나</h2>
+    <p class="lead">조사 전에 정해 둔 기준이에요. 결과를 보고 바꾸지 않았어요.</p>
+    <ol class="notes small">
+      <li><b>① 분야</b> 공예·쿠킹·감귤 체험 중 하나 → 아니면 "범위 밖"</li>
+      <li><b>② 규모</b> 방문자 리뷰 300개 이상 → 아니면 "규모 미달"</li>
+      <li><b>③ 추이</b> 올해 5~10월 리뷰가 작년 같은 기간의 90% 이상</li>
+      <li><b>④ 별점</b> 보이면 4.7 이상 (안 보이면 통과)</li>
+      <li><b>⑤</b> 분야마다 ①~④를 통과한 곳 중 올해 리뷰가 가장 많은 한 곳</li>
+    </ol>
+    <h3 style="margin-top:14px">이 페이지로 말할 수 없는 것</h3>
+    <ul class="notes small">
+      <li><b>리뷰 수는 예약 수가 아니에요.</b> 리뷰 이벤트·영수증 인증 방식에 따라 크게 달라요. 알제이 A도 작년 6건 → 올해 162건이지만 성장률로 읽으면 안 돼요.</li>
+      <li>"줄어든 곳"이 왜 줄었는지(이전, 다른 채널, 이벤트 종료 등)는 확인하지 않았어요.</li>
+      <li>후보 52곳은 검색 결과와 이전 조사에서 모았어요. 제주의 모든 체험 업체가 아니에요.</li>
+      <li>네이버 화면은 매일 바뀌어요. 숫자는 2026-11-05 관측값이에요.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>출처: research/W9_경쟁사추이 — 선정.md(기준 적용), 후보.csv, 보충.md(토토·송정 작년 하한). 리뷰 본문·작성자 정보와 업체 사진은 싣지 않았어요. 팀 안에서만 공유해 주세요.</footer>
+</div>
+
+<script>
+(function(){
+  var DATA = {"rows": [{"n": "토토아뜰리에", "f": "쿠킹", "st": "fail", "why": "작년 같은 기간보다 리뷰가 줄어듦 (최소 439 → 240, 최대 55%)", "rv": 5633, "rt": null, "pv": 439, "cu": 240, "lb": true, "clb": false, "reg": "애월", "book": "예", "mix": "예", "small": "판정 보류", "url": "https://m.place.naver.com/place/1015224925/ticket", "id": "1015224925", "pick": "추천", "first3": true}, {"n": "귤밭에댕댕이", "f": "공예", "st": "fail", "why": "별점 4.7 미만 (4.68), 리뷰 47 → 11", "rv": 385, "rt": 4.68, "pv": 47, "cu": 11, "lb": false, "clb": false, "reg": "애월", "book": "예", "mix": "예", "small": "판정 보류", "url": "https://m.place.naver.com/place/1183023095/ticket", "id": "1183023095", "pick": "", "first3": true}, {"n": "제주도공방 노꼬메", "f": "공예", "st": "fail", "why": "작년 리뷰 미확보, 최근 216건으로 공예 1위(264)보다 적음", "rv": 690, "rt": null, "pv": null, "cu": 216, "lb": false, "clb": false, "reg": "제주시 건입동", "book": "예", "mix": "확인 안 됨", "small": "예", "url": "https://m.place.naver.com/place/1005278327/ticket", "id": "1005278327", "pick": "", "first3": true}, {"n": "제주유리삼촌", "f": "공예", "st": "pick", "why": "기준 통과 + 공예 중 최근 리뷰 최다 (72 → 264)", "rv": 1080, "rt": 4.95, "pv": 72, "cu": 264, "lb": false, "clb": false, "reg": "노형동", "book": "예", "mix": "확인 안 됨", "small": "예", "url": "https://m.place.naver.com/place/1993303555/ticket", "id": "1993303555", "pick": "추천", "first3": false}, {"n": "수작도자기공방", "f": "공예", "st": "fail", "why": "작년 같은 기간보다 리뷰가 줄어듦 (80 → 65, 81%)", "rv": 664, "rt": 4.94, "pv": 80, "cu": 65, "lb": false, "clb": false, "reg": "서귀포 동홍동", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/1643890948/ticket", "id": "1643890948", "pick": "", "first3": false}, {"n": "반지공방 그레이스톤", "f": "공예", "st": "fail", "why": "작년 같은 기간보다 리뷰가 줄어듦 (14 → 7, 50%)", "rv": 337, "rt": 4.98, "pv": 14, "cu": 7, "lb": false, "clb": false, "reg": "서귀포 강정동", "book": "예", "mix": "확인 안 됨", "small": "예", "url": "https://m.place.naver.com/place/1130026329/ticket", "id": "1130026329", "pick": "", "first3": false}, {"n": "무드랜드", "f": "공예", "st": "small", "why": "방문자 리뷰 300개 미만 (55개)", "rv": 55, "rt": null, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "노형동", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/1126418805/ticket", "id": "1126418805", "pick": "", "first3": false}, {"n": "씬오브제주", "f": "공예", "st": "small", "why": "방문자 리뷰 300개 미만 (25개)", "rv": 25, "rt": null, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "애월", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/1867590807/ticket", "id": "1867590807", "pick": "", "first3": false}, {"n": "아뜰리에 파이토", "f": "공예", "st": "small", "why": "방문자 리뷰 300개 미만 (8개)", "rv": 8, "rt": null, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "도두일동", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/1249285169/ticket", "id": "1249285169", "pick": "", "first3": false}, {"n": "Siamese ceramics", "f": "공예", "st": "small", "why": "방문자 리뷰 300개 미만 (12개)", "rv": 12, "rt": null, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "이도1동", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/2084961327/ticket", "id": "2084961327", "pick": "", "first3": false}, {"n": "흰백", "f": "공예", "st": "small", "why": "방문자 리뷰 300개 미만 (134개)", "rv": 134, "rt": null, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "한림", "book": "예", "mix": "확인 안 됨", "small": "예", "url": "https://m.place.naver.com/place/1186373001/ticket", "id": "1186373001", "pick": "", "first3": false}, {"n": "향기다움제주", "f": "공예", "st": "fail", "why": "작년 같은 기간보다 리뷰가 줄어듦 (9 → 2, 22%)", "rv": 427, "rt": 4.95, "pv": 9, "cu": 2, "lb": false, "clb": false, "reg": "표선", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/1447256694/ticket", "id": "1447256694", "pick": "", "first3": false}, {"n": "아트공간 길", "f": "공예", "st": "small", "why": "방문자 리뷰 300개 미만 (68개)", "rv": 68, "rt": null, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "도두일동", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/1846603553/ticket", "id": "1846603553", "pick": "", "first3": false}, {"n": "별빛작업실", "f": "공예", "st": "small", "why": "방문자 리뷰 300개 미만 (103개)", "rv": 103, "rt": null, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "성산", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/1987731078/ticket", "id": "1987731078", "pick": "", "first3": false}, {"n": "향수공방·부케말리기 수에룬", "f": "공예", "st": "fail", "why": "작년 같은 기간보다 리뷰가 줄어듦 (83 → 29, 35%)", "rv": 409, "rt": null, "pv": 83, "cu": 29, "lb": false, "clb": false, "reg": "이도이동", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/1397010264/ticket", "id": "1397010264", "pick": "", "first3": false}, {"n": "땀손", "f": "공예", "st": "small", "why": "방문자 리뷰 300개 미만 (60개)", "rv": 60, "rt": 5, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "아라이동", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/2020121393/ticket", "id": "2020121393", "pick": "", "first3": false}, {"n": "어코드 제주", "f": "공예", "st": "fail", "why": "작년 같은 기간보다 리뷰가 줄어듦 (88 → 17, 19%)", "rv": 1623, "rt": null, "pv": 88, "cu": 17, "lb": false, "clb": false, "reg": "도두이동", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/1229169422/ticket", "id": "1229169422", "pick": "", "first3": false}, {"n": "소소화", "f": "공예", "st": "small", "why": "방문자 리뷰 300개 미만 (9개)", "rv": 9, "rt": null, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "일도이동", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/1218119159/ticket", "id": "1218119159", "pick": "", "first3": false}, {"n": "세라믹팩토리아토", "f": "공예", "st": "small", "why": "방문자 리뷰 300개 미만 (241개)", "rv": 241, "rt": 4.89, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "서귀포 동홍동", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/1323407807/ticket", "id": "1323407807", "pick": "", "first3": false}, {"n": "레더한가죽공방", "f": "공예", "st": "small", "why": "방문자 리뷰 300개 미만 (205개)", "rv": 205, "rt": 5, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "조천", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/35489449/ticket", "id": "35489449", "pick": "", "first3": false}, {"n": "제주스런 본점", "f": "공예", "st": "small", "why": "방문자 리뷰 300개 미만 (11개)", "rv": 11, "rt": 4.92, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "조천", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/1092694844/ticket", "id": "1092694844", "pick": "", "first3": false}, {"n": "자매작업실 프로그램", "f": "공예", "st": "small", "why": "방문자 리뷰 300개 미만 (27개)", "rv": 27, "rt": null, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "이호이동", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/1429392394/ticket", "id": "1429392394", "pick": "", "first3": false}, {"n": "시그니청 프로그램", "f": "쿠킹", "st": "small", "why": "방문자 리뷰 300개 미만 (42개)", "rv": 42, "rt": null, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "연동", "book": "예", "mix": "확인 안 됨", "small": "예", "url": "https://m.place.naver.com/place/1494737127/ticket", "id": "1494737127", "pick": "", "first3": false}, {"n": "세모작", "f": "공예", "st": "small", "why": "방문자 리뷰 300개 미만 (34개)", "rv": 34, "rt": null, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "미확인", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/1807196613/ticket", "id": "1807196613", "pick": "", "first3": false}, {"n": "목공TV", "f": "공예", "st": "small", "why": "방문자 리뷰 300개 미만 (14개)", "rv": 14, "rt": 4.95, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "미확인", "book": "아니오", "mix": "확인 안 됨", "small": "미해당", "url": "https://m.place.naver.com/place/2010714303/home", "id": "2010714303", "pick": "", "first3": false}, {"n": "병만랜드&공방", "f": "공예", "st": "small", "why": "방문자 리뷰 300개 미만 (1개)", "rv": 1, "rt": null, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "미확인", "book": "아니오", "mix": "확인 안 됨", "small": "미해당", "url": "https://m.place.naver.com/place/2043019716/home", "id": "2043019716", "pick": "", "first3": false}, {"n": "빛감공방", "f": "공예", "st": "small", "why": "방문자 리뷰 300개 미만 (17개)", "rv": 17, "rt": null, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "미확인", "book": "아니오", "mix": "확인 안 됨", "small": "미해당", "url": "https://m.place.naver.com/place/1188416643/home", "id": "1188416643", "pick": "", "first3": false}, {"n": "제주물레집", "f": "공예", "st": "small", "why": "방문자 리뷰 300개 미만 (1개)", "rv": 1, "rt": null, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "미확인", "book": "아니오", "mix": "확인 안 됨", "small": "미해당", "url": "https://m.place.naver.com/place/1672272327/home", "id": "1672272327", "pick": "", "first3": false}, {"n": "쿠킹클래스 어썸", "f": "쿠킹", "st": "small", "why": "방문자 리뷰 300개 미만 (1개)", "rv": 1, "rt": null, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "미확인", "book": "아니오", "mix": "확인 안 됨", "small": "미해당", "url": "https://m.place.naver.com/place/1571835024/home", "id": "1571835024", "pick": "", "first3": false}, {"n": "쿠킹공주", "f": "쿠킹", "st": "small", "why": "방문자 리뷰 300개 미만 (252개)", "rv": 252, "rt": 4.88, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "미확인", "book": "아니오", "mix": "확인 안 됨", "small": "미해당", "url": "https://m.place.naver.com/place/1168597901/home", "id": "1168597901", "pick": "", "first3": false}, {"n": "해피제주", "f": "쿠킹", "st": "small", "why": "방문자 리뷰 300개 미만 (148개)", "rv": 148, "rt": null, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "미확인", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/1736244086/ticket", "id": "1736244086", "pick": "", "first3": false}, {"n": "만다리노카페", "f": "범위 밖", "st": "out", "why": "분야가 공예·쿠킹·감귤 체험이 아님", "rv": 1027, "rt": 4.87, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "미확인", "book": "아니오", "mix": "확인 안 됨", "small": "미해당", "url": "https://m.place.naver.com/restaurant/1256616067/home", "id": "1256616067", "pick": "", "first3": false}, {"n": "자연in PLANT827", "f": "범위 밖", "st": "out", "why": "분야가 공예·쿠킹·감귤 체험이 아님", "rv": 6101, "rt": null, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "미확인", "book": "아니오", "mix": "확인 안 됨", "small": "미해당", "url": "https://m.place.naver.com/restaurant/1315430368/home", "id": "1315430368", "pick": "", "first3": false}, {"n": "서귀포 제주에인감귤밭 카페", "f": "감귤", "st": "hold", "why": "작년 리뷰 미확보, 올해 최소 292건. 카페 리뷰가 섞여 있음", "rv": 3934, "rt": 4.82, "pv": null, "cu": 292, "lb": false, "clb": true, "reg": "서귀포시 호근서호로", "book": "예", "mix": "확인 안 됨", "small": "예", "url": "https://m.place.naver.com/restaurant/1556085331/booking", "id": "1556085331", "pick": "참고", "first3": false}, {"n": "레몬뮤지엄", "f": "쿠킹", "st": "hold", "why": "작년 리뷰를 끝까지 못 모아 비교 불가 (최근 140건)", "rv": 2168, "rt": 4.89, "pv": null, "cu": 140, "lb": false, "clb": false, "reg": "미확인", "book": "예", "mix": "확인 안 됨", "small": "예", "url": "https://m.place.naver.com/restaurant/1351020878/booking", "id": "1351020878", "pick": "대안", "first3": false}, {"n": "제주쿠킹스튜디오식탐", "f": "쿠킹", "st": "small", "why": "방문자 리뷰 300개 미만 (0개)", "rv": 0, "rt": null, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "미확인", "book": "아니오", "mix": "확인 안 됨", "small": "미해당", "url": "https://m.place.naver.com/place/1022105193/home", "id": "1022105193", "pick": "", "first3": false}, {"n": "제주레몬시티", "f": "범위 밖", "st": "out", "why": "분야가 공예·쿠킹·감귤 체험이 아님", "rv": 47, "rt": 5, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "미확인", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/2031814577/ticket", "id": "2031814577", "pick": "", "first3": false}, {"n": "봉봉감귤체험농장", "f": "감귤", "st": "fail", "why": "작년 같은 기간보다 리뷰가 줄어듦 (9 → 7, 78%)", "rv": 762, "rt": null, "pv": 9, "cu": 7, "lb": false, "clb": false, "reg": "미확인", "book": "아니오", "mix": "확인 안 됨", "small": "미해당", "url": "https://m.place.naver.com/place/1330917343/home", "id": "1330917343", "pick": "", "first3": false}, {"n": "소소당양갱_수제양갱만들기체험", "f": "쿠킹", "st": "small", "why": "방문자 리뷰 300개 미만 (210개)", "rv": 210, "rt": 4.77, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "미확인", "book": "예", "mix": "확인 안 됨", "small": "예", "url": "https://m.place.naver.com/restaurant/1693977543/booking", "id": "1693977543", "pick": "", "first3": false}, {"n": "파더스가든", "f": "범위 밖", "st": "out", "why": "분야가 공예·쿠킹·감귤 체험이 아님", "rv": 6303, "rt": 4.67, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "미확인", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/1866060591/ticket", "id": "1866060591", "pick": "", "first3": false}, {"n": "위에트 제주공방", "f": "공예", "st": "small", "why": "방문자 리뷰 300개 미만 (44개)", "rv": 44, "rt": null, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "미확인", "book": "아니오", "mix": "확인 안 됨", "small": "미해당", "url": "https://m.place.naver.com/place/2025100121/home", "id": "2025100121", "pick": "", "first3": false}, {"n": "아망떼", "f": "공예", "st": "fail", "why": "작년 같은 기간보다 리뷰가 줄어듦 (16 → 0, 0%)", "rv": 360, "rt": null, "pv": 16, "cu": 0, "lb": false, "clb": false, "reg": "애월읍", "book": "아니오", "mix": "확인 안 됨", "small": "미해당", "url": "https://m.place.naver.com/place/1110639606/home", "id": "1110639606", "pick": "", "first3": false}, {"n": "제주스런 애월점", "f": "공예", "st": "small", "why": "방문자 리뷰 300개 미만 (144개)", "rv": 144, "rt": 4.92, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "미확인", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/2046031683/ticket", "id": "2046031683", "pick": "", "first3": false}, {"n": "올티스", "f": "범위 밖", "st": "out", "why": "분야가 공예·쿠킹·감귤 체험이 아님", "rv": 1150, "rt": 4.82, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "미확인", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/37573196/ticket", "id": "37573196", "pick": "", "first3": false}, {"n": "브레인코칭감성융합연구소 성산점", "f": "쿠킹", "st": "small", "why": "방문자 리뷰 300개 미만 (8개)", "rv": 8, "rt": null, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "미확인", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/1568096081/ticket", "id": "1568096081", "pick": "", "first3": false}, {"n": "조이끄띠 쿠킹클래스", "f": "쿠킹", "st": "small", "why": "방문자 리뷰 300개 미만 (1개)", "rv": 1, "rt": null, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "미확인", "book": "아니오", "mix": "확인 안 됨", "small": "미해당", "url": "https://m.place.naver.com/place/1255276292/home", "id": "1255276292", "pick": "", "first3": false}, {"n": "몽티죠쿠킹클래스", "f": "쿠킹", "st": "small", "why": "방문자 리뷰 300개 미만 (13개)", "rv": 13, "rt": null, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "미확인", "book": "아니오", "mix": "확인 안 됨", "small": "미해당", "url": "https://m.place.naver.com/restaurant/1883286221/home", "id": "1883286221", "pick": "", "first3": false}, {"n": "제주아꼼이네", "f": "감귤", "st": "small", "why": "방문자 리뷰 300개 미만 (49개)", "rv": 49, "rt": null, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "미확인", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/1911847116/ticket", "id": "1911847116", "pick": "", "first3": false}, {"n": "제주송정농원", "f": "감귤", "st": "hold", "why": "작년 리뷰를 끝까지 못 모아 판정 불가 (작년 최소 140 → 올해 252)", "rv": 2959, "rt": 4.93, "pv": 140, "cu": 252, "lb": true, "clb": false, "reg": "제주시 영평동", "book": "예", "mix": "확인 안 됨", "small": "예", "url": "https://m.place.naver.com/place/31992132/ticket", "id": "31992132", "pick": "추천", "first3": false}, {"n": "나무와열매 체험농장", "f": "감귤", "st": "fail", "why": "작년 같은 기간보다 리뷰가 줄어듦 (6 → 4, 67%)", "rv": 681, "rt": 4.74, "pv": 6, "cu": 4, "lb": false, "clb": false, "reg": "미확인", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/1355391835/ticket", "id": "1355391835", "pick": "", "first3": false}, {"n": "꽃귤농장", "f": "감귤", "st": "hold", "why": "기준 통과 (34 → 31) — 감귤 1위는 송정·제주에인 작년 자료가 없어 미정", "rv": 1364, "rt": 4.9, "pv": 34, "cu": 31, "lb": false, "clb": false, "reg": "미확인", "book": "예", "mix": "확인 안 됨", "small": "판정 보류", "url": "https://m.place.naver.com/place/1018330425/ticket", "id": "1018330425", "pick": "대안", "first3": false}, {"n": "귤의정원 바령", "f": "감귤", "st": "small", "why": "방문자 리뷰 300개 미만 (174개)", "rv": 174, "rt": null, "pv": null, "cu": null, "lb": false, "clb": false, "reg": "미확인", "book": "아니오", "mix": "확인 안 됨", "small": "미해당", "url": "https://m.place.naver.com/place/1510624446/home", "id": "1510624446", "pick": "", "first3": false}], "missing": []};
+  var RJ = [{n:'알제이 A (알제이웍스)',f:'알제이',pv:6,cu:162},{n:'알제이 B (알제이)',f:'알제이',pv:33,cu:330}];
+  var FIELDS = ['공예','쿠킹','감귤'];
+  var FCOL = {'공예':'var(--s1)','쿠킹':'var(--s2)','감귤':'var(--s3)','알제이':'var(--ink)'};
+  var STL = {pick:['선정','pick'],hold:['보류·후보','hold'],fail:['추이·별점 탈락','fail'],small:['규모 미달',''],out:['범위 밖','']};
+  var rows = DATA.rows;
+  rows.forEach(function(r){ r.ratio = (r.pv && r.cu!=null) ? r.cu/r.pv : null; });
+  function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function fmt(v){return v==null?'—':Number(v).toLocaleString('ko-KR');}
+  function pv(r){return r.pv==null?'미확보':(r.lb?'≥ ':'')+fmt(r.pv);}
+  function cu(r){return r.cu==null?'미확보':(r.clb?'≥ ':'')+fmt(r.cu);}
+  function ratio(r){ if(r.ratio==null) return '—'; var p=Math.round(r.ratio*100); return (r.lb?'≤ ':'')+p+'%'; }
+
+  // theme
+  var root=document.documentElement;
+  try{var t=localStorage.getItem('rj-theme'); if(t) root.setAttribute('data-theme',t);}catch(e){}
+  document.getElementById('themeBtn').onclick=function(){
+    var dark = root.getAttribute('data-theme')==='dark' || (!root.getAttribute('data-theme') && matchMedia('(prefers-color-scheme: dark)').matches);
+    root.setAttribute('data-theme', dark?'light':'dark'); try{localStorage.setItem('rj-theme', dark?'light':'dark');}catch(e){}
+  };
+
+  // KPI
+  var n2 = rows.filter(function(r){return r.st!=='small'&&r.st!=='out';}).length;
+  var nCmp = rows.filter(function(r){return r.pv!=null && !(r.lb && r.ratio>=0.9);}).length;
+  var nDown = rows.filter(function(r){return r.ratio!=null && r.ratio<0.9;}).length;
+  document.getElementById('kpis').innerHTML =
+    '<div class="kpi"><div class="v">'+rows.length+'곳</div><div class="l">살펴본 후보</div></div>'+
+    '<div class="kpi"><div class="v">'+n2+'곳</div><div class="l">분야·규모(리뷰 300+) 통과</div></div>'+
+    '<div class="kpi"><div class="v">'+nDown+' / '+nCmp+'</div><div class="l">작년과 비교되는 곳 중 리뷰가 줄어든 곳</div></div>'+
+    '<div class="kpi"><div class="v">1 / 3</div><div class="l">분야 확정 (공예만)</div></div>';
+
+  // decision cards
+  var by = {}; rows.forEach(function(r){ by[r.n]=r; });
+  var DEC = [
+    {f:'공예', q:'정해졌어요. 기준을 모두 통과하고 올해 리뷰가 가장 많아요.', opts:[['제주유리삼촌','추천']]},
+    {f:'쿠킹', q:'기준 통과가 확인된 쿠킹 업체는 없어요. 화면 표기를 참고할 곳으로 고르면 돼요.', opts:[['토토아뜰리에','추천'],['레몬뮤지엄','대안']]},
+    {f:'감귤', q:'꽃귤만 기준 통과가 확인됐어요. 송정·제주에인은 작년 자료가 없어 1위를 못 정해요.', opts:[['제주송정농원','추천'],['꽃귤농장','대안'],['서귀포 제주에인감귤밭 카페','참고']]}
+  ];
+  var NOTE = {'토토아뜰리에':'처음 비교한 3곳 중 하나. 리뷰가 크게 줄었다는 사실을 함께 적기',
+              '레몬뮤지엄':'작년 자료 없음. 최근 6개월 140건',
+              '제주송정농원':'작년 최소 140 → 올해 252. 끝까지 못 세서 판정 불가',
+              '꽃귤농장':'34 → 31 (91%)로 기준 통과. 규모는 작음',
+              '서귀포 제주에인감귤밭 카페':'카페를 같이 해서 리뷰가 클래스만의 것이 아님',
+              '제주유리삼촌':'공예에서 기준을 모두 통과한 곳 중 올해 리뷰가 가장 많음'};
+  document.getElementById('dec').innerHTML = DEC.map(function(d){
+    return '<div class="dc"><div class="fh"><i style="background:'+FCOL[d.f]+'"></i><b>'+d.f+'</b></div><p class="q">'+d.q+'</p>'+
+      d.opts.map(function(o){ var r=by[o[0]]; var s=STL[r.st];
+        return '<button class="opt" data-n="'+esc(r.n)+'"><div class="nm">'+esc(r.n)+' <span class="tag rec">'+o[1]+'</span> <span class="tag '+s[1]+'">'+s[0]+'</span></div>'+
+          '<div class="nums">리뷰 '+fmt(r.rv)+' · 별점 '+(r.rt==null?'미표시':r.rt)+' · 5~10월 '+pv(r)+' → '+cu(r)+'</div>'+
+          '<div class="why">'+esc(NOTE[r.n]||r.why)+'</div></button>'; }).join('')+'</div>';
+  }).join('');
+
+  // shared state
+  var state = {fields:{'공예':true,'쿠킹':true,'감귤':true}, rj:true, sel:null, st:'all', q:'', sort:{k:'rv',dir:-1}};
+
+  // ---------- chart ----------
+  var svg=document.getElementById('chart'), tip=document.getElementById('tip'), NS='http://www.w3.org/2000/svg';
+  var W=680,H=460, L=132, R=20, T=20, B=48, LANE=58, MAX=460;
+  var x0=L, x1=W-R, y0=H-B, y1=T;
+  function sx(v){return x0+Math.sqrt(v/MAX)*(x1-x0);}
+  function sy(v){return y0-Math.sqrt(v/MAX)*(y0-y1);}
+  function el(n,a,p){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);(p||svg).appendChild(e);return e;}
+  var pts=[];
+  function drawChart(){
+    while(svg.lastChild && svg.lastChild.tagName!=='desc') svg.removeChild(svg.lastChild);
+    var ax=el('g',{'class':'ax'});
+    el('rect',{'class':'lane',x:x0-LANE-14,y:y1,width:LANE,height:y0-y1,rx:6});
+    var lt=el('text',{x:x0-LANE/2-14,y:y0+16,'text-anchor':'middle'},ax); lt.textContent='작년 미확보';
+    [0,10,50,100,200,300,400].forEach(function(v){
+      el('line',{x1:sx(v),x2:sx(v),y1:y1,y2:y0},ax); var tx=el('text',{x:sx(v),y:y0+16,'text-anchor':'middle'},ax); tx.textContent=v;
+      el('line',{x1:x0,x2:x1,y1:sy(v),y2:sy(v)},ax); var ty=el('text',{x:x0-LANE-20,y:sy(v)+4,'text-anchor':'end'},ax); ty.textContent=v;
+    });
+    var xl=el('text',{x:(x0+x1)/2,y:H-8,'text-anchor':'middle'},ax); xl.textContent='작년(2025) 5~10월 방문자 리뷰';
+    var yl=el('text',{x:14,y:(y0+y1)/2,'text-anchor':'middle',transform:'rotate(-90 14 '+((y0+y1)/2)+')'},ax); yl.textContent='올해(2026) 5~10월';
+    el('line',{'class':'ref',x1:sx(0),y1:sy(0),x2:sx(MAX),y2:sy(MAX)});
+    el('line',{'class':'ref d',x1:sx(0),y1:sy(0),x2:sx(MAX),y2:sy(MAX*0.9)});
+    var r1=el('text',{'class':'reflab',x:sx(330),y:sy(352)}); r1.textContent='작년과 같음';
+    var r2=el('text',{'class':'reflab',x:sx(392),y:sy(300)}); r2.textContent='작년의 90%';
+    pts=[];
+    var list = rows.filter(function(r){return r.cu!=null;}).map(function(r){return r;});
+    if(state.rj) list = list.concat(RJ.map(function(r){return Object.assign({rj:true},r);}));
+    var laneI=0;
+    list.forEach(function(r){
+      var inLane = r.pv==null;
+      var cx = inLane ? (x0-LANE/2-14) + (laneI++ % 3 -1)*14 : sx(r.pv);
+      var cy = sy(r.cu);
+      var g=el('g',{'class':'pt',tabindex:'0','data-n':r.n});
+      var col=FCOL[r.f];
+      if(r.lb) el('path',{'class':'lbarrow',d:'M'+(cx+7)+' '+cy+' h16 m-5 -4 l5 4 l-5 4',stroke:col},g);
+      if(r.clb) el('path',{'class':'lbarrow',d:'M'+cx+' '+(cy-7)+' v-16 m-4 5 l4 -5 l4 5',stroke:col},g);
+      if(r.rj) el('rect',{'class':'m',x:cx-6,y:cy-6,width:12,height:12,transform:'rotate(45 '+cx+' '+cy+')',fill:col},g);
+      else el('circle',{'class':'m',cx:cx,cy:cy,r:(r.pick||r.first3)?7.5:6,fill:col},g);
+      var show = r.rj || r.pick || r.first3 || r.st==='pick';
+      if(show){ var far = !inLane && cx > W-170; var tx=el('text',{'class':'plab',x:inLane?cx+12:(far?cx-10:cx+(r.lb?28:10)),y:cy-9,'text-anchor':far?'end':'start'},g);
+        tx.textContent = r.rj ? r.n.split(' (')[0] : r.n.replace('서귀포 ','').replace(' 카페',''); }
+      g.__r=r; pts.push(g);
+      g.addEventListener('mouseenter',function(e){showTip(r,e);});
+      g.addEventListener('mousemove',function(e){moveTip(e);});
+      g.addEventListener('mouseleave',hideTip);
+      g.addEventListener('focus',function(){var b=g.getBoundingClientRect();showTip(r,{clientX:b.left+b.width/2,clientY:b.top});});
+      g.addEventListener('blur',hideTip);
+      g.addEventListener('click',function(){ if(!r.rj) select(r.n,true); });
+    });
+    applyDim();
+  }
+  function tipHtml(r){
+    if(r.rj) return '<b>'+esc(r.n)+'</b><br>5~10월 '+r.pv+' → '+r.cu+'<br>참고용 (바꾸는 곳은 A)';
+    return '<b>'+esc(r.n)+'</b> · '+r.f+'<br>5~10월 '+pv(r)+' → '+cu(r)+(r.ratio!=null?' ('+ratio(r)+')':'')+'<br>'+STL[r.st][0]+' — '+esc(r.why);
+  }
+  var wrap=document.getElementById('chartwrap');
+  function showTip(r,e){tip.innerHTML=tipHtml(r);tip.style.opacity=1;moveTip(e);}
+  function moveTip(e){var b=wrap.getBoundingClientRect();var x=e.clientX-b.left+12,y=e.clientY-b.top+12;if(x+tip.offsetWidth>b.width)x=b.width-tip.offsetWidth-4;tip.style.left=x+'px';tip.style.top=y+'px';}
+  function hideTip(){tip.style.opacity=0;}
+  function applyDim(){
+    pts.forEach(function(g){var r=g.__r; var on = r.rj ? true : state.fields[r.f]!==false && (r.f in state.fields);
+      g.classList.toggle('dim', !on); g.classList.toggle('sel', state.sel===r.n); });
+  }
+
+  // chart filters + legend
+  var cf=document.getElementById('chartFilters');
+  cf.innerHTML = FIELDS.map(function(f){return '<button class="chip" aria-pressed="true" data-f="'+f+'"><i style="background:'+FCOL[f]+'"></i>'+f+'</button>';}).join('')+
+    '<button class="chip" aria-pressed="true" data-rj="1"><i style="background:var(--ink);border-radius:0;transform:rotate(45deg);width:9px;height:9px"></i>알제이 A·B</button>';
+  cf.addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;
+    if(b.dataset.rj){state.rj=!state.rj;b.setAttribute('aria-pressed',state.rj);drawChart();return;}
+    var f=b.dataset.f; state.fields[f]=!state.fields[f]; b.setAttribute('aria-pressed',state.fields[f]); applyDim(); });
+  document.getElementById('legend').innerHTML =
+    FIELDS.map(function(f){return '<span><i style="background:'+FCOL[f]+'"></i>'+f+'</span>';}).join('')+
+    '<span><i class="dia"></i>알제이 A·B (참고)</span><span><i class="line"></i>작년과 같음</span><span><i class="dash"></i>작년의 90% (기준 ③)</span>';
+
+  // ---------- table ----------
+  var tf=document.getElementById('tableFilters');
+  tf.innerHTML = '<button class="chip" aria-pressed="true" data-tf="all">전체</button>'+FIELDS.concat(['범위 밖']).map(function(f){return '<button class="chip" aria-pressed="false" data-tf="'+f+'">'+(FCOL[f]?'<i style="background:'+FCOL[f]+'"></i>':'')+f+'</button>';}).join('')+
+    '<select id="stSel" aria-label="결과로 거르기"><option value="all">결과: 전체</option><option value="meet">회의 후보만</option><option value="pick">선정</option><option value="hold">보류·후보</option><option value="fail">추이·별점 탈락</option><option value="small">규모 미달</option><option value="out">범위 밖</option></select>'+
+    '<input type="search" id="q" placeholder="업체 이름 찾기" aria-label="업체 이름 찾기">';
+  state.tf='all';
+  tf.addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return; state.tf=b.dataset.tf;
+    [].forEach.call(tf.querySelectorAll('.chip'),function(c){c.setAttribute('aria-pressed',c===b);}); renderTable();});
+  document.getElementById('stSel').onchange=function(){state.st=this.value;renderTable();};
+  document.getElementById('q').oninput=function(){state.q=this.value.trim();renderTable();};
+  var STORD={pick:0,hold:1,fail:2,small:3,out:4};
+  [].forEach.call(document.querySelectorAll('#tbl th'),function(th){th.onclick=function(){var k=th.dataset.k;
+    state.sort = state.sort.k===k ? {k:k,dir:-state.sort.dir} : {k:k,dir:(k==='n'||k==='f'||k==='why'||k==='st')?1:-1}; renderTable();};});
+  function val(r,k){ if(k==='st') return STORD[r.st]; var v=r[k]; return v==null?null:v; }
+  function renderTable(){
+    var list=rows.filter(function(r){
+      if(state.tf!=='all' && r.f!==state.tf) return false;
+      if(state.st==='meet' && !r.pick) return false;
+      if(state.st!=='all' && state.st!=='meet' && r.st!==state.st) return false;
+      if(state.q && r.n.indexOf(state.q)<0) return false;
+      return true; });
+    var k=state.sort.k, d=state.sort.dir;
+    list.sort(function(a,b){var x=val(a,k),y=val(b,k); if(x==null&&y==null) return 0; if(x==null) return 1; if(y==null) return -1;
+      return (typeof x==='string'? x.localeCompare(y,'ko') : x-y)*d;});
+    [].forEach.call(document.querySelectorAll('#tbl th'),function(th){th.setAttribute('aria-sort', th.dataset.k===k?(d>0?'ascending':'descending'):'none');});
+    document.querySelector('#tbl tbody').innerHTML = list.map(function(r){var s=STL[r.st];
+      return '<tr data-n="'+esc(r.n)+'"'+(state.sel===r.n?' class="sel"':'')+'><td><span class="fdot" style="background:'+(FCOL[r.f]||'var(--line)')+'"></span>'+esc(r.n)+
+        (r.pick?' <span class="tag rec">'+r.pick+'</span>':'')+(r.first3?' <span class="tag f3">처음 3곳</span>':'')+'</td>'+
+        '<td>'+esc(r.f)+'</td><td><span class="tag '+s[1]+'">'+s[0]+'</span></td>'+
+        '<td class="n">'+fmt(r.rv)+'</td><td class="n">'+(r.rt==null?'<span class="muted">미표시</span>':r.rt)+'</td>'+
+        '<td class="n">'+(r.pv==null?'<span class="muted">'+(r.st==='small'||r.st==='out'?'—':'미확보')+'</span>':pv(r))+'</td>'+
+        '<td class="n">'+(r.cu==null?'<span class="muted">'+(r.st==='small'||r.st==='out'?'—':'미확보')+'</span>':cu(r))+'</td>'+
+        '<td class="n">'+ratio(r)+'</td><td class="small">'+esc(r.why)+'</td></tr>';}).join('');
+    document.getElementById('cnt').textContent = list.length+'곳 표시 중 · 전체 '+rows.length+'곳';
+  }
+  document.querySelector('#tbl tbody').addEventListener('click',function(e){var tr=e.target.closest('tr');if(tr) select(tr.dataset.n,false);});
+
+  // ---------- selection ----------
+  function select(n,scroll){
+    state.sel = state.sel===n ? null : n;
+    [].forEach.call(document.querySelectorAll('.opt'),function(o){o.classList.toggle('sel',o.dataset.n===state.sel);});
+    applyDim(); renderTable(); renderDetail();
+    if(scroll && state.sel){var tr=document.querySelector('#tbl tr[data-n="'+CSS.escape(n)+'"]'); if(tr) tr.scrollIntoView({block:'center',behavior:'smooth'});}
+  }
+  document.getElementById('dec').addEventListener('click',function(e){var o=e.target.closest('.opt');if(!o)return; select(o.dataset.n,false);
+    if(state.sel){ document.getElementById('chart').scrollIntoView({block:'center',behavior:'smooth'}); }});
+  function renderDetail(){
+    var box=document.getElementById('detail'); var r=state.sel&&by[state.sel];
+    if(!r){box.classList.remove('on');box.innerHTML='';return;}
+    var s=STL[r.st];
+    box.innerHTML='<h3>'+esc(r.n)+' <span class="tag '+s[1]+'">'+s[0]+'</span>'+(r.pick?' <span class="tag rec">회의 '+r.pick+'</span>':'')+'</h3>'+
+      '<dl><dt>분야 · 지역</dt><dd>'+esc(r.f)+' · '+esc(r.reg||'—')+'</dd>'+
+      '<dt>방문자 리뷰 · 별점</dt><dd>'+fmt(r.rv)+' · '+(r.rt==null?'미표시':r.rt)+'</dd>'+
+      '<dt>5~10월 리뷰</dt><dd>작년 '+pv(r)+' → 올해 '+cu(r)+(r.ratio!=null?' ('+ratio(r)+')':'')+'</dd>'+
+      '<dt>결과 이유</dt><dd>'+esc(r.why)+'</dd>'+
+      '<dt>네이버 예약</dt><dd>'+esc(r.book||'—')+'</dd>'+
+      '<dt>소규모 손님 위주</dt><dd>'+esc(r.small||'—')+' <span class="muted">(노션 기준 판정, 약한 기준)</span></dd>'+
+      (r.id?'<dt>플레이스</dt><dd><a href="https://m.place.naver.com/place/'+esc(r.id)+'/home" target="_blank" rel="noopener">네이버에서 열기</a></dd>':'')+'</dl>';
+    box.classList.add('on');
+  }
+
+  drawChart(); renderTable();
+})();
+</script>
+</body>
+</html>
