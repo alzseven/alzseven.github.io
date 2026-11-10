@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>한 바퀴 v2</title>
+<style>
+:root{
+  --bg:#e9e7e2; --paper:#fbfaf7; --ink:#1f2328; --sub:#5b6168; --line:#dcd8d0;
+  --accent:#e0782b; --accent-soft:#fbe9db; --ok:#2f7d5b; --ok-soft:#e3f1ea;
+  --warn:#b54a3c; --warn-soft:#f6e1dd; --blue:#2c5d8f; --blue-soft:#e2ebf4;
+  --mute:#9aa0a6;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);
+  font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;}
+#stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.slide{position:absolute;width:1280px;height:720px;background:var(--paper);border-radius:6px;
+  box-shadow:0 10px 40px rgba(0,0,0,.12);padding:56px 72px 48px;display:none;transform-origin:center center}
+.slide.on{display:block}
+.kicker{font-size:15px;font-weight:700;color:var(--accent);letter-spacing:.02em;margin-bottom:10px}
+h1{font-size:36px;line-height:1.3;margin:0 0 22px;font-weight:800;letter-spacing:-.02em}
+h2{font-size:21px;margin:0 0 10px;font-weight:700}
+p,li{font-size:19px;line-height:1.6}
+.sub{color:var(--sub)}
+.small{font-size:15px;color:var(--sub);line-height:1.5}
+.foot{position:absolute;left:72px;right:72px;bottom:22px;display:flex;justify-content:space-between;font-size:13px;color:var(--mute)}
+.row{display:flex;gap:22px}
+.col{flex:1}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.card h2{font-size:18px}
+.tag{display:inline-block;font-size:13px;font-weight:700;padding:3px 9px;border-radius:99px;margin-right:6px}
+.t-ok{background:var(--ok-soft);color:var(--ok)} .t-warn{background:var(--warn-soft);color:var(--warn)}
+.t-acc{background:var(--accent-soft);color:var(--accent)} .t-blue{background:var(--blue-soft);color:var(--blue)}
+.t-mute{background:#eee;color:#666}
+table{border-collapse:collapse;width:100%;font-size:16px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:14px;color:var(--sub);font-weight:700;background:#f4f2ed}
+td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.hl{background:#fff6ee}
+.big{font-size:44px;font-weight:800;letter-spacing:-.02em}
+.callout{border-left:5px solid var(--accent);padding:12px 18px;background:var(--accent-soft);border-radius:0 8px 8px 0;font-size:19px;line-height:1.55}
+.callout.blue{border-color:var(--blue);background:var(--blue-soft)}
+.arrow{font-size:30px;color:var(--mute);align-self:center}
+.ph{color:var(--blue);font-weight:700}
+/* bars */
+.bar{display:flex;align-items:center;gap:10px;margin:7px 0;font-size:16px}
+.bar .lbl{width:150px;color:var(--sub)}
+.bar .b{height:22px;background:var(--accent);border-radius:3px}
+.bar .v{font-variant-numeric:tabular-nums;font-weight:700}
+/* phone mock */
+.phones{display:flex;gap:34px;justify-content:center;margin-top:4px}
+.ph-wrap{display:flex;flex-direction:column;align-items:center}
+.ph-label{font-size:15px;font-weight:800;margin-bottom:6px}
+.mk{display:inline-flex;width:17px;height:17px;border-radius:50%;background:var(--warn);color:#fff;font-size:10.5px;font-weight:800;align-items:center;justify-content:center;margin-left:4px;vertical-align:middle;box-shadow:0 0 0 2px #fff}
+.phone{width:300px;height:478px;border:10px solid #222;border-radius:30px;background:#fff;overflow:hidden;position:relative;font-size:12.5px;line-height:1.45}
+.phone .bar0{height:30px;background:#03c75a;color:#fff;font-weight:800;font-size:12px;display:flex;align-items:center;padding:0 12px}
+.phone .body{padding:10px 12px}
+.pt{font-size:14px;font-weight:800;margin:2px 0 6px;line-height:1.35}
+.grey{height:8px;background:#e6e6e6;border-radius:4px;margin:5px 0}
+.chips{display:flex;flex-wrap:wrap;gap:4px;margin:4px 0 8px}
+.chip{font-size:11px;font-weight:700;padding:2px 7px;border-radius:5px;background:#eef6f1;color:#1b7a47}
+.chip.q{background:var(--blue-soft);color:var(--blue)}
+.sec{border-top:1px solid #eee;padding-top:6px;margin-top:6px}
+.sec b{font-size:12px}
+.mini{font-size:11.5px;color:#444}
+.box{background:#fff8ef;border:1px solid #f1d9bf;border-radius:8px;padding:7px 9px;margin:6px 0}
+.mark{position:absolute;width:22px;height:22px;border-radius:50%;background:var(--warn);color:#fff;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 3px #fff}
+.legend{font-size:14px;line-height:1.6;color:var(--ink);max-width:300px}
+.legend .n{display:inline-flex;width:18px;height:18px;border-radius:50%;background:var(--warn);color:#fff;font-size:11px;font-weight:800;align-items:center;justify-content:center;margin-right:6px}
+.dim{opacity:.55}
+.notes{display:none;position:fixed;left:50%;bottom:10px;transform:translateX(-50%);width:min(1100px,94vw);background:#22262b;color:#f2f2f2;font-size:15px;line-height:1.55;padding:12px 16px;border-radius:8px;z-index:5}
+body.shownotes .notes.on{display:block}
+#hud{position:fixed;right:14px;top:10px;font-size:12px;color:#777;z-index:6}
+#prog{position:fixed;left:0;top:0;height:3px;background:var(--accent);z-index:6;transition:width .2s}
+</style>
+</head>
+<body>
+<div id="prog"></div>
+<div id="hud">← → 이동 · N 메모 · F 전체화면</div>
+<div id="stage">
+
+<!-- 1 -->
+<section class="slide" data-note="혼자 보는 시험판. 팀 합의본 아님. 근거와 주의는 발표흐름_한바퀴_v2_2026-11-10.md.">
+  <div style="margin-top:150px">
+    <div class="kicker">알제이웍스 × 옐로우자몽 · 중간발표 시험판 v2</div>
+    <h1 style="font-size:46px">개인 손님이 찾고, 고르고,<br>예약할 수 있게</h1>
+    <p class="sub">알제이웍스 네이버 플레이스 예약 활성화 — 두 이용 상황으로 따라가 본 진단과 개선 시안</p>
+  </div>
+  <div class="foot"><span>2026-11-10 · 준형</span><span>1</span></div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-note="'소규모가 왜 적게 오나'는 질문으로 세우지 않는다. 데이터가 없어 답할 수 없다.">
+  <div class="kicker">과제</div>
+  <h1>회사의 세 요구를 두 질문으로 바꿨다</h1>
+  <div class="row" style="align-items:stretch;margin-top:10px">
+    <div class="col card">
+      <h2>기업 요구사항</h2>
+      <ol style="margin:6px 0 0 18px;padding:0">
+        <li>개인·소규모 관광객의 예약 결정 요인 분석</li>
+        <li>제주 유사 체험업체 벤치마킹</li>
+        <li>개인·소규모 예약 활성화 방안</li>
+      </ol>
+    </div>
+    <div class="arrow">→</div>
+    <div class="col card">
+      <h2>우리가 답할 질문</h2>
+      <p style="margin:6px 0"><span class="tag t-blue">찾기</span>손님이 검색에서 알제이웍스를 찾을 수 있나</p>
+      <p style="margin:6px 0"><span class="tag t-acc">고르기</span>찾은 뒤 맞는 체험을 고르고 예약할 수 있나</p>
+    </div>
+  </div>
+  <div class="callout" style="margin-top:28px">개인 예약을 늘리기 위해, <b>검색에서 보이는 접점의 예약 경로를 정리</b>하고,<br><b>대표 상품의 내용·총액·참여 조건을 고르기 전에 이해</b>할 수 있도록 바꾸겠습니다.</div>
+  <div class="foot"><span>기업 요구사항</span><span>2</span></div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-note="'80% 단체'는 쓰지 않는다. 녹취의 80%는 도외 관광객 비중(면담:337-339)과 스마트플레이스 비중(면담:30). 11/5 필드에서 따로 들은 말이면 출처를 달고 쓴다.">
+  <div class="kicker">현황</div>
+  <h1>단체 중심으로 운영돼 왔고,<br>회사는 개인 손님을 알제이웍스로 키우려 한다</h1>
+  <div class="row">
+    <div class="col card"><div class="small">단체</div><div class="big">50~150명</div><div class="small">한 번에 진행 (밋업 07:06)</div></div>
+    <div class="col card"><div class="small">개인 팀</div><div class="big">하루 2~3팀</div><div class="small">주말 7~8팀 · 한 팀 2~6명<br>커플·가족·소규모 팀 각 약 30% (밋업 17:31~17:49)</div></div>
+    <div class="col card"><div class="small">개인 손님 유입</div><div class="big">80~90%</div><div class="small">네이버로 들어온다 (밋업 18:34)</div></div>
+  </div>
+  <div class="callout blue" style="margin-top:24px">"방향은 저희가 알제이웍스로 더 뻗어 나갈 거기 때문에…" — 팀장, 11/4 면담 05:48</div>
+  <div class="foot"><span>밋업 11/3 · 면담 11/4 녹취</span><span>3</span></div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-note="두 상황은 우선 검증할 이용 상황이다. '커플이 30%'를 '성인 전체'로 넓히거나 타깃 비중을 주장하지 않는다.">
+  <div class="kicker">구조와 두 장면</div>
+  <h1>알제이로 들어오는 문은 셋이다</h1>
+  <div class="row">
+    <div class="col card" style="border-top:5px solid var(--accent)">
+      <span class="tag t-acc">A</span><b>알제이웍스 플레이스</b>
+      <p class="small" style="margin:8px 0 0">선결제·바로 확정 · 상품 17개<br><b>회사가 키우려는 곳</b></p>
+    </div>
+    <div class="col card">
+      <span class="tag t-mute">B</span><b>알제이 플레이스</b>
+      <p class="small" style="margin:8px 0 0">현장 결제·업체 확정 · 상품 19개<br>단체·기관 예약도 받음 · 리뷰가 더 많음</p>
+    </div>
+    <div class="col card">
+      <span class="tag t-mute">C</span><b>검색 '프로그램' 카드</b>
+      <p class="small" style="margin:8px 0 0">체험 9종 · 별도 예약 주소<br>(<code>bizes/1578517</code>, A는 <code>1592434</code>)</p>
+    </div>
+  </div>
+  <h2 style="margin-top:28px">이 발표는 두 장면으로 따라간다</h2>
+  <div class="row">
+    <div class="col card"><span class="tag t-blue">상황 1</span><b>성인 2명이 도마 체험을 고른다</b><p class="small" style="margin:6px 0 0">회사가 키우려는 성인 주력 상품</p></div>
+    <div class="col card"><span class="tag t-blue">상황 2</span><b>아이와, 체험하지 않는 보호자가 피자 체험을 고른다</b><p class="small" style="margin:6px 0 0">어린이 주력 상품 · 보호자 조건이 핵심</p></div>
+  </div>
+  <div class="foot"><span>밋업 K-01~05 · 상품사실표 · 팀장 인터뷰(주력 체험)</span><span>4</span></div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-note="원래 핵심 문제 1줄 '유입이 유의미하지 않다'는 양에 대한 주장이라 근거가 없다. 이 두 줄은 화면으로 보여 줄 수 있다.">
+  <div class="kicker">문제 정의</div>
+  <h1>두 가지가 막혀 있다</h1>
+  <div class="card" style="margin-bottom:16px;border-left:6px solid var(--blue)">
+    <span class="tag t-blue">찾기</span>
+    <p style="margin:8px 0 0;font-size:24px;line-height:1.45"><b>회사가 정한 방향(알제이웍스)과 검색에서 보이는 모습(알제이·프로그램 카드)이 다르다.</b></p>
+  </div>
+  <div class="card" style="border-left:6px solid var(--accent)">
+    <span class="tag t-acc">고르기</span>
+    <p style="margin:8px 0 0;font-size:24px;line-height:1.45"><b>대표 상품의 내용·총액·참여 조건을 고르기 전에 알기 어렵고, 같은 상품 안에서도 설명이 서로 다르다.</b></p>
+  </div>
+  <p class="small" style="margin-top:20px">근거: 6장(검색) · 7~9장(선택·예약)</p>
+  <div class="foot"><span>문제 정의</span><span>5</span></div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-note="'30위 밖'이라고 하지 않는다. 읽은 범위(8~19개)만 말한다. 조사 위치는 제주 밖(거리 470km 표시). B·C 예약이 회사 안에서 어디로 잡히는지는 확인 중.">
+  <div class="kicker">진단 ① 찾기</div>
+  <h1>검색에서 주로 보이는 건 A가 아니라 B와 C였다</h1>
+  <table>
+    <tr><th>검색어</th><th style="text-align:right">월 검색량</th><th>보인 알제이 (장소·프로그램 영역)</th></tr>
+    <tr class="hl"><td>제주 도마 만들기</td><td class="num">20</td><td><span class="tag t-acc">A</span> 장소 3번째 (화면 이름은 '알제이')</td></tr>
+    <tr><td>제주 공방 체험</td><td class="num">170</td><td><span class="tag t-mute">B</span> 장소 5번째</td></tr>
+    <tr><td>애월 체험</td><td class="num">130</td><td><span class="tag t-mute">B</span> 장소 8번째 · <span class="tag t-mute">C</span> 프로그램 10개 중 6개</td></tr>
+    <tr><td>제주 피자 만들기 체험</td><td class="num">50</td><td><span class="tag t-mute">C</span> 프로그램 1번째</td></tr>
+    <tr><td>제주 쿠킹클래스</td><td class="num">360</td><td><span class="tag t-mute">C</span> 프로그램 2번째 (스무디 카드)</td></tr>
+    <tr><td class="sub">원데이클래스 · 실내 체험 · 아이랑 체험 · 이색 체험 · 실내데이트 · 제주 체험</td><td class="num sub">240~1,780</td><td class="sub">읽은 범위(8~19개) 안에 없음</td></tr>
+  </table>
+  <p class="small" style="margin-top:12px">W18 · 2026-11-09 23:27~23:32 · 모바일 검색 주소 · 비로그인 · 광고 포함 카드 순서 · 검색량은 키워드 도구 PC+모바일 합계</p>
+  <div class="foot"><span>research/W18_검색재관측_2026-11-10</span><span>6</span></div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-note="설문 응답자 33/37은 6명 이상 일행. '기존 방문객에게서 나온 요구'로 말하고, 소규모 손님에게도 같은지는 별도 점검으로 둔다.">
+  <div class="kicker">진단 ② 고르기</div>
+  <h1>기존 방문객은 내용·시간·가격을 먼저 물었다<br>— 알제이웍스에서는 셋 다 늦게 보인다</h1>
+  <div class="row">
+    <div class="col">
+      <div class="small" style="margin-bottom:6px">예약 전 가장 궁금했던 정보 (최대 3개, n=37)</div>
+      <div class="bar"><span class="lbl">체험 내용·난이도</span><span class="b" style="width:240px"></span><span class="v">24</span></div>
+      <div class="bar"><span class="lbl">소요시간</span><span class="b" style="width:180px"></span><span class="v">18</span></div>
+      <div class="bar"><span class="lbl">가격과 추가 비용</span><span class="b" style="width:100px"></span><span class="v">10</span></div>
+      <div class="bar"><span class="lbl">아이 참여 연령</span><span class="b" style="width:60px;opacity:.6"></span><span class="v">6</span></div>
+      <div class="bar"><span class="lbl">결과물 가져가나</span><span class="b" style="width:30px;opacity:.6"></span><span class="v">3</span></div>
+      <p class="small" style="margin-top:10px">응답자 대부분(33명)이 6명 이상 일행. 소규모 손님도 같은지는 따로 점검한다.</p>
+    </div>
+    <div class="col card">
+      <h2>알제이웍스에서 처음 보이는 곳 <span class="small">(17개 전부, 11/8 폰)</span></h2>
+      <p style="margin:6px 0"><b>가격</b> — 날짜·시간을 고른 뒤 옵션에서 <span class="small">(알제이는 목록에 가격)</span></p>
+      <p style="margin:6px 0"><b>시간</b> — 접힌 설명 안 · 50분 / 60분 / 1시간이 화면마다 다름</p>
+      <p style="margin:6px 0"><b>내용·결과물</b> — 상세 본문 아래쪽</p>
+      <p style="margin:6px 0"><b>참여 규칙</b> — 1인 1체험·보호자 무료가 규칙으로 안 보임 → 같은 질문이 전화로 온다</p>
+    </div>
+  </div>
+  <div class="foot"><span>설문 원자료 11/5~7 · 진단 N1·N4</span><span>7</span></div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-note="어느 값이 맞는지는 회사 기준. '오류'로 단정하지 않고 '서로 다르다'로 말한다. 이 정리가 모든 개선안의 전제.">
+  <div class="kicker">진단 ③ 고르기</div>
+  <h1>같은 상품 안에서도 설명이 서로 다르다</h1>
+  <div class="row" style="flex-wrap:wrap">
+    <div class="card" style="width:calc(50% - 11px)"><h2>선택 체험 목록</h2><p class="small">패키지 4개 모두 본문의 선택 체험 목록과 옵션 목록이 다르다. 샴푸바는 옵션에만 있다.</p></div>
+    <div class="card" style="width:calc(50% - 11px)"><h2>몇 개를 고르나</h2><p class="small">"체험 2가지" 패키지의 상세정보에 "하나를 골라보세요"가 함께 있다.</p></div>
+    <div class="card" style="width:calc(50% - 11px)"><h2>피자 메뉴</h2><p class="small">본문은 4가지(우도 땅콩 포함), 실제 옵션은 3가지다.</p></div>
+    <div class="card" style="width:calc(50% - 11px)"><h2>화면이 규칙을 막지 않는다</h2><p class="small">회사 규칙은 1인 1체험인데, 2명·1개로 35,000원 결제 직전까지 안내 없이 진행된다. "체험 2가지"에서 3개를 골라도 합계가 같다.</p></div>
+  </div>
+  <div class="callout" style="margin-top:18px">값을 위로 올리기 전에, 회사가 정답을 정하고 제목·본문·옵션을 한 줄로 맞춰야 한다.</div>
+  <div class="foot"><span>진단 N3·N7 · 11/8 폰 전수 확인</span><span>8</span></div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-note="회사 근거(반복 문의·소개 문구)와 탐색 단서(2명 반응)를 같은 무게로 합치지 않는다. 사진은 근거로 쓰지 않는다 — A 첫 사진 4장은 도마 완성품이다.">
+  <div class="kicker">진단 ④ 고르기</div>
+  <h1>일행끼리 어떻게 이용하는지 설명이 필요하다</h1>
+  <div class="row">
+    <div class="col card" style="border-top:5px solid var(--ink)">
+      <span class="tag t-ok">회사 근거</span>
+      <p style="margin:10px 0 6px"><b>반복 문의</b> — "다른 체험 골라도 되나요", "다 같이 모여서 시작하나요" <span class="small">(면담 152~159)</span></p>
+      <p style="margin:6px 0"><b>소개 둘째 문단</b> — "최대 150명" 수용 규모를 강조 <span class="small">(진단 D6)</span></p>
+      <p style="margin:6px 0"><b>실제 운영</b> — 일행별 테이블, 쿠킹 구역·공예 구역이 한 공간에 <span class="small">(면담·필드)</span></p>
+    </div>
+    <div class="col card dim" style="opacity:.85">
+      <span class="tag t-mute">탐색 단서 · 2명</span>
+      <p style="margin:10px 0 6px">커플로 가정: "규모가 커 보인다", "시끄러울 것 같다", "1:1로 가능한가"</p>
+      <p style="margin:6px 0">친구로 가정: "공간은 괜찮다", "도마랑 음식 만들기를 같이 한다고요?"</p>
+      <p class="small" style="margin-top:8px">도민 교육생 2명 · 11/9 · 추가 점검 예정</p>
+    </div>
+  </div>
+  <div class="callout blue" style="margin-top:20px">회사는 이미 "일행별 진행"으로 운영한다. 화면이 그걸 말하지 않을 뿐이다.</div>
+  <div class="foot"><span>면담 11/4 · 진단 D6 · 11/9 반응</span><span>9</span></div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-note="혜지 자료의 혼선 7가지는 B창(알제이) 기준이다. A 진단과 섞지 않는다.">
+  <div class="kicker">벤치마킹</div>
+  <h1>비교 업체는 "누가, 무엇을, 몇 개, 얼마에"를<br>맨 위에서 먼저 알려 준다</h1>
+  <div class="row">
+    <div class="col card"><h2>토토아뜰리에</h2><p class="small">상품명에 <b>대상 연령과 결과물</b>. 위쪽에 가격·시간·연령. "참여자마다 메뉴 하나, 동행끼리 다른 메뉴 가능."</p><p class="small"><b>→ 7·9장</b> 규칙과 판단 정보를 위로</p></div>
+    <div class="col card"><h2>메모아</h2><p class="small">상품명에 <b>완성품 용량</b>. 1인 가격이 바로 합계로 보인다.</p><p class="small"><b>→ 7장</b> 무엇을 가져가나 · 총액</p></div>
+    <div class="col card"><h2>하이파이브제주</h2><p class="small"><b>아이 체험과 보호자 이용 조건</b>을 따로 안내한다. 옵션 설명에 적용 인원을 적는다.</p><p class="small"><b>→ 상황 2</b> 보호자 조건</p></div>
+  </div>
+  <p class="small" style="margin-top:18px">따라 하지 않을 것: 비교 업체도 상단·본문 시간이 다른 곳이 있다. 항목 구조만 가져오고, 알제이는 값부터 통일한다.</p>
+  <div class="foot"><span>혜지 벤치마킹 11/8</span><span>10</span></div>
+</section>
+
+<!-- 11 -->
+<section class="slide" data-note="파란 { }는 회사 확인 전 값. 도마를 둘이 한 작품으로 만들 수 있는지, 직접 하는 과정, 최소 연령은 회사 확인. 가격은 11/8 폰 옵션값.">
+  <div class="kicker">개선 시안 · 상황 1</div>
+  <h1 style="font-size:30px;margin-bottom:12px">성인 2명이 도마를 고를 때</h1>
+  <div class="phones">
+    <div class="ph-wrap">
+      <div class="ph-label">지금</div>
+      <div class="phone">
+        <div class="bar0">예약 · 알제이웍스</div>
+        <div class="body">
+          <div class="pt">제주 숲 한 조각, 프리미엄 원목 도마 체험<span class="mk">1</span></div>
+          <div class="grey" style="width:92%"></div><div class="grey" style="width:70%"></div>
+          <div class="mini" style="color:#999;margin:6px 0">휴무 안내 · 설명 2줄</div>
+          <div class="sec"><b>날짜 · 시간 선택</b><div class="grey" style="width:80%"></div></div>
+          <div class="sec"><b>옵션</b><span class="mk">2</span>
+            <div class="mini">소 43,000 · 중 63,000 · 대 100,000원</div>
+            <div class="mini">+감귤 1kg·음료 54,000 / 74,000 / 110,000원</div>
+          </div>
+          <div class="sec"><b>상세 설명 ▾</b><span class="mk">3</span><div class="grey" style="width:90%"></div><div class="grey" style="width:60%"></div></div>
+          <div class="sec mini" style="color:#999">따로 있는 상품: [커플패키지] 도마체험小+체험선택1+감귤1kg+음료2<span class="mk">4</span></div>
+          <div class="sec mini" style="color:#999">유의사항 · 보호자 동반 · 무료 동행 (맨 아래)</div>
+        </div>
+      </div>
+    </div>
+    <div class="legend" style="align-self:center">
+      <p style="margin:0 0 8px"><span class="n">1</span>가격·시간이 제목 근처에 없다</p>
+      <p style="margin:0 0 8px"><span class="n">2</span>날짜를 고른 뒤에야 가격이 보인다</p>
+      <p style="margin:0 0 8px"><span class="n">3</span>무엇을 하고 무엇을 가져가는지는 접힌 설명 안</p>
+      <p style="margin:0 0 8px"><span class="n">4</span>둘이 각자 만드는지, 커플 패키지와 뭐가 다른지 비교하려면 상품을 여러 개 열어야 한다</p>
+    </div>
+    <div class="ph-wrap">
+      <div class="ph-label" style="color:var(--ok)">시안</div>
+      <div class="phone">
+        <div class="bar0">예약 · 알제이웍스</div>
+        <div class="body">
+          <div class="pt">[애월 원데이클래스] 제주 원목 도마 만들기</div>
+          <div class="chips"><span class="chip">1인 1작품</span><span class="chip">소 43,000원~</span><span class="chip">약 1시간 30분</span><span class="chip q">{○}세부터</span></div>
+          <div class="mini"><b>직접 하는 것</b> <span class="ph">{원목 고르기 → 다듬기 → 마감}</span></div>
+          <div class="mini"><b>가져가는 것</b> 내가 만든 원목 도마 1개 (소·중·대)</div>
+          <div class="box mini">
+            <b>둘이 오면</b><br>
+            · 각자 1개씩: 소 2개 <b>86,000원</b><br>
+            · 커플 패키지: 도마 小 1 + 다른 체험 1 + 감귤 1kg + 음료 2 <b>85,000원</b><br>
+            <span class="ph">{둘이 한 작품으로 만들 수 있는지}</span>
+          </div>
+          <div class="mini" style="margin-top:6px">✓ 우리 일행끼리, 일행 테이블에서 진행해요<br>✓ 공예 구역에서 만들어요 · 체험 안 하는 분은 무료 입장</div>
+          <div class="sec"><b>날짜 · 시간 선택</b><div class="grey" style="width:80%"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>P14·P03 상품사실(11/8 폰) · 면담 152~159 · <span class="ph">{ }</span> = 회사 확인 전</span><span>11</span></div>
+</section>
+
+<!-- 12 -->
+<section class="slide" data-note="1인 1판·보호자 무료는 면담에서 들은 규칙. 최소 연령·미취학 비용·포장 여부·아이가 직접 하는 단계는 회사 확인. 우도 땅콩은 옵션에 없으니 시안에서 뺐다.">
+  <div class="kicker">개선 시안 · 상황 2</div>
+  <h1 style="font-size:30px;margin-bottom:12px">아이와 보호자가 피자를 고를 때</h1>
+  <div class="phones">
+    <div class="ph-wrap">
+      <div class="ph-label">지금</div>
+      <div class="phone">
+        <div class="bar0">예약 · 알제이웍스</div>
+        <div class="body">
+          <div class="pt">현무암 수제 피자 만들기 체험<span class="mk">1</span></div>
+          <div class="grey" style="width:88%"></div><div class="grey" style="width:64%"></div>
+          <div class="mini" style="color:#999;margin:6px 0">휴무 안내 · 설명 2줄 · 연령 표시 없음</div>
+          <div class="sec"><b>날짜 · 시간 선택</b><div class="grey" style="width:80%"></div></div>
+          <div class="sec"><b>옵션</b><span class="mk">3</span><div class="mini">메뉴 3가지 · 30,000 / 35,000원 · 수량</div></div>
+          <div class="sec"><b>상세 설명 ▾</b><span class="mk">2</span><div class="mini" style="color:#999">본문 메뉴 4가지 (우도 땅콩 포함)</div></div>
+          <div class="sec mini" style="color:#999">유의사항 · "아이 체험시 보호자 동반 필수" · "체험 인원 외 무료 동행" (맨 아래)<span class="mk">4</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="legend" style="align-self:center">
+      <p style="margin:0 0 8px"><span class="n">1</span>몇 살부터 되는지, 얼마인지가 위에 없다</p>
+      <p style="margin:0 0 8px"><span class="n">2</span>본문은 메뉴 4가지, 고를 수 있는 건 3가지</p>
+      <p style="margin:0 0 8px"><span class="n">3</span>아이 둘이 한 판을 같이 하는지(1인 1판) 알 수 없다</p>
+      <p style="margin:0 0 8px"><span class="n">4</span>보호자는 무료라는 게 맨 아래 공통 안내에만 있다</p>
+    </div>
+    <div class="ph-wrap">
+      <div class="ph-label" style="color:var(--ok)">시안</div>
+      <div class="phone">
+        <div class="bar0">예약 · 알제이웍스</div>
+        <div class="body">
+          <div class="pt">[아이랑 쿠킹클래스] 현무암 수제 피자 만들기</div>
+          <div class="chips"><span class="chip">1인 1판</span><span class="chip">30,000원</span><span class="chip">약 1시간</span><span class="chip q">{○}세부터</span></div>
+          <div class="mini"><b>메뉴 3가지</b> 감귤 오메기 · 고르곤졸라 30,000원 / 흑돼지 페퍼로니 35,000원</div>
+          <div class="mini"><b>아이가 직접 하는 것</b> <span class="ph">{반죽 펴기 · 토핑 올리기}</span></div>
+          <div class="mini"><b>가져가는 것</b> 구운 피자 1판 <span class="ph">{포장 가능 여부}</span></div>
+          <div class="box mini">
+            <b>아이 2명 + 보호자 2명이면</b><br>
+            · 피자 2판 <b>60,000원</b> (감귤 오메기 기준)<br>
+            · 보호자는 <b>무료 입장</b>, 카페 이용 가능<br>
+            · 미취학 아이는 보호자와 함께 <span class="ph">{비용}</span><br>
+            <span class="small" style="font-size:11px">가족 패키지(피자 2 + 다른 체험 2 + 음료 4) 125,000원</span>
+          </div>
+          <div class="sec"><b>날짜 · 시간 선택</b><div class="grey" style="width:80%"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>P08·P05 상품사실(11/8 폰) · 면담 152~157 · <span class="ph">{ }</span> = 회사 확인 전</span><span>12</span></div>
+</section>
+
+<!-- 13 -->
+<section class="slide" data-note="네이버는 순위 가중치를 공개하지 않는다. 대표 키워드 5개를 넣는다고 순위가 오른다는 근거도 없다(W4). 순위는 약속하지 않고 다시 재서 확인한다.">
+  <div class="kicker">개선 · 찾기</div>
+  <h1>두 상품이 그 상황의 검색어에 걸리게 하고,<br>보이는 문의 경로를 정리한다</h1>
+  <table style="margin-bottom:14px">
+    <tr><th>상황</th><th>상품</th><th>노릴 검색어 (월)</th><th>지금 (W18)</th></tr>
+    <tr><td>성인 2명</td><td>원목 도마</td><td>제주 원데이클래스 970 · 제주 실내데이트 400</td><td class="sub">A 안 보임 · 토토는 광고 / 4번째</td></tr>
+    <tr><td>아이와 보호자</td><td>현무암 피자</td><td>제주 쿠킹클래스 360 · 제주 아이랑 체험 240</td><td class="sub">A 안 보임 · C는 스무디 카드가 2번째</td></tr>
+  </table>
+  <div class="row">
+    <div class="col card"><span class="tag t-blue">F1</span><b>이름과 첫 문장</b><p class="small" style="margin:6px 0 0">대표 키워드·상품명·소개 첫 문장에 손님이 쓰는 말을, 실제 제공 범위 안에서 넣는다.</p></div>
+    <div class="col card"><span class="tag t-blue">F3</span><b>프로그램 카드</b><p class="small" style="margin:6px 0 0">검색에서 가장 많이 보이는 C 카드의 제목·가격·시간·연령을 A 상품과 같은 값으로 맞춘다.</p></div>
+    <div class="col card"><span class="tag t-blue">F0</span><b>예약 경로 안내</b><p class="small" style="margin:6px 0 0">회사가 개인 예약을 받을 곳을 정하면, B·C에 "개인 예약은 알제이웍스에서 바로 확정"을 붙인다. <span class="ph">{C 예약이 어디로 잡히는지}</span></p></div>
+  </div>
+  <p class="small" style="margin-top:12px">검색어와 업체 정보가 맞아야 그 검색의 후보가 된다. 순위는 약속하지 않고, 같은 조건으로 다시 재서 확인한다.</p>
+  <div class="foot"><span>키워드 도구 11/9 · W18 · W4 네이버 정책</span><span>13</span></div>
+</section>
+
+<!-- 14 -->
+<section class="slide" data-note="검색량은 검토할 이유일 뿐, 예약 규모나 손실을 증명하지 않는다. '지금이 가장 손해'라고 말하지 않는다.">
+  <div class="kicker">추가 기회 · 회사 결정 과제</div>
+  <h1>감귤 상품을 어디서 팔지는 회사가 정할 일이다</h1>
+  <div class="row">
+    <div class="col card"><div class="small">제주 감귤 체험</div><div class="big">10,800</div><div class="small">월 검색 (11/5)</div></div>
+    <div class="col card"><div class="small">제주 귤따기 체험</div><div class="big">9,780</div><div class="small">월 검색 (11/5)</div></div>
+    <div class="col card"><div class="small">알제이웍스 17개 중 귤따기</div><div class="big">0개</div><div class="small">알제이에만 "귤 따기(4인 이상)"</div></div>
+  </div>
+  <p class="sub" style="margin:16px 0">"겨울 체험으로는 감귤 체험이 제일 1등" — 대표, 11/3 밋업 · W18에서 두 검색어 장소 15~19개 안에 알제이 없음</p>
+  <div class="row">
+    <div class="col card"><span class="tag t-acc">(가)</span><b>알제이웍스에서 판다</b><p class="small" style="margin:6px 0 0">귤따기 상품 등록 · 이름에 "귤 따기" · 귤밭 위치와 이동 안내</p></div>
+    <div class="col card"><span class="tag t-acc">(나)</span><b>알제이로 보낸다</b><p class="small" style="margin:6px 0 0">알제이웍스 감귤청 상품에 "귤 따기는 알제이에서 예약" 안내</p></div>
+  </div>
+  <div class="foot"><span>W10 검색량 · 상품사실표 · 밋업:168</span><span>14</span></div>
+</section>
+
+<!-- 15 -->
+<section class="slide" data-note="같은 사람이 지금 화면을 먼저 보면 배운 걸 시안에 쓴다 → 보는 순서를 절반씩 나눈다. 예약 수는 단체 때문에 개인 예약을 닫은 날짜와 함께 본다(면담:363).">
+  <div class="kicker">검증</div>
+  <h1>확인은 세 층으로 — 보이나, 이해하나, 예약하나</h1>
+  <table>
+    <tr><th style="width:18%">층</th><th style="width:44%">무엇을 보나</th><th>어떻게</th></tr>
+    <tr><td><span class="tag t-blue">보이나</span></td><td>정한 검색어·범위에서 A·B·C가 보이는지</td><td>짝 검색어 4개 + 기준 1개를 같은 환경에서 적용 전, 2주, 4주 (W18 양식)</td></tr>
+    <tr><td><span class="tag t-acc">이해하나</span></td><td>총액·제작 수량·보호자 조건을 맞게 말하는지, 찾는 데 걸린 시간</td><td>처음 보는 사람에게 "둘이 방문할 상품을 골라 보세요". 지금→시안 / 시안→지금 순서를 절반씩</td></tr>
+    <tr><td><span class="tag t-ok">예약하나</span></td><td>개인 예약 수, 반복 문의 5종의 비중</td><td>주간 기록 · <b>예약 가능일·회차 변화</b>와 함께 (단체로 닫은 날 표시)</td></tr>
+  </table>
+  <p class="small" style="margin-top:14px">회사 데이터가 오면: 스마트플레이스 유입 검색어 · 상품별 예약 수로 바꿔 본다.</p>
+  <div class="foot"><span>W18 양식 · 측정_주간기록표 · 면담:363</span><span>15</span></div>
+</section>
+
+<!-- 16 -->
+<section class="slide" data-note="3장(80% 단체)과 5장(문제 정의 1줄)은 팀 슬라이드와 부딪힐 곳. 녹취 줄 번호를 들고 '사실 확인'과 '문장 세기 조정'으로 꺼낸다.">
+  <div class="kicker">다음 단계</div>
+  <h1>발표 전까지 할 일과 회사에 물을 것</h1>
+  <div class="row">
+    <div class="col card">
+      <h2>할 일</h2>
+      <p class="small" style="margin:4px 0">① 처음 보는 사람 2~3명 점검 — "둘이 방문할 상품을 골라 보세요" (11·12장 화면으로)</p>
+      <p class="small" style="margin:4px 0">② 시안 다듬기 — 회사 답이 오면 <span class="ph">{ }</span> 채우기</p>
+      <p class="small" style="margin:4px 0">③ 팀과 맞추기 — 3장 숫자, 5장 문제 문장</p>
+    </div>
+    <div class="col card">
+      <h2>회사에 확인 <span class="small">(요청함 / 추가)</span></h2>
+      <p class="small" style="margin:4px 0"><span class="tag t-mute">요청함</span>소규모 기준 · 유입 검색어 · 상품별 예약 수 · 상품별 가격·시간·인원</p>
+      <p class="small" style="margin:4px 0"><span class="tag t-acc">추가</span>프로그램 카드 예약은 어디로 잡히나 · 개인 손님은 어느 쪽으로 받나</p>
+      <p class="small" style="margin:4px 0"><span class="tag t-acc">추가</span>알제이웍스 관리자에서 가격·시간·연령 칸을 쓸 수 있나</p>
+      <p class="small" style="margin:4px 0"><span class="tag t-acc">추가</span>귤따기를 알제이웍스에서 팔 계획이 있나</p>
+      <p class="small" style="margin:4px 0"><span class="tag t-acc">추가</span>도마 2인 1작품 · 최소 연령 · 미취학 비용 · 1인 1체험 규칙이 지금도 같은지</p>
+    </div>
+  </div>
+  <div class="foot"><span>한바퀴 문서 빈칸표</span><span>16</span></div>
+</section>
+
+</div>
+<div id="notes"></div>
+<script>
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.slide'));
+  var i=0, notes=document.getElementById('notes');
+  slides.forEach(function(s){
+    var n=document.createElement('div'); n.className='notes';
+    n.textContent='메모 · '+(s.getAttribute('data-note')||'—'); notes.appendChild(n); s._note=n;
+  });
+  try{ var h=parseInt(location.hash.slice(1),10); if(h>0&&h<=slides.length) i=h-1; }catch(e){}
+  function fit(){
+    var s=Math.min(window.innerWidth/1340, window.innerHeight/770);
+    slides.forEach(function(el){el.style.transform='scale('+s+')';});
+  }
+  function show(k){
+    i=Math.max(0,Math.min(slides.length-1,k));
+    slides.forEach(function(el,j){el.classList.toggle('on',j===i); el._note.classList.toggle('on',j===i);});
+    document.getElementById('prog').style.width=((i+1)/slides.length*100)+'%';
+    try{ history.replaceState(null,'','#'+(i+1)); }catch(e){}
+  }
+  document.addEventListener('keydown',function(e){
+    if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown') show(i+1);
+    else if(e.key==='ArrowLeft'||e.key==='PageUp') show(i-1);
+    else if(e.key==='Home') show(0);
+    else if(e.key==='End') show(slides.length-1);
+    else if(e.key==='n'||e.key==='N') document.body.classList.toggle('shownotes');
+    else if(e.key==='f'||e.key==='F'){ if(!document.fullscreenElement) document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen(); else document.exitFullscreen(); }
+  });
+  document.getElementById('stage').addEventListener('click',function(e){
+    if(e.clientX < window.innerWidth*0.3) show(i-1); else show(i+1);
+  });
+  window.addEventListener('resize',fit);
+  fit(); show(i);
+})();
+</script>
+</body>
+</html>
