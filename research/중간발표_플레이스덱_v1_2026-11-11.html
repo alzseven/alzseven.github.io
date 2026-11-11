@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>플레이스 중간발표 덱</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EFE7DE; --panel:#E3D8C8; --tan:#D3C3AE; --brown:#6B4E3D; --brown2:#8A6A55;
+  --ink:#1F1A17; --ink2:#4A3F37; --muted:#8A7B6E; --line:#C9B9A6; --white:#FBF8F4;
+  --ok:#5E7B52; --warn:#B0663A; --slot:#A08C78; --stage:#2A2420;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:var(--stage);overflow:hidden}
+body{font-family:"Pretendard","Noto Sans KR","Malgun Gothic","Apple SD Gothic Neo",sans-serif;color:var(--ink);word-break:keep-all}
+#viewport{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+#deck{width:1920px;height:1080px;position:relative;transform-origin:center center;flex:none}
+.slide{position:absolute;inset:0;background:var(--bg);padding:110px 120px 90px;display:none;flex-direction:column}
+.slide.on{display:flex}
+.kicker{font-size:22px;letter-spacing:.06em;color:var(--brown);font-weight:500;margin-bottom:14px}
+h1.t{font-size:58px;line-height:1.25;font-weight:900;letter-spacing:-.01em}
+h1.t.sm{font-size:48px}
+.lead{font-size:28px;color:var(--ink2);margin-top:22px;line-height:1.55}
+.body{flex:1;display:flex;flex-direction:column;justify-content:center;margin-top:36px;min-height:0}
+.foot{position:absolute;left:120px;right:120px;bottom:44px;display:flex;justify-content:space-between;font-size:18px;color:var(--muted)}
+.row{display:flex;gap:28px}
+.col{display:flex;flex-direction:column;gap:20px}
+.f1{flex:1}.f2{flex:2}.f15{flex:1.5}
+.card{background:var(--panel);padding:36px 40px;border-radius:2px}
+.card.dark{background:var(--brown);color:var(--white)}
+.card.dark .cnum,.card.dark .ct{color:var(--white)}
+.card.dark p,.card.dark li{color:#EADFD3}
+.card.tan{background:var(--tan)}
+.card.line{background:transparent;border:2px solid var(--line)}
+.cnum{font-size:44px;font-weight:700;color:var(--brown);line-height:1}
+.ct{font-size:32px;font-weight:700;margin:18px 0 14px;line-height:1.3}
+.card p,.card li{font-size:24px;line-height:1.6;color:var(--ink2)}
+.card ul{list-style:none}
+.card li{padding-left:22px;position:relative;margin:6px 0}
+.card li::before{content:"";position:absolute;left:0;top:.72em;width:8px;height:8px;background:var(--brown2);border-radius:50%}
+.card.dark li::before{background:var(--tan)}
+.hr{height:1px;background:var(--line);margin:18px 0}
+.card.dark .hr{background:#8F725F}
+.chip{display:inline-block;border:2px solid var(--brown);border-radius:40px;padding:12px 28px;font-size:24px;margin:0 12px 14px 0;color:var(--ink)}
+.tag{display:inline-block;font-size:18px;font-weight:700;padding:4px 12px;border-radius:4px;vertical-align:middle;margin-left:10px}
+.tag.ok{background:#DCE6D5;color:var(--ok)}
+.tag.hyp{background:#F3DCCB;color:var(--warn)}
+.tag.slot{background:transparent;border:2px dashed var(--slot);color:var(--slot)}
+.slotbox{border:3px dashed var(--slot);color:var(--slot);display:flex;align-items:center;justify-content:center;font-size:26px;text-align:center;padding:30px;border-radius:4px}
+.bar-row{display:flex;align-items:center;gap:18px;margin:12px 0;font-size:24px}
+.bar-row .lab{width:220px;color:var(--ink2)}
+.bar-row .bar{height:30px;background:var(--brown2);border-radius:2px}
+.bar-row .bar.lt{background:var(--tan)}
+.bar-row .v{font-weight:700;font-size:24px}
+table.tb{width:100%;border-collapse:collapse;font-size:23px}
+table.tb th{text-align:left;font-weight:700;color:var(--brown);border-bottom:2px solid var(--brown);padding:12px 14px;font-size:21px}
+table.tb td{border-bottom:1px solid var(--line);padding:11px 14px;color:var(--ink2);vertical-align:top;line-height:1.45}
+table.tb td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+table.tb td.c{text-align:center;white-space:nowrap}
+table.tb.tight td{padding:7px 14px}
+.hit{font-weight:700;color:var(--ink);background:#E9D9C4;border-radius:4px;padding:2px 10px}
+.miss{color:#A6988B}
+.quote{border-left:6px solid var(--brown);background:var(--panel);padding:22px 30px;font-size:26px;color:var(--ink2);line-height:1.55}
+.big{font-size:44px;font-weight:900;line-height:1.35}
+.center{align-items:center;text-align:center}
+.small{font-size:20px;color:var(--muted);line-height:1.5}
+.phone{background:var(--white);border:2px solid var(--line);border-radius:28px;padding:26px 26px;width:470px;flex:none;font-size:21px;color:var(--ink2)}
+.phone .ph-h{font-size:17px;color:var(--muted);margin-bottom:10px}
+.phone .ph-t{font-size:25px;font-weight:700;color:var(--ink);line-height:1.35}
+.phone .blk{border-top:1px solid #E5DCD0;padding:12px 0;line-height:1.5;position:relative}
+.phone .blk b{color:var(--ink)}
+.phone .new{background:#F4EDE3;border-left:5px solid var(--brown);padding:10px 14px;margin-top:6px}
+.pin{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--warn);color:#fff;font-size:19px;font-weight:700;flex:none}
+.callouts{display:flex;flex-direction:column;gap:18px;font-size:25px;color:var(--ink2);line-height:1.45}
+.callouts div{display:flex;gap:16px;align-items:flex-start}
+.toc-col{flex:1}
+.toc-h{display:flex;align-items:center;gap:22px;padding-bottom:26px;border-bottom:2px solid var(--ink);margin-bottom:30px}
+.toc-num{width:62px;height:62px;border-radius:50%;background:var(--brown);color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:700}
+.toc-num.lt{background:var(--tan);color:var(--ink)}
+.toc-h span{font-size:34px;font-weight:700}
+.toc-i{font-size:25px;margin:0 0 22px;display:flex;gap:18px}
+.toc-i i{font-style:normal;color:#B3A393;width:34px}
+.toc-i small{display:block;font-size:19px;color:var(--muted);margin-top:6px}
+.step{display:flex;gap:24px;align-items:stretch}
+.step .card{flex:1}
+.arrow{display:flex;align-items:center;font-size:40px;color:var(--brown2)}
+.tl{display:flex;gap:0;margin-top:10px}
+.tl .w{flex:1;border-top:6px solid var(--tan);padding:22px 22px 0 0;position:relative}
+.tl .w.now{border-top-color:var(--brown)}
+.tl .w h4{font-size:26px;margin-bottom:10px}
+.tl .w .d{font-size:20px;color:var(--brown);font-weight:700;margin-bottom:12px}
+.tl .w p{font-size:21px;color:var(--ink2);line-height:1.55}
+/* notes + hud */
+#hud{position:fixed;right:18px;bottom:14px;color:#BFB2A5;font:14px/1.4 "Noto Sans KR",sans-serif;opacity:.75;pointer-events:none}
+#notes{position:fixed;left:0;right:0;bottom:0;background:rgba(28,23,20,.94);color:#F1E9E0;font:17px/1.65 "Noto Sans KR",sans-serif;padding:18px 28px 22px;display:none;max-height:42vh;overflow:auto;border-top:3px solid var(--warn)}
+#notes.on{display:block}
+#notes b{color:#F3C9A8}
+.nav{position:fixed;top:0;bottom:0;width:18%;cursor:pointer;z-index:1}
+#navL{left:0}#navR{right:0}
+@media print{
+  html,body{overflow:visible;background:#fff}
+  #viewport{position:static;display:block}
+  #deck{transform:none!important;width:auto;height:auto}
+  .slide{display:flex!important;position:relative;width:1920px;height:1080px;page-break-after:always}
+  #hud,#notes,.nav{display:none!important}
+}
+</style>
+</head>
+<body>
+<div id="viewport"><div id="deck">
+
+<!-- 1 표지 -->
+<section class="slide" data-notes="개인 확인용 초안(11/11). 범위는 네이버 플레이스 2곳(알제이웍스·알제이)만. 점선 상자 = 팀원 자료가 들어갈 자리.">
+  <div class="body" style="justify-content:flex-end;margin-top:0">
+    <div class="big" style="font-size:50px">알제이웍스 개인·소규모 관광객 대상<br>네이버 스마트플레이스 예약 활성화 전략</div>
+    <div style="margin-top:150px;font-size:40px;font-weight:700">알제이웍스 X 옐로우 자몽</div>
+    <div style="margin-top:22px;font-size:24px;color:var(--ink2)">박준형 · 이기백 · 양혜지 · 송현조 · 최승경</div>
+  </div>
+  <div class="foot"><span>중간발표 2026-11-13 · 초안 11/11</span><span></span></div>
+</section>
+
+<!-- 2 목차 -->
+<section class="slide" data-notes="팀 뼈대 그대로. 02 문제 정의의 각 항목이 07 핵심 문제 정리의 '찾기·고르기·예약' 세 단계 중 하나를 받친다.">
+  <h1 class="t" style="font-size:64px">목차</h1>
+  <div class="body"><div class="row" style="gap:90px">
+    <div class="toc-col">
+      <div class="toc-h"><div class="toc-num">01</div><span>도입</span></div>
+      <div class="toc-i"><i>01</i><div>기업 소개</div></div>
+      <div class="toc-i"><i>02</i><div>기업 요구사항</div></div>
+      <div class="toc-i"><i>03</i><div>과제 목적<small>가설 설정 및 향후 분석 방향</small></div></div>
+      <div class="toc-i"><i>04</i><div>진단 방법<small>진단 관점 3가지 · 조사 방법 · 조사 기간 및 대상</small></div></div>
+    </div>
+    <div class="toc-col">
+      <div class="toc-h"><div class="toc-num lt">02</div><span>문제 정의</span></div>
+      <div class="toc-i"><i>01</i><div>현재 스마트플레이스 진단</div></div>
+      <div class="toc-i"><i>02</i><div>예약 과정 진단</div></div>
+      <div class="toc-i"><i>03</i><div>검색 노출 조사</div></div>
+      <div class="toc-i"><i>04</i><div>벤치마킹 3곳 조사 및 비교 분석</div></div>
+      <div class="toc-i"><i>05</i><div>벤치마킹 시사점<small>알제이웍스에 적용할 점</small></div></div>
+      <div class="toc-i"><i>06</i><div>후기 분석</div></div>
+      <div class="toc-i"><i>07</i><div>핵심 문제 정리</div></div>
+    </div>
+    <div class="toc-col">
+      <div class="toc-h"><div class="toc-num">03</div><span>향후 계획</span></div>
+      <div class="toc-i"><i>01</i><div>소규모 고객 유입 방향</div></div>
+      <div class="toc-i"><i>02</i><div>상품 정보 전달력</div></div>
+      <div class="toc-i"><i>03</i><div>예약 과정 개선안</div></div>
+      <div class="toc-i"><i>04</i><div>최종 발표까지 타임테이블</div></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- 3 기업 소개 -->
+<section class="slide" style="padding:0;flex-direction:row" data-notes="팀 장표 그대로. 아래 한 줄(플레이스 2곳)을 더해 뒤에서 A·B 이름을 처음 소개한다.">
+  <div style="width:680px;background:var(--panel);padding:110px 120px;display:flex;flex-direction:column">
+    <div class="kicker">01 도입</div>
+    <h1 class="t">기업 소개</h1>
+    <div style="font-size:120px;font-weight:900;margin-top:120px;line-height:1">알제이</div>
+    <div style="font-size:26px;color:var(--ink2);margin-top:26px">알고 느끼는 제주 이야기</div>
+    <div style="font-size:32px;font-weight:700;margin-top:80px">모두의 체험 스튜디오</div>
+    <div style="font-size:24px;color:var(--ink2);line-height:1.7;margin-top:18px">제주의 자연 재료로 공예·쿠킹·로컬 액티비티를 기획·운영하며, 방문 목적에 맞춘 체험으로 새로운 경험과 가치를 전하는 제주 애월의 체험 서비스 기업</div>
+  </div>
+  <div style="flex:1;padding:120px 120px 90px;display:flex;flex-direction:column">
+    <div class="kicker">PROGRAMS</div>
+    <div style="font-size:32px;font-weight:700;margin-bottom:34px">체험 프로그램</div>
+    <div class="row" style="gap:24px">
+      <div class="card tan f1" style="min-height:300px"><div style="font-size:20px">01</div><div class="ct">힐링 공예 클래스</div><div class="hr"></div><p>제주 나무 도마·소품 만들기, 제주 향 세트 체험</p></div>
+      <div class="card dark f1" style="min-height:300px"><div style="font-size:20px">02</div><div class="ct">감성 쿠킹 클래스</div><div class="hr"></div><p>제주 재료로 만드는 오메기 귤빵 등 로컬 쿠킹</p></div>
+      <div class="card tan f1" style="min-height:300px"><div style="font-size:20px">03</div><div class="ct">로컬 액티비티</div><div class="hr"></div><p>감귤 따기, 저지마을 해설, 곶자왈·오름 해설</p></div>
+    </div>
+    <div class="kicker" style="margin-top:70px">TARGET</div>
+    <div style="font-size:32px;font-weight:700;margin-bottom:26px">맞춤형 운영 대상</div>
+    <div><span class="chip">개인 · 커플</span><span class="chip">가족 · 소규모</span><span class="chip">기업 단체</span><br><span class="chip">수학여행 · 현장학습</span><span class="chip">마을 연계</span><span class="chip">출강</span></div>
+    <div style="margin-top:auto;font-size:22px;color:var(--ink2)">네이버 플레이스 2곳으로 운영 — <b>알제이웍스(A)</b> · <b>알제이(B)</b></div>
+  </div>
+</section>
+
+<!-- 4 기업 요구사항 -->
+<section class="slide" data-notes="팀 장표 그대로.">
+  <div class="kicker">01 도입</div>
+  <h1 class="t">기업 요구사항</h1>
+  <div class="body">
+    <div style="text-align:center;font-size:40px;font-weight:700;margin-bottom:120px">개인·소규모 관광객 <span style="font-weight:400">대상</span> 네이버 스마트플레이스 예약 활성화</div>
+    <div class="row">
+      <div class="card f1" style="min-height:320px"><div class="cnum">01</div><div class="hr"></div><div class="ct" style="font-size:30px">개인·소규모 관광객의<br>예약 결정 요인 분석</div></div>
+      <div class="card f1" style="min-height:320px"><div class="cnum">02</div><div class="hr"></div><div class="ct" style="font-size:30px">제주 지역 유사 체험업체 벤치마킹</div></div>
+      <div class="card f1" style="min-height:320px"><div class="cnum">03</div><div class="hr"></div><div class="ct" style="font-size:30px">개인·소규모 관광객<br>예약 활성화 방안 제안</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 과제 목적 -->
+<section class="slide" data-notes="세 요구를 손님 여정 세 단계(찾기·고르기·예약)로 바꿔 진단 축으로 쓴다. 이 세 단어가 02-07 핵심 문제 정리와 03 향후 계획까지 그대로 이어진다.">
+  <div class="kicker">01 도입 · 03 과제 목적</div>
+  <h1 class="t">개인 손님이 플레이스에서<br>찾고, 고르고, 예약할 수 있나</h1>
+  <div class="body">
+    <div class="step">
+      <div class="card"><div class="cnum">찾기</div><div class="hr"></div><p>손님이 쓰는 검색어에서<br>알제이 플레이스가 보이나</p></div>
+      <div class="arrow">→</div>
+      <div class="card"><div class="cnum">고르기</div><div class="hr"></div><p>플레이스에서 내용·시간·가격을 보고<br>맞는 체험을 고를 수 있나</p></div>
+      <div class="arrow">→</div>
+      <div class="card"><div class="cnum">예약</div><div class="hr"></div><p>고른 체험을 망설임 없이<br>예약까지 마칠 수 있나</p></div>
+    </div>
+    <div class="quote" style="margin-top:56px"><b>가설</b> — 단체 체험에 맞춰져 있어, 소규모 관광객이 고르고 예약하는 데 필요한 설명이 부족하다.<br><span style="font-size:22px">→ 세 단계마다 이 가설이 맞는지 확인하고, 막힌 단계부터 개선안을 낸다.</span></div>
+  </div>
+</section>
+
+<!-- 6 진단 방법 -->
+<section class="slide" data-notes="조사 일정·규모는 research 폴더 기준. 처음 보는 사람 반응 2명은 예시로만 쓴다. 기백 검색 관측 날짜는 본인 확인 필요.">
+  <div class="kicker">01 도입 · 04 진단 방법</div>
+  <h1 class="t sm">세 관점으로, 아홉 가지 방법으로 봤다</h1>
+  <div class="body" style="justify-content:flex-start;margin-top:30px">
+    <div style="margin-bottom:22px"><span class="chip"><b>찾기</b> · 검색 노출</span><span class="chip"><b>고르기</b> · 화면 정보</span><span class="chip"><b>예약</b> · 예약 과정</span><span style="font-size:22px;color:var(--muted);margin-left:10px">조사 기간 11/3 ~ 11/11 · 대상: 알제이웍스(A)·알제이(B) 플레이스</span></div>
+    <table class="tb tight">
+      <tr><th>방법</th><th>무엇을</th><th>규모</th><th>관점</th><th>시기</th></tr>
+      <tr><td>회사 녹취</td><td>밋업 · 팀장 면담</td><td>2회</td><td>전체</td><td>11/3 · 11/4</td></tr>
+      <tr><td>현장 방문</td><td>공간 · 운영 방식 확인</td><td>1회</td><td>고르기</td><td>11/5</td></tr>
+      <tr><td>기존 방문객 설문</td><td>예약 전 가장 궁금했던 정보</td><td>37명</td><td>고르기</td><td>11/5 ~ 7</td></tr>
+      <tr><td>플레이스 화면 점검</td><td>두 플레이스 상품 전부 (17개 · 19개)</td><td>폰 · PC</td><td>고르기 · 예약</td><td>11/3 ~ 8</td></tr>
+      <tr><td>검색량</td><td>네이버 검색광고 키워드 도구</td><td>검색어 55개</td><td>찾기</td><td>11/5</td></tr>
+      <tr><td>검색 노출 관측</td><td>검색어별 플레이스 순위 (광고 제외, 30위까지)</td><td>검색어 20여 개</td><td>찾기</td><td>11/9 ~ 11/11</td></tr>
+      <tr><td>후기 분석</td><td>두 플레이스 방문자 리뷰</td><td>1,136개</td><td>고르기</td><td>11/3 수집</td></tr>
+      <tr><td>벤치마킹</td><td>제주 유사 체험업체</td><td>3곳</td><td>고르기 · 예약</td><td>11/8</td></tr>
+      <tr><td>처음 보는 사람 반응</td><td>플레이스 화면을 보여 주고 질문</td><td>2명 (예시)</td><td>고르기</td><td>11/9</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- 7 현황 -->
+<section class="slide" data-notes="녹취 근거. '개인 유입이 적다'는 이 장의 숫자로는 말할 수 없다 — 80~90%가 네이버로 들어온다는 건 오히려 네이버가 주 통로라는 뜻.">
+  <div class="kicker">02 문제 정의 · 현황</div>
+  <h1 class="t">단체 중심으로 운영돼 왔고,<br>회사는 개인 손님을 알제이웍스로 키우려 한다</h1>
+  <div class="body">
+    <div class="row">
+      <div class="card f1"><p>단체</p><div style="font-size:72px;font-weight:900;margin:10px 0">50~150명</div><p>한 번에 진행 (밋업 07:06)</p></div>
+      <div class="card f1"><p>개인 팀</p><div style="font-size:72px;font-weight:900;margin:10px 0">하루 2~3팀</div><p>주말 7~8팀 · 한 팀 2~6명<br>커플·가족·소규모 팀 각 약 30% (밋업 17:31~17:49)</p></div>
+      <div class="card f1"><p>개인 손님 유입</p><div style="font-size:72px;font-weight:900;margin:10px 0">80~90%</div><p>네이버로 들어온다 (밋업 18:34)</p></div>
+    </div>
+    <div class="quote" style="margin-top:40px">"방향은 저희가 알제이웍스로 더 뻗어 나갈 거기 때문에…" — 팀장, 11/4 면담 05:48</div>
+  </div>
+  <div class="foot"><span>밋업 11/3 · 면담 11/4 녹취</span><span></span></div>
+</section>
+
+<!-- 8 핵심 문제 -->
+<section class="slide" data-notes="팀 초안의 '소규모 유입이 유의미하지 않다'는 7장(80~90% 네이버 유입)과 부딪히고 예약 수 근거가 없어 뺐다. 대신 여정 세 단계로 나눴다. 예약 수는 회사에 요청 중.">
+  <div class="kicker">02 문제 정의 · 핵심 문제</div>
+  <h1 class="t">개인 손님은 네이버로 오는데,<br>플레이스에서 찾기도 고르기도 예약하기도 어렵다</h1>
+  <div class="body">
+    <div class="row">
+      <div class="card f1"><div class="cnum">찾기</div><div class="hr"></div><p>손님이 많이 쓰는 검색어에서 두 플레이스가 <b>30위 안에 없다</b></p></div>
+      <div class="card f1"><div class="cnum">고르기</div><div class="hr"></div><p>고르기 전에 알고 싶은 <b>내용·시간·가격이 늦게</b> 보인다</p></div>
+      <div class="card f1"><div class="cnum">예약</div><div class="hr"></div><p>두 플레이스의 <b>예약 방식이 다르고</b>, 같은 상품 안에서도 설명과 옵션이 다르다</p></div>
+    </div>
+    <p class="small" style="margin-top:30px">'개인 유입이 얼마나 적은가'는 상품별 예약 수를 받은 뒤 판단한다 (회사 요청 중).</p>
+  </div>
+</section>
+
+<!-- 9 핵심 가설 -->
+<section class="slide" data-notes="가설 장이므로 '확인할 것'을 꼭 함께 말한다. 근거 세 개는 모두 회사 쪽 자료(녹취·소개 문구).">
+  <div class="kicker">02 문제 정의 · 핵심 가설</div>
+  <h1 class="t">단체 체험에 최적화되어 있어<br>소규모 관광객 대상 설명이 부족하다 <span class="tag hyp">가설</span></h1>
+  <div class="body">
+    <div class="row">
+      <div class="card f15"><div class="ct" style="margin-top:0">이렇게 본 근거</div>
+        <ul>
+          <li>단체 50~150명을 한 번에 진행해 왔다 (밋업)</li>
+          <li>업체 소개 둘째 문단이 '최대 150명' 수용 규모를 강조한다</li>
+          <li>개인 손님이 반복해서 묻는다 — "다른 체험 골라도 되나요", "다 같이 모여서 시작하나요" (면담)</li>
+          <li>실제로는 신청한 팀끼리만 진행한다 (밋업) → 운영은 이미 소규모에 맞는데 설명이 없다</li>
+        </ul></div>
+      <div class="card dark f1"><div class="ct" style="margin-top:0">확인할 것</div>
+        <ul>
+          <li>처음 보는 소규모 손님이 실제로 같은 곳에서 막히는지 — 예약 과제 관찰</li>
+          <li>반복 문의가 얼마나 자주 오는지 — 회사 기록</li>
+        </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 고객은 어디에서 망설이는가 -->
+<section class="slide" data-notes="11/9 회의 결정: '대규모 스튜디오처럼 보여 안 온다'는 증명 전이라 가설로 낮춤. 관측한 것과 가설을 칸으로 나눠 말한다.">
+  <div class="kicker">02 문제 정의 · 현황</div>
+  <h1 class="t">고객은 어디에서 망설이는가</h1>
+  <div class="body">
+    <div class="row">
+      <div class="card f1"><div class="ct" style="margin-top:0">화면에서 확인한 것 <span class="tag ok">관측</span></div>
+        <ul>
+          <li>가격은 날짜·시간을 고른 뒤 옵션에서 보인다</li>
+          <li>소요시간·참여 연령은 접힌 설명 안에 있거나 없다</li>
+          <li>소개는 '최대 150명' 규모를 앞세운다</li>
+          <li>1인 1체험·보호자 무료가 규칙으로 안 보인다</li>
+        </ul></div>
+      <div class="arrow">→</div>
+      <div class="card tan f1"><div class="ct" style="margin-top:0">그래서 이럴 것이다 <span class="tag hyp">가설</span></div>
+        <p style="font-size:28px;line-height:1.6">큰 체험장이라는 인상에 필요한 정보까지 늦게 보여, 개인·소규모 손님이 <b>고르는 단계에서</b> 망설인다.</p>
+        <div class="hr"></div>
+        <p style="font-size:22px">확인 방법 → 처음 보는 사람 예약 관찰 (03-04)</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 유형 구분 -->
+<section class="slide" data-notes="유형 비율은 대표 말과 리뷰 동행 표현 두 가지뿐. 유형별로 망설이는 지점이 다른지는 아직 근거가 없다. '인재들한테 물어본 것'은 손님 근거로 쓰지 않는다.">
+  <div class="kicker">02 문제 정의 · 현황</div>
+  <h1 class="t sm">누가 오나 — 커플, 가족, 친구</h1>
+  <div class="body">
+    <div class="row">
+      <div class="card f1"><div class="ct" style="margin-top:0">대표가 말한 개인 손님</div>
+        <p style="font-size:30px;line-height:1.6">커플 · 가족 · 소규모 팀<br><b style="font-size:46px">각 약 30%</b></p>
+        <p class="small" style="margin-top:14px">밋업 11/3 17:31~17:49</p></div>
+      <div class="card f15"><div class="ct" style="margin-top:0">알제이웍스 리뷰에 쓰인 동행</div>
+        <div class="bar-row"><span class="lab">아이</span><span class="bar" style="width:312px"></span><span class="v">26%</span></div>
+        <div class="bar-row"><span class="lab">지인·동료</span><span class="bar" style="width:300px"></span><span class="v">25%</span></div>
+        <div class="bar-row"><span class="lab">연인·배우자</span><span class="bar" style="width:252px"></span><span class="v">21%</span></div>
+        <div class="bar-row"><span class="lab">친구</span><span class="bar" style="width:252px"></span><span class="v">21%</span></div>
+        <div class="bar-row"><span class="lab">혼자</span><span class="bar lt" style="width:48px"></span><span class="v">4%</span></div>
+        <p class="small">동행이 드러난 리뷰 기준 · 리뷰 1건 = 손님 1팀이 아님</p></div>
+    </div>
+    <div class="quote" style="margin-top:30px">유형보다 <b>찾게 된 상황</b>이 더 선명하다 — 아이 관심에 맞춘 여행 전 예약 · 비·빈 시간에 당일 예약 · 기념일 결과물</div>
+  </div>
+</section>
+
+<!-- 12 필드 -->
+<section class="slide" data-notes="현장 방문(11/5) 사진과 현직자 인터뷰 요점이 들어갈 자리. 오른쪽은 이미 녹취로 확인된 운영 사실.">
+  <div class="kicker">02 문제 정의 · 현황</div>
+  <h1 class="t sm">필드에서 확인한 내용 — 외관, 현직자 인터뷰</h1>
+  <div class="body">
+    <div class="row" style="height:560px">
+      <div class="slotbox f1">외관·공간 사진<br>(11/5 현장)</div>
+      <div class="slotbox f1">현직자 인터뷰 요점</div>
+      <div class="card f1"><div class="ct" style="margin-top:0">녹취로 확인된 운영</div>
+        <ul>
+          <li>신청한 팀끼리만 진행한다</li>
+          <li>쿠킹 구역과 공예 구역이 한 공간에 있다</li>
+          <li>일행끼리 다른 체험을 고를 수 있다</li>
+          <li>보호자는 무료로 함께 들어온다</li>
+        </ul>
+        <p class="small" style="margin-top:14px">밋업 K-16·K-24 · 면담 152~159</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 13 두 플레이스 -->
+<section class="slide" data-notes="팀 초안 제목은 'A알제이, B알제이웍스'였지만 그림은 A=알제이웍스, B=알제이 — 이 장에서 바로잡았다. 리뷰 수는 11/3 수집 기준.">
+  <div class="kicker">02 문제 정의 · 01 현재 스마트플레이스 진단</div>
+  <h1 class="t">플레이스가 둘이고,<br>검색에서는 둘 다 '알제이'로 보인다</h1>
+  <div class="body">
+    <div class="row">
+      <div class="card f1" style="border-top:8px solid var(--brown)"><div class="cnum">A</div><div class="ct">알제이웍스 플레이스</div>
+        <ul><li>일반형 · 선결제 · 바로 확정</li><li>상품 17개 · 리뷰 448개</li><li><b>회사가 키우려는 곳</b></li></ul></div>
+      <div class="card f1"><div class="cnum" style="color:var(--brown2)">B</div><div class="ct">알제이 플레이스</div>
+        <ul><li>날짜선택형 · 현장결제 · 업체 확정</li><li>상품 19개 · 리뷰 688개</li><li>단체·기관 예약도 받음</li></ul></div>
+    </div>
+    <div class="quote" style="margin-top:40px">검색 결과 카드에서 두 곳 모두 이름이 <b>'알제이'</b>로 나온다 — 손님은 어느 쪽이 무엇이 다른지 카드만 보고 알 수 없다 (11/5·11/11 폰)</div>
+  </div>
+  <div class="foot"><span>상품사실표 · 예약 URL 유형 · 리뷰 수 11/3 수집</span><span></span></div>
+</section>
+
+<!-- 14 화면 진단 -->
+<section class="slide" data-notes="'한눈에 안 보인다'를 무엇이 어디에 있는지로 구체화. 시간·연령 표준 칸이 없는 건 일반형 예약의 네이버 기능 제약(고객센터 문서, W19).">
+  <div class="kicker">02 문제 정의 · 01 현재 스마트플레이스 진단</div>
+  <h1 class="t sm">한눈에 잘 안 보인다 — 고르기 전에 필요한 값이 위에 없다</h1>
+  <div class="body">
+    <div class="row" style="align-items:center;gap:60px">
+      <div class="phone">
+        <div class="ph-h">예약 · 알제이웍스 (11/8 폰 관측 재구성)</div>
+        <div class="ph-t">제주 숲 한 조각, 프리미엄 원목 도마 체험 <span class="pin">1</span></div>
+        <div class="blk">휴무 안내 · 설명 2줄</div>
+        <div class="blk">날짜 · 시간 선택</div>
+        <div class="blk"><b>옵션</b> <span class="pin">2</span><br>소 43,000 · 중 63,000 · 대 100,000원</div>
+        <div class="blk">상세 설명 ▾ <span class="pin">3</span></div>
+        <div class="blk" style="color:var(--muted)">따로 있는 상품: [커플패키지] 도마체험小+체험선택1… <span class="pin">4</span></div>
+      </div>
+      <div class="callouts f1">
+        <div><span class="pin">1</span><span>제목 근처에 <b>가격·시간·연령</b>이 없다 — 일반형이라 시간·연령 표준 칸을 쓸 수 없다</span></div>
+        <div><span class="pin">2</span><span><b>날짜를 고른 뒤에야</b> 가격이 보인다</span></div>
+        <div><span class="pin">3</span><span>무엇을 하고 무엇을 가져가는지는 <b>접힌 설명 안</b></span></div>
+        <div><span class="pin">4</span><span>'각자 도마'와 '도마 + 다른 체험'의 차이를 보려면 <b>상품을 여러 개</b> 열어야 한다</span></div>
+        <div style="margin-top:10px;font-size:22px;color:var(--muted)">시간 표기도 화면마다 다르다 — 상품 상세 '약 50분 내외' · 정보 탭 '약 60분'</div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>11/5·11/8 폰 전수 확인 · 네이버 고객센터(예약 유형별 기능)</span><span></span></div>
+</section>
+
+<!-- 15 처음 보는 사람 반응 -->
+<section class="slide" data-notes="도민 교육생 2명. 손님 대표 표본이 아니라 '이런 반응이 나온다'는 예시. 관찰 조사 4~5명으로 넓힐 예정.">
+  <div class="kicker">02 문제 정의 · 01 현재 스마트플레이스 진단</div>
+  <h1 class="t sm">처음 보는 사람에게 보여 줬더니 <span class="tag slot">예시 2명</span></h1>
+  <div class="body">
+    <div class="row">
+      <div class="card f1"><div class="ct" style="margin-top:0">커플로 간다고 가정</div>
+        <p style="font-size:30px;line-height:1.8">"규모가 커 보인다"<br>"시끄러울 것 같다"<br>"1:1로 가능한가?"</p></div>
+      <div class="card f1"><div class="ct" style="margin-top:0">친구와 간다고 가정</div>
+        <p style="font-size:30px;line-height:1.8">"공간은 괜찮다"<br>"도마랑 음식 만들기를<br>같이 한다고요?"</p></div>
+    </div>
+    <p class="small" style="margin-top:28px">도민 교육생 2명 · 11/9 · 알제이웍스 플레이스 화면 · 손님 대표 표본 아님 → 03-04에서 4~5명 관찰로 확인</p>
+  </div>
+</section>
+
+<!-- 16 설문 -->
+<section class="slide" data-notes="설문 37명 중 33명이 6명 이상 일행 — 소규모 손님도 같은지는 관찰로 따로 확인한다고 꼭 말할 것.">
+  <div class="kicker">02 문제 정의 · 01 현재 스마트플레이스 진단 · 고르기</div>
+  <h1 class="t sm">방문객은 내용·시간·가격을 먼저 물었다<br>— 알제이웍스에서는 셋 다 늦게 보인다</h1>
+  <div class="body">
+    <div class="row" style="align-items:stretch">
+      <div class="card f1" style="background:transparent;padding-left:0">
+        <p class="small" style="margin-bottom:12px">예약 전 가장 궁금했던 정보 (최대 3개, n=37)</p>
+        <div class="bar-row"><span class="lab">체험 내용·난이도</span><span class="bar" style="width:360px"></span><span class="v">24</span></div>
+        <div class="bar-row"><span class="lab">소요시간</span><span class="bar" style="width:270px"></span><span class="v">18</span></div>
+        <div class="bar-row"><span class="lab">가격과 추가 비용</span><span class="bar" style="width:150px"></span><span class="v">10</span></div>
+        <div class="bar-row"><span class="lab">아이 참여 연령</span><span class="bar lt" style="width:90px"></span><span class="v">6</span></div>
+        <div class="bar-row"><span class="lab">결과물 가져가나</span><span class="bar lt" style="width:45px"></span><span class="v">3</span></div>
+        <p class="small" style="margin-top:12px">응답자 대부분(33명)이 6명 이상 일행. 소규모 손님도 같은지는 따로 점검한다.</p>
+      </div>
+      <div class="card f1" style="background:var(--white);border:2px solid var(--line)">
+        <div class="ct" style="margin-top:0;font-size:28px">알제이웍스에서 처음 보이는 곳 <span style="font-size:20px;color:var(--muted);font-weight:400">(17개 전부, 11/8 폰)</span></div>
+        <p style="line-height:2"><b>가격</b> — 날짜·시간을 고른 뒤 옵션에서<br><b>시간·연령</b> — 표준 칸이 없는 유형. 접힌 설명 안에 있거나 없다<br><b>내용·결과물</b> — 상세 본문 아래쪽<br><b>참여 규칙</b> — 1인 1체험·보호자 무료가 규칙으로 안 보임 → 같은 질문이 전화로 온다</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>설문 원자료 11/5~7 · 상품 화면 11/8</span><span></span></div>
+</section>
+
+<!-- 17 예약 과정 진단 -->
+<section class="slide" data-notes="불일치 사례는 11/8 폰 전수 확인. 35,000원 사례는 선택 화면까지만 진행(결제 안 함). 수량·선택 개수를 시스템이 막는 기능은 확인되지 않음.">
+  <div class="kicker">02 문제 정의 · 02 예약 과정 진단</div>
+  <h1 class="t sm">두 플레이스의 예약 방식이 다르고,<br>같은 상품 안에서도 말이 다르다</h1>
+  <div class="body">
+    <div class="row">
+      <div class="card f1"><div class="ct" style="margin-top:0">예약을 마치는 방식</div>
+        <p style="margin-bottom:8px"><b>알제이웍스(A)</b></p>
+        <p>인원·시간 버튼 → <b>바로 확정</b> → 결제</p>
+        <div class="hr"></div>
+        <p style="margin-bottom:8px"><b>알제이(B)</b></p>
+        <p>날짜 → 희망 시간·인원 직접 입력 → <b>업체 확인 뒤 확정</b> → 현장 결제</p>
+        <p class="small" style="margin-top:18px">같은 '알제이'인데 어느 쪽을 누르느냐에 따라 결제 시점이 다르다</p></div>
+      <div class="card f15"><div class="ct" style="margin-top:0">같은 상품 안의 불일치</div>
+        <ul>
+          <li><b>선택 체험 목록</b> — 패키지 4개 모두 본문 목록과 옵션 목록이 다르다 (샴푸바는 옵션에만)</li>
+          <li><b>몇 개를 고르나</b> — '체험 2가지' 패키지 설명에 "하나를 골라보세요"가 함께 있다</li>
+          <li><b>피자 메뉴</b> — 본문은 4가지, 실제 옵션은 3가지</li>
+          <li><b>규칙을 화면이 안 막는다</b> — 회사 규칙은 1인 1체험인데, 2명·1개 35,000원으로 결제 직전까지 안내 없이 진행된다</li>
+        </ul></div>
+    </div>
+  </div>
+  <div class="foot"><span>11/3 PC · 11/8 폰 전수 확인</span><span></span></div>
+</section>
+
+<!-- 18 검색 노출 ① -->
+<section class="slide" data-notes="기백 조사 + 11/9·11/11 재관측(광고 제외, 통합검색 플레이스 칸과 '더보기' 목록 30위까지). 큰 검색어 30위 밖은 두 조사가 일치 — 이 덱에서 가장 단단한 주장.">
+  <div class="kicker">02 문제 정의 · 03 검색 노출 조사 ①</div>
+  <h1 class="t">손님이 찾는 검색어에서<br>알제이 플레이스는 거의 보이지 않는다</h1>
+  <div class="body">
+    <div class="row">
+      <div class="card f1"><div class="ct" style="margin-top:0">무엇을 조사했나</div>
+        <ul><li>개인·소규모 관광객이 네이버에서 쓰는 검색어</li><li>그 검색어에서 두 플레이스가 몇 위에 뜨는지</li></ul></div>
+      <div class="card f1"><div class="ct" style="margin-top:0">어떻게 조사했나</div>
+        <ul><li>검색량: 네이버 검색광고 키워드 도구 (11/5)</li><li>순위: 네이버 모바일 통합검색 플레이스 칸 + '더보기' 목록, 광고 제외, 30위까지</li><li>두 번 관측: 기백 조사 · 11/9·11/11 재관측</li></ul></div>
+    </div>
+    <div class="card dark" style="margin-top:28px"><div class="ct" style="margin-top:0">핵심 결론</div>
+      <p style="font-size:28px">검색량이 큰 검색어에서는 두 플레이스 모두 30위 밖. 대표 키워드에 넣은 '감귤체험'·'원데이클래스'에서도 마찬가지다. 상위에 뜨는 건 도마처럼 <b style="color:#fff">상품 이름이 들어간 작은 검색어</b>뿐이다.</p></div>
+  </div>
+</section>
+
+<!-- 19 검색 노출 ② -->
+<section class="slide" data-notes="대표 키워드는 정보 탭 기준(11/3). 검색량은 키워드 도구 PC+모바일 합계(11/5), *는 기백 조사의 모바일 값. 귤따기 9,780은 11/5 조회.">
+  <div class="kicker">02 문제 정의 · 03 검색 노출 조사 ②</div>
+  <h1 class="t sm">대표 키워드와 손님이 쓰는 검색어가 다르다</h1>
+  <div class="body" style="justify-content:flex-start">
+    <div class="row" style="gap:60px">
+      <div class="f1"><div class="ct" style="margin-top:0">현재 대표 키워드</div>
+        <table class="tb">
+          <tr><th>키워드</th><th class="c">알제이웍스(A)</th><th class="c">알제이(B)</th></tr>
+          <tr><td>감귤체험</td><td class="c">●</td><td class="c miss">—</td></tr>
+          <tr><td>도마만들기</td><td class="c">●</td><td class="c miss">—</td></tr>
+          <tr><td>원데이클래스</td><td class="c">●</td><td class="c">●</td></tr>
+          <tr><td>쿠킹클래스</td><td class="c">●</td><td class="c">●</td></tr>
+          <tr><td>애월체험</td><td class="c">●</td><td class="c">●</td></tr>
+          <tr><td>제주체험</td><td class="c miss">—</td><td class="c">●</td></tr>
+          <tr><td>공방</td><td class="c miss">—</td><td class="c">●</td></tr>
+        </table></div>
+      <div class="f1"><div class="ct" style="margin-top:0">손님이 많이 쓰는 검색어</div>
+        <table class="tb">
+          <tr><th>검색어</th><th style="text-align:right">월 검색량</th></tr>
+          <tr><td>제주 감귤 체험</td><td class="n">10,800</td></tr>
+          <tr><td>제주 귤따기 체험</td><td class="n">9,780</td></tr>
+          <tr><td>제주 애월 가볼만한 곳</td><td class="n">9,270</td></tr>
+          <tr><td>제주 실내 가볼만한곳</td><td class="n">6,910</td></tr>
+          <tr><td>애월 가볼만한곳</td><td class="n">4,550*</td></tr>
+          <tr><td>제주 체험</td><td class="n">1,780</td></tr>
+          <tr><td>제주 아이랑 가볼만한곳</td><td class="n">1,570*</td></tr>
+        </table></div>
+    </div>
+    <div class="quote" style="margin-top:30px">손님은 상품 이름보다 <b>상황과 장소</b>로 검색한다 (검색량 기준). 대표 키워드 10자리 중 3자리는 두 플레이스가 겹친다.</div>
+  </div>
+  <div class="foot"><span>키워드 도구 11/5 (PC+모바일 합계, *모바일·기백 조사) · 정보 탭 11/3</span><span></span></div>
+</section>
+
+<!-- 20 검색 노출 ③ -->
+<section class="slide" data-notes="'30위 밖' = 통합검색 플레이스 칸과 더보기 목록 30위까지 봤는데 없었다. '안 보임' = 짧은 목록을 끝까지 봤는데 없었다(30개 미만). '(목록)' = 더보기 목록에서의 순위. 원데이클래스 B는 11/11 24위, 기백 조사 40위권 — 날짜·화면 차이, 기백 확인 필요. 감귤은 기백 조사에서 B 약 70위.">
+  <div class="kicker">02 문제 정의 · 03 검색 노출 조사 ③</div>
+  <h1 class="t sm">검색량이 클수록 안 보인다</h1>
+  <div class="body" style="justify-content:flex-start;margin-top:24px">
+    <table class="tb tight" style="font-size:22px">
+      <tr><th>검색어</th><th style="text-align:right">월 검색량</th><th class="c">알제이웍스(A)</th><th class="c">알제이(B)</th><th>비고</th></tr>
+      <tr><td>제주 감귤 체험</td><td class="n">10,800</td><td class="c miss">30위 밖</td><td class="c miss">30위 밖</td><td>A 대표 키워드 · 기백 조사 B 약 70위</td></tr>
+      <tr><td>제주 귤따기 체험</td><td class="n">9,780</td><td class="c miss">30위 밖</td><td class="c miss">30위 밖</td><td></td></tr>
+      <tr><td>제주 애월 가볼만한 곳</td><td class="n">9,270</td><td class="c miss">미노출</td><td class="c"><span class="hit">21위</span></td><td>기백 조사</td></tr>
+      <tr><td>제주 실내 가볼만한곳</td><td class="n">6,910</td><td class="c miss">미노출</td><td class="c miss">30위 밖</td><td>기백 조사</td></tr>
+      <tr><td>애월 가볼만한곳</td><td class="n">4,550*</td><td class="c miss">미노출</td><td class="c"><span class="hit">22위</span></td><td>기백 조사</td></tr>
+      <tr><td>제주 체험</td><td class="n">1,780</td><td class="c miss">30위 밖</td><td class="c miss">30위 밖</td><td>B 대표 키워드</td></tr>
+      <tr><td>제주 아이랑 가볼만한곳</td><td class="n">1,570*</td><td class="c miss">미노출</td><td class="c miss">30위 밖</td><td>기백 조사</td></tr>
+      <tr><td>제주 원데이클래스</td><td class="n">980</td><td class="c miss">30위 밖</td><td class="c"><span class="hit">24위</span> <small>목록</small></td><td>두 곳 대표 키워드 · 기백 조사 40위권</td></tr>
+      <tr><td>제주 이색 체험</td><td class="n">700</td><td class="c miss">30위 밖</td><td class="c miss">30위 밖</td><td></td></tr>
+      <tr><td>제주 쿠킹클래스</td><td class="n">350</td><td class="c"><span class="hit">14위</span> <small>목록</small></td><td class="c"><span class="hit">11위</span> <small>목록</small></td><td>두 곳 대표 키워드</td></tr>
+      <tr><td>제주 공방 체험</td><td class="n">160</td><td class="c miss">안 보임</td><td class="c"><span class="hit">4위</span></td><td>B 대표 키워드</td></tr>
+      <tr><td>애월 체험</td><td class="n">130</td><td class="c"><span class="hit">24위</span> <small>목록</small></td><td class="c"><span class="hit">13위</span> <small>목록</small></td><td>두 곳 대표 키워드</td></tr>
+      <tr><td>애월 원데이클래스</td><td class="n">40</td><td class="c"><span class="hit">5위</span></td><td class="c"><span class="hit">4위</span></td><td></td></tr>
+      <tr><td>제주 도마 만들기 (체험)</td><td class="n">20 미만</td><td class="c"><span class="hit">1~2위</span></td><td class="c miss">안 보임</td><td>A 대표 키워드</td></tr>
+    </table>
+  </div>
+  <div class="foot"><span>11/11 모바일 통합검색 비로그인·광고 제외 (W22) · 기백 조사 · 검색량 11/5 (*모바일)</span><span></span></div>
+</section>
+
+<!-- 21 검색 노출 ④ -->
+<section class="slide" data-notes="네이버 공식 설명: 검색어와의 유사도·인기도·거리·정보 충실성을 종합하고 방문 리뷰의 글·사진도 반영, 대표키워드는 노출을 보장하지 않는다(W19). B가 A보다 나은 이유(리뷰 수 등)는 확인 전 — 단정하지 않는다.">
+  <div class="kicker">02 문제 정의 · 03 검색 노출 조사 ④</div>
+  <h1 class="t sm">조사로 알게 된 것</h1>
+  <div class="body">
+    <div class="row">
+      <div class="card f1"><div class="cnum">01</div><div class="ct">큰 검색어는 30위 밖</div><p>월 1,000회가 넘는 검색어에서 두 플레이스가 30위 안에 든 건 '가볼만한곳'의 알제이(B) 21·22위뿐이다.</p></div>
+      <div class="card f1"><div class="cnum">02</div><div class="ct">키워드만으로는 부족</div><p>대표 키워드에 넣은 감귤체험·원데이클래스에서도 30위 밖. 네이버는 대표 키워드가 노출을 보장하지 않는다고 밝힌다 — 유사도·인기도·거리·정보 충실성, 리뷰 글·사진을 함께 본다.</p></div>
+      <div class="card f1"><div class="cnum">03</div><div class="ct">두 곳이 나눠 쓴다</div><p>대표 키워드 3개가 겹치고, 검색 카드 이름도 둘 다 '알제이'다. 상위에 드는 곳은 상품 이름이 들어간 작은 검색어뿐이다.</p></div>
+    </div>
+    <div class="quote" style="margin-top:34px">출발점: 넓은 검색어 가운데 <b>'애월 가볼만한곳'에서 알제이(B)가 21~22위</b>로 가장 가깝다.</div>
+  </div>
+  <div class="foot"><span>네이버 스마트플레이스 고객센터(노출 기준·대표키워드) · W22 · 기백 조사</span><span></span></div>
+</section>
+
+<!-- 22 벤치마킹 -->
+<section class="slide" data-notes="혜지 11/8 기준. 최종 3곳은 확정 전 — 바뀌면 이 장 교체. 토토는 리뷰가 작년의 55% 이하로 줄어, '잘 되는 곳'이 아니라 '표기 방식 참고'로 소개.">
+  <div class="kicker">02 문제 정의 · 04 벤치마킹 3곳 조사 및 비교 분석 <span class="tag slot">최종 3곳 확정 전</span></div>
+  <h1 class="t sm">비교 업체는 "누가, 무엇을, 몇 개, 얼마에"를<br>맨 위에서 먼저 알려 준다</h1>
+  <div class="body">
+    <div class="row">
+      <div class="card f1"><div class="ct" style="margin-top:0">토토아뜰리에</div><p>상품명에 대상 연령과 결과물. 위쪽에 가격·시간·연령. "참여자마다 메뉴 하나, 동행끼리 다른 메뉴 가능."</p></div>
+      <div class="card f1"><div class="ct" style="margin-top:0">메모아</div><p>상품명에 완성품 용량. 1인 가격이 바로 합계로 보인다.</p></div>
+      <div class="card f1"><div class="ct" style="margin-top:0">하이파이브제주</div><p>아이 체험과 보호자 이용 조건을 따로 안내한다. 옵션 설명에 적용 인원을 적는다.</p></div>
+    </div>
+    <p class="small" style="margin-top:28px">따라 하지 않을 것: 비교 업체도 상단과 본문의 시간이 다른 곳이 있다. 항목 구조만 가져온다.</p>
+  </div>
+  <div class="foot"><span>혜지 벤치마킹 11/8</span><span></span></div>
+</section>
+
+<!-- 23 벤치마킹 시사점 -->
+<section class="slide" data-notes="각 시사점을 알제이웍스의 어느 칸에 넣을지까지 연결. 03-02·03-03의 시안이 이 표를 따른다.">
+  <div class="kicker">02 문제 정의 · 05 벤치마킹 시사점</div>
+  <h1 class="t sm">알제이웍스에 적용할 점</h1>
+  <div class="body">
+    <table class="tb" style="font-size:25px">
+      <tr><th>비교 업체가 하는 것</th><th>알제이웍스에서는</th><th>대응하는 문제</th></tr>
+      <tr><td>상품명에 대상·결과물</td><td>상품명에 '무엇을 몇 개 만드나'</td><td>고르기</td></tr>
+      <tr><td>위쪽에 가격·시간·연령</td><td>상품 소개 첫 부분에 세 값 (표준 칸이 없는 유형이므로 글로)</td><td>고르기</td></tr>
+      <tr><td>1인 가격이 곧 합계</td><td>옵션명에 판매 단위 — "도마 1개 / 체험자 1명 · 43,000원"</td><td>예약</td></tr>
+      <tr><td>동행끼리 다른 메뉴 가능</td><td>"일행끼리 다른 체험을 골라도 됩니다"를 소개 첫 부분에</td><td>고르기 · 가설</td></tr>
+      <tr><td>보호자 조건을 따로</td><td>"체험하지 않는 보호자는 무료"를 유의사항 맨 아래에서 위로</td><td>예약</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- 24 후기 분석 -->
+<section class="slide" data-notes="리뷰 발췌는 최대 20어절이라 최소치. 네이버 방문자 리뷰는 긍정 쪽으로 치우칠 수 있어 '불만이 적다'를 전체 손님으로 넓히지 않는다. 선택 계기 사례는 비교 업체 리뷰. 승경 정리본이 오면 교체.">
+  <div class="kicker">02 문제 정의 · 06 후기 분석 <span class="tag slot">승경 정리본으로 교체 가능</span></div>
+  <h1 class="t sm">손님은 여유·청결·재료를 칭찬했고,<br>고른 계기는 '상황'이었다</h1>
+  <div class="body">
+    <div class="row">
+      <div class="card f1"><div class="ct" style="margin-top:0">이용 후 평가 <span style="font-size:20px;color:var(--muted);font-weight:400">알제이 리뷰 1,136개</span></div>
+        <div class="bar-row"><span class="lab">청결</span><span class="bar" style="width:252px"></span><span class="v">42</span></div>
+        <div class="bar-row"><span class="lab">재료</span><span class="bar" style="width:204px"></span><span class="v">34</span></div>
+        <div class="bar-row"><span class="lab">다음엔 다른 체험도</span><span class="bar" style="width:132px"></span><span class="v">22</span></div>
+        <div class="bar-row"><span class="lab">여유</span><span class="bar" style="width:90px"></span><span class="v">15</span></div>
+        <p style="margin-top:14px">불만 표현은 1,070건 중 16건</p>
+        <p class="small">회사가 알리고 싶은 여유·청결·재료가 손님 말에도 나온다 — 그런데 화면 위쪽에는 없다</p></div>
+      <div class="card f1"><div class="ct" style="margin-top:0">고른 계기와 사전 걱정 <span style="font-size:20px;color:var(--muted);font-weight:400">비교 업체 리뷰 사례</span></div>
+        <ul>
+          <li><b>날씨</b> — 비가 와서 실내 공방을 급히 예약</li>
+          <li><b>동행 일정</b> — 동행은 걷기, 본인은 다른 활동</li>
+          <li><b>아이 관심</b> — 아이 취향과 동선을 보고 여행 전 예약</li>
+          <li><b>기념</b> — 마지막 날 제주를 기억할 결과물</li>
+          <li><b>걱정</b> — 가격, 아이 혼자 할 수 있을지 → 완성품·지도에 만족</li>
+        </ul></div>
+    </div>
+  </div>
+  <div class="foot"><span>리뷰 11/3 수집(발췌 최대 20어절) · 비교 업체 리뷰 사례</span><span></span></div>
+</section>
+
+<!-- 25 핵심 문제 정리 -->
+<section class="slide" data-notes="이 장이 중간발표의 결론. '얼마나 확실한가'를 숨기지 않고 말하는 게 포인트 — 확인 안 된 건 03-04 계획으로 넘긴다.">
+  <div class="kicker">02 문제 정의 · 07 핵심 문제 정리</div>
+  <h1 class="t sm">세 단계 모두 막혀 있고, 어디까지 확인했는지 나눠 말한다</h1>
+  <div class="body">
+    <table class="tb" style="font-size:24px">
+      <tr><th style="width:120px">단계</th><th>문제</th><th>근거</th><th>얼마나 확실한가</th><th>다음에 확인할 것</th></tr>
+      <tr><td><b>찾기</b></td><td>큰 검색어에서 두 플레이스가 30위 밖</td><td>검색 노출 ①~④</td><td><span class="tag ok" style="margin:0">두 번 관측</span></td><td>실제 유입 검색어 (회사)</td></tr>
+      <tr><td><b>고르기</b></td><td>내용·시간·가격이 늦게 보인다</td><td>화면 진단 · 설문 · 벤치마킹</td><td><span class="tag ok" style="margin:0">관측</span> 소규모 손님도 같은지는 미확인</td><td>처음 보는 사람 관찰</td></tr>
+      <tr><td><b>예약</b></td><td>두 곳 방식이 다르고, 상품 안 설명·옵션이 어긋난다</td><td>예약 과정 진단</td><td><span class="tag ok" style="margin:0">관측</span> 이탈로 이어지는지는 미확인</td><td>관찰 · 상품별 예약 수</td></tr>
+      <tr><td><b>가설</b></td><td>단체 맞춤 설명이 소규모 손님을 망설이게 한다</td><td>소개 문구 · 반복 문의</td><td><span class="tag hyp" style="margin:0">가설</span></td><td>관찰 · 반복 문의 기록</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- 26 유입 방향 -->
+<section class="slide" data-notes="팀 초안의 '대표 키워드를 프로그램명과 맞추자'는 ①에 들어가되, 같은 덱 검색 조사가 '키워드만으로는 부족'이라고 했으므로 단독 개선안으로 내지 않는다. ③④는 회사가 정할 일로 제시.">
+  <div class="kicker">03 향후 계획 · 01 소규모 고객 유입 방향</div>
+  <h1 class="t sm">검색어 크기에 따라 공략 방법을 나눈다</h1>
+  <div class="body">
+    <div class="row" style="margin-bottom:24px">
+      <div class="card f1"><div class="ct" style="margin-top:0">① 상품 이름 검색어 → 플레이스 문구</div><p>상품명·소개 첫 줄·대표 키워드를 <b>손님이 쓰는 같은 말</b>로 맞춘다.<br>근거: 이름이 맞는 '도마 만들기'는 1~2위</p></div>
+      <div class="card f1"><div class="ct" style="margin-top:0">② 상황 검색어 → 리뷰·블로그</div><p>가볼만한곳·실내·아이랑은 큰 관광지와 경쟁한다. 방문 리뷰에 <b>'애월 가볼만한곳', '비 오는 날', '아이랑'</b> 같은 상황이 담기게 유도한다.<br>출발점: B 21~22위</p></div>
+    </div>
+    <div class="row">
+      <div class="card f1"><div class="ct" style="margin-top:0">③ 두 플레이스 역할 나누기 <span class="tag hyp">회사 결정</span></div><p>겹치는 키워드 3개(원데이클래스·쿠킹클래스·애월체험)를 정리하고, 이름으로 구분되게 한다 (예: 온라인 예약 / 현장결제).</p></div>
+      <div class="card f1"><div class="ct" style="margin-top:0">④ 감귤 시즌 <span class="tag hyp">회사 결정</span></div><p>감귤 체험 10,800 · 귤따기 9,780. 알제이웍스 17개 상품 중 귤따기는 0개(알제이에만 있음)인데 대표 키워드엔 '감귤체험' → 어느 플레이스에서 팔지 먼저 정한다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 27 상품 정보 전달력 -->
+<section class="slide" data-notes="'{ }'는 회사 확인 전 값. 실제로 첫 화면에 몇 줄 보이는지는 관리자 미리보기로 확정 — '첫 화면 보장'이라고 말하지 않는다. 기존 편집 영역(상품명·소개·옵션명) 안에서만 바꾸는 안.">
+  <div class="kicker">03 향후 계획 · 02 상품 정보 전달력 · 시안</div>
+  <h1 class="t sm">성인 둘이 도마를 고를 때 — 위에서 바로 알 수 있게</h1>
+  <div class="body">
+    <div class="row" style="align-items:flex-start;gap:50px">
+      <div class="phone" style="opacity:.8">
+        <div class="ph-h">지금</div>
+        <div class="ph-t">제주 숲 한 조각, 프리미엄 원목 도마 체험</div>
+        <div class="blk">휴무 안내 · 설명 2줄</div>
+        <div class="blk">날짜 · 시간 선택</div>
+        <div class="blk">옵션 — 소 43,000 · 중 63,000 · 대 100,000원</div>
+        <div class="blk">상세 설명 ▾</div>
+      </div>
+      <div class="arrow" style="align-self:center">→</div>
+      <div class="phone" style="width:620px">
+        <div class="ph-h">제안 (기존 편집 영역 안에서)</div>
+        <div class="ph-t">원목 도마 만들기 체험</div>
+        <div class="blk"><div class="new"><b>상품 소개 첫 부분</b><br>도마 소 사이즈 1개 43,000원. 체험자마다 1개씩 만드는 상품입니다. 총 소요시간 {확인} · 참여 연령 {확인}</div></div>
+        <div class="blk"><div class="new"><b>예약 예시</b><br>두 분이 소 사이즈를 각각 만들면 도마 2개, 86,000원. 도마 1개 + 다른 체험 1개는 → 커플 패키지</div></div>
+        <div class="blk"><div class="new"><b>옵션명</b><br>소 사이즈 도마 1개 / 체험자 1명 · 43,000원</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>상품 화면 11/8 폰 · { } = 회사 확인 전</span><span></span></div>
+</section>
+
+<!-- 28 예약 과정 개선안 -->
+<section class="slide" data-notes="보호자 무료·1인 1판은 면담에서 확인한 규칙. 연령·시간은 회사 확정 전. 수량 제한 기능은 확인되지 않아 '문구로 먼저' 안.">
+  <div class="kicker">03 향후 계획 · 03 예약 과정 개선안 · 시안</div>
+  <h1 class="t sm">아이와 보호자가 피자를 고를 때 — 규칙을 예약 전에</h1>
+  <div class="body">
+    <div class="row" style="align-items:flex-start;gap:50px">
+      <div class="col f1">
+        <div class="card"><div class="ct" style="margin-top:0">지금 막히는 곳</div>
+          <ul><li>몇 살부터, 얼마인지가 위에 없다</li><li>본문 메뉴 4가지, 고를 수 있는 건 3가지</li><li>아이 둘이 한 판인지, 한 명당 한 판인지 모른다</li><li>보호자 무료는 맨 아래 공통 안내에만</li></ul></div>
+        <div class="card tan"><p><b>함께 바꿀 것</b> — 본문과 옵션의 메뉴·선택 목록을 하나로 맞추고, 옵션명에 판매 단위를 쓴다. 수량을 시스템이 막는 기능은 확인되지 않아 <b>문구로 먼저</b> 안내한다.</p></div>
+      </div>
+      <div class="phone" style="width:640px">
+        <div class="ph-h">제안</div>
+        <div class="ph-t">현무암 수제 피자 만들기 체험</div>
+        <div class="blk"><div class="new"><b>상품 소개 첫 부분</b><br>체험자 1명당 피자 1판을 예약해 주세요. 체험하지 않는 보호자는 무료로 함께 들어올 수 있어요.</div></div>
+        <div class="blk"><div class="new"><b>가격·결과물</b><br>감귤 오메기·고르곤졸라 1판 30,000원 / 흑돼지 페퍼로니 1판 35,000원 · 시간·연령 {확정}</div></div>
+        <div class="blk"><div class="new"><b>예약 예시</b><br>아이 2명이 1판씩 + 보호자 2명 → 피자 2판, 60,000원</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>상품 화면 11/8 폰 · 면담 152~157 · { } = 회사 확인 전</span><span></span></div>
+</section>
+
+<!-- 29 타임테이블 -->
+<section class="slide" data-notes="최종 발표 날짜와 주차는 확정 전. 확인하기 전에는 '적용 완료', '첫 화면 보장', '검색 노출 개선'이라고 말하지 않는다.">
+  <div class="kicker">03 향후 계획 · 04 최종 발표까지 타임테이블 <span class="tag slot">날짜 확정 전</span></div>
+  <h1 class="t sm">확인하고, 고쳐 보고, 다시 잰다</h1>
+  <div class="body" style="justify-content:flex-start;margin-top:50px">
+    <div class="tl">
+      <div class="w now"><div class="d">11/13</div><h4>중간발표</h4><p>세 단계 문제 정의<br>가설과 확인 방법 공유</p></div>
+      <div class="w"><div class="d">1주차</div><h4>회사와 확인</h4><p>관리자 화면: 편집 범위 · 가격 노출 · 예약 유형<br>데이터: 유입 검색어 · 상품별 예약 수 · 반복 문의<br>도마·피자 운영값 확정</p></div>
+      <div class="w"><div class="d">2주차</div><h4>시안과 관찰</h4><p>도마·피자 문안 시안<br>처음 보는 사람 4~5명 예약 관찰 (지금 화면 ↔ 시안)</p></div>
+      <div class="w"><div class="d">3주차</div><h4>적용과 재측정</h4><p>회사와 두 상품 적용<br>같은 검색어 재관측 · 반복 문의 변화</p></div>
+      <div class="w"><div class="d">{날짜}</div><h4>최종 발표</h4><p>개선안 · 측정 결과 · 회사 결정 과제(역할·감귤)</p></div>
+    </div>
+    <div class="row" style="margin-top:60px">
+      <div class="card line f1"><div class="ct" style="margin-top:0;font-size:26px">보이나</div><p>정한 검색어에서 순위 · 바꾼 문구가 날짜 선택 전에 보이는지</p></div>
+      <div class="card line f1"><div class="ct" style="margin-top:0;font-size:26px">이해하나</div><p>총액·작품 수·보호자 조건을 맞게 말하는지, 찾는 데 걸린 시간</p></div>
+      <div class="card line f1"><div class="ct" style="margin-top:0;font-size:26px">예약하나</div><p>개인 예약 수 · 반복 문의 비중</p></div>
+    </div>
+  </div>
+</section>
+
+</div></div>
+
+<div class="nav" id="navL"></div><div class="nav" id="navR"></div>
+<div id="hud"></div>
+<div id="notes"></div>
+
+<script>
+(function(){
+  var deck=document.getElementById('deck');
+  var slides=[].slice.call(deck.querySelectorAll('.slide'));
+  var hud=document.getElementById('hud'), notes=document.getElementById('notes');
+  var i=0, showNotes=false;
+  slides.forEach(function(s,k){
+    var f=s.querySelector('.foot');
+    if(!f){f=document.createElement('div');f.className='foot';f.innerHTML='<span></span><span></span>';s.appendChild(f);}
+    f.lastElementChild.textContent=(k+1);
+  });
+  function fit(){
+    var sc=Math.min(window.innerWidth/1920, window.innerHeight/1080);
+    deck.style.transform='scale('+sc+')';
+  }
+  function go(n){
+    i=Math.max(0,Math.min(slides.length-1,n));
+    slides.forEach(function(s,k){s.classList.toggle('on',k===i)});
+    hud.textContent=(i+1)+' / '+slides.length+'  ·  ← → 이동 · N 메모 · F 전체화면';
+    notes.innerHTML='<b>메모 · 근거와 주의</b> — '+(slides[i].getAttribute('data-notes')||'없음');
+    try{history.replaceState(null,'','#'+(i+1))}catch(e){}
+  }
+  document.addEventListener('keydown',function(e){
+    if(['ArrowRight','PageDown',' '].indexOf(e.key)>=0){e.preventDefault();go(i+1)}
+    else if(['ArrowLeft','PageUp'].indexOf(e.key)>=0){e.preventDefault();go(i-1)}
+    else if(e.key==='Home')go(0);
+    else if(e.key==='End')go(slides.length-1);
+    else if(e.key==='n'||e.key==='N'){showNotes=!showNotes;notes.classList.toggle('on',showNotes)}
+    else if(e.key==='f'||e.key==='F'){if(!document.fullscreenElement)document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen();else document.exitFullscreen()}
+  });
+  document.getElementById('navL').onclick=function(){go(i-1)};
+  document.getElementById('navR').onclick=function(){go(i+1)};
+  window.addEventListener('resize',fit);
+  fit();
+  var h=parseInt((location.hash||'').slice(1),10);
+  go(isNaN(h)?0:h-1);
+})();
+</script>
+</body>
+</html>
